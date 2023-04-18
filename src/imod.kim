@@ -1,0 +1,12 @@
+namespace imod
+	"The imod (Integrated Modelling) ontology specifies semantics used everywhere in the IM worldview
+	 and links im-based concepts to the fundamental ontology for use in derived products."
+	version 1.0
+	in domain root
+	metadata {
+		dc:creator: (
+			"Ferdinando Villa (ferdinando.villa@bc3research.org)"
+			"Greta Adamo (greta.adamo@bc3research.org)"
+		)
+	};
+
