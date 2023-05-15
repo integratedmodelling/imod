@@ -24,7 +24,7 @@ abstract identity Identity
      the essential/identifying characterics of the concept itself"
 	equals core observation:Identity;
 
-//Discrete space for the worldview
+//Discrete space and time for the worldview
 
 abstract identity Puntal is core observation:Puntal;
 abstract identity Lineal is core observation:Lineal;
@@ -36,14 +36,50 @@ identity Yearly is core observation:Yearly;
 identity Monthly is core observation:Monthly;
 identity Daily is core observation:Daily;
 identity Weekly is core observation:Weekly;
+
+//Attribute
 	
 abstract attribute Attribute
     "Attribute specifies descriptive accidental predicates of a subject."
 	equals core observation:Attribute;
 	
+abstract attribute Orientation 
+	has children
+		(abstract SpatialOrientation
+			has children
+				(abstract ObserverRelativeOrientation 
+					has disjoint children
+						Right,
+						Left,
+						Front,
+						Back,
+						Up,
+						Down	
+				),
+				(abstract EuclidianRelativeOrientation2D 
+					"These concepts are purely 2d - nothing in English to denote the 'applicate'
+					 third dimension of a 3D space."
+					has disjoint children
+						Vertical,
+						Horizontal
+				)
+		),
+		(abstract TemporalOrientation
+			has disjoint children
+				Previous,
+				Successive
+		);
+	
+attribute Predicted
+	is core observation:Predicted;
+	
+//Realm
+	
 abstract realm Realm
     "Realm specifies the physical (e.g. of the biosphere) location of a concept"
 	equals core observation:Realm;
+
+//Role
 	
 abstract realm Role
     "Role specifies predicates that can be played by a concept in a context"
@@ -103,6 +139,22 @@ abstract quantity Quantity
     "Quantity are quality that can be quantified."     
 	equals core observation:QuantifiableQuality;
 
+//Definition of diversity: Xu, S., Bottcher, L., and Chou, T. (2020). Diversity in biology: definitions, quantification and models. Physical Biology, 17(3), 031001.
+abstract quantity Diversity
+"Diversity is the quantity of the range of characteristics found in subjects and agents."; 
+
+abstract quantity Heterogeneity equals Diversity;
+
+//Numerosity
+
+abstract quantity Numerosity     
+	equals core observation:Numerosity;
+
+abstract quality Frequency
+	"Frequency is the numerosity of events in a time period. Used in continuous time representations to 
+    describe a wave."
+	is count of Event;
+
 /**
  * Intensive physical properties 
  */
@@ -116,6 +168,27 @@ abstract energy Energy
 abstract duration Duration 
 	equals core observation:Duration;
 
+abstract duration Age;
+	
+abstract duration Period
+	"The time between two repetitions of an event. If the events are described by a quality in continuous time, it 
+     describes the distance between high points on a wave function. Inversely proportional to frequency."
+	decreases with Frequency;
+
+abstract ordering Periodicity
+	""
+	describes Period
+	has children
+		(Sporadic 
+			""
+		),
+		(Intermittent 
+			""
+		),
+		(Continuous 
+			""
+		);
+
 abstract temperature Temperature 
 	equals core observation:Temperature;
 
@@ -124,37 +197,21 @@ resistivity Resistivity
 
 abstract velocity Velocity 
 	equals core observation:Speed;
+
+abstract quality Acceleration
+	is change rate of Velocity;
+
+quantity Impedance
+	"The most general quality that describes resistance to a physical force, flow or 
+     other phenomenon. Usually given the symbol Z in technical literature."
+	// TODO children - electrical has a core representation
+;
+
+quantity Conductance
+	"The opposite of impedance, describing the effectiveness of transport of an observable through a medium or a region.."
+	// TODO children - fluid conductance, electrical conductance, thermal conductivity
+;
  
-/**
- * Relative quantities 
- */
- 
-abstract quantity Proportion     
-	equals core observation:Proportion;
-
-abstract quantity Ratio     
-	equals core observation:Ratio;
-
-/**
- *  
- */
-	
-attribute Predicted
-	is core observation:Predicted;
- 	
-abstract quantity Numerosity     
-	equals core observation:Numerosity;
-	
-abstract class Type         
-	equals core observation:Type; 
-
-abstract priority Priority 
-	equals core observation:Priority;
-
-abstract money MonetaryValue 
-	equals core observation:MonetaryValue;
-
-
 /**
  * Extensive physical properties 
  */
@@ -162,6 +219,8 @@ abstract money MonetaryValue
 abstract area Area 
 	equals core observation:Area 
 	requires identity (Areal or Volumetric);
+
+abstract area SpatialCoverage is Area;
 
 abstract length Length
 	equals core observation:Length 
@@ -178,12 +237,42 @@ abstract amount Amount
 abstract volume Volume 
 	equals core observation:Volume
 	requires identity Volumetric;
+
+abstract volume Capacity;
 	
 abstract weight Weight  
 	equals core observation:Weight  
 	requires identity Volumetric;
 
+/**
+ * Relative quantities 
+ */
+ 
+abstract quantity Proportion     
+	equals core observation:Proportion;
 
+abstract quantity Ratio     
+	equals core observation:Ratio;
+ 
 
+//Category
+	
+abstract class Type 
+    "Type defines categories"        
+	equals core observation:Type; 
+
+//Priority
+
+abstract priority Priority 
+	equals core observation:Priority;
+
+abstract priority Concordance
+"Conceptual distance from an idea or theory"
+;
+
+//Value
+
+abstract money MonetaryValue 
+	equals core observation:MonetaryValue;
 
 
