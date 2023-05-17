@@ -23,6 +23,11 @@ abstract identity Identity
     "Identity specifies the assigment of a concep to a certain class of concepts based on 
      the essential/identifying characterics of the concept itself"
 	equals core observation:Identity;
+	
+abstract identity Goal
+"Destination is the goal of a subject, agent or practice when created or internalized by another. Appropriate subclasses of this concept can be added or conferred any time a subject, agent or process has a goal."
+   applies to Subject, Agent, Process
+;
 
 //Discrete space and time for the worldview
 
@@ -72,6 +77,49 @@ abstract attribute Orientation
 	
 attribute Predicted
 	is core observation:Predicted;
+
+abstract attribute DynamicState
+	"These attributes have to do with the comparison of a value along time. They are important
+	 in dynamic models."
+    applies to Quantity 
+	has disjoint children
+		  (Changed 
+			"Applied to a numeric quantity, it makes it a derivative. Dynamic models use this
+			 automatically." 
+			has disjoint children
+				(Added 
+					"Describes the positive component of change. Implies quantifiable."
+					applies to Quantity
+				),
+				(Removed 
+					"Describes the negative component of change. Implies quantifiable."
+					applies to Quantity
+				)
+		),
+		(Differential
+			""
+			has children 
+			   	(Retained 
+					"Describes the unchanging component of a changing quantity. Implies quantifiable."
+					applies to Quantity
+				)		
+		)
+;
+
+deniable attribute Compliant 
+"Compliance is forced adherence to a law, regulation, rule, process or practice"
+;
+
+deniable attribute Conformant 
+"Conformance is voluntary adherence to a standard, rule, specification, requirement, design, process or practice."
+;
+
+abstract subjective ordering Coarseness 
+	has children
+		Fine,
+		Coarse;
+		
+	
 	
 //Realm
 	
@@ -89,23 +137,121 @@ abstract realm Role
  * Observable
  */
 
-
+//Process
 abstract process Process
     "A process is something happening in time, open-ended (without temporal boundaries), and homogeneous"
 	equals core observation:Process;
+
+abstract process Activity
+    "An activity is a process performed by an agent"
+    applies to Agent
+    has children 
+		(Creation
+		),
+		(Modification
+		),
+		(Cancellation 
+			)  
+;
 	
+
+abstract identity TransitiveProcess 
+	"Transitive processes happen in a subject directly affecting other observables (their objects)"
+	applies to Process
+	has children
+		(
+			@example("Transportation: you transport 'something' - the object - modifying its spatial extent.")
+			abstract SpatialTransitiveProcess
+				"A spatial transitive process affects the spatial extent of the object."
+				has children
+			        (abstract Transport	
+			          )
+			);
+	
+abstract identity IntransitiveProcess 
+	"Intransitive processes happen in subjects only affecting the context itself"
+	applies to Process
+	has children
+		(abstract SpatialIntransitiveProcess
+			"A spatial transitive process affects the spatial extent of the context - e.g. movement."
+			has children
+				(Movement
+					""
+				)
+		);
+abstract process Transformation
+    "Any endogenous transformation happening in a system and affecting its internal structure."
+    inherits IntransitiveProcess
+    affects Quality
+    applies to System
+    has children 
+		(Coupling
+			"Building of interactions. Can affect the mereological identity of the system by creating groups."
+		),
+		(Decoupling
+			"Destruction of interactions. Can affect the mereological identity of the system by destroying groups."
+			has children 
+				(Dissipation
+					"Proceeds through the collapse of parts of the system."
+				)
+		),
+		(Displacement 
+			"Akin to movement but causing the system to change because of that"
+		),
+		(Growth
+			 "Positive or negative growth makes a system acquire a larger size or functional throughput."
+		),
+		(Homeostasis
+			"The active maintenance of the current status and/or behavior of the system"
+		)
+;
+
+//Event
+     
 abstract event Event
     "An event is something happening in time, close-ended (with temporal boundaries), having participants"
 	equals core observation:Event;
+
+event Collapse
+   "The loss of identity for the system, after which it ceases to exist as such. In  living systems, it's synonymous with death."
+    applies to System
+;
+
+//Relationship
 	
 abstract relationship Relationship
     "A relationship directionally connects two subjects or agents"
 	equals core observation:Relationship;
 	
+//Tahko, Tuomas E. and E. Jonathan Lowe, "Ontological Dependence", The Stanford Encyclopedia of Philosophy (Fall 2020 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/fall2020/entries/dependence-ontological/>.
+//Adamo, G., Borgo, S., Di Francescomarino, C., Ghidini, C., Guarino, N., & Sanfilippo, E. M. (2018). Business process activity relationships: is there anything beyond arrows?. In Business Process Management Forum: BPM Forum 2018, Sydney, NSW, Australia, September 9-14, 2018, Proceedings 16 (pp. 53-70). Springer International Publishing.
+abstract relationship Dependence
+    "A dependence (ontological dependence) is a relationship that holds when an entity is dependent upon another for their existence"
+     has children 
+		(abstract HistoricalDependence
+			"X is historically dependent from Y, iff the existence of X at time t is tied to the existence of Y at t' and t'< t"
+		),
+		(abstract CausalDependence
+			"X is causally dependent on Y, iff the existence of X at t is explained by the existence of Y at t' and t'< t"
+		),
+		(abstract CooccurrenceDependence
+			"X and Y are both necessary for the satisfaction of a goal"
+		requires identity Goal	
+		)
+;  
+ 
+	
 abstract configuration Configuration
     "Configurations represent emergent patterns (aggregates of other entities) that are generated by observations of 
      quality and relationship"
 	equals core observation:Configuration;
+
+//Literature on systems: Laszlo, A., & Krippner, S. (1998). Systems theories: Their origins, foundations, and development. Advances in Psychology-Amsterdam-, 126, 47-76.
+abstract configuration System
+    "A system is a complex boundary entity that includes other entities, such as subjects, agents, events and relationships."
+    emerges from Relationship
+    contains Subject, Agent, Event, Process, Relationship
+;
 
 /**
  * Countable
@@ -122,6 +268,11 @@ abstract thing Subject
 	equals core observation:Subject
 ;
 
+//Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
+abstract thing Boundary 
+    "A boundary is a spatial, temporal and conceptual delimitation between entities"
+    inherits Lineal;
+
 abstract agent Agent
 	"Agent is a Substantial with intentionality" 
 	equals core observation:Agent
@@ -130,10 +281,15 @@ abstract agent Agent
 
 deniable attribute Intentional
 	"Intention is a mental state (e.g. goal, belief, desire)";
+	
 
 /**
  * Qualities
  */
+ 
+abstract quality Quality
+     "Qualities represent observables that cannot be observed directly but only through other entities that bear them, in this sense qualities inhere to other entities and are tied to their bearers"
+     equals core observation:Qiality;
 
 abstract quantity Quantity
     "Quantity are quality that can be quantified."     
@@ -200,6 +356,13 @@ abstract velocity Velocity
 
 abstract quality Acceleration
 	is change rate of Velocity;
+
+abstract attribute MovementRelated
+	"MovementRelated describe the type of velocity of a process"
+	describes Velocity of Process
+	has disjoint children
+		Moving,
+		Still;
 
 quantity Impedance
 	"The most general quality that describes resistance to a physical force, flow or 
@@ -272,7 +435,5 @@ abstract priority Concordance
 
 //Value
 
-abstract money MonetaryValue 
-	equals core observation:MonetaryValue;
 
 
