@@ -182,7 +182,7 @@ abstract identity IntransitiveProcess
 abstract process Transformation
     "Any endogenous transformation happening in a system and affecting its internal structure."
     inherits IntransitiveProcess
-    affects Quality
+//    affects Quality
     applies to System
     has children 
 		(Coupling
@@ -250,7 +250,7 @@ abstract configuration Configuration
 abstract configuration System
     "A system is a complex boundary entity that includes other entities, such as subjects, agents, events and relationships."
     emerges from Relationship
-    contains Subject, Agent, Event, Process, Relationship
+//    contains Subject, Agent, Event, Process, Relationship
 ;
 
 /**
@@ -273,14 +273,14 @@ abstract thing Boundary
     "A boundary is a spatial, temporal and conceptual delimitation between entities"
     inherits Lineal;
 
+deniable attribute Intentional
+	"Intention is a mental state (e.g. goal, belief, desire)";
+
 abstract agent Agent
 	"Agent is a Substantial with intentionality" 
 	equals core observation:Agent
 	inherits Intentional 
 ;
-
-deniable attribute Intentional
-	"Intention is a mental state (e.g. goal, belief, desire)";
 	
 
 /**
