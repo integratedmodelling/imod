@@ -1,0 +1,43 @@
+private namespace spacetime
+using imod;
+
+//Discrete space and time for the worldview
+
+abstract identity Puntal is core observation:Puntal;
+abstract identity Lineal is core observation:Lineal;
+abstract identity Areal is core observation:Areal;
+abstract identity Volumetric is core observation:Volumetric;
+
+identity Hourly is core observation:Hourly;
+identity Yearly is core observation:Yearly;
+identity Monthly is core observation:Monthly;
+identity Daily is core observation:Daily;
+identity Weekly is core observation:Weekly;
+
+abstract attribute Orientation 
+	has children
+		(abstract SpatialOrientation
+			has children
+				(abstract ObserverRelativeOrientation 
+					has disjoint children
+						Right,
+						Left,
+						Front,
+						Back,
+						Up,
+						Down	
+				),
+				(abstract EuclidianRelativeOrientation2D 
+					"These concepts are purely 2d - nothing in English to denote the 'applicate'
+					 third dimension of a 3D space."
+					has disjoint children
+						Vertical,
+						Horizontal
+				)
+		),
+		(abstract TemporalOrientation
+			has disjoint children
+				Previous,
+				Successive
+		);
+

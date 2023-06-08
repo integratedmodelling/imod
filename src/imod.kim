@@ -29,18 +29,6 @@ abstract identity Goal
    applies to Subject, Agent, Process
 ;
 
-//Discrete space and time for the worldview
-
-abstract identity Puntal is core observation:Puntal;
-abstract identity Lineal is core observation:Lineal;
-abstract identity Areal is core observation:Areal;
-abstract identity Volumetric is core observation:Volumetric;
-
-identity Hourly is core observation:Hourly;
-identity Yearly is core observation:Yearly;
-identity Monthly is core observation:Monthly;
-identity Daily is core observation:Daily;
-identity Weekly is core observation:Weekly;
 
 //Attribute
 	
@@ -48,50 +36,28 @@ abstract attribute Attribute
     "Attribute specifies descriptive accidental predicates of a subject."
 	equals core observation:Attribute;
 	
-abstract attribute Orientation 
-	has children
-		(abstract SpatialOrientation
-			has children
-				(abstract ObserverRelativeOrientation 
-					has disjoint children
-						Right,
-						Left,
-						Front,
-						Back,
-						Up,
-						Down	
-				),
-				(abstract EuclidianRelativeOrientation2D 
-					"These concepts are purely 2d - nothing in English to denote the 'applicate'
-					 third dimension of a 3D space."
-					has disjoint children
-						Vertical,
-						Horizontal
-				)
-		),
-		(abstract TemporalOrientation
-			has disjoint children
-				Previous,
-				Successive
-		);
+
 	
 attribute Predicted
 	is core observation:Predicted;
 
-abstract attribute DynamicState
+
+//from GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Change	
+// subclasses from Case file items of CMMN
+abstract attribute Change
 	"These attributes have to do with the comparison of a value along time. They are important
 	 in dynamic models."
     applies to Quantity 
 	has disjoint children
-		  (Changed 
+		  (Created 
 			"Applied to a numeric quantity, it makes it a derivative. Dynamic models use this
 			 automatically." 
 			has disjoint children
-				(Added 
+				(Updated 
 					"Describes the positive component of change. Implies quantifiable."
 					applies to Quantity
 				),
-				(Removed 
+				(Deleted 
 					"Describes the negative component of change. Implies quantifiable."
 					applies to Quantity
 				)
@@ -128,10 +94,33 @@ abstract realm Realm
 	equals core observation:Realm;
 
 //Role
-	
-abstract realm Role
+
+abstract role Role
     "Role specifies predicates that can be played by a concept in a context"
 	equals core observation:Role;
+
+//From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Processual_role	
+abstract role ProcessualRole
+      "ProcessualRole refers to the role played by participants in a process."
+      applies to Process;
+
+//From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Relational_role
+abstract role RelationalRole
+      "RelationalRole refers to the role played by participants in a functional or structural relationship."
+      applies to Relationship
+      ;
+  
+
+//Adamo, G., and Willis, M. (2022, May). Conceptual Integration for Social-Ecological Systems: An Ontological Approach. RCIS 2022
+abstract role Resource
+     "A resource is the role that objects plays in the context of activities or plans to achieve goals"
+     applies to Subject, Agent
+     has children
+        (Natural),
+        (HumanMade
+        "HumanMade resources are the equivalent of artifacts."
+        )
+;
 
 /**
  * Observable
@@ -222,6 +211,7 @@ event Collapse
 abstract relationship Relationship
     "A relationship directionally connects two subjects or agents"
 	equals core observation:Relationship;
+
 	
 //Tahko, Tuomas E. and E. Jonathan Lowe, "Ontological Dependence", The Stanford Encyclopedia of Philosophy (Fall 2020 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/fall2020/entries/dependence-ontological/>.
 //Adamo, G., Borgo, S., Di Francescomarino, C., Ghidini, C., Guarino, N., & Sanfilippo, E. M. (2018). Business process activity relationships: is there anything beyond arrows?. In Business Process Management Forum: BPM Forum 2018, Sydney, NSW, Australia, September 9-14, 2018, Proceedings 16 (pp. 53-70). Springer International Publishing.
