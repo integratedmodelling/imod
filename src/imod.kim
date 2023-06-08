@@ -198,6 +198,18 @@ abstract event Event
     "An event is something happening in time, close-ended (with temporal boundaries), having participants"
 	equals core observation:Event;
 
+abstract event Input
+    "Input is an event that triggers another event or process."
+    applies to Event, Process
+    inherits Change
+;
+
+abstract event Output
+    "Output is an event generated from another event or process."
+    applies to Event, Process
+    inherits Change
+;
+
 event Collapse
    "The loss of identity for the system, after which it ceases to exist as such. In  living systems, it's synonymous with death."
     applies to System
