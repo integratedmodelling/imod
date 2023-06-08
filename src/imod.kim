@@ -20,8 +20,8 @@ namespace imod
  */
  
 abstract identity Identity
-    "Identity specifies the assigment of a concep to a certain class of concepts based on 
-     the essential/identifying characterics of the concept itself"
+    "Identity specifies the assigment of a concept to a certain class of concepts based on 
+     a series of characteristics, such as morphological, behavioral and contextual"
 	equals core observation:Identity;
 	
 abstract identity Goal
@@ -134,7 +134,8 @@ abstract role Resource
 //Process
 abstract process Process
     "A process is something happening in time, open-ended (without temporal boundaries), and homogeneous"
-	equals core observation:Process;
+	equals core observation:Process
+;
 
 abstract process Activity
     "An activity is a process performed by an agent"
@@ -168,7 +169,6 @@ abstract identity IntransitiveProcess
 abstract process Transformation
     "Any endogenous transformation happening in a system and affecting its internal structure."
     inherits IntransitiveProcess
-//    affects Quality
     applies to System
     has children 
 		(Coupling
