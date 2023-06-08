@@ -109,6 +109,11 @@ abstract role RelationalRole
       "RelationalRole refers to the role played by participants in a functional or structural relationship."
       applies to Relationship
       ;
+
+abstract role Participant
+     "Participants are entities, Subjects or Agents, that participates in Events."
+     applies to Event, Process
+;
   
 
 //Adamo, G., and Willis, M. (2022, May). Conceptual Integration for Social-Ecological Systems: An Ontological Approach. RCIS 2022
@@ -133,15 +138,7 @@ abstract process Process
 
 abstract process Activity
     "An activity is a process performed by an agent"
-    applies to Agent
-    has children 
-		(Creation
-		),
-		(Modification
-		),
-		(Cancellation 
-			)  
-;
+    applies to Agent;
 	
 
 abstract identity TransitiveProcess 
