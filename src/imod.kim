@@ -168,7 +168,7 @@ abstract identity IntransitiveProcess
 		);
 abstract process Transformation
     "Any endogenous transformation happening in a system and affecting its internal structure."
-    inherits IntransitiveProcess
+    inherits IntransitiveProcess, Change
     applies to System
     has children 
 		(Coupling
