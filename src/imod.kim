@@ -121,9 +121,10 @@ abstract role Resource
      "A resource is the role that objects plays in the context of activities or plans to achieve goals"
      applies to Subject, Agent
      has children
-        (Natural),
-        (HumanMade
+        (NaturalResource),
+        (HumanMadeResource
         "HumanMade resources are the equivalent of artifacts."
+        applies to Artifact
         )
 ;
 
@@ -265,6 +266,22 @@ abstract agent Substantial
 abstract thing Subject
     "Subject is a Substantial without agentive characteristics"
 	equals core observation:Subject
+;
+
+abstract thing Artifact
+    "Artifact s intentionally created by an agent for a goal"
+    requires identity Goal
+;
+
+//From: Borgo, S., Vieu, L.: Artefacts in formal ontology. In: Philosophy of technology and engineering sciences
+abstract attribute Capacity
+     "Capacity is a quality of a certain artifact."
+     applies to Artifact, HumanMadeResource
+;
+
+abstract attribute AttributedCapacity
+     "Attributed capacity refers to capacities of artifacts assigned by an agent."
+     applies to Artifact, HumanMadeResource
 ;
 
 //Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
