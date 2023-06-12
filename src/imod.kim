@@ -77,22 +77,30 @@ deniable attribute Comparable
 abstract subjective ordering Level 
       "Two-level hierarchy for generic discretizations. Classes are used by other orderings. The 'parent' keyword locates the parent concepts in the second-level hierarchy in case all children are used." 
       has children  
-      (Low 
-      	has children 
-      	   Minimal, 
-      	   ExtremelyLow, 
-      	   VeryLow, 
-      	   ModeratelyLow
-           ), 
-       Moderate, 
+        (Low 
+      	   has children 
+      	     Minimal, 
+      	     ExtremelyLow, 
+      	     VeryLow, 
+      	     ModeratelyLow
+             ), 
+        Moderate, 
        (High 
-       	 has children
-       	    ModeratelyHigh,
-       	    VeryHigh,
-       	    ExtremelyHigh,
-       	    Maximal
-       	 )
+       	   has children
+       	     ModeratelyHigh,
+       	     VeryHigh,
+       	     ExtremelyHigh,
+       	     Maximal
+       	   )
 ;
+
+abstract subjective ordering Severity 
+     is Level;
+     
+abstract subjective ordering Relevance 
+     "Describes the relevance of observables"
+     is Level
+     ;
 
 	
 //Realm
