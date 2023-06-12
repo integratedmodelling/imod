@@ -71,8 +71,28 @@ deniable attribute Perceived
 deniable attribute Comparable
    "Describes the ability to rank an object over another one."
    applies to Concordance
-;	
+;
 
+	
+abstract subjective ordering Level 
+      "Two-level hierarchy for generic discretizations. Classes are used by other orderings. The 'parent' keyword locates the parent concepts in the second-level hierarchy in case all children are used." 
+      has children  
+      (Low 
+      	has children 
+      	   Minimal, 
+      	   ExtremelyLow, 
+      	   VeryLow, 
+      	   ModeratelyLow
+           ), 
+       Moderate, 
+       (High 
+       	 has children
+       	    ModeratelyHigh,
+       	    VeryHigh,
+       	    ExtremelyHigh,
+       	    Maximal
+       	 )
+;
 
 	
 //Realm
@@ -208,6 +228,19 @@ abstract event Output
     inherits Change
 ;
 
+//From DOLCE ontology
+abstract event Achievement
+      "Atomic culminating event"
+;
+
+abstract attribute AchievementRelated 
+        "The type of achievement or non-chievement related to an outcome." 
+            applies to Achievement
+            has children 
+            Realized, 
+            Potential,
+            Theoretical;
+
 event Collapse
    "The loss of identity for the system, after which it ceases to exist as such. In  living systems, it's synonymous with death."
     applies to System
@@ -219,7 +252,7 @@ deniable attribute Planned
     
 deniable attribute Positive
     "Describes the positive or negative outcome of an event or a subject"
-    applies to Event, Subject
+    applies to Event, Achievement, Subject
 ;
 
 //Relationship
@@ -336,12 +369,7 @@ abstract attribute Evidence
           )
 ;
 
-abstract attribute AccomplishmentRelated 
-        "The type of accomplishment or non-accomplishment related to an outcome." 
-            has children 
-            Realized, 
-            Potential,
-            Theoretical;
+
 
 /**
  * Qualities
@@ -466,6 +494,22 @@ abstract volume Capacity;
 abstract weight Weight  
 	equals core observation:Weight  
 	requires identity Volumetric;
+	
+abstract subjective ordering MeasurementDescription 
+     applies to /*(Areal or */ Volumetric /*) */ Subject 
+     has children   
+     (abstract VerticalHeightLevel 
+     	describes Height 
+     	has children
+     	   Tall,
+     	   Small
+     	),
+    (abstract HorizontalLenghtLevel
+    	describes Lenght
+    	has children
+    	    Long,
+    	    Short  	
+    );
 
 /**
  * Relative quantities 
