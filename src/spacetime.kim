@@ -101,4 +101,11 @@ abstract subjective ordering HeightLenghtLevel
     	    Long,
     	    Short  	
     );
+    
+abstract subjective ordering VolumeLevel
+      describes Volume 
+      applies to Volumetric, Subject
+      has children  
+         Small, 
+         Large;
 

@@ -495,12 +495,6 @@ abstract weight Weight
 	equals core observation:Weight  
 	requires identity Volumetric;
 	
-abstract subjective ordering VolumeLevel
-      describes Volume 
-      applies to Volumetric, Subject
-      has children  
-         Small, 
-         Large;
 
 /**
  * Relative quantities 
