@@ -183,7 +183,15 @@ abstract process Process
 
 abstract process Activity
     "An activity is a process performed by an agent"
-    applies to Agent;
+    applies to Agent
+    ;
+    
+process Assessment
+    "The activity that represents observations made by the 'implicit' observer of the root context: the k.LAB user. Do not use without thinking hard first."
+    is Activity
+    creates InformationRealization;
+
+
    
 abstract ordering Feasability
      "Describes the level of feasibility of an activity"
