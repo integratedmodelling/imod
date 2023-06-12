@@ -150,7 +150,11 @@ abstract role Resource
         (HumanMadeResource
         "HumanMade resources are the equivalent of artifacts."
         applies to Artifact
-        )
+        );
+
+role Reference
+    "Applied to an observation used as reference to compute the primary observation by comparison. Can be linked to a rescaling filters to shift the context of observation made in different space and time."
+    inherits Comparable
 ;
 
 /**
