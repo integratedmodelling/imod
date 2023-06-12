@@ -318,7 +318,23 @@ abstract thing InformationRealization
                 
         (ComputerProgram)
         ;
-	
+
+abstract attribute Evidence
+     "Characterizes degrees of evidence for an hypothesis." 
+     has children 
+         (Possible 
+         "Hypothesis cannot be dismissed based on reasoning although no documented supporting observations exist."
+         ),
+         (Certain 
+         "No doubt can remain about evidence - self-evident or blatant truth"
+         ),
+         (Hypothetical 
+         "Hypothesis can be made in support of an interpretation although no documented supporting observations exist. Similarly valid counter-arguments may exist."
+         ),
+         (Observed
+          "Degree of evidence is supported by documented observations, but still  evidence is indirect."
+          )
+;
 
 /**
  * Qualities
