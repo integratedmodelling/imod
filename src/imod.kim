@@ -20,7 +20,7 @@ namespace imod
  */
  
 abstract identity Identity
-    "Identity specifies the assigment of a concept to a certain class of concepts based on 
+    "Identity specifies the assignment of a concept to a certain class of concepts based on 
      a series of characteristics, such as morphological, behavioral and contextual"
 	equals core observation:Identity;
 	
@@ -44,6 +44,15 @@ attribute Predicted
 
 //from GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Change	
 // subclasses from Case file items of CMMN: http://cmmn.byethost4.com/case_file_item_standard_events.html?i=1
+abstract attribute DynamicStateRelated 
+      "These attributes have to do with the comparison of a value along time. They are important  in dynamic models."  
+      applies to Quantity  
+      has disjoint children
+         Changed,
+         Replaced,
+         Updated,
+         Deleted
+;
 
 
 deniable attribute Compliant 
