@@ -495,21 +495,7 @@ abstract weight Weight
 	equals core observation:Weight  
 	requires identity Volumetric;
 	
-abstract subjective ordering MeasurementDescription 
-     applies to /*(Areal or */ Volumetric /*) */ Subject 
-     has children   
-     (abstract VerticalHeightLevel 
-     	describes Height 
-     	has children
-     	   Tall,
-     	   Small
-     	),
-    (abstract HorizontalLenghtLevel
-    	describes Lenght
-    	has children
-    	    Long,
-    	    Short  	
-    );
+
 
 /**
  * Relative quantities 
