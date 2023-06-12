@@ -1,5 +1,25 @@
 namespace scaling
 using imod;
 
+abstract rescaling attribute DataReinterpretation 
+"A type of reinterpretation applied to an observation. These attributes may trigger  data transformations on the observable that adopt them." 
+      applies to Quantity 
+        has children 
+        (@colormap(jet) Normalized 
+        "Normalization transforms all the values in a numeric state so that they all fit within a 0-1 range, independent of the original magnitude." 
+         ),
+         (@colormap(jet) Standardized 
+         "Standardization transforms all the values in a numeric state by subtracting the mean of all values and dividing by their standard deviation."
+          );
+      
+abstract attribute DataReduction 
+     "A type of data reduction or aggregation applied to the observation. These attributes may trigger  data transformations on the observable that adopt them." 
+     applies to Quantity 
+        has disjoint children 
+        (Mean),
+        (Minimum),
+        (Maximum);
+
+
 
 
