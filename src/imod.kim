@@ -43,33 +43,27 @@ attribute Predicted
 
 
 //from GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Change	
-// subclasses from Case file items of CMMN
+// subclasses from Case file items of CMMN: http://cmmn.byethost4.com/case_file_item_standard_events.html?i=1
 abstract attribute Change
 	"These attributes have to do with the comparison of a value along time. They are important
 	 in dynamic models."
     applies to Quantity 
 	has disjoint children
 		  (Created 
-			"Applied to a numeric quantity, it makes it a derivative. Dynamic models use this
-			 automatically." 
-			has disjoint children
-				(Updated 
-					"Describes the positive component of change. Implies quantifiable."
-					applies to Quantity
-				),
-				(Deleted 
-					"Describes the negative component of change. Implies quantifiable."
-					applies to Quantity
-				)
-		),
-		(Differential
-			""
-			has children 
-			   	(Retained 
-					"Describes the unchanging component of a changing quantity. Implies quantifiable."
-					applies to Quantity
-				)		
-		)
+			"Applied to a numeric quantity, it makes it a derivative. Dynamic models use this automatically." 
+			),
+		  (Updated
+			"Describes the positive component of change. Implies quantifiable."
+		  applies to Quantity
+		  ),
+		  (Replaced
+			"Describes the positive component of change. Implies quantifiable."
+		  applies to Quantity
+		  ),
+		 (Deleted 
+		    "Describes the negative component of change. Implies quantifiable."
+		 applies to Quantity
+		 )
 ;
 
 deniable attribute Compliant 
