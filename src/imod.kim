@@ -541,5 +541,13 @@ abstract priority Concordance
 
 //Value
 
+//Extent
+
+extent Multiplicity 
+    is core observation:Multiplicity;
+
+
+
+
 
 

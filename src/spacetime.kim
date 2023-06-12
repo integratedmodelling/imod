@@ -109,4 +109,10 @@ abstract subjective ordering VolumeLevel
       has children  
          Small, 
          Large;
+         
+ //Extent
+ 
+ abstract extent Space 
+    "Space in the IM worldview is 0, 1,2 or 3-dimensional, with implied traits that describe human perception and modalities of description proper of an Euclidean view of the world."
+    is core observation:Space;
 
