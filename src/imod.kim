@@ -336,6 +336,13 @@ abstract attribute Evidence
           )
 ;
 
+abstract attribute AccomplishmentRelated 
+        "The type of accomplishment or non-accomplishment related to an outcome." 
+            has children 
+            Realized, 
+            Potential,
+            Theoretical;
+
 /**
  * Qualities
  */
