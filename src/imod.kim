@@ -216,6 +216,11 @@ event Collapse
 deniable attribute Planned
     "Describes planned or unplanned events"
     applies to Event;
+    
+deniable attribute Positive
+    "Describes the positive or negative outcome of an event or a subject"
+    applies to Event, Subject
+;
 
 //Relationship
 	
