@@ -1,0 +1,11 @@
+private namespace macros
+using imod;
+
+abstract quality Vulnerability	
+      "" 
+      is probability of (Collapse of ${Subject: context} caused by ${Process: caused});
+      
+abstract quality Resistence 
+      "The process leading to the return of previous conditions after perturbation in a system"	
+      is probability of (no Collapse of ${Subject: context} caused by ${Process: caused});
+
