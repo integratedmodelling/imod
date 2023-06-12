@@ -86,7 +86,7 @@ deniable attribute Regularity
          Irregular
          ;
          
-abstract subjective ordering MeasurementDescription 
+abstract subjective ordering HeightLenghtLevel
      applies to /*(Areal or */ Volumetric /*) */ Subject 
      has children   
      (abstract VerticalHeightLevel 
