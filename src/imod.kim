@@ -84,6 +84,15 @@ abstract subjective ordering Coarseness
 	has children
 		Fine,
 		Coarse;
+	
+deniable attribute Perceived
+    "Describes an perceivable observable phenomena"
+    has children
+        Visible,
+        Audible,
+        Smellable,
+        Palpable
+;
 		
 	
 	
