@@ -298,6 +298,21 @@ abstract agent Agent
 	equals core observation:Agent
 	inherits Intentional 
 ;
+
+// From: DOLCE Lite Plus (DLP). E. M. Sanfilippo: "Ontologies for information entities: State of the art and open challenges"
+abstract thing InformationRealization
+     "Information realization is the physical support of an information object"
+     has children
+        (Document
+            has children
+                (Specification),
+                (PlanRealization),
+                (Book),
+                (Report)
+                ),
+                
+        (ComputerProgram)
+        ;
 	
 
 /**
