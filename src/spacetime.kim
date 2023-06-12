@@ -93,8 +93,8 @@ abstract subjective ordering HeightLenghtLevel
      (abstract VerticalHeightLevel 
      	describes Height 
      	has children
-     	   Tall,
-     	   Small
+     	   TallHeight,
+     	   SmallHeight
      	),
     (abstract HorizontalLenghtLevel
     	describes Lenght
@@ -107,8 +107,8 @@ abstract subjective ordering VolumeLevel
       describes Volume 
       applies to Volumetric, Subject
       has children  
-         Small, 
-         Large;
+         SmallVolume, 
+         LargeVolume;
          
  //Extent
  
@@ -142,4 +142,16 @@ abstract subjective ordering VolumeLevel
        	         inherits Irregular	
        	         )
        	   );
+       	   
+ abstract extent Time 
+     is core observation:Time	
+     has disjoint children 
+     (RegularTime 
+     "Regular time is observed as a grid of equal contiguous durations." 
+     inherits Regular),
+     (IrregularTime 
+      "Irregular time is observed as contiguous sequence of intervals of possibly different duration."
+     inherits Irregular
+     );
+ 
 
