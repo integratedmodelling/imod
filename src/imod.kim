@@ -163,6 +163,7 @@ abstract identity IntransitiveProcess
 					""
 				)
 		);
+		
 abstract process Transformation
     "Any endogenous transformation happening in a system and affecting its internal structure."
     inherits IntransitiveProcess, Change
@@ -211,6 +212,10 @@ event Collapse
    "The loss of identity for the system, after which it ceases to exist as such. In  living systems, it's synonymous with death."
     applies to System
 ;
+
+deniable attribute Planned
+    "Describes planned or unplanned events"
+    applies to Event;
 
 //Relationship
 	
