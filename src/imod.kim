@@ -67,7 +67,11 @@ deniable attribute Perceived
         Smellable,
         Palpable
 ;
-		
+
+deniable attribute Comparable
+   "Describes the ability to rank an object over another one."
+   applies to Concordance
+;	
 	
 	
 //Realm
