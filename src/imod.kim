@@ -157,6 +157,15 @@ role Reference
     inherits Comparable
 ;
 
+role Indicator  
+   has children	
+     (AbsoluteIndicator
+     "An absolute indicator has values that range between a known minimum and maximum and the value corresponds to a state that is fully understood in terms of the indicator."	
+       ),
+     (RelativeIndicator 
+     "A relative indicator can only compare two states of the same entity within the same context of observation, and does not suggest any absolute value for the state it refers to."
+     );
+
 /**
  * Observable
  */
@@ -246,8 +255,70 @@ abstract event Input
 abstract event Output
     "Output is an event generated from another event or process."
     applies to Event, Process
-    inherits Change
-;
+    inherits Change;
+
+abstract event RecurrentEvent 
+     "These are intended not as units of measurement (not observables) but as observable events, signaling the expiration of a given period of time. They can be observe  in time as dependencies, and models can be provided for them in scenarios. Traits  can be used or conferred by processes to distinguish particular periods." 
+      has disjoint children 
+          (Second
+			"The expiration of one second after a temporal point of reference."
+		  ),
+		  (Minute
+			"The expiration of one minute after a temporal point of reference."			
+		  ),
+		  (Hour
+			"The expiration of one hour after a temporal point of reference."		
+		   inherits Hourly	
+	      ),
+		  (Day
+			"The expiration of one day after a temporal point of reference."
+		  inherits Daily			
+		  ),
+		  (Week
+		  inherits Weekly
+		  has children
+		  Monday,
+		  Tuesday,
+		  Wednesday,
+		  Thursday,
+		  Friday,
+		  Saturday,
+		  Sunday	
+		  ),
+	     (Month	
+	     "The expiration of one month after a temporal point of reference." 
+	     inherits Monthly
+         has children 
+         January,
+         February,
+         March,
+         April,
+         May,
+         June,
+         July,
+         August,
+         September,
+         October,
+         November,
+         December
+         ),
+        (Season
+		 "The expiration of one season after a temporal point of reference."			
+		),
+		(Year
+		"The expiration of one year after a temporal point of reference."			
+		inherits Yearly
+		),
+		(Decade
+		"The expiration of ten years after a temporal point of reference."
+		),
+		(Century
+		"The expiration of hundred years after a temporal point of reference."	
+		),
+		(Millenium
+		"The expiration of one thousand years after a temporal point of reference."
+		)
+		;	
 
 //From DOLCE ontology
 abstract event Achievement
@@ -309,9 +380,28 @@ abstract configuration Configuration
 //Literature on systems: Laszlo, A., & Krippner, S. (1998). Systems theories: Their origins, foundations, and development. Advances in Psychology-Amsterdam-, 126, 47-76.
 abstract configuration System
     "A system is a complex boundary entity that includes other entities, such as subjects, agents, events and relationships."
-    emerges from Relationship
-//    contains Subject, Agent, Event, Process, Relationship
-;
+    emerges from Relationship;
+    
+abstract configuration Network 
+    is Configuration of Relationship
+	"A network is a configuration of subjects connected by relationships."
+	has children 
+	    (abstract SpatialNetwork  
+		inherits Areal
+		);
+		
+abstract attribute DescribedConfiguration
+     "Describes configurations."
+     applies to Configuration
+     has children
+         (PerceivedConfiguration
+         inherits Perceived),
+         (InferredConfiguration
+         	"An inferred configuration exists because humans can logically infer its existence based on other observations."	
+             has children
+             MeasuredConfiguration
+             "A measured configuration exists because its existence is exposed by a measurement instrument or process."
+             );
 
 /**
  * Countable
