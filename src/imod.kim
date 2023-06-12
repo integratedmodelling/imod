@@ -131,7 +131,7 @@ abstract process Activity
     applies to Agent;
    
 abstract ordering Feasability
-     "Describes the level of feasability of an activity"
+     "Describes the level of feasibility of an activity"
      applies to Activity
      has children
      Feasable,
