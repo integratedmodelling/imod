@@ -166,6 +166,11 @@ role Indicator
      "A relative indicator can only compare two states of the same entity within the same context of observation, and does not suggest any absolute value for the state it refers to."
      );
 
+abstract role Throughput 
+   "The quantifiable amount of matter, energy or information transferred through a flow connection."
+   applies to Process
+  ;
+
 /**
  * Observable
  */
