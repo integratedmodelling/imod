@@ -41,3 +41,20 @@ abstract attribute Orientation
 				Successive
 		);
 
+//This follows the Allen's Interval-based notation: https://plato.stanford.edu/entries/logic-temporal/#PriBasTenLogTL	
+abstract attribute TemporalDescription
+      "Specifies the temporal information for certain states"
+     applies to Event, Process
+     describes Period 
+     has children 
+      Equals,
+      Before,
+      After,
+      Meets,
+      Overlaps,
+      Starts,
+      Finishes,
+      TemporalContainment,
+      During
+;
+
