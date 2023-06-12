@@ -58,3 +58,30 @@ abstract attribute TemporalDescription
       During
 ;
 
+abstract attribute Change
+	"These attributes have to do with the comparison of a value along time. They are important
+	 in dynamic models."
+    applies to Quantity 
+	has disjoint children
+		  (Created 
+			"Applied to a numeric quantity, it makes it a derivative. Dynamic models use this automatically." 
+			),
+		  (Updated
+			"Describes the positive component of change. Implies quantifiable."
+		  applies to Quantity
+		  ),
+		  (Replaced
+			"Describes the positive component of change. Implies quantifiable."
+		  applies to Quantity
+		  ),
+		 (Deleted 
+		    "Describes the negative component of change. Implies quantifiable."
+		 applies to Quantity
+		 )
+;
+
+deniable attribute Regularity
+     has disjoint children
+         Regular,
+         Irregular;
+
