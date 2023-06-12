@@ -45,7 +45,7 @@ abstract attribute Orientation
 abstract attribute TemporalDescription
       "Specifies the temporal information for certain states"
      applies to Event, Process
-     describes Period, Time 
+     describes Period 
      has children 
       Equals,
       Before,
