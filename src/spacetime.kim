@@ -81,6 +81,7 @@ abstract attribute Change
 ;
 
 deniable attribute Regularity
+     applies to Event, Process
      has disjoint children
          Regular,
          Irregular
