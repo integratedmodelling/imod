@@ -47,7 +47,7 @@ attribute Predicted
 abstract attribute Change 
       "These attributes have to do with the comparison of a value along time. They are important  in dynamic models."  
       applies to Quantity  
-      has disjoint children
+      has children
          Changed,
          Replaced,
          Updated,
