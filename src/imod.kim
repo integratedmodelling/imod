@@ -662,6 +662,13 @@ abstract attribute MeasurementRelated
       Gross
       ;
 
+//Used to annotate concepts
+      
+abstract attribute Appropriateness  
+     has children 
+     Appropriate, 
+     Inappropriate;
+
 
 
 

@@ -2,11 +2,4 @@ private namespace economics
 using imod, scaling
 in domain imod:Economics;
 
-abstract attribute MeasurementRelated
-      has children
-      (@colormap(colors=(red white green), midpoint=0)
-      Net
-      ), 
-      Gross
-      ;
 
