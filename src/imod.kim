@@ -252,7 +252,8 @@ abstract role Participant
 
 //From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Processual_role	
 abstract role ProcessualRole
-      "ProcessualRole refers to the role played by participants in a process.";
+      "ProcessualRole refers to the role played by participants in a process."
+      is Role during Process;
 
 //From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Relational_role
 abstract role RelationalRole
