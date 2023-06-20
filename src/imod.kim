@@ -22,7 +22,7 @@ namespace imod
 abstract identity Identity
     "Identity specifies the assignment of a concept to a certain class of concepts based on 
      a series of characteristics, such as morphological, behavioral and contextual"
-	equals core observation:Identity;
+	equals core odo:Identity;
 	
 abstract identity Goal
 "Destination is the goal of a subject, agent or practice when created or internalized by another. Appropriate subclasses of this concept can be added or conferred any time a subject, agent or process has a goal."
@@ -451,8 +451,7 @@ abstract attribute AttributedCapability
 
 //Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
 abstract thing Boundary 
-    "A boundary is a spatial, temporal and conceptual delimitation between entities"
-    inherits Lineal;
+    "A boundary is a spatial, temporal or conceptual delimitation between entities";
 
 deniable attribute Intentional
 	"Intention is a mental state (e.g. goal, belief, desire)";
