@@ -379,6 +379,7 @@ abstract relationship Dependence
 		),
 		(abstract CausalDependence
 			"X is causally dependent on Y, iff the existence of X at t is explained by the existence of Y at t' and t'< t"
+            applies to Event, Process
 		),
 		(abstract CooccurrenceDependence
 			"X and Y are both necessary for the satisfaction of a goal"
