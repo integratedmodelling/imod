@@ -137,7 +137,6 @@ abstract role RelationalRole
 
 abstract role Participant
      "Participants are entities, Subjects or Agents, that participates in Events."
-     applies to Event, Process
 ;
   
 
