@@ -176,7 +176,7 @@ abstract process Activity
     
 process Assessment
     "The activity that represents observations made by the 'implicit' observer of the root context: the k.LAB user. Do not use without thinking hard first."
-    is Activity
+    is Activity 
     creates InformationRealization;
 
 
