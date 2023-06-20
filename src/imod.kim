@@ -257,8 +257,7 @@ abstract role ProcessualRole
 
 //From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Relational_role
 abstract role RelationalRole
-      "RelationalRole refers to the role played by participants in a functional or structural relationship."
-      ;
+      "RelationalRole refers to the role played by participants in a functional or structural relationship.";
 
 abstract event Input
     "Input is an event that triggers another event or process."
