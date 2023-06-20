@@ -653,6 +653,14 @@ abstract priority Concordance
 
 extent Multiplicity 
     is core observation:Multiplicity;
+    
+abstract attribute MeasurementRelated
+      has children
+      (@colormap(colors=(red white green), midpoint=0)
+      Net
+      ), 
+      Gross
+      ;
 
 
 
