@@ -124,18 +124,7 @@ abstract role Role
     "Role specifies predicates that can be played by a concept in a context"
 	equals core observation:Role;
 
-//From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Processual_role	
-abstract role ProcessualRole
-      "ProcessualRole refers to the role played by participants in a process.";
 
-//From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Relational_role
-abstract role RelationalRole
-      "RelationalRole refers to the role played by participants in a functional or structural relationship."
-      ;
-
-abstract role Participant
-     "Participants are entities, Subjects or Agents, that participates in Events."
-;
   
 
 //Adamo, G., and Willis, M. (2022, May). Conceptual Integration for Social-Ecological Systems: An Ontological Approach. RCIS 2022
@@ -255,6 +244,20 @@ abstract process Transformation
 abstract event Event
     "An event is something happening in time, close-ended (with temporal boundaries), having participants"
 	equals core observation:Event;
+	
+abstract role Participant
+     "Participants are entities, Subjects or Agents, that participates in Events."
+     is Role during Event
+;
+
+//From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Processual_role	
+abstract role ProcessualRole
+      "ProcessualRole refers to the role played by participants in a process.";
+
+//From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Relational_role
+abstract role RelationalRole
+      "RelationalRole refers to the role played by participants in a functional or structural relationship."
+      ;
 
 abstract event Input
     "Input is an event that triggers another event or process."
