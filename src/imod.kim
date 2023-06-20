@@ -170,6 +170,7 @@ abstract process Process
 
 abstract process Activity
     "An activity is a process performed by an agent"
+    is Intentional Process
     applies to Agent
     ;
     
