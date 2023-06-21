@@ -34,7 +34,7 @@ abstract identity Goal
 	
 abstract attribute Attribute
     "Attribute specifies descriptive accidental predicates of a subject."
-	equals core observation:Attribute;
+	equals core odo:Attribute;
 	
 
 	
