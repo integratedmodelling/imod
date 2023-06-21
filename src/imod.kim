@@ -185,7 +185,7 @@ process Assessment
 
 
    
-abstract ordering Feasability
+abstract subjective ordering Feasability
      "Describes the level of feasibility of an activity"
      applies to Activity
      has children
