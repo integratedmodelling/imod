@@ -656,6 +656,18 @@ abstract priority Concordance
 
 abstract money MonetaryValue
     equals core odo:MonetaryValue;
+    
+abstract quantity PreferenceValue
+   equals core odo:PreferenceValue;
+   
+abstract role ValueObject
+     applies to Subject;
+
+abstract role ValueActivity
+     applies to Activity;
+     
+abstract relationship ValuationRelationship
+     links Agent to Subject;
 
 //Extent
 
