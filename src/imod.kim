@@ -39,7 +39,8 @@ abstract attribute Attribute
 
 	
 attribute Predicted
-	is core observation:Predicted;
+//	is core observation:Predicted
+    applies to Quantity;
 
 
 //from GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Change	
