@@ -35,7 +35,6 @@ abstract identity ConceptualBoundary
      applies to Relevance Subject, Agent, Process, Event, Quality
      requires identity Goal;
 
-
 //Attribute
 	
 abstract attribute Attribute
@@ -47,8 +46,6 @@ abstract attribute Attribute
 attribute Predicted
 //	is core observation:Predicted
     applies to Quantity;
-
-
 
 
 deniable attribute Compliant 
@@ -65,7 +62,7 @@ abstract subjective ordering Coarseness
 		Coarse;
 	
 deniable attribute Perceived
-    "Describes an perceivable observable phenomena"
+    "Describes a perceivable observable phenomena"
     has children
         Visible,
         Audible,
@@ -120,12 +117,10 @@ abstract role Role
     "Role specifies predicates that can be played by a concept in a context"
 	equals core odo:Role;
 
-
-  
-
 //Adamo, G., and Willis, M. (2022, May). Conceptual Integration for Social-Ecological Systems: An Ontological Approach. RCIS 2022
 abstract role Resource
      "A resource is the role that objects plays in the context of activities or plans to achieve goals"
+     is Relevance Role for Goal
      applies to Subject, Agent
      has children
         (NaturalResource),
@@ -133,8 +128,6 @@ abstract role Resource
         "HumanMade resources are the equivalent of artifacts."
         applies to Artifact
         );
-
-
 
 
 role Reference
