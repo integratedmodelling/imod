@@ -83,4 +83,10 @@ abstract attribute SpatialOrientation
 						Horizontal
 				)
 		);
+		
+		
+abstract area SpatialCoverage is Area;
+     
+		
+
 

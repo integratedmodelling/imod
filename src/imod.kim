@@ -256,6 +256,8 @@ abstract role Participant
      is Role during Event
 ;
 
+
+
 //From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Processual_role	
 abstract role ProcessualRole
       "ProcessualRole refers to the role played by participants in a process."
@@ -275,6 +277,14 @@ abstract event Output
     "Output is an event generated from another event or process."
     applies to Event, Process
     inherits Change;
+
+abstract process Participation
+      is Activity
+      applies to Participant
+      has children
+       Active,
+       Passive    
+      ;
 
 abstract event RecurrentEvent 
      "These are intended not as units of measurement (not observables) but as observable events, signaling the expiration of a given period of time. They can be observe  in time as dependencies, and models can be provided for them in scenarios. Traits  can be used or conferred by processes to distinguish particular periods." 
@@ -445,12 +455,12 @@ abstract thing Artifact
 
 //From: Borgo, S., Vieu, L.: Artefacts in formal ontology. In: Philosophy of technology and engineering sciences
 abstract attribute Capability
-     "Capacity is a quality of a certain artifact."
+     "Capability is a quality of a certain artifact."
      applies to Artifact, HumanMadeResource
 ;
 
 abstract attribute AttributedCapability
-     "Attributed capacity refers to capacities of artifacts assigned by an agent."
+     "Attributed capability refers to capacities of artifacts assigned by an agent."
      applies to Artifact, HumanMadeResource
 ;
 
@@ -620,6 +630,8 @@ abstract volume Volume
 	requires identity Volumetric;
 
 abstract volume Capacity;
+
+abstract angle Direction;
 	
 abstract weight Weight  
 	equals core observation:Weight  
