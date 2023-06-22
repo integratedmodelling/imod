@@ -165,6 +165,8 @@ abstract process Activity
     is Intentional Process
     applies to Agent
     ;
+    
+
 
 abstract process LifeCycle
     is Process 
@@ -381,9 +383,9 @@ abstract thing Subject
 ;
 
 abstract thing Artifact
-    "Artifact s intentionally created by an agent for a goal"
-    requires identity Goal
-;
+    "Artifact is intentionally created by an agent for a goal"
+    is Intentional Created Subject
+    requires identity Goal;
 
 //From: Borgo, S., Vieu, L.: Artefacts in formal ontology. In: Philosophy of technology and engineering sciences
 abstract attribute Capability
@@ -396,15 +398,23 @@ abstract attribute AttributedCapability
      applies to Artifact, HumanMadeResource
 ;
 
-
 deniable attribute Intentional
 	"Intention is a mental state (e.g. goal, belief, desire)";
 
 abstract agent Agent
 	"Agent is a Substantial with intentionality" 
 	equals core odo:Agent
-	inherits Intentional 
-;
+	inherits Intentional;
+
+process Creation
+    "Creation is the intentional activity of developing something for a purpose"
+    is Intentional Activity of Agent
+    requires identity Goal;
+    
+abstract attribute Created
+      "Describes the state in which something is created by an agent"
+      applies to Subject
+      requires identity Goal;   
 
 // From: DOLCE Lite Plus (DLP). E. M. Sanfilippo: "Ontologies for information entities: State of the art and open challenges"
 abstract thing InformationRealization
