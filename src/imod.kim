@@ -420,6 +420,12 @@ abstract agent Agent
 	"Agent is a Substantial with intentionality" 
 	equals core odo:Agent
 	inherits Intentional;
+	
+//Inspired by SUMO v 1.75: https://www.ontologyportal.org/images/SUMOclasses.gif
+abstract agent GroupAgent
+    "Group agent is a collective of agents either unified by a shared goal or not."
+    contains at least 2 Agent
+;
 
 process Creation
     "Creation is the intentional activity of developing something for a purpose"
