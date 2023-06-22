@@ -38,6 +38,7 @@ abstract identity ConceptualBoundary
 // State of affair: https://plato.stanford.edu/entries/states-of-affairs/#:~:text=States%20of%20affairs%20are%20similar,explained%20further)%20objects%20and%20properties.
 abstract identity StateOfAffair
      "State of affair is a complex situation that obtain or not"
+     applies to Event
      has children
      Obtainable,
      Unobtainable
