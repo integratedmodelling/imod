@@ -457,7 +457,7 @@ abstract quantity Quantity
     "Quantity are quality that can be quantified."     
 	equals core odo:QuantifiableQuality;
 
-//From: Borgo, S., Vieu, L.: Artefacts in formal ontology. In: Philosophy of technology and engineering sciences
+//Artifact capability inspired by: Borgo, S., Vieu, L.: Artefacts in formal ontology. In: Philosophy of technology and engineering sciences
 abstract attribute Capability
      "Capability is the described quality of certain artifacts and natural agents."
      requires identity Goal
