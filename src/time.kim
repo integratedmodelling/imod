@@ -1,12 +1,7 @@
 private namespace time
 using imod;
 
-//Discrete space and time for the worldview
-
-abstract identity Puntal is core observation:Puntal;
-abstract identity Lineal is core observation:Lineal;
-abstract identity Areal is core observation:Areal;
-abstract identity Volumetric is core observation:Volumetric;
+//Discrete time for the worldview
 
 identity Hourly is core observation:Hourly;
 identity Yearly is core observation:Yearly;
@@ -18,6 +13,9 @@ abstract attribute TemporalOrientation
 			has disjoint children
 				Previous,
 				Successive;
+				
+abstract duration Age
+;
 				
 //This follows the Allen's Interval-based notation: https://plato.stanford.edu/entries/logic-temporal/#PriBasTenLogTL	
 abstract attribute TemporalDescription
@@ -35,6 +33,35 @@ abstract attribute TemporalDescription
       TemporalContainment,
       During
 ;
+
+abstract duration Duration 
+	equals core odo:Duration;
+
+abstract duration Age;
+
+abstract quality Frequency
+	"Frequency is the numerosity of events in a time period. Used in continuous time representations to 
+    describe a wave."
+	is count of Event;
+	
+abstract duration Period
+	"The time between two repetitions of an event. If the events are described by a quality in continuous time, it 
+     describes the distance between high points on a wave function. Inversely proportional to frequency."
+	decreases with Frequency;
+
+abstract ordering Periodicity
+	""
+	describes Period
+	has children
+		(Sporadic 
+			""
+		),
+		(Intermittent 
+			""
+		),
+		(Continuous 
+			""
+		);
 
 abstract attribute Change
 	"These attributes have to do with the comparison of a value along time. They are important
@@ -78,5 +105,10 @@ deniable attribute Regularity
       "Irregular time is observed as contiguous sequence of intervals of possibly different duration."
      inherits Irregular
      );
+     
+//Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
+abstract extent TemporalBoundary 
+    "A spatial boundary is the spatial delimitation between entities"
+     inherits TemporalDescription;
  
 

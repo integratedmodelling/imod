@@ -86,7 +86,21 @@ abstract attribute SpatialOrientation
 		
 		
 abstract area SpatialCoverage is Area;
+
+//Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
+abstract thing SpatialBoundary 
+    "A spatial boundary is the spatial delimitation between entities"
+    inherits Areal;
      
+abstract area Area 
+	equals core observation:Area 
+	requires identity (Areal or Volumetric);
+
+abstract area SpatialCoverage is Area;
+
+abstract length Length
+	equals core observation:Length 
+	requires identity (Lineal or Areal or Volumetric);
 		
 
 
