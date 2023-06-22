@@ -459,9 +459,17 @@ abstract quantity Quantity
 
 //From: Borgo, S., Vieu, L.: Artefacts in formal ontology. In: Philosophy of technology and engineering sciences
 abstract attribute Capability
-     "Capability is a quality of a certain artifact."
-     describes Created Quality
-     applies to Artifact, HumanMadeResource;
+     "Capability is the described quality of certain artifacts and natural agents."
+     requires identity Goal
+     has disjoint children
+        (ArtifactCapability
+        describes Created Quality	
+        applies to Artifact, HumanMadeResource	
+        ),
+        (NaturalCapability
+        describes Intentional Quality within Agent
+        applies to Agent	
+        );
 
 //Definition of diversity: Xu, S., Bottcher, L., and Chou, T. (2020). Diversity in biology: definitions, quantification and models. Physical Biology, 17(3), 031001.
 abstract quantity Diversity
