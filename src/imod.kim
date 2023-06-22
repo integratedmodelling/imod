@@ -581,7 +581,6 @@ quantity Conductance
  * Extensive physical properties 
  */
 
-
 abstract mass Mass 
 	equals core observation:Mass 
 	requires identity Volumetric;
