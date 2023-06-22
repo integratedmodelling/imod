@@ -19,6 +19,8 @@ namespace imod
  * Predicate
  */
  
+//Identity
+ 
 abstract identity Identity
     "Identity specifies the assignment of a concept to a certain class of concepts based on 
      a series of characteristics, such as morphological, behavioral and contextual"
@@ -424,6 +426,7 @@ abstract agent Agent
 //Inspired by SUMO v 1.75: https://www.ontologyportal.org/images/SUMOclasses.gif
 abstract agent GroupAgent
     "Group agent is a collective of agents either unified by a shared goal or not."
+    applies to Network
     contains at least 2 Agent
 ;
 
@@ -441,7 +444,8 @@ abstract attribute Created
 // From: DOLCE Lite Plus (DLP). E. M. Sanfilippo: "Ontologies for information entities: State of the art and open challenges"
 abstract thing InformationRealization
      "Information realization is the physical support of an information object"
-     is Artifact
+     is Artifact with Evidence
+     
      has children
         (Document
             has children
