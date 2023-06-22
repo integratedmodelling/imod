@@ -387,11 +387,6 @@ abstract thing Artifact
     is Intentional Created Subject
     requires identity Goal;
 
-//From: Borgo, S., Vieu, L.: Artefacts in formal ontology. In: Philosophy of technology and engineering sciences
-abstract attribute Capability
-     "Capability is a quality of a certain artifact."
-     applies to Artifact, HumanMadeResource
-;
 
 abstract attribute AttributedCapability
      "Attributed capability refers to capacities of artifacts assigned by an agent."
@@ -461,6 +456,12 @@ abstract quality Quality
 abstract quantity Quantity
     "Quantity are quality that can be quantified."     
 	equals core odo:QuantifiableQuality;
+
+//From: Borgo, S., Vieu, L.: Artefacts in formal ontology. In: Philosophy of technology and engineering sciences
+abstract attribute Capability
+     "Capability is a quality of a certain artifact."
+     describes Created Quality
+     applies to Artifact, HumanMadeResource;
 
 //Definition of diversity: Xu, S., Bottcher, L., and Chou, T. (2020). Diversity in biology: definitions, quantification and models. Physical Biology, 17(3), 031001.
 abstract quantity Diversity
