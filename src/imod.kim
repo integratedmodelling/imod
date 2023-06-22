@@ -29,6 +29,12 @@ abstract identity Goal
    applies to Subject, Agent, Process
 ;
 
+//Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
+abstract identity ConceptualBoundary 
+    "A conceptual boundary is the conceptual delimitation that allows the identification of entities"
+     applies to Relevance Subject, Agent, Process, Event, Quality
+     requires identity Goal;
+
 
 //Attribute
 	
