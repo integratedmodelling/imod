@@ -34,6 +34,14 @@ abstract identity ConceptualBoundary
     "A conceptual boundary is the conceptual delimitation that allows the identification of entities"
      applies to Relevance Subject, Agent, Process, Event, Quality
      requires identity Goal;
+     
+// State of affair: https://plato.stanford.edu/entries/states-of-affairs/#:~:text=States%20of%20affairs%20are%20similar,explained%20further)%20objects%20and%20properties.
+abstract identity StateOfAffair
+     "State of affair is a complex situation that obtain or not"
+     has children
+     Obtainable,
+     Unobtainable
+;
 
 //Attribute
 	
@@ -41,11 +49,26 @@ abstract attribute Attribute
     "Attribute specifies descriptive accidental predicates of a subject."
 	equals core odo:Attribute;
 	
-
-	
-attribute Predicted
+deniable attribute Predicted
 //	is core observation:Predicted
     applies to Quantity;
+
+abstract attribute Evidence
+     "Characterizes degrees of evidence for an hypothesis." 
+     requires identity StateOfAffair  
+     has children 
+         (Possible 
+         "Hypothesis cannot be dismissed based on reasoning although no documented supporting observations exist."
+         ),
+         (Certain 
+         "No doubt can remain about evidence - self-evident or blatant truth"
+         ),
+         (Hypothetical 
+         "Hypothesis can be made in support of an interpretation although no documented supporting observations exist. Similarly valid counter-arguments may exist."
+         ),
+         (Observed
+          "Degree of evidence is supported by documented observations, but still  evidence is indirect."
+          );
 
 
 deniable attribute Compliant 
@@ -424,21 +447,6 @@ abstract thing InformationRealization
         (ComputerProgram)
         ;
 
-abstract attribute Evidence
-     "Characterizes degrees of evidence for an hypothesis." 
-     has children 
-         (Possible 
-         "Hypothesis cannot be dismissed based on reasoning although no documented supporting observations exist."
-         ),
-         (Certain 
-         "No doubt can remain about evidence - self-evident or blatant truth"
-         ),
-         (Hypothetical 
-         "Hypothesis can be made in support of an interpretation although no documented supporting observations exist. Similarly valid counter-arguments may exist."
-         ),
-         (Observed
-          "Degree of evidence is supported by documented observations, but still  evidence is indirect."
-          );
 
 /**
  * Qualities
