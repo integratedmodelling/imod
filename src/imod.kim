@@ -98,7 +98,7 @@ deniable attribute Perceived
 
 deniable attribute Comparable
    "Describes the ability to rank an object over another one."
-   applies to Concordance
+   applies to Concordance, Relationship
 ;
 
 	
