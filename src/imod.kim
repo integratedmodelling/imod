@@ -388,13 +388,9 @@ abstract thing Artifact
     requires identity Goal;
 
 
-abstract attribute AttributedCapability
-     "Attributed capability refers to capacities of artifacts assigned by an agent."
-     applies to Artifact, HumanMadeResource
-;
-
 deniable attribute Intentional
-	"Intention is a mental state (e.g. goal, belief, desire)";
+	"Intention is a mental state (e.g. goal, belief, desire)"
+	requires identity Goal;
 
 abstract agent Agent
 	"Agent is a Substantial with intentionality" 
@@ -404,6 +400,7 @@ abstract agent Agent
 process Creation
     "Creation is the intentional activity of developing something for a purpose"
     is Intentional Activity of Agent
+    confers Created
     requires identity Goal;
     
 abstract attribute Created
@@ -414,6 +411,7 @@ abstract attribute Created
 // From: DOLCE Lite Plus (DLP). E. M. Sanfilippo: "Ontologies for information entities: State of the art and open challenges"
 abstract thing InformationRealization
      "Information realization is the physical support of an information object"
+     is Artifact
      has children
         (Document
             has children
@@ -440,10 +438,7 @@ abstract attribute Evidence
          ),
          (Observed
           "Degree of evidence is supported by documented observations, but still  evidence is indirect."
-          )
-;
-
-
+          );
 
 /**
  * Qualities
@@ -470,6 +465,12 @@ abstract attribute Capability
         describes Intentional Quality within Agent
         applies to Agent	
         );
+        
+abstract attribute AttributedCapability
+     "Attributed capability refers to capabilities of artifacts and natural agents assigned by other agent."
+     applies to Artifact, HumanMadeResource, Agent
+     
+;
 
 //Definition of diversity: Xu, S., Bottcher, L., and Chou, T. (2020). Diversity in biology: definitions, quantification and models. Physical Biology, 17(3), 031001.
 abstract quantity Diversity
