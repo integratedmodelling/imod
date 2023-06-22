@@ -9,31 +9,6 @@ identity Monthly is core observation:Monthly;
 identity Daily is core observation:Daily;
 identity Weekly is core observation:Weekly;
 
-abstract attribute TemporalOrientation
-			has disjoint children
-				Previous,
-				Successive;
-				
-abstract duration Age
-;
-				
-//This follows the Allen's Interval-based notation: https://plato.stanford.edu/entries/logic-temporal/#PriBasTenLogTL	
-abstract attribute TemporalDescription
-      "Specifies the temporal information for certain states"
-     applies to Event, Process
-     describes Period 
-     has children 
-      Equals,
-      Before,
-      After,
-      Meets,
-      Overlaps,
-      Starts,
-      Finishes,
-      TemporalContainment,
-      During
-;
-
 abstract duration Duration 
 	equals core odo:Duration;
 
@@ -48,50 +23,10 @@ abstract duration Period
 	"The time between two repetitions of an event. If the events are described by a quality in continuous time, it 
      describes the distance between high points on a wave function. Inversely proportional to frequency."
 	decreases with Frequency;
-
-abstract ordering Periodicity
-	""
-	describes Period
-	has children
-		(Sporadic 
-			""
-		),
-		(Intermittent 
-			""
-		),
-		(Continuous 
-			""
-		);
-
-abstract attribute Change
-	"These attributes have to do with the comparison of a value along time. They are important
-	 in dynamic models."
-    applies to Quantity 
-	has disjoint children
-		  (Created 
-			"Applied to a numeric quantity, it makes it a derivative. Dynamic models use this automatically." 
-			),
-		  (Updated
-			"Describes the positive component of change. Implies quantifiable."
-		  applies to Quantity
-		  ),
-		  (Replaced
-			"Describes the positive component of change. Implies quantifiable."
-		  applies to Quantity
-		  ),
-		 (Deleted 
-		    "Describes the negative component of change. Implies quantifiable."
-		 applies to Quantity
-		 )
+				
+abstract duration Age
 ;
 
-deniable attribute Regularity
-     applies to Event, Process
-     has disjoint children
-         Regular,
-         Irregular;
-         
-         
  //Extent
  
        	   
@@ -110,5 +45,66 @@ deniable attribute Regularity
 abstract extent TemporalBoundary 
     "A spatial boundary is the spatial delimitation between entities"
      inherits TemporalDescription;
+				
+//This follows the Allen's Interval-based notation: https://plato.stanford.edu/entries/logic-temporal/#PriBasTenLogTL	
+abstract attribute TemporalDescription
+      "Specifies the temporal information for certain states"
+     applies to Event, Process
+     describes Period 
+     has children 
+      Equals,
+      Before,
+      After,
+      Meets,
+      Overlaps,
+      Starts,
+      Finishes,
+      TemporalContainment,
+      During
+;
+
+abstract attribute TemporalOrientation
+			has disjoint children
+				Previous,
+				Successive;
+
+
+
+abstract ordering Periodicity
+	""
+	describes Period
+	has children
+		(Sporadic 
+			""
+		),
+		(Intermittent 
+			""
+		),
+		(Continuous 
+			""
+		);
+
+
+
+deniable attribute Regularity
+     applies to Event, Process
+     has disjoint children
+         Regular,
+         Irregular;
+         
+//from GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Change	
+// subclasses from Case file items of CMMN: http://cmmn.byethost4.com/case_file_item_standard_events.html?i=1
+abstract attribute Change 
+      "These attributes have to do with the comparison of a value along time. They are important  in dynamic models."  
+      applies to Quantity  
+      has children
+         Changed,
+         Replaced,
+         Updated,
+         Deleted
+;
+         
+         
+
  
 

@@ -8,30 +8,24 @@ abstract identity Lineal is core observation:Lineal;
 abstract identity Areal is core observation:Areal;
 abstract identity Volumetric is core observation:Volumetric;
 
-abstract subjective ordering HeightLenghtLevel
-     applies to /*(Areal or */ Volumetric /*) */ Subject 
-     has children   
-     (abstract VerticalHeightLevel 
-     	describes Height 
-     	has children
-     	   TallHeight,
-     	   SmallHeight
-     	),
-    (abstract HorizontalLenghtLevel
-    	describes Lenght
-    	has children
-    	    Long,
-    	    Short  	
-    );
-    
-abstract subjective ordering VolumeLevel
-      describes Volume 
-      applies to Volumetric, Subject
-      has children  
-         SmallVolume, 
-         LargeVolume;
-         
- //Extent
+abstract area SpatialCoverage is Area;
+
+//Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
+abstract thing SpatialBoundary 
+    "A spatial boundary is the spatial delimitation between entities"
+    inherits Areal;
+     
+abstract area Area 
+	equals core observation:Area 
+	requires identity (Areal or Volumetric);
+
+abstract area SpatialCoverage is Area;
+
+abstract length Length
+	equals core observation:Length 
+	requires identity (Lineal or Areal or Volumetric);
+
+//Extent
  
  abstract extent Space 
     "Space in the IM worldview is 0, 1,2 or 3-dimensional, with implied traits that describe human perception and modalities of description proper of an Euclidean view of the world."
@@ -63,6 +57,31 @@ abstract subjective ordering VolumeLevel
        	         inherits Irregular	
        	         )
        	   );
+
+abstract subjective ordering HeightLenghtLevel
+     applies to /*(Areal or */ Volumetric /*) */ Subject 
+     has children   
+     (abstract VerticalHeightLevel 
+     	describes Height 
+     	has children
+     	   TallHeight,
+     	   SmallHeight
+     	),
+    (abstract HorizontalLenghtLevel
+    	describes Lenght
+    	has children
+    	    Long,
+    	    Short  	
+    );
+    
+abstract subjective ordering VolumeLevel
+      describes Volume 
+      applies to Volumetric, Subject
+      has children  
+         SmallVolume, 
+         LargeVolume;
+         
+ 
        	   
 abstract attribute SpatialOrientation 
 			has children
@@ -85,22 +104,7 @@ abstract attribute SpatialOrientation
 		);
 		
 		
-abstract area SpatialCoverage is Area;
 
-//Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
-abstract thing SpatialBoundary 
-    "A spatial boundary is the spatial delimitation between entities"
-    inherits Areal;
-     
-abstract area Area 
-	equals core observation:Area 
-	requires identity (Areal or Volumetric);
-
-abstract area SpatialCoverage is Area;
-
-abstract length Length
-	equals core observation:Length 
-	requires identity (Lineal or Areal or Volumetric);
 		
 
 
