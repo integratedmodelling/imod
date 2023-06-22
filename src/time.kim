@@ -11,6 +11,13 @@ identity Weekly is core observation:Weekly;
 
 abstract duration Duration 
 	equals core odo:Duration;
+	
+//From SUMO v 1.75: https://www.ontologyportal.org/images/SUMOclasses.gif	
+abstract duration TimePosition
+    "Time position is a perspective to measure time"
+    has children
+    TimeInterval,
+    TimePoint;
 
 abstract duration Age;
 
@@ -113,7 +120,7 @@ abstract extent TemporalBoundary
 abstract attribute TemporalDescription
       "Specifies the temporal information for certain states"
      applies to Event, Process
-     describes Period 
+     describes Period, TimeInterval 
      has children 
       Equals,
       Before,
