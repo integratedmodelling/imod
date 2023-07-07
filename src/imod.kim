@@ -324,7 +324,7 @@ abstract event Achievement
       requires identity Goal;
 
 abstract attribute AchievementRelated 
-        "The type of achievement or non-chievement related to an outcome." 
+        "The type of achievement or non-chievement related to an outcome."
             applies to Achievement
             has children 
             Realized, 
@@ -342,6 +342,7 @@ deniable attribute Planned
     
 deniable attribute Positive
     "Describes the positive or negative outcome of an event or a subject"
+    requires identity Goal
     applies to Event, Achievement, Subject
 ;
 
