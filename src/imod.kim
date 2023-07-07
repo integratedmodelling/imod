@@ -430,6 +430,12 @@ abstract agent GroupAgent
     contains at least 2 Agent
 ;
 
+//From DOLCE.
+abstract thing Feature
+   "Feature is (cognitive) relevant subject that are dependent upon their host, such as holes and bumps."
+   is Relevance Subject
+;
+
 process Creation
     "Creation is the intentional activity of developing something for a purpose"
     is Intentional Activity of Agent
