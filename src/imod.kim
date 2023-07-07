@@ -123,12 +123,20 @@ abstract subjective ordering Level
 ;
 
 abstract subjective ordering Severity 
-     is Level;
+     is Level
+     has children
+     LowSeverity,  
+     ModerateSeverity, 
+     HighSeverity 
+     ;
      
 abstract subjective ordering Relevance 
      "Describes the relevance of observables"
      is Level
-     ;
+     has children
+     LowRelevance,  
+     ModerateRelevance, 
+     HighRelevance;
 
 	
 //Realm
