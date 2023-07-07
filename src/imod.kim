@@ -138,6 +138,7 @@ abstract subjective ordering Relevance
      ModerateRelevance, 
      HighRelevance;
 
+
 	
 //Realm
 	
@@ -203,7 +204,7 @@ abstract process Activity
 
 
 abstract process LifeCycle
-    is Process 
+    is Process
     inherits Change
     applies to Subject, Agent;
     
