@@ -13,11 +13,12 @@ abstract duration Duration
 	equals core odo:Duration;
 	
 //From SUMO v 1.75: https://www.ontologyportal.org/images/SUMOclasses.gif	
-abstract duration TimePosition
-    "Time position is a perspective to measure time"
-    has children
-    TimeInterval,
-    TimePoint;
+//abstract duration TimePosition
+//    "Time position is a perspective to measure time"
+//    has children
+//    TimeInterval,
+//    TimePoint;
+
 
 abstract duration Age;
 
@@ -174,6 +175,17 @@ abstract attribute Change
          Updated,
          Deleted
 ;
+
+//Revisitation as attribute and not duration from SUMO v 1.75: https://www.ontologyportal.org/images/SUMOclasses.gif	
+abstract attribute TimePosition
+    "Time position is a perspective to measure time"
+    has children
+    (TimeInterval
+    	describes Duration
+    ),
+    (TimePoint);
+
+
          
          
 
