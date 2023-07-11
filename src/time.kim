@@ -179,11 +179,10 @@ abstract attribute Change
 //Revisitation as attribute and not duration from SUMO v 1.75: https://www.ontologyportal.org/images/SUMOclasses.gif	
 abstract attribute TimePosition
     "Time position is a perspective to measure time"
+    applies to Duration
     has children
-    (TimeInterval
-    	describes Duration
-    ),
-    (TimePoint);
+    TimeInterval,
+    TimePoint;
 
 
          
