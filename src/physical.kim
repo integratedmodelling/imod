@@ -41,22 +41,52 @@ abstract thing InformationRealization
                 
         (ComputerProgram);
         
-//Specialized physical qualities
-
-	
+//Specialized physical qualities	
 abstract area SpatialCoverage is imod:Area;
 
 abstract quality Acceleration
 	is change rate of imod:Velocity;
 	
-//Specialized physical attributes
+quantity Impedance
+	"The most general quality that describes resistance to a physical force, flow or 
+     other phenomenon. Usually given the symbol Z in technical literature."
+	// TODO children - electrical has a core representation
+	;
 
+quantity Conductance
+	"The opposite of impedance, describing the effectiveness of transport of an observable through a medium or a region.."
+	// TODO children - fluid conductance, electrical conductance, thermal conductivity
+;
+
+abstract volume Capacity;
+
+abstract angle Direction;
+
+
+	
+//Specialized physical attributes
 abstract attribute MovementRelated
 	"MovementRelated describe the type of velocity of a process"
 	describes imod:Velocity of imod:Process
 	has disjoint children
 		Moving,
 		Still;
+		
+abstract subjective ordering HeightLenghtLevel
+     applies to /*(Areal or */ imod:Volumetric /*) */ imod:Subject 
+     has children   
+     (abstract VerticalHeightLevel 
+     	applies to imod:Height 
+     	has children
+     	   TallHeight,
+     	   SmallHeight
+     	),
+    (abstract HorizontalLenghtLevel
+    	applies to imod:Lenght
+    	has children
+    	    Long,
+    	    Short  	
+    );
 
 //Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
 abstract thing SpatialBoundary 
