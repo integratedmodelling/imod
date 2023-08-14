@@ -1,7 +1,7 @@
 private namespace physical
    using imod;
    
-//Physical entities
+//Physical entities, e.g. subjects, events, processes, qualities
 
 abstract thing Artifact
     "Artifact is intentionally created by an agent for a goal"
