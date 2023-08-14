@@ -62,9 +62,15 @@ abstract volume Capacity;
 
 abstract angle Direction;
 
+//Definition of diversity: Xu, S., Bottcher, L., and Chou, T. (2020). Diversity in biology: definitions, quantification and models. Physical Biology, 17(3), 031001.
+abstract quantity Diversity
+"Diversity is the quantity of the range of characteristics found in subjects and agents."; 
+
+abstract quantity Heterogeneity equals Diversity;
+
 
 	
-//Specialized physical attributes
+//Specialized physical predicates
 abstract attribute MovementRelated
 	"MovementRelated describe the type of velocity of a process"
 	describes imod:Velocity of imod:Process
@@ -87,6 +93,51 @@ abstract subjective ordering HeightLenghtLevel
     	    Long,
     	    Short  	
     );
+    
+abstract attribute SpatialOrientation 
+			has children
+				(abstract ObserverRelativeOrientation 
+					has disjoint children
+						Right,
+						Left,
+						Front,
+						Back,
+						Up,
+						Down	
+				),
+				(abstract EuclidianRelativeOrientation2D 
+					"These concepts are purely 2d - nothing in English to denote the 'applicate'
+					 third dimension of a 3D space."
+					has disjoint children
+						Vertical,
+						Horizontal
+				)
+		);
+
+abstract subjective ordering VolumeLevel
+      describes imod:Volume 
+      applies to imod:Volumetric, imod:Subject
+      has children  
+         SmallVolume, 
+         LargeVolume;
+
+abstract role Throughput 
+   "The quantifiable amount of matter, energy or information transferred through a flow connection."
+   applies to imod:Process;
+
+abstract role Participant
+     "Participants are entities, Subjects or Agents, that participates in Events."
+     is imod:Role during imod:Event;
+
+//From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Processual_role	
+abstract role ProcessualRole
+      "ProcessualRole refers to the role played by participants in a process."
+      is imod:Role during imod:Process;
+
+//From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Relational_role
+abstract role RelationalRole
+      "RelationalRole refers to the role played by participants in a functional or structural relationship."
+      ;
 
 //Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
 abstract thing SpatialBoundary 
