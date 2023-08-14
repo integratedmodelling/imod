@@ -38,6 +38,7 @@ abstract identity Puntal is core observation:Puntal;
 abstract identity Lineal is core observation:Lineal;
 abstract identity Areal is core observation:Areal;
 abstract identity Volumetric is core observation:Volumetric;
+ 
 	
 abstract identity Goal
 "Goal is a final output attributed to a Subject, an Agent and a Process"
@@ -217,7 +218,7 @@ abstract process LifeCycle
 process Assessment
     "The activity that represents observations made by the 'implicit' observer of the root context: the k.LAB user. Do not use without thinking hard first."
     is Activity 
-    creates InformationRealization;
+    creates physical:InformationRealization;
 
 
    
@@ -599,6 +600,7 @@ abstract area Area
 abstract length Length
 	equals core observation:Length 
 	requires identity (Lineal or Areal or Volumetric);
+     
 	 
 
 //Artifact capability inspired by: Borgo, S., Vieu, L.: Artefacts in formal ontology. In: Philosophy of technology and engineering sciences
@@ -632,6 +634,25 @@ abstract quantity Heterogeneity equals Diversity;
 abstract quantity Numerosity     
 	equals core odo:Numerosity;
 
+ abstract attribute SpatialOrientation 
+			has children
+				(abstract ObserverRelativeOrientation 
+					has disjoint children
+						Right,
+						Left,
+						Front,
+						Back,
+						Up,
+						Down	
+				),
+				(abstract EuclidianRelativeOrientation2D 
+					"These concepts are purely 2d - nothing in English to denote the 'applicate'
+					 third dimension of a 3D space."
+					has disjoint children
+						Vertical,
+						Horizontal
+				)
+		);
 
 /**
  * Intensive physical properties 
@@ -653,21 +674,6 @@ abstract velocity Velocity
 	equals core odo:Speed;
 
 
-quantity Impedance
-	"The most general quality that describes resistance to a physical force, flow or 
-     other phenomenon. Usually given the symbol Z in technical literature."
-	// TODO children - electrical has a core representation
-;
-
-quantity Conductance
-	"The opposite of impedance, describing the effectiveness of transport of an observable through a medium or a region.."
-	// TODO children - fluid conductance, electrical conductance, thermal conductivity
-;
- 
-/**
- * Extensive physical properties 
- */
-
 abstract mass Mass 
 	equals core observation:Mass 
 	requires identity Volumetric;
@@ -679,19 +685,23 @@ abstract amount Amount
 abstract volume Volume 
 	equals core observation:Volume
 	requires identity Volumetric;
-
-abstract volume Capacity;
-
-abstract angle Direction;
 	
 abstract weight Weight  
 	equals core observation:Weight  
 	requires identity Volumetric;
 	
+abstract length Depth
+    is Length
+    requires identity Volumetric
+;
 
-/**
- * Relative quantities 
- */
+abstract length Width
+    is Length
+    inherits Horizontal
+    requires identity (Areal or Volumetric);
+ 
+abstract quality Acceleration
+    is change rate of Velocity;
  
 abstract quantity Proportion     
 	equals core odo:Proportion;
@@ -738,21 +748,6 @@ deniable attribute Regularity
          Regular,
          Irregular;
          
-abstract subjective ordering HeightLenghtLevel
-     applies to /*(Areal or */ Volumetric /*) */ Subject 
-     has children   
-     (abstract VerticalHeightLevel 
-     	describes Height 
-     	has children
-     	   TallHeight,
-     	   SmallHeight
-     	),
-    (abstract HorizontalLenghtLevel
-    	describes Lenght
-    	has children
-    	    Long,
-    	    Short  	
-    );
 
 abstract subjective ordering VolumeLevel
       describes Volume 
@@ -761,25 +756,12 @@ abstract subjective ordering VolumeLevel
          SmallVolume, 
          LargeVolume;
  
- abstract attribute SpatialOrientation 
-			has children
-				(abstract ObserverRelativeOrientation 
-					has disjoint children
-						Right,
-						Left,
-						Front,
-						Back,
-						Up,
-						Down	
-				),
-				(abstract EuclidianRelativeOrientation2D 
-					"These concepts are purely 2d - nothing in English to denote the 'applicate'
-					 third dimension of a 3D space."
-					has disjoint children
-						Vertical,
-						Horizontal
-				)
-		);
+
+abstract length Height
+     is Length
+     inherits Vertical
+     requires identity (Areal or Volumetric)
+;
 
 //Extent
 
@@ -787,7 +769,6 @@ extent Multiplicity
     is core odo:Multiplicity;
 
 //Temporal extent
- 
        	   
  abstract extent Time 
      is core observation:Time	
