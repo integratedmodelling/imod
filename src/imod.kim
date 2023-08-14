@@ -99,7 +99,8 @@ abstract subjective ordering Coarseness
 	has children
 		Fine,
 		Coarse;
-	
+
+//this could be in physical
 deniable attribute Perceived
     "Describes a perceivable observable phenomena"
     has children
@@ -164,8 +165,7 @@ abstract role Role
 
 role Reference
     "Applied to an observation used as reference to compute the primary observation by comparison. Can be linked to a rescaling filters to shift the context of observation made in different space and time."
-    inherits Comparable
-;
+    inherits Comparable;
 
 role Indicator 
    applies to Quantity 
@@ -177,10 +177,6 @@ role Indicator
      "A relative indicator can only compare two states of the same entity within the same context of observation, and does not suggest any absolute value for the state it refers to."
      );
 
-abstract role Throughput 
-   "The quantifiable amount of matter, energy or information transferred through a flow connection."
-   applies to Process
-  ;
 
 /**
  * Observable
@@ -195,8 +191,7 @@ abstract process Process
 abstract process Activity
     "An activity is a process performed by an agent"
     is Intentional Process
-    applies to Agent
-    ;
+    applies to Agent;
     
  //from GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Change	
 // subclasses from Case file items of CMMN: http://cmmn.byethost4.com/case_file_item_standard_events.html?i=1
@@ -227,8 +222,7 @@ abstract subjective ordering Feasability
      applies to Activity
      has children
      Feasable,
-     Unfeasible  
-     ;
+     Unfeasible;
 	
 
 abstract identity TransitiveProcess 
@@ -288,19 +282,6 @@ abstract event Event
     "An event is something happening in time, close-ended (with temporal boundaries), having participants"
 	equals core observation:Event;
 	
-abstract role Participant
-     "Participants are entities, Subjects or Agents, that participates in Events."
-     is Role during Event;
-
-//From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Processual_role	
-abstract role ProcessualRole
-      "ProcessualRole refers to the role played by participants in a process."
-      is Role during Process;
-
-//From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Relational_role
-abstract role RelationalRole
-      "RelationalRole refers to the role played by participants in a functional or structural relationship.";
-
 abstract event Input
     "Input is an event that triggers another event or process."
     applies to Event, Process
@@ -314,7 +295,7 @@ abstract event Output
 
 abstract process Participation
       is Activity
-      applies to Participant
+      applies to physical:Participant
       has children
        Active,
        Passive    
@@ -623,36 +604,13 @@ abstract attribute AttributedCapability
      
 ;
 
-//Definition of diversity: Xu, S., Bottcher, L., and Chou, T. (2020). Diversity in biology: definitions, quantification and models. Physical Biology, 17(3), 031001.
-abstract quantity Diversity
-"Diversity is the quantity of the range of characteristics found in subjects and agents."; 
 
-abstract quantity Heterogeneity equals Diversity;
 
 //Numerosity
 
 abstract quantity Numerosity     
 	equals core odo:Numerosity;
 
- abstract attribute SpatialOrientation 
-			has children
-				(abstract ObserverRelativeOrientation 
-					has disjoint children
-						Right,
-						Left,
-						Front,
-						Back,
-						Up,
-						Down	
-				),
-				(abstract EuclidianRelativeOrientation2D 
-					"These concepts are purely 2d - nothing in English to denote the 'applicate'
-					 third dimension of a 3D space."
-					has disjoint children
-						Vertical,
-						Horizontal
-				)
-		);
 
 /**
  * Intensive physical properties 
@@ -697,7 +655,7 @@ abstract length Depth
 
 abstract length Width
     is Length
-    inherits Horizontal
+    inherits physical:Horizontal
     requires identity (Areal or Volumetric);
  
 abstract quality Acceleration
@@ -708,7 +666,7 @@ abstract quantity Proportion
 
 abstract quantity Ratio     
 	equals core odo:Ratio;
- 
+
 
 //Category
 	
@@ -748,18 +706,11 @@ deniable attribute Regularity
          Regular,
          Irregular;
          
-
-abstract subjective ordering VolumeLevel
-      describes Volume 
-      applies to Volumetric, Subject
-      has children  
-         SmallVolume, 
-         LargeVolume;
  
 
 abstract length Height
      is Length
-     inherits Vertical
+     inherits physical:Vertical
      requires identity (Areal or Volumetric)
 ;
 
@@ -821,8 +772,7 @@ abstract attribute MeasurementRelated
       (@colormap(colors=(red white green), midpoint=0)
       Net
       ), 
-      Gross
-      ;
+      Gross;
 
 //Used to annotate concepts
       
