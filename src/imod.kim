@@ -15,9 +15,6 @@ namespace imod
  * Import classes from ODO-IM core ontology: https://github.com/integratedmodelling/odo-im
  */	
 
-/**
- * Predicate
- */
  
 //Identity
  
@@ -26,7 +23,7 @@ abstract identity Identity
      a series of characteristics, such as morphological, behavioral and contextual"
 	equals core odo:Identity;
 	
-//Discrete time for the worldview
+//Identities capturing discrete time for the worldview
 
 identity Hourly is core observation:Hourly;
 identity Yearly is core observation:Yearly;
@@ -35,19 +32,16 @@ identity Daily is core observation:Daily;
 identity Weekly is core observation:Weekly;
 
 
-//Discrete space for the worldview
+//Identities capturing discrete space for the worldview
 
 abstract identity Puntal is core observation:Puntal;
 abstract identity Lineal is core observation:Lineal;
 abstract identity Areal is core observation:Areal;
 abstract identity Volumetric is core observation:Volumetric;
-
-
 	
 abstract identity Goal
-"Destination is the goal of a subject, agent or practice when created or internalized by another. Appropriate subclasses of this concept can be added or conferred any time a subject, agent or process has a goal."
-   applies to Subject, Agent, Process
-;
+"Goal is a final output attributed to a Subject, an Agent and a Process"
+   applies to Subject, Agent, Process;
 
 //Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
 abstract identity ConceptualBoundary 
@@ -62,8 +56,7 @@ abstract identity StateOfAffair
      applies to Event
      has children
      Obtainable,
-     Unobtainable
-;
+     Unobtainable;
 
 //Attribute
 	
@@ -95,11 +88,11 @@ abstract attribute Evidence
 
 deniable attribute Compliant 
 "Compliance is forced adherence to a law, regulation, rule, process or practice"
-;
+  applies to Activity, Subject, Agent;
 
 deniable attribute Conformant 
 "Conformance is voluntary adherence to a standard, rule, specification, requirement, design, process or practice."
-;
+  applies to Activity, Subject, Agent;
 
 abstract subjective ordering Coarseness 
 	has children
@@ -112,13 +105,11 @@ deniable attribute Perceived
         Visible,
         Audible,
         Smellable,
-        Palpable
-;
+        Palpable;
 
 deniable attribute Comparable
    "Describes the ability to rank an object over another one."
-   applies to Concordance, Relationship
-;
+   applies to Concordance, Relationship;
 
 	
 abstract subjective ordering Level 
@@ -146,8 +137,7 @@ abstract subjective ordering Severity
      has children
      LowSeverity,  
      ModerateSeverity, 
-     HighSeverity 
-     ;
+     HighSeverity;
      
 abstract subjective ordering Relevance 
      "Describes the relevance of observables"
@@ -170,19 +160,6 @@ abstract realm Realm
 abstract role Role
     "Role specifies predicates that can be played by a concept in a context"
 	equals core odo:Role;
-
-//Adamo, G., and Willis, M. (2022, May). Conceptual Integration for Social-Ecological Systems: An Ontological Approach. RCIS 2022
-abstract role Resource
-     "A resource is the role that objects plays in the context of activities or plans to achieve goals"
-     is Relevance Role for Goal
-     applies to Subject, Agent
-     has children
-        (NaturalResource),
-        (HumanMadeResource
-        "HumanMade resources are the equivalent of artifacts."
-        applies to Artifact
-        );
-
 
 role Reference
     "Applied to an observation used as reference to compute the primary observation by comparison. Can be linked to a rescaling filters to shift the context of observation made in different space and time."
@@ -312,10 +289,7 @@ abstract event Event
 	
 abstract role Participant
      "Participants are entities, Subjects or Agents, that participates in Events."
-     is Role during Event
-;
-
-
+     is Role during Event;
 
 //From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Processual_role	
 abstract role ProcessualRole
@@ -335,7 +309,7 @@ abstract event Input
 abstract event Output
     "Output is an event generated from another event or process."
     applies to Event, Process
-    inherits Change;
+    inherits Change, Goal;
 
 abstract process Participation
       is Activity
@@ -447,12 +421,6 @@ abstract thing Subject
 	equals core odo:Subject
 ;
 
-abstract thing Artifact
-    "Artifact is intentionally created by an agent for a goal"
-    is Intentional Created Subject
-    requires identity Goal;
-
-
 deniable attribute Intentional
 	"Intention is a mental state (e.g. goal, belief, desire)"
 	requires identity Goal;
@@ -466,14 +434,8 @@ abstract agent Agent
 abstract agent GroupAgent
     "Group agent is a collective of agents either unified by a shared goal or not."
     applies to Network
-    contains at least 2 Agent
-;
+    contains at least 2 Agent;
 
-//From DOLCE.
-abstract thing Feature
-   "Feature is (cognitive) relevant subject that are dependent upon their host, such as holes and bumps."
-   is Relevance Subject
-;
 
 process Creation
     "Creation is the intentional activity of developing something for a purpose"
@@ -485,23 +447,6 @@ abstract attribute Created
       "Describes the state in which something is created by an agent"
       applies to Subject
       requires identity Goal;   
-
-// From: DOLCE Lite Plus (DLP). E. M. Sanfilippo: "Ontologies for information entities: State of the art and open challenges"
-abstract thing InformationRealization
-     "Information realization is the physical support of an information object"
-     is Artifact with Evidence
-     
-     has children
-        (Document
-            has children
-                (Specification),
-                (PlanRealization),
-                (Book),
-                (Report)
-                ),
-                
-        (ComputerProgram)
-        ;
 
 
 /**
@@ -649,21 +594,12 @@ abstract event RecurrentEvent
 abstract area Area 
 	equals core observation:Area 
 	requires identity (Areal or Volumetric);
-	
-abstract area SpatialCoverage is Area;
+
 
 abstract length Length
 	equals core observation:Length 
 	requires identity (Lineal or Areal or Volumetric);
-	
-
-
-//Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
-abstract thing SpatialBoundary 
-    "A spatial boundary is the spatial delimitation between entities"
-    inherits Areal;
-    
- 
+	 
 
 //Artifact capability inspired by: Borgo, S., Vieu, L.: Artefacts in formal ontology. In: Philosophy of technology and engineering sciences
 abstract attribute Capability
@@ -672,7 +608,7 @@ abstract attribute Capability
      has disjoint children
         (ArtifactCapability
         describes Created Quality	
-        applies to Artifact, HumanMadeResource	
+        applies to physical:Artifact, physical:HumanMadeResource	
         ),
         (NaturalCapability
         describes Intentional Quality within Agent
@@ -681,7 +617,7 @@ abstract attribute Capability
         
 abstract attribute AttributedCapability
      "Attributed capability refers to capabilities of artifacts and natural agents assigned by other agent."
-     applies to Artifact, HumanMadeResource, Agent
+     applies to physical:Artifact, physical:HumanMadeResource, Agent
      
 ;
 
@@ -716,15 +652,6 @@ resistivity Resistivity
 abstract velocity Velocity 
 	equals core odo:Speed;
 
-abstract quality Acceleration
-	is change rate of Velocity;
-
-abstract attribute MovementRelated
-	"MovementRelated describe the type of velocity of a process"
-	describes Velocity of Process
-	has disjoint children
-		Moving,
-		Still;
 
 quantity Impedance
 	"The most general quality that describes resistance to a physical force, flow or 
