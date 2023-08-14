@@ -41,7 +41,24 @@ abstract thing InformationRealization
                 
         (ComputerProgram);
         
-//Specialized physical qualities	
+//Specialized physical qualities
+abstract length Depth
+    is imod:Length
+    requires identity imod:Volumetric
+;
+
+abstract length Height
+     is imod:Length
+     inherits physical:Vertical
+     requires identity (imod:Areal or imod:Volumetric)
+;
+
+abstract length Width
+    is imod:Length
+    inherits physical:Horizontal
+    requires identity (imod:Areal or imod:Volumetric);
+ 
+    	
 abstract area SpatialCoverage is imod:Area;
 
 abstract quality Acceleration
@@ -57,6 +74,20 @@ quantity Conductance
 	"The opposite of impedance, describing the effectiveness of transport of an observable through a medium or a region.."
 	// TODO children - fluid conductance, electrical conductance, thermal conductivity
 ;
+
+abstract duration Age
+      is imod:Duration;
+      
+
+abstract quality Frequency
+	"Frequency is the numerosity of events in a time period. Used in continuous time representations to 
+    describe a wave."
+	is count of imod:Event;
+
+abstract duration Period
+	"The time between two repetitions of an event. If the events are described by a quality in continuous time, it 
+     describes the distance between high points on a wave function. Inversely proportional to frequency."
+	decreases with Frequency;
 
 abstract volume Capacity;
 
@@ -121,6 +152,25 @@ abstract subjective ordering VolumeLevel
          SmallVolume, 
          LargeVolume;
 
+abstract ordering Periodicity
+	""
+	describes Period
+	has children
+		(Sporadic 
+			""
+		),
+		(Intermittent 
+			""
+		),
+		(Continuous 
+			""
+		);
+		
+abstract attribute TemporalOrientation
+			has disjoint children
+				Previous,
+				Successive;
+
 abstract role Throughput 
    "The quantifiable amount of matter, energy or information transferred through a flow connection."
    applies to imod:Process;
@@ -143,4 +193,9 @@ abstract role RelationalRole
 abstract thing SpatialBoundary 
     "A spatial boundary is the spatial delimitation between entities"
     inherits imod:Areal;
+    
+ //Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
+abstract extent TemporalBoundary 
+    "A temporal boundary is the temporal delimitation between entities."
+     inherits imod:TemporalDescription;
 
