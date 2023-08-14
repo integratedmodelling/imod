@@ -3,3 +3,63 @@ private namespace physical
    
 //Physical entities
 
+abstract thing Artifact
+    "Artifact is intentionally created by an agent for a goal"
+    is imod:Intentional imod:Created imod:Subject
+    requires identity imod:Goal;
+
+//Adamo, G., and Willis, M. (2022, May). Conceptual Integration for Social-Ecological Systems: An Ontological Approach. RCIS 2022
+abstract role Resource
+     "A resource is the role that objects plays in the context of activities or plans to achieve goals"
+     is imod:Relevance imod:Role for imod:Goal
+     applies to imod:Subject, imod:Agent
+     has children
+        (NaturalResource),
+        (HumanMadeResource
+        "HumanMade resources are the equivalent of artifacts."
+        applies to Artifact
+        );
+        
+//From DOLCE.
+abstract thing Feature
+   "Feature is (cognitive) relevant subject that are dependent upon their host, such as holes and bumps."
+   is imod:Relevance imod:Subject;
+   
+// From: DOLCE Lite Plus (DLP). E. M. Sanfilippo: "Ontologies for information entities: State of the art and open challenges"
+abstract thing InformationRealization
+     "Information realization is the physical support of an information object"
+     is Artifact with imod:Evidence
+     
+     has children
+        (Document
+            has children
+                (Specification),
+                (PlanRealization),
+                (Book),
+                (Report)
+                ),
+                
+        (ComputerProgram);
+        
+//Specialized physical qualities
+
+	
+abstract area SpatialCoverage is imod:Area;
+
+abstract quality Acceleration
+	is change rate of imod:Velocity;
+	
+//Specialized physical attributes
+
+abstract attribute MovementRelated
+	"MovementRelated describe the type of velocity of a process"
+	describes imod:Velocity of imod:Process
+	has disjoint children
+		Moving,
+		Still;
+
+//Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
+abstract thing SpatialBoundary 
+    "A spatial boundary is the spatial delimitation between entities"
+    inherits imod:Areal;
+
