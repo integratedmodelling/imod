@@ -446,32 +446,7 @@ abstract quantity Quantity
 abstract duration Duration 
 	equals core odo:Duration;
 
-abstract duration Age;
-
-abstract quality Frequency
-	"Frequency is the numerosity of events in a time period. Used in continuous time representations to 
-    describe a wave."
-	is count of Event;
-
-abstract duration Period
-	"The time between two repetitions of an event. If the events are described by a quality in continuous time, it 
-     describes the distance between high points on a wave function. Inversely proportional to frequency."
-	decreases with Frequency;
 	
-abstract ordering Periodicity
-	""
-	describes Period
-	has children
-		(Sporadic 
-			""
-		),
-		(Intermittent 
-			""
-		),
-		(Continuous 
-			""
-		);
-
 
 //Revisitation as attribute and not duration from SUMO v 1.75: https://www.ontologyportal.org/images/SUMOclasses.gif	
 abstract attribute TimePosition
@@ -485,7 +460,7 @@ abstract attribute TimePosition
 abstract attribute TemporalDescription
       "Specifies the temporal information for certain states"
      applies to Event, Process
-     describes Period 
+     describes physical:Period 
      has children 
       Equals,
       Before,
@@ -498,15 +473,7 @@ abstract attribute TemporalDescription
       During
 ;
 
- //Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
-abstract extent TemporalBoundary 
-    "A temporal boundary is the temporal delimitation between entities."
-     inherits TemporalDescription;
 
-abstract attribute TemporalOrientation
-			has disjoint children
-				Previous,
-				Successive;
 
 abstract event RecurrentEvent 
      "These are intended not as units of measurement (not observables) but as observable events, signaling the expiration of a given period of time. They can be observe  in time as dependencies, and models can be provided for them in scenarios. Traits  can be used or conferred by processes to distinguish particular periods."
@@ -648,19 +615,6 @@ abstract weight Weight
 	equals core observation:Weight  
 	requires identity Volumetric;
 	
-abstract length Depth
-    is Length
-    requires identity Volumetric
-;
-
-abstract length Width
-    is Length
-    inherits physical:Horizontal
-    requires identity (Areal or Volumetric);
- 
-abstract quality Acceleration
-    is change rate of Velocity;
- 
 abstract quantity Proportion     
 	equals core odo:Proportion;
 
@@ -706,13 +660,6 @@ deniable attribute Regularity
          Regular,
          Irregular;
          
- 
-
-abstract length Height
-     is Length
-     inherits physical:Vertical
-     requires identity (Areal or Volumetric)
-;
 
 //Extent
 
