@@ -134,6 +134,7 @@ abstract subjective ordering Level
        	   )
 ;
 
+//Comment: Remove as ordering, Severity as attribute
 abstract subjective ordering Severity 
      is Level
      has children
@@ -192,7 +193,8 @@ abstract process Activity
     "An activity is a process performed by an agent"
     is Intentional Process
     applies to Agent;
-    
+
+//Comment: Change as event
  //from GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Change	
 // subclasses from Case file items of CMMN: http://cmmn.byethost4.com/case_file_item_standard_events.html?i=1
 abstract attribute Change 
@@ -217,14 +219,14 @@ process Assessment
 
 
    
-abstract subjective ordering Feasability
+abstract subjective ordering Feasibility
      "Describes the level of feasibility of an activity"
      applies to Activity
      has children
-     Feasable,
+     Feasible,
      Unfeasible;
 	
-
+//Comment: in physical
 abstract identity TransitiveProcess 
 	"Transitive processes happen in a subject directly affecting other observables (their objects)"
 	applies to Process
@@ -237,7 +239,7 @@ abstract identity TransitiveProcess
 			        (abstract Transport	
 			          )
 			);
-	
+//Comment: in physical	
 abstract identity IntransitiveProcess 
 	"Intransitive processes happen in subjects only affecting the context itself"
 	applies to Process
@@ -249,7 +251,8 @@ abstract identity IntransitiveProcess
 					""
 				)
 		);
-		
+
+//Comment: in physical		
 abstract process Transformation
     "Any endogenous transformation happening in a system and affecting its internal structure."
     inherits IntransitiveProcess, Change
@@ -308,8 +311,9 @@ abstract event Achievement
       is Intentional Event
       requires identity Goal;
 
+//Comment: agreement on the superclass convention
 abstract attribute AchievementRelated 
-        "The type of achievement or non-chievement related to an outcome."
+        "The type of achievement or non-achievement related to an outcome."
             applies to Achievement
             has children 
             Realized, 
@@ -456,6 +460,7 @@ abstract attribute TimePosition
     TimeInterval,
     TimePoint;
 
+//Comment: not appropriate, removed
 //This follows the Allen's Interval-based notation: https://plato.stanford.edu/entries/logic-temporal/#PriBasTenLogTL	
 abstract attribute TemporalDescription
       "Specifies the temporal information for certain states"
@@ -474,7 +479,7 @@ abstract attribute TemporalDescription
 ;
 
 
-
+//Comment: to re-evaluate
 abstract event RecurrentEvent 
      "These are intended not as units of measurement (not observables) but as observable events, signaling the expiration of a given period of time. They can be observe  in time as dependencies, and models can be provided for them in scenarios. Traits  can be used or conferred by processes to distinguish particular periods."
       applies to TimeInterval 
@@ -540,6 +545,7 @@ abstract event RecurrentEvent
 		;	
 
 //Space qualities
+//Comment: re-think "obvervation" ontology and below concepts
 abstract area Area 
 	equals core observation:Area 
 	requires identity (Areal or Volumetric);
