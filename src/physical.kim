@@ -1,4 +1,4 @@
-private namespace physical
+namespace physical
    using imod;
    
 //Physical entities, e.g. subjects, events, processes, qualities
