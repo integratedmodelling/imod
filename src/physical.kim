@@ -154,6 +154,13 @@ abstract process Transformation
 		)
 ;
 
+abstract process Participation
+      is imod:Activity
+      applies to Participant
+      has children
+       Active,
+       Passive;
+
 	
 //Specialized physical predicates
 abstract attribute MovementRelated

@@ -177,11 +177,6 @@ abstract event Output
     "Output is an event generated from another event or process."
     is Change;
 
-abstract process Participation
-      is Activity  
-      has children
-       Active,
-       Passive;
 
 
 
