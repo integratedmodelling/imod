@@ -1,5 +1,5 @@
 namespace physical
-   using imod;
+   using imod,decision;
    
 //Physical entities, e.g. subjects, events, processes, qualities
 
@@ -99,6 +99,55 @@ abstract quantity Diversity
 
 abstract quantity Heterogeneity equals Diversity;
 
+//Specialized processes
+abstract identity TransitiveProcess 
+	"Transitive processes happen in a subject directly affecting other observables (their objects)"
+	has children
+		(
+			@example("Transportation: you transport 'something' - the object - modifying its spatial extent.")
+			abstract SpatialTransitiveProcess
+				"A spatial transitive process affects the spatial extent of the object."
+				has children
+			        (abstract Transport	
+			          )
+			);
+	
+abstract identity IntransitiveProcess 
+	"Intransitive processes happen in subjects only affecting the context itself"
+	has children
+		(abstract SpatialIntransitiveProcess
+			"A spatial transitive process affects the spatial extent of the context - e.g. movement."
+			has children
+				(Movement
+					""
+				)
+		);
+	
+abstract process Transformation
+    "Any endogenous transformation happening in a system and affecting its internal structure."
+    inherits IntransitiveProcess
+    applies to imod:System
+    has children 
+		(Coupling
+			"Building of interactions. Can affect the mereological identity of the system by creating groups."
+		),
+		(Decoupling
+			"Destruction of interactions. Can affect the mereological identity of the system by destroying groups."
+			has children 
+				(Dissipation
+					"Proceeds through the collapse of parts of the system."
+				)
+		),
+		(Displacement 
+			"Akin to movement but causing the system to change because of that"
+		),
+		(Growth
+			 "Positive or negative growth makes a system acquire a larger size or functional throughput."
+		),
+		(Homeostasis
+			"The active maintenance of the current status and/or behavior of the system"
+		)
+;
 
 	
 //Specialized physical predicates
@@ -170,6 +219,15 @@ abstract attribute TemporalOrientation
 			has disjoint children
 				Previous,
 				Successive;
+
+
+deniable attribute Perceived
+    "Describes a perceivable observable phenomena"
+    has children
+        Visible,
+        Audible,
+        Smellable,
+        Palpable;
 
 abstract role Throughput 
    "The quantifiable amount of matter, energy or information transferred through a flow connection."
