@@ -3,9 +3,13 @@ namespace decision
  
 abstract process Decision
      "Decision is a goal-oriented intentional (mental) activity"
-     is imod:Intentional imod:Activity
+     is Intentional imod:Activity
      requires identity imod:Goal
-;     
+     ;
+     
+deniable attribute Intentional
+	"Intention is a mental state (e.g. goal, belief, desire)"
+	requires identity imod:Goal;     
 
 process Assessment
     "The activity that represents observations made by the 'implicit' observer of the root context: the k.LAB user. Do not use without thinking hard first."
@@ -47,12 +51,12 @@ deniable attribute Relevance
 deniable attribute Planned
     "Describes planned or unplanned events"
     requires identity imod:Goal
-    applies to imod:Intentional imod:Event;
+    applies to Intentional imod:Event;
     
 //From DOLCE ontology
 abstract event Achievement
       "Atomic culminating event"
-      is imod:Intentional imod:Event
+      is Intentional imod:Event
       requires identity imod:Goal;
 
 //Comment: agreement on the superclass convention
@@ -63,4 +67,9 @@ abstract attribute AchievementType
             Realized, 
             Potential,
             Theoretical;
+            
+abstract attribute Appropriateness  
+     has children 
+     Appropriate, 
+     Inappropriate;
 
