@@ -5,14 +5,13 @@ namespace physical
 
 abstract thing Artifact
     "Artifact is intentionally created by an agent for a goal"
-    is imod:Intentional imod:Created imod:Subject
+    is decision:Intentional imod:Created imod:Subject
     requires identity imod:Goal;
 
 //Adamo, G., and Willis, M. (2022, May). Conceptual Integration for Social-Ecological Systems: An Ontological Approach. RCIS 2022
 abstract role Resource
      "A resource is the role that objects plays in the context of activities or plans to achieve goals"
-     is imod:Relevance imod:Role for imod:Goal
-     applies to imod:Subject, imod:Agent
+     is decision:Relevance imod:Role for imod:Goal
      has children
         (NaturalResource),
         (HumanMadeResource
@@ -20,16 +19,22 @@ abstract role Resource
         applies to Artifact
         );
         
+        
+//Comment: I am aware that I am using "with" in unconventional manner. To be revised.    
 //From DOLCE.
 abstract thing Feature
    "Feature is (cognitive) relevant subject that are dependent upon their host, such as holes and bumps."
-   is imod:Relevance imod:Subject;
+   is imod:Subject with decision:Relevance
+   inherits imod:AttributedCapability
+   has children
+       Hole,
+       Slot,
+       Bump;
    
 // From: DOLCE Lite Plus (DLP). E. M. Sanfilippo: "Ontologies for information entities: State of the art and open challenges"
 abstract thing InformationRealization
      "Information realization is the physical support of an information object"
-     is Artifact with imod:Evidence
-     
+     is Artifact with imod:Evidence     
      has children
         (Document
             has children
@@ -55,7 +60,7 @@ abstract length Height
 
 abstract length Width
     is imod:Length
-    inherits physical:Horizontal
+    inherits Horizontal
     requires identity (imod:Areal or imod:Volumetric);
  
     	
@@ -231,7 +236,7 @@ deniable attribute Perceived
 
 abstract role Throughput 
    "The quantifiable amount of matter, energy or information transferred through a flow connection."
-   applies to imod:Process;
+   applies to imod:Output;
 
 abstract role Participant
      "Participants are entities, Subjects or Agents, that participates in Events."
@@ -255,5 +260,17 @@ abstract thing SpatialBoundary
  //Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
 abstract extent TemporalBoundary 
     "A temporal boundary is the temporal delimitation between entities."
-     inherits imod:TemporalDescription;
+     inherits TimePosition;
+     
+// time concepts
+
+//Revisitation as attribute and not duration from SUMO v 1.75: https://www.ontologyportal.org/images/SUMOclasses.gif	
+abstract attribute TimePosition
+    "Time position is a perspective to measure time"
+    applies to imod:Duration
+    has children
+    TimeInterval,
+    TimePoint;
+    
+
 
