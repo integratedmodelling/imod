@@ -41,23 +41,21 @@ abstract identity Volumetric is core observation:Volumetric;
  
 	
 abstract identity Goal
-"Goal is a final output attributed to a Subject, an Agent and a Process"
-   applies to Subject, Agent, Process;
+     "Goal is a final output attributed to a Subject, an Agent and a Process";
+
 
 //Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
 abstract identity ConceptualBoundary 
     "A conceptual boundary is the conceptual delimitation that allows the identification of entities"
-     applies to Relevance Subject, Agent, Process, Event, Quality
      requires identity Goal;
   
      
 // State of affair: https://plato.stanford.edu/entries/states-of-affairs/#:~:text=States%20of%20affairs%20are%20similar,explained%20further)%20objects%20and%20properties.
-abstract identity StateOfAffair
-     "State of affair is a complex situation that obtain or not"
-     applies to Event
-     has children
-     Obtainable,
-     Unobtainable;
+//abstract identity StateOfAffairs
+//     "State of affairs is a complex situation that obtain or not"
+//     has children
+ //    Obtainable,
+  //   Unobtainable;
 
 //Attribute
 	
@@ -65,13 +63,9 @@ abstract attribute Attribute
     "Attribute specifies descriptive accidental predicates of a subject."
 	equals core odo:Attribute;
 	
-deniable attribute Predicted
-//	is core observation:Predicted
-    applies to Quantity;
 
 abstract attribute Evidence
-     "Characterizes degrees of evidence for an hypothesis." 
-     requires identity StateOfAffair  
+     "Characterizes degrees of evidence for an hypothesis."   
      has children 
          (Possible 
          "Hypothesis cannot be dismissed based on reasoning although no documented supporting observations exist."
@@ -87,31 +81,12 @@ abstract attribute Evidence
           );
 
 
-deniable attribute Compliant 
-"Compliance is forced adherence to a law, regulation, rule, process or practice"
-  applies to Activity, Subject, Agent;
-
-deniable attribute Conformant 
-"Conformance is voluntary adherence to a standard, rule, specification, requirement, design, process or practice."
-  applies to Activity, Subject, Agent;
-
 abstract subjective ordering Coarseness 
 	has children
 		Fine,
 		Coarse;
 
-//this could be in physical
-deniable attribute Perceived
-    "Describes a perceivable observable phenomena"
-    has children
-        Visible,
-        Audible,
-        Smellable,
-        Palpable;
 
-deniable attribute Comparable
-   "Describes the ability to rank an object over another one."
-   applies to Concordance, Relationship;
 
 	
 abstract subjective ordering Level 
@@ -134,23 +109,6 @@ abstract subjective ordering Level
        	   )
 ;
 
-//Comment: Remove as ordering, Severity as attribute
-abstract subjective ordering Severity 
-     is Level
-     has children
-     LowSeverity,  
-     ModerateSeverity, 
-     HighSeverity;
-     
-abstract subjective ordering Relevance 
-     "Describes the relevance of observables"
-     is Level
-     has children
-     LowRelevance,  
-     ModerateRelevance, 
-     HighRelevance;
-
-
 	
 //Realm
 	
@@ -166,10 +124,9 @@ abstract role Role
 
 role Reference
     "Applied to an observation used as reference to compute the primary observation by comparison. Can be linked to a rescaling filters to shift the context of observation made in different space and time."
-    inherits Comparable;
+    inherits decision:Comparable;
 
 role Indicator 
-   applies to Quantity 
    has children	
      (AbsoluteIndicator
      "An absolute indicator has values that range between a known minimum and maximum and the value corresponds to a state that is fully understood in terms of the indicator."	
@@ -191,93 +148,20 @@ abstract process Process
 
 abstract process Activity
     "An activity is a process performed by an agent"
-    is Intentional Process
-    applies to Agent;
+    is Intentional Process;
+    
 
 //Comment: Change as event
  //from GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Change	
 // subclasses from Case file items of CMMN: http://cmmn.byethost4.com/case_file_item_standard_events.html?i=1
-abstract attribute Change 
-      "These attributes have to do with the comparison of a value along time. They are important  in dynamic models."  
-      applies to Quantity  
+abstract event Change 
+      "Event that specifies qualitative modifications over time. They are important  in dynamic models."       
       has children
          Changed,
          Replaced,
          Updated,
          Deleted;
     
-
-abstract process LifeCycle
-    is Process
-    inherits Change
-    applies to Subject, Agent;
-    
-process Assessment
-    "The activity that represents observations made by the 'implicit' observer of the root context: the k.LAB user. Do not use without thinking hard first."
-    is Activity 
-    creates physical:InformationRealization;
-
-
-   
-abstract subjective ordering Feasibility
-     "Describes the level of feasibility of an activity"
-     applies to Activity
-     has children
-     Feasible,
-     Unfeasible;
-	
-//Comment: in physical
-abstract identity TransitiveProcess 
-	"Transitive processes happen in a subject directly affecting other observables (their objects)"
-	applies to Process
-	has children
-		(
-			@example("Transportation: you transport 'something' - the object - modifying its spatial extent.")
-			abstract SpatialTransitiveProcess
-				"A spatial transitive process affects the spatial extent of the object."
-				has children
-			        (abstract Transport	
-			          )
-			);
-//Comment: in physical	
-abstract identity IntransitiveProcess 
-	"Intransitive processes happen in subjects only affecting the context itself"
-	applies to Process
-	has children
-		(abstract SpatialIntransitiveProcess
-			"A spatial transitive process affects the spatial extent of the context - e.g. movement."
-			has children
-				(Movement
-					""
-				)
-		);
-
-//Comment: in physical		
-abstract process Transformation
-    "Any endogenous transformation happening in a system and affecting its internal structure."
-    inherits IntransitiveProcess, Change
-    applies to System
-    has children 
-		(Coupling
-			"Building of interactions. Can affect the mereological identity of the system by creating groups."
-		),
-		(Decoupling
-			"Destruction of interactions. Can affect the mereological identity of the system by destroying groups."
-			has children 
-				(Dissipation
-					"Proceeds through the collapse of parts of the system."
-				)
-		),
-		(Displacement 
-			"Akin to movement but causing the system to change because of that"
-		),
-		(Growth
-			 "Positive or negative growth makes a system acquire a larger size or functional throughput."
-		),
-		(Homeostasis
-			"The active maintenance of the current status and/or behavior of the system"
-		)
-;
 
 //Event
      
@@ -287,52 +171,29 @@ abstract event Event
 	
 abstract event Input
     "Input is an event that triggers another event or process."
-    applies to Event, Process
-    inherits Change
-;
+    is Change;
 
 abstract event Output
     "Output is an event generated from another event or process."
-    applies to Event, Process
-    inherits Change, Goal;
+    is Change;
 
 abstract process Participation
-      is Activity
-      applies to physical:Participant
+      is Activity  
       has children
        Active,
-       Passive    
-      ;
+       Passive;
 
 
-//From DOLCE ontology
-abstract event Achievement
-      "Atomic culminating event"
-      is Intentional Event
-      requires identity Goal;
-
-//Comment: agreement on the superclass convention
-abstract attribute AchievementRelated 
-        "The type of achievement or non-achievement related to an outcome."
-            applies to Achievement
-            has children 
-            Realized, 
-            Potential,
-            Theoretical;
 
 event Collapse
    "The loss of identity for the system, after which it ceases to exist as such. In  living systems, it's synonymous with death."
     applies to System
 ;
 
-deniable attribute Planned
-    "Describes planned or unplanned events"
-    applies to Event;
     
 deniable attribute Positive
     "Describes the positive or negative outcome of an event or a subject"
     requires identity Goal
-    applies to Event, Achievement, Subject
 ;
 
 //Relationship
@@ -352,7 +213,6 @@ abstract relationship Dependence
 		),
 		(abstract CausalDependence
 			"X is causally dependent on Y, iff the existence of X at t is explained by the existence of Y at t' and t'< t"
-            applies to Event, Process
 		),
 		(abstract CooccurrenceDependence
 			"X and Y are both necessary for the satisfaction of a goal"
@@ -377,20 +237,25 @@ abstract configuration Network
 	has children 
 	    (abstract SpatialNetwork  
 		inherits Areal
+		),
+		(
+		abstract IntentionalNetwork
+		requires identity Goal	
 		);
-		
-abstract attribute DescribedConfiguration
-     "Describes configurations."
-     applies to Configuration
-     has children
-         (PerceivedConfiguration
-         inherits Perceived),
-         (InferredConfiguration
-         	"An inferred configuration exists because humans can logically infer its existence based on other observations."	
-             has children
-             MeasuredConfiguration
-             "A measured configuration exists because its existence is exposed by a measurement instrument or process."
-             );
+
+//Redundant		
+//abstract attribute ConfigurationType
+//     "Describes configurations."
+ //    applies to Configuration
+ //    has children
+  //       (PerceivedConfiguration
+  //       inherits physical:Perceived),
+  //       (InferredConfiguration
+  //       	"An inferred configuration exists because humans can logically infer its existence based on other observations."	
+ //            has children
+ //            MeasuredConfiguration
+ //            "A measured configuration exists because its existence is exposed by a measurement instrument or process."
+ //            );
 
 /**
  * Countable
