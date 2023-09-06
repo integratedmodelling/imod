@@ -1,5 +1,5 @@
 namespace physical
-   using imod,decision;
+   using imod;
    
 //Physical entities, e.g. subjects, events, processes, qualities
 
@@ -204,7 +204,7 @@ abstract attribute SpatialOrientation
 						Vertical,
 						Horizontal
 				)
-		);
+		;
 
 abstract subjective ordering VolumeLevel
       describes imod:Volume 
