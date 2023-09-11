@@ -190,8 +190,7 @@ deniable attribute Positive
     "Describes the positive or negative outcome of an event or a subject"
     requires identity Goal
 ;
-ed my man
-//Relationship
+
 	
 abstract relationship Relationship
     "A relationship directionally connects two subjects or agents"
