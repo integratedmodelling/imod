@@ -295,7 +295,7 @@ abstract attribute Created
  
 abstract quality Quality
      "Qualities represent observables that cannot be observed directly but only through other entities that bear them, in this sense qualities inhere to other entities and are tied to their bearers"
-     equals core odo:Qiality;
+     equals core odo:Quality;
 
 abstract quantity Quantity
     "Quantity are quality that can be quantified."     
