@@ -367,3 +367,50 @@ abstract attribute MeasurementRelated
       Net
       ), 
       Gross;
+      
+//Temporal extent
+       	   
+ abstract extent Time 
+     is core observation:Time	
+     has disjoint children 
+     (RegularTime 
+     "Regular time is observed as a grid of equal contiguous durations." 
+     inherits imod:Regular),
+     (IrregularTime 
+      "Irregular time is observed as contiguous sequence of intervals of possibly different duration."
+     inherits imod:Irregular
+     );
+    
+    
+//Spatial extent
+ 
+ abstract extent Space 
+    "Space in the IM worldview is 0, 1,2 or 3-dimensional, with implied traits that describe human perception and modalities of description proper of an Euclidean view of the world."
+    is core observation:Space
+    has disjoint children ( 
+       PuntalSpace 
+       inherits Puntal
+       ),
+       (LinealSpace
+       	inherits Lineal
+       ),
+       (abstract ArealSpace 
+       inherits Areal 
+           has children 
+               (GridSpace 	
+               	inherits Regular 
+                ),
+                (VectorSpace
+                inherits Irregular	
+                )
+                ),
+       (abstract VolumetricSpace
+       	inherits Volumetric
+       	    has children
+       	         (VoxelSpace
+       	         inherits Regular	
+       	         ),
+       	         (PolyedricSpace
+       	         inherits Irregular	
+       	         )
+       	   );
