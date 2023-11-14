@@ -107,9 +107,7 @@ abstract subjective ordering Level
        	     VeryHigh,
        	     ExtremelyHigh,
        	     Maximal
-       	   )
-;
-
+       	   );
 	
 //Realm
 	
@@ -136,7 +134,6 @@ role Indicator
      "A relative indicator can only compare two states of the same entity within the same context of observation, and does not suggest any absolute value for the state it refers to."
      );
 
-
 /**
  * Observable
  */
@@ -144,12 +141,8 @@ role Indicator
 //Process
 abstract process Process
     "A process is something happening in time, open-ended (without temporal boundaries), and homogeneous"
-	equals core odo:Process
-;
+	equals core odo:Process;
 
-abstract process Activity
-    "An activity is a process performed by an agent"
-    is decision:Intentional Process;
     
 
 //Comment: Change as event
