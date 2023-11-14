@@ -170,6 +170,14 @@ abstract process Participation
       has children
        Active,
        Passive;
+       
+abstract event Change 
+      "Event that specifies qualitative modifications over time. They are important  in dynamic models."       
+      has children
+         Changed,
+         Replaced,
+         Updated,
+         Deleted;
 
 	
 //Specialized physical predicates
