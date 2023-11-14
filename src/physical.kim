@@ -195,6 +195,11 @@ process Creation
     "Creation is the intentional activity of developing something for a purpose"
     is decision:Intentional Activity
     requires identity imod:Goal;
+    
+abstract attribute Created
+      "Describes the state in which something is created by an agent"
+      applies to imod:Subject
+      requires identity imod:Goal;   
 
 	
 //Specialized physical predicates
