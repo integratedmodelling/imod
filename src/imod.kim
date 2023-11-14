@@ -10,6 +10,9 @@ namespace imod
 		)
 	};
 
+/**
+ * IMOD includes abstract concepts related to scientific observations. This is the most general ontology that grounds all the more specific ones.
+ */
 
 /**
  * Import classes from ODO-IM core ontology: https://github.com/integratedmodelling/odo-im
