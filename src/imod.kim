@@ -46,6 +46,7 @@ abstract identity Volumetric is core observation:Volumetric;
 abstract identity Goal
      "Goal is a final output attributed to a Subject, an Agent and a Process";
 
+//The notion of Boundary should be better documented
 
 abstract identity ConceptualBoundary 
      //metadata { plato.stanford.edu/entries/boundary/ }
