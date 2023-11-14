@@ -145,10 +145,6 @@ abstract process Process
 
     
 
-//Comment: Change as event
- //from GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Change	
-// subclasses from Case file items of CMMN: http://cmmn.byethost4.com/case_file_item_standard_events.html?i=1
-
     
 //Event
      
