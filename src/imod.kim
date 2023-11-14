@@ -82,6 +82,8 @@ abstract attribute Evidence
 
 
 abstract subjective ordering Coarseness 
+ub
+
 	has children
 		Fine,
 		Coarse;
