@@ -182,6 +182,14 @@ abstract event Change
          Replaced,
          Updated,
          Deleted;
+         
+abstract event Input
+    "Input is an event that triggers another event or process."
+    is Change;
+
+abstract event Output
+    "Output is an event generated from another event or process."
+    is Change;
 
 	
 //Specialized physical predicates
