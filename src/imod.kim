@@ -162,23 +162,7 @@ deniable attribute Positive
 abstract relationship Relationship
     "A relationship directionally connects two subjects or agents"
 	equals core odo:Relationship;
-
-	
-//Tahko, Tuomas E. and E. Jonathan Lowe, "Ontological Dependence", The Stanford Encyclopedia of Philosophy (Fall 2020 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/fall2020/entries/dependence-ontological/>.
-//Adamo, G., Borgo, S., Di Francescomarino, C., Ghidini, C., Guarino, N., & Sanfilippo, E. M. (2018). Business process activity relationships: is there anything beyond arrows?. In Business Process Management Forum: BPM Forum 2018, Sydney, NSW, Australia, September 9-14, 2018, Proceedings 16 (pp. 53-70). Springer International Publishing.
-abstract relationship Dependence
-    "A dependence (ontological dependence) is a relationship that holds when an entity is dependent upon another for their existence"
-     has children 
-		(abstract HistoricalDependence
-			"X is historically dependent from Y, iff the existence of X at time t is tied to the existence of Y at t' and t'< t"
-		),
-		(abstract CausalDependence
-			"X is causally dependent on Y, iff the existence of X at t is explained by the existence of Y at t' and t'< t"
-		),
-		(abstract CooccurrenceDependence
-			"X and Y are both necessary for the satisfaction of a goal"
-		requires identity Goal	
-		);  
+ 
  
 	
 abstract configuration Configuration
