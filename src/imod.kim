@@ -242,9 +242,7 @@ abstract agent SocialAgent
     applies to Network
     contains at least 2 Agent;
 
-    
-
-
+   
 /**
  * Qualities
  */
@@ -259,8 +257,6 @@ abstract quantity Quantity
 	
 abstract duration Duration 
 	equals core odo:Duration;
-
-
 	
 
 //Space qualities
@@ -273,29 +269,20 @@ abstract area Area
 abstract length Length
 	equals core observation:Length 
 	requires identity (Lineal or Areal or Volumetric);
-     
-	 
+     	 
 
 //Artifact capability inspired by: Borgo, S., Vieu, L.: Artefacts in formal ontology. In: Philosophy of technology and engineering sciences
 abstract attribute Capability
      "Capability is the described quality of certain artifacts and natural agents."
      requires identity Goal
+     describes Quality
      has disjoint children
-        (ArtifactCapability
-        describes Created Quality	
-        applies to physical:Artifact, physical:HumanMadeResource	
-        ),
-        (NaturalCapability
-        describes decision:Intentional Quality within Agent
-        applies to Agent	
-        );
+        ArtifactCapability,
+        NaturalCapability;
         
-abstract attribute AttributedCapability
-     "Attributed capability refers to capabilities of artifacts and natural agents assigned by other agent."
-     applies to physical:Artifact, physical:HumanMadeResource, Agent
-     
-;
-
+//abstract attribute AttributedCapability
+//     "Attributed capability refers to capabilities of artifacts and natural agents assigned by other agent."
+//     applies to physical:Artifact, physical:HumanMadeResource, Agent;
 
 
 //Numerosity
@@ -372,9 +359,6 @@ abstract quantity PreferenceValue
    
 abstract role ValueObject
      applies to Subject;
-
-abstract role ValueActivity
-     applies to Activity;
      
 abstract relationship ValuationRelationship
      links Agent to Subject;
@@ -384,7 +368,6 @@ deniable attribute Regularity
          Regular,
          Irregular;
          
-
 //Extent
 
 extent Multiplicity 
@@ -410,7 +393,7 @@ extent Multiplicity
     is core observation:Space
     has disjoint children ( 
        PuntalSpace 
-       inherits Puntual
+       inherits Puntal
        ),
        (LinealSpace
        	inherits Lineal
