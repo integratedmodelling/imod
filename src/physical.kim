@@ -307,7 +307,7 @@ deniable attribute Perceived
 
 abstract role Throughput 
    "The quantifiable amount of matter, energy or information transferred through a flow connection."
-   applies to imod:Output;
+   applies to Output;
 
 abstract role Participant
      "Participants are entities, Subjects or Agents, that participates in Events."
@@ -336,58 +336,12 @@ abstract extent TemporalBoundary
 // time concepts
 
 //Revisitation as attribute and not duration from SUMO v 1.75: https://www.ontologyportal.org/images/SUMOclasses.gif	
-abstract identity TimePosition
+abstract attribute TimePosition
     "Time position is a perspective to measure time"
-    applies to imod:Duration
+    describes imod:Duration
     has children
     TimeInterval,
     TimePoint;
     
-//Temporal extent
-       	   
- abstract extent Time 
-     is core observation:Time	
-     has disjoint children 
-     (RegularTime 
-     "Regular time is observed as a grid of equal contiguous durations." 
-     inherits imod:Regular),
-     (IrregularTime 
-      "Irregular time is observed as contiguous sequence of intervals of possibly different duration."
-     inherits imod:Irregular
-     );
-    
-    
-//Spatial extent
- 
- abstract extent Space 
-    "Space in the IM worldview is 0, 1,2 or 3-dimensional, with implied traits that describe human perception and modalities of description proper of an Euclidean view of the world."
-    is core observation:Space
-    has disjoint children ( 
-       PuntalSpace 
-       inherits imod:Puntal
-       ),
-       (LinealSpace
-       	inherits imod:Lineal
-       ),
-       (abstract ArealSpace 
-       inherits imod:Areal 
-           has children 
-               (GridSpace 	
-               	inherits imod:Regular 
-                ),
-                (VectorSpace
-                inherits imod:Irregular	
-                )
-                ),
-       (abstract VolumetricSpace
-       	inherits imod:Volumetric
-       	    has children
-       	         (VoxelSpace
-       	         inherits imod:Regular	
-       	         ),
-       	         (PolyedricSpace
-       	         inherits imod:Irregular	
-       	         )
-       	   );
 
 
