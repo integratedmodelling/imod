@@ -201,6 +201,9 @@ process Creation
     is decision:Intentional Activity
     requires identity imod:Goal;
     
+process CyclicalProcess
+;
+    
 //Tahko, Tuomas E. and E. Jonathan Lowe, "Ontological Dependence", The Stanford Encyclopedia of Philosophy (Fall 2020 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/fall2020/entries/dependence-ontological/>.
 //Adamo, G., Borgo, S., Di Francescomarino, C., Ghidini, C., Guarino, N., & Sanfilippo, E. M. (2018). Business process activity relationships: is there anything beyond arrows?. In Business Process Management Forum: BPM Forum 2018, Sydney, NSW, Australia, September 9-14, 2018, Proceedings 16 (pp. 53-70). Springer International Publishing.
 abstract relationship Dependence
