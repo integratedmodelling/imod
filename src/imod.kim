@@ -243,10 +243,6 @@ abstract agent SocialAgent
     contains at least 2 Agent;
 
     
-abstract attribute Created
-      "Describes the state in which something is created by an agent"
-      applies to Subject
-      requires identity Goal;   
 
 
 /**
