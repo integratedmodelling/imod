@@ -167,8 +167,7 @@ abstract process Activity
 abstract role ValueActivity
      applies to Activity;
     
-abstract process Participation
-      is Activity
+abstract event Participation
       applies to Participant
       has children
        Active,

@@ -238,9 +238,13 @@ abstract agent Agent
 	
 //DOLCE and UFO
 abstract agent SocialAgent
-    "Group agent is a collective of agents either unified by a shared goal or not."
+    "Social agent is an Agent created, managed and recognized by other agents, such as organization."
     applies to Network
     contains at least 2 Agent;
+ 
+//DOLCE and UFO    
+abstract thing SocialObject
+     "Social agent is an Subject and recognized by other agents, such as law and money.";
 
    
 /**
