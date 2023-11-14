@@ -3,6 +3,11 @@ namespace physical
    
 //Physical entities, e.g. subjects, events, processes, qualities
 
+event Collapse
+   "The loss of identity for the system, after which it ceases to exist as such. In  living systems, it's synonymous with death."
+    applies to imod:System
+;
+
 abstract thing Artifact
     "Artifact is intentionally created by an agent for a goal"
     is decision:Intentional imod:Created imod:Subject

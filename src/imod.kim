@@ -86,14 +86,9 @@ abstract attribute Evidence
 
 
 abstract subjective ordering Coarseness 
-ub
-
 	has children
 		Fine,
 		Coarse;
-
-
-
 	
 abstract subjective ordering Level 
       "Two-level hierarchy for generic discretizations. Classes are used by other orderings. The 'parent' keyword locates the parent concepts in the second-level hierarchy in case all children are used." 
@@ -168,12 +163,12 @@ abstract event Change
          Updated,
          Deleted;
     
-
 //Event
      
 abstract event Event
     "An event is something happening in time, close-ended (with temporal boundaries), having participants"
 	equals core observation:Event;
+	
 	
 abstract event Input
     "Input is an event that triggers another event or process."
@@ -182,14 +177,6 @@ abstract event Input
 abstract event Output
     "Output is an event generated from another event or process."
     is Change;
-
-
-
-
-event Collapse
-   "The loss of identity for the system, after which it ceases to exist as such. In  living systems, it's synonymous with death."
-    applies to System
-;
 
     
 deniable attribute Positive
@@ -276,8 +263,8 @@ abstract agent Agent
 	equals core odo:Agent
 	inherits decision:Intentional;
 	
-//Inspired by SUMO v 1.75: https://www.ontologyportal.org/images/SUMOclasses.gif
-abstract agent GroupAgent
+//DOLCE and UFO
+abstract agent SocialAgent
     "Group agent is a collective of agents either unified by a shared goal or not."
     applies to Network
     contains at least 2 Agent;
