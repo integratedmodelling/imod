@@ -3,7 +3,7 @@ namespace decision
  
 abstract process Decision
      "Decision is a goal-oriented intentional (mental) activity"
-     is Intentional imod:Activity
+     is Intentional physical:Activity
      requires identity imod:Goal
      ;
      
@@ -28,7 +28,7 @@ deniable attribute Conformant
    
 abstract subjective ordering Feasibility
      "Describes the level of feasibility of an activity"
-     applies to imod:Activity
+     applies to physical:Activity
      has children
      Feasible,
      Unfeasible;

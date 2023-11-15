@@ -1,5 +1,5 @@
 namespace physical
-   using imod,decision;
+   using imod;
    
 //Physical entities, e.g. subjects, events, processes, qualities
 
@@ -10,7 +10,7 @@ event Collapse
 
 abstract thing Artifact
     "Artifact is intentionally created by an agent for a goal"
-    is decision:Intentional imod:Created imod:Subject
+    is decision:Intentional Created imod:Subject
     requires identity imod:Goal;
 
 //Adamo, G., and Willis, M. (2022, May). Conceptual Integration for Social-Ecological Systems: An Ontological Approach. RCIS 2022
@@ -237,14 +237,12 @@ abstract attribute MovementRelated
 abstract subjective ordering HeightLenghtLevel
      applies to /*(Areal or */ imod:Volumetric /*) */ imod:Subject 
      has children   
-     (abstract VerticalHeightLevel 
-     	applies to imod:Height 
+     (abstract VerticalHeightLevel  
      	has children
      	   TallHeight,
      	   SmallHeight
      	),
     (abstract HorizontalLenghtLevel
-    	applies to imod:Lenght
     	has children
     	    Long,
     	    Short  	
