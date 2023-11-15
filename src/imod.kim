@@ -208,8 +208,7 @@ abstract configuration Network
 abstract agent Substantial
 	"Substantial is independent for its existence and bears qualities. Substantial are similar to Subtantial 
     in UFO and DOLCE" 
-	equals core odo:Substantial 
-;
+	equals core odo:Substantial;
 
 abstract thing Subject
     "Subject is a Substantial without agentive characteristics"
