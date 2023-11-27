@@ -2,7 +2,7 @@ namespace physical
    using imod;
    
 //Physical entities, e.g. subjects, events, processes, qualities
-
+//in ODO
 event Collapse
    "The loss of identity for the system, after which it ceases to exist as such. In  living systems, it's synonymous with death."
     applies to imod:System
@@ -27,6 +27,7 @@ abstract role Resource
         
 //Comment: I am aware that I am using "with" in unconventional manner. To be revised.    
 //From DOLCE.
+//Feature (problematic concept): Role is better. Think about the "implies of"
 abstract thing Feature
    "Feature is (cognitive) relevant subject that are dependent upon their host, such as holes and bumps."
    is imod:Subject with decision:Relevance
@@ -36,6 +37,7 @@ abstract thing Feature
        Bump;
 
 //From DOLCE.
+//Cancella
 abstract identity AmountofMatter
    "Amount of matter is an entity made of the same composition, such as gold.";
        
@@ -169,6 +171,8 @@ abstract process Activity
     
 abstract role ValueActivity
      applies to Activity;
+     
+//Participation: specified in ODO or operators
     
 abstract event Participation
       applies to Participant
@@ -177,8 +181,9 @@ abstract event Participation
        Passive;
        
 //Comment: Change as event
- //from GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Change	
+ //from GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classesfeature&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Change	
 // subclasses from Case file items of CMMN: http://cmmn.byethost4.com/case_file_item_standard_events.html?i=1
+// TO BE RE-CONSIDERED (CONFLICT WITH THE OPERATOR)
        
 abstract event Change 
       "Event that specifies qualitative modifications over time. They are important  in dynamic models."       
@@ -188,6 +193,9 @@ abstract event Change
          Updated,
          Deleted;
          
+//Input and output to be redefined ("caused by" and "causing" as operators)
+//Input - output should be renamed in a more abstract way
+         
 abstract event Input
     "Input is an event that triggers another event or process."
     is Change;
@@ -195,12 +203,14 @@ abstract event Input
 abstract event Output
     "Output is an event generated from another event or process."
     is Change;
-    
+  
+//in ODO. it should  an "event"    
 process Creation
     "Creation is the intentional activity of developing something for a purpose"
     is decision:Intentional Activity
     requires identity imod:Goal;
-    
+   
+// Cancellaf    
 process CyclicalProcess
 ;
     
@@ -219,7 +229,8 @@ abstract relationship Dependence
 			"X and Y are both necessary for the satisfaction of a goal"
 		requires identity imod:Goal	
 		); 
-    
+ 
+//Cancella    
 abstract attribute Created
       "Describes the state in which something is created by an agent"
       applies to imod:Subject
@@ -320,6 +331,7 @@ abstract role ProcessualRole
 abstract role RelationalRole
       "RelationalRole refers to the role played by participants in a functional or structural relationship."
       ;
+
 
 //Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
 abstract thing SpatialBoundary 

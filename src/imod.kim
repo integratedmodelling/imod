@@ -170,6 +170,7 @@ abstract configuration Configuration
      quality and relationship"
 	equals core odo:Configuration;
 
+//cancella: system
 //Literature on systems: Laszlo, A., & Krippner, S. (1998). Systems theories: Their origins, foundations, and development. Advances in Psychology-Amsterdam-, 126, 47-76.
 abstract configuration System
     "A system is a complex boundary entity that includes other entities, such as subjects, agents, events and relationships."
@@ -220,6 +221,7 @@ abstract agent Agent
 	inherits decision:Intentional;
 	
 //DOLCE and UFO
+// can we redesign "socialAgent" using the Agent keywords?
 abstract agent SocialAgent
     "Social agent is an Agent created, managed and recognized by other agents, such as organization."
     applies to Network
