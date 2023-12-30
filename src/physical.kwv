@@ -1,5 +1,9 @@
 namespace physical
-   using imod;
+   version 1.0
+   using imod
+   in domain imod:Physical;
+   
+ 
    
 //Physical entities, e.g. subjects, events, processes, qualities
 //in ODO
@@ -10,7 +14,7 @@ event Collapse
 
 abstract thing Artifact
     "Artifact is intentionally created by an agent for a goal"
-    is decision:Intentional Created imod:Subject
+    is decision:Intentional imod:Subject
     requires identity imod:Goal;
 
 //Adamo, G., and Willis, M. (2022, May). Conceptual Integration for Social-Ecological Systems: An Ontological Approach. RCIS 2022
@@ -45,7 +49,7 @@ abstract identity AmountofMatter
 // From: DOLCE Lite Plus (DLP). E. M. Sanfilippo: "Ontologies for information entities: State of the art and open challenges"
 abstract thing InformationRealization
      "Information realization is the physical support of an information object"
-     is Artifact with imod:Evidence     
+     is physical:Artifact with imod:Evidence     
      has children
         (Document
             has children
@@ -207,7 +211,7 @@ abstract event Output
 //in ODO. it should  an "event"    
 process Creation
     "Creation is the intentional activity of developing something for a purpose"
-    is decision:Intentional Activity
+    is decision:Intentional physical:Activity
     requires identity imod:Goal;
    
 // Cancellaf    
@@ -229,14 +233,7 @@ abstract relationship Dependence
 			"X and Y are both necessary for the satisfaction of a goal"
 		requires identity imod:Goal	
 		); 
- 
-//Cancella    
-abstract attribute Created
-      "Describes the state in which something is created by an agent"
-      applies to imod:Subject
-      requires identity imod:Goal;   
 
-	
 //Specialized physical predicates
 abstract attribute MovementRelated
 	"MovementRelated describe the type of velocity of a process"

@@ -1,14 +1,17 @@
 namespace imod
-	"The imod (Integrated Modelling) ontology specifies semantics used everywhere in the IM worldview
-	 and links im-based concepts to the fundamental ontology for use in derived products."
-	version 1.0
-	in domain root
-	metadata {
-		dc:creator: (
-			"Ferdinando Villa (ferdinando.villa@bc3research.org)"
-			"Greta Adamo (greta.adamo@bc3research.org)"
-		)
-	};
+   "The imod (Integrated Modelling) ontology specifies semantics used everywhere in the IM worldview
+    and links im-based concepts to the fundamental ontology for use in derived products."
+   version 1.0
+   in domain root 
+      with core 
+         "https://raw.githubusercontent.com/integratedmodelling/odo-im/master/releases/0.1.0/odo.owl" as odo,
+         "https://github.com/integratedmodelling/odo-im" as observation
+   metadata {
+      dccreator: (
+         "Ferdinando Villa (ferdinando.villa@bc3research.org)"
+         "Greta Adamo (greta.adamo@bc3research.org)"
+      )
+   };
 
 /**
  * IMOD includes abstract concepts related to scientific observations. This is the most general ontology that grounds all the more specific ones.
@@ -16,7 +19,7 @@ namespace imod
 
 /**
  * Import classes from ODO-IM core ontology: https://github.com/integratedmodelling/odo-im
- */	
+ */   
 
  
 //Identity
@@ -24,10 +27,10 @@ namespace imod
 abstract identity Identity
     "Identity specifies the assignment of a concept to a certain class of concepts based on 
      a series of characteristics, such as morphological, behavioral and contextual"
-	equals core odo:Identity;
-	
-//Identities capturing discrete time for the worldview
-
+   equals core odo:Identity;
+   
+// Identities capturing discrete time for the worldview
+// TODO these may not be necessary but needs to see with the implementation
 identity Hourly is core observation:Hourly;
 identity Yearly is core observation:Yearly;
 identity Monthly is core observation:Monthly;
@@ -42,7 +45,6 @@ abstract identity Lineal is core observation:Lineal;
 abstract identity Areal is core observation:Areal;
 abstract identity Volumetric is core observation:Volumetric;
  
-	
 abstract identity Goal
      "Goal is a final output attributed to a Subject, an Agent and a Process";
 
@@ -62,73 +64,66 @@ abstract identity ConceptualBoundary
   //   Unobtainable;
 
 //Attribute
-	
+   
 abstract attribute Attribute
     "Attribute specifies descriptive accidental predicates of a subject."
-	equals core odo:Attribute;
-	
+   equals core odo:Attribute;
+   
 
 abstract attribute Evidence
      "Characterizes degrees of evidence for an hypothesis."   
      has children 
-         (Possible 
-         "Hypothesis cannot be dismissed based on reasoning although no documented supporting observations exist."
-         ),
-         (Certain 
-         "No doubt can remain about evidence - self-evident or blatant truth"
-         ),
-         (Hypothetical 
-         "Hypothesis can be made in support of an interpretation although no documented supporting observations exist. Similarly valid counter-arguments may exist."
-         ),
-         (Observed
-          "Degree of evidence is supported by documented observations, but still  evidence is indirect."
-          );
+         Possible "Hypothesis cannot be dismissed based on reasoning although no documented supporting observations exist.",
+         Certain "No doubt can remain about evidence - self-evident or blatant truth",
+         Hypothetical "Hypothesis can be made in support of an interpretation although no documented supporting observations exist. Similarly valid counter-arguments may exist.",
+         Observed "Degree of evidence is supported by documented observations, but still  evidence is indirect.";
 
 
 abstract subjective ordering Coarseness 
-	has children
-		Fine,
-		Coarse;
-	
+   has children
+      Fine,
+      Coarse;
+   
 abstract subjective ordering Level 
-      "Two-level hierarchy for generic discretizations. Classes are used by other orderings. The 'parent' keyword locates the parent concepts in the second-level hierarchy in case all children are used." 
+      "Two-level hierarchy for generic discretizations. Classes are used by other orderings. The 'parent' keyword locates
+       the parent concepts in the second-level hierarchy in case all children are used." 
       has children  
-        (Low 
-      	   has children 
-      	     Minimal, 
-      	     ExtremelyLow, 
-      	     VeryLow, 
-      	     ModeratelyLow
-             ), 
+      (Low 
+            has children 
+              Minimal, 
+              ExtremelyLow, 
+              VeryLow, 
+              ModeratelyLow
+             ),
         Moderate, 
        (High 
-       	   has children
-       	     ModeratelyHigh,
-       	     VeryHigh,
-       	     ExtremelyHigh,
-       	     Maximal
-       	   );
-	
+            has children
+              ModeratelyHigh,
+              VeryHigh,
+              ExtremelyHigh,
+              Maximal
+            );
+   
 //Realm
-	
+   
 abstract realm Realm
     "Realm specifies the physical (e.g. of the biosphere) location of a concept"
-	equals core odo:Realm;
+   equals core odo:Realm;
 
 //Role
 
 abstract role Role
     "Role specifies predicates that can be played by a concept in a context"
-	equals core odo:Role;
+   equals core odo:Role;
 
 role Reference
     "Applied to an observation used as reference to compute the primary observation by comparison. Can be linked to a rescaling filters to shift the context of observation made in different space and time."
     inherits decision:Comparable;
 
 role Indicator 
-   has children	
+   has children   
      (AbsoluteIndicator
-     "An absolute indicator has values that range between a known minimum and maximum and the value corresponds to a state that is fully understood in terms of the indicator."	
+     "An absolute indicator has values that range between a known minimum and maximum and the value corresponds to a state that is fully understood in terms of the indicator."  
        ),
      (RelativeIndicator 
      "A relative indicator can only compare two states of the same entity within the same context of observation, and does not suggest any absolute value for the state it refers to."
@@ -141,7 +136,7 @@ role Indicator
 //Process
 abstract process Process
     "A process is something happening in time, open-ended (without temporal boundaries), and homogeneous"
-	equals core odo:Process;
+   equals core odo:Process;
 
     
 
@@ -150,45 +145,44 @@ abstract process Process
      
 abstract event Event
     "An event is something happening in time, close-ended (with temporal boundaries), having participants"
-	equals core observation:Event;
-	
-	    
+   equals core observation:Event;
+       
 deniable attribute Positive
     "Describes the positive or negative outcome of an event or a subject"
     requires identity Goal
 ;
-
-	
+   
 abstract relationship Relationship
     "A relationship directionally connects two subjects or agents"
-	equals core odo:Relationship;
+   equals core odo:Relationship;
  
  
-	
+   
 abstract configuration Configuration
     "Configurations represent emergent patterns (aggregates of other entities) that are generated by observations of 
      quality and relationship"
-	equals core odo:Configuration;
+   equals core odo:Configuration;
 
 //cancella: system
 //Literature on systems: Laszlo, A., & Krippner, S. (1998). Systems theories: Their origins, foundations, and development. Advances in Psychology-Amsterdam-, 126, 47-76.
 abstract configuration System
     "A system is a complex boundary entity that includes other entities, such as subjects, agents, events and relationships."
-    emerges from Relationship;
+//    emerges from Relationship
+    ;
     
 abstract configuration Network 
-    is Configuration of Relationship
-	"A network is a configuration of subjects connected by relationships."
-	has children 
-	    (abstract SpatialNetwork  
-		inherits Areal
-		),
-		(
-		abstract IntentionalNetwork
-		requires identity Goal	
-		);
+   "A network is a configuration of subjects connected by relationships."
+   is imod:Configuration of imod:Relationship
+   has children 
+      (abstract SpatialNetwork  
+        inherits Areal
+      ),
+      (
+      abstract IntentionalNetwork
+      requires identity Goal  
+      );
 
-//Redundant		
+//Redundant    
 //abstract attribute ConfigurationType
 //     "Describes configurations."
  //    applies to Configuration
@@ -196,7 +190,7 @@ abstract configuration Network
   //       (PerceivedConfiguration
   //       inherits physical:Perceived),
   //       (InferredConfiguration
-  //       	"An inferred configuration exists because humans can logically infer its existence based on other observations."	
+  //        "An inferred configuration exists because humans can logically infer its existence based on other observations."  
  //            has children
  //            MeasuredConfiguration
  //            "A measured configuration exists because its existence is exposed by a measurement instrument or process."
@@ -207,31 +201,32 @@ abstract configuration Network
  */
 
 abstract agent Substantial
-	"Substantial is independent for its existence and bears qualities. Substantial are similar to Subtantial 
+   "Substantial is independent for its existence and bears qualities. Substantial are similar to Subtantial 
     in UFO and DOLCE" 
-	equals core odo:Substantial;
+   equals core odo:Substantial;
 
 abstract thing Subject
     "Subject is a Substantial without agentive characteristics"
-	equals core odo:Subject;
+   equals core odo:Subject;
 
 abstract agent Agent
-	"Agent is a Substantial with intentionality" 
-	equals core odo:Agent
-	inherits decision:Intentional;
-	
+   "Agent is a Substantial with intentionality" 
+   equals core odo:Agent
+   inherits decision:Intentional;
+   
 //DOLCE and UFO
 // can we redesign "socialAgent" using the Agent keywords?
 abstract agent SocialAgent
     "Social agent is an Agent created, managed and recognized by other agents, such as organization."
     applies to Network
-    contains at least 2 Agent;
+    // nah - this should be a Social identity conferred by some SocialRelationship to the agents it links
+//    contains at least 2 Agent
+    ;
  
 //DOLCE and UFO    
 abstract thing SocialObject
      "Social agent is an Subject and recognized by other agents, such as law and money.";
 
-   
 /**
  * Qualities
  */
@@ -242,23 +237,23 @@ abstract quality Quality
 
 abstract quantity Quantity
     "Quantity are quality that can be quantified."     
-	equals core odo:QuantifiableQuality;
-	
+   equals core odo:QuantifiableQuality;
+   
 abstract duration Duration 
-	equals core odo:Duration;
-	
+   equals core odo:Duration;
+   
 
 //Space qualities
 //Comment: re-think "obvervation" ontology and below concepts
 abstract area Area 
-	equals core observation:Area 
-	requires identity (Areal or Volumetric);
+   equals core observation:Area 
+   requires identity (imod:Areal or imod:Volumetric);
 
 
 abstract length Length
-	equals core observation:Length 
-	requires identity (Lineal or Areal or Volumetric);
-     	 
+   equals core observation:Length 
+   requires identity (imod:Lineal or imod:Areal or imod:Volumetric);
+       
 
 //Artifact capability inspired by: Borgo, S., Vieu, L.: Artefacts in formal ontology. In: Philosophy of technology and engineering sciences
 abstract attribute Capability
@@ -277,7 +272,7 @@ abstract attribute Capability
 //Numerosity
 
 abstract quantity Numerosity     
-	equals core odo:Numerosity;
+   equals core odo:Numerosity;
 
 
 /**
@@ -285,54 +280,54 @@ abstract quantity Numerosity
  */
  
 abstract angle Angle 
-	equals core odo:Angle;
+   equals core odo:Angle;
 
 abstract energy Energy 
-	equals core odo:Energy;
+   equals core odo:Energy;
 
 abstract temperature Temperature 
-	equals core odo:Temperature;
+   equals core odo:Temperature;
 
 resistivity Resistivity 
-	equals core odo:Resistivity;
+   equals core odo:Resistivity;
 
 abstract velocity Velocity 
-	equals core odo:Speed;
+   equals core odo:Speed;
 
 
 abstract mass Mass 
-	equals core observation:Mass 
-	requires identity Volumetric;
+   equals core observation:Mass 
+   requires identity Volumetric;
 
 abstract amount Amount
-	equals core observation:Amount
-	requires identity Volumetric;
+   equals core observation:Amount
+   requires identity Volumetric;
 
 abstract volume Volume 
-	equals core observation:Volume
-	requires identity Volumetric;
-	
+   equals core observation:Volume
+   requires identity Volumetric;
+   
 abstract weight Weight  
-	equals core observation:Weight  
-	requires identity Volumetric;
-	
+   equals core observation:Weight  
+   requires identity Volumetric;
+   
 abstract quantity Proportion     
-	equals core odo:Proportion;
+   equals core odo:Proportion;
 
 abstract quantity Ratio     
-	equals core odo:Ratio;
+   equals core odo:Ratio;
 
 
 //Category
-	
+   
 abstract class Type 
     "Type defines categories"        
-	equals core odo:Type; 
+   equals core odo:Type; 
 
 //Priority
 
 abstract priority Priority 
-	equals core odo:Priority;
+   equals core odo:Priority;
 
 abstract priority Concordance
 "Conceptual distance from an idea or theory"
@@ -370,13 +365,14 @@ abstract attribute MeasurementRelated
       Gross;
       
 //Temporal extent
-       	   
- abstract extent Time 
-     is core observation:Time	
+            
+abstract extent Time 
+     is core observation:Time 
      has disjoint children 
      (RegularTime 
-     "Regular time is observed as a grid of equal contiguous durations." 
-     inherits imod:Regular),
+         "Regular time is observed as a grid of equal contiguous durations." 
+          inherits imod:Regular
+     ),
      (IrregularTime 
       "Irregular time is observed as contiguous sequence of intervals of possibly different duration."
      inherits imod:Irregular
@@ -393,25 +389,25 @@ abstract attribute MeasurementRelated
        inherits Puntal
        ),
        (LinealSpace
-       	inherits Lineal
+         inherits Lineal
        ),
        (abstract ArealSpace 
-       inherits Areal 
+           inherits Areal 
            has children 
-               (GridSpace 	
-               	inherits Regular 
+               (GridSpace  
+                  inherits Regular 
                 ),
                 (VectorSpace
-                inherits Irregular	
+                inherits Irregular  
                 )
-                ),
+       ),
        (abstract VolumetricSpace
-       	inherits Volumetric
-       	    has children
-       	         (VoxelSpace
-       	         inherits Regular	
-       	         ),
-       	         (PolyedricSpace
-       	         inherits Irregular	
-       	         )
-       	   );
+         inherits Volumetric
+             has children
+                  (VoxelSpace
+                  inherits Regular  
+                  ),
+                  (PolyedricSpace
+                  inherits Irregular   
+                  )
+            );

@@ -1,5 +1,0 @@
-private namespace economics
-using imod, scaling
-in domain imod:Economics;
-
-

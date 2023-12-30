@@ -1,0 +1,69 @@
+/**
+ * Default k.LAB observation strategies, previously hard-coded in the ObservationStrategy class.
+ */
+
+strategy 0 named countables.direct
+   "Basic default strategy for any concrete collective countable except relationships: instantiate, then defer resolution of each 
+    individual observation. This will match any predicates and operators since no restriction
+    is specified on the observable."
+   for each odo:Countable, !(each odo:Relationship) if concrete
+   let Observable = arity.single
+   observe each this:Observable {
+         resolve this:Observable optional
+   };
+
+strategy 0 named relationships.direct
+   "Default strategy for relationship is equal to other countables but adds the resolution of target and source subjects"
+   for each odo:Relationship if concrete
+   let 
+      Source = relationship.source, 
+      Target = relationship.target, 
+      Observable = arity.single
+   resolve each this:Source
+   resolve each this:Target
+   observe each this:Observable {
+      resolve this:Observable optional
+   };
+   
+strategy 0 named quality.direct
+  "As a first attempt, any concrete quality is just observed as it is."
+   for odo:Quality if concrete
+   observe this:This;
+      
+strategy 1 named countable.union
+   "Countables in OR can be resolved in stages and merged"
+   for odo:Countable or odo:Countable
+   let FirstOperand, SecondOperand = split.operator
+   resolve this:FirstOperand
+   resolve this:SecondOperand
+   apply klab.objects.merge(this:FirstOperand, this:SecondOperand);
+   
+strategy 1 named quality.union
+   "Types in OR can be resolved in stages and merged"
+   for odo:EnumerableQuality or odo:EnumerableQuality
+   let FirstOperand, SecondOperand = split.operator
+   resolve this:FirstOperand
+   resolve this:SecondOperand
+   apply klab.types.union(this:FirstOperand, this:SecondOperand);  
+   
+strategy 1 named quality.union
+   "Types in AND can be resolved in stages and merged"
+   for odo:EnumerableQuality and odo:EnumerableQuality
+   let FirstOperand, SecondOperand = split.operator
+   resolve this:FirstOperand
+   resolve this:SecondOperand
+   apply klab.types.intersection(this:FirstOperand, this:SecondOperand);    
+   
+strategy 1 named countables.split.predicate
+   "For countables with concrete predicates: separate out the first predicate and resolve it within the subject using
+    collective characterization of the base observable if possible, individual otherwise."
+   for each odo:Countable if count.predicates > 0
+   let Observable, Predicate = split.predicate, BaseObservable = base.observable(this:Predicate)
+   ensure concrete(this:Predicate)
+   resolve this:BaseObservable of each this:Observable
+   resolve each this:Observable {
+      resolve this:Predicate of this:Observable
+   }, {
+      resolve this:BaseObservable of this:Observable
+   }
+   apply object.filter(this:Observable, this:Predicate);

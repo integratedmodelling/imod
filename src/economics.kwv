@@ -1,0 +1,6 @@
+namespace economics
+   version 1.0
+   using imod, scaling
+   in domain imod:Economics;
+
+
