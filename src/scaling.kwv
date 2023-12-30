@@ -5,7 +5,8 @@ namespace scaling
 
 rescaling attribute Ranked
    "Modifies a quantity into another that only guarantees (linear or nonlinear) proportionality with the original. Can be used to 
-    substitute the use of 'magnitude of' as long as the result is numerically consistent for the resulting semantics.";
+    substitute the use of 'magnitude of' as long as the result is numerically consistent for the resulting semantics. Should be
+    qualified with a range in the 'is' clause whenever possible.";
 
 abstract rescaling attribute DataReinterpretation 
 "A type of reinterpretation applied to an observation. These attributes may trigger  data transformations on the observable that adopt them." 

@@ -1,0 +1,22 @@
+{
+  "description" : "Root package for the basic _imod_ worldview",
+  "privileges" : {
+    "allowedGroups" : [ ],
+    "excludedGroups" : [ ],
+    "allowedUsers" : [ ],
+    "excludedUsers" : [ ],
+    "public" : true
+  },
+  "version" : {
+    "major" : 1,
+    "minor" : 0,
+    "build" : 0,
+    "modifier" : "",
+    "constraints" : [ ]
+  },
+  "metadataConventions" : [ ],
+  "prerequisiteProjects" : [ ],
+  "prerequisiteComponents" : [ ],
+  "worldview" : null,
+  "definedWorldview" : "imod"
+}
