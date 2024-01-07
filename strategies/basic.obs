@@ -61,9 +61,9 @@ strategy 1 named countables.split.predicate
    let Observable, Predicate = split.predicate, BaseObservable = base.observable(this:Predicate)
    ensure concrete(this:Predicate)
    resolve this:BaseObservable of each this:Observable
+   apply klab.object.filter(this:Observable, this:Predicate)
    resolve each this:Observable {
       resolve this:Predicate of this:Observable
    }, {
       resolve this:BaseObservable of this:Observable
-   }
-   apply object.filter(this:Observable, this:Predicate);
+   };

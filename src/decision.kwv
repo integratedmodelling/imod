@@ -1,6 +1,6 @@
 namespace decision
       version 1.0
-      using imod // ,physical -- circular dependency
+      using imod, physical
       in domain imod:Physical;
  
 deniable attribute Intentional
