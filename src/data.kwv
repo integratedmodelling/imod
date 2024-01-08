@@ -4,20 +4,25 @@ namespace data
    in domain imod:Knowledge;
 
 abstract rescaling attribute Transformed 
-"A type of reinterpretation applied to an observation. These attributes may trigger  data transformations on the observable that adopt them." 
+"A type of reinterpretation applied to a numeric observation. These attributes trigger data transformations on the quantities that adopt them." 
       applies to Quantity 
         has children 
         @colormap(jet) Normalized 
             "Normalization transforms all the values in a numeric state so that they all fit within a 0-1 range, independent of the original magnitude.",
         @colormap(jet) Standardized 
             "Standardization transforms all the values in a numeric state by subtracting the mean of all values and dividing by their standard deviation.",
-        @colormap(jet) Ranked
+        (@colormap(jet) Ranked
             "Modifies a quantity into another that only guarantees (linear or nonlinear) proportionality with the original. Can be used to 
-             substitute the use of 'magnitude of' as long as the result is numerically consistent for the resulting semantics. Should be
-             qualified with a range in the 'is' clause whenever possible.";
+             substitute the use of 'magnitude of' as long as the result is numerically consistent for all uses of the resulting semantics. 
+             Should be qualified with a range in the 'is' clause whenever possible."
+          metadata {
+             // this would print this warning unless @check(consistent.usage) is added to the observable
+             klab.warning: (consistent.usage, "Ensure that the range of values for the ranked quality is consistent across all usages.")
+           }
+        );
       
-abstract attribute DataReduction 
-     "A type of data reduction or aggregation applied to the observation. These attributes may trigger  data transformations on the observable that adopt them." 
+abstract attribute DataReduction
+     "A type of data reduction or aggregation applied to numeric observations. These do not change the numeric value scale." 
      applies to Quantity 
         has disjoint children 
         (Mean),
