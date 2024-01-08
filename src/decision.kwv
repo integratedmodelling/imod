@@ -3,7 +3,7 @@ namespace decision
       using imod, physical
       in domain imod:Physical;
  
-deniable attribute Intentional
+/* deniable */ attribute Intentional
    "Intention is a mental state (e.g. goal, belief, desire)"
    requires identity imod:Goal;    
     

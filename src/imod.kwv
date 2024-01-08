@@ -48,19 +48,19 @@ abstract identity Identity
    
 // Identities capturing discrete time for the worldview
 // TODO these may not be necessary but needs to see with the implementation
-identity Hourly is core observation:Hourly;
-identity Yearly is core observation:Yearly;
-identity Monthly is core observation:Monthly;
-identity Daily is core observation:Daily;
-identity Weekly is core observation:Weekly;
+//identity Hourly is core observation:Hourly;
+//identity Yearly is core observation:Yearly;
+//identity Monthly is core observation:Monthly;
+//identity Daily is core observation:Daily;
+//identity Weekly is core observation:Weekly;
 
 
 //Identities capturing discrete space for the worldview
 
-abstract identity Puntal is core observation:Puntal;
-abstract identity Lineal is core observation:Lineal;
-abstract identity Areal is core observation:Areal;
-abstract identity Volumetric is core observation:Volumetric;
+//abstract identity Puntal is core observation:Puntal;
+//abstract identity Lineal is core observation:Lineal;
+//abstract identity Areal is core observation:Areal;
+//abstract identity Volumetric is core observation:Volumetric;
  
 abstract identity Goal
      "Goal is a final output attributed to a Subject, an Agent and a Process";
@@ -159,7 +159,7 @@ abstract process Process
      
 abstract event Event
     "An event is something happening in time, close-ended (with temporal boundaries), having participants"
-   is core observation:Event;
+   is core odo:Event;
        
 deniable attribute Positive
     "Describes the positive or negative outcome of an event or a subject"
@@ -260,12 +260,12 @@ abstract duration Duration
 //Space qualities
 //Comment: re-think "observation" ontology and below concepts
 abstract area Area 
-   is core observation:Area 
+   is core odo:Area 
    requires identity (imod:Areal or imod:Volumetric);
 
 
 abstract length Length
-   is core observation:Length 
+   is core odo:Length 
    requires identity (imod:Lineal or imod:Areal or imod:Volumetric);
        
 
@@ -381,7 +381,7 @@ abstract attribute MeasurementRelated
 //Temporal extent
             
 abstract extent Time 
-     is core observation:Time 
+     is core odo:Time 
      has disjoint children 
      (RegularTime 
          "Regular time is observed as a grid of equal contiguous durations." 
@@ -397,7 +397,7 @@ abstract extent Time
  
  abstract extent Space 
     "Space in the IM worldview is 0, 1,2 or 3-dimensional, with implied traits that describe human perception and modalities of description proper of an Euclidean view of the world."
-    is core observation:Space
+    is core odo:Space
     has disjoint children ( 
        PuntalSpace 
        inherits Puntal
