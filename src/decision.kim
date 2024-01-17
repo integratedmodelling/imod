@@ -1,6 +1,8 @@
 namespace decision
       using imod,physical;
- 
+      
+      
+//G: this concept should be reconsidered
 abstract process Decision
      "Decision is a goal-oriented intentional (mental) activity"
      is Intentional physical:Activity
