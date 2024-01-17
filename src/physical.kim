@@ -13,7 +13,6 @@ abstract thing Artifact
     is decision:Intentional imod:Subject
     requires identity imod:Goal;
 
-//Adamo, G., and Willis, M. (2022, May). Conceptual Integration for Social-Ecological Systems: An Ontological Approach. RCIS 2022
 abstract role Resource
      "A resource is the role that objects plays in the context of activities or plans to achieve goals"
      is decision:Relevance imod:Role for imod:Goal
@@ -167,9 +166,7 @@ abstract process Activity
 abstract role ValueActivity
      applies to Activity;
              
-    
-
-	
+    	
 //Specialized physical predicates
 abstract attribute MovementRelated
 	"MovementRelated describe the type of velocity of a process"
@@ -218,6 +215,14 @@ abstract subjective ordering VolumeLevel
       has children  
          SmallVolume, 
          LargeVolume;
+         
+abstract subjective ordering TemperatureLevel
+      describes imod:Temperature 
+      has children
+         Hot,
+         Warm,
+         Cold, 
+         Freezing;
 
 abstract ordering Periodicity
 	""
