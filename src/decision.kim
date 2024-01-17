@@ -18,6 +18,12 @@ process Assessment
     is Decision 
     creates physical:InformationRealization
     ;
+ 
+deniable attribute Appropriate
+    "Appropriate describes the suitability of an Observable to achieve a certain goal."
+    applies to imod:Subject
+    requires identity imod:Goal
+;
 
 deniable attribute Compliant 
     "Compliance is forced adherence to a law, regulation, rule, process or practice"
