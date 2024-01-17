@@ -1,6 +1,12 @@
 /**
- * Default k.LAB observation strategies, previously hard-coded in the ObservationStrategy class.
+ * Default k.LAB observation strategies, previously hard-coded in the ObservationStrategy class. These are the leaves of the 
+ * tree in the observation strategy, and contain only "observe" statements.
  */
+
+strategy 0 named quality.direct
+  "As a first attempt, any concrete quality is just observed as it is."
+   for imod:Quality if concrete
+   observe this:This;
 
 strategy 0 named countables.direct
    "Basic default strategy for any concrete collective countable except relationships: instantiate, then defer resolution of each 
@@ -24,11 +30,11 @@ strategy 0 named relationships.direct
    observe each this:Observable {
       resolve this:Observable optional
    };
-   
-strategy 0 named quality.direct
-  "As a first attempt, any concrete quality is just observed as it is."
-   for odo:Quality if concrete
-   observe this:This;
+     
+/*
+ * Second-tier strategies will use "resolve" for partial resolutions. These may fail while being completed and after causing
+ * observations to be made.
+ */     
       
 strategy 1 named countable.union
    "Countables in OR can be resolved in stages and merged"
@@ -52,7 +58,7 @@ strategy 1 named quality.union
    let FirstOperand, SecondOperand = split.operator
    resolve this:FirstOperand
    resolve this:SecondOperand
-   apply klab.types.intersection(this:FirstOperand, this:SecondOperand);    
+   apply klab.types.intersection(this:FirstOperand, this:SecondOperand);
    
 strategy 1 named countables.split.predicate
    "For countables with concrete predicates: separate out the first predicate and resolve it within the subject using
@@ -60,7 +66,7 @@ strategy 1 named countables.split.predicate
    for each odo:Countable if count.predicates > 0
    let Observable, Predicate = split.predicate, BaseObservable = base.observable(this:Predicate)
    ensure concrete(this:Predicate)
-   resolve this:BaseObservable of each this:Observable
+   resolve this:Predicate of each this:Observable
    apply klab.object.filter(this:Observable, this:Predicate)
    resolve each this:Observable {
       resolve this:Predicate of this:Observable
