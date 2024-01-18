@@ -1,6 +1,8 @@
 namespace geography
 	using imod, physical;
 
+//Why do we have both earth and geography? and why Location, Region are in "earth"?
+
 angle Heading
 	"A direction relative to the geographical North of the earth.";
 
