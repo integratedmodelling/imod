@@ -18,7 +18,7 @@ namespace imod
  * Import classes from ODO-IM core ontology: https://github.com/integratedmodelling/odo-im
  */	
 
- 
+  
 //Identity
  
 abstract identity Identity
