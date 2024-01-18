@@ -5,19 +5,21 @@ namespace decision
 //G: this concept should be reconsidered
 abstract process Decision
      "Decision is a goal-oriented intentional (mental) activity"
-     is Intentional physical:Activity
+     is actor:Intentional physical:Activity
      requires identity imod:Goal
      ;
-     
-deniable attribute Intentional
-	"Intention is a mental state (e.g. goal, belief, desire)"
-	requires identity imod:Goal;     
+          
 
 process Assessment
     "The activity that represents observations made by the 'implicit' observer of the root context: the k.LAB user. Do not use without thinking hard first."
     is Decision 
     creates physical:InformationRealization
     ;
+
+// From: Guizzardi, R., Carneiro, B. G., Porello, D., & Guizzardi, G. (2020, November). A core ontology on decision making. In Proceedings of the XIII Seminar on Ontology Research in Brazil and IV Doctoral and Masters Consortium on Ontologies (ONTOBRAS 2020) (Vol. 2728, pp. 9-21). CEUR-WS.
+role Criterion
+   applies to Decision
+;
  
 deniable attribute Appropriate
     "Appropriate describes the suitability of an Observable to achieve a certain goal."
@@ -59,12 +61,12 @@ deniable attribute Relevance
 deniable attribute Planned
     "Describes planned or unplanned events"
     requires identity imod:Goal
-    applies to Intentional imod:Event;
+    applies to actor:Intentional imod:Event;
     
 //From DOLCE ontology
 abstract event Achievement
       "Atomic culminating event"
-      is Intentional imod:Event
+      is actor:Intentional imod:Event
       requires identity imod:Goal;
 
 //Comment: agreement on the superclass convention
