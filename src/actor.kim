@@ -1,6 +1,9 @@
 namespace actor
      using imod, physical, decision;
      
+//Look at: Boella, Guido, and Leendert van der Torre. "An agent oriented ontology of social reality." Procs. of FOIS 4 (2004): 199-209.
+
+     
 deniable attribute Intentional
 	"Intention is a mental state (e.g. goal, belief, desire)"
 	requires identity imod:Goal;
