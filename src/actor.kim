@@ -1,0 +1,7 @@
+namespace actor
+     using imod, physical, decision;
+     
+deniable attribute Intentional
+	"Intention is a mental state (e.g. goal, belief, desire)"
+	requires identity imod:Goal;
+
