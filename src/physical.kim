@@ -10,7 +10,7 @@ event Collapse
 
 abstract thing Artifact
     "Artifact is intentionally created by an agent for a goal"
-    is decision:Intentional imod:Subject
+    is actor:Intentional imod:Subject
     requires identity imod:Goal;
 
 abstract role Resource
@@ -161,7 +161,7 @@ abstract process Transformation
        
 abstract process Activity
     "An activity is a process performed by an agent"
-    is decision:Intentional imod:Process;
+    is actor:Intentional imod:Process;
     
 abstract role ValueActivity
      applies to Activity;
