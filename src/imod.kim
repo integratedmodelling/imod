@@ -26,17 +26,14 @@ abstract identity Identity
      a series of characteristics, such as morphological, behavioral and contextual"
 	equals core odo:Identity;
 	
-//Identities capturing discrete time for the worldview
-
+//Identities capturing discrete time for the WorldView:
 identity Hourly is core observation:Hourly;
 identity Yearly is core observation:Yearly;
 identity Monthly is core observation:Monthly;
 identity Daily is core observation:Daily;
 identity Weekly is core observation:Weekly;
 
-
-//Identities capturing discrete space for the worldview
-
+//Identities capturing discrete space for the WorldView:
 abstract identity Puntal is core observation:Puntal;
 abstract identity Lineal is core observation:Lineal;
 abstract identity Areal is core observation:Areal;
@@ -44,71 +41,101 @@ abstract identity Volumetric is core observation:Volumetric;
  
 	
 abstract identity Goal
-     "Goal is a final output attributed to a Subject, an Agent and a Process";
+     "Goal is a final output attributed to a Subject, an Agent or a Process";
 
 //The notion of Boundary should be better documented
 
 abstract identity ConceptualBoundary 
      //metadata { plato.stanford.edu/entries/boundary/ }
-    "A conceptual boundary is the conceptual delimitation that allows the identification of entities"
+    "Abstract representation defining the limit or interface between different conceptual entities"
      requires identity Goal;
   
      
 // State of affair: https://plato.stanford.edu/entries/states-of-affairs/#:~:text=States%20of%20affairs%20are%20similar,explained%20further)%20objects%20and%20properties.
-//abstract identity StateOfAffairs
-//     "State of affairs is a complex situation that obtain or not"
-//     has children
- //    Obtainable,
-  //   Unobtainable;
+
+abstract identity StateOfAffair
+	"A complex situation that may or may not be realized."
+	has children
+	(Obtainable
+	"A situation that is achievable or can be realized "	
+	),
+	(Unobtainable
+	"An unrealizable or not achievable situation"
+	);
 
 //Attribute
 	
 abstract attribute Attribute
-    "Attribute specifies descriptive accidental predicates of a subject."
+    "Characteristic or property that describes or represents a feature of entity."
 	equals core odo:Attribute;
 	
 
 abstract attribute Evidence
-     "Characterizes degrees of evidence for an hypothesis."   
+     "Represents information or data that supports the existence of a subject or entity."   
      has children 
          (Possible 
-         "Hypothesis cannot be dismissed based on reasoning although no documented supporting observations exist."
+         "Plausible information or data that may contribute to the confirmation of the evidence."
          ),
          (Certain 
-         "No doubt can remain about evidence - self-evident or blatant truth"
+         "Confirmation of the evidence"
          ),
          (Hypothetical 
-         "Hypothesis can be made in support of an interpretation although no documented supporting observations exist. Similarly valid counter-arguments may exist."
+         "Speculative information based on assumptions. Similarly valid counter-arguments may exist."
          ),
          (Observed
-          "Degree of evidence is supported by documented observations, but still  evidence is indirect."
+          "Degree of evidence supported by documented but indirect observations."
           );
 
 
-abstract subjective ordering Coarseness 
+// Coarseness: https://theses.hal.science/tel-00327542/document
+
+abstract subjective ordering Coarseness
+	"categorization of entities based on the perceived granularity or fineness of their characteristics" 
 	has children
-		Fine,
-		Coarse;
-	
+		(Fine
+		"Detailed or intricate level of granularity."	
+		 ),
+		(Coarse
+		"Broader or less detailed level of granularity."	
+		 );
+
+// The annotation for "level" is too long, working on it.  
+
 abstract subjective ordering Level 
       "Two-level hierarchy for generic discretizations. Classes are used by other orderings. The 'parent' keyword locates the parent concepts in the second-level hierarchy in case all children are used." 
       has children  
         (Low 
+        "Lowest degrees or intensities in the subjective ordering level"	
       	   has children 
-      	     Minimal, 
-      	     ExtremelyLow, 
-      	     VeryLow, 
-      	     ModeratelyLow
+      	     (Minimal
+			 "The most minimal degree or intensity, impossible to diminish"	      	  	
+      	     ), 
+      	     (ExtremelyLow
+      	     "An exceptionally low degree or intensity"
+      	     ), 
+      	     (VeryLow
+      	     "A markedly low degree or intensity"
+      	     ), 
+      	     (ModeratelyLow
+      	     "A moderately low degree or intensity"
              ), 
-        Moderate, 
-       (High 
+        (ModerateHigh 
+        	"Intermediate and higher degrees or intensities in the subjective ordering level"
        	   has children
-       	     ModeratelyHigh,
-       	     VeryHigh,
-       	     ExtremelyHigh,
-       	     Maximal
-       	   );
-	
+       	     (ModeratelyHigh
+       	      "A moderately high degree or intensity"	
+       	     ),
+       	     (VeryHigh 
+       	     "A significantly high degree or intensity"	
+       	     ),
+       	     (ExtremelyHigh
+       	     "An exceptionally high degree or intensity"	
+       	     ),       	     
+       	     (Maximal
+			 "The utmost degree or intensity, impossible to augment"
+			 );
+			 
+
 //Realm
 	
 abstract realm Realm
