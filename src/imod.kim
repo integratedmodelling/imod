@@ -21,31 +21,7 @@ namespace imod
   
 //Identity
  
-abstract identity Identity
-    "Identity specifies the assignment of a concept to a certain class of concepts based on 
-     a series of characteristics, such as morphological, behavioral and contextual"
-	equals core odo:Identity;
-	
-//Identities capturing discrete time for the WorldView:
-identity Hourly is core observation:Hourly;
-identity Yearly is core observation:Yearly;
-identity Monthly is core observation:Monthly;
-identity Daily is core observation:Daily;
-identity Weekly is core observation:Weekly;
-
-//Identities capturing discrete space for the WorldView:
-abstract identity Puntal is core observation:Puntal;
-abstract identity Lineal is core observation:Lineal;
-abstract identity Areal is core observation:Areal;
-abstract identity Volumetric is core observation:Volumetric;
- 
-	
-abstract identity Goal
-     "Goal is a final output attributed to a Subject, an Agent or a Process";
-
-//The notion of Boundary should be better documented
-
-abstract identity ConceptualBoundary 
+ abstract identity ConceptualBoundary 
      //metadata { plato.stanford.edu/entries/boundary/ }
     "Abstract representation defining the limit or interface between different conceptual entities"
      requires identity Goal;
@@ -132,10 +108,10 @@ abstract subjective ordering Level
        	     "An exceptionally high degree or intensity"	
        	     ),       	     
        	     (Maximal
-			 "The utmost degree or intensity, impossible to augment"
-			 );
-			 
+			 "The utmost degree or intensity, impossible to augment")
+			 )
 
+     
 //Realm
 	
 abstract realm Realm
