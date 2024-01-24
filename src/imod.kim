@@ -94,7 +94,8 @@ abstract subjective ordering Level
       	     ), 
       	     (ModeratelyLow
       	     "A moderately low degree or intensity"
-             ), 
+             )
+         ), 
         (ModerateHigh 
         	"Intermediate and higher degrees or intensities in the subjective ordering level"
        	   has children
@@ -109,9 +110,8 @@ abstract subjective ordering Level
        	     ),       	     
        	     (Maximal
 			 "The utmost degree or intensity, impossible to augment")
-			 )
+			 );
 
-     
 //Realm
 	
 abstract realm Realm
