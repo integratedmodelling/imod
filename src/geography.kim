@@ -1,7 +1,7 @@
 namespace geography
 	using imod, physical;
 	
-	x
+//	
 
 //Why do we have both earth and geography? and why Location, Region are in "earth"?
 
