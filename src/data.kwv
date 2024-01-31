@@ -21,7 +21,7 @@ abstract rescaling attribute Transformed
              klab.warning: (consistent.usage, "Ensure that the range of values for the ranked quality is consistent across all usages.")
            }
     );      
-   
+     
 abstract attribute DataReduction
      "A type of data reduction or aggregation applied to numeric observations. These do not change the numeric value scale." 
      applies to imod:Quantity

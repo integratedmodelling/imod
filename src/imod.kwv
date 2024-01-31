@@ -138,9 +138,9 @@ abstract role Role
 role Reference
     "Applied to an observation used as reference to compute the primary observation by comparison. 
      Can be linked to a rescaling filters to shift the context of observation made in different space and time."
-    inherits decision:Comparable;
+    requires attribute decision:Comparable;
 
-@todo("check overlap and collinearities with data:Ranked")
+@todo("check extraction of attributes")
 role Indicator 
    has children   
      (AbsoluteIndicator
@@ -399,7 +399,7 @@ abstract attribute MeasurementRelated
       Net
       ), 
       Gross;
-      
+     
 //Temporal extent
             
 abstract extent Time 
@@ -413,7 +413,6 @@ abstract extent Time
       "Irregular time is observed as contiguous sequence of intervals of possibly different duration."
      inherits imod:Irregular
      );
-    
     
 //Spatial extent
  
