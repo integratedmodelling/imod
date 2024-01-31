@@ -10,30 +10,38 @@ namespace physical
    
 //Physical entities, e.g. subjects, events, processes, qualities
 //in ODO
-event Collapse
+@check("Made it abstract as it needs inherency. Inherency is what makes it possible for events to be independents")
+abstract event Collapse
    "The loss of identity for the system, after which it ceases to exist as such. In  living systems, it's synonymous with death."
     applies to imod:System
 ;
 
+@fixme("Same problems as most other things with 'requires identity Goal'")
 abstract thing Artifact
     "Artifact is intentionally created by an agent for a goal"
 //    is decision:Intentional imod:Subject
     requires identity imod:Goal;
 
 //Adamo, G., and Willis, M. (2022, May). Conceptual Integration for Social-Ecological Systems: An Ontological Approach. RCIS 2022
+@fixme("Really not sure of the 'role for goal' thing which seems to be an abuse of the 'for' operator. 
+        Please avoid ego trips in the metadata when we add them.")
 abstract role Resource
      "A resource is the role that objects plays in the context of activities or plans to achieve goals"
      is /* decision:Relevance */ imod:Role for imod:Goal
      has children
-        (NaturalResource),
-        (HumanMadeResource
-        "HumanMade resources are the equivalent of artifacts."
-        applies to Artifact
+     	@fixme("Do we need these or just the attributes for the nature/provenance of any subject?")
+        NaturalResource,
+        (
+        	@fixme("If these are equivalents we need something very different than 'applies to'")
+        	HumanMadeResource
+        		"HumanMade resources are the equivalent of artifacts."
+        		applies to Artifact
         );
 
 //Comment: I am aware that I am using "with" in unconventional manner. To be revised.    
 //From DOLCE.
-//Feature (problematic concept): Role is better. Think about the "implies of"
+//Feature (problematic concept): Role is better. Think about the "implies"
+@fixme("This seems wrong rather than unconventional. But this is important and we should articulate it properly.")
 abstract thing Feature
    "Feature is (cognitive) relevant subject that are dependent upon their host, such as holes and bumps."
    is imod:Subject // with decision:Relevance
@@ -49,6 +57,7 @@ abstract identity AmountofMatter
 
          
 // From: DOLCE Lite Plus (DLP). E. M. Sanfilippo: "Ontologies for information entities: State of the art and open challenges"
+@fixme("Not sure we need to have these concepts in here. They're the hallmark of all failed ontology efforts for science so far.")
 abstract thing InformationRealization
      "Information realization is the physical support of an information object"
      is physical:Artifact with imod:Evidence     
@@ -64,7 +73,7 @@ abstract thing InformationRealization
         
 //Specialized physical qualities
 abstract length Depth
-    // is imod:Length // unnecessary
+    // is imod:Length // unnecessary as it's a length
     requires identity imod:Volumetric
 ;
 
@@ -76,7 +85,7 @@ abstract length Height
 
 abstract length Width
 //    is imod:Length
-    inherits Horizontal
+    inherits physical:Horizontal
     requires identity (imod:Areal or imod:Volumetric);
  
     	
@@ -194,7 +203,7 @@ abstract event Change
          Changed,
          Replaced,
          Updated,
-         Deleted;
+         @fixme("Not sure about this being an event that directly affects the inherent - probably more of a role?") Deleted;
          
 //Input and output to be redefined ("caused by" and "causing" as operators)
 //Input - output should be renamed in a more abstract way
@@ -233,13 +242,15 @@ abstract relationship Dependence
 		); 
 
 //Specialized physical predicates
+@fixme("See note for other dichotomies")
 abstract attribute MovementRelated
 	"MovementRelated describe the type of velocity of a process"
 	describes imod:Velocity of imod:Process
 	has disjoint children
 		Moving,
 		Still;
-		
+
+@fixme("Ehm")		
 abstract subjective ordering HeightLenghtLevel
      applies to /*(Areal or */ imod:Volumetric /*) */ imod:Subject 
      has children   
@@ -274,6 +285,7 @@ abstract attribute SpatialOrientation
 				)
 		;
 
+@fixme("Argh")
 abstract subjective ordering VolumeLevel
       describes imod:Volume 
       applies to imod:Volumetric, imod:Subject
@@ -281,6 +293,7 @@ abstract subjective ordering VolumeLevel
          SmallVolume, 
          LargeVolume;
 
+@todo("Not sure, but consider adding sealed (giving errors at the moment)")
 abstract ordering Periodicity
 	""
 	describes Period
@@ -302,27 +315,31 @@ abstract attribute TemporalOrientation
 
 
 deniable attribute Perceived
-    "Describes a perceivable observable phenomena"
+    "Describes a perceivable observable phenomenon"
     has children
         Visible,
         Audible,
         Smellable,
         Palpable;
 
+@fixme("Not sure about this, but assuming it's useful it's normally intended as a quality or a role for it rather than for events")
 abstract role Throughput 
    "The quantifiable amount of matter, energy or information transferred through a flow connection."
    applies to Output;
 
+@fixme("Does this really imply participation in events?")
 abstract role Participant
      "Participants are entities, Subjects or Agents, that participates in Events."
      is imod:Role during imod:Event;
 
 //From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Processual_role	
+@fixme("Academic? Don't see the utility, each individual role could be categorized more usefully by making the inherency explicit")
 abstract role ProcessualRole
       "ProcessualRole refers to the role played by participants in a process."
       is imod:Role during imod:Process;
 
 //From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Relational_role
+@fixme("Academic? Don't see the utility, each individual role could be categorized more usefully by making the inherency explicit")
 abstract role RelationalRole
       "RelationalRole refers to the role played by participants in a functional or structural relationship."
       ;
