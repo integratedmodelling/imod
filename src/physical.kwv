@@ -30,8 +30,7 @@ abstract role Resource
         "HumanMade resources are the equivalent of artifacts."
         applies to Artifact
         );
-        
-        
+
 //Comment: I am aware that I am using "with" in unconventional manner. To be revised.    
 //From DOLCE.
 //Feature (problematic concept): Role is better. Think about the "implies of"
@@ -47,8 +46,8 @@ abstract thing Feature
 //Cancella
 abstract identity AmountofMatter
    "Amount of matter is an entity made of the same composition, such as gold.";
-       
-   
+
+         
 // From: DOLCE Lite Plus (DLP). E. M. Sanfilippo: "Ontologies for information entities: State of the art and open challenges"
 abstract thing InformationRealization
      "Information realization is the physical support of an information object"
@@ -170,7 +169,6 @@ abstract process Transformation
 			"The active maintenance of the current status and/or behavior of the system"
 		)
 ;
-
        
 abstract process Activity
     "An activity is a process performed by an agent"
@@ -180,7 +178,6 @@ abstract role ValueActivity
      applies to Activity;
      
 //Participation: specified in ODO or operators
-    
 abstract event Participation
       applies to Participant
       has children
@@ -190,8 +187,7 @@ abstract event Participation
 //Comment: Change as event
  //from GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classesfeature&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Change	
 // subclasses from Case file items of CMMN: http://cmmn.byethost4.com/case_file_item_standard_events.html?i=1
-// TO BE RE-CONSIDERED (CONFLICT WITH THE OPERATOR)
-       
+// TO BE RE-CONSIDERED (CONFLICT WITH THE OPERATOR)   
 abstract event Change 
       "Event that specifies qualitative modifications over time. They are important  in dynamic models."       
       has children
@@ -202,7 +198,6 @@ abstract event Change
          
 //Input and output to be redefined ("caused by" and "causing" as operators)
 //Input - output should be renamed in a more abstract way
-         
 abstract event Input
     "Input is an event that triggers another event or process."
     is Change;

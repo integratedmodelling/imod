@@ -4,9 +4,10 @@ namespace data
    in domain imod:Knowledge;
 
 abstract rescaling attribute Transformed 
-"A type of reinterpretation applied to a numeric observation. These attributes trigger data transformations on the quantities that adopt them." 
-      applies to Quantity 
-        has children 
+	"A type of reinterpretation applied to a numeric observation. These attributes trigger data transformations on 
+     the quantities that adopt them." 
+    applies to imod:Quantity
+    has children 
         @colormap(jet) Normalized 
             "Normalization transforms all the values in a numeric state so that they all fit within a 0-1 range, independent of the original magnitude.",
         @colormap(jet) Standardized 
@@ -19,11 +20,11 @@ abstract rescaling attribute Transformed
              // this would print this warning unless @check(consistent.usage) is added to the observable
              klab.warning: (consistent.usage, "Ensure that the range of values for the ranked quality is consistent across all usages.")
            }
-        );
-      
+    );      
+   
 abstract attribute DataReduction
      "A type of data reduction or aggregation applied to numeric observations. These do not change the numeric value scale." 
-     applies to Quantity 
+     applies to imod:Quantity
         has disjoint children 
         (Mean),
         (Minimum),

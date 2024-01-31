@@ -6,12 +6,12 @@ namespace decision
 /* deniable */ attribute Intentional
    "Intention is a mental state (e.g. goal, belief, desire)"
    requires identity imod:Goal;    
-    
+
 abstract process Decision
      "Decision is a goal-oriented intentional (mental) activity"
      is decision:Intentional physical:Activity
      requires identity imod:Goal;
-      
+     
 process Assessment
     "The activity that represents observations made by the 'implicit' observer of the root context: the k.LAB user. Do not use without thinking hard first."
     is Decision 
@@ -42,7 +42,7 @@ deniable attribute Predicted
 
 //Comment: Remove as ordering, Severity as attribute
 deniable attribute Severity;
-     
+
 deniable attribute Relevance 
      "Describes the relevance of observables";
      

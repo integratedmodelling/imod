@@ -6,6 +6,8 @@ namespace imod
    in domain root 
       with core 
           // TODO switch to this import after deciding how to link derived observables created by operators 
+          // TODO add the klab: namespace to ground the geometries and other characteristics. Probably the
+          //      object properties should also go there, although I still don't know how to tie them here.
          "https://raw.githubusercontent.com/integratedmodelling/odo-im/master/releases/0.1.0/odo.owl" as odo
    metadata {
       dc.creator: (
@@ -14,8 +16,7 @@ namespace imod
       )
       // TODO add refs and links
    };
- 
- 
+
 /*
  * TODO there should be a mechanism to link all fundamental types to the core ontology and validate
  * coverage and consistency. For now the mechanism lacks completeness and validation.
@@ -40,14 +41,13 @@ namespace imod
 // Also all needed annotation properties would be just added to the core namespace and that would be it. 
  
 //Identity
- 
 abstract identity Identity
     "Identity specifies the assignment of a concept to a certain class of concepts based on 
      a series of characteristics, such as morphological, behavioral and contextual"
    is core odo:Identity;
    
 // Identities capturing discrete time for the worldview
-// TODO these may not be necessary but needs to see with the implementation
+// TODO MOVE THESE TO THE klab: NAMESPACE
 //identity Hourly is core observation:Hourly;
 //identity Yearly is core observation:Yearly;
 //identity Monthly is core observation:Monthly;
@@ -62,11 +62,13 @@ abstract identity Identity
 //abstract identity Areal is core observation:Areal;
 //abstract identity Volumetric is core observation:Volumetric;
  
+@fixme("Mah. A final output would be Outcome, Goal is definitely not an identity, probably both are configurations") 
 abstract identity Goal
      "Goal is a final output attributed to a Subject, an Agent and a Process";
 
 //The notion of Boundary should be better documented
 
+@fixme("The 'requires identity' clause needs revision, here and elsewhere. Implication (to be understood) is a likely candidate.")
 abstract identity ConceptualBoundary 
      //metadata { plato.stanford.edu/entries/boundary/ }
     "A conceptual boundary is the conceptual delimitation that allows the identification of entities"
@@ -102,8 +104,7 @@ abstract subjective ordering Coarseness
       Coarse;
    
 abstract subjective ordering Level 
-      "Two-level hierarchy for generic discretizations. Classes are used by other orderings. The 'parent' keyword locates
-       the parent concepts in the second-level hierarchy in case all children are used." 
+      "Two-level hierarchy for generic discretizations." 
       has children  
       (Low 
             has children 
@@ -133,17 +134,22 @@ abstract role Role
     "Role specifies predicates that can be played by a concept in a context"
    is core odo:Role;
 
+@fixme("can't refer to decision: here (this will be an error). Internalize 'comparable'")
 role Reference
-    "Applied to an observation used as reference to compute the primary observation by comparison. Can be linked to a rescaling filters to shift the context of observation made in different space and time."
+    "Applied to an observation used as reference to compute the primary observation by comparison. 
+     Can be linked to a rescaling filters to shift the context of observation made in different space and time."
     inherits decision:Comparable;
 
+@todo("check overlap and collinearities with data:Ranked")
 role Indicator 
    has children   
      (AbsoluteIndicator
-     "An absolute indicator has values that range between a known minimum and maximum and the value corresponds to a state that is fully understood in terms of the indicator."  
+     "An absolute indicator has values that range between a known minimum and maximum. Its value corresponds 
+      to a state that is fully understood in terms of the indicator."  
        ),
      (RelativeIndicator 
-     "A relative indicator can only compare two states of the same entity within the same context of observation, and does not suggest any absolute value for the state it refers to."
+     "A relative indicator can only compare two states of the same entity within the same context of observation.
+      It does not suggest any absolute value for the state it refers to."
      );
 
 /**
@@ -152,27 +158,30 @@ role Indicator
 
 //Process
 abstract process Process
-    "A process is something happening in time, open-ended (without temporal boundaries), and homogeneous"
+    "A process is a dependent occurrent that happens in time, open-ended (without temporal boundaries) and homogeneous. It can 
+     affect both the qualities and the existence of continuants, as well as confer attributes and roles."
    is core odo:Process;
     
 //Event
      
 abstract event Event
-    "An event is something happening in time, close-ended (with temporal boundaries), having participants"
+    "An event is an independent occurrent that happens in time, close-ended (with temporal boundaries) and with participants."
    is core odo:Event;
        
+@todo("should have some articulation of the 'Outcome' part")
+@todo("see note above for the 'requires identity' clause")
 deniable attribute Positive
-    "Describes the positive or negative outcome of an event or a subject"
-    requires identity Goal
-;
-   
+    "Describes the positive or negative outcome of an event or a subject."
+    requires identity Goal;
+
+@todo("Must articulate relationship vs. bond and functional vs. structural, as these are fundamental and disjoint.")   
 abstract relationship Relationship
-    "A relationship directionally connects two subjects or agents"
+    "A relationship directionally connects two subjects or agents."
    is core odo:Relationship;
 
 abstract configuration Configuration
     "Configurations represent emergent patterns (aggregates of other entities) that are generated by observations of 
-     quality and relationship"
+     quality and relationship."
    is core odo:Configuration;
 
 //cancella: system
@@ -181,7 +190,9 @@ abstract configuration System
     "A system is a complex boundary entity that includes other entities, such as subjects, agents, events and relationships."
     emerges from Relationship
     ;
-    
+
+@todo("Spatial doesn't just mean Areal")
+@todo("E daje con 'requires identity Goal'")
 abstract configuration Network 
    "A network is a configuration of subjects connected by relationships."
    is imod:Configuration of imod:Relationship
@@ -212,8 +223,9 @@ abstract configuration Network
  * Countable
  */
 
+@fixme("Not sure this should be articulated here. Seems to me that Substantial is more generic than agent.")
 abstract agent Substantial
-   "Substantial is independent for its existence and bears qualities. Substantial are similar to Subtantial 
+   "Substantial is independent for its existence and bears qualities. Substantial are similar to Substantial 
     in UFO and DOLCE" 
    is core odo:Substantial;
 
@@ -221,6 +233,7 @@ abstract thing Subject
     "Subject is a Substantial without agentive characteristics"
    is core odo:Subject;
 
+@fixme("Apart from the circular reference, not sure having agency means the same as 'being Intentional'.")
 abstract agent Agent
    "Agent is a Substantial with intentionality" 
    is core odo:Agent
@@ -230,6 +243,7 @@ abstract agent Agent
    
 //DOLCE and UFO
 // can we redesign "socialAgent" using the Agent keywords?
+@fixme("definitely belongs elsewhere and needs a real definition")
 abstract agent SocialAgent
     "Social agent is an Agent created, managed and recognized by other agents, such as organization."
     applies to Network
@@ -238,6 +252,7 @@ abstract agent SocialAgent
     ;
  
 //DOLCE and UFO    
+@fixme("see above")
 abstract thing SocialObject
      "Social agent is an Subject and recognized by other agents, such as law and money.";
 
@@ -246,11 +261,12 @@ abstract thing SocialObject
  */
  
 abstract quality Quality
-     "Qualities represent observables that cannot be observed directly but only through other entities that bear them, in this sense qualities inhere to other entities and are tied to their bearers"
+     "Qualities represent observables that cannot be observed directly but only through other entities that bear them.
+      Their observation produces 'values' in some reference domain. They inhere to other entities and depend on their bearers."
      is core odo:Quality;
 
 abstract quantity Quantity
-    "Quantity are quality that can be quantified."     
+    "Quantity are qualities whose values are quantified numerically."     
    is core odo:QuantifiableQuality;
    
 abstract duration Duration 
@@ -259,6 +275,8 @@ abstract duration Duration
 
 //Space qualities
 //Comment: re-think "observation" ontology and below concepts
+@fixme("Decide what to do with the spatial geometry identities. They can be here w/o referring to ODO (probably best) although
+        they should refer to klab: namespace as they're needed in the software.")
 abstract area Area 
    is core odo:Area 
    requires identity (imod:Areal or imod:Volumetric);
@@ -291,6 +309,7 @@ abstract quantity Numerosity
 
 /**
  * Intensive physical properties 
+ * TODO will make definitions mandatory at some point :)
  */
  
 abstract angle Angle 
@@ -370,7 +389,10 @@ deniable attribute Regularity
 
 //extent Multiplicity 
 //    is core odo:Multiplicity;
-   
+
+@fixme("definitely needs better derivation. For these dichotomic articulations we could use 'sealed' but we could also have a 
+        deniable attribute for the positive case and add an alias for the negative: e.g.
+        deniable attribute Net; attribute Gross equals not imod:Net;")   
 abstract attribute MeasurementRelated
       has children
       (@colormap(colors=(red white green), midpoint=0)

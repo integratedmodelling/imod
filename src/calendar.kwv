@@ -3,7 +3,6 @@ namespace calendar
    in domain imod:Knowledge
    using imod,physical;
 
-
 //Comment: to re-evaluate
 abstract event RecurrentEvent 
      "These are intended not as units of measurement (not observables) but as observable events, signaling the expiration of a given period of time. They can be observe  in time as dependencies, and models can be provided for them in scenarios. Traits  can be used or conferred by processes to distinguish particular periods."
