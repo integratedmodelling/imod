@@ -344,48 +344,63 @@ abstract volume Volumetric
 //Category
 	
 abstract class Type 
-    "Type defines categories"        
+    "Abstract classification defining categories of entities."        
 	equals core odo:Type; 
 
 //Priority
 
 abstract priority Priority 
+	"Relative importance or precedence assigned to entities or actions within a system or context, often based on predefined criteria or constraints."
 	equals core odo:Priority;
 
 abstract priority Concordance
-"Conceptual distance from an idea or theory"
+"Conceptual distance from an idea or theory. Degree of agreement, harmony, or consistency between ideas, theories, or entities within a given context or domain."
 ;
 
 //Value
 
 abstract money MonetaryValue
+	"Quantitative representation of the economic worth or exchangeable value assigned to goods, services, or assets, typically denoted in a currency unit."
     equals core odo:MonetaryValue;
     
 abstract quantity PreferenceValue
+	"Quantitative or qualitative measure representing the degree of desirability, favorability, or priority assigned to an option, choice, or outcome within a decision-making context."
    equals core odo:PreferenceValue;
    
 abstract role ValueObject
+	"An entity that embodies, represents, or holds value, which may include but is not limited to monetary, conceptual, or symbolic value."
      applies to Subject;
      
 abstract relationship ValuationRelationship
+	"Connection or association between entities or concepts that involves the assessment, determination, or assignment of value."
      links Agent to Subject;
 
 deniable attribute Regularity
+	"Denotes the state or quality of being consistent, orderly, or conforming to a pattern or set of rules, often implying predictability and absence of deviation or randomness."
      has disjoint children
-         Regular,
-         Irregular;
+         (Regular
+         	"State or condition characterized by consistency, orderliness, or adherence to established patterns or rules."
+         ),
+         (Irregular
+         	" Lack of orderliness, or deviation from established patterns or rules, often exhibiting unpredictability or variability in behaviour or occurrence."
+         );
          
 //Extent
 
 extent Multiplicity 
+	"Quantity or number of instances, occurrences, or elements within a given set, system, or context."
     is core odo:Multiplicity;
    
 abstract attribute MeasurementRelated
+	"Pertaining to entities, properties, or phenomena that are directly or indirectly connected with the process of measurement, including instruments, standards, protocols, and units of measurement."
       has children
-      (@colormap(colors=(red white green), midpoint=0)
-      Net
+//@colormap(colors=(red white green), midpoint=0)
+      (Net
+      	"Value or quantity after deductions or adjustments have been made"
       ), 
-      Gross;
+      (Gross
+      	"Value or quantity before deductions or adjustments have been made"
+      );
       
 //Temporal extent
        	   
