@@ -20,7 +20,7 @@ abstract rescaling attribute Transformed
              // this would print this warning unless @check(consistent.usage) is added to the observable
              klab.warning: (consistent.usage, "Ensure that the range of values for the ranked quality is consistent across all usages.")
            }
-    );      
+    );
      
 abstract attribute DataReduction
      "A type of data reduction or aggregation applied to numeric observations. These do not change the numeric value scale." 
@@ -29,7 +29,3 @@ abstract attribute DataReduction
         (Mean),
         (Minimum),
         (Maximum);
-
-
-
-

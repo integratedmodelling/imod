@@ -16,8 +16,6 @@ abstract event Collapse
     applies to imod:System
 ;
 
-
-
 @fixme("Same problems as most other things with 'requires identity Goal'")
 abstract thing Artifact
     "Artifact is intentionally created by an agent for a goal"
@@ -122,6 +120,7 @@ abstract duration Period
 	decreases with Frequency;
 
 abstract volume Capacity;
+
 
 abstract angle Direction;
 
@@ -266,7 +265,7 @@ abstract subjective ordering HeightLenghtLevel
     	    Long,
     	    Short  	
     );
-    
+
 abstract attribute SpatialOrientation 
 			has children
 				(abstract ObserverRelativeOrientation 

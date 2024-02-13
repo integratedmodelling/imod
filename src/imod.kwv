@@ -281,11 +281,9 @@ abstract area Area
    is core odo:Area 
    requires identity (imod:Areal or imod:Volumetric);
 
-
 abstract length Length
    is core odo:Length 
-   requires identity (imod:Lineal or imod:Areal or imod:Volumetric);
-       
+   requires identity (imod:Lineal or imod:Areal or imod:Volumetric);       
 
 //Artifact capability inspired by: Borgo, S., Vieu, L.: Artefacts in formal ontology. In: Philosophy of technology and engineering sciences
 abstract attribute Capability
@@ -399,6 +397,11 @@ abstract attribute MeasurementRelated
       Net
       ), 
       Gross;
+      
+//@colormap(colors=(red white green), midpoint=0)      
+//attribute Net
+//	"" 
+//	deniable as Gross;
      
 //Temporal extent
             
