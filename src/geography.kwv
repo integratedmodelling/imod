@@ -1,0 +1,386 @@
+namespace geography
+    version 1.0
+	using imod, physical
+	in domain imod:Physical;
+
+angle Heading
+	"A direction relative to the geographical North of the earth.";
+
+
+@colormap(name='elevation')
+length Elevation 
+	"Geographical elevation above sea level, as described by a digital
+	 elevation model."
+	is im:Height of earth:Location
+	has children 
+		(LidarElevation 
+			"Elevation at edge of any reflective surface including canopy and buildings"
+		 );
+
+angle Aspect 
+   "The compass direction that a slope faces. For example, a slope on the
+    eastern edge of the Rockies toward the Great Plains is described as having 
+   an easterly aspect."
+   is im:Angle of /* physical:MagneticPlanetaryOrientation earth:Terrain within */ earth:Location
+;
+		 
+length BathymetricDepth
+	"Depth of earth's crust below sea level, as described by a digital bathymetry model."
+	is im:Height within earth:Location
+;
+
+@colormap(values = {0: white, 90: black})
+angle Slope
+   "Inclination of the above-water terrain in a geographical region."
+   is im:Angle within earth:Location;
+
+/*
+ * FIXME there are excellent arguments to expect that any configuration is
+ * defined in a knowledge domain
+ */
+configuration Terrain 
+   "The perceived three-dimensional configuration of land surfaces"
+   is physical:PhysicalConfiguration of (earth:Crust earth:Terrestrial earth:Region)
+   emerges from (Elevation or Slope or Aspect);
+
+angle StreamGradient
+	is im:Angle of earth:Stream;
+
+angle BathymetricSlope
+	"Inclination of the below-water terrain in a geographical region."
+	is im:Angle of earth:Location;
+	
+length SlopeLength 
+	""
+	is im:Length of earth:Location
+;
+
+/**
+ * Political/Regional geography. Knowledge below was in policy which is obviously
+ * inappropriate. Not sure it should have its own namespace.
+ * KB: The question is whether we want to combine human and physical geography into one namespace. If so, keep it here, if not make a human geography namespace (my vote would be to keep them combined, as we don't split other ontologies into subdisciplines).
+ */	
+ 
+ /** 
+  * TODO traits of identities should propagate - so a China Individual hasTrait Asian and Eastern (CHECK!)
+  * */
+ 
+abstract identity GeographicalIdentity
+ 	"Any abstract identity we can use to divide the world up into disjoint entities."
+ 	has children
+ 		(abstract GeopoliticalIdentity
+ 			""
+ 		),
+ 		(abstract RegionalIdentity
+ 			""
+ 		);
+
+//Potentially useful e.g., to distinguish that the cold season is in the winter in the Northern Hemisphere and summer in the Southern Hemisphere.
+//Northern is of course not actually disjoint with eastern/western - so may need to be split differently.
+abstract identity Hemisphere is RegionalIdentity
+	has children
+	(abstract LatitudinalHemisphere
+		has disjoint children
+			NorthernHemisphere,
+			SouthernHemisphere		
+	),
+	(abstract LongitudinalHemisphere
+		has disjoint children
+			EasternHemisphere,
+			WesternHemisphere
+	);
+
+abstract identity Continental is RegionalIdentity
+	has disjoint children
+		(African inherits WesternHemisphere),
+		(Antarctic inherits SouthernHemisphere),
+		(Asian inherits EasternHemisphere),
+		(Australian inherits SouthernHemisphere, EasternHemisphere),
+		(European inherits NorthernHemisphere, WesternHemisphere),
+		(NorthAmerican inherits NorthernHemisphere, WesternHemisphere),
+		(Oceanian inherits SouthernHemisphere, EasternHemisphere),
+		(SouthAmerican inherits WesternHemisphere); 
+ 
+ 
+// TODO harmonize with the above, which must be fixed.
+abstract identity ContinentalRegion
+	applies to earth:Location
+	has disjoint children
+		AfricanRegion, 
+		AsianRegion,         
+		InsularAsianRegion,             
+		AustralianRegion,    
+		EuropeanRegion,      
+		NorthAmericanRegion, 
+		SouthAmericanRegion,
+		AntarcticRegion,
+		ArcticRegion,
+		PacificRegion,
+		AtlanticRegion,
+		IndianRegion; 
+ 
+/*
+ * TODO add other key geographic areas
+ */ 
+@todo("Some kind soul please start adding ISO country codes as metadata")
+abstract identity Country is GeopoliticalIdentity 
+			has disjoint children
+				Afghanistan,                 
+				Albania, 
+			    AlandIslands                ,
+                Algeria,                      
+                AmericanSamoa,               
+                Andorra,                     
+                Angola,                      
+                Anguilla                    ,
+                (Antarctica inherits Antarctic), //Review                   
+                AntiguaAndBarbuda,           
+                Argentina,                   
+                Armenia,                    
+                Aruba                       ,
+                (Australia inherits Australian),                   
+                Austria, 
+                Azerbaijan,                  
+                Bahamas,                     
+                Bahrain,                     
+                Bangladesh,                 
+                Barbados,                    
+                Belarus,                  
+                Belgium,                    
+                Belize,                      
+                Benin          ,             
+                Bermuda,                     
+                Bhutan,                     
+                Bolivia,                     
+                Bonaire                     ,
+                BosniaAndHerzegovina,       
+                Botswana,                  
+                BouvetIsland,               
+                Brazil,                    
+                BritishIndianOceanTerritory,
+                BritishVirginIslands,       
+                Brunei,                   
+                Bulgaria,                   
+                BurkinaFaso                 ,
+                Burundi,                   
+                Cambodia,                  
+                Cameroon  ,                  
+                Canada    ,                  
+                CapeVerde  ,                 
+                CaymanIslands ,              
+                CentralAfricanRepublic      ,
+                Chad  ,                      
+                Chile ,                      
+                China    ,                   
+                ChristmasIsland   ,          
+                CocosIslands    ,            
+                Colombia  ,                  
+                Comoros  ,                   
+                CongoDemocraticRepublic     ,
+                CongoRepublic  ,                     
+                CookIslands        ,         
+                CostaRica  ,                 
+                CoteDIvoire                 ,
+                Croatia  ,                   
+                Cuba    ,                    
+                Curacao                    ,
+                Cyprus  ,                    
+                CzechRepublic,               
+                Denmark       ,              
+                Djibouti                    ,
+                Dominica     ,               
+                DominicanRepublic ,          
+                Ecuador              ,       
+                Egypt                       ,
+                ElSalvador         ,         
+                EquatorialGuinea   ,         
+                Eritrea           ,          
+                Estonia          ,           
+                Ethiopia          ,          
+                FalklandIsland     ,         
+                FaroeIslands      ,          
+                Fiji                        ,
+                Finland                     ,
+                France                      ,
+                FrenchGuiana                ,
+                FrenchPolynesia             ,
+                FrenchSouthernTerritories   ,
+                Gabon                       ,
+                Gambia                      ,
+                Georgia                     ,
+                Germany                     ,
+                Ghana                       ,
+                Gibraltar                   ,
+                Greece                      ,
+                Greenland                   ,
+                Grenada                     ,
+                Guadeloupe                  ,
+                Guam                        ,
+                Guatemala                   ,
+                Guernsey                    ,
+                Guinea                      ,
+                GuineaBissau                ,
+                Guyana                      ,
+                Haiti                       ,
+                HeardIslandAndMcDonaldIslands,
+                Honduras                    ,
+                HongKong                    ,
+                Hungary                     ,
+                Iceland                     ,
+                India                       ,
+                Indonesia                   ,
+                Iran                        ,
+                Iraq                        ,
+                Ireland                     ,
+                IsleOfMan                   ,
+                Israel                      ,
+                Italy                       ,
+                Jamaica                     ,
+                Japan                       ,
+                Jersey                      ,
+                Jordan                      ,
+                Kazakhstan                  ,
+                Kenya                       ,
+                Kiribati                    ,
+                Kuwait                      ,
+                Kyrgyzstan                  ,
+                Lao                         ,
+                Latvia                      ,
+                Lebanon                     ,
+                Lesotho                     ,
+                Liberia                     ,
+                Libya                       ,
+                Liechtenstein               ,
+                Lithuania                   ,
+                Luxembourg                  ,
+                Macao                       ,
+                Macedonia                   ,
+                Madagascar                  ,
+                Malawi                      ,
+                Malaysia                    ,
+                Maldives                    ,
+                Mali                        ,
+                Malta                       ,
+                MarshallIslands             ,
+                Martinique                  ,
+                Mauritania                  ,
+                Mauritius                   ,
+                Mayotte ,                    
+                Mexico                      ,
+                Micronesia                  ,
+                Moldova                     ,
+                Monaco                      ,
+                Mongolia                    ,
+                Montenegro                  ,
+                Montserrat                  ,
+                Morocco                     ,
+                Mozambique                  ,
+                Myanmar,                  
+                Namibia                     ,
+                Nauru                       ,
+                Nepal                       ,
+                Netherlands                 ,
+                NetherlandsAntilles,
+                NewCaledonia                ,
+                NewZealand                  ,
+                Nicaragua                   ,
+                Niger                       ,
+                Nigeria                     ,
+                Niue                        ,
+                NorfolkIsland               ,
+                NorthernMarianaIslands      ,
+                NorthKorea                  ,
+                Norway                      ,
+                Oman                        ,
+                Pakistan                    ,
+                Palau                       ,
+                PalestinianTerritory        ,
+                Panama                      ,
+                PapuaNewGuinea              ,
+                Paraguay                    ,
+                Peru                        ,
+                Philippines                 ,
+                PitcairnIslands             ,
+                Poland                      ,
+                Portugal                    ,
+                PuertoRico                  ,
+                Qatar                       ,
+                Reunion                     ,
+                Romania                     ,
+                Russia                      ,
+                Rwanda                      ,
+                SaintBarthelemy             ,
+                SaintHelena                 ,
+                SaintKittsAndNevis          ,
+                SaintMartin                 ,
+                SaintPierreAndMiquelon      ,
+                SaintVincentAndGrenadines   ,
+                Samoa                       ,
+                SanMarino                   ,
+                SantaLucia                  ,
+                SaoTomeAndPrincipe          ,
+                SaudiArabia                 ,
+                Senegal                     ,
+                Serbia                      ,
+                Seychelles                  ,
+                SierraLeone                 ,
+                Singapore                   ,
+                SintMaarten                 ,
+                Slovakia                    ,
+                Slovenia                    ,
+                SolomonIslands,           
+                Somalia                     ,
+                SouthAfrica                 ,
+                SouthGeorgiaAndSouthSandwichIslands,
+                SouthKorea                  ,
+                SouthSudan                  ,
+                Spain                       ,
+                SriLanka         ,           
+                Sudan                       ,
+                Suriname                    ,
+                SvalbardJanMayenIslands     ,
+                Swaziland                   ,
+                Sweden                      ,
+                Switzerland                 ,
+                Syria                       ,
+                Taiwan  ,                    
+                Tajikistan                  ,
+                Tanzania                    ,
+                Thailand                    ,
+                TimorLeste                  ,
+                Togo                        ,
+                Tokelau                     ,
+                Tonga                       ,
+                TrinidadAndTobago           ,
+                Tunisia                     ,
+                Turkey                      ,
+                Turkmenistan                ,
+                TurksAndCaicosIslands       ,
+                Tuvalu                      ,
+                Uganda                      ,
+                Ukraine                     ,
+                UnitedArabEmirates          ,
+                UnitedKingdom               ,
+                UnitedStates                ,
+                UnitedStatesMinorOutlyingIslands,
+                UnitedStatesVirginIslands   ,
+                Uruguay                     ,
+                Uzbekistan                  ,
+                Vanuatu                     ,
+                Vatican                     ,
+                Venezuela                   ,
+                Vietnam                     ,
+                WallisAndFutuna             ,
+                WesternSahara               ,
+                Yemen                       ,
+                Zambia                     ,
+                Zimbabwe                    ,
+
+                ClippertonIsland , //not a country - Review (added for UN project)
+                ParacelIslands, //not a country - Review (added for UN project)
+                SpratlyIslands //not a country - Review (added for UN project)
+;
+
+@experimental
+quality TopographicHeterogeneity
+   is im:Heterogeneity of Terrain within earth:Location;

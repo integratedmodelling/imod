@@ -1,0 +1,398 @@
+namespace earth
+	"Defines fundamental natural concepts pertaining to planet Earth. Also contains
+	 knowledge regarding the physical processes that act at the planetary level, such
+     as climate."
+    version 1.0
+	using imod
+	in domain imod:Physical;
+
+abstract attribute Georeferenced
+	"A subject that can be referred to a location on Earth. Use the applicable concrete child."
+	has children
+		(Geolocated
+			"A subject that can be located somewhere on the surface of the Earth, either directly on it or projected
+	 		 on it, limited to things that are in the bottom layer, in 'reach' of humans."),
+	 	(Geostationary
+	 		"A subject that can be projected on the same spot of the surface of the earth throughout its observation."
+	 	)
+	// any spatial extent is fine but there must be one.
+	requires extent im:Space;
+
+thing Location
+	is Geolocated physical:DelimitedBody;
+
+abstract event GeolocatedEvent
+	is im:Event within Location;
+
+thing Region 
+	"An Earth Region is a section of the Earth realm delimited in volumetric space, 
+	 including the surface, the soil and the atmospheric bottom layer. It applies to both
+	 land and sea - anywhere on Earth - and should be qualified as necessary when
+	 used."
+	 is im:Areal Location;
+
+thing Site
+	""
+	is im:Puntal Location;
+
+identity Air 
+	""
+	is chemistry:Mixture
+//	contains chemistry:Oxygen, chemistry:Hydrogen, chemistry:Nitrogen as chemistry:ChemicalCompound
+;
+
+abstract realm AtmosphericLayer	
+	""
+	/*
+	 * when a realm describes space, disjointness means spatial overlap,
+	 * possibly qualified directionally.
+	 */
+	classifies im:Vertical im:Height within Region
+	has disjoint children
+		(AtmosphericBottomLayer ""),
+		(Troposphere ""),
+		(Stratosphere ""),
+		(Mesosphere ""),
+		(Thermosphere ""),
+		(Exosphere "")
+;
+
+realm Atmosphere
+	"The Atmosphere is the portion of the atmosphere comprising the bottom
+	 layer, the troposphere and the mesosphere."
+	 /*
+	  * when a realm describes space, containment means spatial containment.
+	  */
+//	contains only
+//		AtmosphericBottomLayer, Troposphere, Mesosphere
+;
+
+configuration EarthCover
+	"The configuration of physical material at the surface of the earth."
+	is physical:PhysicalConfiguration of Location;
+
+abstract realm PhysicalEnvironment
+	"Physical environments are uniform with respect to their earth cover pattern. Although some 
+	 are commonly classified as ecology:Biome, these are purely physical in their definition; 
+     biotic factors can be added to obtain ecology:Habitat, and ecological communities make the
+     latter into ecology:Biome."
+	classifies im:Type of EarthCover within earth:Location
+	has disjoint children
+		(Terrestrial
+			"Refers here to anything found on land ecoregions, as distinct from freshwater 
+             ecoregions and marine ecoregions."
+		),
+		(Aquatic
+			"Refers here to anything found on freshwater ecoregions and marine ecoregions,
+			 as distinct from land ecoregions."
+			has children
+				(Marine
+					"Marine applies to both seas and oceans, as the distinction does not have
+					 scientific interest."
+				),
+				(Brackish
+					"Refers to aquatic ecoregions where water has more salinity than fresh water, 
+                     but not as much as seawater"
+					has children
+						Estuarine,
+						SaltMarsh
+				),
+				(abstract Freshwater
+					has children
+					(
+						@todo("flesh out; ensure that the ubiquitous Wetland knows where to put itself")
+						@todo("CHECK https://www.fws.gov/wetlands/Documents/classwet/lacustri.htm")
+						Lacustrine
+							""
+							has disjoint children
+								(Limnetic),
+								(Littoral
+									"A Littoral Region is a wetland."
+								)
+					),
+					(Riverine
+					
+					)
+				)				
+		);
+
+abstract realm MarineStratum
+   implies Marine
+   has children
+      SeaSurface,
+      DeepSea;
+
+abstract realm LatitudinalRegion
+// No - it describes the position of a region and applies to region
+//	describes EarthCover
+	has children
+		Polar,
+		Boreal,
+		Temperate,
+		Subtropical,
+		Tropical;
+		
+@todo("Finish, align, document; use SWEET")
+abstract realm GeosphereStratum
+	has children
+		(Bedrock
+			""
+		),
+		(Crust
+			""
+		),
+		(Lithosphere
+			""
+		),
+		(Pedosphere
+			"The outermost layer of the Earth that is composed of soil and subject to soil formation processes."
+		),
+		(	
+			@todo("unsure of the mereological relationships here")
+			Mantle
+			""
+		);
+
+thing WaterBody
+	""
+	is Aquatic Region;
+
+thing Wetland 
+	""
+	is Littoral Region;
+
+thing Lake 
+	""
+	is Lacustrine Region;
+
+thing Ocean 
+	""
+	is Marine Region;
+
+thing Sea 
+	""
+	is Marine Region;
+	
+thing Waterway
+	""
+	is Riverine Region
+	has children
+		Reach,
+		Stream,
+		River;
+	
+thing StreamJunction
+	"Either the point of junction of two streams or rivers, or the point of junction of a stream/river into
+     a waterbody."
+	is Aquatic Location;
+	
+thing Coast
+	"A portion of land adjacent to a major marine or lacustrine water body."
+	is earth:Terrestrial earth:Region 
+		adjacent to Aquatic /* (earth:Marine or earth:Lacustrine) */ earth:Region;
+		
+thing Coastline
+	"The boundary between land and an adjacent @Coast."
+	is im:Boundary 
+		of (earth:Region adjacent to earth:Aquatic /* (earth:Marine or earth:Lacustrine) */ earth:Region)
+		adjacent to Aquatic /* (earth:Marine or earth:Lacustrine) */  earth:Region;
+
+attribute WaterFlowDirection
+	has children
+		Upstream,
+		Downstream;
+		
+functional relationship StreamConnection
+	""
+	links StreamJunction to StreamJunction;
+		
+configuration StreamNetwork
+	""
+	applies to Region
+	is im:Network of StreamConnection;
+
+abstract identity PrecipitationType
+	inherits IUPAC:Water 
+	has children
+		(Rain 
+			""
+			inherits physical:Liquid
+		),
+		(Snow 
+			""
+			inherits physical:Solid
+		),
+		(Hail 
+			""
+			inherits physical:Solid
+		);
+
+/*
+ * QUALITIES. All should be linked to the processes that affect them in the
+ * process definitions.
+ */
+volume PrecipitationVolume 
+	""
+	is IUPAC:Water im:Volume within Location;
+
+volume RainfallVolume 
+	is PrecipitationVolume
+	inherits Rain;
+
+volume SnowfallVolume 
+	is PrecipitationVolume
+	inherits Snow;
+
+volume HailVolume 
+	is PrecipitationVolume
+	inherits Hail;
+
+temperature AtmosphericTemperature
+	""
+	is AtmosphericBottomLayer im:Temperature  within Location;
+
+
+/*
+ * EVENTS
+ */
+abstract event MeteorologicalEvent
+	""
+	is GeolocatedEvent
+	has children
+		(Storm),
+		(Lightning),
+		(RainOnSnow
+			"The event of rain falling on snow; relevant for modeling of 
+			 peculiar hydrological behaviors."
+		),
+		Flood;
+
+@todo("improve, complete, align")
+abstract event GeologicalEvent 
+	""
+	has children
+		Landslide,
+		Earthquake;
+
+/*
+ * PROCESSES
+ */
+ abstract process MeteorologicalProcess
+	""
+ 	has children
+		(Wind
+//			creates Storm
+		)
+;
+
+process Precipitation 
+ 			""
+ 			is IUPAC:Water physical:MatterTransport, MeteorologicalProcess
+			creates PrecipitationVolume
+ 			has children
+ 				(Rainfall
+ 					""
+ 					creates RainfallVolume
+ 				),
+ 				(Snowfall
+ 					""
+ 					creates SnowfallVolume
+ 				),
+ 				(Hailing
+ 					""
+ 					creates HailVolume
+ 				) 				
+;
+
+/*
+ * TODO energy sources
+ */
+energy SolarRadiation
+	"Total solar radiation. Specify with realms to define stratum of measurement." 
+	// TODO specify solar source
+	// TODO check for realm-specific children to be added
+	is im:Energy within Location
+;
+
+@deprecated
+process Weather
+	"Catch-all for the set of processes that determine the perceived weather. Weather should more
+	 properly be defined as a configuration."
+	is MeteorologicalProcess within Location
+	creates PrecipitationVolume, AtmosphericTemperature, SolarRadiation, Storm;
+
+thing GeoFormation is Terrestrial Region
+	"Geomorphon classification as is. If possible should be kept as a fully
+	 contained hierarchy as it is possible to classify a DEM based on these
+     exact categories."
+	has children
+		Flat,
+		Peak,
+		Ridge,
+		Shoulder,
+		Spur,
+		Slope,
+		Hollow,
+		Footslope,
+		Valley,
+		Pit
+;
+	
+thing LandFormation is Terrestrial Region
+	has children
+		Escarpment,
+		Hill,
+		BreakFoothill,
+		(Mountain),
+		Dune,
+		Cliff,
+		MountainPeak
+;
+
+abstract event Season
+	has children
+			Winter,
+			Spring,
+			Summer,
+			Fall;
+
+abstract attribute WeatherDominance
+	has children
+		Cloudy,
+		Wet,
+		Snowy,
+		Dry;
+
+/*
+ * Configurations - inherent types for geographical qualities.
+ * TODO FIXME the all-important 'describes' so that the configuration can be
+ * recognized, created and resolved. 
+ * TODO the inherency! It's built "of" its inherent derived from successive explanations - slope and elevation. The of 
+ * should be a within.
+ */
+// should be:
+// configuration Terrain 
+//	is physical:PhysicalConfiguration of (ecology:Landscape im:Height and ecology:Landscape im:Angle) 
+//	within Terrestrial Region; 	
+	
+configuration Bathymetry
+	"The vertical and horizontal dimensions of underwater Earth surfaces"
+	is physical:PhysicalConfiguration of (Aquatic Region)
+	applies to Aquatic Location;	
+
+configuration LandCover
+	""
+	is Terrestrial EarthCover
+	applies to Location;
+
+@todo
+abstract process LandformingProcess
+	""
+	// creates LandFormation
+	has children 
+		Erosion,
+		Sedimentation,
+		Weathering,
+		PlateTectonics;
+	
+configuration Gravity is physical:Gravity adjacent to EarthCover;
