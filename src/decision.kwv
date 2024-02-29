@@ -2,11 +2,9 @@ namespace decision
       version 1.0
       using imod, physical
       in domain imod:Physical;
- 
-/* deniable */ attribute Intentional
-   "Intention is a mental state (e.g. goal, belief, desire)"
-   requires identity imod:Goal;    
+    
 
+//G: this concept should be reconsidered
 abstract process Decision
      "Decision is a goal-oriented intentional (mental) activity"
      is decision:Intentional physical:Activity
