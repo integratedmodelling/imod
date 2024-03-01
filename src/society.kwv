@@ -1,4 +1,4 @@
-namespace geology
+namespace society
 	version 1.0
 	using imod, life
 	in domain imod:Physical;

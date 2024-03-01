@@ -1,3 +1,7 @@
+/**
+ * 
+ * @todo merge with "decision" in here, straighten up all the physical concepts that actually belong in infrastructure
+ */
 namespace agency
 	version 1.0
     using imod
