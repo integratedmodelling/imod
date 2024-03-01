@@ -1,0 +1,4 @@
+namespace genetics
+	version 1.0
+	using imod, life, biology
+	in domain imod:Knowledge;

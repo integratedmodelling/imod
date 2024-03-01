@@ -1,0 +1,4 @@
+namespace infrastructure
+	version 1.0
+	using imod, physical, earth
+	in domain imod:Physical;

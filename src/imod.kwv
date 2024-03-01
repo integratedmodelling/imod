@@ -1,3 +1,16 @@
+/**
+ * "Literate programming" features: comments introduced with the double asterisk are collected to provide
+ * AsciiDoc documentation, and the concepts that follow them are documented in the processed document. If the
+ * namespace is not introduced by a literate section, it won't be documented at all. 
+ * 
+ * @Section headers are turned into #/## etc., using intelligent nesting depending on the context (so they can start at
+ * one @ unless a subsection of the previous at the same level is wanted). All the remaining text in the comment is 
+ * standard Markdown or AsciiDoc, added verbatim except for a possible leading asterisk that is always stripped (along with
+ * the first space after it, if present).
+ * 
+ * k.IM code prefixed by literate sections is inserted in the document where it belongs, with syntax highlighting and line numbering
+ * dependent on processing options.
+ */
 namespace imod
    "The imod (Integrated Modelling) ontology includes abstract concepts related to scientific observations.
     It specifies semantics used everywhere in the IM worldview and links im-based concepts to the 
@@ -16,6 +29,25 @@ namespace imod
       )
       // TODO add refs and links
    };
+
+/**
+ * @Domains
+ * 
+ * 
+ */
+ 
+/**
+ * @@ The Physical domain
+ */
+domain Physical
+	"The basic ontology domain for things that are conceptualized as existent. Namespaces in this domain have to do
+     with the world, not with its epistemological explanation or interpretation.";
+
+/**
+ * @@
+ */
+domain Knowledge
+	"The basic epistemology domain. Has to do with explanations and is always connected to a physical domain.";
 
 /*
  * TODO there should be a mechanism to link all fundamental types to the core ontology and validate

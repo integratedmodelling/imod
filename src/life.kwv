@@ -1,0 +1,4 @@
+namespace life
+	version 1.0
+	using imod
+	in domain imod:Physical;

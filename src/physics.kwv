@@ -1,0 +1,4 @@
+namespace physics
+	version 1.0
+	using imod, physical
+	in domain imod:Knowledge;
