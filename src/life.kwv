@@ -1,4 +1,12 @@
+/**
+ * @ The Life namespace
+ * 
+ * Life is the ontology namespace representing the "physical" components for all disciplines that explain life-related
+ * phenomena, such as @biology, @ecology and @genetics. These epistemological domains will take the concepts explained here
+ * for granted. 
+ */
 namespace life
 	version 1.0
 	using imod
 	in domain imod:Physical;
+	

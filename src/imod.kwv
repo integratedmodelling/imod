@@ -8,6 +8,10 @@
  * standard Markdown or AsciiDoc, added verbatim except for a possible leading asterisk that is always stripped (along with
  * the first space after it, if present).
  * 
+ * In the text, the prefix @ is used to expand the next word intelligently - for example adding a cross-reference when
+ * it's the recognizable and unambiguous URN of any k.LAB asset. In case it isn't understood, the preprocessor will
+ * print a warning and insert the word without the @ - unless it's escaped with another @.
+ * 
  * k.IM code prefixed by literate sections is inserted in the document where it belongs, with syntax highlighting and line numbering
  * dependent on processing options.
  */
