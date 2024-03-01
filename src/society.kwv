@@ -1,3 +1,10 @@
+/**
+ * 
+ * 
+ * Economics, Sociology but also Land as Knowledge domains
+ * 
+ * Landcover/land use should be in here as knowledge if we still 
+ */
 namespace society
 	version 1.0
 	using imod, life
