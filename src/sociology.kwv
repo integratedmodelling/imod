@@ -1,0 +1,4 @@
+namespace sociology
+	version 1.0
+	using imod, society
+	in domain imod:Knowledge;
