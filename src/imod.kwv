@@ -34,25 +34,6 @@ namespace imod
       // TODO add refs and links
    };
 
-/**
- * @Domains
- * 
- * 
- */
- 
-/**
- * @@ The Physical domain
- */
-domain Physical
-	"The basic ontology domain for things that are conceptualized as existent. Namespaces in this domain have to do
-     with the world, not with its epistemological explanation or interpretation.";
-
-/**
- * @@
- */
-domain Knowledge
-	"The basic epistemology domain. Has to do with explanations and is always connected to a physical domain.";
-
 /*
  * TODO there should be a mechanism to link all fundamental types to the core ontology and validate
  * coverage and consistency. For now the mechanism lacks completeness and validation.
@@ -486,3 +467,33 @@ abstract extent Time
                   )
             );
              
+  /**
+ * @Domains
+ * 
+ * Domains have to do with **systems**, either in an ontological sense (defining their "nature") or in an epistemological
+ * sense (explaining their characteristics through scientific quantities, process descriptions, etc). Each domain is associated
+ * to a specific system type articulated here as the basic worldview for the @im project.
+ * 
+ * The relationship of the basic scale extents of time and space should be articulated and specialized within the description of
+ * each system. Also the "conceptual" extent could be added to epistemological (Knowledge) domains if it's decided to use it 
+ * to articulate competing explanations.
+ * 
+ * When used in the domain specification of the worldview's namespaces, the domains should be contextualized to the systems
+ * or subset thereof that they address. This would be grounds for validation of each domain as the contents should be aligned
+ * with that system and provide its full description (specializing further in each tier). 
+ */
+ 
+/**
+ * @@ The Physical domain
+ */
+domain Physical
+	"The basic ontology domain for things that are conceptualized as existent. Namespaces in this domain have to do
+     with the world, not with its epistemological explanation or interpretation.";
+
+/**
+ * @@
+ */
+domain Knowledge
+	"The basic epistemology domain. Has to do with explanations and is always connected to a physical domain.";
+
+  
