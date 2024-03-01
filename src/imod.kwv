@@ -14,6 +14,17 @@
  * 
  * k.IM code prefixed by literate sections is inserted in the document where it belongs, with syntax highlighting and line numbering
  * dependent on processing options.
+ * 
+ * Re: @imod (must become the intro here):
+ * 
+ * Definitely the epistemological framework for @im is systems thinking. We should probably introduce each namespace
+ * with a description of how it relates w.r.t. systems thinking. Particularly if the domains are contextualized to
+ * explicit systems, which I think they should be. And this should be introduced in general here.
+ * 
+ * E.g., a definition for the @agency space: Systems thinking provides a framework for understanding the complexity of decision processes and their 
+ * consequences within a holistic context. It emphasizes the interconnections between parts of a system and how those parts 
+ * influence one another. Within this framework, a decision process is seen as part of a larger system of actions and 
+ * feedback loops, with consequences understood in terms of their impact on the system as a whole. 
  */
 namespace imod
    "The imod (Integrated Modelling) ontology includes abstract concepts related to scientific observations.
