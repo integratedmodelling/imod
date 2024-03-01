@@ -1,6 +1,7 @@
 namespace agency
-     using imod, physical, decision;
-
+	version 1.0
+    using imod
+    in domain imod:Knowledge;
      
 deniable attribute Intentional
 	"Intention is a mental state (e.g. goal, belief, desire)"

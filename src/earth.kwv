@@ -19,21 +19,22 @@ abstract attribute Georeferenced
 	requires extent im:Space;
 
 thing Location
-	is Geolocated physical:DelimitedBody;
+	is earth:Geolocated physical:DelimitedBody;
 
 abstract event GeolocatedEvent
-	is im:Event within Location;
+	is im:Event 
+	within Location;
 
 thing Region 
 	"An Earth Region is a section of the Earth realm delimited in volumetric space, 
 	 including the surface, the soil and the atmospheric bottom layer. It applies to both
 	 land and sea - anywhere on Earth - and should be qualified as necessary when
 	 used."
-	 is im:Areal Location;
+	 is im:Areal earth:Location;
 
 thing Site
 	""
-	is im:Puntal Location;
+	is im:Puntal earth:Location;
 
 identity Air 
 	""
@@ -47,7 +48,7 @@ abstract realm AtmosphericLayer
 	 * when a realm describes space, disjointness means spatial overlap,
 	 * possibly qualified directionally.
 	 */
-	classifies im:Vertical im:Height within Region
+//	classifies im:Vertical im:Height of Region
 	has disjoint children
 		(AtmosphericBottomLayer ""),
 		(Troposphere ""),
@@ -69,14 +70,15 @@ realm Atmosphere
 
 configuration EarthCover
 	"The configuration of physical material at the surface of the earth."
-	is physical:PhysicalConfiguration of Location;
+	is physical:PhysicalConfiguration 
+	within earth:Location;
 
 abstract realm PhysicalEnvironment
 	"Physical environments are uniform with respect to their earth cover pattern. Although some 
 	 are commonly classified as ecology:Biome, these are purely physical in their definition; 
      biotic factors can be added to obtain ecology:Habitat, and ecological communities make the
      latter into ecology:Biome."
-	classifies im:Type of EarthCover within earth:Location
+	classifies im:Type of earth:EarthCover
 	has disjoint children
 		(Terrestrial
 			"Refers here to anything found on land ecoregions, as distinct from freshwater 
@@ -117,7 +119,7 @@ abstract realm PhysicalEnvironment
 		);
 
 abstract realm MarineStratum
-   implies Marine
+//   implies Marine
    has children
       SeaSurface,
       DeepSea;
@@ -155,27 +157,27 @@ abstract realm GeosphereStratum
 
 thing WaterBody
 	""
-	is Aquatic Region;
+	is earth:Aquatic earth:Region;
 
 thing Wetland 
 	""
-	is Littoral Region;
+	is earth:Littoral earth:Region;
 
 thing Lake 
 	""
-	is Lacustrine Region;
+	is earth:Lacustrine earth:Region;
 
 thing Ocean 
 	""
-	is Marine Region;
+	is earth:Marine earth:Region;
 
 thing Sea 
 	""
-	is Marine Region;
+	is earth:Marine earth:Region;
 	
 thing Waterway
 	""
-	is Riverine Region
+	is earth:Riverine earth:Region
 	has children
 		Reach,
 		Stream,
@@ -184,18 +186,18 @@ thing Waterway
 thing StreamJunction
 	"Either the point of junction of two streams or rivers, or the point of junction of a stream/river into
      a waterbody."
-	is Aquatic Location;
+	is earth:Aquatic earth:Location;
 	
 thing Coast
 	"A portion of land adjacent to a major marine or lacustrine water body."
 	is earth:Terrestrial earth:Region 
-		adjacent to Aquatic /* (earth:Marine or earth:Lacustrine) */ earth:Region;
+		adjacent to earth:Aquatic /* (earth:Marine or earth:Lacustrine) */ earth:Region;
 		
 thing Coastline
 	"The boundary between land and an adjacent @Coast."
 	is im:Boundary 
 		of (earth:Region adjacent to earth:Aquatic /* (earth:Marine or earth:Lacustrine) */ earth:Region)
-		adjacent to Aquatic /* (earth:Marine or earth:Lacustrine) */  earth:Region;
+		adjacent to earth:Aquatic /* (earth:Marine or earth:Lacustrine) */  earth:Region;
 
 attribute WaterFlowDirection
 	has children
@@ -209,10 +211,10 @@ functional relationship StreamConnection
 configuration StreamNetwork
 	""
 	applies to Region
-	is im:Network of StreamConnection;
+	is im:Network of earth:StreamConnection;
 
 abstract identity PrecipitationType
-	inherits IUPAC:Water 
+//	inherits IUPAC:Water 
 	has children
 		(Rain 
 			""
@@ -233,11 +235,13 @@ abstract identity PrecipitationType
  */
 volume PrecipitationVolume 
 	""
-	is IUPAC:Water im:Volume within Location;
+	is /* IUPAC:Water */ im:Volume 
+	within Location;
 
 volume RainfallVolume 
-	is PrecipitationVolume
-	inherits Rain;
+	is earth:PrecipitationVolume
+//	inherits earth:Rain
+	;
 
 volume SnowfallVolume 
 	is PrecipitationVolume
@@ -249,7 +253,7 @@ volume HailVolume
 
 temperature AtmosphericTemperature
 	""
-	is AtmosphericBottomLayer im:Temperature  within Location;
+	is earth:AtmosphericBottomLayer im:Temperature of earth:Location;
 
 
 /*
@@ -287,7 +291,7 @@ abstract event GeologicalEvent
 
 process Precipitation 
  			""
- 			is IUPAC:Water physical:MatterTransport, MeteorologicalProcess
+ 			is /* IUPAC:Water */ physical:MatterTransport earth:MeteorologicalProcess
 			creates PrecipitationVolume
  			has children
  				(Rainfall
@@ -311,7 +315,8 @@ energy SolarRadiation
 	"Total solar radiation. Specify with realms to define stratum of measurement." 
 	// TODO specify solar source
 	// TODO check for realm-specific children to be added
-	is im:Energy within Location
+	is im:Energy 
+	within Location
 ;
 
 @deprecated
@@ -321,10 +326,11 @@ process Weather
 	is MeteorologicalProcess within Location
 	creates PrecipitationVolume, AtmosphericTemperature, SolarRadiation, Storm;
 
-thing GeoFormation is Terrestrial Region
+thing GeoFormation
 	"Geomorphon classification as is. If possible should be kept as a fully
 	 contained hierarchy as it is possible to classify a DEM based on these
      exact categories."
+    is earth:Terrestrial earth:Region
 	has children
 		Flat,
 		Peak,
@@ -338,7 +344,7 @@ thing GeoFormation is Terrestrial Region
 		Pit
 ;
 	
-thing LandFormation is Terrestrial Region
+thing LandFormation is earth:Terrestrial earth:Region
 	has children
 		Escarpment,
 		Hill,
@@ -377,12 +383,13 @@ abstract attribute WeatherDominance
 	
 configuration Bathymetry
 	"The vertical and horizontal dimensions of underwater Earth surfaces"
-	is physical:PhysicalConfiguration of (Aquatic Region)
-	applies to Aquatic Location;	
+	is physical:PhysicalConfiguration of (earth:Aquatic earth:Region)
+	//applies to earth:Aquatic earth:Location
+	;	
 
 configuration LandCover
 	""
-	is Terrestrial EarthCover
+	is earth:Terrestrial earth:EarthCover
 	applies to Location;
 
 @todo
@@ -395,4 +402,4 @@ abstract process LandformingProcess
 		Weathering,
 		PlateTectonics;
 	
-configuration Gravity is physical:Gravity adjacent to EarthCover;
+configuration Gravity is physical:Gravity adjacent to earth:EarthCover;

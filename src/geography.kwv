@@ -29,7 +29,7 @@ length BathymetricDepth
 	is im:Height within earth:Location
 ;
 
-@colormap(values = {0: white, 90: black})
+//@colormap(values = {0: white 90: black})
 angle Slope
    "Inclination of the above-water terrain in a geographical region."
    is im:Angle within earth:Location;
@@ -41,7 +41,7 @@ angle Slope
 configuration Terrain 
    "The perceived three-dimensional configuration of land surfaces"
    is physical:PhysicalConfiguration of (earth:Crust earth:Terrestrial earth:Region)
-   emerges from (Elevation or Slope or Aspect);
+   emerges from (geography:Elevation or geography:Slope or geography:Aspect);
 
 angle StreamGradient
 	is im:Angle of earth:Stream;
@@ -383,4 +383,5 @@ abstract identity Country is GeopoliticalIdentity
 
 @experimental
 quality TopographicHeterogeneity
-   is im:Heterogeneity of Terrain within earth:Location;
+   is im:Heterogeneity of earth:Terrain 
+   within earth:Location;
