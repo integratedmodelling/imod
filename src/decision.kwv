@@ -2,9 +2,24 @@ namespace decision
       version 1.0
       using imod, physical
       in domain imod:Physical;
-    
 
+/*
+ * TODO this should all be agency. Decision and agency are not that separate.
+ */    
+    
 //G: this concept should be reconsidered
+//F: yeah, right
+/** 
+ * Decisions are events that induce (cause) intentional transformation processes. There's no decision w/o intention, and no 
+ * intentional transformation w/o decision. Deeply intertwined.
+ * 
+ * Transformation moves from configuration A to configuration B. When decisions are involved, they may be classified according to
+ * the type of transformation they induce and the context of their existence. Specifically the type of agency needed by their
+ * context.
+ * 
+ * Group vs. Individual decision is a major dichotomy re: its consequences. These will end up in sociology/society
+ */
+
 abstract process Decision
      "Decision is a goal-oriented intentional (mental) activity"
      is decision:Intentional physical:Activity
