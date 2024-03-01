@@ -1,3 +1,11 @@
+/**
+ * @ The Geology domain
+ * 
+ * Like the @atmosphere domain, @geology is a wide-spectrum namespace that provides basic articulation for several disciplines
+ * explaining the @earth. These include physical and historical geologies, mineralogy and petrology, geophysics, sedimentology and
+ * stratigraphy, structural geology, vulcanology and seismology. It **does not** include @hydrology and @soil science (pedology), which
+ * are treated separately.
+ */
 namespace geology
 	version 1.0
 	using imod, earth
