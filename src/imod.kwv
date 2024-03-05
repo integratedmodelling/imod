@@ -72,21 +72,24 @@ namespace imod
  * system.
  * 
  * We interpret systems as an observationally recognizable configuration of interconnected parts. The system is expressed in each
- * domain ontology through the inherency in the domain concept that characterizes it.
+ * domain ontology through the inherency in the domain concept that characterizes it. The root @EarthSystem is concrete because
+ * domains like @physics and @chemistry apply to the entirety of it, including all its subclasses.
  * 
  */
-abstract configuration EarthSystem 
+configuration EarthSystem 
+	""
 	has children 
-	
 		/**
 		 * Description: The @Atmosphere encompasses the layers of gases surrounding the Earth. It is responsible for climate regulation, weather patterns, and the distribution of temperature and precipitation across the globe. The atmospheric system plays a critical role in supporting life by providing essential gases like oxygen and carbon dioxide and protecting life from harmful solar radiation.
 		 * Interactions: Interacts with the hydrosphere through the water cycle and with the biosphere through the exchange of gases essential for life.
 		 */
-		Atmosphere,
+		Atmosphere
+		"",
 		/**
 		 * Description: The @Hydrosphere includes all of Earth's water, covering oceans, seas, lakes, rivers, groundwater, and ice (glaciers and polar ice caps). It is crucial for regulating temperature, supporting aquatic life, and providing fresh water for terrestrial life forms.
 		 * Interactions: Influences and is influenced by the atmospheric system (evaporation and precipitation), the geosphere (shaping landforms through erosion), and the biosphere (providing habitats).		 */
-		Hydrosphere,
+		Hydrosphere
+		"",
 		/**
 		 * Description: The @Geosphere refers to the solid Earth, from the ground we walk on to the Earth's core. It encompasses mountains, plains, sea floors, and all other landforms, as well as the processes that create and modify these landforms, such as tectonic movements, volcanism, and erosion.
 		 * Interactions: Shapes the biosphere by creating habitats, interacts with the atmosphere through volcanic eruptions, and affects the hydrosphere by determining the flow of surface and groundwater.
@@ -101,7 +104,14 @@ abstract configuration EarthSystem
 		 * Description: The @Anthroposphere (or technosphere) represents the part of the environment made or modified by humans for use in human activities and habitation. It includes cities, infrastructure, and technology.
 		 * Interactions: Has significant impacts on and interacts with all other Earth systems through urbanization, pollution, land use changes, and climate change.
 		 */	
-		Anthroposphere;
+		Anthroposphere,
+		/**
+		 * We separate the technosphere from the anthroposphere to facilitate the articulation of physical domains re: human societies and
+		 * their artifacts. This separation is justified by widely different time scales of description, inherent processes, ethical rules and 
+		 * representational conventions for them.
+		 */
+		Technosphere;
+		
 
  /**
  * @Domains

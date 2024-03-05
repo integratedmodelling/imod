@@ -1,14 +1,16 @@
 /**
+ * @ Infrastructure ontological domain
  * 
  * Articulation in infrastructure cannot prescind from purpose, which interacts with social structures and support specific
  * processes. Must have consistent 'for' operators with same-level articulation of the purposes, validated through superclasses.
+ * 
+ * Human-built artifacts and activities are delegated to authorities of international recognition.
  */
 namespace infrastructure
 	version 1.0
 	using imod, decision, physical, earth
-	in domain imod:Physical;
+	in domain imod:Physical of imod:Technosphere;
 	
-
 @fixme("Same problems as most other things with 'requires identity Goal'")
 abstract thing Artifact
     "Artifact is intentionally created by an agent for a goal"
