@@ -68,8 +68,7 @@ namespace imod
  * 
  * Each of the @imod domains is either an ontological (Physical, i.e. a take on the system itself and its physical components) 
  * or epistemological (Knowledge, i.e. the related disciplines, quantities, indicators and scientific understanding relative 
- * to the system) take on a specified 
- * system.
+ * to the system) take on a specified system.
  * 
  * We interpret systems as an observationally recognizable configuration of interconnected parts. The system is expressed in each
  * domain ontology through the inherency in the domain concept that characterizes it. The root @EarthSystem is concrete because
@@ -111,7 +110,6 @@ configuration EarthSystem
 		 * representational conventions for them.
 		 */
 		Technosphere;
-		
 
  /**
  * @Domains

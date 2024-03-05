@@ -1,3 +1,14 @@
+/**
+ * 
+ * Mapping on the domains:
+ * 
+Atmospheric System: Chemistry explains the composition of the atmosphere, chemical reactions that result in phenomena like ozone formation and depletion, and the greenhouse effect.
+Hydrosphere: Chemical processes are central to understanding water quality, the acid-base balance in oceans, and the cycles of nutrients and pollutants.
+Geosphere: Geochemistry explores the chemical composition of Earth's crust, including the processes of mineral formation, soil chemistry, and the interactions between Earth's crust and water (hydrogeology).
+Biosphere: Biochemistry and molecular biology are essential for understanding the chemical processes that support life, including photosynthesis, respiration, and nutrient cycling.
+Cryosphere: Chemistry helps explain the interactions between ice and the rest of the climate system, such as the solubility of gases in melting ice and the impact of pollutants trapped in ice cores.
+Anthroposphere: Chemistry is fundamental in developing materials, pharmaceuticals, and energy sources, and in assessing and mitigating the impact of human activities on the environment through pollution and waste management.
+ */
 namespace chemistry
 	version 1.0
 	using imod, physical
