@@ -13,8 +13,7 @@ namespace physical
 @check("Made it abstract as it needs inherency. Inherency is what makes it possible for events to be independents")
 abstract event Collapse
    "The loss of identity for the system, after which it ceases to exist as such. In  living systems, it's synonymous with death."
-    applies to imod:System
-;
+    applies to imod:System;
 
 //Comment: I am aware that I am using "with" in unconventional manner. To be revised.    
 //From DOLCE.

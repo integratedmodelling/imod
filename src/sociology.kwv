@@ -1,4 +1,25 @@
+/**
+ * @ Sociology and Environmental Sociology
+ * 
+ * @todo the namespace ID should probably reflect our merging of the two above
+ * 
+ * Environmental Sociology. This discipline examines how social processes, structures, and inequalities influence 
+ * human interactions with the environment, as well as how environmental changes impact societies. It integrates 
+ * insights from sociology, ecology, economics, and political science, among others, to explore a wide range of 
+ * topics, including:
+ * 
+ * * Environmental degradation and conservation
+ * * Ecosystem services and their conservation
+ * * The social dimensions of climate change
+ * * Environmental policy and governance
+ * * The sociology of natural resources management
+ * * Environmental justice and inequalities
+ * * The cultural and social meanings of nature
+ * 
+ * Environmental sociology aims to understand the complex and reciprocal relationships between human societies and 
+ * their environments, seeking sustainable solutions to environmental challenges through a sociological lens.
+ */
 namespace sociology
 	version 1.0
 	using imod, society
-	in domain imod:Knowledge;
+	in domain imod:Knowledge of imod:Anthroposphere;

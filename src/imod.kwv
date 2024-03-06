@@ -76,22 +76,37 @@ namespace imod
  * 
  */
 configuration EarthSystem 
-	""
+	"Any interpretation of the Earth that we conceive as a self-consistent system in it. Used as
+     an element of discourse to contextualize the ontological and epistemological domains of the
+     @im worldview."
 	has children 
 		/**
-		 * Description: The @Atmosphere encompasses the layers of gases surrounding the Earth. It is responsible for climate regulation, weather patterns, and the distribution of temperature and precipitation across the globe. The atmospheric system plays a critical role in supporting life by providing essential gases like oxygen and carbon dioxide and protecting life from harmful solar radiation.
-		 * Interactions: Interacts with the hydrosphere through the water cycle and with the biosphere through the exchange of gases essential for life.
+		 * Description: The @Atmosphere encompasses the layers of gases surrounding the Earth. It is responsible
+		 * for climate regulation, weather patterns, and the distribution of temperature and precipitation across 
+		 * the globe. The atmospheric system plays a critical role in supporting life by providing essential gases 
+		 * like oxygen and carbon dioxide and protecting life from harmful solar radiation.
+		 * 
+		 * Interactions: Interacts with the hydrosphere through the water cycle and with the biosphere through 
+		 * the exchange of gases essential for life.
 		 */
 		Atmosphere
 		"",
 		/**
-		 * Description: The @Hydrosphere includes all of Earth's water, covering oceans, seas, lakes, rivers, groundwater, and ice (glaciers and polar ice caps). It is crucial for regulating temperature, supporting aquatic life, and providing fresh water for terrestrial life forms.
-		 * Interactions: Influences and is influenced by the atmospheric system (evaporation and precipitation), the geosphere (shaping landforms through erosion), and the biosphere (providing habitats).		 */
+		 * Description: The @Hydrosphere includes all of Earth's water, covering oceans, seas, lakes, rivers, 
+		 * groundwater, and ice (glaciers and polar ice caps). It is crucial for regulating temperature, supporting 
+		 * aquatic life, and providing fresh water for terrestrial life forms.
+		 * 
+		 * Interactions: Influences and is influenced by the atmospheric system (evaporation and precipitation), 
+		 * the geosphere (shaping landforms through erosion), and the biosphere (providing habitats).		 */
 		Hydrosphere
 		"",
 		/**
-		 * Description: The @Geosphere refers to the solid Earth, from the ground we walk on to the Earth's core. It encompasses mountains, plains, sea floors, and all other landforms, as well as the processes that create and modify these landforms, such as tectonic movements, volcanism, and erosion.
-		 * Interactions: Shapes the biosphere by creating habitats, interacts with the atmosphere through volcanic eruptions, and affects the hydrosphere by determining the flow of surface and groundwater.
+		 * Description: The @Geosphere refers to the solid Earth, from the ground we walk on to the Earth's core. 
+		 * It encompasses mountains, plains, sea floors, and all other landforms, as well as the processes that 
+		 * create and modify these landforms, such as tectonic movements, volcanism, and erosion.
+		 * 
+		 * Interactions: Shapes the biosphere by creating habitats, interacts with the atmosphere through volcanic 
+		 * eruptions, and affects the hydrosphere by determining the flow of surface and groundwater.
 		 */
 		Geosphere,
 		/**
@@ -137,11 +152,7 @@ configuration EarthSystem
 abstract domain Physical
 	"The basic ontology domain for things that are conceptualized as existent. Namespaces in this domain have to do
      with the world, not with its epistemological explanation or interpretation."
-     applies to System
-//     has children 
-//     	Earth within Geosphere,  // TODO we should use this syntax to specialize the inherency without pain
-//     	Atmospheric within Atmosphere,
-     	;
+     applies to System;
 
 /**
  * @@ Knowledge domains are epistemological takes on a system. Different disciplines may coexist in the attempt to
