@@ -179,7 +179,7 @@ domain Knowledge
 // TODO link the output of operators. Could be as simple as
 
 // abstract quality Numerosity is core count of imod:Quality;
-// abstract event Change is change in imod:Quality
+// abstract event Changed is changed imod:Quality
 
 // would need a check that everything is included and store those in CoreOntology for reference. 
 // Not sure what we should do for restrictions but probably just adding the properties based on the operators would be enough.           

@@ -6,4 +6,14 @@ namespace land
 	""
 	version 1.0
 	using imod, society, earth, life
-	in domain imod:Knowledge;
+	in domain imod:Knowledge of (imod:Geosphere or imod:Biosphere);
+
+/**
+ * @temporary Example of how the link to the generic pattern authority could be made
+ */	
+identity LandCover 
+	""
+	requires authority LANDCOVER {
+		type: org.integratedmodelling.authorities.pattern
+		// TODO all parameters that specify configurations linked to each level
+	};
