@@ -45,9 +45,6 @@ abstract subjective ordering Feasibility
       Feasible,
       Unfeasible;
 
-deniable attribute Comparable
-   "Describes the ability to rank an object over another one."
-   applies to imod:Concordance;
    
 deniable attribute Predicted
 //	is core observation:Predicted

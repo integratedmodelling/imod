@@ -62,9 +62,9 @@ abstract identity Identity
 //abstract identity Areal is core observation:Areal;
 //abstract identity Volumetric is core observation:Volumetric;
  
-@fixme("Mah. A final output would be Outcome, Goal is definitely not an identity, probably both are configurations") 
-abstract identity Goal
-     "Goal is a final output attributed to a Subject, an Agent and a Process";
+//@fixme("Mah. A final output would be Outcome, Goal is definitely not an identity, probably both are configurations") 
+abstract identity Outcome
+     "Final output of a Process";
 
 //The notion of Boundary should be better documented
 
@@ -133,15 +133,19 @@ abstract realm Realm
 abstract role Role
     "Role specifies predicates that can be played by a concept in a context"
    is core odo:Role;
+   
+deniable attribute Comparable
+   "Describes the ability to rank an object over another one."
+   applies to imod:Concordance;
 
-@fixme("can't refer to decision: here (this will be an error). Internalize 'comparable'")
 role Reference
     "Applied to an observation used as reference to compute the primary observation by comparison. 
      Can be linked to a rescaling filters to shift the context of observation made in different space and time."
-    requires attribute decision:Comparable;
+    requires attribute Comparable;
 
 @todo("check extraction of attributes")
 role Indicator 
+   applies to Quantity
    has children   
      (AbsoluteIndicator
      "An absolute indicator has values that range between a known minimum and maximum. Its value corresponds 
@@ -158,8 +162,7 @@ role Indicator
 
 //Process
 abstract process Process
-    "A process is a dependent occurrent that happens in time, open-ended (without temporal boundaries) and homogeneous. It can 
-     affect both the qualities and the existence of continuants, as well as confer attributes and roles."
+     "A dynamic occurrence unfolding over time, typically open-ended (no temporal boundaries) and homogeneous in nature."
    is core odo:Process;
     
 //Event
@@ -172,7 +175,7 @@ abstract event Event
 @todo("see note above for the 'requires identity' clause")
 deniable attribute Positive
     "Describes the positive or negative outcome of an event or a subject."
-    requires identity Goal;
+    requires identity Outcome;
 
 @todo("Must articulate relationship vs. bond and functional vs. structural, as these are fundamental and disjoint.")   
 abstract relationship Relationship
