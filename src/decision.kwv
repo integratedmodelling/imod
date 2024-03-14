@@ -45,6 +45,20 @@ abstract subjective ordering Feasibility
       Feasible,
       Unfeasible;
 
+//DOLCE and UFO
+// can we redesign "socialAgent" using the Agent keywords?
+@fixme("definitely belongs elsewhere and needs a real definition")
+abstract agent SocialAgent
+    "Social agent is an Agent created, managed and recognized by other agents, such as organization."
+    applies to Network
+    // nah - this should be a Social identity conferred by some SocialRelationship to the agents it links
+//    contains at least 2 Agent
+    ;
+ 
+ //DOLCE and UFO    
+@fixme("see above")
+abstract thing SocialObject
+     "Social agent is an Subject and recognized by other agents, such as law and money.";
    
 deniable attribute Predicted
 //	is core observation:Predicted

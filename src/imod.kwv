@@ -200,77 +200,53 @@ abstract configuration Configuration
      quality and relationship."
    is core odo:Configuration;
 
-//cancella: system
-//Literature on systems: Laszlo, A., & Krippner, S. (1998). Systems theories: Their origins, foundations, and development. Advances in Psychology-Amsterdam-, 126, 47-76.
-abstract configuration System
-    "A system is a complex boundary entity that includes other entities, such as subjects, agents, events and relationships."
-    emerges from Relationship
-    ;
 
-@todo("Spatial doesn't just mean Areal")
-@todo("E daje con 'requires identity Goal'")
+
 abstract configuration Network 
    "A network is a configuration of subjects connected by relationships."
    is imod:Configuration of imod:Relationship
    has children 
       (abstract SpatialNetwork  
-        inherits Areal
+        //inherits Areal
       ),
       (
       abstract IntentionalNetwork
-      requires identity Goal  
+      inherits Outcome  
       );
-
-//Redundant    
-//abstract attribute ConfigurationType
-//     "Describes configurations."
- //    applies to Configuration
- //    has children
-  //       (PerceivedConfiguration
-  //       inherits physical:Perceived),
-  //       (InferredConfiguration
-  //        "An inferred configuration exists because humans can logically infer its existence based on other observations."  
- //            has children
- //            MeasuredConfiguration
- //            "A measured configuration exists because its existence is exposed by a measurement instrument or process."
- //            );
 
 /**
  * Countable
  */
 
 @fixme("Not sure this should be articulated here. Seems to me that Substantial is more generic than agent.")
-abstract agent Substantial
+abstract thing Substantial
    "Substantial is independent for its existence and bears qualities. Substantial are similar to Substantial 
     in UFO and DOLCE" 
-   is core odo:Substantial;
+   is core odo:Substantial
+     has children
+      ( Subject
+      	"Subject is a Substantial without agentive characteristics"
+      	is core odo:Subject
+      ),
+       (Agent
+      	"Agent is a Substantial with intentionality" 
+      	is core odo:Agent
+      );
 
-abstract thing Subject
-    "Subject is a Substantial without agentive characteristics"
-   is core odo:Subject;
+//abstract thing Subject
+//    "Subject is a Substantial without agentive characteristics"
+//   is core odo:Subject;
 
-@fixme("Apart from the circular reference, not sure having agency means the same as 'being Intentional'.")
-abstract agent Agent
-   "Agent is a Substantial with intentionality" 
-   is core odo:Agent
+//@fixme("Apart from the circular reference, not sure having agency means the same as 'being Intentional'.")
+//abstract agent Agent
+//   "Agent is a Substantial with intentionality" 
+//   is core odo:Agent
    // FIXME circular dependency (and wrong)
 //   inherits decision:Intentional
-   ;
+ //  ;
    
-//DOLCE and UFO
-// can we redesign "socialAgent" using the Agent keywords?
-@fixme("definitely belongs elsewhere and needs a real definition")
-abstract agent SocialAgent
-    "Social agent is an Agent created, managed and recognized by other agents, such as organization."
-    applies to Network
-    // nah - this should be a Social identity conferred by some SocialRelationship to the agents it links
-//    contains at least 2 Agent
-    ;
  
-//DOLCE and UFO    
-@fixme("see above")
-abstract thing SocialObject
-     "Social agent is an Subject and recognized by other agents, such as law and money.";
+
 
 /**
  * Qualities
@@ -326,42 +302,64 @@ abstract quantity Numerosity
  * TODO will make definitions mandatory at some point :)
  */
  
+
 abstract angle Angle 
+   "Geometric property that measures the amount of rotation needed to bring one line or plane into coincidence with another. 
+   Typically measured in degrees or radians."   
    is core odo:Angle;
 
-abstract energy Energy 
+abstract energy Energy
+   "The capacity of a system to perform work or produce heat. Typically measured in joules (J)." 
    is core odo:Energy;
 
-abstract temperature Temperature 
+abstract temperature Temperature
+   "Measure of the average kinetic energy of the particles in a substance or system. 
+   Typically measured with scales such as Celsius, Fahrenheit, or Kelvin."
    is core odo:Temperature;
 
 resistivity Resistivity 
+   "A measure of a material's resistance to the flow of electric current. 
+   It quantifies how strongly a material opposes the flow of electrical charges and is typically measured in ohm-meters."
    is core odo:Resistivity;
 
-abstract velocity Velocity 
+abstract velocity Velocity
+   "Quantity that describes the rate of change of an object's position with respect to time. 
+   Typically measured in units such as meters per second (m/s) or kilometers per hour (km/h)." 
    is core odo:Speed;
 
 
-abstract mass Mass 
+abstract mass Mass
+   "Property of matter that quantifies the amount of substance in an object. 
+    Typically measured in units such as kilograms (kg) or grams (g)."
    is core odo:Mass 
    requires identity Volumetric;
 
 abstract amount Amount
+   "Refers to a quantitative measure or quantity of something. 
+    It represents the magnitude or volume of a substance, object, or phenomenon, and can be expressed numerically or qualitatively."
    is core odo:Amount
    requires identity Volumetric;
 
-abstract volume Volume 
+abstract volume Volume
+   "Measure of the three-dimensional space occupied by an object or substance. It quantifies the amount of space enclosed by the boundaries 
+   of the object or substance and is typically measured in cubic units such as cubic meters or cubic centimeters." 
    is core odo:Volume
    requires identity Volumetric;
    
-abstract weight Weight  
+abstract weight Weight
+   "The force exerted on an object due to gravity. 
+   Typically expressed in units of force such as newtons (N) or pounds-force (lbf)."  
    is core odo:Weight  
    requires identity Volumetric;
    
-abstract quantity Proportion     
+abstract quantity Proportion
+   "The relative size, quantity, or magnitude of one element compared to another within a given context. 
+   Can be expressed numerically, often as a fraction, percentage, or ratio."       
    is core odo:Proportion;
 
-abstract quantity Ratio     
+abstract quantity Ratio
+   "The quantitative relationship between two quantities or amounts, typically expressed as the quotient of one quantity divided by another. It indicates the proportion or comparative magnitude of one quantity relative to another. 
+    Ratios can be represented in various forms, such as fractions, decimals, or percentages."       
    is core odo:Ratio;
 
 
@@ -373,7 +371,8 @@ abstract class Type
 
 //Priority
 
-abstract priority Priority 
+abstract priority Priority
+   "Relative importance or precedence assigned to entities or actions within a system or context, often based on predefined criteria or constraints." 
    is core odo:Priority;
 
 abstract priority Concordance
@@ -383,21 +382,30 @@ abstract priority Concordance
 //Value
 
 abstract money MonetaryValue
+    "Quantitative representation of the economic worth or exchangeable value assigned to goods, services, or assets, typically denoted in a currency unit."
     is core odo:MonetaryValue;
     
 abstract quantity PreferenceValue
+   "Quantitative or qualitative measure representing the degree of desirability, favorability, or priority assigned to an option, choice, or outcome within a decision-making context."
    is core odo:PreferenceValue;
    
 abstract role ValueObject
+     "An entity that embodies, represents, or holds value, which may include but is not limited to monetary, conceptual, or symbolic value."
      applies to Subject;
      
 abstract relationship ValuationRelationship
+     "Connection or association between entities or concepts that involves the assessment, determination, or assignment of value."
      links Agent to Subject;
 
 deniable attribute Regularity
+	"Denotes the state or quality of being consistent, orderly, or conforming to a pattern or set of rules, often implying predictability and absence of deviation or randomness."
      has disjoint children
-         Regular,
-         Irregular;
+         (Regular
+         	"State or condition characterized by consistency, orderliness, or adherence to established patterns or rules."
+         ),
+         (Irregular
+         	" Lack of orderliness, or deviation from established patterns or rules, often exhibiting unpredictability or variability in behaviour or occurrence."
+         );
          
 //Extent
 
