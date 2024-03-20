@@ -2,3 +2,6 @@ namespace economics
    version 1.0
    using imod, data
    in domain imod:Knowledge of imod:Anthroposphere;
+
+
+// TODO Look at SCOR model for process articulation in economics/enterprise

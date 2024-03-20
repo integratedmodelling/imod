@@ -9,3 +9,5 @@ namespace society
 	version 1.0
 	using imod, life
 	in domain imod:Physical;
+	
+// TODO check out FAIR population/demography vocabularies from https://zenodo.org/records/7818157
