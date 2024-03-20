@@ -1,3 +1,45 @@
+/**
+ * "Literate programming" features: comments introduced with the double asterisk are collected to provide
+ * AsciiDoc documentation, and the concepts that follow them are documented in the processed document. If the
+ * namespace is not introduced by a literate section, it won't be documented at all. 
+ * 
+ * @Section headers are turned into #/## etc., using intelligent nesting depending on the context (so they can start at
+ * one @ unless a subsection of the previous at the same level is wanted). All the remaining text in the comment is 
+ * standard Markdown or AsciiDoc, added verbatim except for a possible leading asterisk that is always stripped (along with
+ * the first space after it, if present).
+ * 
+ * In the text, the prefix @ is used to expand the next word intelligently - for example adding a cross-reference when
+ * it's the recognizable and unambiguous URN of any k.LAB asset. In case it isn't understood, the preprocessor will
+ * print a warning and insert the word without the @, unless it's escaped with another @.
+ * 
+ * k.IM code prefixed by literate sections is inserted in the document where it belongs, with syntax highlighting and line numbering
+ * dependent on processing options.
+ * 
+ * Re: @imod (must become the intro here):
+ * 
+ * The epistemological framework for @im is systems thinking. The domain structure defines how that is articulated within the
+ * worldview. The domains are contextualized to explicit systems, introduced in general here. TODO should be compared quickly
+ * with other possible choices: e.g. rationalism, realism (BFO), pragmatism, empiricism, constructivism.
+ * 
+ * Each domain is a perspective on a system. The two main perspectives are the ontological (Physical domain) and the epistemological
+ * (Knowledge domain). The systems are explicit in this worldview, expressed as Configurations ("perceived" systems). The physical
+ * domain pertaining to a system is one and one only. The knowledge domains may be multiple, according to what the knowledge
+ * described in each domain emphasizes (e.g. @economics, @sociology and @policy for the @society domain). Of course the 
+ * ontological domains are _also_ knowledge - but from within the worldview, they are assumed to represent the ontological
+ * reality of the observed world and are assumed complete and internally consistent, while there is no such requirement for individual knowledge
+ * domains. 
+ * 
+ * Tier 1 ontologies *must* declare their domain, which locates them within a system and a perspective on it. Tier 2 domains
+ * *must not* declare the domain, as they inherit them from the corresponding Tier 1 ontology, which must exist. This project
+ * contains only Tier 1 ontologies, which have a single name as namespace without dot separators.
+ * 
+ * E.g., a definition for the @agency space: Systems thinking provides a framework for understanding the complexity of decision processes and their 
+ * consequences within a holistic context. It emphasizes the interconnections between parts of a system and how those parts 
+ * influence one another. Within this framework, a decision process is seen as part of a larger system of actions and 
+ * feedback loops, with consequences understood in terms of their impact on the system as a whole. 
+ * 
+ * Also this (and the Physical domains) is a good place to discuss what @im is not covering and why.
+ */
 namespace imod
    "The imod (Integrated Modelling) ontology includes abstract concepts related to scientific observations.
     It specifies semantics used everywhere in the IM worldview and links im-based concepts to the 
@@ -17,6 +59,109 @@ namespace imod
       // TODO add refs and links
    };
 
+
+/**
+ * @ The main Systems of the earth
+ * 
+ * This worldview takes a _system view_ of planet Earth and characterizes its main ontologies in domains relative to 
+ * explicit systems. The @System hierarchy articulates the basic systems taken into consideration in the @im worldview. 
+ * 
+ * Each of the @imod domains is either an ontological (Physical, i.e. a take on the system itself and its physical components) 
+ * or epistemological (Knowledge, i.e. the related disciplines, quantities, indicators and scientific understanding relative 
+ * to the system) take on a specified system.
+ * 
+ * We interpret systems as an observationally recognizable configuration of interconnected parts. The system is expressed in each
+ * domain ontology through the inherency in the domain concept that characterizes it. The root @EarthSystem is concrete because
+ * domains like @physics and @chemistry apply to the entirety of it, including all its subclasses.
+ * 
+ */
+configuration EarthSystem 
+	"Any interpretation of the Earth that we conceive as a self-consistent system in it. Used as
+     an element of discourse to contextualize the ontological and epistemological domains of the
+     @im worldview."
+	has children 
+		/**
+		 * Description: The @Atmosphere encompasses the layers of gases surrounding the Earth. It is responsible
+		 * for climate regulation, weather patterns, and the distribution of temperature and precipitation across 
+		 * the globe. The atmospheric system plays a critical role in supporting life by providing essential gases 
+		 * like oxygen and carbon dioxide and protecting life from harmful solar radiation.
+		 * 
+		 * Interactions: Interacts with the hydrosphere through the water cycle and with the biosphere through 
+		 * the exchange of gases essential for life.
+		 */
+		Atmosphere
+		"",
+		/**
+		 * Description: The @Hydrosphere includes all of Earth's water, covering oceans, seas, lakes, rivers, 
+		 * groundwater, and ice (glaciers and polar ice caps). It is crucial for regulating temperature, supporting 
+		 * aquatic life, and providing fresh water for terrestrial life forms.
+		 * 
+		 * Interactions: Influences and is influenced by the atmospheric system (evaporation and precipitation), 
+		 * the geosphere (shaping landforms through erosion), and the biosphere (providing habitats).		 */
+		Hydrosphere
+		"",
+		/**
+		 * Description: The @Geosphere refers to the solid Earth, from the ground we walk on to the Earth's core. 
+		 * It encompasses mountains, plains, sea floors, and all other landforms, as well as the processes that 
+		 * create and modify these landforms, such as tectonic movements, volcanism, and erosion.
+		 * 
+		 * Interactions: Shapes the biosphere by creating habitats, interacts with the atmosphere through volcanic 
+		 * eruptions, and affects the hydrosphere by determining the flow of surface and groundwater.
+		 */
+		Geosphere,
+		/**
+		 * Description: The @Biosphere is the sum of all ecosystems on Earth, including all living organisms and the environments in which they live. It spans from the deepest ocean floors to the highest mountain peaks and includes complex interactions among organisms and between organisms and their physical environments.
+		 * Interactions: Interacts with all other Earth systems by altering the atmosphere (through photosynthesis and respiration), influencing the hydrosphere (impacting water quality and availability), and modifying the geosphere (through processes like soil formation and erosion control).
+		 */
+		Biosphere,
+		/**
+		 * Description: The @Anthroposphere (or technosphere) represents the part of the environment made or modified by humans for use in human activities and habitation. It includes cities, infrastructure, and technology.
+		 * Interactions: Has significant impacts on and interacts with all other Earth systems through urbanization, pollution, land use changes, and climate change.
+		 */	
+		Anthroposphere,
+		/**
+		 * We separate the technosphere from the anthroposphere to facilitate the articulation of physical domains re: human societies and
+		 * their artifacts. This separation is justified by widely different time scales of description, inherent processes, ethical rules and 
+		 * representational conventions for them.
+		 */
+		Technosphere;
+
+ /**
+ * @Domains
+ * 
+ * Domains are philosophical takes on @{System}s, either in an ontological sense (defining their "nature") or in an epistemological
+ * sense (explaining their characteristics through scientific quantities, process descriptions, etc). Each domain is associated
+ * to a specific system type articulated here as the basic worldview for the @im project.
+ * 
+ * The relationship of the basic scale extents of time and space should be articulated and specialized within the description of
+ * each system. Also the "conceptual" extent could be added to epistemological (Knowledge) domains if it's decided to use it 
+ * to articulate competing explanations.
+ * 
+ * When used in the domain specification of the worldview's namespaces, the domains should be contextualized to the systems
+ * or subset thereof that they address. This would be grounds for validation of each domain as the contents should be aligned
+ * with that system and provide its full description (specializing further in each tier). 
+ */
+ 
+/**
+ * @@ The Physical domain is the ontological perspective on a system. All Physical domains are ontological statements 
+ * and only one physical domain per system type is permitted in the @im worldview.
+ * 
+ * @todo knowledge domains like @physics and @chemistry should apply to the general PhysicalSystem and EarthSystem should
+ * be the focus (root?) domain for the ontology.
+ */
+abstract domain Physical
+	"The basic ontology domain for things that are conceptualized as existent. Namespaces in this domain have to do
+     with the world, not with its epistemological explanation or interpretation."
+     applies to System;
+
+/**
+ * @@ Knowledge domains are epistemological takes on a system. Different disciplines may coexist in the attempt to
+ * explain the system, therefore more than one knowledge domain can exist on each system type. 
+ */
+domain Knowledge
+	"The basic epistemology domain. Has to do with explanations and is always connected to a physical domain."
+	applies to System;
+
 /*
  * TODO there should be a mechanism to link all fundamental types to the core ontology and validate
  * coverage and consistency. For now the mechanism lacks completeness and validation.
@@ -34,7 +179,7 @@ namespace imod
 // TODO link the output of operators. Could be as simple as
 
 // abstract quality Numerosity is core count of imod:Quality;
-// abstract event Change is change in imod:Quality
+// abstract event Changed is changed imod:Quality
 
 // would need a check that everything is included and store those in CoreOntology for reference. 
 // Not sure what we should do for restrictions but probably just adding the properties based on the operators would be enough.           
@@ -474,3 +619,6 @@ abstract extent Time
                   )
             );
              
+
+
+  

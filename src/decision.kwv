@@ -1,3 +1,7 @@
+/**
+ * 
+ * @deprecated merge into @agency
+ */
 namespace decision
       version 1.0
       using imod, physical
@@ -17,7 +21,8 @@ namespace decision
  * the type of transformation they induce and the context of their existence. Specifically the type of agency needed by their
  * context.
  * 
- * Group vs. Individual decision is a major dichotomy re: its consequences. These will end up in sociology/society
+ * Group vs. Individual decision is a major dichotomy re: its consequences. These will end up in sociology/society. Also probably
+ * related to purpose which is the structuring criterion for the infrastructure domain.
  */
 
 abstract process Decision
@@ -38,12 +43,10 @@ deniable attribute Conformant
     "Conformance is voluntary adherence to a standard, rule, specification, requirement, design, process or practice."
      applies to Decision;
    
-abstract subjective ordering Feasibility
+ordering Feasible
      "Describes the level of feasibility of an activity"
      applies to physical:Activity
-     has children
-      Feasible,
-      Unfeasible;
+     deniable as Unfeasible;
 
 //DOLCE and UFO
 // can we redesign "socialAgent" using the Agent keywords?

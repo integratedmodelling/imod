@@ -1,7 +1,7 @@
 namespace physical
    version 1.0
    using imod
-   in domain imod:Physical;
+   in domain imod:Physical of imod:EarthSystem;
    
 /**
  * TODO if all those decision:-based predicates are needed, they should be moved into something like an
@@ -13,30 +13,7 @@ namespace physical
 @check("Made it abstract as it needs inherency. Inherency is what makes it possible for events to be independents")
 abstract event Collapse
    "The loss of identity for the system, after which it ceases to exist as such. In  living systems, it's synonymous with death."
-    applies to imod:System
-;
-
-@fixme("Same problems as most other things with 'requires identity Goal'")
-abstract thing Artifact
-    "Artifact is intentionally created by an agent for a goal"
-//    is decision:Intentional imod:Subject
-    requires identity imod:Goal;
-
-//Adamo, G., and Willis, M. (2022, May). Conceptual Integration for Social-Ecological Systems: An Ontological Approach. RCIS 2022
-@fixme("Really not sure of the 'role for goal' thing which seems to be an abuse of the 'for' operator. 
-        Please avoid ego trips in the metadata when we add them.")
-abstract role Resource
-     "A resource is the role that objects plays in the context of activities or plans to achieve goals"
-     is /* decision:Relevance */ imod:Role for imod:Goal
-     has children
-     	@fixme("Do we need these or just the attributes for the nature/provenance of any subject?")
-        NaturalResource,
-        (
-        	@fixme("If these are equivalents we need something very different than 'applies to'")
-        	HumanMadeResource
-        		"HumanMade resources are the equivalent of artifacts."
-        		applies to Artifact
-        );
+    applies to imod:System;
 
 //Comment: I am aware that I am using "with" in unconventional manner. To be revised.    
 //From DOLCE.
@@ -55,22 +32,22 @@ abstract thing Feature
 abstract identity AmountofMatter
    "Amount of matter is an entity made of the same composition, such as gold.";
 
-         
-// From: DOLCE Lite Plus (DLP). E. M. Sanfilippo: "Ontologies for information entities: State of the art and open challenges"
-@fixme("Not sure we need to have these concepts in here. They're the hallmark of all failed ontology efforts for science so far.")
-abstract thing InformationRealization
-     "Information realization is the physical support of an information object"
-     is physical:Artifact with imod:Evidence     
-     has children
-        (Document
-            has children
-                (Specification),
-                (PlanRealization),
-                (Book),
-                (Report)
-                ),            
-        (ComputerProgram);
-        
+//         
+//// From: DOLCE Lite Plus (DLP). E. M. Sanfilippo: "Ontologies for information entities: State of the art and open challenges"
+//@fixme("Not sure we need to have these concepts in here. They're the hallmark of all failed ontology efforts for science so far.")
+//abstract thing InformationRealization
+//     "Information realization is the physical support of an information object"
+//     is physical:Artifact with imod:Evidence     
+//     has children
+//        (Document
+//            has children
+//                (Specification),
+//                (PlanRealization),
+//                (Book),
+//                (Report)
+//                ),            
+//        (ComputerProgram);
+//        
 //Specialized physical qualities
 abstract length Depth
     // is imod:Length // unnecessary as it's a length

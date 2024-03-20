@@ -1,0 +1,34 @@
+/**
+ * @ Infrastructure ontological domain
+ * 
+ * Articulation in @infrastructure cannot prescind from purpose, which interacts with social structures and support 
+ * specific processes. Must have consistent 'for' operators with same-level articulation of the purposes, validated 
+ * through superclasses.
+ * 
+ * Human-built artifacts and activities are delegated to authorities of international recognition.
+ */
+namespace infrastructure
+	version 1.0
+	using imod, decision, physical, earth
+	in domain imod:Physical of imod:Technosphere;
+	
+@fixme("Same problems as most other things with 'requires identity Goal'")
+abstract thing Artifact
+    "Artifact is intentionally created by an agent for a goal"
+//    is decision:Intentional imod:Subject
+    requires identity imod:Goal;
+
+@fixme("Really not sure of the 'role for goal' thing which seems to be an abuse of the 'for' operator.")
+abstract role Resource
+     "A resource is the role that objects plays in the context of activities or plans to achieve goals"
+     is /* decision:Relevance */ imod:Role for imod:Goal
+     has children
+     	@fixme("Do we need these or just the attributes for the nature/provenance of any subject?")
+        NaturalResource,
+        (
+        	@fixme("If these are equivalents we need something very different than 'applies to'")
+        	HumanMadeResource
+        		"HumanMade resources are the equivalent of artifacts."
+        		applies to Artifact
+        );
+	

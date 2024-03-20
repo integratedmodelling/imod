@@ -1,0 +1,11 @@
+/** 
+ * @ Atmospheric sciences domain
+ * 
+ * The atmospheric sciences domain gathers the basic ODO-IM categorization for the knowledge realms related to 
+ * atmospheric sciences relevant to the @im worldview. These include meteorology, climatology and atmospheric
+ * physics, which are treated together and may be expanded individually in a Tier 2 worldview.  
+ */
+namespace atmosphere
+	version 1.0
+	using imod, earth
+	in domain imod:Knowledge;

@@ -1,0 +1,6 @@
+namespace ecology
+	version 1.0
+	using imod, life, biology
+	in domain imod:Knowledge of imod:Biosphere;
+
+	

@@ -1,0 +1,14 @@
+/**
+ * Mapping on the domains:
+ * 
+ * Atmospheric System: Physics explains atmospheric phenomena, such as radiation balance, thermodynamics (temperature and heat transfer), and fluid dynamics (wind patterns).
+ * Hydrosphere: The principles of fluid dynamics also apply to the movement of water in the hydrosphere, including ocean currents, wave mechanics, and ice formation and melting in the cryosphere.
+ * Geosphere: Physics underlies the study of plate tectonics, earthquakes (seismology), and the internal structure of the Earth through geophysics.
+ * Biosphere: While biology primarily governs the biosphere, physics contributes to understanding biological processes at the molecular level, such as the physical basis of cell structures and the mechanics of animal movement.
+ * Cryosphere: Thermodynamics and phase changes between ice and water are key physical processes affecting the cryosphere.
+ * Anthroposphere: Physics is crucial in developing and understanding the technologies and infrastructures that define human activities, from energy generation and distribution to the materials science behind construction and manufacturing.
+ */
+namespace physics
+	version 1.0
+	using imod, physical
+	in domain imod:Knowledge;

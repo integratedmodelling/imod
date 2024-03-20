@@ -1,0 +1,4 @@
+namespace soil
+	version 1.0
+	using imod, earth
+	in domain imod:Knowledge;

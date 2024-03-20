@@ -1,8 +1,85 @@
+/**
+ * Agency refers to the capacity of individuals or groups to act independently and make their own free choices. 
+ * It is the power to exert influence over one's environment, make decisions, and initiate actions based on one's 
+ * intentions and desires. Agency is a fundamental concept in various disciplines, including sociology, psychology, 
+ * and philosophy, highlighting the role of personal or collective autonomy in shaping behaviors, social structures, 
+ * and outcomes.
+ * 
+ * @todo merge with "decision" in here, straighten up all the physical concepts that actually belong in infrastructure.
+ */
 namespace agency
 	version 1.0
     using imod
-    in domain imod:Knowledge;
+    in domain imod:Knowledge of imod:Anthroposphere;
      
-deniable attribute Intentional
+attribute Intentional
 	"Intention is a mental state (e.g. goal, belief, desire)"
+	deniable as Unintentional
 	requires identity imod:Goal;
+	
+
+/*
+ * Mapping agency to @imod:Technosphere and @imod:Antroposphere:
+ * 
+ * 
+ * The concepts of the "Anthroposphere" and the "Technosphere" offer intriguing frameworks to explore the notion of agency 
+ * in contemporary society, each highlighting different aspects of human interaction with our environment and technology.
+ *
+ * Anthroposphere
+ * 
+ * The Anthroposphere refers to the part of the environment that has been modified by humans for use in human activities 
+ * and habitation, including cities, farms, and all the spaces we've altered or created. In this context, agency 
+ * manifests in the human capacity to shape, manage, and transform the natural environment to meet societal needs and 
+ * desires. It encompasses:
+ *
+ * Environmental Modification and Management: The deliberate alteration of the environment through agriculture, 
+ * urban development, and infrastructure projects, reflecting human agency in reshaping the Earth to support human life.
+ *
+ * Sustainability and Conservation Efforts: Human agency is also evident in efforts to mitigate environmental 
+ * degradation, manage natural resources sustainably, and conserve biodiversity, reflecting an awareness of the 
+ * environmental impacts of human actions and a responsibility to future generations.
+ * 
+ * Cultural and Social Practices: The ways societies organize themselves, their cultural practices, and their social
+ * norms and values, which are all human-created aspects that significantly impact the Anthroposphere.
+ * 
+ * Technosphere
+ * 
+ * The Technosphere refers to the global, interlinked system of technology and artifacts that humans have created, 
+ * including all of the machines, structures, and information networks developed to sustain human life and activity. 
+ * Agency in the Technosphere can be seen in:
+ * 
+ * Technological Innovation and Design: Human agency is central to the creation and development of technology. This 
+ * includes not just the physical tools and machines but also the software, algorithms, and systems that underpin 
+ * the digital world.
+ * 
+ * Interaction with Technology: How individuals and societies interact with technology—adopting it, adapting it, 
+ * resisting it, or modifying it—reflects human agency. People are not just passive consumers of technology but 
+ * active participants in shaping the Technosphere.
+ * 
+ * Socio-Technical Systems: The Technosphere is not purely technical; it's deeply intertwined with social systems, 
+ * norms, and practices. Human agency influences how technology is integrated into society, including decisions about 
+ * its use, ethical considerations, and how technology shapes human relationships and social structures.
+ * 
+ * Agency Interplay Between Anthroposphere and Technosphere
+ * 
+ * The interplay between the Anthroposphere and the Technosphere underlines the complex nature of human agency in 
+ * the modern world. This interplay showcases:
+ * 
+ * Mutual Shaping: Humans shape the Technosphere through innovation, design, and usage patterns, while the Technosphere 
+ * influences human behavior, social structures, and even the Anthroposphere itself (e.g., through technology-driven 
+ * environmental changes).
+ * 
+ * Challenges and Responsibilities: The power of human agency in both spheres comes with significant responsibilities. 
+ * Decisions made today about how we interact with our environment and technology have long-term implications for
+ * sustainability, ethics, and societal well-being.
+ * 
+ * Adaptive and Reflexive Agency: In facing global challenges like climate change, resource depletion, and the social 
+ * impacts of technology, human agency becomes adaptive and reflexive. People are increasingly aware of the consequences 
+ * of their actions and are seeking innovative ways to live sustainably within both the Anthroposphere and the 
+ * Technosphere.
+ * 
+ * Understanding agency within these spheres involves recognizing the capacities for creativity, adaptation, and 
+ * responsibility that define the human condition in the Anthropocene era. It highlights the need for thoughtful 
+ * engagement with technology and the environment, aiming for a future that harmonizes human needs with the 
+ * planet's ecological boundaries and the ethical use of technology.
+*/
