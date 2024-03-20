@@ -75,7 +75,7 @@ namespace imod
  * domains like @physics and @chemistry apply to the entirety of it, including all its subclasses.
  * 
  */
-configuration EarthSystem 
+configuration PhysicalSystem 
 	"Any interpretation of the Earth that we conceive as a self-consistent system in it. Used as
      an element of discourse to contextualize the ontological and epistemological domains of the
      @im worldview."
@@ -152,7 +152,7 @@ configuration EarthSystem
 abstract domain Physical
 	"The basic ontology domain for things that are conceptualized as existent. Namespaces in this domain have to do
      with the world, not with its epistemological explanation or interpretation."
-     applies to System;
+     applies to PhysicalSystem;
 
 /**
  * @@ Knowledge domains are epistemological takes on a system. Different disciplines may coexist in the attempt to
@@ -160,7 +160,7 @@ abstract domain Physical
  */
 domain Knowledge
 	"The basic epistemology domain. Has to do with explanations and is always connected to a physical domain."
-	applies to System;
+	applies to PhysicalSystem;
 
 /*
  * TODO there should be a mechanism to link all fundamental types to the core ontology and validate
