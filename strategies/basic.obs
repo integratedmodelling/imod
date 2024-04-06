@@ -2,7 +2,9 @@
  * Default k.LAB observation strategies, previously hard-coded in the ObservationStrategy class. These are the leaves of the 
  * tree in the observation strategy, and contain only "observe" statements.
  */
-
+strategies basic
+	version 1.0;
+	
 strategy 0 named quality.direct
   "As a first attempt, any concrete quality is just observed as it is."
    for imod:Quality if concrete
