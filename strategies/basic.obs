@@ -31,7 +31,7 @@ strategy 0 named relationships.direct
    resolve each this:Target
    observe each this:Observable {
       resolve this:Observable optional
-   };
+   };     
      
 /*
  * Second-tier strategies will use "resolve" for partial resolutions. These may fail while being completed and after causing
