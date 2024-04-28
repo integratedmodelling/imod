@@ -232,7 +232,6 @@ abstract identity ConceptualBoundary
 abstract attribute Attribute
     "Attribute specifies descriptive accidental predicates of a subject."
    is core odo:Attribute;
-   
 
 abstract attribute Evidence
      "Characterizes degrees of evidence for an hypothesis."   
