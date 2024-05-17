@@ -1,4 +1,4 @@
-namespace physical
+ontology physical
    version 1.0
    using imod
    in domain imod:Physical of imod:EarthSystem;

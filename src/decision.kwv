@@ -2,7 +2,7 @@
  * 
  * @deprecated merge into @agency
  */
-namespace decision
+ontology decision
       version 1.0
       using imod, physical
       in domain imod:Physical;
@@ -24,7 +24,6 @@ namespace decision
  * Group vs. Individual decision is a major dichotomy re: its consequences. These will end up in sociology/society. Also probably
  * related to purpose which is the structuring criterion for the infrastructure domain.
  */
-
 abstract process Decision
      "Decision is a goal-oriented intentional (mental) activity"
      is decision:Intentional physical:Activity

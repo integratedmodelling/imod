@@ -1,4 +1,4 @@
-namespace economics
+ontology economics
    version 1.0
    using imod, data
    in domain imod:Knowledge of imod:Anthroposphere;

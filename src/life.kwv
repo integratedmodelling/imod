@@ -7,7 +7,7 @@
  * life-related phenomena, such as @biology, @ecology and @genetics. These epistemological domains will use the concepts articulated
  * here as their physical domain, explained under the correspondent perspectives. 
  */
-namespace life
+ontology life
 	version 1.0
 	using imod
 	in domain imod:Physical of imod:Biosphere;

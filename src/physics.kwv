@@ -8,7 +8,7 @@
  * Cryosphere: Thermodynamics and phase changes between ice and water are key physical processes affecting the cryosphere.
  * Anthroposphere: Physics is crucial in developing and understanding the technologies and infrastructures that define human activities, from energy generation and distribution to the materials science behind construction and manufacturing.
  */
-namespace physics
+ontology physics
 	version 1.0
 	using imod, physical
 	in domain imod:Knowledge;

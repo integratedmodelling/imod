@@ -9,7 +9,7 @@ Biosphere: Biochemistry and molecular biology are essential for understanding th
 Cryosphere: Chemistry helps explain the interactions between ice and the rest of the climate system, such as the solubility of gases in melting ice and the impact of pollutants trapped in ice cores.
 Anthroposphere: Chemistry is fundamental in developing materials, pharmaceuticals, and energy sources, and in assessing and mitigating the impact of human activities on the environment through pollution and waste management.
  */
-namespace chemistry
+ontology chemistry
 	version 1.0
 	using imod, physical
 	in domain imod:Knowledge of imod:EarthSystem;

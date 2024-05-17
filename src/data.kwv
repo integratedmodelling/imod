@@ -1,8 +1,7 @@
-namespace data
+ontology data
    version 1.0
    using imod
    in domain imod:Knowledge;
-
 
 abstract rescaling attribute Transformed 
 	"A type of reinterpretation applied to a numeric observation. These attributes trigger data transformations on 

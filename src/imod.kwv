@@ -40,7 +40,7 @@
  * 
  * Also this (and the Physical domains) is a good place to discuss what @im is not covering and why.
  */
-namespace imod
+ontology imod
    "The imod (Integrated Modelling) ontology includes abstract concepts related to scientific observations.
     It specifies semantics used everywhere in the IM worldview and links im-based concepts to the 
     fundamental ontology for use in derived products."
@@ -58,7 +58,6 @@ namespace imod
       )
       // TODO add refs and links
    };
-
 
 /**
  * @ The main Systems of the earth

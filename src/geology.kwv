@@ -6,7 +6,7 @@
  * stratigraphy, structural geology, vulcanology and seismology. It **does not** include @hydrology and @soil science (pedology), which
  * are treated separately.
  */
-namespace geology
+ontology geology
 	version 1.0
 	using imod, earth
 	in domain imod:Knowledge;

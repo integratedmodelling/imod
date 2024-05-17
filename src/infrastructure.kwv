@@ -7,7 +7,7 @@
  * 
  * Human-built artifacts and activities are delegated to authorities of international recognition.
  */
-namespace infrastructure
+ontology infrastructure
 	version 1.0
 	using imod, decision, physical, earth
 	in domain imod:Physical of imod:Technosphere;

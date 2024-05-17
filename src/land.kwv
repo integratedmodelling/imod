@@ -2,7 +2,7 @@
  * The @land namespace encompasses agriculture, land use and food systems. It is a knowledge domain depending on the
  * @society ontology.
  */
-namespace land
+ontology land
 	""
 	version 1.0
 	using imod, society, earth, life

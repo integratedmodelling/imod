@@ -19,7 +19,7 @@
  * Environmental sociology aims to understand the complex and reciprocal relationships between human societies and 
  * their environments, seeking sustainable solutions to environmental challenges through a sociological lens.
  */
-namespace sociology
+ontology sociology
 	version 1.0
 	using imod, society
 	in domain imod:Knowledge of imod:Anthroposphere;

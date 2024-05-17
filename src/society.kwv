@@ -5,7 +5,7 @@
  * 
  * Landcover/land use should be in here as knowledge if we still 
  */
-namespace society
+ontology society
 	version 1.0
 	using imod, life
 	in domain imod:Physical;

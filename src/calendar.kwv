@@ -1,4 +1,4 @@
-namespace calendar
+ontology calendar
    version 1.0
    in domain imod:Knowledge
    using imod,physical;

@@ -1,4 +1,4 @@
-namespace earth
+ontology earth
 	"Defines fundamental natural concepts pertaining to planet Earth. Also contains
 	 knowledge regarding the physical processes that act at the planetary level, such
      as climate."

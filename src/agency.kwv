@@ -7,7 +7,7 @@
  * 
  * @todo merge with "decision" in here, straighten up all the physical concepts that actually belong in infrastructure.
  */
-namespace agency
+ontology agency
 	version 1.0
     using imod
     in domain imod:Knowledge of imod:Anthroposphere;
@@ -17,7 +17,6 @@ attribute Intentional
 	deniable as Unintentional
 	requires identity imod:Goal;
 	
-
 /*
  * Mapping agency to @imod:Technosphere and @imod:Antroposphere:
  * 
