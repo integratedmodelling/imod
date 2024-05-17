@@ -343,8 +343,6 @@ abstract configuration Configuration
      quality and relationship."
    is core odo:Configuration;
 
-
-
 abstract configuration Network 
    "A network is a configuration of subjects connected by relationships."
    is imod:Configuration of imod:Relationship
