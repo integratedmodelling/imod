@@ -1,0 +1,50 @@
+/**
+ * Valuation (a better name would be "value" but it conflicts with the `value of` k.IM operator) articulates notions
+ * relative to value, its attribution, and the related notions of asset and stake, risk, safety, vulnerability. It 
+ * sits in the philosophical realm of _axiology_, the branch of philosophy that studies the nature of value, including 
+ * ethical and aesthetic value as well as economic, health and others.
+ */
+ontology valuation
+	in domain imod:Knowledge
+	version 1.0
+	using imod, society;
+	
+/**
+ * The @Asset role is, for now, limited to substantials (individuals, organizations, systems, agents) but could be
+ * extended to configurations and maybe processes.
+ */	
+role Asset 
+	"The asset role is conferred to substantials that are valued more than zero."
+	marks value of (im:Subject or im:Agent);
+	
+/**
+ * An observer or context that incarnates @Stakeholder will cause the resolution of @Asset for any 
+ * compatible observation made. In turn, any assets found will engender the relative configurations.
+ * Only @{imod:Agent}s can be @{Stakeholder}s.
+ */
+role Stakeholder
+	"An agent with a stake in something recognized as an asset within its observational scope."
+	implies valuation:Asset for (im:Subject or im:Agent) within im:Agent;
+	
+role Hazard
+	"An occurrent that affects a valued Asset entity."
+	applies to (imod:Process or imod:Event)
+	implies imod:Potential im:Collapse of (valuation:Asset im:Subject or valuation:Asset im:Agent);	
+	
+configuration Vulnerability 
+	""
+	emerges from valuation:Asset;
+	
+/**
+ * Exposure is engendered when an @Asset coexists with a compatible @Hazard (the compatibility is implied by the 
+ * `with` operator). 
+ */
+configuration Exposure 
+	""
+	emerges from (valuation:Asset with valuation:Hazard);
+	
+configuration Risk
+	""
+	emerges from (valuation:Exposure with valuation:Vulnerability);
+
+	

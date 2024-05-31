@@ -47,7 +47,8 @@ strategy 1 named countable.union
    resolve this:FirstOperand
    resolve this:SecondOperand
    apply klab.objects.merge(this:FirstOperand, this:SecondOperand);
-   
+
+// next two should apply to booleans and categories   
 strategy 1 named quality.union
    "Types in OR can be resolved in stages and merged"
    for odo:EnumerableQuality or odo:EnumerableQuality
@@ -57,17 +58,21 @@ strategy 1 named quality.union
    apply klab.types.union(this:FirstOperand, this:SecondOperand);  
    
 strategy 1 named quality.intersection
-   "Types in AND can be resolved in stages and merged"
+   "Types in AND: split first operand, resolve operand and reminder, then merge qualities"
    for odo:EnumerableQuality and odo:EnumerableQuality
    let FirstOperand, SecondOperand = split.operator
    resolve this:FirstOperand
    resolve this:SecondOperand
    apply klab.types.intersection(this:FirstOperand, this:SecondOperand);
-   
+
+/**
+ * For countables with concrete predicates: separate `@Observable` and `@Predicate`, 
+ * resolve `@Observable`, then if successful resolve `@Predicate of each @Observable` using collective 
+ * characterization. If that also fails, try resolving `@Predicate of @Observable` for each 
+ * individual countable.
+ */   
 strategy 1 named countables.split.predicate
-   "For countables with concrete predicates: separate `@Observable` and `@Predicate`, resolve `@Observable`,
-    then if successful resolve `@Predicate of each @Observable` using collective characterization. If that
-    also fails, try resolving `@Predicate of @Observable` for each individual countable."
+   "Split the first predicate, instantiate remainder, then classify"
    for each odo:Countable if count.predicates > 0
    let Observable, Predicate = split.predicate, BaseObservable = base.observable(this:Predicate)
    ensure concrete(this:Predicate)
