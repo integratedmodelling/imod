@@ -68,11 +68,112 @@ realm Atmosphere
 //		AtmosphericBottomLayer, Troposphere, Mesosphere
 ;
 
+/*
+ * The Earth's cover configurations are determined by a complex interplay of various physical, climatic, and geological factors. These factors shape the distribution of different landforms, vegetation types, and water bodies across the planet. Here are the key determinants:
+
+### 1. **Climate**
+- **Temperature**: Influences the types of vegetation and the rate of soil formation. For example, tropical regions support dense forests, while polar regions are covered with ice and tundra.
+- **Precipitation**: Dictates the availability of water, influencing plant growth and soil moisture. Deserts receive minimal rainfall, resulting in sparse vegetation, while rainforests receive abundant rainfall, supporting lush vegetation.
+- **Seasonality**: Affects growing seasons and the types of vegetation that can thrive. Temperate regions have distinct seasons, influencing deciduous forests, whereas tropical regions have less seasonal variation.
+
+### 2. **Geography**
+- **Latitude**: Determines the amount of solar energy received, influencing climate and vegetation types. Equatorial regions receive more direct sunlight, promoting tropical rainforests, while higher latitudes receive less, supporting tundra and boreal forests.
+- **Altitude**: Affects temperature and oxygen levels, with higher elevations experiencing cooler temperatures and thinner air. This results in different vegetation zones, such as alpine tundra above the tree line.
+- **Proximity to Water Bodies**: Influences local climate (maritime vs. continental climates) and vegetation. Coastal areas tend to have milder climates and diverse ecosystems compared to inland areas.
+
+### 3. **Geological Factors**
+- **Soil Type and Fertility**: Determines the types of vegetation that can grow. Rich, fertile soils support dense forests and grasslands, while poor, rocky soils limit plant growth to hardy species.
+- **Topography**: Influences drainage, soil formation, and microclimates. Mountains, valleys, and plains each create unique conditions for different types of vegetation and land use.
+- **Tectonic Activity**: Shapes landforms and influences soil types through processes like volcanic activity, which can create fertile soils, and mountain building, which influences drainage patterns and microclimates.
+
+### 4. **Hydrology**
+- **Water Availability**: Determines the types of ecosystems that can exist. Areas with abundant freshwater sources support lush vegetation and diverse ecosystems, while arid regions have limited plant and animal life.
+- **Water Bodies**: Lakes, rivers, and wetlands create unique habitats and influence local climate and soil conditions.
+
+### 5. **Natural Disturbances**
+- **Fire**: Shapes ecosystems by periodically clearing vegetation, which can promote certain fire-adapted species and maintain open habitats like grasslands.
+- **Flooding**: Influences soil fertility and the distribution of plant species in floodplains and wetlands.
+- **Storms**: Can alter landscapes and ecosystems through events like hurricanes, which can cause significant changes in coastal and forested areas.
+
+### 6. **Human Activities**
+- **Land Use Changes**: Agriculture, urbanization, deforestation, and reforestation significantly alter natural cover configurations.
+- **Pollution**: Can degrade environments, affecting soil and water quality, and influencing the types of vegetation and ecosystems that can survive.
+- **Climate Change**: Alters temperature and precipitation patterns, leading to shifts in vegetation zones and the distribution of ecosystems.
+
+### Conclusion
+The Earth's cover configurations are determined by a combination of climatic conditions, geographical features, geological processes, hydrological patterns, natural disturbances, and human activities. These factors interact in complex ways to shape the distribution and characteristics of the planet's diverse landscapes and ecosystems.
+ */
 configuration EarthCover
-	"The configuration of physical material at the surface of the earth."
+	"The configuration of physical materials at the surface of the earth."
 	is physical:PhysicalConfiguration 
 	within earth:Location;
 
+
+/**
+ *To organize the different categories of terrestrial and aquatic environments based solely
+  on their physical factors, we can focus on key attributes such as climate, geography, water
+   availability, temperature, and soil type for terrestrial environments, and salinity, 
+   depth, flow, and temperature for aquatic environments. Here is a structured organization 
+   based on these physical factors:
+
+### Terrestrial Environments
+
+#### Climate-Based Categories:
+1. **Tropical**
+   - **Tropical Rainforest**: High rainfall, high temperature, humid.
+   - **Savanna**: Seasonal rainfall, warm temperature, dry seasons.
+2. **Temperate**
+   - **Temperate Forest**: Moderate temperature, moderate rainfall, distinct seasons.
+   - **Grassland**: Moderate to low rainfall, hot summers, cold winters.
+3. **Arid**
+   - **Desert**: Extremely low rainfall, high temperature variability (hot days, cold nights).
+4. **Cold**
+   - **Taiga (Boreal Forest)**: Cold winters, short mild summers, moderate precipitation (mostly snow).
+   - **Tundra**: Very cold, low precipitation, permafrost.
+
+#### Soil and Geography-Based Categories:
+1. **Mountain**
+   - **Alpine**: High elevation, cold temperature, varied precipitation.
+2. **Coastal**
+   - **Coastal Zones**: Influence of ocean, moderate temperature, high humidity.
+
+### Aquatic Environments
+
+#### Salinity-Based Categories:
+1. **Marine (Saltwater)**
+   - **Ocean**: High salinity, vast depth ranges, varying temperature.
+   - **Coral Reefs**: Shallow, warm, clear water, high salinity.
+   - **Estuaries**: Mix of salt and freshwater, varying salinity.
+2. **Freshwater**
+   - **Lakes and Ponds**: Low salinity, standing water, varying depths and temperatures.
+   - **Rivers and Streams**: Low salinity, flowing water, varying speeds and temperatures.
+   - **Wetlands**: Low salinity, standing or slow-moving water, saturated soil.
+
+#### Depth and Flow-Based Categories:
+1. **Marine**
+   - **Epipelagic Zone**: Surface layer, well-lit, warm.
+   - **Mesopelagic Zone**: Mid-depth, dimly lit, cooler.
+   - **Bathypelagic Zone**: Deep, dark, cold.
+   - **Abyssopelagic Zone**: Very deep, very cold, no light.
+   - **Hadal Zone**: Deepest parts, such as ocean trenches, extremely cold, high pressure.
+2. **Freshwater**
+   - **Lotic Systems**: Flowing water (rivers, streams), varied flow rates.
+   - **Lentic Systems**: Standing water (lakes, ponds), varied depths.
+
+#### Temperature-Based Categories:
+1. **Marine and Freshwater**
+   - **Polar**: Near freezing temperatures, found in Arctic and Antarctic regions.
+   - **Temperate**: Moderate temperatures, seasonal variation.
+   - **Tropical**: Warm temperatures, little seasonal variation.
+
+### Summary
+
+By focusing solely on physical factors, terrestrial environments are primarily organized based
+ on climate, geography, and soil types, while aquatic environments are categorized by salinity,
+  depth, flow, and temperature. This approach highlights the physical attributes that define 
+  and differentiate each environment, setting the stage for further exploration of their 
+  biotic components.
+*/
 abstract realm PhysicalEnvironment
 	"Physical environments are uniform with respect to their earth cover pattern. Although some 
 	 are commonly classified as ecology:Biome, these are purely physical in their definition; 
@@ -118,6 +219,7 @@ abstract realm PhysicalEnvironment
 				)				
 		);
 
+// FIXME see above
 abstract realm MarineStratum
 //   implies Marine
    has children
@@ -155,6 +257,75 @@ abstract realm GeosphereStratum
 			""
 		);
 
+/*
+ * TODO revise all below
+ * 
+ * Water bodies are natural or artificial accumulations of water that vary in size, shape, and characteristics. They play a crucial role in the Earth's hydrological cycle and support diverse ecosystems. Here are the main types of water bodies:
+
+### Freshwater Bodies
+
+#### 1. **Rivers and Streams**
+- **Description**: Flowing watercourses that move continuously in one direction.
+- **Characteristics**: They vary in size from small creeks to large rivers, and their flow can be perennial (year-round) or seasonal.
+- **Examples**: Amazon River, Mississippi River, Nile River.
+
+#### 2. **Lakes**
+- **Description**: Large, inland bodies of standing water.
+- **Characteristics**: Can be freshwater or saline, natural or artificial. Lakes are typically deeper and larger than ponds.
+- **Examples**: Lake Superior, Lake Victoria, Caspian Sea (saltwater).
+
+#### 3. **Ponds**
+- **Description**: Smaller bodies of standing water.
+- **Characteristics**: Usually shallow enough for sunlight to reach the bottom, allowing aquatic plants to grow throughout.
+- **Examples**: Vernal ponds, garden ponds.
+
+#### 4. **Wetlands**
+- **Description**: Areas where water covers the soil or is present at or near the surface for part of the year.
+- **Characteristics**: Include marshes, swamps, bogs, and fens. Wetlands are rich in biodiversity and act as natural water filters.
+- **Examples**: Everglades, Okavango Delta, Pantanal.
+
+### Marine (Saltwater) Bodies
+
+#### 1. **Oceans**
+- **Description**: Vast, continuous bodies of saltwater that cover about 71% of the Earth's surface.
+- **Characteristics**: Divided into major basins (Pacific, Atlantic, Indian, Southern, and Arctic). They have varied depths and support a wide range of marine life.
+- **Examples**: Pacific Ocean, Atlantic Ocean, Indian Ocean.
+
+#### 2. **Seas**
+- **Description**: Smaller than oceans and partially enclosed by land.
+- **Characteristics**: Often connected to an ocean. Seas can be entirely or partially enclosed.
+- **Examples**: Mediterranean Sea, Caribbean Sea, Red Sea.
+
+#### 3. **Bays and Gulfs**
+- **Description**: Coastal water bodies that are partially enclosed by land, typically with a wider opening to the sea.
+- **Characteristics**: Bays are usually smaller than gulfs and have calmer waters.
+- **Examples**: San Francisco Bay, Gulf of Mexico, Chesapeake Bay.
+
+#### 4. **Estuaries**
+- **Description**: Transitional areas where freshwater from rivers meets and mixes with saltwater from the ocean.
+- **Characteristics**: Highly productive ecosystems with brackish water (a mix of fresh and saltwater).
+- **Examples**: Chesapeake Bay, San Francisco Bay, Thames Estuary.
+
+### Specialized Water Bodies
+
+#### 1. **Lagoons**
+- **Description**: Shallow coastal water bodies separated from the ocean by a barrier such as a sandbar or coral reef.
+- **Characteristics**: Can be saltwater, brackish, or freshwater. Often found in tropical regions.
+- **Examples**: Blue Lagoon in Iceland, Venice Lagoon in Italy.
+
+#### 2. **Glacial and Ice-Covered Water Bodies**
+- **Description**: Bodies of water formed by glacial activity or existing in glacial environments.
+- **Characteristics**: Include glacial lakes and rivers, often with cold, clear water.
+- **Examples**: Lake Louise in Canada, Jökulsárlón in Iceland.
+
+#### 3. **Reservoirs**
+- **Description**: Artificial lakes created by damming rivers.
+- **Characteristics**: Used for water storage, hydroelectric power, irrigation, and recreation.
+- **Examples**: Hoover Dam (Lake Mead), Three Gorges Dam (Yangtze River).
+
+### Conclusion
+The main types of water bodies include rivers and streams, lakes, ponds, wetlands, oceans, seas, bays, gulfs, estuaries, lagoons, glacial lakes, and reservoirs. These water bodies differ in size, depth, salinity, and ecological function, playing critical roles in the hydrological cycle and supporting diverse ecosystems.
+ */
 thing WaterBody
 	""
 	is earth:Aquatic earth:Region;
