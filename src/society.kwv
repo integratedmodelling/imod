@@ -11,3 +11,6 @@ ontology society
 	in domain imod:Physical;
 	
 // TODO check out FAIR population/demography vocabularies from https://zenodo.org/records/7818157
+
+deliberative agent HumanIndividual
+	is life:Human life:Individual;
