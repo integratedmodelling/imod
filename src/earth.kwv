@@ -3,7 +3,7 @@ ontology earth
 	 knowledge regarding the physical processes that act at the planetary level, such
      as climate."
     version 1.0
-	using imod
+	using imod, physical, chemistry
 	in domain imod:Physical;
 
 abstract attribute Georeferenced
@@ -16,13 +16,13 @@ abstract attribute Georeferenced
 	 		"A subject that can be projected on the same spot of the surface of the earth throughout its observation."
 	 	)
 	// any spatial extent is fine but there must be one.
-	requires extent im:Space;
+	requires extent imod:Space;
 
 thing Location
 	is earth:Geolocated physical:DelimitedBody;
 
 abstract event GeolocatedEvent
-	is im:Event 
+	is imod:Event 
 	within Location;
 
 thing Region 

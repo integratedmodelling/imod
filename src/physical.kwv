@@ -292,7 +292,7 @@ abstract attribute TemporalOrientation
 				Successive;
 
 
-deniable attribute Perceived
+deniable attribute Perceivable
     "Describes a perceivable observable phenomenon"
     has children
         Visible,
