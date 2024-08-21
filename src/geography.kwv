@@ -1,17 +1,16 @@
 ontology geography
     version 1.0
-	using imod, physical
+	using imod, physical, earth
 	in domain imod:Physical;
 
 angle Heading
 	"A direction relative to the geographical North of the earth.";
 
-
 @colormap(name='elevation')
 length Elevation 
 	"Geographical elevation above sea level, as described by a digital
 	 elevation model."
-	is im:Height of earth:Location
+	is physical:Height of earth:Location
 	has children 
 		(LidarElevation 
 			"Elevation at edge of any reflective surface including canopy and buildings"
@@ -21,18 +20,18 @@ angle Aspect
    "The compass direction that a slope faces. For example, a slope on the
     eastern edge of the Rockies toward the Great Plains is described as having 
    an easterly aspect."
-   is im:Angle of /* physical:MagneticPlanetaryOrientation earth:Terrain within */ earth:Location
+   is imod:Angle of /* physical:MagneticPlanetaryOrientation earth:Terrain within */ earth:Location
 ;
 		 
 length BathymetricDepth
 	"Depth of earth's crust below sea level, as described by a digital bathymetry model."
-	is im:Height within earth:Location
+	is physical:Height within earth:Location
 ;
 
-//@colormap(values = {0: white 90: black})
+@colormap(values = {0: white 90: black})
 angle Slope
    "Inclination of the above-water terrain in a geographical region."
-   is im:Angle within earth:Location;
+   is imod:Angle within earth:Location;
 
 /*
  * FIXME there are excellent arguments to expect that any configuration is
@@ -40,19 +39,19 @@ angle Slope
  */
 configuration Terrain 
    "The perceived three-dimensional configuration of land surfaces"
-   is physical:PhysicalConfiguration of (earth:Crust earth:Terrestrial earth:Region)
+//   is physical:SpatialArrangement of (earth:Crust earth:Terrestrial earth:Region)
    emerges from (geography:Elevation or geography:Slope or geography:Aspect);
 
 angle StreamGradient
-	is im:Angle of earth:Stream;
+	is imod:Angle of earth:Stream;
 
 angle BathymetricSlope
 	"Inclination of the below-water terrain in a geographical region."
-	is im:Angle of earth:Location;
+	is imod:Angle of earth:Location;
 	
 length SlopeLength 
 	""
-	is im:Length of earth:Location
+	is imod:Length of earth:Location
 ;
 
 /**
@@ -381,7 +380,7 @@ abstract identity Country is GeopoliticalIdentity
                 SpratlyIslands //not a country - Review (added for UN project)
 ;
 
-@experimental
-quality TopographicHeterogeneity
-   is im:Heterogeneity of earth:Terrain 
-   within earth:Location;
+//@experimental
+//quality TopographicHeterogeneity
+//   is im:Heterogeneity of earth:Terrain 
+//   within earth:Location;

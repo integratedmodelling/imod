@@ -30,7 +30,7 @@ thing Region
 	 including the surface, the soil and the atmospheric bottom layer. It applies to both
 	 land and sea - anywhere on Earth - and should be qualified as necessary when
 	 used."
-	 is im:Areal earth:Location;
+	 is imod:Areal earth:Location;
 
 thing Site
 	""

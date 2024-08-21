@@ -8,6 +8,7 @@ ontology physical
  * agency namespace, inherited by decision + physical so that no circular dependencies remain
  */   
    
+   
 //Physical entities, e.g. subjects, events, processes, qualities
 //in ODO
 @check("Made it abstract as it needs inherency. Inherency is what makes it possible for events to be independents")
@@ -343,5 +344,9 @@ abstract attribute TimePosition
     TimeInterval,
     TimePoint;
     
+configuration SpatialArrangement
+	has children
+		VerticalArrangement,
+		HorizontalArrangement;
 
 
