@@ -2,12 +2,13 @@ ontology physical
    version 1.0
    using imod
    in domain imod:Physical of imod:EarthSystem;
-   
+ 
 /**
  * TODO if all those decision:-based predicates are needed, they should be moved into something like an
  * agency namespace, inherited by decision + physical so that no circular dependencies remain
- */   
-   
+ */  
+
+
 //Physical entities, e.g. subjects, events, processes, qualities
 //in ODO
 @check("Made it abstract as it needs inherency. Inherency is what makes it possible for events to be independents")
@@ -26,6 +27,7 @@ abstract thing Feature
        Hole,
        Slot,
        Bump;
+
 
 //From DOLCE.
 //Cancella
@@ -64,7 +66,6 @@ abstract length Width
 //    is imod:Length
     inherits physical:Horizontal
     requires identity (imod:Areal or imod:Volumetric);
- 
     	
 abstract area SpatialCoverage is imod:Area;
 
@@ -97,7 +98,6 @@ abstract duration Period
 	decreases with Frequency;
 
 abstract volume Capacity;
-
 
 abstract angle Direction;
 
@@ -291,7 +291,6 @@ abstract attribute TemporalOrientation
 				Previous,
 				Successive;
 
-
 deniable attribute Perceivable
     "Describes a perceivable observable phenomenon"
     has children
@@ -308,20 +307,19 @@ abstract role Throughput
 @fixme("Does this really imply participation in events?")
 abstract role Participant
      "Participants are entities, Subjects or Agents, that participates in Events."
-     is imod:Role during imod:Event;
+     applies to imod:Event;
 
 //From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Processual_role	
 @fixme("Academic? Don't see the utility, each individual role could be categorized more usefully by making the inherency explicit")
 abstract role ProcessualRole
       "ProcessualRole refers to the role played by participants in a process."
-      is imod:Role during imod:Process;
+      applies to imod:Process;
 
 //From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Relational_role
 @fixme("Academic? Don't see the utility, each individual role could be categorized more usefully by making the inherency explicit")
 abstract role RelationalRole
       "RelationalRole refers to the role played by participants in a functional or structural relationship."
       ;
-
 
 //Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
 abstract thing SpatialBoundary 
@@ -343,5 +341,8 @@ abstract attribute TimePosition
     TimeInterval,
     TimePoint;
     
-
+configuration SpatialArrangement
+	has children
+		VerticalArrangement,
+		HorizontalArrangement;
 

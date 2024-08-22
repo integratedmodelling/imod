@@ -4,7 +4,7 @@
  */
 ontology decision
       version 1.0
-      using imod, physical
+      using imod, physical, agency
       in domain imod:Physical;
 
 /*
@@ -26,7 +26,7 @@ ontology decision
  */
 abstract process Decision
      "Decision is a goal-oriented intentional (mental) activity"
-     is decision:Intentional physical:Activity
+     is agency:Intentional physical:Activity
      requires identity imod:Goal;
      
 process Assessment
@@ -75,12 +75,12 @@ deniable attribute Relevance
 deniable attribute Planned
     "Describes planned or unplanned events"
     requires identity imod:Goal
-    applies to decision:Intentional imod:Event;
+    applies to agency:Intentional imod:Event;
     
 //From DOLCE ontology
 abstract event Achievement
       "Atomic culminating event"
-      is decision:Intentional imod:Event
+      is agency:Intentional imod:Event
       requires identity imod:Goal;
 
 //Comment: agreement on the superclass convention

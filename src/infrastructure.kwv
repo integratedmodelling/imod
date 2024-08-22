@@ -21,7 +21,8 @@ abstract thing Artifact
 @fixme("Really not sure of the 'role for goal' thing which seems to be an abuse of the 'for' operator.")
 abstract role Resource
      "A resource is the role that objects plays in the context of activities or plans to achieve goals"
-     is /* decision:Relevance */ imod:Role for imod:Goal
+//     is /* decision:Relevance */ imod:Role for 
+     applies to imod:Goal
      has children
      	@fixme("Do we need these or just the attributes for the nature/provenance of any subject?")
         NaturalResource,

@@ -175,6 +175,7 @@ domain Knowledge
  * are in the same place. Equalities should be reserved for in-worldview statements.
  */ 
 
+
 // TODO link the output of operators. Could be as simple as
 
 // abstract quality Numerosity is core count of imod:Quality;
@@ -239,7 +240,6 @@ abstract attribute Evidence
          Certain "No doubt can remain about evidence - self-evident or blatant truth",
          Hypothetical "Hypothesis can be made in support of an interpretation although no documented supporting observations exist. Similarly valid counter-arguments may exist.",
          Observed "Degree of evidence is supported by documented observations, but still  evidence is indirect.";
-
 
 abstract subjective ordering Coarseness 
    has children
@@ -547,6 +547,9 @@ deniable attribute Regularity
          (Irregular
          	" Lack of orderliness, or deviation from established patterns or rules, often exhibiting unpredictability or variability in behaviour or occurrence."
          );
+
+abstract quality Heterogeneity 
+	;
          
 //Extent
 

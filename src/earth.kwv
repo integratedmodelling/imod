@@ -19,11 +19,16 @@ abstract attribute Georeferenced
 	requires extent imod:Space;
 
 thing Location
-	is earth:Geolocated physical:DelimitedBody;
+	is earth:Geolocated physical:Feature;
 
 abstract event GeolocatedEvent
-	is imod:Event 
-	within Location;
+	is imod:Event within earth:Location;
+
+// ARTICULATE
+thing Planet;
+
+// THE PLANET - articulate
+identity Earth;
 
 thing Region 
 	"An Earth Region is a section of the Earth realm delimited in volumetric space, 
@@ -105,7 +110,7 @@ The Earth's cover configurations are determined by a combination of climatic con
  */
 configuration EarthCover
 	"The configuration of physical materials at the surface of the earth."
-	is physical:PhysicalConfiguration 
+	is physical:SpatialArrangement // of something
 	within earth:Location;
 
 
@@ -366,7 +371,7 @@ thing Coast
 		
 thing Coastline
 	"The boundary between land and an adjacent @Coast."
-	is im:Boundary 
+	is physical:SpatialBoundary 
 		of (earth:Region adjacent to earth:Aquatic /* (earth:Marine or earth:Lacustrine) */ earth:Region)
 		adjacent to earth:Aquatic /* (earth:Marine or earth:Lacustrine) */  earth:Region;
 
@@ -382,7 +387,7 @@ functional relationship StreamConnection
 configuration StreamNetwork
 	""
 	applies to Region
-	is im:Network of earth:StreamConnection;
+	is imod:Network of earth:StreamConnection;
 
 abstract identity PrecipitationType
 //	inherits IUPAC:Water 
@@ -406,7 +411,7 @@ abstract identity PrecipitationType
  */
 volume PrecipitationVolume 
 	""
-	is /* IUPAC:Water */ im:Volume 
+	is /* IUPAC:Water */ imod:Volume 
 	within Location;
 
 volume RainfallVolume 
@@ -486,7 +491,7 @@ energy SolarRadiation
 	"Total solar radiation. Specify with realms to define stratum of measurement." 
 	// TODO specify solar source
 	// TODO check for realm-specific children to be added
-	is im:Energy 
+	is imod:Energy 
 	within Location
 ;
 
@@ -554,7 +559,7 @@ abstract attribute WeatherDominance
 	
 configuration Bathymetry
 	"The vertical and horizontal dimensions of underwater Earth surfaces"
-	is physical:PhysicalConfiguration of (earth:Aquatic earth:Region)
+	is physical:SpatialArrangement of (earth:Aquatic earth:Region)
 	//applies to earth:Aquatic earth:Location
 	;	
 
@@ -573,4 +578,4 @@ abstract process LandformingProcess
 		Weathering,
 		PlateTectonics;
 	
-configuration Gravity is physical:Gravity adjacent to earth:EarthCover;
+// configuration Gravity is physical:Gravity caused by imod:Mass of earth:Earth earth:Planet;
