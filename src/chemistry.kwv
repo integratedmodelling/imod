@@ -14,3 +14,4 @@ ontology chemistry
 	using imod, physical
 	in domain imod:Knowledge of imod:EarthSystem;
 	
+identity Mixture;

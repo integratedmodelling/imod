@@ -39,7 +39,7 @@ thing Region
 
 thing Site
 	""
-	is im:Puntal earth:Location;
+	is imod:Puntal earth:Location;
 
 identity Air 
 	""
@@ -467,7 +467,7 @@ abstract event GeologicalEvent
 
 process Precipitation 
  			""
- 			is /* IUPAC:Water */ physical:MatterTransport earth:MeteorologicalProcess
+ 			is /* IUPAC:Water */ earth:MeteorologicalProcess
 			creates PrecipitationVolume
  			has children
  				(Rainfall

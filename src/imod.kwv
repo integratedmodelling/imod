@@ -286,7 +286,7 @@ role Reference
      Can be linked to a rescaling filters to shift the context of observation made in different space and time."
     requires attribute Comparable;
 
-@todo("check extraction of attributes")
+//@todo("check extraction of attributes")
 role Indicator 
    applies to Quantity
    has children   
