@@ -6,7 +6,6 @@ ontology geography
 angle Heading
 	"A direction relative to the geographical North of the earth.";
 
-
 @colormap(name='elevation')
 length Elevation 
 	"Geographical elevation above sea level, as described by a digital
@@ -40,7 +39,7 @@ angle Slope
  */
 configuration Terrain 
    "The perceived three-dimensional configuration of land surfaces"
-   is physical:SpatialArrangement of earth:Crust earth:Region
+//   is physical:SpatialArrangement of (earth:Crust earth:Terrestrial earth:Region)
    emerges from (geography:Elevation or geography:Slope or geography:Aspect);
 
 angle StreamGradient
