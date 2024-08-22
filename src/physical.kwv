@@ -8,9 +8,6 @@ ontology physical
  * agency namespace, inherited by decision + physical so that no circular dependencies remain
  */  
 
-
-   
-   
 //Physical entities, e.g. subjects, events, processes, qualities
 //in ODO
 @check("Made it abstract as it needs inherency. Inherency is what makes it possible for events to be independents")
@@ -29,7 +26,6 @@ abstract thing Feature
        Hole,
        Slot,
        Bump;
-
 
 //From DOLCE.
 //Cancella
@@ -68,7 +64,7 @@ abstract length Width
 //    is imod:Length
     inherits physical:Horizontal
     requires identity (imod:Areal or imod:Volumetric);
-    	
+
 abstract area SpatialCoverage is imod:Area;
 
 abstract quality Acceleration

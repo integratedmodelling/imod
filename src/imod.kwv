@@ -202,11 +202,11 @@ abstract identity Identity
 
 //Identities capturing discrete space for the worldview
 
-//abstract identity Puntal is core observation:Puntal;
-//abstract identity Lineal is core observation:Lineal;
-//abstract identity Areal is core observation:Areal;
-//abstract identity Volumetric is core observation:Volumetric;
- 
+abstract identity Puntal; // is core observation:Puntal;
+abstract identity Lineal; // is core observation:Lineal;
+abstract identity Areal; // is core observation:Areal;
+abstract identity Volumetric;//  is core observation:Volumetric;
+abstract identity Temporal; 
 //@fixme("Mah. A final output would be Outcome, Goal is definitely not an identity, probably both are configurations") 
 abstract identity Outcome
      "Final output of a Process";
