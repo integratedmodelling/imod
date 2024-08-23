@@ -383,7 +383,7 @@ functional relationship StreamConnection
 	links StreamJunction to StreamJunction;
 		
 configuration StreamNetwork
-	"poh"
+	"pah"
 	applies to Region
 	is imod:Network of earth:StreamConnection;
 
