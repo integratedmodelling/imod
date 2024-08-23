@@ -6,6 +6,10 @@ ontology earth
 	using imod, physical, chemistry
 	in domain imod:Physical;
 
+identity Air
+	""
+	is chemistry:Mixture;
+
 abstract attribute Georeferenced
 	"A subject that can be referred to a location on Earth. Use the applicable concrete child."
 	has children
@@ -40,12 +44,6 @@ thing Region
 thing Site
 	""
 	is imod:Puntal earth:Location;
-
-identity Air 
-	""
-	is chemistry:Mixture
-//	contains chemistry:Oxygen, chemistry:Hydrogen, chemistry:Nitrogen as chemistry:ChemicalCompound
-;
 
 abstract realm AtmosphericLayer	
 	""
