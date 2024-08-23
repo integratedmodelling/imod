@@ -427,7 +427,7 @@ volume HailVolume
 
 temperature AtmosphericTemperature
 	""
-	is earth:AtmosphericBottomLayer im:Temperature of earth:Location;
+	is earth:AtmosphericBottomLayer imod:Temperature of earth:Location;
 
 
 /*
