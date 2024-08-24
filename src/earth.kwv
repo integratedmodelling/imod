@@ -382,8 +382,9 @@ functional relationship StreamConnection
 	""
 	links StreamJunction to StreamJunction;
 		
+@fixme("not sure of the connection as relationship")
 configuration StreamNetwork
-	"pah"
+	"The network built by streams joined by stream connections"
 	applies to Region
 	is imod:Network of earth:StreamConnection;
 
