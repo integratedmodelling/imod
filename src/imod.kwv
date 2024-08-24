@@ -538,15 +538,9 @@ abstract relationship ValuationRelationship
      "Connection or association between entities or concepts that involves the assessment, determination, or assignment of value."
      links Agent to Subject;
 
-deniable attribute Regularity
-	"Denotes the state or quality of being consistent, orderly, or conforming to a pattern or set of rules, often implying predictability and absence of deviation or randomness."
-     has disjoint children
-         (Regular
-         	"State or condition characterized by consistency, orderliness, or adherence to established patterns or rules."
-         ),
-         (Irregular
-         	" Lack of orderliness, or deviation from established patterns or rules, often exhibiting unpredictability or variability in behaviour or occurrence."
-         );
+attribute Regular
+    "State or condition characterized by consistency, orderliness, or adherence to established patterns or rules."
+    deniable as Irregular;
 
 abstract quality Heterogeneity 
 	;
