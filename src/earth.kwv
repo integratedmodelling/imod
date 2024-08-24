@@ -28,11 +28,12 @@ thing Location
 abstract event GeolocatedEvent
 	is imod:Event within earth:Location;
 
-// ARTICULATE
+// ARTICULATE - maybe move
 thing Planet;
 
 // THE PLANET - articulate
-identity Earth;
+identity Earth
+	applies to Planet;
 
 thing Region 
 	"An Earth Region is a section of the Earth realm delimited in volumetric space, 
