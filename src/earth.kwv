@@ -109,7 +109,7 @@ The Earth's cover configurations are determined by a combination of climatic con
  */
 configuration EarthCover
 	"The configuration of physical materials at the surface of the earth."
-	is physical:SpatialArrangement // of something
+	is physical:SpatialArrangement of ((earth:Geolocated im:Thing) or (earth:Geolocated im:Agent))
 	within earth:Location;
 
 
