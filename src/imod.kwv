@@ -213,6 +213,7 @@ abstract identity Outcome
 
 //The notion of Boundary should be better documented
 
+
 @fixme("The 'requires identity' clause needs revision, here and elsewhere. Implication (to be understood) is a likely candidate.")
 abstract identity ConceptualBoundary 
      //metadata { plato.stanford.edu/entries/boundary/ }

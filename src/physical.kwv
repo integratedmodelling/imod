@@ -57,8 +57,7 @@ abstract length Depth
 abstract length Height
    //     is imod:Length
      inherits physical:Vertical
-     requires identity (imod:Areal or imod:Volumetric)
-;
+     requires identity (imod:Areal or imod:Volumetric);
 
 abstract length Width
 //    is imod:Length

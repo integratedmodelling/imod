@@ -42,7 +42,7 @@ deniable attribute Conformant
     "Conformance is voluntary adherence to a standard, rule, specification, requirement, design, process or practice."
      applies to Decision;
    
-ordering Feasible
+attribute Feasible
      "Describes the level of feasibility of an activity"
      applies to physical:Activity
      deniable as Unfeasible;
