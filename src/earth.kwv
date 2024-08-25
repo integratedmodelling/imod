@@ -431,7 +431,6 @@ temperature AtmosphericTemperature
 	""
 	is earth:AtmosphericBottomLayer imod:Temperature of earth:Location;
 
-
 /*
  * EVENTS
  */

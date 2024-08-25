@@ -175,7 +175,6 @@ domain Knowledge
  * are in the same place. Equalities should be reserved for in-worldview statements.
  */ 
 
-
 // TODO link the output of operators. Could be as simple as
 
 // abstract quality Numerosity is core count of imod:Quality;
@@ -198,7 +197,6 @@ abstract identity Identity
 //identity Monthly is core observation:Monthly;
 //identity Daily is core observation:Daily;
 //identity Weekly is core observation:Weekly;
-
 
 //Identities capturing discrete space for the worldview
 
@@ -468,7 +466,6 @@ abstract velocity Velocity
    "Quantity that describes the rate of change of an object's position with respect to time. 
    Typically measured in units such as meters per second (m/s) or kilometers per hour (km/h)." 
    is core odo:Speed;
-
 
 abstract mass Mass
    "Property of matter that quantifies the amount of substance in an object. 

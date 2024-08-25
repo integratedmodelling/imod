@@ -74,7 +74,7 @@ quantity Impedance
      other phenomenon. Usually given the symbol Z in technical literature."
 	// TODO children - electrical has a core representation
 	;
-
+	
 quantity Conductance
 	"The opposite of impedance, describing the effectiveness of transport of an observable through a medium or a region.."
 	// TODO children - fluid conductance, electrical conductance, thermal conductivity
