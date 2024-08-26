@@ -59,6 +59,7 @@ ontology imod
       // TODO add refs and links
    };
 
+
 /**
  * @ The main Systems of the earth
  * 
@@ -232,7 +233,7 @@ abstract attribute Attribute
     "Attribute specifies descriptive accidental predicates of a subject."
    is core odo:Attribute;
 
-abstract attribute Evidence
+abstract ordering Evidence
      "Characterizes degrees of evidence for an hypothesis."   
      has children 
          Possible "Hypothesis cannot be dismissed based on reasoning although no documented supporting observations exist.",
@@ -385,9 +386,6 @@ abstract thing Substantial
 //   inherits decision:Intentional
  //  ;
    
- 
-
-
 /**
  * Qualities
  */
