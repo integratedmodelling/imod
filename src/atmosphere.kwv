@@ -7,5 +7,7 @@
  */
 ontology atmosphere
 	version 1.0
-	using imod, earth
+	using imod, earth, chemistry
 	in domain imod:Knowledge;
+
+identity Air is chemistry:Mixture;
