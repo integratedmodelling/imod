@@ -16,7 +16,7 @@ ontology infrastructure
 abstract thing Artifact
     "Artifact is intentionally created by an agent for a goal"
 //    is decision:Intentional imod:Subject
-    requires identity imod:Goal;
+    implies imod:Goal;
 
 @fixme("Really not sure of the 'role for goal' thing which seems to be an abuse of the 'for' operator.")
 abstract role Resource

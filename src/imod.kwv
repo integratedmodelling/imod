@@ -39,6 +39,11 @@
  * feedback loops, with consequences understood in terms of their impact on the system as a whole. 
  * 
  * Also this (and the Physical domains) is a good place to discuss what @im is not covering and why.
+ * 
+ * Random notes:
+ *  . the question "is it real" does not belong to this worldview. If it can be observed, it's
+ *    real enough to be here.
+ * 
  */
 ontology imod
    "The imod (Integrated Modelling) ontology includes abstract concepts related to scientific observations.
@@ -212,6 +217,12 @@ abstract identity Outcome
 
 //The notion of Boundary should be better documented
 
+
+/**
+ * Revise the whole issue of boundaries in the observational key. Linked to scale. Re: concepts, the entire
+ * worldview is an exercise in conceptual boundary attribution and I'm not sure we need to
+ * model it within itself.
+ */
 
 @fixme("The 'requires identity' clause needs revision, here and elsewhere. Implication (to be understood) is a likely candidate.")
 abstract identity ConceptualBoundary 
