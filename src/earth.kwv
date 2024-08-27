@@ -6,10 +6,6 @@ ontology earth
 	using imod, physical, chemistry
 	in domain imod:Physical;
 
-identity Air
-	""
-	is chemistry:Mixture;
-
 abstract attribute Georeferenced
 	"A subject that can be referred to a location on Earth. Use the applicable concrete child."
 	has children
