@@ -83,7 +83,6 @@ quantity Conductance
 abstract duration Age
       is imod:Duration;
       
-
 abstract quality Frequency
 	"Frequency is the numerosity of events in a time period. Used in continuous time representations to 
     describe a wave."

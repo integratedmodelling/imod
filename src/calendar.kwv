@@ -9,8 +9,7 @@ abstract event RecurrentEvent
       signaling the expiration of a given period of time. They can be observe  in time as 
       dependencies, and models can be provided for them in scenarios. Traits  can be used 
       or conferred by processes to distinguish particular periods."
-      applies to physical:TimeInterval 
-      has disjoint children 
+      has children 
           (Second
 			"The expiration of one second after a temporal point of reference."
 		  ),
@@ -19,46 +18,25 @@ abstract event RecurrentEvent
 		  ),
 		  (Hour
 			"The expiration of one hour after a temporal point of reference."		
-		   inherits imod:Hourly	
+		   	implies imod:Hourly	
 	      ),
 		  (Day
 			"The expiration of one day after a temporal point of reference."
-		  inherits imod:Daily			
+		  	implies imod:Daily			
 		  ),
 		  (Week
-		  inherits imod:Weekly
-		  has children
-		  Monday,
-		  Tuesday,
-		  Wednesday,
-		  Thursday,
-		  Friday,
-		  Saturday,
-		  Sunday	
+		  	implies imod:Weekly
 		  ),
 	     (Month	
 	     "The expiration of one month after a temporal point of reference." 
-	     inherits imod:Monthly
-         has children 
-         January,
-         February,
-         March,
-         April,
-         May,
-         June,
-         July,
-         August,
-         September,
-         October,
-         November,
-         December
+	     	implies imod:Monthly
          ),
         (Season
 		 "The expiration of one season after a temporal point of reference."			
 		),
 		(Year
 		"The expiration of one year after a temporal point of reference."			
-		inherits imod:Yearly
+			inherits imod:Yearly
 		),
 		(Decade
 		"The expiration of ten years after a temporal point of reference."
@@ -70,3 +48,30 @@ abstract event RecurrentEvent
 		"The expiration of one thousand years after a temporal point of reference."
 		)
 		;
+
+abstract identity DayOfWeek
+	applies to Day
+	has disjoint children 
+		Monday,
+		Tuesday,
+		Wednesday,
+		Thursday,
+		Friday,
+		Saturday,
+		Sunday;
+		
+abstract identity MonthOfYear
+	applies to Month
+	has disjoint children 
+	January,
+         February,
+         March,
+         April,
+         May,
+         June,
+         July,
+         August,
+         September,
+         October,
+         November,
+         December;
