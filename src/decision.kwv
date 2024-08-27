@@ -26,8 +26,8 @@ ontology decision
  */
 abstract process Decision
      "Decision is a goal-oriented intentional (mental) activity"
-     is agency:Intentional physical:Activity
-     requires identity imod:Goal;
+     is agency:Intentional physical:Activity within imod:Agent
+     implies imod:Goal;
 
 process Assessment
     "The activity that represents observations made by the 'implicit' observer of the root context: the k.LAB user. Do not use without thinking hard first."
