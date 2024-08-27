@@ -38,6 +38,7 @@ thing Region
 	 used."
 	 is imod:Areal earth:Location;
 
+
 thing Site
 	""
 	is imod:Puntal earth:Location;
@@ -81,7 +82,6 @@ configuration EarthCover
 	"The configuration of physical materials at the surface of the earth."
 	is physical:SpatialArrangement of ((earth:Geolocated im:Thing) or (earth:Geolocated im:Agent))
 	within earth:Location;
-
 
 /**
  *To organize the different categories of terrestrial and aquatic environments based solely

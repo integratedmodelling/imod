@@ -12,7 +12,6 @@ ontology atmosphere
 
 identity Air is chemistry:Mixture;
 
-
 abstract realm AtmosphericLayer	
 	""
 	/*
