@@ -31,7 +31,7 @@ abstract role ValueMetric
 		VulnerabilityMetric,
 		ExposureMetric,
 		RiskMetric;
-	
+
 /**
  * An observer or context that incarnates @Stakeholder will cause the resolution of @Asset for any 
  * compatible observation made. In turn, any assets found will engender the relative configurations.
@@ -39,7 +39,7 @@ abstract role ValueMetric
  */
 role Stakeholder
 	"An agent with a stake in something recognized as an asset within its observational scope."
-	implies valuation:Asset within imod:Subject;
+	implies presence of valuation:Asset imod:Subject;
 	
 role Hazard
 	"An occurrent that affects a valued asset."
@@ -50,7 +50,7 @@ abstract configuration Vulnerability
 	"The existence of assets that can be affected by hazards."
 	emerges from valuation:Asset within imod:Subject
 	implies valuation:VulnerabilityMetric;
-	
+
 /**
  * Exposure is engendered when an @Asset coexists with a compatible @Hazard (the compatibility is implied by the 
  * `with` operator). 

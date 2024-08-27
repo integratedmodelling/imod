@@ -42,32 +42,6 @@ thing Site
 	""
 	is imod:Puntal earth:Location;
 
-abstract realm AtmosphericLayer	
-	""
-	/*
-	 * when a realm describes space, disjointness means spatial overlap,
-	 * possibly qualified directionally.
-	 */
-//	classifies im:Vertical im:Height of Region
-	has disjoint children
-		(AtmosphericBottomLayer ""),
-		(Troposphere ""),
-		(Stratosphere ""),
-		(Mesosphere ""),
-		(Thermosphere ""),
-		(Exosphere "")
-;
-
-realm Atmosphere
-	"The Atmosphere is the portion of the atmosphere comprising the bottom
-	 layer, the troposphere and the mesosphere."
-	 /*
-	  * when a realm describes space, containment means spatial containment.
-	  */
-//	contains only
-//		AtmosphericBottomLayer, Troposphere, Mesosphere
-;
-
 /*
  * The Earth's cover configurations are determined by a complex interplay of various physical, climatic, and geological factors. These factors shape the distribution of different landforms, vegetation types, and water bodies across the planet. Here are the key determinants:
 

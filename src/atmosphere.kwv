@@ -11,3 +11,30 @@ ontology atmosphere
 	in domain imod:Knowledge;
 
 identity Air is chemistry:Mixture;
+
+
+abstract realm AtmosphericLayer	
+	""
+	/*
+	 * when a realm describes space, disjointness means spatial overlap,
+	 * possibly qualified directionally.
+	 */
+//	classifies im:Vertical im:Height of Region
+	has disjoint children
+		(AtmosphericBottomLayer ""),
+		(Troposphere ""),
+		(Stratosphere ""),
+		(Mesosphere ""),
+		(Thermosphere ""),
+		(Exosphere "")
+;
+
+realm Atmosphere
+	"The Atmosphere is the portion of the atmosphere comprising the bottom
+	 layer, the troposphere and the mesosphere."
+	 /*
+	  * when a realm describes space, containment means spatial containment.
+	  */
+//	contains only
+//		AtmosphericBottomLayer, Troposphere, Mesosphere
+;
