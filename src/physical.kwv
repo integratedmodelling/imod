@@ -48,6 +48,9 @@ abstract identity AmountofMatter
 //                ),            
 //        (ComputerProgram);
 //        
+
+
+
 //Specialized physical qualities
 abstract length Depth
     // is imod:Length // unnecessary as it's a length
