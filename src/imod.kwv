@@ -216,7 +216,6 @@ abstract identity Outcome
 
 //The notion of Boundary should be better documented
 
-
 /**
  * Revise the whole issue of boundaries in the observational key. Linked to scale. Re: concepts, the entire
  * worldview is an exercise in conceptual boundary attribution and I'm not sure we need to
@@ -238,7 +237,7 @@ abstract identity ConceptualBoundary
   //   Unobtainable;
 
 //Attribute
-   
+
 abstract attribute Attribute
     "Attribute specifies descriptive accidental predicates of a subject."
    is core odo:Attribute;
@@ -255,7 +254,7 @@ abstract subjective ordering Coarseness
    has children
       Fine,
       Coarse;
-   
+
 abstract subjective ordering Level 
       "Two-level hierarchy for generic discretizations." 
       has children  
