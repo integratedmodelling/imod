@@ -37,7 +37,7 @@ abstract role ValueMetric
  * compatible observation made. In turn, any assets found will engender the relative configurations.
  * Only @{imod:Agent}s can be @{Stakeholder}s.
  */
-role Stakeholder
+abstract role Stakeholder
 	"An agent with a stake in something recognized as an asset within its observational scope."
 	implies presence of valuation:Asset imod:Subject;
 	
