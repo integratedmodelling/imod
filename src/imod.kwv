@@ -299,6 +299,7 @@ role Reference
 role Indicator 
    applies to Quantity
    has children   
+     // NAH capture this in attributes
      (AbsoluteIndicator
      "An absolute indicator has values that range between a known minimum and maximum. Its value corresponds 
       to a state that is fully understood in terms of the indicator."  

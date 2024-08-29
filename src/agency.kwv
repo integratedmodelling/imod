@@ -15,7 +15,7 @@ ontology agency
 attribute Intentional
 	"Intention is a mental state (e.g. goal, belief, desire)"
 	deniable as Unintentional
-	requires identity imod:Goal;
+	implies imod:Goal;
 	
 /*
  * Mapping agency to @imod:Technosphere and @imod:Antroposphere:
