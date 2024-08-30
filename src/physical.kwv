@@ -94,6 +94,9 @@ abstract duration Period
      describes the distance between high points on a wave function. Inversely proportional to frequency."
 	decreases with Frequency;
 
+/**
+ * 
+ */
 abstract volume Capacity;
 
 abstract angle Direction;
