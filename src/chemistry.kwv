@@ -13,5 +13,26 @@ ontology chemistry
 	version 1.0
 	using imod, physical
 	in domain imod:Knowledge of imod:EarthSystem;
-	
-identity Mixture;
+
+abstract identity ChemicalSpecies
+	"Any chemical, elements or compounds, but not mixtures."
+;
+
+abstract identity Mixture
+	"Any material system made up of two or more different substances 
+	 which are mixed but are not combined chemically. A mixture refers 
+	 to the physical combination of two or more substances in which the 
+	 identities are retained and are mixed in the form of solutions, 
+	 suspensions, and colloids. In IM we admit the special case of a 
+	 one-species mixture."
+	 has children 
+	 	(Solution 
+	 		"TODO"
+	 	),
+	 	(Suspension
+	 		"TODO"
+	 	),
+	 	(Colloid 
+	 		"TODO"
+	 	);
+//	 contains at least 1 ChemicalSpecies /* inheriting Soluble */;
