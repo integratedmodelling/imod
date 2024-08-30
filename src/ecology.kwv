@@ -3,4 +3,7 @@ ontology ecology
 	using imod, life, biology
 	in domain imod:Knowledge of imod:Biosphere;
 
-	
+abstract agent Population;
+
+abstract agent Community
+	emerges from ecology:Population;
