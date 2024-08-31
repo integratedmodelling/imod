@@ -23,8 +23,7 @@ abstract identity Mixture
 	 which are mixed but are not combined chemically. A mixture refers 
 	 to the physical combination of two or more substances in which the 
 	 identities are retained and are mixed in the form of solutions, 
-	 suspensions, and colloids. In IM we admit the special case of a 
-	 one-species mixture."
+	 suspensions, and colloids."
 	 has children 
 	 	(Solution 
 	 		"TODO"
