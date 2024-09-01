@@ -4,6 +4,11 @@
  * They contain the obvious "observe" statements for their observables, but if the latter
  * depend on instantiatable collectives (like relationships) they will force the observation 
  * of their contextual dependents too.
+ * 
+ * The only predefined variable for the observable pattern is `$this`, substituted by the
+ * observable being resolved. Any other should be extracted using `let` and an extractor
+ * functor. `$this` is also the implicit argument of any functor invoked without 
+ * arguments.
  */
 strategies basic
 	version 1.0;
@@ -11,31 +16,31 @@ strategies basic
 strategy 0 named quality.direct
   "As a first attempt, any concrete quality is just observed as it is."
    for imod:Quality if concrete
-   observe this:This;
+   observe $this;
 
 strategy 0 named countables.direct
    "Basic default strategy for any concrete collective countable except relationships: instantiate, then defer resolution of each 
     individual observation. This will match any predicates and operators since no restriction
     is specified on the observable."
-   for each odo:Countable, !(each odo:Relationship) if concrete
-   let Observable = arity.single
-   observe each this:Observable {
-         resolve this:Observable optional
+   for each odo:Countable, !(each imod:Relationship) if concrete
+   let observable = arity.single
+   observe each $observable {
+         resolve $observable optional
    };
 
 strategy 0 named relationships.default
    "Default strategy for relationship is equal to other countables but adds the resolution of target and source subjects"
-   for each odo:Relationship if concrete
+   for each imod:Relationship if concrete
    let 
-      Source = relationship.source,
-      Target = relationship.target, 
-      Observable = arity.single
-   resolve each this:Source
-   resolve each this:Target
-   observe each this:Observable {
-      resolve this:Observable optional
+      source = relationship.source,
+      target = relationship.target, 
+      observable = arity.single
+   resolve each $source
+   resolve each $target
+   observe each $observable {
+      resolve $observable optional
    };
- 
+   
 /*
  * Second-tier strategies will use "resolve" for partial resolutions and various merging strategies. 
  * These may fail while being completed and after causing observations to be made.
@@ -43,27 +48,27 @@ strategy 0 named relationships.default
 strategy 1 named countable.union
    "Countables in OR can be resolved in stages and merged"
    for odo:Countable or odo:Countable
-   let FirstOperand, SecondOperand = split.operator
-   resolve this:FirstOperand
-   resolve this:SecondOperand
-   apply klab.objects.merge(this:FirstOperand, this:SecondOperand);
+   let first, second = split.operator
+   resolve $first
+   resolve $second
+   apply klab.objects.merge($first, $second);
 
 // next two should apply to booleans and categories   
-strategy 1 named quality.union
+strategy 1 named enumerable.quality.union
    "Types in OR can be resolved in stages and merged"
    for odo:EnumerableQuality or odo:EnumerableQuality
-   let FirstOperand, SecondOperand = split.operator
-   resolve this:FirstOperand
-   resolve this:SecondOperand
-   apply klab.types.union(this:FirstOperand, this:SecondOperand);  
+   let first, second = split.operator
+   resolve $first
+   resolve $second
+   apply klab.types.union($first, $second);
    
-strategy 1 named quality.intersection
+strategy 1 named enumerable.quality.intersection
    "Types in AND: split first operand, resolve operand and reminder, then merge qualities"
    for odo:EnumerableQuality and odo:EnumerableQuality
-   let FirstOperand, SecondOperand = split.operator
-   resolve this:FirstOperand
-   resolve this:SecondOperand
-   apply klab.types.intersection(this:FirstOperand, this:SecondOperand);
+   let first, second = split.operator
+   resolve $first
+   resolve $second
+   apply klab.types.intersection($first, $second);
 
 /**
  * For countables with concrete predicates: separate `@Observable` and `@Predicate`, 
@@ -74,12 +79,12 @@ strategy 1 named quality.intersection
 strategy 1 named countables.split.predicate
    "Split the first predicate, instantiate remainder, then classify"
    for each odo:Countable if count.predicates > 0
-   let Observable, Predicate = split.predicate, BaseObservable = base.observable(this:Predicate)
+   let observable, predicate = split.predicate, baseobservable = base.observable(this:Predicate)
    ensure concrete(this:Predicate)
-   resolve this:Predicate of each this:Observable
-   apply klab.object.filter(this:Observable, this:Predicate)
-   resolve each this:Observable {
-      resolve this:Predicate of this:Observable
+   resolve $predicate of each $observable
+   apply klab.object.filter($observable, $predicate)
+   resolve each $observable {
+      resolve $predicate of $observable
    }, {
-      resolve this:BaseObservable of this:Observable
+      resolve $baseobservable of $observable
    };
