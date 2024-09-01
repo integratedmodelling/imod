@@ -5,18 +5,19 @@
  * depend on instantiatable collectives (like relationships) they will force the observation 
  * of their contextual dependents too.
  * 
- * The only predefined variable for the observable pattern is `$this`, substituted by the
- * observable being resolved. Any other should be extracted using `let` and an extractor
+ * The only predefined variable for the observable pattern are `$this`, substituted by the
+ * observable being resolved, and  `$context` for the observable of the context observation. 
+ * Any other should be extracted using `let` and an extractor
  * functor. `$this` is also the implicit argument of any functor invoked without 
  * arguments.
  */
 strategies basic
 	version 1.0;
 	
-strategy 0 named quality.direct
+strategy 0 named dependent.direct
   "As a first attempt, any concrete quality is just observed as it is."
-   for imod:Quality if concrete
-   observe $this;
+   for imod:Quality if concrete, imod:Process if concrete
+   observe $this of $context;
 
 strategy 0 named countables.direct
    "Basic default strategy for any concrete collective countable except relationships: instantiate, then defer resolution of each 
@@ -28,7 +29,7 @@ strategy 0 named countables.direct
          resolve $observable optional
    };
 
-strategy 0 named relationships.default
+strategy 0 named relationships.direct
    "Default strategy for relationship is equal to other countables but adds the resolution of target and source subjects"
    for each imod:Relationship if concrete
    let 
