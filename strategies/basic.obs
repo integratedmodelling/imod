@@ -14,8 +14,12 @@
 strategies basic
 	version 1.0;
 	
+/**
+ * By adding $context we ensure there is no resolution of a dependent without a
+ * context observation.
+ */
 strategy 0 named dependent.direct
-  "As a first attempt, any concrete quality is just observed as it is."
+   "As a first attempt, any concrete quality is just observed as it is."
    for imod:Quality if concrete, imod:Process if concrete
    observe $this of $context;
 
@@ -23,7 +27,10 @@ strategy 0 named countables.direct
    "Basic default strategy for any concrete collective countable except relationships: instantiate, then defer resolution of each 
     individual observation. This will match any predicates and operators since no restriction
     is specified on the observable."
-   for each odo:Countable, !(each imod:Relationship) if concrete
+   for 
+      each imod:Subject if concrete, 
+      each imod:Agent if concrete, 
+      each imod:Event if concrete, occurrent
    let observable = arity.single
    observe each $observable {
          resolve $observable optional
