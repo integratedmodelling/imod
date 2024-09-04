@@ -228,7 +228,6 @@ abstract identity ConceptualBoundary
      //metadata { plato.stanford.edu/entries/boundary/ }
     "A conceptual boundary is the conceptual delimitation that allows the identification of entities"
      requires identity Goal;
-  
      
 // State of affair: https://plato.stanford.edu/entries/states-of-affairs/#:~:text=States%20of%20affairs%20are%20similar,explained%20further)%20objects%20and%20properties.
 //abstract identity StateOfAffairs
@@ -287,14 +286,15 @@ abstract role Role
     "Role specifies predicates that can be played by a concept in a context"
    is core odo:Role;
    
-deniable attribute Comparable
+attribute Comparable
    "Describes the ability to rank an object over another one."
+   deniable as Incomparable
    applies to imod:Concordance;
 
 role Reference
     "Applied to an observation used as reference to compute the primary observation by comparison. 
      Can be linked to a rescaling filters to shift the context of observation made in different space and time."
-    requires attribute Comparable;
+    implies imod:Comparable;
 
 //@todo("check extraction of attributes")
 role Indicator 
@@ -413,7 +413,6 @@ abstract quantity Quantity
 abstract duration Duration 
    is core odo:Duration;
    
-
 //Space qualities
 //Comment: re-think "observation" ontology and below concepts
 @fixme("Decide what to do with the spatial geometry identities. They can be here w/o referring to ODO (probably best) although

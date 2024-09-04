@@ -15,6 +15,12 @@ strategies basic
 	version 1.0;
 	
 /**
+ * TODO also enable enum values instead of full observable (and color-code)
+ * COUNTABLE, ENUMERABLE, QUANTIFIABLE, QUALITY, OCCURRENT, SUBSTANTIAL
+ * + the various qualities w/operators, PERCENTAGE, MASS etc
+ */	
+	
+/**
  * By adding $context we ensure there is no resolution of a dependent without a
  * context observation.
  */
