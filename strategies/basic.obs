@@ -19,14 +19,17 @@ strategies basic
  * COUNTABLE, ENUMERABLE, QUANTIFIABLE, QUALITY, OCCURRENT, SUBSTANTIAL
  * + the various qualities w/operators, PERCENTAGE, MASS etc
  */	
-	
+
+ 
 /**
  * By adding $context we ensure there is no resolution of a dependent without a
  * context observation.
+ * 
+ * TODO it must be illegal to define $this and $context using let
  */
 strategy 0 named dependent.direct
    "As a first attempt, any concrete quality is just observed as it is."
-   for imod:Quality if concrete, imod:Process if concrete
+   for imod:Quality if type.concrete, imod:Process if type.concrete
    observe $this of $context;
 
 strategy 0 named countables.direct
@@ -34,10 +37,10 @@ strategy 0 named countables.direct
     individual observation. This will match any predicates and operators since no restriction
     is specified on the observable."
    for 
-      each imod:Subject if concrete, 
-      each imod:Agent if concrete, 
-      each imod:Event if concrete, occurrent
-   let observable = arity.single
+      each imod:Subject if type.concrete, 
+      each imod:Agent if type.concrete, 
+      each imod:Event if type.concrete, scope.occurrent
+   let observable = type.arity.single
    observe each $observable {
          resolve $observable optional
    };
@@ -46,15 +49,15 @@ strategy 0 named relationships.direct
    "Default strategy for relationship is equal to other countables but adds the resolution of target and source subjects"
    for each imod:Relationship if concrete
    let 
-      source = relationship.source,
-      target = relationship.target, 
-      observable = arity.single
+      source = type.relationship.source,
+      target = type.relationship.target, 
+      observable = type.arity.single
    resolve each $source
    resolve each $target
    observe each $observable {
       resolve $observable optional
    };
-   
+ 
 /*
  * Second-tier strategies will use "resolve" for partial resolutions and various merging strategies. 
  * These may fail while being completed and after causing observations to be made.
@@ -62,27 +65,27 @@ strategy 0 named relationships.direct
 strategy 1 named countable.union
    "Countables in OR can be resolved in stages and merged"
    for odo:Countable or odo:Countable
-   let first, second = split.operator
+   let first, second = type.operator.splitfirst
    resolve $first
    resolve $second
-   apply klab.objects.merge($first, $second);
+   apply observations.objects.union($first, $second);
 
 // next two should apply to booleans and categories   
 strategy 1 named enumerable.quality.union
    "Types in OR can be resolved in stages and merged"
    for odo:EnumerableQuality or odo:EnumerableQuality
-   let first, second = split.operator
+   let first, second = type.operator.splitfirst
    resolve $first
    resolve $second
-   apply klab.types.union($first, $second);
+   apply observations.values.union($first, $second);
    
 strategy 1 named enumerable.quality.intersection
    "Types in AND: split first operand, resolve operand and reminder, then merge qualities"
    for odo:EnumerableQuality and odo:EnumerableQuality
-   let first, second = split.operator
+   let first, second = type.operator.splitfirst
    resolve $first
    resolve $second
-   apply klab.types.intersection($first, $second);
+   apply observations.values.intersection($first, $second);
 
 /**
  * For countables with concrete predicates: separate `@Observable` and `@Predicate`, 
@@ -93,10 +96,12 @@ strategy 1 named enumerable.quality.intersection
 strategy 1 named countables.split.predicate
    "Split the first predicate, instantiate remainder, then classify"
    for each odo:Countable if count.predicates > 0
-   let observable, predicate = split.predicate, baseobservable = base.observable(this:Predicate)
+   let 
+   	observable, predicate = type.operator.splitfirst, 
+   	baseobservable = type.lexicalroot(this:Predicate)
    ensure concrete(this:Predicate)
    resolve $predicate of each $observable
-   apply klab.object.filter($observable, $predicate)
+   apply observations.filter.predicates($observable, $predicate)
    resolve each $observable {
       resolve $predicate of $observable
    }, {
