@@ -10,6 +10,8 @@
  * Any other should be extracted using `let` and an extractor
  * functor. `$this` is also the implicit argument of any functor invoked without 
  * arguments.
+ * 
+ * TODO it must be illegal to define $this and $context using let
  */
 strategies basic
 	version 1.0;
@@ -21,16 +23,14 @@ strategies basic
  */	
 
 strategy 0 named substantial.direct
-	"Resolving a substantial is just a matter of finding a model for it, optional because
-     the substantial can simply be acknowledged even without resolution."
+	"Resolving a substantial is just a matter of finding models for it, and is optional because
+     the substantial can be acknowledged even without resolution."
    for odo:Substantial if type.concrete, imod:Relationship if type.concrete
    observe $this optional;
 
 /**
  * By adding $context we ensure there is no resolution of a dependent without a
  * context observation.
- * 
- * TODO it must be illegal to define $this and $context using let
  */
  strategy 0 named dependent.direct
    "As a first attempt, any concrete quality is just observed as it is."
