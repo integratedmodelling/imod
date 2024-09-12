@@ -14,22 +14,29 @@
 strategies basic
 	version 1.0;
 	
-/**
+/*
  * TODO also enable enum values instead of full observable (and color-code)
  * COUNTABLE, ENUMERABLE, QUANTIFIABLE, QUALITY, OCCURRENT, SUBSTANTIAL
  * + the various qualities w/operators, PERCENTAGE, MASS etc
  */	
 
- 
+strategy 0 named substantial.direct
+	"Resolving a substantial is just a matter of finding a model for it, optional because
+     the substantial can simply be acknowledged even without resolution."
+   for odo:Substantial if type.concrete
+   observe $this;
+
 /**
  * By adding $context we ensure there is no resolution of a dependent without a
  * context observation.
  * 
  * TODO it must be illegal to define $this and $context using let
  */
-strategy 0 named dependent.direct
+ strategy 0 named dependent.direct
    "As a first attempt, any concrete quality is just observed as it is."
-   for imod:Quality if type.concrete, imod:Process if type.concrete
+   for 
+   	  imod:Quality if type.concrete, 
+   	  imod:Process if type.concrete
    observe $this of $context;
 
 strategy 0 named countables.direct
