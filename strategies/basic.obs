@@ -23,8 +23,8 @@ strategies basic
 strategy 0 named substantial.direct
 	"Resolving a substantial is just a matter of finding a model for it, optional because
      the substantial can simply be acknowledged even without resolution."
-   for odo:Substantial if type.concrete
-   observe $this;
+   for odo:Substantial if type.concrete, imod:Relationship if type.concrete
+   observe $this optional;
 
 /**
  * By adding $context we ensure there is no resolution of a dependent without a
@@ -54,7 +54,7 @@ strategy 0 named countables.direct
 
 strategy 0 named relationships.direct
    "Default strategy for relationship is equal to other countables but adds the resolution of target and source subjects"
-   for each imod:Relationship if concrete
+   for each imod:Relationship if type.concrete
    let 
       source = type.relationship.source,
       target = type.relationship.target, 
