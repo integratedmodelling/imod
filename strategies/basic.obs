@@ -52,6 +52,8 @@ strategy 0 named countables.direct
          resolve $observable optional
    };
 
+// TODO strategies for abstract observables, expanding the observables and merging
+
 strategy 0 named relationships.direct
    "Default strategy for relationship is equal to other countables but adds the resolution of target and source subjects"
    for each imod:Relationship if type.concrete
