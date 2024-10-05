@@ -37,7 +37,7 @@ strategy 0 named substantial.direct
    for 
    	  imod:Quality if type.concrete, 
    	  imod:Process if type.concrete
-   observe $this of $context;
+   observe $this /* of $context */;
 
 strategy 0 named countables.direct
    "Basic default strategy for any concrete collective countable except relationships: instantiate, then defer resolution of each 
