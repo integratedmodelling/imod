@@ -26,7 +26,9 @@ strategy 0 named substantial.direct
 	"Resolving a substantial is just a matter of finding models for it, and is optional because
      the substantial can be acknowledged even without resolution."
    for odo:Substantial if type.concrete, imod:Relationship if type.concrete
-   observe $this optional;
+   observe $this optional
+//   resolve change in $this optional if context.occurrent 
+;
 
 /**
  * By adding $context we ensure there is no resolution of a dependent without a
@@ -37,7 +39,9 @@ strategy 0 named substantial.direct
    for 
    	  imod:Quality if type.concrete, 
    	  imod:Process if type.concrete
-   observe $this /* of $context */;
+   observe $this
+//   resolve change in $this if context.occurrent
+;
 
 strategy 0 named countables.direct
    "Basic default strategy for any concrete collective countable except relationships: instantiate, then defer resolution of each 
@@ -50,7 +54,9 @@ strategy 0 named countables.direct
    let observable = type.arity.single
    observe each $observable {
          resolve $observable optional
-   };
+   }
+   // TODO not accepted resolve change in each $observable if context.occurrent
+;
 
 // TODO strategies for abstract observables, expanding the observables and merging
 
