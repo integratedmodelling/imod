@@ -25,7 +25,11 @@ strategies basic
 strategy 0 named substantial.direct
 	"Resolving a substantial is just a matter of finding models for it, and is optional because
      the substantial can be acknowledged even without resolution."
-   for odo:Substantial if type.concrete, imod:Relationship if type.concrete
+   for 
+   		imod:Subject if type.concrete, 
+   		imod:Agent if type.concrete, 
+   		imod:Relationship if type.concrete
+   		
    observe $this optional
 //   resolve change in $this optional if context.occurrent 
 ;
@@ -49,7 +53,7 @@ strategy 0 named countables.direct
     is specified on the observable."
    for 
       each imod:Subject if type.concrete, 
-      each imod:Agent if type.concrete, 
+      each imod:Agent if type.concrete,
       each imod:Event if type.concrete, scope.occurrent
    let observable = type.arity.single
    observe each $observable {
@@ -72,53 +76,57 @@ strategy 0 named relationships.direct
    observe each $observable {
       resolve $observable optional
    };
-// 
-///*
-// * Second-tier strategies will use "resolve" for partial resolutions and various merging strategies. 
-// * These may fail while being completed and after causing observations to be made.
-// */      
-//strategy 1 named countable.union
-//   "Countables in OR can be resolved in stages and merged"
-//   for odo:Countable or odo:Countable
-//   let first, second = type.operator.splitfirst
-//   resolve $first
-//   resolve $second
-//   apply observations.objects.union($first, $second);
-//
-//// next two should apply to booleans and categories   
-//strategy 1 named enumerable.quality.union
-//   "Types in OR can be resolved in stages and merged"
-//   for odo:EnumerableQuality or odo:EnumerableQuality
-//   let first, second = type.operator.splitfirst
-//   resolve $first
-//   resolve $second
-//   apply observations.values.union($first, $second);
-//   
-//strategy 1 named enumerable.quality.intersection
-//   "Types in AND: split first operand, resolve operand and reminder, then merge qualities"
-//   for odo:EnumerableQuality and odo:EnumerableQuality
-//   let first, second = type.operator.splitfirst
-//   resolve $first
-//   resolve $second
-//   apply observations.values.intersection($first, $second);
-//
-///**
-// * For countables with concrete predicates: separate `@Observable` and `@Predicate`, 
-// * resolve `@Observable`, then if successful resolve `@Predicate of each @Observable` using collective 
-// * characterization. If that also fails, try resolving `@Predicate of @Observable` for each 
-// * individual countable.
-// */   
-//strategy 1 named countables.split.predicate
-//   "Split the first predicate, instantiate remainder, then classify"
-//   for each odo:Countable if count.predicates > 0
-//   let 
-//   	observable, predicate = type.operator.splitfirst, 
-//   	baseobservable = type.lexicalroot(this:Predicate)
-//   ensure concrete(this:Predicate)
-//   resolve $predicate of each $observable
-//   apply observations.filter.predicates($observable, $predicate)
-//   resolve each $observable {
-//      resolve $predicate of $observable
-//   }, {
-//      resolve $baseobservable of $observable
-//   };
+ 
+/*
+ * Second-tier strategies will use "resolve" for partial resolutions and various merging strategies. 
+ * These may fail while being completed and after causing observations to be made.
+ */      
+strategy 1 named countable.union
+   "Countables in OR can be resolved in stages and merged"
+   for 
+   		each (imod:Subject or imod:Subject) if type.concrete, 
+   		each (imod:Event or imod:Event) if type.concrete, 
+   		each (imod:Agent or imod:Agent) if type.concrete, 
+   		each (imod:Relationship or imod:Relationship) if type.concrete
+   let first, second = type.operator.splitfirst
+   resolve $first
+   resolve $second
+   apply observations.objects.union($first, $second);
+
+// next two should apply to booleans and categories   
+strategy 1 named enumerable.quality.union
+   "Types in OR can be resolved in stages and merged"
+   for imod:Quality or imod:Quality if type.categorical, type.concrete
+   let first, second = type.operator.splitfirst
+   resolve $first
+   resolve $second
+   apply observations.values.union($first, $second);
+   
+strategy 1 named enumerable.quality.intersection
+   "Types in AND: split first operand, resolve operand and reminder, then merge qualities"
+   for odo:EnumerableQuality and odo:EnumerableQuality
+   let first, second = type.operator.splitfirst
+   resolve $first
+   resolve $second
+   apply observations.values.intersection($first, $second);
+
+/**
+ * For countables with concrete predicates: separate `@Observable` and `@Predicate`, 
+ * resolve `@Observable`, then if successful resolve `@Predicate of each @Observable` using collective 
+ * characterization. If that also fails, try resolving `@Predicate of @Observable` for each 
+ * individual countable.
+ */   
+strategy 1 named countables.split.predicate
+   "Split the first predicate, instantiate remainder, then classify"
+   for each odo:Countable if count.predicates > 0
+   let 
+   	observable, predicate = type.operator.splitfirst, 
+   	baseobservable = type.lexicalroot(this:Predicate)
+   ensure concrete(this:Predicate)
+   resolve $predicate of each $observable
+   apply observations.filter.predicates($observable, $predicate)
+   resolve each $observable {
+      resolve $predicate of $observable
+   }, {
+      resolve $baseobservable of $observable
+   };

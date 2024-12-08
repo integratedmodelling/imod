@@ -370,37 +370,17 @@ abstract configuration Network
  * Countable
  */
 
-@fixme("Not sure this should be articulated here. Seems to me that Substantial is more generic than agent.")
-abstract thing Substantial
-   "Substantial is independent for its existence and bears qualities. Substantial are similar to Substantial 
-    in UFO and DOLCE" 
-   is core odo:Substantial
-     has children
-      ( Subject
+abstract thing Subject
       	"Subject is a Substantial without agentive characteristics"
-      	is core odo:Subject
-      ),
-       (Agent
+      	is core odo:Subject;
+
+abstract agent Agent
       	"Agent is a Substantial with intentionality" 
-      	is core odo:Agent
-      );
-
-//abstract thing Subject
-//    "Subject is a Substantial without agentive characteristics"
-//   is core odo:Subject;
-
-//@fixme("Apart from the circular reference, not sure having agency means the same as 'being Intentional'.")
-//abstract agent Agent
-//   "Agent is a Substantial with intentionality" 
-//   is core odo:Agent
-   // FIXME circular dependency (and wrong)
-//   inherits decision:Intentional
- //  ;
-   
+      	is core odo:Agent;
+     
 /**
  * Qualities
  */
- 
 abstract quality Quality
      "Qualities represent observables that cannot be observed directly but only through other entities that bear them.
       Their observation produces 'values' in some reference domain. They inhere to other entities and depend on their bearers."
