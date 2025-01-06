@@ -175,7 +175,7 @@ abstract realm PhysicalEnvironment
 						Estuarine,
 						SaltMarsh
 				),
-				(abstract Freshwater
+				(Freshwater
 					has children
 					(
 						@todo("flesh out; ensure that the ubiquitous Wetland knows where to put itself")
