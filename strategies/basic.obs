@@ -55,10 +55,7 @@ strategy 0 named countables.direct
       each imod:Subject if type.concrete, 
       each imod:Agent if type.concrete,
       each imod:Event if type.concrete, scope.occurrent
-   let observable = type.arity.single
-   observe each $observable {
-         resolve $observable optional
-   }
+   observe $this // NO NEED TO DEFER - that's standard behavior
    // TODO not accepted resolve change in each $observable if context.occurrent
 ;
 
@@ -69,13 +66,10 @@ strategy 0 named relationships.direct
    for each imod:Relationship if type.concrete
    let 
       source = type.relationship.source,
-      target = type.relationship.target, 
-      observable = type.arity.single
+      target = type.relationship.target
    resolve each $source
    resolve each $target
-   observe each $observable {
-      resolve $observable optional
-   };
+   observe $this;
  
 /*
  * Second-tier strategies will use "resolve" for partial resolutions and various merging strategies. 
