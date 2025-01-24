@@ -54,7 +54,7 @@ strategy 0 named countables.direct
    for 
       each imod:Subject if type.concrete, 
       each imod:Agent if type.concrete,
-      each imod:Event if type.concrete, scope.occurrent
+      each imod:Event if type.concrete
    observe $this // NO NEED TO DEFER - that's standard behavior
    // TODO not accepted resolve change in each $observable if context.occurrent
 ;
