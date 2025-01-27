@@ -29,10 +29,7 @@ strategy 0 named substantial.direct
    		imod:Subject if type.concrete, 
    		imod:Agent if type.concrete, 
    		imod:Relationship if type.concrete
-   		
-   observe $this optional
-//   resolve change in $this optional if context.occurrent 
-;
+   observe $this optional;
 
 /**
  * By adding $context we ensure there is no resolution of a dependent without a
@@ -43,9 +40,7 @@ strategy 0 named substantial.direct
    for 
    	  imod:Quality if type.concrete, 
    	  imod:Process if type.concrete
-   observe $this
-//   resolve change in $this if context.occurrent
-;
+   observe $this;
 
 strategy 0 named countables.direct
    "Basic default strategy for any concrete collective countable except relationships: instantiate, then defer resolution of each 
@@ -110,17 +105,20 @@ strategy 1 named enumerable.quality.intersection
  * characterization. If that also fails, try resolving `@Predicate of @Observable` for each 
  * individual countable.
  */   
-strategy 1 named countables.split.predicate
-   "Split the first predicate, instantiate remainder, then classify"
-   for each odo:Countable if count.predicates > 0
-   let 
-   	observable, predicate = type.operator.splitfirst, 
-   	baseobservable = type.lexicalroot(this:Predicate)
-   ensure concrete(this:Predicate)
-   resolve $predicate of each $observable
-   apply observations.filter.predicates($observable, $predicate)
-   resolve each $observable {
-      resolve $predicate of $observable
-   }, {
-      resolve $baseobservable of $observable
-   };
+//strategy 1 named countables.split.predicate
+//   "Split the first predicate, instantiate remainder, then classify"
+//   for
+//   	each imod:Subject if type.predicates.count > 0,
+//   	each imod:Event if type.predicates.count > 0,
+//   	each imod:Relationships if type.predicates.count > 0
+//   let 
+//   	observable, predicate = type.operator.splitfirst, 
+//   	baseobservable = type.lexicalroot(this:Predicate)
+//   ensure concrete(this:Predicate)
+//   resolve $predicate of each $observable
+//   apply observations.filter.predicates($observable, $predicate)
+//   resolve each $observable {
+//      resolve $predicate of $observable
+//   }, {
+//      resolve $baseobservable of $observable
+//   };
