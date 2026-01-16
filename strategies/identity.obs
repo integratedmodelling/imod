@@ -1,0 +1,13 @@
+/** 
+ * "Null" identification strategies, to be complemented by worldview-specific ones. 
+ */
+strategies identity
+	version 1.0;
+	
+identification strategy 0 named identification.default
+	"The basic strategy is to compare observation URNs unless there is an individual identity. This is provided
+     by the core distribution as default.identity.check."
+   for imod:Subject, imod:Agent
+   apply default.identity.check;
+
+   
