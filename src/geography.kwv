@@ -122,7 +122,7 @@ abstract identity ContinentalRegion
  * TODO add other key geographic areas
  */ 
 @todo("Some kind soul please start adding ISO country codes as metadata")
-abstract identity Country is GeopoliticalIdentity 
+abstract individual identity Country is GeopoliticalIdentity 
 			has disjoint children
 				Afghanistan,                 
 				Albania, 

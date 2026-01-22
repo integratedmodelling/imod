@@ -342,4 +342,3 @@ configuration SpatialArrangement
 	has children
 		VerticalArrangement,
 		HorizontalArrangement;
-

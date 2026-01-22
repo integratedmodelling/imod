@@ -12,10 +12,7 @@ ontology life
 	using imod
 	in domain imod:Physical of imod:Biosphere;
 
-
-
 identity Human equals GBIF.SPECIES:2436436;
-
 
 abstract agent Individual;
 

@@ -597,7 +597,3 @@ abstract extent Time
                   inherits Irregular   
                   )
             );
-             
-
-
-  

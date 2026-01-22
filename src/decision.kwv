@@ -96,4 +96,3 @@ abstract attribute Appropriateness
      has children 
      Appropriate, 
      Inappropriate;
-
