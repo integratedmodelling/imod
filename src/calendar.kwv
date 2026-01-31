@@ -3,12 +3,22 @@ ontology calendar
    in domain imod:Knowledge
    using imod,physical;
 
-//Comment: to re-evaluate
-abstract event RecurrentEvent 
-     "These are intended not as units of measurement (not observables) but as observable events,
-      signaling the expiration of a given period of time. They can be observe  in time as 
+// Identities capturing discrete time recurrence
+abstract identity Recurrence
+	"Identities capturing recurrence in discrete calendar time" 
+	applies to imod:Event 
+	has children 
+   		Hourly,
+ 		Yearly,
+        Monthly,
+        Daily,
+        Weekly;
+
+abstract event RecurrentCalendarEvent 
+     "The commonly used time spans are modeled as observable events,
+      signaling the expiration of a given period of time. They can be observed  in time as 
       dependencies, and models can be provided for them in scenarios. Traits  can be used 
-      or conferred by processes to distinguish particular periods."
+      or conferred by processes to distinguish specific periods from others."
       has children 
           (Second
 			"The expiration of one second after a temporal point of reference."
@@ -18,25 +28,21 @@ abstract event RecurrentEvent
 		  ),
 		  (Hour
 			"The expiration of one hour after a temporal point of reference."		
-		   	implies imod:Hourly	
 	      ),
 		  (Day
 			"The expiration of one day after a temporal point of reference."
-		  	implies imod:Daily			
 		  ),
 		  (Week
-		  	implies imod:Weekly
+		  "The expiration of one week after a temporal point of reference."
 		  ),
 	     (Month	
 	     "The expiration of one month after a temporal point of reference." 
-	     	implies imod:Monthly
          ),
         (Season
 		 "The expiration of one season after a temporal point of reference."			
 		),
 		(Year
 		"The expiration of one year after a temporal point of reference."			
-			inherits imod:Yearly
 		),
 		(Decade
 		"The expiration of ten years after a temporal point of reference."

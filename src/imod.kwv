@@ -196,13 +196,6 @@ abstract identity Identity
      a series of characteristics, such as morphological, behavioral and contextual"
    is core odo:Identity;
    
-// Identities capturing discrete time for the worldview
-// TODO MOVE THESE TO THE klab: NAMESPACE
-//identity Hourly is core observation:Hourly;
-//identity Yearly is core observation:Yearly;
-//identity Monthly is core observation:Monthly;
-//identity Daily is core observation:Daily;
-//identity Weekly is core observation:Weekly;
 
 //Identities capturing discrete space for the worldview
 
