@@ -1,7 +1,7 @@
 /** 
  * "Null" identification strategies, to be complemented by worldview-specific ones. 
  */
-strategies identity
+strategies identities
 	version 1.0;
 	
 identification strategy 0 named identification.default

@@ -13,7 +13,7 @@
  * 
  * TODO it must be illegal to define $this and $context using let
  */
-strategies basic
+strategies observations
 	version 1.0;
 	
 /*
@@ -98,6 +98,13 @@ strategy 1 named enumerable.quality.intersection
    resolve $first
    resolve $second
    apply observations.values.intersection($first, $second);
+
+strategy 1 named quality.split.predicate
+   "Split a predicate from a quality and apply it through a transformer model after resolution"
+   for imod:Predicate imod:Quality
+   let predicate, quality = type.predicates.splitfirst
+   observe $predicate of $quality
+   resolve $quality; // application of transformation will be automatic
 
 /**
  * For countables with concrete predicates: separate `@Observable` and `@Predicate`, 
