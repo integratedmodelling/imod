@@ -103,8 +103,8 @@ strategy 1 named quality.split.predicate
    "Split a predicate from a quality and apply it through a transformer model after resolution"
    for PREDICATE QUALITY
    let predicate, quality = type.predicates.splitfirst
-   observe $predicate of $quality
-   resolve $quality; // application of transformation will be automatic
+   resolve $quality
+   observe $predicate of $quality; // application of transformation will be automatic
 
 /**
  * For countables with concrete predicates: separate `@Observable` and `@Predicate`, 
