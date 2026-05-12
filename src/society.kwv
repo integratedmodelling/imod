@@ -2,12 +2,21 @@
  * Economics, Sociology but also Land as Knowledge domains
  * 
  * Landcover/land use should be in here as knowledge if we still 
+ * @agency should be important here
  */
 ontology society
 	version 1.0
-	using imod, life
+	using imod, life, agency
 	in domain imod:Physical;
 	
 // TODO check out FAIR population/demography vocabularies from https://zenodo.org/records/7818157
-deliberative agent HumanIndividual
+// FIXME remove the `deliberative` etc. keywords
+// use agency:Participant roles according to what the individual is doing, not here
+// 
+// TODO default observer should be an `agency:Volitional society:HumanIndividual` or an Institution if 
+// federated
+agent HumanIndividual
 	is life:Human life:Individual;
+
+// TODO also. Here for the default observer - Volitional Institution w/ name of federation
+agent Institution;

@@ -5,7 +5,8 @@
  * and philosophy, highlighting the role of personal or collective autonomy in shaping behaviors, social structures, 
  * and outcomes.
  * 
- * @todo merge with "decision" in here, straighten up all the physical concepts that actually belong in infrastructure.
+ * @todo merge with "decision" in here, straighten up all the physical concepts that actually belong 
+ * in infrastructure.
  */
 ontology agency
 	version 1.0
@@ -17,6 +18,300 @@ attribute Intentional
 	deniable as Unintentional
 	implies imod:Goal;
 	
+/*
+Yes. A clean taxonomy would separate **what the agent is**, **what the agent is in a context**, and
+ **what the agent is trying to do**. I would not make all of these direct subtypes of identity 
+ unless your ontology requires it. I would distinguish **identity proper** from **identity-forming
+  conditions**.
+
+## Proposed taxonomy of identities
+
+```text
+Identity
+├── Intrinsic identity
+├── Assigned identity
+├── Relational identity
+├── Role-based identity
+├── Process-relative identity
+└── Intention-based identity
+```
+
+## 1. Intrinsic identity
+
+**Definition:** An identity that classifies an entity by what it is, independently of a particular process or interaction.
+
+Examples:
+
+* human
+* organization
+* animal
+* river
+* machine
+* household
+* farm
+
+This is the most stable form of identity. It answers:
+
+> What kind of entity is this?
+
+In an agency model, this identifies the **bearer of agency**, not the way agency is exercised.
+
+Example:
+
+```text
+Agent identity: Human
+Agent identity: Organization
+Agent identity: Wolf
+```
+
+## 2. Assigned identity
+
+**Definition:** An identity given to an agent by a social, legal, institutional, or classificatory system.
+
+Examples:
+
+* citizen
+* landowner
+* protected-area manager
+* public authority
+* company
+* stakeholder
+* rights holder
+
+This is not simply intrinsic. It depends on recognition by some rule system or observer.
+
+It answers:
+
+> What is this agent recognized as?
+
+Example:
+
+```text
+A person has the assigned identity of landowner.
+A ministry has the assigned identity of competent authority.
+```
+
+This is useful when agency depends on legal capacity, authorization, ownership, or membership.
+
+## 3. Relational identity
+
+**Definition:** An identity defined by a relation to another entity.
+
+Examples:
+
+* buyer
+* seller
+* employer
+* employee
+* predator
+* prey
+* parent
+* tenant
+* supplier
+* beneficiary
+
+This identity exists only through a relation. A buyer is a buyer relative to a seller or transaction. A predator is a predator relative to prey.
+
+It answers:
+
+> What is this agent in relation to another entity?
+
+Example:
+
+```text
+Agent A has relational identity buyer with respect to Agent B.
+Wolf has relational identity predator with respect to deer.
+```
+
+This category is useful for interaction models.
+
+## 4. Role-based identity
+
+**Definition:** An identity derived from the function an agent performs in a process.
+
+Examples:
+
+* producer
+* consumer
+* regulator
+* pollinator
+* decomposer
+* investor
+* decision-maker
+* data provider
+* emissions reducer
+
+It answers:
+
+> What function does this agent perform in the process?
+
+Example:
+
+```text
+A bee has role-based identity pollinator in a pollination process.
+A government agency has role-based identity regulator in a permitting process.
+```
+
+This is close to **role**, but not identical. The role is the function; the role-based identity is the way the agent is classified because it performs that function.
+
+## 5. Process-relative identity
+
+**Definition:** An identity an agent has only with respect to a specific process.
+
+Examples:
+
+* participant in negotiation
+* actor in land-use change
+* source of emissions
+* affected stakeholder
+* resource user
+* restoration actor
+* disturbance agent
+
+It answers:
+
+> What is this agent in this specific process?
+
+Example:
+
+```text
+A farmer is a food producer in an agricultural production process.
+The same farmer is a water user in an irrigation process.
+The same farmer is an affected stakeholder in a drought-risk process.
+```
+
+This category is important because the same agent can have different identities across different processes.
+
+Process-relative identity is probably the main category you need for agency modeling.
+
+## 6. Intention-based identity
+
+**Definition:** A process-relative identity determined by the agent’s intention, goal, or purposive orientation.
+
+Examples:
+
+* conservation actor
+* extractor
+* restorer
+* protector
+* exploiter
+* profit-seeker
+* risk-avoider
+* knowledge-seeker
+* emissions-reducer
+
+It answers:
+
+> What is this agent, in this process, given what it intends?
+
+Example:
+
+```text
+An organization intending to restore wetlands has the intention-based identity wetland restorer.
+A company intending to extract timber has the intention-based identity resource extractor.
+A household intending to reduce energy consumption has the intention-based identity energy saver.
+```
+
+This is where your use case fits best.
+
+The important distinction is:
+
+```text
+Intention = attribute of the agent
+Intention-based identity = identity induced by that attribute in a process
+Role = function enacted in the process
+```
+
+So:
+
+```text
+Agent: Company
+Intrinsic identity: Organization
+Assigned identity: Licensed operator
+Intention: Extract timber
+Intention-based identity: Resource extractor
+Role in process: Harvester
+Process: Timber extraction
+```
+
+## Recommended simplified version
+
+For practical semantic modeling, I would reduce the taxonomy to four categories:
+
+```text
+Identity
+├── IntrinsicIdentity
+├── InstitutionalIdentity
+├── RelationalIdentity
+└── ProcessRelativeIdentity
+    ├── RoleBasedIdentity
+    └── IntentionBasedIdentity
+```
+
+This is cleaner because **role-based** and **intention-based** identities are both special cases of process-relative identity.
+
+## How this separates the use cases
+
+| Use case                                                  | Best identity type        | Example                                      |
+| --------------------------------------------------------- | ------------------------- | -------------------------------------------- |
+| What kind of entity is the agent?                         | Intrinsic identity        | human, organization, animal                  |
+| What is the agent recognized as by rules or institutions? | Institutional identity    | citizen, landowner, regulator                |
+| What is the agent relative to another entity?             | Relational identity       | buyer, seller, predator, beneficiary         |
+| What is the agent in a process?                           | Process-relative identity | participant, resource user, emissions source |
+| What function does the agent perform?                     | Role-based identity       | producer, consumer, pollinator               |
+| What does the agent intend in the process?                | Intention-based identity  | restorer, extractor, protector               |
+
+## Best treatment of intention
+
+I would model intention as an **attribute**, but map its semantic consequence to **IntentionBasedIdentity**.
+
+A compact formulation:
+
+```text
+An intention is an agent attribute that determines an intention-based identity
+for that agent within a process.
+```
+
+Or, more formally:
+
+```text
+Agent
+  hasAttribute Intention
+  hasIdentity IntentionBasedIdentity
+  participatesIn Process
+```
+
+Example:
+
+```text
+Agent: Municipality
+Attribute: intention to reduce flood risk
+Identity: flood-risk reducer
+Process: urban adaptation process
+Role: planner / regulator / infrastructure provider
+```
+
+This preserves the clean separation:
+
+* **attribute** captures the mental or purposive state;
+* **identity** captures the agent’s semantic classification;
+* **role** captures enacted function;
+* **process** provides the context in which the classification is meaningful.
+*/
+
+
+abstract role Participant
+	has disjoint children
+		Volitional
+			"An agent is the participant who consciously initiates or controls an action, 
+			 distinguished from entities moved by external forces or natural laws",
+		Patient
+			"A patient is an entity that is acted upon, has no participation in the acting context, and
+			 does not perceive it",
+		Experiencer
+			"A participant that feels or perceives without volitional control, such as in 
+			'I understand'";
+
 /*
  * Mapping agency to @imod:Technosphere and @imod:Antroposphere:
  * 
