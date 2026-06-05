@@ -3,7 +3,7 @@ ontology data
    using imod
    in domain imod:Knowledge;
 
-/**
+/***
  * 
  */
 abstract rescaling attribute Transformed 
@@ -34,7 +34,7 @@ abstract rescaling attribute Transformed
            }
     );
      
-/**
+/***
  * 
  */     
 abstract attribute DataReduction

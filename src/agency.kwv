@@ -18,10 +18,10 @@ attribute Intentional
 	deniable as Unintentional
 	implies imod:Goal;
 	
-/*
-Yes. A clean taxonomy would separate **what the agent is**, **what the agent is in a context**, and
- **what the agent is trying to do**. I would not make all of these direct subtypes of identity 
- unless your ontology requires it. I would distinguish **identity proper** from **identity-forming
+/***
+A clean taxonomy would separate **what the agent is**, **what the agent is in a context**, and
+ **what is the agent disposition to do**. I would not make all of these direct subtypes of identity 
+ unless the ontology requires it. I would distinguish **identity proper** from **identity-forming
   conditions**.
 
 ## Proposed taxonomy of identities

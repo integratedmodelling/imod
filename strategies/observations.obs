@@ -104,7 +104,7 @@ strategy 1 named quality.split.predicate
    for PREDICATE QUALITY
    let predicate, quality = type.predicates.splitfirst
    resolve $quality as rawquality
-   transform rawquality through $predicate of $quality; // application of transformation will be automatic
+   transform rawquality through $predicate of $quality;
 
 /**
  * For countables with concrete predicates: separate `@Observable` and `@Predicate`, 

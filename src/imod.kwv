@@ -1,4 +1,4 @@
-/**
+/***
  * "Literate programming" features: comments introduced with the double asterisk are collected to provide
  * AsciiDoc documentation, and the concepts that follow them are documented in the processed document. If the
  * namespace is not introduced by a literate section, it won't be documented at all. 
@@ -65,7 +65,7 @@ ontology imod
    };
 
 
-/**
+/***
  * @ The main Systems of the earth
  * 
  * This worldview takes a _system view_ of planet Earth and characterizes its main ontologies in domains relative to 
@@ -131,7 +131,7 @@ configuration PhysicalSystem
 		 */
 		Technosphere;
 
- /**
+ /***
  * @Domains
  * 
  * Domains are philosophical takes on @{System}s, either in an ontological sense (defining their "nature") or in an epistemological
