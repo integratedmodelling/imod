@@ -1,4 +1,4 @@
-/**
+/***
  * First-tier k.LAB observation strategies. These are the leaves of the 
  * tree in the observation strategy, resolving using the literal concepts and matching the exact observable. 
  * They contain the obvious "observe" statements for their observables, but if the latter
@@ -66,7 +66,7 @@ strategy 0 named relationships.direct
    resolve each $target
    observe $this;
  
-/*
+/***
  * Second-tier strategies will use "resolve" for partial resolutions and various merging strategies. 
  * These may fail while being completed and after causing observations to be made.
  */      

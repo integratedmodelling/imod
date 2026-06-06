@@ -39,7 +39,7 @@ angle Slope
  */
 configuration Terrain 
    "The perceived three-dimensional configuration of land surfaces"
-//   is physical:SpatialArrangement of (earth:Crust earth:Terrestrial earth:Region)
+   is physical:SpatialArrangement of (earth:Crust earth:Terrestrial earth:Region)
    emerges from (geography:Elevation or geography:Slope or geography:Aspect);
 
 angle StreamGradient
@@ -57,7 +57,9 @@ length SlopeLength
 /**
  * Political/Regional geography. Knowledge below was in policy which is obviously
  * inappropriate. Not sure it should have its own namespace.
- * KB: The question is whether we want to combine human and physical geography into one namespace. If so, keep it here, if not make a human geography namespace (my vote would be to keep them combined, as we don't split other ontologies into subdisciplines).
+ * KB: The question is whether we want to combine human and physical geography into one namespace.
+  If so, keep it here, if not make a human geography namespace (my vote would be to keep them combined, 
+  as we don't split other ontologies into subdisciplines).
  */	
  
  /** 

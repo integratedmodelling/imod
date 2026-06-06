@@ -1,4 +1,4 @@
-/**
+/***
  * Agency refers to the capacity of individuals or groups to act independently and make their own free choices. 
  * It is the power to exert influence over one's environment, make decisions, and initiate actions based on one's 
  * intentions and desires. Agency is a fundamental concept in various disciplines, including sociology, psychology, 
@@ -19,10 +19,10 @@ attribute Intentional
 	implies imod:Goal;
 	
 /***
-A clean taxonomy would separate **what the agent is**, **what the agent is in a context**, and
+ A clean taxonomy would separate **what the agent is**, **what the agent is in a context**, and
  **what is the agent disposition to do**. I would not make all of these direct subtypes of identity 
  unless the ontology requires it. I would distinguish **identity proper** from **identity-forming
-  conditions**.
+ conditions**.
 
 ## Proposed taxonomy of identities
 
@@ -298,8 +298,6 @@ This preserves the clean separation:
 * **role** captures enacted function;
 * **process** provides the context in which the classification is meaningful.
 */
-
-
 abstract role Participant
 	has disjoint children
 		Volitional
