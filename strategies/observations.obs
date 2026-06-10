@@ -117,7 +117,7 @@ strategy 1 named quality.split.predicate
 //   for
 //   	each imod:Subject if type.predicates.count > 0,
 //   	each imod:Event if type.predicates.count > 0,
-//   	each imod:Relationships if type.predicates.count > 0
+//   	each imod:Relationship if type.predicates.count > 0
 //   let 
 //   	observable, predicate = type.operator.splitfirst, 
 //   	baseobservable = type.lexicalroot(this:Predicate)
