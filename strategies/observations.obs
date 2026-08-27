@@ -35,7 +35,7 @@ strategy 0 named substantial.direct
  * By adding $context we ensure there is no resolution of a dependent without a
  * context observation.
  */
- strategy 0 named dependent.direct
+strategy 0 named dependent.direct
    "As a first attempt, any concrete quality is just observed as it is."
    for 
    	  imod:Quality if type.concrete, 
@@ -50,7 +50,7 @@ strategy 0 named countables.direct
       each imod:Subject if type.concrete, 
       each imod:Agent if type.concrete,
       each imod:Event if type.concrete
-   observe $this // NO NEED TO DEFER - that's standard behavior
+   observe $this // NO NEED TO DEFER - that's standard behavior, every new observation is resolved
    // TODO not accepted resolve change in each $observable if context.occurrent
 ;
 
@@ -105,6 +105,15 @@ strategy 1 named quality.split.predicate
    let predicate, quality = type.predicates.splitfirst
    resolve $quality as rawquality
    transform rawquality through $predicate of $quality;
+
+// strategy 1 named substantial.split.predicate
+//    "Split a predicate from a quality and apply it through a transformer model after resolution"
+//    for 
+//       odo:Predicate imod:Subject if type.abstract,
+//       odo:Predicate imod:Agent if type.abstract
+//    let predicate, substantial = type.predicates.splitfirst
+//    resolve $substantial as rawsubstantial
+//    transform rawsubstantial through $predicate of $substantial;
 
 /**
  * For countables with concrete predicates: separate `@Observable` and `@Predicate`, 

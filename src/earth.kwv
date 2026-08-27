@@ -38,7 +38,6 @@ thing Region
 	 used."
 	 is imod:Areal earth:Location;
 
-
 thing Site
 	""
 	is imod:Puntal earth:Location;
@@ -80,12 +79,12 @@ The Earth's cover configurations are determined by a combination of climatic con
  */
 configuration EarthCover
 	"The configuration of physical materials at the surface of the earth."
-	is physical:SpatialArrangement of ((earth:Geolocated im:Thing) or (earth:Geolocated im:Agent))
+	is physical:SpatialArrangement of ((earth:Geolocated imod:Subject) or (earth:Geolocated imod:Agent))
 	within earth:Location;
 
 
 /**
- *To organize the different categories of terrestrial and aquatic environments based solely
+  To organize the different categories of terrestrial and aquatic environments based solely
   on their physical factors, we can focus on key attributes such as climate, geography, water
    availability, temperature, and soil type for terrestrial environments, and salinity, 
    depth, flow, and temperature for aquatic environments. Here is a structured organization 

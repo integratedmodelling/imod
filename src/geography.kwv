@@ -384,5 +384,5 @@ abstract individual identity Country is GeopoliticalIdentity
 
 @experimental
 quality TopographicHeterogeneity
-   is imod:Heterogeneity of earth:Terrain
+   is imod:Heterogeneity of geography:Terrain
    within earth:Location;
