@@ -82,7 +82,6 @@ configuration EarthCover
 	is physical:SpatialArrangement of ((earth:Geolocated imod:Subject) or (earth:Geolocated imod:Agent))
 	within earth:Location;
 
-
 /**
   To organize the different categories of terrestrial and aquatic environments based solely
   on their physical factors, we can focus on key attributes such as climate, geography, water

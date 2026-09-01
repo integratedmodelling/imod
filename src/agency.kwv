@@ -375,3 +375,94 @@ abstract role Participant
  * engagement with technology and the environment, aiming for a future that harmonizes human needs with the 
  * planet's ecological boundaries and the ethical use of technology.
 */
+
+
+/*
+ * TODO this should all be agency. Decision and agency are not that separate.
+ */    
+    
+//G: this concept should be reconsidered
+//F: yeah, right
+/** 
+ * Decisions are events that induce (cause) intentional transformation processes. There's no decision w/o intention, and no 
+ * intentional transformation w/o decision. Deeply intertwined.
+ * 
+ * Transformation moves from configuration A to configuration B. When decisions are involved, they may be classified according to
+ * the type of transformation they induce and the context of their existence. Specifically the type of agency needed by their
+ * context.
+ * 
+ * Group vs. Individual decision is a major dichotomy re: its consequences. These will end up in sociology/society. Also probably
+ * related to purpose which is the structuring criterion for the infrastructure domain.
+ */
+abstract process Decision
+     "Decision is a goal-oriented intentional (mental) activity"
+     is agency:Intentional physical:Activity within imod:Agent
+     implies imod:Goal;
+
+process Assessment
+    "The activity that represents observations made by the 'implicit' observer of the root context: the k.LAB user. Do not use without thinking hard first."
+    is Decision 
+    creates physical:InformationRealization;
+
+deniable attribute Compliant 
+    "Compliance is forced adherence to a law, regulation, rule, process or practice"
+    applies to Decision;
+
+deniable attribute Conformant 
+    "Conformance is voluntary adherence to a standard, rule, specification, requirement, design, process or practice."
+     applies to Decision;
+   
+attribute Feasible
+     "Describes the level of feasibility of an activity"
+     applies to physical:Activity
+     deniable as Unfeasible;
+
+//DOLCE and UFO
+// can we redesign "socialAgent" using the Agent keywords?
+@fixme("definitely belongs elsewhere and needs a real definition")
+abstract agent SocialAgent
+    "Social agent is an Agent created, managed and recognized by other agents, such as organization."
+    applies to Network
+    // nah - this should be a Social identity conferred by some SocialRelationship to the agents it links
+//    contains at least 2 Agent
+    ;
+ 
+ //DOLCE and UFO    
+@fixme("see above")
+abstract thing SocialObject
+     "Social agent is an Subject and recognized by other agents, such as law and money.";
+   
+deniable attribute Predicted
+//	is core observation:Predicted
+;
+
+//Comment: Remove as ordering, Severity as attribute
+deniable attribute Severity;
+
+deniable attribute Relevance 
+     "Describes the relevance of observables";
+     
+deniable attribute Planned
+    "Describes planned or unplanned events"
+    requires identity imod:Goal
+    applies to agency:Intentional imod:Event;
+    
+//From DOLCE ontology
+abstract event Achievement
+      "Atomic culminating event"
+      is agency:Intentional imod:Event
+      requires identity imod:Goal;
+
+//Comment: agreement on the superclass convention
+abstract attribute AchievementType 
+        "The type of achievement or non-achievement related to an outcome."
+            applies to Achievement
+            has children 
+            Realized, 
+            Potential,
+            Theoretical;
+            
+abstract attribute Appropriateness  
+     has children 
+     Appropriate, 
+     Inappropriate;
