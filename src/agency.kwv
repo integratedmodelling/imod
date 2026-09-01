@@ -377,10 +377,6 @@ abstract role Participant
 */
 
 
-/*
- * TODO this should all be agency. Decision and agency are not that separate.
- */    
-    
 //G: this concept should be reconsidered
 //F: yeah, right
 /** 

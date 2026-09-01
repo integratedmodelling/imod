@@ -56,7 +56,7 @@ abstract event RecurrentCalendarEvent
 		;
 
 abstract identity DayOfWeek
-	applies to Day
+	applies to calendar:Day
 	has disjoint children 
 		Monday,
 		Tuesday,
@@ -67,7 +67,7 @@ abstract identity DayOfWeek
 		Sunday;
 		
 abstract identity MonthOfYear
-	applies to Month
+	applies to calendar:Month
 	has disjoint children 
 	January,
          February,
