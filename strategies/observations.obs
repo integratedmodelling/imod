@@ -1,140 +1,118 @@
-/***
- * First-tier k.LAB observation strategies. These are the leaves of the 
- * tree in the observation strategy, resolving using the literal concepts and matching the exact observable. 
- * They contain the obvious "observe" statements for their observables, but if the latter
- * depend on instantiatable collectives (like relationships) they will force the observation 
- * of their contextual dependents too.
- * 
- * The only predefined variable for the observable pattern are `$this`, substituted by the
- * observable being resolved, and  `$context` for the observable of the context observation. 
- * Any other should be extracted using `let` and an extractor
- * functor. `$this` is also the implicit argument of any functor invoked without 
- * arguments.
- * 
- * TODO it must be illegal to define $this and $context using let
- */
+// DESIGN FIXTURE: not accepted by today's grammar; not an executable strategy document.
+// Companion contract: ../../OBSERVATION_STRATEGIES_EXAMPLE.md
+// The original eight strategy names and ranks are retained for traceability.
+// Version 2.0 is a proposed migration marker, not a released language version.
 strategies observations
-	version 1.0;
-	
-/*
- * TODO also enable enum values instead of full observable (and color-code)
- * COUNTABLE, ENUMERABLE, QUANTIFIABLE, QUALITY, OCCURRENT, SUBSTANTIAL
- * + the various qualities w/operators, PERCENTAGE, MASS etc
- */	
+  version 2.0;
 
 strategy 0 named substantial.direct
-	"Resolving a substantial is just a matter of finding models for it, and is optional because
-     the substantial can be acknowledged even without resolution."
-   for 
-   		imod:Subject if type.concrete, 
-   		imod:Agent if type.concrete, 
-   		imod:Relationship if type.concrete
-   observe $this optional;
+  for pattern {
+    node { 
+      kind = one_of(subject, agent, relationship);
+      collective = false; 
+      abstract = false; 
+    }
+  }
+  ensure request.fully_specified($this)
+  observe $this to direct;
 
-/**
- * By adding $context we ensure there is no resolution of a dependent without a
- * context observation.
- */
+// No-solution is handled by the semantic lifecycle after alternatives are exhausted.
+// It is not an empty successful graph. Review which individual kinds permit acknowledgement.
+
 strategy 0 named dependent.direct
-   "As a first attempt, any concrete quality is just observed as it is."
-   for 
-   	  imod:Quality if type.concrete, 
-   	  imod:Process if type.concrete
-   observe $this;
+  for pattern {
+    node { 
+      kind = one_of(quality, process); 
+      abstract = false; 
+    }
+  }
+  ensure 
+    context.exists(), 
+    request.fully_specified($this)
+  observe $this to direct;
 
 strategy 0 named countables.direct
-   "Basic default strategy for any concrete collective countable except relationships: instantiate, then defer resolution of each 
-    individual observation. This will match any predicates and operators since no restriction
-    is specified on the observable."
-   for 
-      each imod:Subject if type.concrete, 
-      each imod:Agent if type.concrete,
-      each imod:Event if type.concrete
-   observe $this // NO NEED TO DEFER - that's standard behavior, every new observation is resolved
-   // TODO not accepted resolve change in each $observable if context.occurrent
-;
+  for pattern {
+    node { 
+      kind = one_of(subject, agent, event); 
+      collective = true; 
+      abstract = false; }
+  }
+  ensure request.fully_specified($this)
+  observe $this to direct;
 
-// TODO strategies for abstract observables, expanding the observables and merging
+// Instantiation outcomes are acknowledged by the semantic lifecycle, not an authored loop.
 
 strategy 0 named relationships.direct
-   "Default strategy for relationship is equal to other countables but adds the resolution of target and source subjects"
-   for each imod:Relationship if type.concrete
-   let 
-      source = type.relationship.source,
-      target = type.relationship.target
-   resolve each $source
-   resolve each $target
-   observe $this;
- 
-/***
- * Second-tier strategies will use "resolve" for partial resolutions and various merging strategies. 
- * These may fail while being completed and after causing observations to be made.
- */      
-strategy 1 named countable.union
-   "Countables in OR can be resolved in stages and merged"
-   for 
-   		each (imod:Subject or imod:Subject) if type.concrete, 
-   		each (imod:Event or imod:Event) if type.concrete, 
-   		each (imod:Agent or imod:Agent) if type.concrete, 
-   		each (imod:Relationship or imod:Relationship) if type.concrete
-   let first, second = type.operator.splitfirst
-   resolve $first
-   resolve $second
-   apply observations.objects.union($first, $second);
+  for pattern {
+    node { 
+      kind = relationship; 
+      collective = true; 
+      abstract = false; 
+    }
+  }
+  ensure request.fully_specified($this)
+  let 
+    source = relationship.source($this), 
+    target = relationship.target($this)
+  resolve collective($source) to sources
+  resolve collective($target) to targets
+  observe $this with inputs(source = sources, target = targets) to connections;
+  
+// Endpoint roles bind separate producer graphs, not a guessed Cartesian product.
+// This explicit prerequisite form is a reviewed exception to a single-producer rank-zero rule.
 
-// next two should apply to booleans and categories   
+strategy 1 named countable.union
+  for pattern {
+    all(
+      node { collective = true; abstract = false; },
+      logical(or, operands = canonical [capture first as any, rest remaining])
+    )
+  }
+  ensure operands.same_countable_family($first, $remaining)
+  let left = collective($first), right = collective($remaining)
+  resolve $left to left_graph
+  resolve $right to right_graph
+  merge left_graph, right_graph using logical-union yielding $this
+;
+
 strategy 1 named enumerable.quality.union
-   "Types in OR can be resolved in stages and merged"
-   for imod:Quality or imod:Quality if type.categorical, type.concrete
-   let first, second = type.operator.splitfirst
-   resolve $first
-   resolve $second
-   apply observations.values.union($first, $second);
-   
+  for pattern {
+    all(
+      node { kind = quality; abstract = false; },
+      logical(or, operands = canonical [capture first as any, rest remaining])
+    )
+  }
+  ensure context.exists(), operands.enumerable_compatible($first, $remaining)
+  resolve $first to left_graph
+  resolve $remaining to right_graph
+  merge left_graph, right_graph using logical-union yielding $this
+;
+// Dispatch only a reviewed boolean or categorical signature. No generic numeric union.
+
 strategy 1 named enumerable.quality.intersection
-   "Types in AND: split first operand, resolve operand and reminder, then merge qualities"
-   for odo:EnumerableQuality and odo:EnumerableQuality
-   let first, second = type.operator.splitfirst
-   resolve $first
-   resolve $second
-   apply observations.values.intersection($first, $second);
+  for pattern {
+    all(
+      node { kind = quality; abstract = false; },
+      logical(and, operands = canonical [capture first as any, rest remaining])
+    )
+  }
+  ensure context.exists(), operands.enumerable_compatible($first, $remaining)
+  resolve $first to left_graph
+  resolve $remaining to right_graph
+  merge left_graph, right_graph using logical-intersection yielding $this
+;
+// Replaces the supplied odo:EnumerableQuality alias with a typed value-space check.
 
 strategy 1 named quality.split.predicate
-   "Split a predicate from a quality and apply it through a transformer model after resolution"
-   for PREDICATE QUALITY
-   let predicate, quality = type.predicates.splitfirst
-   resolve $quality as rawquality
-   transform rawquality through $predicate of $quality;
-
-// strategy 1 named substantial.split.predicate
-//    "Split a predicate from a quality and apply it through a transformer model after resolution"
-//    for 
-//       odo:Predicate imod:Subject if type.abstract,
-//       odo:Predicate imod:Agent if type.abstract
-//    let predicate, substantial = type.predicates.splitfirst
-//    resolve $substantial as rawsubstantial
-//    transform rawsubstantial through $predicate of $substantial;
-
-/**
- * For countables with concrete predicates: separate `@Observable` and `@Predicate`, 
- * resolve `@Observable`, then if successful resolve `@Predicate of each @Observable` using collective 
- * characterization. If that also fails, try resolving `@Predicate of @Observable` for each 
- * individual countable.
- */   
-//strategy 1 named countables.split.predicate
-//   "Split the first predicate, instantiate remainder, then classify"
-//   for
-//   	each imod:Subject if type.predicates.count > 0,
-//   	each imod:Event if type.predicates.count > 0,
-//   	each imod:Relationship if type.predicates.count > 0
-//   let 
-//   	observable, predicate = type.operator.splitfirst, 
-//   	baseobservable = type.lexicalroot(this:Predicate)
-//   ensure concrete(this:Predicate)
-//   resolve $predicate of each $observable
-//   apply observations.filter.predicates($observable, $predicate)
-//   resolve each $observable {
-//      resolve $predicate of $observable
-//   }, {
-//      resolve $baseobservable of $observable
-//   };
+  for pattern {
+    node { kind = quality; predicates = contains(any); }
+  }
+  let predicate, quality = predicates.split_first($this)
+  ensure context.exists(), predicate.concrete($predicate), transform.applicable($predicate, $quality)
+  resolve $quality to rawquality
+  observe inherent($predicate, $quality) to transformer
+  merge rawquality, transformer using transform yielding $this
+;
+// The transformer graph declares an open base-input port, bound by transform.
+// Missing/ambiguous ports reject the candidate; recursive resolution must make progress.
