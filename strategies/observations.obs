@@ -14,7 +14,9 @@ strategy 0 named substantial.direct
     }
   }
   ensure request.fully_specified($this)
-  observe $this to direct;
+  observe $this to direct
+  // yield direct
+  ;
 
 // No-solution is handled by the semantic lifecycle after alternatives are exhausted.
 // It is not an empty successful graph. Review which individual kinds permit acknowledgement.
@@ -29,7 +31,8 @@ strategy 0 named dependent.direct
   ensure 
     context.exists(), 
     request.fully_specified($this)
-  observe $this to direct;
+  observe $this to direct
+  yield direct;
 
 strategy 0 named countables.direct
   for pattern {
@@ -39,7 +42,8 @@ strategy 0 named countables.direct
       abstract = false; }
   }
   ensure request.fully_specified($this)
-  observe $this to direct;
+  observe $this to direct
+  yield direct;
 
 // Instantiation outcomes are acknowledged by the semantic lifecycle, not an authored loop.
 
