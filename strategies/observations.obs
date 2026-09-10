@@ -14,9 +14,7 @@ strategy 0 named substantial.direct
     }
   }
   ensure request.fully_specified($this)
-  observe $this to direct
-  // yield direct
-  ;
+  observe $this;
 
 // No-solution is handled by the semantic lifecycle after alternatives are exhausted.
 // It is not an empty successful graph. Review which individual kinds permit acknowledgement.
@@ -31,8 +29,7 @@ strategy 0 named dependent.direct
   ensure 
     context.exists(), 
     request.fully_specified($this)
-  observe $this to direct
-  yield direct;
+  observe $this;
 
 strategy 0 named countables.direct
   for pattern {
@@ -42,8 +39,7 @@ strategy 0 named countables.direct
       abstract = false; }
   }
   ensure request.fully_specified($this)
-  observe $this to direct
-  yield direct;
+  observe $this;
 
 // Instantiation outcomes are acknowledged by the semantic lifecycle, not an authored loop.
 
@@ -61,7 +57,7 @@ strategy 0 named relationships.direct
     target = relationship.target($this)
   resolve collective($source) to sources
   resolve collective($target) to targets
-  observe $this with inputs(source = sources, target = targets) to connections;
+  observe $this with inputs(source = sources, target = targets);
   
 // Endpoint roles bind separate producer graphs, not a guessed Cartesian product.
 // This explicit prerequisite form is a reviewed exception to a single-producer rank-zero rule.
@@ -77,8 +73,7 @@ strategy 1 named countable.union
   let left = collective($first), right = collective($remaining)
   resolve $left to left_graph
   resolve $right to right_graph
-  merge left_graph, right_graph using logical-union yielding $this
-;
+  merge left_graph, right_graph using logical-union yielding $this;
 
 strategy 1 named enumerable.quality.union
   for pattern {
@@ -90,10 +85,9 @@ strategy 1 named enumerable.quality.union
   ensure context.exists(), operands.enumerable_compatible($first, $remaining)
   resolve $first to left_graph
   resolve $remaining to right_graph
-  merge left_graph, right_graph using logical-union yielding $this
-;
-// Dispatch only a reviewed boolean or categorical signature. No generic numeric union.
+  merge left_graph, right_graph using logical-union yielding $this;
 
+// Dispatch only a reviewed boolean or categorical signature. No generic numeric union.
 strategy 1 named enumerable.quality.intersection
   for pattern {
     all(
@@ -104,19 +98,23 @@ strategy 1 named enumerable.quality.intersection
   ensure context.exists(), operands.enumerable_compatible($first, $remaining)
   resolve $first to left_graph
   resolve $remaining to right_graph
-  merge left_graph, right_graph using logical-intersection yielding $this
-;
-// Replaces the supplied odo:EnumerableQuality alias with a typed value-space check.
+  merge left_graph, right_graph using logical-intersection yielding $this;
 
 strategy 1 named quality.split.predicate
   for pattern {
-    node { kind = quality; predicates = contains(any); }
+    node { 
+      kind = quality; 
+      predicates = contains(any); 
+    }
   }
   let predicate, quality = predicates.split_first($this)
-  ensure context.exists(), predicate.concrete($predicate), transform.applicable($predicate, $quality)
+  ensure 
+    context.exists(), 
+    predicate.concrete($predicate), 
+    transform.applicable($predicate, $quality)
   resolve $quality to rawquality
   observe inherent($predicate, $quality) to transformer
-  merge rawquality, transformer using transform yielding $this
-;
+  merge rawquality, transformer using transform yielding $this;
+
 // The transformer graph declares an open base-input port, bound by transform.
 // Missing/ambiguous ports reject the candidate; recursive resolution must make progress.
