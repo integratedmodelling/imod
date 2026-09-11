@@ -118,3 +118,19 @@ strategy 1 named quality.split.predicate
 
 // The transformer graph declares an open base-input port, bound by transform.
 // Missing/ambiguous ports reject the candidate; recursive resolution must make progress.
+// Semantic-update strategies: enabled for execution after the operation-target runtime milestone.
+strategy 0 named classification.members
+  for pattern {
+    node {
+      activity = CLASSIFICATION;
+      inherent = capture members as node { collective = true; };
+    }
+  }
+  ensure context.exists()
+  resolve $members to cohort
+  observe $this with inputs(members = cohort);
+
+strategy 0 named characterization.direct
+  for pattern { node { activity = CHARACTERIZATION; } }
+  ensure context.exists()
+  observe $this;
