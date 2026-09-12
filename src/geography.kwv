@@ -6,7 +6,6 @@ ontology geography
 angle Heading
 	"A direction relative to the geographical North of the earth.";
 
-@colormap(name='elevation')
 length Elevation 
 	"Geographical elevation above sea level, as described by a digital
 	 elevation model."
@@ -28,7 +27,6 @@ length BathymetricDepth
 	is physical:Height within earth:Location
 ;
 
-@colormap(values = {0: white 90: black})
 angle Slope
    "Inclination of the above-water terrain in a geographical region."
    is imod:Angle within earth:Location;
