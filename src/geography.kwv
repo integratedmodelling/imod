@@ -6,6 +6,7 @@ ontology geography
 angle Heading
 	"A direction relative to the geographical North of the earth.";
 
+@colormap("terrain", center=0)
 length Elevation 
 	"Geographical elevation above sea level, as described by a digital
 	 elevation model."

@@ -14,17 +14,17 @@ abstract rescaling attribute Transformed
    		/**
    		 * 
    		 */
-        @colormap(jet) Normalized 
+        Normalized 
             "Normalization transforms all the values in a numeric state so that they all fit within a 0-1 range, independent of the original magnitude.",
         /**
          * 
          */
-        @colormap(jet) Standardized 
+        Standardized 
             "Standardization transforms all the values in a numeric state by subtracting the mean of all values and dividing by their standard deviation.",
         /**
          * 
          */
-        @colormap(jet) Ranked
+        Ranked
             "Modifies a quantity into another that only guarantees (linear or nonlinear) proportionality with the original. Can be used to 
              substitute the use of 'magnitude of' as long as the result is numerically consistent for all uses of the resulting semantics. 
              Should be qualified with a range in the 'is' clause whenever possible."
