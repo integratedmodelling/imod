@@ -16,7 +16,8 @@ ontology agency
 attribute Intentional
 	"Intention is a mental state (e.g. goal, belief, desire)"
 	deniable as Unintentional
-	implies imod:Goal;
+	// implies imod:Goal
+    ;
 	
 /***
  A clean taxonomy would separate **what the agent is**, **what the agent is in a context**, and
@@ -393,20 +394,22 @@ abstract role Participant
 abstract process Decision
      "Decision is a goal-oriented intentional (mental) activity"
      is agency:Intentional physical:Activity within imod:Agent
-     implies imod:Goal;
+    //  implies imod:Goal
+     ;
 
 process Assessment
     "The activity that represents observations made by the 'implicit' observer of the root context: the k.LAB user. Do not use without thinking hard first."
-    is Decision 
-    creates physical:InformationRealization;
+    is agency:Decision 
+    // creates physical:InformationRealization
+    ;
 
 deniable attribute Compliant 
     "Compliance is forced adherence to a law, regulation, rule, process or practice"
-    applies to Decision;
+    applies to agency:Decision;
 
 deniable attribute Conformant 
     "Conformance is voluntary adherence to a standard, rule, specification, requirement, design, process or practice."
-     applies to Decision;
+     applies to agency:Decision;
    
 attribute Feasible
      "Describes the level of feasibility of an activity"
@@ -418,7 +421,7 @@ attribute Feasible
 @fixme("definitely belongs elsewhere and needs a real definition")
 abstract agent SocialAgent
     "Social agent is an Agent created, managed and recognized by other agents, such as organization."
-    applies to Network
+    applies to imod:Network
     // nah - this should be a Social identity conferred by some SocialRelationship to the agents it links
 //    contains at least 2 Agent
     ;
@@ -440,19 +443,20 @@ deniable attribute Relevance
      
 deniable attribute Planned
     "Describes planned or unplanned events"
-    requires identity imod:Goal
+    // requires identity imod:Goal
     applies to agency:Intentional imod:Event;
     
 //From DOLCE ontology
 abstract event Achievement
       "Atomic culminating event"
       is agency:Intentional imod:Event
-      requires identity imod:Goal;
+    //   requires identity imod:Goal
+      ;
 
 //Comment: agreement on the superclass convention
 abstract attribute AchievementType 
         "The type of achievement or non-achievement related to an outcome."
-            applies to Achievement
+            applies to agency:Achievement
             has children 
             Realized, 
             Potential,

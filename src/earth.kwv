@@ -29,7 +29,7 @@ thing Planet;
 
 // THE PLANET - articulate
 identity Earth
-	applies to Planet;
+	applies to earth:Planet;
 
 thing Region 
 	"An Earth Region is a section of the Earth realm delimited in volumetric space, 
@@ -152,7 +152,7 @@ abstract realm PhysicalEnvironment
 	 are commonly classified as ecology:Biome, these are purely physical in their definition; 
      biotic factors can be added to obtain ecology:Habitat, and ecological communities make the
      latter into ecology:Biome."
-	classifies im:Type of earth:EarthCover
+	classifies imod:Type of earth:EarthCover
 	has disjoint children
 		(Terrestrial
 			"Refers here to anything found on land ecoregions, as distinct from freshwater 
@@ -340,8 +340,9 @@ thing Coast
 thing Coastline
 	"The boundary between land and an adjacent @Coast."
 	is physical:SpatialBoundary 
-		of (earth:Region adjacent to earth:Aquatic /* (earth:Marine or earth:Lacustrine) */ earth:Region)
-		adjacent to earth:Aquatic /* (earth:Marine or earth:Lacustrine) */  earth:Region;
+		// of (earth:Region adjacent to earth:Aquatic /* (earth:Marine or earth:Lacustrine) */ earth:Region)
+		// adjacent to earth:Aquatic /* (earth:Marine or earth:Lacustrine) */  earth:Region
+		;
 
 attribute WaterFlowDirection
 	has children
@@ -350,12 +351,12 @@ attribute WaterFlowDirection
 		
 functional relationship StreamConnection
 	""
-	links StreamJunction to StreamJunction;
+	links earth:StreamJunction to earth:StreamJunction;
 		
 @fixme("not sure of the connection as relationship")
 configuration StreamNetwork
 	"The network built by streams joined by stream connections"
-	applies to Region
+	applies to earth:Region
 	is imod:Network of earth:StreamConnection;
 
 abstract identity PrecipitationType
@@ -363,15 +364,15 @@ abstract identity PrecipitationType
 	has children
 		(Rain 
 			""
-			inherits physical:Liquid
+			// inherits physical:Liquid
 		),
 		(Snow 
 			""
-			inherits physical:Solid
+			// inherits physical:Solid
 		),
 		(Hail 
 			""
-			inherits physical:Solid
+			// inherits physical:Solid
 		);
 
 /*
@@ -381,7 +382,7 @@ abstract identity PrecipitationType
 volume PrecipitationVolume 
 	""
 	is /* IUPAC:Water */ imod:Volume 
-	within Location;
+	within earth:Location;
 
 volume RainfallVolume 
 	is earth:PrecipitationVolume
@@ -389,23 +390,23 @@ volume RainfallVolume
 	;
 
 volume SnowfallVolume 
-	is PrecipitationVolume
-	inherits Snow;
+	is earth:PrecipitationVolume
+	inherits earth:Snow;
 
 volume HailVolume 
-	is PrecipitationVolume
-	inherits Hail;
+	is earth:PrecipitationVolume
+	inherits earth:Hail;
 
 temperature AtmosphericTemperature
 	""
-	is earth:AtmosphericBottomLayer imod:Temperature of earth:Location;
+	is /* earth:AtmosphericBottomLayer */ imod:Temperature of earth:Location;
 
 /*
  * EVENTS
  */
 abstract event MeteorologicalEvent
 	""
-	is GeolocatedEvent
+	// is earth:GeolocatedEvent
 	has children
 		(Storm),
 		(Lightning),
@@ -436,19 +437,19 @@ abstract event GeologicalEvent
 process Precipitation 
  			""
  			is /* IUPAC:Water */ earth:MeteorologicalProcess
-			creates PrecipitationVolume
+			creates earth:PrecipitationVolume
  			has children
  				(Rainfall
  					""
- 					creates RainfallVolume
+ 					creates earth:RainfallVolume
  				),
  				(Snowfall
  					""
- 					creates SnowfallVolume
+ 					creates earth:SnowfallVolume
  				),
  				(Hailing
  					""
- 					creates HailVolume
+ 					creates earth:HailVolume
  				) 				
 ;
 
@@ -460,15 +461,15 @@ energy SolarRadiation
 	// TODO specify solar source
 	// TODO check for realm-specific children to be added
 	is imod:Energy 
-	within Location
+	within earth:Location
 ;
 
 @deprecated
 process Weather
 	"Catch-all for the set of processes that determine the perceived weather. Weather should more
 	 properly be defined as a configuration."
-	is MeteorologicalProcess within Location
-	creates PrecipitationVolume, AtmosphericTemperature, SolarRadiation, Storm;
+	is earth:MeteorologicalProcess within earth:Location
+	creates earth:PrecipitationVolume, earth:AtmosphericTemperature, earth:SolarRadiation, earth:Storm;
 
 thing GeoFormation
 	"Geomorphon classification as is. If possible should be kept as a fully
@@ -527,14 +528,14 @@ abstract attribute WeatherDominance
 	
 configuration Bathymetry
 	"The vertical and horizontal dimensions of underwater Earth surfaces"
-	is physical:SpatialArrangement of (earth:Aquatic earth:Region)
+	// is physical:SpatialArrangement of (earth:Aquatic earth:Region)
 	//applies to earth:Aquatic earth:Location
 	;	
 
 configuration LandCover
 	""
 	is earth:Terrestrial earth:EarthCover
-	applies to Location;
+	applies to earth:Location;
 
 @todo
 abstract process LandformingProcess

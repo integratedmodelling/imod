@@ -58,11 +58,11 @@ abstract configuration Vulnerability
 abstract configuration Exposure
 	"The compresence of assets with hazards that affect them."
 	emerges from (valuation:Asset with valuation:Hazard) within imod:Subject
-	creates ExposureMetric;
+	creates valuation:ExposureMetric;
 	
 abstract configuration Risk
 	"The compresence of exposure, implying assets threatened by hazards, with the vulnerability of the same assets."
 	emerges from (valuation:Exposure with valuation:Vulnerability) within imod:Subject
-	creates RiskMetric;
+	creates valuation:RiskMetric;
 
 	

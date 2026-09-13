@@ -16,13 +16,14 @@ ontology infrastructure
 abstract thing Artifact
     "Artifact is intentionally created by an agent for a goal"
 //    is decision:Intentional imod:Subject
-    implies imod:Goal;
+    // implies imod:Goal
+    ;
 
 @fixme("Really not sure of the 'role for goal' thing which seems to be an abuse of the 'for' operator.")
 abstract role Resource
      "A resource is the role that objects plays in the context of activities or plans to achieve goals"
 //     is /* decision:Relevance */ imod:Role for 
-     applies to imod:Goal
+    //  applies to imod:Goal
      has children
      	@fixme("Do we need these or just the attributes for the nature/provenance of any subject?")
         NaturalResource,
@@ -30,6 +31,5 @@ abstract role Resource
         	@fixme("If these are equivalents we need something very different than 'applies to'")
         	HumanMadeResource
         		"HumanMade resources are the equivalent of artifacts."
-        		applies to Artifact
+        		applies to infrastructure:Artifact
         );
-	

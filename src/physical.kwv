@@ -66,7 +66,7 @@ abstract quality Frequency
 abstract duration Period
 	"The time between two repetitions of an event. If the events are described by a quality in continuous time, it 
      describes the distance between high points on a wave function. Inversely proportional to frequency."
-	decreases with Frequency;
+	decreases with physical:Frequency;
 
 /**
  * 
@@ -79,7 +79,7 @@ abstract angle Direction;
 abstract quantity Diversity
    "Diversity is the quantity of the range of characteristics found in subjects and agents."; 
 
-abstract quantity Heterogeneity equals Diversity;
+abstract quantity Heterogeneity equals physical:Diversity;
 
 //Specialized processes
 abstract identity TransitiveProcess 
@@ -107,8 +107,8 @@ abstract identity IntransitiveProcess
 	
 abstract process Transformation
     "Any endogenous transformation happening in a system and affecting its internal structure."
-    inherits IntransitiveProcess
-    applies to imod:System
+    inherits physical:IntransitiveProcess
+    applies to imod:PhysicalSystem
     has children 
 		(Coupling
 			"Building of interactions. Can affect the mereological identity of the system by creating groups."
@@ -136,11 +136,11 @@ abstract process Activity
     is /* decision:Intentional */ imod:Process;
     
 abstract role ValueActivity
-     applies to Activity;
+     applies to physical:Activity;
      
 //Participation: specified in ODO or operators
 abstract event Participation
-      applies to Participant
+      applies to imod:Subject, imod:Agent
       has children
        Active,
        Passive;
@@ -161,17 +161,18 @@ abstract event Change
 //Input - output should be renamed in a more abstract way
 abstract event Input
     "Input is an event that triggers another event or process."
-    is Change;
+    is physical:Change;
 
 abstract event Output
     "Output is an event generated from another event or process."
-    is Change;
+    is physical:Change;
   
 //in ODO. it should  an "event"    
-process Creation
-    "Creation is the intentional activity of developing something for a purpose"
-    is /* decision:Intentional */ physical:Activity
-    requires identity imod:Goal;
+// process Creation
+//     "Creation is the intentional activity of developing something for a purpose"
+//     is /* decision:Intentional */ physical:Activity
+//     requires identity imod:Goal
+// 	;
 
     
 //Tahko, Tuomas E. and E. Jonathan Lowe, "Ontological Dependence", The Stanford Encyclopedia of Philosophy (Fall 2020 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/fall2020/entries/dependence-ontological/>.
@@ -187,7 +188,7 @@ abstract relationship Dependence
 		),
 		(abstract CooccurrenceDependence
 			"X and Y are both necessary for the satisfaction of a goal"
-		requires identity imod:Goal	
+		// requires identity imod:Goal	
 		); 
 
 //Specialized physical predicates
@@ -245,7 +246,7 @@ abstract subjective ordering VolumeLevel
 @todo("Not sure, but consider adding sealed (giving errors at the moment)")
 abstract ordering Periodicity
 	""
-	describes Period
+	describes physical:TimeInterval
 	has children
 		(Sporadic 
 			""
@@ -273,7 +274,7 @@ deniable attribute Perceivable
 @fixme("Not sure about this, but assuming it's useful it's normally intended as a quality or a role for it rather than for events")
 abstract role Throughput 
    "The quantifiable amount of matter, energy or information transferred through a flow connection."
-   applies to Output;
+   applies to physical:Output;
 
 @fixme("Does this really imply participation in events?")
 abstract role Participant
@@ -300,7 +301,7 @@ abstract thing SpatialBoundary
  //Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
 abstract extent TemporalBoundary 
     "A temporal boundary is the temporal delimitation between entities."
-     inherits TimePosition;
+     inherits physical:TimeInterval;
      
 // time concepts
 

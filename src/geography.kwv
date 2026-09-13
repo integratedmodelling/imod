@@ -77,7 +77,7 @@ abstract identity GeographicalIdentity
 
 //Potentially useful e.g., to distinguish that the cold season is in the winter in the Northern Hemisphere and summer in the Southern Hemisphere.
 //Northern is of course not actually disjoint with eastern/western - so may need to be split differently.
-abstract identity Hemisphere is RegionalIdentity
+abstract identity Hemisphere is geography:RegionalIdentity
 	has children
 	(abstract LatitudinalHemisphere
 		has disjoint children
@@ -90,16 +90,16 @@ abstract identity Hemisphere is RegionalIdentity
 			WesternHemisphere
 	);
 
-abstract identity Continental is RegionalIdentity
+abstract identity Continental is geography:RegionalIdentity
 	has disjoint children
-		(African inherits WesternHemisphere),
-		(Antarctic inherits SouthernHemisphere),
-		(Asian inherits EasternHemisphere),
-		(Australian inherits SouthernHemisphere, EasternHemisphere),
-		(European inherits NorthernHemisphere, WesternHemisphere),
-		(NorthAmerican inherits NorthernHemisphere, WesternHemisphere),
-		(Oceanian inherits SouthernHemisphere, EasternHemisphere),
-		(SouthAmerican inherits WesternHemisphere); 
+		(African inherits geography:WesternHemisphere),
+		(Antarctic inherits geography:SouthernHemisphere),
+		(Asian inherits geography:EasternHemisphere),
+		(Australian inherits geography:SouthernHemisphere, geography:EasternHemisphere),
+		(European inherits geography:NorthernHemisphere, geography:WesternHemisphere),
+		(NorthAmerican inherits geography:NorthernHemisphere, geography:WesternHemisphere),
+		(Oceanian inherits geography:SouthernHemisphere, geography:EasternHemisphere),
+		(SouthAmerican inherits geography:WesternHemisphere); 
  
  
 // TODO harmonize with the above, which must be fixed.
@@ -123,7 +123,7 @@ abstract identity ContinentalRegion
  * TODO add other key geographic areas
  */ 
 @todo("Some kind soul please start adding ISO country codes as metadata")
-abstract individual identity Country is GeopoliticalIdentity 
+abstract individual identity Country is geography:GeopoliticalIdentity 
 			has disjoint children
 				Afghanistan,                 
 				Albania, 
@@ -133,12 +133,12 @@ abstract individual identity Country is GeopoliticalIdentity
                 Andorra,                     
                 Angola,                      
                 Anguilla                    ,
-                (Antarctica inherits Antarctic), //Review                   
+                (Antarctica inherits geography:Antarctic), //Review                   
                 AntiguaAndBarbuda,           
                 Argentina,                   
                 Armenia,                    
                 Aruba                       ,
-                (Australia inherits Australian),                   
+                (Australia inherits geography:Australian),                   
                 Austria, 
                 Azerbaijan,                  
                 Bahamas,                     

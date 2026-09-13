@@ -157,7 +157,7 @@ configuration PhysicalSystem
 abstract domain Physical
 	"The basic ontology domain for things that are conceptualized as existent. Namespaces in this domain have to do
      with the world, not with its epistemological explanation or interpretation."
-     applies to PhysicalSystem;
+     applies to imod:PhysicalSystem;
 
 /***
  * @@ Knowledge domains are epistemological takes on a system. Different disciplines may coexist in the attempt to
@@ -165,7 +165,7 @@ abstract domain Physical
  */
 domain Knowledge
 	"The basic epistemology domain. Has to do with explanations and is always connected to a physical domain."
-	applies to PhysicalSystem;
+	applies to imod:PhysicalSystem;
 
 /*
  * TODO there should be a mechanism to link all fundamental types to the core ontology and validate
@@ -216,11 +216,11 @@ abstract identity Outcome
  * model it within itself.
  */
 
-@fixme("The 'requires identity' clause needs revision, here and elsewhere. Implication (to be understood) is a likely candidate.")
-abstract identity ConceptualBoundary 
-     //metadata { plato.stanford.edu/entries/boundary/ }
-    "A conceptual boundary is the conceptual delimitation that allows the identification of entities"
-     requires identity Goal;
+// @fixme("The 'requires identity' clause needs revision, here and elsewhere. Implication (to be understood) is a likely candidate.")
+// abstract identity ConceptualBoundary 
+//      //metadata { plato.stanford.edu/entries/boundary/ }
+//     "A conceptual boundary is the conceptual delimitation that allows the identification of entities"
+//      requires identity imod:Goal;
      
 // State of affair: https://plato.stanford.edu/entries/states-of-affairs/#:~:text=States%20of%20affairs%20are%20similar,explained%20further)%20objects%20and%20properties.
 //abstract identity StateOfAffairs
@@ -291,7 +291,7 @@ role Reference
 
 //@todo("check extraction of attributes")
 role Indicator 
-   applies to Quantity
+   applies to imod:Quantity
    has children   
      // NAH capture this in attributes
      (AbsoluteIndicator
@@ -322,24 +322,24 @@ abstract event Event
 @todo("see note above for the 'requires identity' clause")
 deniable attribute Positive
     "Describes the positive or negative outcome of an event or a subject."
-    requires identity Outcome;
+    requires identity imod:Outcome;
 
 @todo("Must articulate relationship vs. bond and functional vs. structural, as these are fundamental and disjoint.")   
 abstract relationship Relationship
       "A relationship directionally connects two subjects or agents."
     is core odo:Relationship
-    has disjoint children
-        (StructuralRelationship
-        	"Structural relationships between two substantials (relata) allow another substantial (relator) to emerge."
-        	is core odo:StructuralRelationship
-        	),
-        (FunctionalRelationship
-        	"Functional relationships between two substantials (relata) allow an event (relator) to emerge."
-        	is core odo:FunctionalRelationship
-        	),
-        (Bond
-        "Bi-directional relationship between substantials"	
-        )
+   //  has disjoint children
+   //      (StructuralRelationship
+   //      	"Structural relationships between two substantials (relata) allow another substantial (relator) to emerge."
+   //      	is core odo:StructuralRelationship
+   //      	),
+   //      (FunctionalRelationship
+   //      	"Functional relationships between two substantials (relata) allow an event (relator) to emerge."
+   //      	is core odo:FunctionalRelationship
+   //      	),
+   //      (Bond
+   //      "Bi-directional relationship between substantials"	
+   //      )
     ;
 
 abstract configuration Configuration
@@ -356,7 +356,7 @@ abstract configuration Network
       ),
       (
       abstract IntentionalNetwork
-      inherits Outcome  
+      inherits imod:Outcome  
       );
 
 /**
@@ -392,20 +392,23 @@ abstract duration Duration
         they should refer to klab: namespace as they're needed in the software.")
 abstract area Area 
    is core odo:Area 
-   requires identity (imod:Areal or imod:Volumetric);
+   // requires identity (imod:Areal or imod:Volumetric)
+   ;
 
 abstract length Length
    is core odo:Length 
-   requires identity (imod:Lineal or imod:Areal or imod:Volumetric);       
+   // requires identity (imod:Lineal or imod:Areal or imod:Volumetric)
+   ;       
 
 //Artifact capability inspired by: Borgo, S., Vieu, L.: Artefacts in formal ontology. In: Philosophy of technology and engineering sciences
 abstract attribute Capability
      "Capability is the described quality of certain artifacts and natural agents."
-     requires identity Goal
-     describes Quality
-     has disjoint children
-        ArtifactCapability,
-        NaturalCapability;
+   //   requires identity imod:Goal
+   //   describes imod:Quality
+   //   has disjoint children
+   //      ArtifactCapability,
+   //      NaturalCapability
+;
         
 //abstract attribute AttributedCapability
 //     "Attributed capability refers to capabilities of artifacts and natural agents assigned by other agent."
@@ -452,25 +455,29 @@ abstract mass Mass
    "Property of matter that quantifies the amount of substance in an object. 
     Typically measured in units such as kilograms (kg) or grams (g)."
    is core odo:Mass 
-   requires identity Volumetric;
+   // requires identity imod:Volumetric
+   ;
 
 abstract amount Amount
    "Refers to a quantitative measure or quantity of something. 
     It represents the magnitude or volume of a substance, object, or phenomenon, and can be expressed numerically or qualitatively."
    is core odo:Amount
-   requires identity Volumetric;
+   // requires identity imod:Volumetric
+   ;
 
 abstract volume Volume
    "Measure of the three-dimensional space occupied by an object or substance. It quantifies the amount of space enclosed by the boundaries 
    of the object or substance and is typically measured in cubic units such as cubic meters or cubic centimeters." 
    is core odo:Volume
-   requires identity Volumetric;
+   // requires identity imod:Volumetric
+   ;
    
 abstract weight Weight
    "The force exerted on an object due to gravity. 
    Typically expressed in units of force such as newtons (N) or pounds-force (lbf)."  
    is core odo:Weight  
-   requires identity Volumetric;
+   // requires identity imod:Volumetric
+   ;
    
 abstract quantity Proportion
    "The relative size, quantity, or magnitude of one element compared to another within a given context. 
@@ -511,11 +518,11 @@ abstract quantity PreferenceValue
    
 abstract role ValueObject
      "An entity that embodies, represents, or holds value, which may include but is not limited to monetary, conceptual, or symbolic value."
-     applies to Subject;
+     applies to imod:Subject;
      
 abstract relationship ValuationRelationship
      "Connection or association between entities or concepts that involves the assessment, determination, or assignment of value."
-     links Agent to Subject;
+     links imod:Agent to imod:Subject;
 
 attribute Regular
     "State or condition characterized by consistency, orderliness, or adherence to established patterns or rules."
@@ -548,45 +555,47 @@ abstract attribute MeasurementRelated
             
 abstract extent Time 
      is core odo:Time 
-     has disjoint children 
-     (RegularTime 
-         "Regular time is observed as a grid of equal contiguous durations." 
-          inherits imod:Regular
-     ),
-     (IrregularTime 
-      "Irregular time is observed as contiguous sequence of intervals of possibly different duration."
-     inherits imod:Irregular
-     );
+   //   has disjoint children 
+   //   (RegularTime 
+   //       "Regular time is observed as a grid of equal contiguous durations." 
+   //        inherits imod:Regular
+   //   ),
+   //   (IrregularTime 
+   //    "Irregular time is observed as contiguous sequence of intervals of possibly different duration."
+   //   inherits imod:Irregular
+   //   )
+     ;
     
 //Spatial extent
  
  abstract extent Space 
     "Space in the IM worldview is 0, 1,2 or 3-dimensional, with implied traits that describe human perception and modalities of description proper of an Euclidean view of the world."
     is core odo:Space
-    has disjoint children ( 
-       PuntalSpace 
-       inherits Puntal
-       ),
-       (LinealSpace
-         inherits Lineal
-       ),
-       (abstract ArealSpace 
-           inherits Areal 
-           has children 
-               (GridSpace  
-                  inherits Regular 
-                ),
-                (VectorSpace
-                inherits Irregular  
-                )
-       ),
-       (abstract VolumetricSpace
-         inherits Volumetric
-             has children
-                  (VoxelSpace
-                  inherits Regular  
-                  ),
-                  (PolyedricSpace
-                  inherits Irregular   
-                  )
-            );
+   //  has disjoint children ( 
+   //     PuntalSpace 
+   //     inherits imod:Puntal
+   //     ),
+   //     (LinealSpace
+   //       inherits imod:Lineal
+   //     ),
+   //     (abstract ArealSpace 
+   //         inherits imod:Areal 
+   //         has children 
+   //             (GridSpace  
+   //                inherits imod:Regular 
+   //              ),
+   //              (VectorSpace
+   //              inherits imod:Irregular  
+   //              )
+   //     ),
+   //     (abstract VolumetricSpace
+   //       inherits imod:Volumetric
+   //           has children
+   //                (VoxelSpace
+   //                inherits imod:Regular  
+   //                ),
+   //                (PolyedricSpace
+   //                inherits imod:Irregular   
+   //                )
+   //          )
+            ;
