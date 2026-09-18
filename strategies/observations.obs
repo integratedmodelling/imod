@@ -1,4 +1,4 @@
-// DESIGN FIXTURE: not accepted by today's grammar; not an executable strategy document.
+// Default observation strategies. CONNECTION resolves endpoint collectives before model discovery.
 // Companion contract: ../../OBSERVATION_STRATEGIES_EXAMPLE.md
 // The original eight strategy names and ranks are retained for traceability.
 // Version 2.0 is a proposed migration marker, not a released language version.
@@ -41,12 +41,12 @@ strategy 0 named countables.direct
   ensure request.fully_specified($this)
   observe $this;
 
-// Instantiation outcomes are acknowledged by the semantic lifecycle, not an authored loop.
+// Instantiation outcomes are acknowledged by the semantic lifecycle.
 
 strategy 0 named relationships.direct
   for pattern {
     node { 
-      kind = relationship; 
+      kind = relationship; activity = CONNECTION; 
       collective = true; 
       abstract = false; 
     }
@@ -59,7 +59,7 @@ strategy 0 named relationships.direct
   resolve collective($target) to targets
   observe $this with inputs(source = sources, target = targets);
   
-// Endpoint roles bind separate producer graphs, not a guessed Cartesian product.
+// Endpoint roles bind separate producer graphs.
 // This explicit prerequisite form is a reviewed exception to a single-producer rank-zero rule.
 
 strategy 1 named countable.union
