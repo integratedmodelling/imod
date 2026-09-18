@@ -157,7 +157,8 @@ configuration PhysicalSystem
 abstract domain Physical
 	"The basic ontology domain for things that are conceptualized as existent. Namespaces in this domain have to do
      with the world, not with its epistemological explanation or interpretation."
-     applies to imod:PhysicalSystem;
+   //   applies to imod:PhysicalSystem
+     ;
 
 /***
  * @@ Knowledge domains are epistemological takes on a system. Different disciplines may coexist in the attempt to
@@ -165,7 +166,8 @@ abstract domain Physical
  */
 domain Knowledge
 	"The basic epistemology domain. Has to do with explanations and is always connected to a physical domain."
-	applies to imod:PhysicalSystem;
+//	applies to imod:PhysicalSystem
+   ;
 
 /*
  * TODO there should be a mechanism to link all fundamental types to the core ontology and validate
@@ -279,30 +281,6 @@ abstract role Role
     "Role specifies predicates that can be played by a concept in a context"
    is core odo:Role;
    
-attribute Comparable
-   "Describes the ability to rank an object over another one."
-   deniable as Incomparable
-   applies to imod:Concordance;
-
-role Reference
-    "Applied to an observation used as reference to compute the primary observation by comparison. 
-     Can be linked to a rescaling filters to shift the context of observation made in different space and time."
-    implies imod:Comparable;
-
-//@todo("check extraction of attributes")
-role Indicator 
-   applies to imod:Quantity
-   has children   
-     // NAH capture this in attributes
-     (AbsoluteIndicator
-     "An absolute indicator has values that range between a known minimum and maximum. Its value corresponds 
-      to a state that is fully understood in terms of the indicator."  
-       ),
-     (RelativeIndicator 
-     "A relative indicator can only compare two states of the same entity within the same context of observation.
-      It does not suggest any absolute value for the state it refers to."
-     );
-
 /**
  * Observable
  */
@@ -322,7 +300,8 @@ abstract event Event
 @todo("see note above for the 'requires identity' clause")
 deniable attribute Positive
     "Describes the positive or negative outcome of an event or a subject."
-    requires identity imod:Outcome;
+   //  requires identity imod:Outcome
+    ;
 
 @todo("Must articulate relationship vs. bond and functional vs. structural, as these are fundamental and disjoint.")   
 abstract relationship Relationship
@@ -505,6 +484,31 @@ abstract priority Priority
 abstract priority Concordance
 "Conceptual distance from an idea or theory"
 ;
+
+attribute Comparable
+   "Describes the ability to rank an object over another one."
+   deniable as Incomparable
+   applies to imod:Concordance;
+
+role Reference
+    "Applied to an observation used as reference to compute the primary observation by comparison. 
+     Can be linked to a rescaling filters to shift the context of observation made in different space and time."
+//    implies imod:Comparable
+    ;
+
+//@todo("check extraction of attributes")
+role Indicator 
+   applies to imod:Quantity
+   has children   
+     // NAH capture this in attributes
+     (AbsoluteIndicator
+     "An absolute indicator has values that range between a known minimum and maximum. Its value corresponds 
+      to a state that is fully understood in terms of the indicator."  
+       ),
+     (RelativeIndicator 
+     "A relative indicator can only compare two states of the same entity within the same context of observation.
+      It does not suggest any absolute value for the state it refers to."
+     );
 
 //Value
 

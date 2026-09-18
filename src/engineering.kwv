@@ -1,4 +1,4 @@
 ontology engineering
 	""
 	version 1.0
-	in domain imod:Knowledge of imod:Technosphere;
+	in domain imod:Knowledge;

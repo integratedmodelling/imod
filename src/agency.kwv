@@ -11,7 +11,7 @@
 ontology agency
 	version 1.0
     using imod
-    in domain imod:Knowledge of imod:Anthroposphere;
+    in domain imod:Knowledge;
      
 attribute Intentional
 	"Intention is a mental state (e.g. goal, belief, desire)"
@@ -421,7 +421,7 @@ attribute Feasible
 @fixme("definitely belongs elsewhere and needs a real definition")
 abstract agent SocialAgent
     "Social agent is an Agent created, managed and recognized by other agents, such as organization."
-    applies to imod:Network
+ //   applies to imod:Network
     // nah - this should be a Social identity conferred by some SocialRelationship to the agents it links
 //    contains at least 2 Agent
     ;

@@ -16,10 +16,11 @@ abstract attribute Georeferenced
 	 		"A subject that can be projected on the same spot of the surface of the earth throughout its observation."
 	 	)
 	// any spatial extent is fine but there must be one.
-	requires extent imod:Space;
+//	requires extent imod:Space
+	;
 
 thing Location
-	is earth:Geolocated physical:Feature;
+	is earth:Geostationary physical:Feature;
 
 abstract event GeolocatedEvent
 	is imod:Event within earth:Location;
@@ -79,8 +80,9 @@ The Earth's cover configurations are determined by a combination of climatic con
  */
 configuration EarthCover
 	"The configuration of physical materials at the surface of the earth."
-	is physical:SpatialArrangement of ((earth:Geolocated imod:Subject) or (earth:Geolocated imod:Agent))
-	within earth:Location;
+	// is physical:SpatialArrangement of ((earth:Geolocated imod:Subject) or (earth:Geolocated imod:Agent))
+	// within earth:Location
+	;
 
 /**
   To organize the different categories of terrestrial and aquatic environments based solely

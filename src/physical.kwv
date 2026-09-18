@@ -1,7 +1,7 @@
 ontology physical
    version 1.0
    using imod
-   in domain imod:Physical of imod:EarthSystem;
+   in domain imod:Physical of imod:PhysicalSystem;
  
 /**
  * TODO if all those decision:-based predicates are needed, they should be moved into something like an
@@ -13,7 +13,8 @@ ontology physical
 @check("Made it abstract as it needs inherency. Inherency is what makes it possible for events to be independents")
 abstract event Collapse
    "The loss of identity for the system, after which it ceases to exist as such. In  living systems, it's synonymous with death."
-    applies to imod:PhysicalSystem;
+    // applies to imod:PhysicalSystem
+;
 
 @fixme("This seems wrong rather than unconventional. But this is important and we should articulate it properly.")
 abstract thing Feature
@@ -28,6 +29,26 @@ abstract length Depth
     // is imod:Length // unnecessary as it's a length
     requires identity imod:Volumetric
 ;
+
+abstract attribute SpatialOrientation 
+			has children
+				(abstract ObserverRelativeOrientation 
+					has disjoint children
+						Right,
+						Left,
+						Front,
+						Back,
+						Up,
+						Down	
+				),
+				(abstract EuclidianRelativeOrientation2D 
+					"These concepts are purely 2d - nothing in English to denote the 'applicate'
+					 third dimension of a 3D space."
+					has disjoint children
+						Vertical,
+						Horizontal
+				)
+		;
 
 abstract length Height
    //     is imod:Length
@@ -108,7 +129,7 @@ abstract identity IntransitiveProcess
 abstract process Transformation
     "Any endogenous transformation happening in a system and affecting its internal structure."
     inherits physical:IntransitiveProcess
-    applies to imod:PhysicalSystem
+    // applies to imod:PhysicalSystem
     has children 
 		(Coupling
 			"Building of interactions. Can affect the mereological identity of the system by creating groups."
@@ -195,7 +216,7 @@ abstract relationship Dependence
 @fixme("See note for other dichotomies")
 abstract attribute MovementRelated
 	"MovementRelated describe the type of velocity of a process"
-	describes imod:Velocity of imod:Process
+	describes imod:Velocity // of imod:Process
 	has disjoint children
 		Moving,
 		Still;
@@ -215,30 +236,12 @@ abstract subjective ordering HeightLenghtLevel
     	    Short  	
     );
 
-abstract attribute SpatialOrientation 
-			has children
-				(abstract ObserverRelativeOrientation 
-					has disjoint children
-						Right,
-						Left,
-						Front,
-						Back,
-						Up,
-						Down	
-				),
-				(abstract EuclidianRelativeOrientation2D 
-					"These concepts are purely 2d - nothing in English to denote the 'applicate'
-					 third dimension of a 3D space."
-					has disjoint children
-						Vertical,
-						Horizontal
-				)
-		;
+
 
 @fixme("Argh")
 abstract subjective ordering VolumeLevel
       describes imod:Volume 
-      applies to imod:Volumetric, imod:Subject
+      applies to imod:Volumetric imod:Subject
       has children  
          SmallVolume, 
          LargeVolume;
@@ -246,7 +249,7 @@ abstract subjective ordering VolumeLevel
 @todo("Not sure, but consider adding sealed (giving errors at the moment)")
 abstract ordering Periodicity
 	""
-	describes physical:TimeInterval
+	describes physical:Period
 	has children
 		(Sporadic 
 			""
@@ -299,19 +302,21 @@ abstract thing SpatialBoundary
     inherits imod:Areal;
     
  //Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
-abstract extent TemporalBoundary 
-    "A temporal boundary is the temporal delimitation between entities."
-     inherits physical:TimeInterval;
-     
-// time concepts
-
-//Revisitation as attribute and not duration from SUMO v 1.75: https://www.ontologyportal.org/images/SUMOclasses.gif	
 abstract attribute TimePosition
     "Time position is a perspective to measure time"
     describes imod:Duration
     has children
     TimeInterval,
     TimePoint;
+
+abstract extent TemporalBoundary 
+    "A temporal boundary is the temporal delimitation between entities."
+     inherits physical:TimePosition;
+     
+// time concepts
+
+//Revisitation as attribute and not duration from SUMO v 1.75: https://www.ontologyportal.org/images/SUMOclasses.gif	
+
     
 configuration SpatialArrangement
 	has children

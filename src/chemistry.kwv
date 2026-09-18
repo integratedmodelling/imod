@@ -12,7 +12,7 @@ Anthroposphere: Chemistry is fundamental in developing materials, pharmaceutical
 ontology chemistry
 	version 1.0
 	using imod, physical
-	in domain imod:Knowledge of imod:EarthSystem;
+	in domain imod:Knowledge of imod:PhysicalSystem;
 
 abstract identity ChemicalSpecies
 	"Any chemical, elements or compounds, but not mixtures."

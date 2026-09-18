@@ -17,7 +17,8 @@ ontology valuation
  */	
 role Asset 
 	"The asset role is conferred to substantials that are valued more than zero."
-	marks value of (imod:Subject or imod:Agent);
+	// marks value of (imod:Subject or imod:Agent)
+	;
 
 /**
  * The following are roles for quantities that are created by the correspondent emerging 
@@ -26,7 +27,7 @@ role Asset
  */
 abstract role ValueMetric
 	is imod:Indicator
-	increases with probability of physical:Collapse of valuation:Asset
+	// increases with probability of physical:Collapse of valuation:Asset
 	has children
 		VulnerabilityMetric,
 		ExposureMetric,
@@ -48,8 +49,9 @@ role Hazard
 	
 abstract configuration Vulnerability
 	"The existence of assets that can be affected by hazards."
-	emerges from valuation:Asset within imod:Subject
-	implies valuation:VulnerabilityMetric;
+	// emerges from valuation:Asset within imod:Subject
+	// implies valuation:VulnerabilityMetric
+	;
 
 /**
  * Exposure is engendered when an @Asset coexists with a compatible @Hazard (the compatibility is implied by the 
@@ -57,12 +59,12 @@ abstract configuration Vulnerability
  */
 abstract configuration Exposure
 	"The compresence of assets with hazards that affect them."
-	emerges from (valuation:Asset with valuation:Hazard) within imod:Subject
-	creates valuation:ExposureMetric;
+	// emerges from (valuation:Asset with valuation:Hazard) within imod:Subject
+	// creates valuation:ExposureMetric
+	;
 	
 abstract configuration Risk
 	"The compresence of exposure, implying assets threatened by hazards, with the vulnerability of the same assets."
-	emerges from (valuation:Exposure with valuation:Vulnerability) within imod:Subject
-	creates valuation:RiskMetric;
-
-	
+	// emerges from (valuation:Exposure with valuation:Vulnerability) within imod:Subject
+	// creates valuation:RiskMetric
+	;
