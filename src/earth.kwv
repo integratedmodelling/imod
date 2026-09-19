@@ -376,29 +376,6 @@ abstract identity PrecipitationType
 			""
 			// inherits physical:Solid
 		);
-
-/*
- * QUALITIES. All should be linked to the processes that affect them in the
- * process definitions.
- */
-volume PrecipitationVolume 
-	""
-	is /* IUPAC:Water */ imod:Volume 
-	caused by earth:MeteorologicalEvent;
-
-volume RainfallVolume 
-	is earth:PrecipitationVolume
-	inherits earth:Rain
-	;
-
-volume SnowfallVolume 
-	is earth:PrecipitationVolume
-	inherits earth:Snow;
-
-volume HailVolume 
-	is earth:PrecipitationVolume
-	inherits earth:Hail;
-
 temperature AtmosphericTemperature
 	""
 	is /* earth:AtmosphericBottomLayer */ imod:Temperature of earth:Location;
@@ -418,12 +395,34 @@ abstract event MeteorologicalEvent
 		),
 		Flood;
 
+/*
+ * QUALITIES. All should be linked to the processes that affect them in the
+ * process definitions.
+ */
+volume PrecipitationVolume 
+	""
+	is /* IUPAC:Water */ imod:Volume 
+	caused by earth:MeteorologicalEvent;
+
 @todo("improve, complete, align")
 abstract event GeologicalEvent 
 	""
 	has children
 		Landslide,
 		Earthquake;
+
+volume RainfallVolume 
+	is earth:PrecipitationVolume
+	inherits earth:Rain
+	;
+
+volume SnowfallVolume 
+	is earth:PrecipitationVolume
+	inherits earth:Snow;
+
+volume HailVolume 
+	is earth:PrecipitationVolume
+	inherits earth:Hail;
 
 /*
  * PROCESSES
