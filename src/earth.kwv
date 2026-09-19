@@ -23,7 +23,7 @@ thing Location
 	is earth:Geostationary physical:Feature;
 
 abstract event GeolocatedEvent
-	is imod:Event within earth:Location;
+	is earth:Geostationary imod:Event;
 
 // ARTICULATE - maybe move
 thing Planet;
@@ -384,11 +384,11 @@ abstract identity PrecipitationType
 volume PrecipitationVolume 
 	""
 	is /* IUPAC:Water */ imod:Volume 
-	within earth:Location;
+	caused by earth:MeteorologicalEvent;
 
 volume RainfallVolume 
 	is earth:PrecipitationVolume
-//	inherits earth:Rain
+	inherits earth:Rain
 	;
 
 volume SnowfallVolume 
@@ -408,7 +408,7 @@ temperature AtmosphericTemperature
  */
 abstract event MeteorologicalEvent
 	""
-	// is earth:GeolocatedEvent
+	is earth:GeolocatedEvent
 	has children
 		(Storm),
 		(Lightning),
@@ -463,14 +463,14 @@ energy SolarRadiation
 	// TODO specify solar source
 	// TODO check for realm-specific children to be added
 	is imod:Energy 
-	within earth:Location
+	// within earth:Location
 ;
 
 @deprecated
 process Weather
 	"Catch-all for the set of processes that determine the perceived weather. Weather should more
 	 properly be defined as a configuration."
-	is earth:MeteorologicalProcess within earth:Location
+	is earth:MeteorologicalProcess // within earth:Location
 	creates earth:PrecipitationVolume, earth:AtmosphericTemperature, earth:SolarRadiation, earth:Storm;
 
 thing GeoFormation

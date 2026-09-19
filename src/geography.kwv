@@ -20,17 +20,20 @@ angle Aspect
    "The compass direction that a slope faces. For example, a slope on the
     eastern edge of the Rockies toward the Great Plains is described as having 
    an easterly aspect."
-   is imod:Angle of /* physical:MagneticPlanetaryOrientation earth:Terrain within */ earth:Location
+   // TODO expand orientations
+   // describes physical:MagneticPlanetaryOrientation of earth:Location
 ;
 		 
 length BathymetricDepth
 	"Depth of earth's crust below sea level, as described by a digital bathymetry model."
-	is physical:Height within earth:Location
+   // TODO should be of terrain - maybe 'within' could do it as a shortcut
+	describes physical:Height of earth:Location
 ;
 
 angle Slope
    "Inclination of the above-water terrain in a geographical region."
-   is imod:Angle within earth:Location;
+   // TODO should be of terrain - maybe 'within' could do it as a shortcut
+   describes imod:Angle of earth:Location;
 
 /*
  * FIXME there are excellent arguments to expect that any configuration is
@@ -121,6 +124,7 @@ abstract identity ContinentalRegion
  
 /*
  * TODO add other key geographic areas
+ * TODO this should be an authority (M49 comes to mind)
  */ 
 @todo("Some kind soul please start adding ISO country codes as metadata")
 abstract individual identity Country is geography:GeopoliticalIdentity 
@@ -383,5 +387,6 @@ abstract individual identity Country is geography:GeopoliticalIdentity
 
 @experimental
 quality TopographicHeterogeneity
-   is imod:Heterogeneity of geography:Terrain
-   within earth:Location;
+   describes imod:Heterogeneity of geography:Terrain
+//   within earth:Location
+   ;
