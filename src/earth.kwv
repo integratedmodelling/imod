@@ -543,7 +543,7 @@ abstract process LandformingProcess
 	""
 	// creates LandFormation
 	has children 
-		Erosion,
+		Erosion, // TODO affects Elevation, but that's downstream
 		Sedimentation,
 		Weathering,
 		PlateTectonics;

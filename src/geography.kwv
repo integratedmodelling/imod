@@ -11,6 +11,7 @@ length Elevation
 	"Geographical elevation above sea level, as described by a digital
 	 elevation model."
 	is physical:Height of earth:Location
+   affected by earth:Erosion
 	has children 
 		(LidarElevation 
 			"Elevation at edge of any reflective surface including canopy and buildings"
