@@ -16,7 +16,8 @@ identity LandCover
 	/**
 	 * Based on type, this may CREATE the authority as a configured instance of type
 	 */
-	requires authority LANDCOVER {
-		type: org.integratedmodelling.authorities.pattern
-		// TODO all parameters that specify configurations linked to each level
-	};
+	// requires authority LANDCOVER {
+	// 	type: org.integratedmodelling.authorities.pattern
+	// 	// TODO all parameters that specify configurations linked to each level
+	// }
+	;
