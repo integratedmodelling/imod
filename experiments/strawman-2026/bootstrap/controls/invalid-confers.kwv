@@ -1,0 +1,3 @@
+// Intentional negative control from REVIEW_FINDINGS HYD-N05. Never load as a candidate.
+ontology probe using imod, hydrology in domain imod:Knowledge of imod:Hydrosphere version 1.0;
+process Dummy is imod:Process confers hydrology:LowFlow;

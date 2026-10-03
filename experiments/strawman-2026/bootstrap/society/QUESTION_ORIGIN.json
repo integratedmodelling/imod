@@ -1,0 +1,143 @@
+{
+  "domain": "society",
+  "stage": "source-first questions frozen before candidate vocabulary",
+  "created_on": "2026-10-03",
+  "independence": "Same author had read current ontology and prior packet. Questions preceded this dossier's candidate construction, but are not independent held-out tests. Fresh external probes still required.",
+  "questions": [
+    {
+      "id": "society-q01",
+      "sequence": 1,
+      "text": "How many people normally live here, including those temporarily away during the fire?",
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "source_motivation": "usual residence versus current presence"
+    },
+    {
+      "id": "society-q02",
+      "sequence": 2,
+      "text": "Do two families sharing one building form one household?",
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "source_motivation": "housekeeping versus dwelling-based convention"
+    },
+    {
+      "id": "society-q03",
+      "sequence": 3,
+      "text": "Who lives alone and might need help leaving a threatened area?",
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "source_motivation": "single-person household does not imply helplessness"
+    },
+    {
+      "id": "society-q04",
+      "sequence": 4,
+      "text": "Which children and adults are members of the same household?",
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "source_motivation": "membership rule and reference context"
+    },
+    {
+      "id": "society-q05",
+      "sequence": 5,
+      "text": "How many residents moved away rather than merely evacuated overnight?",
+      "source_ids": [
+        "EVAC"
+      ],
+      "source_motivation": "temporary protective movement versus usual-residence change"
+    },
+    {
+      "id": "society-q06",
+      "sequence": 6,
+      "text": "Which households changed membership after a birth?",
+      "source_ids": [
+        "VITAL"
+      ],
+      "source_motivation": "birth occurrence versus registration"
+    },
+    {
+      "id": "society-q07",
+      "sequence": 7,
+      "text": "How many people died during the disaster, without assuming that every death was caused by it?",
+      "source_ids": [
+        "VITAL"
+      ],
+      "source_motivation": "death occurrence versus causal attribution"
+    },
+    {
+      "id": "society-q08",
+      "sequence": 8,
+      "text": "Who is related by parenthood even though they live apart?",
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "source_motivation": "family relationship versus coresidence"
+    },
+    {
+      "id": "society-q09",
+      "sequence": 9,
+      "text": "Which organizations remain identifiable when their staff change?",
+      "source_ids": [
+        "OSTROM"
+      ],
+      "source_motivation": "organization persistence is not personnel equality"
+    },
+    {
+      "id": "society-q10",
+      "sequence": 10,
+      "text": "Did marriage or divorce change a legally recognized partnership?",
+      "source_ids": [
+        "VITAL"
+      ],
+      "source_motivation": "jurisdiction and recognized union boundaries"
+    },
+    {
+      "id": "society-q11",
+      "sequence": 11,
+      "text": "Which people share essential living arrangements without being relatives?",
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "source_motivation": "household not equivalent to kinship"
+    },
+    {
+      "id": "society-q12",
+      "sequence": 12,
+      "text": "How many evacuees are still away from their usual homes?",
+      "source_ids": [
+        "DISPLACE"
+      ],
+      "source_motivation": "observation gap cannot imply return"
+    },
+    {
+      "id": "society-q13",
+      "sequence": 13,
+      "text": "When did an organization begin or cease to exist?",
+      "source_ids": [
+        "OSTROM"
+      ],
+      "source_motivation": "institutional constituting or dissolving occurrence"
+    },
+    {
+      "id": "society-q14",
+      "sequence": 14,
+      "text": "Are visitors counted as residents in this estimate?",
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "source_motivation": "reference-population convention explicit"
+    },
+    {
+      "id": "society-q15",
+      "sequence": 15,
+      "text": "Which households lack a conventional dwelling but still share provision for essentials?",
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "source_motivation": "household does not require dwelling ownership"
+    }
+  ]
+}

@@ -1,0 +1,1454 @@
+{
+  "dossier_version": "0.1",
+  "domain": "society",
+  "status": "draft; blocked for executable promotion and human approval",
+  "scope": "Human persons, living arrangements, resident collections, organized collectives and constitutive demographic/social relations. Physical dwellings remain infrastructure; legal regimes remain contextual authorities.",
+  "imports": [
+    {
+      "namespace": "imod",
+      "source": "src/imod.kwv",
+      "revision": "46c695b8e360b4e2c1180c57c203844d53723258",
+      "status": "read current reference; semantic suitability provisional",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+    },
+    {
+      "namespace": "life",
+      "source": "src/life.kwv",
+      "revision": "46c695b8e360b4e2c1180c57c203844d53723258",
+      "status": "read current reference; semantic suitability provisional",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "2e54cea39b2e65ed927da5bc371c2bca3de297009b9d77943dfc00a127fd45e0"
+    },
+    {
+      "namespace": "physical",
+      "source": "src/physical.kwv",
+      "revision": "46c695b8e360b4e2c1180c57c203844d53723258",
+      "status": "read current reference; semantic suitability provisional",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "3fb1809902f4d9534a5d8ac3d5e4372cd37a9a3b96de84e7f51e2d13270c345a"
+    }
+  ],
+  "sources": [
+    {
+      "id": "CENSUS3",
+      "title": "UNSD Principles and Recommendations for Population and Housing Censuses,Revision3",
+      "url": "https://unstats.un.org/unsd/demographic-social/Standards-and-Methods/files/Principles_and_Recommendations/Population-and-Housing-Censuses/Series_M67rev3-E.pdf",
+      "locator": "2017; paragraphs2.33-38 and4.121-128",
+      "scope": "Housekeeping/dwelling-based household conventions and household/family distinctions. This is a pinned edition; Revision4 exists and requires separate reconciliation.",
+      "status": "official PDF scoped paragraphs read",
+      "retrieved_on": "2026-10-03",
+      "semantic_extraction": "Candidate definitions and k.LAB category choices are author interpretations pending human review,not source-approved ontologies.",
+      "source_confidence": {
+        "provenance": "primary institutional or author source",
+        "reading_depth": "official PDF scoped paragraphs read",
+        "coverage": "Limited to stated locator and supported scope; publication authority does not validate ontology extraction."
+      }
+    },
+    {
+      "id": "OSTROM",
+      "title": "Elinor Ostrom, Beyond Markets and States",
+      "url": "https://www.nobelprize.org/uploads/2018/06/ostrom_lecture.pdf",
+      "locator": "2009 Nobel lecture, action-situation diagram and discussion of polycentric governance",
+      "scope": "Supports attention to participants, control, rules and diverse institutional arrangements. Proposed domain concepts below are interpretations, not an extracted universal taxonomy.",
+      "status": "primary author lecture, search text retrieved; direct open failed",
+      "retrieved_on": "2026-10-03",
+      "semantic_extraction": "Candidate definitions and k.LAB category choices are author interpretations pending human review,not source-approved ontologies.",
+      "source_confidence": {
+        "provenance": "primary institutional or author source",
+        "reading_depth": "primary author lecture, search text retrieved; direct open failed",
+        "coverage": "Limited to stated locator and supported scope; publication authority does not validate ontology extraction."
+      }
+    },
+    {
+      "id": "EVAC",
+      "title": "UNDRR Sendai terminology: Evacuation",
+      "url": "https://www.undrr.org/terminology/evacuation",
+      "locator": "2017 definition and annotation",
+      "scope": "Temporary protective relocation differs from migration and can occur before,during or after a hazard.",
+      "status": "official definition read",
+      "retrieved_on": "2026-10-03",
+      "semantic_extraction": "Candidate definitions and k.LAB category choices are author interpretations pending human review,not source-approved ontologies.",
+      "source_confidence": {
+        "provenance": "primary institutional or author source",
+        "reading_depth": "official definition read",
+        "coverage": "Limited to stated locator and supported scope; publication authority does not validate ontology extraction."
+      }
+    },
+    {
+      "id": "VITAL",
+      "title": "UNSD Principles and Recommendations for a Vital Statistics System,Revision3",
+      "url": "https://unstats.un.org/unsd/demographic-social/Standards-and-Methods/files/Principles_and_Recommendations/CRVS/M19Rev3-E.pdf",
+      "locator": "2014; chapterI, vital-event definitions",
+      "scope": "Motivates separation of demographic occurrences from registration. Specific event-boundary and jurisdiction definitions need close review before acceptance.",
+      "status": "official PDF search excerpt and contents reviewed; definitions not fully audited",
+      "retrieved_on": "2026-10-03",
+      "semantic_extraction": "Candidate definitions and k.LAB category choices are author interpretations pending human review,not source-approved ontologies.",
+      "source_confidence": {
+        "provenance": "primary institutional or author source",
+        "reading_depth": "official PDF search excerpt and contents reviewed; definitions not fully audited",
+        "coverage": "Limited to stated locator and supported scope; publication authority does not validate ontology extraction."
+      }
+    },
+    {
+      "id": "DISPLACE",
+      "title": "UNDRR Understanding disaster displacement and assessing future risk",
+      "url": "https://www.undrr.org/resource/case-study/understanding-disaster-displacement-and-assessing-future-risk",
+      "locator": "2025-07-18; paragraphs on return and data gaps",
+      "scope": "Observations after initial evacuation are often incomplete; housing damage is an imperfect proxy for continuing displacement.",
+      "status": "official case-study search text read",
+      "retrieved_on": "2026-10-03",
+      "semantic_extraction": "Candidate definitions and k.LAB category choices are author interpretations pending human review,not source-approved ontologies.",
+      "source_confidence": {
+        "provenance": "primary institutional or author source",
+        "reading_depth": "official case-study search text read",
+        "coverage": "Limited to stated locator and supported scope; publication authority does not validate ontology extraction."
+      }
+    }
+  ],
+  "concepts": [
+    {
+      "name": "HumanPerson",
+      "category": "subject",
+      "definition": "A human individual viewed as the bearer of demographic and social observations.",
+      "parent": "life:Individual",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "PersonAge",
+        "usual-residence relation"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "positive": "A resident temporarily staying with relatives.",
+      "negative": "A household counted as one person.",
+      "status": "blocked",
+      "gap": "Do not duplicate society:HumanIndividual: proposed rename/clarification only; human identity import required.",
+      "id": "society-c01",
+      "ancestry_evidence": "Imported reference life:Individual read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "HousekeepingHousehold",
+      "category": "subject",
+      "definition": "A bounded living arrangement constituted by one person or people sharing provision for essentials under the housekeeping convention.",
+      "parent": "imod:Subject",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "HouseholdSize",
+        "HouseholdComposition"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "positive": "Unrelated residents jointly provision meals and essentials.",
+      "negative": "All people in one building solely because they share its address.",
+      "status": "blocked",
+      "gap": "Identity/persistence rule unresolved; life:SocialGroup would exclude or confuse single-person cases.",
+      "id": "society-c02",
+      "ancestry_evidence": "Imported reference imod:Subject read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "Organization",
+      "category": "subject",
+      "definition": "An organized collective whose identity is maintained by recognized membership and constituting rules rather than by an unchanged roster.",
+      "parent": "imod:Agent",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "OrganizationMembershipCount"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "OSTROM"
+      ],
+      "positive": "A water association continues after an officer replacement.",
+      "negative": "An administrative list of unrelated people.",
+      "status": "blocked",
+      "gap": "Relation to society:Institution and agency:SocialAgent must be decided; not every institution is a collective agent.",
+      "id": "society-c03",
+      "ancestry_evidence": "Imported reference imod:Agent read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "ResidentPopulation",
+      "category": "subject",
+      "definition": "The collection of people satisfying a declared usual-residence convention for a specified area/context.",
+      "parent": "imod:Subject",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "ResidentCount"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "positive": "Usual residents including temporarily absent members.",
+      "negative": "Everyone photographed in a square at noon.",
+      "status": "blocked",
+      "gap": "Collection versus substantial/configuration requires upstream issue; no invented population upper class.",
+      "id": "society-c04",
+      "ancestry_evidence": "Imported reference imod:Subject read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "FamilyNetwork",
+      "category": "subject",
+      "definition": "A bounded group identified by explicitly specified family relationships,not by sharing a dwelling.",
+      "parent": "life:SocialGroup",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "member count"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "positive": "Related people included under an explicit kinship boundary.",
+      "negative": "Unrelated housemates automatically called family.",
+      "status": "blocked",
+      "gap": "Census family-within-household differs from broader network; boundary and cultural scope must be chosen.",
+      "id": "society-c05",
+      "ancestry_evidence": "Imported reference life:SocialGroup read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "ResidentialMigration",
+      "category": "process",
+      "definition": "Movement through which people change usual residence under a declared residence convention.",
+      "parent": "imod:Process",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "change in ResidentCount",
+        "migration participation count"
+      ],
+      "bindings": {
+        "affects": [
+          "ResidentCount of affected origin/destination populations"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Only a completed residence change changes membership; movement alone does not. Proposed quantitative consequence needs model."
+      },
+      "source_ids": [
+        "CENSUS3",
+        "EVAC"
+      ],
+      "positive": "A person relocates their usual home to another area.",
+      "negative": "An overnight protective evacuation.",
+      "status": "provisional",
+      "gap": "",
+      "id": "society-c06",
+      "ancestry_evidence": "Imported reference imod:Process read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "HouseholdFormation",
+      "category": "process",
+      "definition": "The establishment of an identifiable shared or single-person provision-for-living arrangement.",
+      "parent": "physical:Activity",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "HouseholdSize"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [
+          "HousekeepingHousehold only when identity criteria are met"
+        ],
+        "confers": [],
+        "rationale": "Prospective creates binding is scoped to an actual constituted household,not any co-location."
+      },
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "positive": "People establish one common housekeeping arrangement.",
+      "negative": "A set of strangers boards a bus.",
+      "status": "blocked",
+      "gap": "Source describes units rather than formation mechanism; process/event boundary unresolved.",
+      "id": "society-c07",
+      "ancestry_evidence": "Imported reference physical:Activity read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "OrganizingCollective",
+      "category": "process",
+      "definition": "Participants establish a collective's membership and operating rules.",
+      "parent": "physical:Activity",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "OrganizationMembershipCount"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [
+          "Organization upon successful constitution"
+        ],
+        "confers": [],
+        "rationale": "Attempted organizing may fail; creation belongs to a separately identified constitution event."
+      },
+      "source_ids": [
+        "OSTROM"
+      ],
+      "positive": "Users form a water association with agreed rules.",
+      "negative": "A researcher groups survey responses.",
+      "status": "provisional",
+      "gap": "",
+      "id": "society-c08",
+      "ancestry_evidence": "Imported reference physical:Activity read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "HouseholdMembership",
+      "category": "relationship",
+      "definition": "Person's membership in a specified housekeeping household.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "life:Individual",
+        "target": "imod:Subject",
+        "rationale": "Qualified endpoints above are imported broad types; narrower dossier subjects require approval. Relation scope and change occurrences remain explicit."
+      },
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "positive": "Common living provision under declared convention.",
+      "negative": "Same street address alone.",
+      "status": "provisional",
+      "gap": "",
+      "id": "society-c09",
+      "ancestry_evidence": "Imported reference imod:Relationship read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "UsualResidenceIn",
+      "category": "relationship",
+      "definition": "Person's usual-residence relation to a specified place under a declared reference convention.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "life:Individual",
+        "target": "physical:Feature",
+        "rationale": "Qualified endpoints above are imported broad types; narrower dossier subjects require approval. Relation scope and change occurrences remain explicit."
+      },
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "positive": "Temporarily absent resident linked to their usual home area.",
+      "negative": "A holiday visit.",
+      "status": "provisional",
+      "gap": "",
+      "id": "society-c10",
+      "ancestry_evidence": "Imported reference imod:Relationship read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "ParentOf",
+      "category": "relationship",
+      "definition": "Directed parent-child relation under an explicitly declared biological,adoptive or legal reading.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "life:Individual",
+        "target": "life:Individual",
+        "rationale": "Qualified endpoints above are imported broad types; narrower dossier subjects require approval. Relation scope and change occurrences remain explicit."
+      },
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "positive": "A recorded adoptive parent-child relation in its legal scope.",
+      "negative": "A caregiver automatically inferred to be a parent.",
+      "status": "blocked",
+      "gap": "Polysemous family/legal senses must be split before execution.",
+      "id": "society-c11",
+      "ancestry_evidence": "Imported reference imod:Relationship read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "RecognizedPartnership",
+      "category": "relationship",
+      "definition": "Partnership relation recognized under a declared social or legal convention.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "life:Individual",
+        "target": "life:Individual",
+        "rationale": "Qualified endpoints above are imported broad types; narrower dossier subjects require approval. Relation scope and change occurrences remain explicit."
+      },
+      "source_ids": [
+        "VITAL"
+      ],
+      "positive": "A partnership established under the stated convention.",
+      "negative": "Any pair sharing a dwelling.",
+      "status": "blocked",
+      "gap": "Polysemous family/legal senses must be split before execution.",
+      "id": "society-c12",
+      "ancestry_evidence": "Imported reference imod:Relationship read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "OrganizationMembership",
+      "category": "relationship",
+      "definition": "Agent's recognized membership in an identified organization.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "imod:Agent",
+        "target": "imod:Agent",
+        "rationale": "Qualified endpoints above are imported broad types; narrower dossier subjects require approval. Relation scope and change occurrences remain explicit."
+      },
+      "source_ids": [
+        "OSTROM"
+      ],
+      "positive": "Member admitted under the organization's rules.",
+      "negative": "Person who receives the organization's service.",
+      "status": "provisional",
+      "gap": "",
+      "id": "society-c13",
+      "ancestry_evidence": "Imported reference imod:Relationship read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "LiveBirth",
+      "category": "event",
+      "definition": "Bounded live-birth occurrence as defined in the pinned vital-statistics standard.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "creates candidate HumanIndividual observation; biological identity/beginning is not settled here"
+      },
+      "source_ids": [
+        "VITAL"
+      ],
+      "positive": "A birth showing the standard's signs of life.",
+      "negative": "Registration entered later.",
+      "status": "blocked",
+      "gap": "Imported upper event exists; domain boundary definition and downstream bindings require human review.",
+      "id": "society-c14",
+      "ancestry_evidence": "Imported reference imod:Event read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "Death",
+      "category": "event",
+      "definition": "Bounded cessation of a person's life under the applicable vital-event definition.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "affects dependent memberships via cessation; no automatic graph cascade implemented"
+      },
+      "source_ids": [
+        "VITAL"
+      ],
+      "positive": "Confirmed death occurrence.",
+      "negative": "An absent person with no response.",
+      "status": "blocked",
+      "gap": "Imported upper event exists; domain boundary definition and downstream bindings require human review.",
+      "id": "society-c15",
+      "ancestry_evidence": "Imported reference imod:Event read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "MarriageFormation",
+      "category": "event",
+      "definition": "Bounded occurrence establishing a marriage under a specified recognition regime.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "creates a qualified partnership relation only where recognition rules hold"
+      },
+      "source_ids": [
+        "VITAL"
+      ],
+      "positive": "A legally recognized marriage occurrence.",
+      "negative": "A celebratory gathering with no corresponding status change.",
+      "status": "blocked",
+      "gap": "Imported upper event exists; domain boundary definition and downstream bindings require human review.",
+      "id": "society-c16",
+      "ancestry_evidence": "Imported reference imod:Event read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "Divorce",
+      "category": "event",
+      "definition": "Bounded recognized dissolution of an existing marriage.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "ends that qualified partnership through an occurrent; no universal family-network destruction"
+      },
+      "source_ids": [
+        "VITAL"
+      ],
+      "positive": "A legally effective dissolution.",
+      "negative": "Temporary separation or estrangement alone.",
+      "status": "blocked",
+      "gap": "Imported upper event exists; domain boundary definition and downstream bindings require human review.",
+      "id": "society-c17",
+      "ancestry_evidence": "Imported reference imod:Event read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "ResidenceChange",
+      "category": "event",
+      "definition": "Bounded transition in a person's usual-residence relation under an explicit reference convention.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "affects origin/destination population membership; change in ResidentCount separately resolved"
+      },
+      "source_ids": [
+        "CENSUS3",
+        "EVAC"
+      ],
+      "positive": "Completion of a qualifying relocation.",
+      "negative": "Temporary evacuation with unchanged usual residence.",
+      "status": "blocked",
+      "gap": "Imported upper event exists; domain boundary definition and downstream bindings require human review.",
+      "id": "society-c18",
+      "ancestry_evidence": "Imported reference imod:Event read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "ResidentCount",
+      "category": "quality",
+      "definition": "Number of people belonging to an explicitly delimited resident population.",
+      "parent": "imod:Numerosity",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "bearer:ResidentPopulation"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "positive": "Residents with stated reference date and convention.",
+      "negative": "All mobile-phone devices detected.",
+      "status": "provisional",
+      "gap": "",
+      "id": "society-c19",
+      "ancestry_evidence": "Imported reference imod:Numerosity read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "HouseholdSize",
+      "category": "quality",
+      "definition": "Number of persons belonging to one specified household.",
+      "parent": "imod:Numerosity",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "bearer:HousekeepingHousehold"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "positive": "Three members sharing provision for essentials.",
+      "negative": "Number of rooms.",
+      "status": "provisional",
+      "gap": "",
+      "id": "society-c20",
+      "ancestry_evidence": "Imported reference imod:Numerosity read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "PersonAge",
+      "category": "quality",
+      "definition": "Elapsed age of a human individual measured from a declared birth reference.",
+      "parent": "physical:Age",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "bearer:life:Individual"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "VITAL"
+      ],
+      "positive": "Person's age from accepted birth occurrence.",
+      "negative": "Date when the record was digitized.",
+      "status": "provisional",
+      "gap": "",
+      "id": "society-c21",
+      "ancestry_evidence": "Imported reference physical:Age read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "OrganizationMembershipCount",
+      "category": "quality",
+      "definition": "Number of agents recognized as members under one organization's membership rules.",
+      "parent": "imod:Numerosity",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "bearer:Organization"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "OSTROM"
+      ],
+      "positive": "Roster reconciled with admissions and departures.",
+      "negative": "All people on a mailing list.",
+      "status": "provisional",
+      "gap": "",
+      "id": "society-c22",
+      "ancestry_evidence": "Imported reference imod:Numerosity read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "HouseholdComposition",
+      "category": "quality",
+      "definition": "Nominal description of a household's membership pattern under a specified classification.",
+      "parent": "imod:Type",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "bearer:HousekeepingHousehold"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "positive": "Composition under a declared census scheme.",
+      "negative": "A universal quality of social desirability.",
+      "status": "blocked",
+      "gap": "Authority classification rather than universal categorical ontology; preserve scheme identity.",
+      "id": "society-c23",
+      "ancestry_evidence": "Imported reference imod:Type read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    }
+  ],
+  "questions": [
+    {
+      "id": "society-q01",
+      "sequence": 1,
+      "text": "How many people normally live here, including those temporarily away during the fire?",
+      "concept_ids": [
+        "society-c04",
+        "society-c19"
+      ],
+      "expression": "society:ResidentCount of society:ResidentPopulation",
+      "expected_type": "quality",
+      "dependencies": [
+        "Count residents under stated convention,including qualifying temporary absences.",
+        "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
+        "imod",
+        "life",
+        "physical"
+      ],
+      "positive": "Temporarily absent usual resident included.",
+      "negative": "Tourist included solely by current presence.",
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "source_motivation": "usual residence versus current presence",
+      "expected_interpretation": "Count residents under stated convention,including qualifying temporary absences.",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "society-q02",
+      "sequence": 2,
+      "text": "Do two families sharing one building form one household?",
+      "concept_ids": [
+        "society-c02",
+        "society-c05"
+      ],
+      "expression": "society:HousekeepingHousehold",
+      "expected_type": "subject",
+      "dependencies": [
+        "Need provisioning evidence; dwelling and family counts cannot substitute.",
+        "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
+        "imod",
+        "life",
+        "physical"
+      ],
+      "positive": "Two separate provision arrangements in one dwelling.",
+      "negative": "One building forced to one household.",
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "source_motivation": "housekeeping versus dwelling-based convention",
+      "expected_interpretation": "Need provisioning evidence; dwelling and family counts cannot substitute.",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "society-q03",
+      "sequence": 3,
+      "text": "Who lives alone and might need help leaving a threatened area?",
+      "concept_ids": [
+        "society-c02",
+        "society-c20"
+      ],
+      "expression": "society:HouseholdSize of society:HousekeepingHousehold",
+      "expected_type": "quality",
+      "dependencies": [
+        "Size-one household is observable; assistance need is separate.",
+        "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
+        "imod",
+        "life",
+        "physical"
+      ],
+      "positive": "One-person household independently observed.",
+      "negative": "Living alone deemed unable to evacuate.",
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "source_motivation": "single-person household does not imply helplessness",
+      "expected_interpretation": "Size-one household is observable; assistance need is separate.",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "society-q04",
+      "sequence": 4,
+      "text": "Which children and adults are members of the same household?",
+      "concept_ids": [
+        "society-c09"
+      ],
+      "expression": "society:HouseholdMembership",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Person-to-household membership under a named rule.",
+        "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
+        "imod",
+        "life",
+        "physical"
+      ],
+      "positive": "Members share housekeeping arrangement.",
+      "negative": "Visitors automatically members.",
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "source_motivation": "membership rule and reference context",
+      "expected_interpretation": "Person-to-household membership under a named rule.",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "society-q05",
+      "sequence": 5,
+      "text": "How many residents moved away rather than merely evacuated overnight?",
+      "concept_ids": [
+        "society-c06",
+        "society-c18"
+      ],
+      "expression": null,
+      "expected_type": "process/event comparison",
+      "dependencies": [
+        "Distinguish usual-residence transition from temporary evacuation; requires linked residence observations.",
+        "Explicit formulation gap: no complete observable expression claimed.",
+        "imod",
+        "life",
+        "physical"
+      ],
+      "positive": "Qualifying residence move.",
+      "negative": "Overnight shelter stay classified as migration.",
+      "source_ids": [
+        "EVAC"
+      ],
+      "source_motivation": "temporary protective movement versus usual-residence change",
+      "expected_interpretation": "Distinguish usual-residence transition from temporary evacuation; requires linked residence observations.",
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "society-q06",
+      "sequence": 6,
+      "text": "Which households changed membership after a birth?",
+      "concept_ids": [
+        "society-c14",
+        "society-c09"
+      ],
+      "expression": "society:LiveBirth",
+      "expected_type": "event",
+      "dependencies": [
+        "Birth event and household-membership change independently identified; no automatic household assignment.",
+        "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
+        "imod",
+        "life",
+        "physical"
+      ],
+      "positive": "Birth plus observed admission to household.",
+      "negative": "Registration timestamp used as birth time.",
+      "source_ids": [
+        "VITAL"
+      ],
+      "source_motivation": "birth occurrence versus registration",
+      "expected_interpretation": "Birth event and household-membership change independently identified; no automatic household assignment.",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "society-q07",
+      "sequence": 7,
+      "text": "How many people died during the disaster, without assuming that every death was caused by it?",
+      "concept_ids": [
+        "society-c15"
+      ],
+      "expression": "society:Death",
+      "expected_type": "event",
+      "dependencies": [
+        "Count deaths in context separately from fire-attribution models.",
+        "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
+        "imod",
+        "life",
+        "physical"
+      ],
+      "positive": "Confirmed death during event window.",
+      "negative": "Missing resident presumed dead.",
+      "source_ids": [
+        "VITAL"
+      ],
+      "source_motivation": "death occurrence versus causal attribution",
+      "expected_interpretation": "Count deaths in context separately from fire-attribution models.",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "society-q08",
+      "sequence": 8,
+      "text": "Who is related by parenthood even though they live apart?",
+      "concept_ids": [
+        "society-c11"
+      ],
+      "expression": "society:ParentOf",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Choose and expose biological/adoptive/legal reading; living apart irrelevant to relation criterion.",
+        "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
+        "imod",
+        "life",
+        "physical"
+      ],
+      "positive": "Qualifying adoptive parent living elsewhere.",
+      "negative": "Co-resident adult inferred parent.",
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "source_motivation": "family relationship versus coresidence",
+      "expected_interpretation": "Choose and expose biological/adoptive/legal reading; living apart irrelevant to relation criterion.",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "society-q09",
+      "sequence": 9,
+      "text": "Which organizations remain identifiable when their staff change?",
+      "concept_ids": [
+        "society-c03",
+        "society-c13"
+      ],
+      "expression": "society:Organization",
+      "expected_type": "subject",
+      "dependencies": [
+        "Identity persists under reviewed constitution rules despite roster changes.",
+        "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
+        "imod",
+        "life",
+        "physical"
+      ],
+      "positive": "Association continues after officer election.",
+      "negative": "Mailing list treated as collective agent.",
+      "source_ids": [
+        "OSTROM"
+      ],
+      "source_motivation": "organization persistence is not personnel equality",
+      "expected_interpretation": "Identity persists under reviewed constitution rules despite roster changes.",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "society-q10",
+      "sequence": 10,
+      "text": "Did marriage or divorce change a legally recognized partnership?",
+      "concept_ids": [
+        "society-c16",
+        "society-c17",
+        "society-c12"
+      ],
+      "expression": null,
+      "expected_type": "event and relationship",
+      "dependencies": [
+        "Jurisdiction and recognition convention needed; no universal marriage status taxonomy.",
+        "Explicit formulation gap: no complete observable expression claimed.",
+        "imod",
+        "life",
+        "physical"
+      ],
+      "positive": "Recognized dissolution with identified parties.",
+      "negative": "Estrangement equated to divorce.",
+      "source_ids": [
+        "VITAL"
+      ],
+      "source_motivation": "jurisdiction and recognized union boundaries",
+      "expected_interpretation": "Jurisdiction and recognition convention needed; no universal marriage status taxonomy.",
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "society-q11",
+      "sequence": 11,
+      "text": "Which people share essential living arrangements without being relatives?",
+      "concept_ids": [
+        "society-c02",
+        "society-c05"
+      ],
+      "expression": "society:HousekeepingHousehold",
+      "expected_type": "subject",
+      "dependencies": [
+        "Housekeeping relation independent of family kinship.",
+        "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
+        "imod",
+        "life",
+        "physical"
+      ],
+      "positive": "Unrelated housemates share provision.",
+      "negative": "Related persons living separately assumed one household.",
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "source_motivation": "household not equivalent to kinship",
+      "expected_interpretation": "Housekeeping relation independent of family kinship.",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "society-q12",
+      "sequence": 12,
+      "text": "How many evacuees are still away from their usual homes?",
+      "concept_ids": [
+        "society-c10"
+      ],
+      "expression": null,
+      "expected_type": "relationship plus displacement event/history",
+      "dependencies": [
+        "Need current whereabouts and return observations; no automatic retention or return inference.",
+        "Explicit formulation gap: no complete observable expression claimed.",
+        "imod",
+        "life",
+        "physical"
+      ],
+      "positive": "Confirmed person still away after evacuation.",
+      "negative": "Missing follow-up interpreted as return.",
+      "source_ids": [
+        "DISPLACE"
+      ],
+      "source_motivation": "observation gap cannot imply return",
+      "expected_interpretation": "Need current whereabouts and return observations; no automatic retention or return inference.",
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "society-q13",
+      "sequence": 13,
+      "text": "When did an organization begin or cease to exist?",
+      "concept_ids": [
+        "society-c08",
+        "society-c03"
+      ],
+      "expression": null,
+      "expected_type": "creation/cessation events",
+      "dependencies": [
+        "Organization constitution/dissolution event concepts unresolved; do not infer cease from roster silence.",
+        "Explicit formulation gap: no complete observable expression claimed.",
+        "imod",
+        "life",
+        "physical"
+      ],
+      "positive": "Explicit dissolution act under rules.",
+      "negative": "No recent website update treated as dissolution.",
+      "source_ids": [
+        "OSTROM"
+      ],
+      "source_motivation": "institutional constituting or dissolving occurrence",
+      "expected_interpretation": "Organization constitution/dissolution event concepts unresolved; do not infer cease from roster silence.",
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "society-q14",
+      "sequence": 14,
+      "text": "Are visitors counted as residents in this estimate?",
+      "concept_ids": [
+        "society-c04",
+        "society-c19"
+      ],
+      "expression": "society:ResidentPopulation",
+      "expected_type": "subject",
+      "dependencies": [
+        "Reference convention distinguishes visitors and usual residents.",
+        "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
+        "imod",
+        "life",
+        "physical"
+      ],
+      "positive": "Visitor excluded from usual-resident count.",
+      "negative": "All overnight guests included without convention.",
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "source_motivation": "reference-population convention explicit",
+      "expected_interpretation": "Reference convention distinguishes visitors and usual residents.",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "society-q15",
+      "sequence": 15,
+      "text": "Which households lack a conventional dwelling but still share provision for essentials?",
+      "concept_ids": [
+        "society-c02"
+      ],
+      "expression": "society:HousekeepingHousehold",
+      "expected_type": "subject",
+      "dependencies": [
+        "Housekeeping convention admits arrangements without conventional housing.",
+        "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
+        "imod",
+        "life",
+        "physical"
+      ],
+      "positive": "People without a dwelling share essentials.",
+      "negative": "No address means no household.",
+      "source_ids": [
+        "CENSUS3"
+      ],
+      "source_motivation": "household does not require dwelling ownership",
+      "expected_interpretation": "Housekeeping convention admits arrangements without conventional housing.",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    }
+  ],
+  "quality_summaries": [
+    {
+      "quality": "HouseholdSize",
+      "proposed_summary": "SinglePerson versus MultiPerson household",
+      "basis": "Ordered count partition at1 andgreaterthan1 follows stated housekeeping unit; empty arrangement is not a household. Unknown membership is not zero.",
+      "status": "provisional",
+      "unknown_policy": "No unknown/unmeasured/disputed predicate; preserve evidence state."
+    },
+    {
+      "quality": "PersonAge",
+      "proposed_summary": "Age bands",
+      "basis": "Ordered but scheme-specific intervals; no child/elderly boundaries invented. Retain exact authority and interval inclusivity.",
+      "status": "blocked",
+      "unknown_policy": "No unknown/unmeasured/disputed predicate; preserve evidence state."
+    },
+    {
+      "quality": "HouseholdComposition",
+      "proposed_summary": "Nominal household type",
+      "basis": "No universal order; schemes can overlap and use different membership conventions. Map authorities explicitly without automatic equality.",
+      "status": "blocked",
+      "unknown_policy": "No unknown/unmeasured/disputed predicate; preserve evidence state."
+    }
+  ],
+  "ambiguities": [
+    "A-SOCIETY-01: household housekeeping and dwelling conventions not equivalent; schema authority must travel with data.",
+    "A-SOCIETY-02: institution can mean a rule arrangement or an organized body. Existing society:Institution does not settle which.",
+    "A-SOCIETY-03: resident population identity changes by births,deaths and migration; no hidden retention/automatic membership cascade.",
+    "A-SOCIETY-04: family readings vary by relationship and cultural/legal scope. Do not force a worldwide family taxonomy.",
+    "A-SOCIETY-05: original dirty society Human move is attributed in prior packet but not applied here. Import life:Human/life:Individual in current base remains an explicit comparison point.",
+    "A-SOCIETY-06: Revision4 census guidance exists; this dossier deliberately cites the read Revision3 paragraphs,not a falsely reconciled current consensus."
+  ],
+  "coverage": {
+    "counts": {
+      "subject": 5,
+      "process": 3,
+      "relationship": 5,
+      "event": 5,
+      "quality": 5,
+      "predicate": 0
+    },
+    "category_shortfalls": {
+      "subject": "5/5 proposed meanings,not five new approved kinds: HumanPerson is a proposed rename/clarification of HumanIndividual; ResidentPopulation and FamilyNetwork have category/boundary blockers.",
+      "process": "3/5: many demographic rates are derived qualities; birth/death are bounded events rather than extra processes added to meet a quota.",
+      "relationship": "5/5 with parent/partnership senses still requiring split or qualification.",
+      "event": "5/5 with vital-event definitions needing close reading; organization dissolution remains a gap.",
+      "quality": "5 explicit candidates; HouseholdComposition is likely authority-backed and PersonAge should reuse a reviewed specialization."
+    },
+    "question_count": 15,
+    "question_concept_incidence": {
+      "society-c01": [],
+      "society-c02": [
+        "society-q02",
+        "society-q03",
+        "society-q11",
+        "society-q15"
+      ],
+      "society-c03": [
+        "society-q09",
+        "society-q13"
+      ],
+      "society-c04": [
+        "society-q01",
+        "society-q14"
+      ],
+      "society-c05": [
+        "society-q02",
+        "society-q11"
+      ],
+      "society-c06": [
+        "society-q05"
+      ],
+      "society-c07": [],
+      "society-c08": [
+        "society-q13"
+      ],
+      "society-c09": [
+        "society-q04",
+        "society-q06"
+      ],
+      "society-c10": [
+        "society-q12"
+      ],
+      "society-c11": [
+        "society-q08"
+      ],
+      "society-c12": [
+        "society-q10"
+      ],
+      "society-c13": [
+        "society-q09"
+      ],
+      "society-c14": [
+        "society-q06"
+      ],
+      "society-c15": [
+        "society-q07"
+      ],
+      "society-c16": [
+        "society-q10"
+      ],
+      "society-c17": [
+        "society-q10"
+      ],
+      "society-c18": [
+        "society-q05"
+      ],
+      "society-c19": [
+        "society-q01",
+        "society-q14"
+      ],
+      "society-c20": [
+        "society-q03"
+      ],
+      "society-c21": [],
+      "society-c22": [],
+      "society-c23": []
+    },
+    "unused_candidates": [
+      "society-c01",
+      "society-c07",
+      "society-c21",
+      "society-c22",
+      "society-c23"
+    ],
+    "weak_source_areas": "Bounded official/primary sources; no disciplinary expert consultation. Reading-depth limitations recorded per source. All source-to-category translations need review.",
+    "fresh_independent_probes": "Not yet obtained. Drafting agent saw current vocabulary; source-first sequencing does not create independence.",
+    "formulation_counts": {
+      "expressions": 11,
+      "gaps": 4
+    }
+  },
+  "validation": {
+    "source_review": "scoped primary web reading and current source inspection; no expert discussion",
+    "grammar": "untested; parent will run actual parser on expression strings",
+    "adaptation": "not run for these undeclared research concepts",
+    "semantic_model_execution": "not run; proposed derivations,parameters and bindings blocked",
+    "negative_controls": [
+      {
+        "input": "society:HumanPerson of",
+        "expected": "grammar rejection",
+        "status": "not_run"
+      },
+      {
+        "claim": "Tourist included solely by current presence.",
+        "expected": "scientific/semantic rejection independent of grammar",
+        "status": "conceptual counterexample only"
+      }
+    ],
+    "approval_gates": [
+      "Resolve blocking meaning/ancestry and upstream issues.",
+      "Confirm exact source sections and competing interpretations with domain experts.",
+      "Reconcile question meanings with proposed declarations; obtain fresh independent probes.",
+      "Create context-pack1.3 proposal with exact import revisions and artifact hashes.",
+      "Run parser,adapter and loaded-worldview tests separately; preserve failures.",
+      "Human approval of exact revision/actions before executable promotion; no self-approval."
+    ],
+    "local_structure": {
+      "result": "PASS",
+      "checks": [
+        "Local draft2020-12 dossier schema",
+        "Unique concept IDs and question/concept/source references",
+        "Source-first question text and order match QUESTION_ORIGIN.json",
+        "Imported parent names present in inspected namespace text"
+      ],
+      "implementation": "Python3.13 jsonschema from existing task .python-deps; identifier check is textual,not semantic resolution",
+      "scope": "Only these local research artifacts; no parser,adapter,reasoner or model claim."
+    },
+    "human_approval": "none; source/ontology review outstanding",
+    "type_context_warning": "Reference existence and grammar acceptance do not establish scientific specialization."
+  }
+}

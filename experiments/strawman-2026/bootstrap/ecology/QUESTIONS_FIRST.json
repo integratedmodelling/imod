@@ -1,0 +1,212 @@
+[
+  {
+    "id": "ecology-q01",
+    "text": "Which organisms are feeding on which others in the recovering burn area?",
+    "source_ids": [
+      "FOOD"
+    ],
+    "concept_hint": "FeedsOn",
+    "expression": "ecology:FeedsOn linking life:Organism to life:Organism",
+    "expected_type": "relationship",
+    "positive": "Observed trophic link",
+    "negative": "Spatial co-occurrence",
+    "draft_order": 1,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "ecology-q02",
+    "text": "How many individuals of a specified population remain after fire?",
+    "source_ids": [
+      "NPS"
+    ],
+    "concept_hint": "PopulationAbundance",
+    "expression": "ecology:PopulationAbundance of ecology:Population",
+    "expected_type": "quality",
+    "positive": "Bounded population census",
+    "negative": "All organisms irrespective of population",
+    "draft_order": 2,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "ecology-q03",
+    "text": "Has the mix of species changed during recovery?",
+    "source_ids": [
+      "NPS"
+    ],
+    "concept_hint": "SpeciesRichness",
+    "expression": "change in ecology:SpeciesRichness of ecology:Community",
+    "expected_type": "change quality",
+    "positive": "Before/after composition with succession context",
+    "negative": "Richness alone treated as full composition",
+    "draft_order": 3,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "ecology-q04",
+    "text": "Are dead trees providing shelter for surviving animals?",
+    "source_ids": [
+      "NPS"
+    ],
+    "concept_hint": "Shelters",
+    "expression": "ecology:Shelters linking life:BiologicalRemnant to life:Organism",
+    "expected_type": "relationship",
+    "positive": "Occupied snag shelter",
+    "negative": "Any standing dead tree assigned benefit",
+    "draft_order": 4,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "ecology-q05",
+    "text": "Does a parasite benefit while its host is harmed?",
+    "source_ids": [
+      "SYMBIOSIS"
+    ],
+    "concept_hint": "Parasitizes",
+    "expression": "ecology:Parasitizes linking life:Organism to life:Organism",
+    "expected_type": "relationship",
+    "positive": "Evidence of feeding/harm in scoped interaction",
+    "negative": "Close association assumed parasitism",
+    "draft_order": 5,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "ecology-q06",
+    "text": "Are two associated organisms both benefiting from the interaction?",
+    "source_ids": [
+      "SYMBIOSIS"
+    ],
+    "concept_hint": "Mutualism",
+    "expression": "ecology:Mutualism linking life:Organism to life:Organism",
+    "expected_type": "relationship",
+    "positive": "Benefits on specified outcome axes",
+    "negative": "Association alone",
+    "draft_order": 6,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "ecology-q07",
+    "text": "Are newly arriving organisms establishing local reproducing populations?",
+    "source_ids": [
+      "NPS"
+    ],
+    "concept_hint": "Colonization",
+    "expression": "ecology:Colonization",
+    "expected_type": "process",
+    "positive": "Arrival followed by establishment criterion",
+    "negative": "Transient visitor",
+    "draft_order": 7,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "ecology-q08",
+    "text": "Did the last locally surviving individual die, or was the population not found?",
+    "source_ids": [
+      "NPS"
+    ],
+    "concept_hint": "LocalExtirpation",
+    "expression": "ecology:LocalExtirpation",
+    "expected_type": "event",
+    "positive": "Bounded local cessation with detection evidence",
+    "negative": "One negative survey",
+    "draft_order": 8,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "ecology-q09",
+    "text": "How much living material is present in the community?",
+    "source_ids": [
+      "FOOD"
+    ],
+    "concept_hint": "CommunityBiomass",
+    "expression": "ecology:CommunityBiomass of ecology:Community",
+    "expected_type": "mass quality",
+    "positive": "Defined living biomass pool",
+    "negative": "Total wet soil mass",
+    "draft_order": 9,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "ecology-q10",
+    "text": "Which feeding links could carry a disturbance beyond the burned patch?",
+    "source_ids": [
+      "FOOD"
+    ],
+    "concept_hint": "FeedsOn",
+    "expression": "ecology:FeedsOn linking life:Organism to life:Organism",
+    "expected_type": "relationship plus model gap",
+    "positive": "Supported links; effects require model",
+    "negative": "All links assumed equally strong",
+    "draft_order": 10,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "ecology-q11",
+    "text": "Does an aquatic community meet a locally chosen reference condition?",
+    "source_ids": [
+      "EPA"
+    ],
+    "concept_hint": "BiologicalCondition",
+    "expression": null,
+    "expected_type": "reference authority/model gap",
+    "positive": "Matched reference waterbody and criteria",
+    "negative": "Universal healthy threshold",
+    "draft_order": 11,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "ecology-q12",
+    "text": "Has a disturbance started a shift in community composition?",
+    "source_ids": [
+      "NPS"
+    ],
+    "concept_hint": "Succession",
+    "expression": "ecology:Succession",
+    "expected_type": "process",
+    "positive": "Documented temporal replacement",
+    "negative": "Automatic fixed trajectory after every fire",
+    "draft_order": 12,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "ecology-q13",
+    "text": "Is a habitat patch occupied continuously or only occasionally?",
+    "source_ids": [
+      "FOOD"
+    ],
+    "concept_hint": "HabitatPatch",
+    "expression": "ecology:HabitatPatch",
+    "expected_type": "subject plus temporal model gap",
+    "positive": "Occupancy records for defined organism context",
+    "negative": "Suitability equated with presence",
+    "draft_order": 13,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "ecology-q14",
+    "text": "Do organisms compete for the same limiting resource?",
+    "source_ids": [
+      "NPS"
+    ],
+    "concept_hint": "CompetesWith",
+    "expression": "ecology:CompetesWith linking life:Organism to life:Organism",
+    "expected_type": "relationship",
+    "positive": "Resource limitation and interaction evidence",
+    "negative": "Same resource use alone",
+    "draft_order": 14,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "ecology-q15",
+    "text": "Would unchanged species richness prove the ecosystem has recovered?",
+    "source_ids": [
+      "EPA"
+    ],
+    "concept_hint": "SpeciesRichness",
+    "expression": null,
+    "expected_type": "negative semantic probe",
+    "positive": "Composition/functions/reference considered separately",
+    "negative": "One summary metric equated with recovery",
+    "draft_order": 15,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  }
+]

@@ -1,0 +1,143 @@
+{
+  "domain": "sociology",
+  "stage": "source-first questions frozen before candidate vocabulary",
+  "created_on": "2026-10-03",
+  "independence": "Same author had read current ontology and prior packet. Questions preceded this dossier's candidate construction, but are not independent held-out tests. Fresh external probes still required.",
+  "questions": [
+    {
+      "id": "sociology-q01",
+      "sequence": 1,
+      "text": "Whom do residents trust to give reliable wildfire warnings?",
+      "source_ids": [
+        "TRUST"
+      ],
+      "source_motivation": "directed reported trust, not demonstrated reliability"
+    },
+    {
+      "id": "sociology-q02",
+      "sequence": 2,
+      "text": "Who has someone they can call on for evacuation help?",
+      "source_ids": [
+        "TRUST"
+      ],
+      "source_motivation": "support availability differs from delivered help"
+    },
+    {
+      "id": "sociology-q03",
+      "sequence": 3,
+      "text": "Which affected groups were absent from the planning meeting?",
+      "source_ids": [
+        "OSTROM"
+      ],
+      "source_motivation": "representation, eligibility and actual attendance"
+    },
+    {
+      "id": "sociology-q04",
+      "sequence": 4,
+      "text": "Did residents cooperate in maintaining shared firebreaks?",
+      "source_ids": [
+        "OSTROM"
+      ],
+      "source_motivation": "joint action versus spatial coincidence"
+    },
+    {
+      "id": "sociology-q05",
+      "sequence": 5,
+      "text": "Can people challenge the rules for accessing the community water supply?",
+      "source_ids": [
+        "OSTROM"
+      ],
+      "source_motivation": "rule-change participation and appeal"
+    },
+    {
+      "id": "sociology-q06",
+      "sequence": 6,
+      "text": "Are people equally able to obtain help, even if they face the same hazard?",
+      "source_ids": [
+        "VULN"
+      ],
+      "source_motivation": "access conditions differ from physical exposure"
+    },
+    {
+      "id": "sociology-q07",
+      "sequence": 7,
+      "text": "Which organizations share responsibility for the watershed?",
+      "source_ids": [
+        "OSTROM"
+      ],
+      "source_motivation": "polycentric arrangements not a single hierarchy"
+    },
+    {
+      "id": "sociology-q08",
+      "sequence": 8,
+      "text": "Did warning messages pass between otherwise disconnected groups?",
+      "source_ids": [
+        "TRUST"
+      ],
+      "source_motivation": "communication ties are not trust ties"
+    },
+    {
+      "id": "sociology-q09",
+      "sequence": 9,
+      "text": "How did confidence in local authorities change after the evacuation?",
+      "source_ids": [
+        "TRUST"
+      ],
+      "source_motivation": "reported trust change requires occurrence context; no assumed causation"
+    },
+    {
+      "id": "sociology-q10",
+      "sequence": 10,
+      "text": "Were workers represented when recovery work conditions were negotiated?",
+      "source_ids": [
+        "ILO154"
+      ],
+      "source_motivation": "representation scope and negotiation participants"
+    },
+    {
+      "id": "sociology-q11",
+      "sequence": 11,
+      "text": "When did a neighborhood mutual-aid group form?",
+      "source_ids": [
+        "OSTROM"
+      ],
+      "source_motivation": "formation event versus website creation"
+    },
+    {
+      "id": "sociology-q12",
+      "sequence": 12,
+      "text": "Was a dispute settled, or did people merely stop attending?",
+      "source_ids": [
+        "OSTROM"
+      ],
+      "source_motivation": "settlement and withdrawal have different interpretations"
+    },
+    {
+      "id": "sociology-q13",
+      "sequence": 13,
+      "text": "Did assistance reach isolated residents as well as well-connected residents?",
+      "source_ids": [
+        "VULN"
+      ],
+      "source_motivation": "network isolation and material need are separate"
+    },
+    {
+      "id": "sociology-q14",
+      "sequence": 14,
+      "text": "Are people with low reported trust necessarily refusing to cooperate?",
+      "source_ids": [
+        "TRUST"
+      ],
+      "source_motivation": "counterexample to unsupported deterministic relation"
+    },
+    {
+      "id": "sociology-q15",
+      "sequence": 15,
+      "text": "Can two groups agree on an action while disagreeing about its reasons?",
+      "source_ids": [
+        "OSTROM"
+      ],
+      "source_motivation": "coordination is not value consensus"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "phase": "source-question ledger saved before candidate records",
+  "independence": "Author saw legacy namespaces; source-led questions are not blind or independent probes. Fresh human probes remain required.",
+  "questions": [
+    {
+      "id": "atmosphere-q01",
+      "order": 1,
+      "text": "How warm is the air around the village rather than the sunlit ground?",
+      "source_ids": [
+        "A1"
+      ]
+    },
+    {
+      "id": "atmosphere-q02",
+      "order": 2,
+      "text": "How much moisture is in this air mass?",
+      "source_ids": [
+        "A2"
+      ]
+    },
+    {
+      "id": "atmosphere-q03",
+      "order": 3,
+      "text": "Which way and how fast is the air moving above the trees?",
+      "source_ids": [
+        "A1"
+      ]
+    },
+    {
+      "id": "atmosphere-q04",
+      "order": 4,
+      "text": "Is the approaching boundary separating warmer and colder air?",
+      "source_ids": [
+        "A3"
+      ]
+    },
+    {
+      "id": "atmosphere-q05",
+      "order": 5,
+      "text": "Did the front passing the village change its temperature?",
+      "source_ids": [
+        "A3"
+      ]
+    },
+    {
+      "id": "atmosphere-q06",
+      "order": 6,
+      "text": "Is rising air forming cloud droplets or only moving existing cloud?",
+      "source_ids": [
+        "A1"
+      ]
+    },
+    {
+      "id": "atmosphere-q07",
+      "order": 7,
+      "text": "Which air mass lies on each side of this front?",
+      "source_ids": [
+        "A3"
+      ]
+    },
+    {
+      "id": "atmosphere-q08",
+      "order": 8,
+      "text": "How much rain reached the ground during this storm?",
+      "source_ids": [
+        "A1"
+      ]
+    },
+    {
+      "id": "atmosphere-q09",
+      "order": 9,
+      "text": "Could air above the surface move differently from air near the ground?",
+      "source_ids": [
+        "A1"
+      ]
+    },
+    {
+      "id": "atmosphere-q10",
+      "order": 10,
+      "text": "Which vertical layer contains most of this weather?",
+      "source_ids": [
+        "A4"
+      ]
+    },
+    {
+      "id": "atmosphere-q11",
+      "order": 11,
+      "text": "Does a dry air mass mean there is no water vapor at all?",
+      "source_ids": [
+        "A2"
+      ]
+    },
+    {
+      "id": "atmosphere-q12",
+      "order": 12,
+      "text": "Can a surface pressure reading alone tell us where smoke will go?",
+      "source_ids": [
+        "A1"
+      ]
+    },
+    {
+      "id": "atmosphere-q13",
+      "order": 13,
+      "text": "Has a wind shift occurred since the last observation?",
+      "source_ids": [
+        "A3"
+      ]
+    },
+    {
+      "id": "atmosphere-q14",
+      "order": 14,
+      "text": "Does a front symbol on the map constitute a physical wall?",
+      "source_ids": [
+        "A3"
+      ]
+    },
+    {
+      "id": "atmosphere-q15",
+      "order": 15,
+      "text": "If humidity is unmeasured should we treat the air as dry?",
+      "source_ids": [
+        "A2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1440 @@
+{
+  "dossier_version": "0.1",
+  "domain": "geography",
+  "status": "research draft; no approval",
+  "scope": "Terrain form and topographic distinctions; jurisdictions and names belong to authorities. Geomorphology ownership with earth/geology remains provisional.",
+  "imports": [
+    {
+      "namespace": "imod",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+    },
+    {
+      "namespace": "earth",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "424c0141849aac2b9ae762079ff31c8c14cff4f0d6506eb19971004e7f22d816"
+    },
+    {
+      "namespace": "physical",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "3fb1809902f4d9534a5d8ac3d5e4372cd37a9a3b96de84e7f51e2d13270c345a"
+    }
+  ],
+  "sources": [
+    {
+      "id": "G1",
+      "title": "USGS National Map data delivery",
+      "url": "https://www.usgs.gov/tools/download-data-maps-national-map",
+      "locator": "Data Category table",
+      "scope": "Elevation, hydrography, names, boundaries and structures are distinct data themes, not universal concept classifications.",
+      "status": "primary selected text retrieved and reviewed",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    },
+    {
+      "id": "G2",
+      "title": "NRCS Field Book 4.0 (November 2024)",
+      "url": "https://www.nrcs.usda.gov/sites/default/files/2025-05/Field-Book-for-Describing-and-Sampling-Soils-Ver4.pdf",
+      "locator": "1-6 slope shape/position; 3-31 to 3-34 landform lists",
+      "scope": "Terrain observational descriptors; US field conventions are not universal exhaustive taxonomy.",
+      "status": "primary selected text retrieved and reviewed",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    },
+    {
+      "id": "G3",
+      "title": "USGS landslide FAQ",
+      "url": "https://www.usgs.gov/faqs/what-a-landslide-and-what-causes-one",
+      "locator": "Opening definition and causes",
+      "scope": "Gravity-driven mass movement with multiple possible triggers, not every elevation difference.",
+      "status": "primary selected text retrieved and reviewed",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    },
+    {
+      "id": "G4",
+      "title": "USGS coastal lidar morphology release",
+      "url": "https://coastal.er.usgs.gov/data-release/doi-F7GF0S0Z/",
+      "locator": "Summary; January 15 2026 version",
+      "scope": "Dune crest/toe, shoreline, beach width/slope depend on observation conventions.",
+      "status": "primary selected text retrieved and reviewed",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    },
+    {
+      "id": "G5",
+      "title": "USGS relative topography and elevation uncertainty",
+      "url": "https://www.usgs.gov/data/using-relative-topography-and-elevation-uncertainty-delineate-dune-habitat-barrier-islands",
+      "locator": "March 19 2019 summary",
+      "scope": "Relative position and uncertainty affect dune delineation; no universal thresholds.",
+      "status": "primary selected text retrieved and reviewed",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "geography:Hillslope",
+      "name": "Hillslope",
+      "category": "subject",
+      "definition": "Inclined terrain portion between contextual upper and lower breaks.",
+      "parent": "earth:LandFormation",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "geography:Slope",
+        "geography:Aspect"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "G2",
+        "G4"
+      ],
+      "positive": "hill flank",
+      "negative": "building wall",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:RidgeLandform",
+      "name": "RidgeLandform",
+      "category": "subject",
+      "definition": "Elongated raised landform with lower terrain to either side.",
+      "parent": "earth:LandFormation",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "geography:GroundElevation",
+        "geography:LocalRelief"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "G2",
+        "G4"
+      ],
+      "positive": "divide ridge",
+      "negative": "road centerline on flat ground",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:ValleyLandform",
+      "name": "ValleyLandform",
+      "category": "subject",
+      "definition": "Elongated low terrain with adjoining higher ground.",
+      "parent": "earth:LandFormation",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "geography:LocalRelief",
+        "geography:TerrainInclination"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "G2",
+        "G4"
+      ],
+      "positive": "river valley",
+      "negative": "circular closed quarry pit",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:ClosedDepression",
+      "name": "ClosedDepression",
+      "category": "subject",
+      "definition": "Terrain hollow without a lower surface outlet at the stated delineation scale.",
+      "parent": "earth:LandFormation",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "geography:LocalRelief"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "G2",
+        "G4"
+      ],
+      "positive": "internally draining hollow",
+      "negative": "outlet cropped off map",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:CoastalDune",
+      "name": "CoastalDune",
+      "category": "subject",
+      "definition": "Coastal landform built from wind-transported sediment.",
+      "parent": "earth:LandFormation",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "geography:GroundElevation",
+        "geography:CrestDisplacement"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "G2",
+        "G4"
+      ],
+      "positive": "sandy foredune",
+      "negative": "bedrock cliff",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:GroundElevation",
+      "name": "GroundElevation",
+      "category": "quality",
+      "definition": "Ground surface vertical position relative to stated reference.",
+      "parent": "physical:Height",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "earth:Location"
+      },
+      "source_ids": [
+        "G2",
+        "G4",
+        "G5"
+      ],
+      "positive": "bare-earth height with datum",
+      "negative": "roof return substituted",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:LocalRelief",
+      "name": "LocalRelief",
+      "category": "quality",
+      "definition": "Vertical difference across a specified terrain neighborhood.",
+      "parent": "imod:Length",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "earth:LandFormation"
+      },
+      "source_ids": [
+        "G2",
+        "G4",
+        "G5"
+      ],
+      "positive": "crest to valley difference",
+      "negative": "absolute height alone",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:TerrainInclination",
+      "name": "TerrainInclination",
+      "category": "quality",
+      "definition": "Ground-surface inclination relative to horizontal.",
+      "parent": "imod:Angle",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "earth:LandFormation"
+      },
+      "source_ids": [
+        "G2",
+        "G4",
+        "G5"
+      ],
+      "positive": "hill flank angle",
+      "negative": "compass direction",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:TerrainAspect",
+      "name": "TerrainAspect",
+      "category": "quality",
+      "definition": "Downslope orientation relative to geographical north.",
+      "parent": "imod:Angle",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "earth:LandFormation"
+      },
+      "source_ids": [
+        "G2",
+        "G4",
+        "G5"
+      ],
+      "positive": "west-facing slope",
+      "negative": "flat ground assigned arbitrary north",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:CrestDisplacement",
+      "name": "CrestDisplacement",
+      "category": "quality",
+      "definition": "Movement magnitude of an identified crest between observations.",
+      "parent": "imod:Length",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "geography:CoastalDune"
+      },
+      "source_ids": [
+        "G2",
+        "G4",
+        "G5"
+      ],
+      "positive": "tracked crest moved landward",
+      "negative": "new crest mistaken for same identity",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:SurfaceRemoval",
+      "name": "SurfaceRemoval",
+      "category": "process",
+      "definition": "Removal and transport of surface earth material.",
+      "parent": "earth:Erosion",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "geography:TerrainInclination"
+      ],
+      "bindings": {
+        "participants": [
+          "earth:LandFormation"
+        ],
+        "affects": [
+          "geography:GroundElevation"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Affects limited to actual material movement; attribution requires model/evidence. Dune migration/retreat need dedicated process source.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "G3",
+        "G4"
+      ],
+      "positive": "soil transported off slope",
+      "negative": "DEM software revision",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:SurfaceAccumulation",
+      "name": "SurfaceAccumulation",
+      "category": "process",
+      "definition": "Deposition building up material at a location.",
+      "parent": "earth:Sedimentation",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "geography:GroundElevation"
+      ],
+      "bindings": {
+        "participants": [
+          "earth:LandFormation"
+        ],
+        "affects": [
+          "geography:GroundElevation"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Affects limited to actual material movement; attribution requires model/evidence. Dune migration/retreat need dedicated process source.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "G3",
+        "G4"
+      ],
+      "positive": "sediment deposited at foot",
+      "negative": "water level rises",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:SlopeMassMovement",
+      "name": "SlopeMassMovement",
+      "category": "process",
+      "definition": "Downslope displacement of a terrain mass.",
+      "parent": "earth:LandformingProcess",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "geography:TerrainInclination"
+      ],
+      "bindings": {
+        "participants": [
+          "earth:LandFormation"
+        ],
+        "affects": [
+          "geography:GroundElevation"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Affects limited to actual material movement; attribution requires model/evidence. Dune migration/retreat need dedicated process source.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "G3",
+        "G4"
+      ],
+      "positive": "sliding earth mass",
+      "negative": "steep stationary hillside",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:DuneMigration",
+      "name": "DuneMigration",
+      "category": "process",
+      "definition": "Redistribution moving an identifiable dune form.",
+      "parent": "earth:LandformingProcess",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "geography:CrestDisplacement"
+      ],
+      "bindings": {
+        "participants": [
+          "earth:LandFormation"
+        ],
+        "affects": [
+          "geography:CrestDisplacement"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Affects limited to actual material movement; attribution requires model/evidence. Dune migration/retreat need dedicated process source.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "G3",
+        "G4"
+      ],
+      "positive": "crest moves with sediment",
+      "negative": "georeferencing shift",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:CoastalRetreat",
+      "name": "CoastalRetreat",
+      "category": "process",
+      "definition": "Landward shift of specified shore morphology through erosion.",
+      "parent": "earth:Erosion",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "geography:GroundElevation"
+      ],
+      "bindings": {
+        "participants": [
+          "earth:LandFormation"
+        ],
+        "affects": [
+          "geography:GroundElevation"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Affects limited to actual material movement; attribution requires model/evidence. Dune migration/retreat need dedicated process source.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "G3",
+        "G4"
+      ],
+      "positive": "scarp eroded landward",
+      "negative": "tidal wet/dry boundary shift",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:OppositeFlanks",
+      "name": "OppositeFlanks",
+      "category": "relationship",
+      "definition": "Hillslopes on opposite sides of the same ridge.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "geography:Hillslope",
+        "target": "geography:Hillslope",
+        "rationale": "Shared ridge identity required; no inferred water connection."
+      },
+      "source_ids": [
+        "G2"
+      ],
+      "positive": "opposite ridge flanks",
+      "negative": "slopes on separate mountains",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 2,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:TerrainAbutment",
+      "name": "TerrainAbutment",
+      "category": "relationship",
+      "definition": "Terrain forms meet along an observed boundary.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "earth:LandFormation",
+        "target": "earth:LandFormation",
+        "rationale": "Contact tolerance is contextual; symmetric inverse needs review."
+      },
+      "source_ids": [
+        "G2"
+      ],
+      "positive": "valley side meets floor",
+      "negative": "bounding boxes overlap",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 2,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:SurfaceOutletConnection",
+      "name": "SurfaceOutletConnection",
+      "category": "relationship",
+      "definition": "Terrain has a surface escape path to receiving terrain.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "earth:LandFormation",
+        "target": "earth:LandFormation",
+        "rationale": "Potential geometry, not actual flow or groundwater connection."
+      },
+      "source_ids": [
+        "G2"
+      ],
+      "positive": "open hollow toward valley",
+      "negative": "subsurface connection",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 2,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:SlopeFailureEpisode",
+      "name": "SlopeFailureEpisode",
+      "category": "event",
+      "definition": "Bounded slope movement episode.",
+      "parent": "earth:GeolocatedEvent",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "participants": [
+          "earth:LandFormation"
+        ],
+        "affects": [
+          "geography:GroundElevation"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Identity changes require an occurrence; no implemented cascade. Overwash source-specific evidence remains missing.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "G3",
+        "G4"
+      ],
+      "positive": "dated landslide",
+      "negative": "susceptibility map cell",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:DuneOverwashEpisode",
+      "name": "DuneOverwashEpisode",
+      "category": "event",
+      "definition": "Bounded crossing of dune by storm water and sediment.",
+      "parent": "earth:GeolocatedEvent",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "participants": [
+          "earth:LandFormation"
+        ],
+        "affects": [
+          "geography:GroundElevation"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Identity changes require an occurrence; no implemented cascade. Overwash source-specific evidence remains missing.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "G3",
+        "G4"
+      ],
+      "positive": "storm overwash deposit",
+      "negative": "ordinary seaward tidal wetting",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geography:ScarpCollapseEpisode",
+      "name": "ScarpCollapseEpisode",
+      "category": "event",
+      "definition": "Bounded loss of identified scarp part through collapse.",
+      "parent": "earth:GeolocatedEvent",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "participants": [
+          "earth:LandFormation"
+        ],
+        "affects": [
+          "geography:GroundElevation"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Identity changes require an occurrence; no implemented cascade. Overwash source-specific evidence remains missing.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "G3",
+        "G4"
+      ],
+      "positive": "detached cliff part falls",
+      "negative": "cliff hidden by cloud",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    }
+  ],
+  "questions": [
+    {
+      "id": "geography-q01",
+      "order": 1,
+      "text": "How high is the ground beside this house relative to the same vertical reference?",
+      "source_ids": [
+        "G1"
+      ],
+      "concept_ids": [
+        "geography:GroundElevation"
+      ],
+      "expression": "geography:GroundElevation of earth:Location",
+      "expected_type": "quality",
+      "dependencies": [
+        "Ground-surface height with common datum; home location supplies context.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Ground-surface height with common datum; home location supplies context.",
+      "negative": "roof height",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Ground-surface height with common datum; home location supplies context.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 1,
+        "independent": false
+      }
+    },
+    {
+      "id": "geography-q02",
+      "order": 2,
+      "text": "Which side of this hillside faces the afternoon sun?",
+      "source_ids": [
+        "G2"
+      ],
+      "concept_ids": [
+        "geography:TerrainAspect",
+        "geography:Hillslope"
+      ],
+      "expression": "geography:TerrainAspect of geography:Hillslope",
+      "expected_type": "quality",
+      "dependencies": [
+        "Aspect is needed; afternoon insolation additionally needs external solar/terrain model.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Aspect is needed; afternoon insolation additionally needs external solar/terrain model.",
+      "negative": "aspect alone guarantees sunshine",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Aspect is needed; afternoon insolation additionally needs external solar/terrain model.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 2,
+        "independent": false
+      }
+    },
+    {
+      "id": "geography-q03",
+      "order": 3,
+      "text": "Where is the steepest ground along the planned walking route?",
+      "source_ids": [
+        "G2"
+      ],
+      "concept_ids": [
+        "geography:TerrainInclination",
+        "geography:Hillslope"
+      ],
+      "expression": "geography:TerrainInclination of geography:Hillslope",
+      "expected_type": "quality",
+      "dependencies": [
+        "Resolve inclination across route context, then compare externally.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Resolve inclination across route context, then compare externally.",
+      "negative": "route slope confused with every adjacent hillside",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Resolve inclination across route context, then compare externally.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 3,
+        "independent": false
+      }
+    },
+    {
+      "id": "geography-q04",
+      "order": 4,
+      "text": "Do two places with the same height belong to the same landform?",
+      "source_ids": [
+        "G2"
+      ],
+      "concept_ids": [
+        "geography:GroundElevation",
+        "geography:ValleyLandform",
+        "geography:RidgeLandform"
+      ],
+      "expression": null,
+      "expected_type": "gap",
+      "dependencies": [
+        "Equal height does not establish landform identity; form/configuration discrimination missing.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Equal height does not establish landform identity; form/configuration discrimination missing.",
+      "negative": "same contour means same landform",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Equal height does not establish landform identity; form/configuration discrimination missing.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 4,
+        "independent": false
+      }
+    },
+    {
+      "id": "geography-q05",
+      "order": 5,
+      "text": "Where does this ridge separate surface drainage directions?",
+      "source_ids": [
+        "G2"
+      ],
+      "concept_ids": [
+        "geography:RidgeLandform",
+        "geography:SurfaceOutletConnection"
+      ],
+      "expression": "geography:RidgeLandform",
+      "expected_type": "subject",
+      "dependencies": [
+        "Ridge observation contributes; drainage-divide role and flow routing need hydrology.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Ridge observation contributes; drainage-divide role and flow routing need hydrology.",
+      "negative": "all ridges assumed catchment divides",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Ridge observation contributes; drainage-divide role and flow routing need hydrology.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 5,
+        "independent": false
+      }
+    },
+    {
+      "id": "geography-q06",
+      "order": 6,
+      "text": "Is the low area a valley with an outlet or a closed hollow?",
+      "source_ids": [
+        "G2"
+      ],
+      "concept_ids": [
+        "geography:ClosedDepression",
+        "geography:ValleyLandform"
+      ],
+      "expression": "geography:ClosedDepression",
+      "expected_type": "subject",
+      "dependencies": [
+        "Test closed surface boundary at stated scale; distinguish outlet cropping.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Test closed surface boundary at stated scale; distinguish outlet cropping.",
+      "negative": "groundwater exit disproves surface closure",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Test closed surface boundary at stated scale; distinguish outlet cropping.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 6,
+        "independent": false
+      }
+    },
+    {
+      "id": "geography-q07",
+      "order": 7,
+      "text": "How much lower did this ground become after the slope failed?",
+      "source_ids": [
+        "G3"
+      ],
+      "concept_ids": [
+        "geography:GroundElevation",
+        "geography:SlopeFailureEpisode"
+      ],
+      "expression": "change in geography:GroundElevation of earth:Location",
+      "expected_type": "change quality",
+      "dependencies": [
+        "Separate elevation change tied to slope-failure occurrence; no implicit elevation evolution.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Separate elevation change tied to slope-failure occurrence; no implicit elevation evolution.",
+      "negative": "survey datum shift treated as erosion",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Separate elevation change tied to slope-failure occurrence; no implicit elevation evolution.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 7,
+        "independent": false
+      }
+    },
+    {
+      "id": "geography-q08",
+      "order": 8,
+      "text": "Did the apparent shoreline move because land was lost or because the tide changed?",
+      "source_ids": [
+        "G3"
+      ],
+      "concept_ids": [
+        "geography:CoastalRetreat",
+        "geography:GroundElevation"
+      ],
+      "expression": null,
+      "expected_type": "gap",
+      "dependencies": [
+        "Requires tide-referenced shoreline geometry and observed removal event; elevation alone insufficient.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Requires tide-referenced shoreline geometry and observed removal event; elevation alone insufficient.",
+      "negative": "tidal exposure called land loss",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Requires tide-referenced shoreline geometry and observed removal event; elevation alone insufficient.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 8,
+        "independent": false
+      }
+    },
+    {
+      "id": "geography-q09",
+      "order": 9,
+      "text": "Is this dune moving toward the road?",
+      "source_ids": [
+        "G3"
+      ],
+      "concept_ids": [
+        "geography:CrestDisplacement",
+        "geography:CoastalDune"
+      ],
+      "expression": "geography:CrestDisplacement of geography:CoastalDune",
+      "expected_type": "quality",
+      "dependencies": [
+        "Track same dune crest; road proximity is a separate core spatial comparison.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Track same dune crest; road proximity is a separate core spatial comparison.",
+      "negative": "new crest substituted without identity evidence",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Track same dune crest; road proximity is a separate core spatial comparison.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 9,
+        "independent": false
+      }
+    },
+    {
+      "id": "geography-q10",
+      "order": 10,
+      "text": "Which mapped boundary is a jurisdiction and which is a natural feature?",
+      "source_ids": [
+        "G1"
+      ],
+      "concept_ids": [
+        "geography:TerrainAbutment"
+      ],
+      "expression": null,
+      "expected_type": "gap",
+      "dependencies": [
+        "Jurisdictional boundary authority and society/policy imports absent; do not use terrain contact.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Jurisdictional boundary authority and society/policy imports absent; do not use terrain contact.",
+      "negative": "political boundary assumed natural wall",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Jurisdictional boundary authority and society/policy imports absent; do not use terrain contact.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 10,
+        "independent": false
+      }
+    },
+    {
+      "id": "geography-q11",
+      "order": 11,
+      "text": "Can a roof height measurement tell us the height of the ground beneath it?",
+      "source_ids": [
+        "G1"
+      ],
+      "concept_ids": [
+        "geography:GroundElevation"
+      ],
+      "expression": "geography:GroundElevation of earth:Location",
+      "expected_type": "quality",
+      "dependencies": [
+        "Reject roof returns as ground unless independent ground observation/model exists.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Reject roof returns as ground unless independent ground observation/model exists.",
+      "negative": "roof equals ground",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Reject roof returns as ground unless independent ground observation/model exists.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 11,
+        "independent": false
+      }
+    },
+    {
+      "id": "geography-q12",
+      "order": 12,
+      "text": "Which neighboring slopes share the same ridge?",
+      "source_ids": [
+        "G2"
+      ],
+      "concept_ids": [
+        "geography:OppositeFlanks",
+        "geography:Hillslope"
+      ],
+      "expression": "geography:OppositeFlanks",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Resolve endpoints and shared ridge; bare relationship expression is only reusable meaning.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Resolve endpoints and shared ridge; bare relationship expression is only reusable meaning.",
+      "negative": "nearby slopes assumed shared ridge",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Resolve endpoints and shared ridge; bare relationship expression is only reusable meaning.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 12,
+        "independent": false
+      }
+    },
+    {
+      "id": "geography-q13",
+      "order": 13,
+      "text": "Did deposited sediment raise the low ground after the storm?",
+      "source_ids": [
+        "G3"
+      ],
+      "concept_ids": [
+        "geography:SurfaceAccumulation",
+        "geography:GroundElevation"
+      ],
+      "expression": "change in geography:GroundElevation of earth:Location",
+      "expected_type": "change quality",
+      "dependencies": [
+        "Change plus deposition evidence; attribution to storm requires model.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Change plus deposition evidence; attribution to storm requires model.",
+      "negative": "water depth mistaken for new sediment",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Change plus deposition evidence; attribution to storm requires model.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 13,
+        "independent": false
+      }
+    },
+    {
+      "id": "geography-q14",
+      "order": 14,
+      "text": "Can we infer an unchanged hillside because no new elevation survey exists?",
+      "source_ids": [
+        "G3"
+      ],
+      "concept_ids": [
+        "geography:GroundElevation"
+      ],
+      "expression": null,
+      "expected_type": "gap",
+      "dependencies": [
+        "Evidence-state question: no new survey leaves change unresolved, not zero.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Evidence-state question: no new survey leaves change unresolved, not zero.",
+      "negative": "unknown means unchanged",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Evidence-state question: no new survey leaves change unresolved, not zero.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 14,
+        "independent": false
+      }
+    },
+    {
+      "id": "geography-q15",
+      "order": 15,
+      "text": "Does a map label saying mountain establish a universal minimum height?",
+      "source_ids": [
+        "G2"
+      ],
+      "concept_ids": [
+        "geography:RidgeLandform"
+      ],
+      "expression": null,
+      "expected_type": "gap",
+      "dependencies": [
+        "Mountain naming authority and chosen landform definition needed; no universal threshold inferred.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Mountain naming authority and chosen landform definition needed; no universal threshold inferred.",
+      "negative": "map name establishes minimum height",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Mountain naming authority and chosen landform definition needed; no universal threshold inferred.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 15,
+        "independent": false
+      }
+    }
+  ],
+  "quality_summaries": [
+    {
+      "quality": "geography:TerrainInclination",
+      "proposed_summary": "RelativelySteep",
+      "basis": "Ordered comparison to explicit terrain/reference/use, no fixed angle threshold; overlap/context permitted, not exhaustive global bins.",
+      "status": "blocked until comparison rule and evidence selected",
+      "kind": "ordering",
+      "nominal": false,
+      "ordered": true,
+      "overlap": "allowed across differently scoped comparisons; no exhaustive partition",
+      "context_scope": "explicit reference population and measurement convention",
+      "source_ids": [
+        "G2"
+      ],
+      "evidence_rule": "Requires resolved comparable quality observations; unknown/unmeasured is not this predicate.",
+      "measurement_state": "Missing measurement is unresolved evidence; not false and not an automatic nominal class."
+    }
+  ],
+  "ambiguities": [
+    "earth:Region has volumetric prose and Areal annotation. LandFormation inherits it; shape/bearer issue blocks implementation.",
+    "Do not preserve earth:GeoFormation geomorphon classification as universal landform subclasses.",
+    "Ground elevation differs from reflecting roof/canopy height; datum belongs in context/model.",
+    "Human geography remains a coverage weakness, not silently reduced to terrain.",
+    "No dependency from earth back to geography is proposed. Shared processes may consolidate in earth/geology."
+  ],
+  "coverage": {
+    "counts": {
+      "subject": 5,
+      "quality": 5,
+      "process": 5,
+      "relationship": 3,
+      "event": 3
+    },
+    "target": {
+      "subject": 5,
+      "process": 5,
+      "relationship": 5,
+      "event": 5
+    },
+    "shortfalls": {
+      "relationship": "2 slots unfilled; generic proximity or unsupported causal links would pad coverage. Soil includes one blocked machinery relation, so at most two domain relationship candidates.",
+      "event": "2 slots unfilled; avoid inventing threshold episodes or relabeling every process as an event."
+    },
+    "source_limits": "Agency primary materials are bounded starting evidence, often educational/descriptive. Sources do not endorse ontological categories, exact inferred bindings or exhaustive coverage. Retrieval failures are recorded per source.",
+    "concept_question_incidence": {
+      "geography:Hillslope": [
+        "geography-q02",
+        "geography-q03",
+        "geography-q12"
+      ],
+      "geography:RidgeLandform": [
+        "geography-q04",
+        "geography-q05",
+        "geography-q15"
+      ],
+      "geography:ValleyLandform": [
+        "geography-q04",
+        "geography-q06"
+      ],
+      "geography:ClosedDepression": [
+        "geography-q06"
+      ],
+      "geography:CoastalDune": [
+        "geography-q09"
+      ],
+      "geography:GroundElevation": [
+        "geography-q01",
+        "geography-q04",
+        "geography-q07",
+        "geography-q08",
+        "geography-q11",
+        "geography-q13",
+        "geography-q14"
+      ],
+      "geography:LocalRelief": [],
+      "geography:TerrainInclination": [
+        "geography-q03"
+      ],
+      "geography:TerrainAspect": [
+        "geography-q02"
+      ],
+      "geography:CrestDisplacement": [
+        "geography-q09"
+      ],
+      "geography:SurfaceRemoval": [],
+      "geography:SurfaceAccumulation": [
+        "geography-q13"
+      ],
+      "geography:SlopeMassMovement": [],
+      "geography:DuneMigration": [],
+      "geography:CoastalRetreat": [
+        "geography-q08"
+      ],
+      "geography:OppositeFlanks": [
+        "geography-q12"
+      ],
+      "geography:TerrainAbutment": [
+        "geography-q10"
+      ],
+      "geography:SurfaceOutletConnection": [
+        "geography-q05"
+      ],
+      "geography:SlopeFailureEpisode": [
+        "geography-q07"
+      ],
+      "geography:DuneOverwashEpisode": [],
+      "geography:ScarpCollapseEpisode": []
+    },
+    "unused_candidates": [
+      "geography:LocalRelief",
+      "geography:SurfaceRemoval",
+      "geography:SlopeMassMovement",
+      "geography:DuneMigration",
+      "geography:DuneOverwashEpisode",
+      "geography:ScarpCollapseEpisode"
+    ],
+    "unused_policy": "Unused concepts are exposed for removal or fresh question testing, not silently declared needed.",
+    "held_out_status": "No independently authored held-out probes obtained. Questions were source-first but author knew legacy and is not independent; request fresh human/domain probes after freezing revision."
+  },
+  "validation": {
+    "source_review": "selected primary passages/indexed excerpts read; no expert discussion",
+    "grammar": "not run by author; parent batch parser planned",
+    "adaptation": "not run for these undeclared candidates",
+    "namespace_resolution": "existing parent names manually checked; candidates are prose, not installed concepts",
+    "scientific_semantics": "provisional/blocked per record; no human approval",
+    "models": "not run; no runtime answerability claim",
+    "consequence_execution": "not implemented; implication/detection syntax-only",
+    "negative_controls": [
+      {
+        "expression": "geography:DefinitelyMissing",
+        "expected": "qualified-name syntax may pass, namespace resolution must fail",
+        "status": "not_run"
+      },
+      {
+        "expression": "change in of geography:DefinitelyMissing",
+        "expected": "grammar reject",
+        "status": "not_run"
+      }
+    ],
+    "approval_gate": "Freeze dossier/import hashes, resolve blocking ambiguity/source gaps, human domain and ontology review, actual candidate parser/adaptation/reasoner checks, separate exact-revision approval; no self-approval.",
+    "local_structure": "PASS author check: 15 ordered unique questions, stable candidate/source references and exact ledger text; 21 candidate IDs; no executable source.",
+    "human_approval": "none; source/ontology review outstanding",
+    "type_context_warning": "Reference existence and grammar acceptance do not establish scientific specialization."
+  },
+  "question_generation": {
+    "ledger_sha256": "3539fd49b12d4ea417574bfcf4045393801bc6241a20126663d22a9d5e975aa1",
+    "order": "source review -> saved 15-question ledger -> candidate records -> expression mapping",
+    "independent": false
+  },
+  "upstream_issues": [
+    {
+      "id": "geo-upper-region",
+      "missing_distinction": "earth:Region surface/volume and inherited feature dependence",
+      "required_action": "Resolve before any LandFormation specialization is executable.",
+      "status": "blocking relevant concepts; no local workaround"
+    },
+    {
+      "id": "geo-forcing",
+      "missing_distinction": "Stress, shear resistance, fluid motion and sediment content",
+      "required_action": "Relevant to erosion/mass movement; parameters are incomplete until physical/hydrology/geology definitions exist.",
+      "status": "blocking relevant concepts; no local workaround"
+    },
+    {
+      "id": "geo-overlap",
+      "missing_distinction": "GroundElevation/TerrainInclination/TerrainAspect versus existing Elevation/Slope/Aspect",
+      "required_action": "Proposed cleaned meanings should revise/reuse existing IDs after review rather than silently duplicate. No equals until meaning is established.",
+      "status": "blocking relevant concepts; no local workaround"
+    }
+  ],
+  "import_evidence": [
+    {
+      "namespace": "imod",
+      "path": "src/imod.kwv",
+      "sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca",
+      "scope": "Exact imported bytes available at dossier authoring; reference existence only."
+    },
+    {
+      "namespace": "earth",
+      "path": "src/earth.kwv",
+      "sha256": "424c0141849aac2b9ae762079ff31c8c14cff4f0d6506eb19971004e7f22d816",
+      "scope": "Exact imported bytes available at dossier authoring; reference existence only."
+    },
+    {
+      "namespace": "physical",
+      "path": "src/physical.kwv",
+      "sha256": "3fb1809902f4d9534a5d8ac3d5e4372cd37a9a3b96de84e7f51e2d13270c345a",
+      "scope": "Exact imported bytes available at dossier authoring; reference existence only."
+    }
+  ]
+}

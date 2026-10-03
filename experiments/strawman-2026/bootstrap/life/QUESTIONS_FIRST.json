@@ -1,0 +1,212 @@
+[
+  {
+    "id": "life-q01",
+    "text": "Which living individuals survived in the burned patch, rather than merely leaving detectable remains?",
+    "source_ids": [
+      "NPS"
+    ],
+    "concept_hint": "Organism",
+    "expression": "presence of life:Organism",
+    "expected_type": "subject presence",
+    "positive": "Living shoot inspected after fire",
+    "negative": "DNA from a dead stem",
+    "draft_order": 1,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "life-q02",
+    "text": "Is the green patch one organism or several independently rooted individuals?",
+    "source_ids": [
+      "CELL"
+    ],
+    "concept_hint": "Organism",
+    "expression": "count of life:Organism",
+    "expected_type": "numerosity",
+    "positive": "Separately bounded individuals",
+    "negative": "Count of green pixels",
+    "draft_order": 2,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "life-q03",
+    "text": "How much living material belongs to this organism?",
+    "source_ids": [
+      "CELL"
+    ],
+    "concept_hint": "LivingMass",
+    "expression": "life:LivingMass of life:Organism",
+    "expected_type": "mass quality",
+    "positive": "Mass assigned to a bounded organism",
+    "negative": "Dry soil mass",
+    "draft_order": 3,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "life-q04",
+    "text": "Does the sample contain intact cells or only fragments?",
+    "source_ids": [
+      "CELL"
+    ],
+    "concept_hint": "Cell",
+    "expression": "presence of life:Cell",
+    "expected_type": "subject presence",
+    "positive": "Membrane-bounded cell",
+    "negative": "Free DNA fragment",
+    "draft_order": 4,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "life-q05",
+    "text": "Which tissue in the plant was damaged by heat?",
+    "source_ids": [
+      "NPS"
+    ],
+    "concept_hint": "Tissue",
+    "expression": "life:Tissue",
+    "expected_type": "subject",
+    "positive": "Bark tissue with assessed damage",
+    "negative": "Fire perimeter",
+    "draft_order": 5,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "life-q06",
+    "text": "Which organ is still part of the same surviving individual?",
+    "source_ids": [
+      "CELL"
+    ],
+    "concept_hint": "OrganPart",
+    "expression": "life:OrganPart linking life:Organ to life:Organism",
+    "expected_type": "relationship",
+    "positive": "Root belonging to this plant",
+    "negative": "Nearby unrelated root",
+    "draft_order": 6,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "life-q07",
+    "text": "Are seeds present after the fire, and does presence establish that they can germinate?",
+    "source_ids": [
+      "NPS"
+    ],
+    "concept_hint": "Seed",
+    "expression": "presence of life:Seed",
+    "expected_type": "subject presence",
+    "positive": "Identified seed; viability separate",
+    "negative": "Assuming every seed viable",
+    "draft_order": 7,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "life-q08",
+    "text": "Did an organism die during the fire, or has it simply not been detected?",
+    "source_ids": [
+      "NPS"
+    ],
+    "concept_hint": "OrganismDeath",
+    "expression": "life:OrganismDeath",
+    "expected_type": "event",
+    "positive": "Bounded loss of viable organism",
+    "negative": "Missed survey",
+    "draft_order": 8,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "life-q09",
+    "text": "Was a new individual produced by division or was existing biomass merely enlarged?",
+    "source_ids": [
+      "CELL"
+    ],
+    "concept_hint": "Reproduction",
+    "expression": "life:Reproduction",
+    "expected_type": "process",
+    "positive": "Production of separately individuated offspring",
+    "negative": "Growth of one pre-existing cell",
+    "draft_order": 9,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "life-q10",
+    "text": "How did the size of the surviving plant change while it regrew?",
+    "source_ids": [
+      "NPS"
+    ],
+    "concept_hint": "Growth",
+    "expression": "change in life:LivingMass of life:Organism",
+    "expected_type": "change quality",
+    "positive": "Mass change attributed to growth occurrent",
+    "negative": "Missing resurvey interpreted as zero",
+    "draft_order": 10,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "life-q11",
+    "text": "Is a charred standing trunk still a living tree or now a biological remnant?",
+    "source_ids": [
+      "NPS"
+    ],
+    "concept_hint": "BiologicalRemnant",
+    "expression": "life:BiologicalRemnant",
+    "expected_type": "subject",
+    "positive": "Dead snag retains material continuity",
+    "negative": "Unburned live tree",
+    "draft_order": 11,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "life-q12",
+    "text": "Which individual is the biological parent of this seedling?",
+    "source_ids": [
+      "CELL"
+    ],
+    "concept_hint": "ParentOf",
+    "expression": "life:ParentOf linking life:Organism to life:Organism",
+    "expected_type": "relationship",
+    "positive": "Reproductive lineage evidence",
+    "negative": "Nearest adult assumed parent",
+    "draft_order": 12,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "life-q13",
+    "text": "Did a seed germinate, rather than arrive as an already growing seedling?",
+    "source_ids": [
+      "NPS"
+    ],
+    "concept_hint": "Germination",
+    "expression": "life:Germination",
+    "expected_type": "event",
+    "positive": "Bounded seed-to-seedling transition",
+    "negative": "Transplanted seedling",
+    "draft_order": 13,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "life-q14",
+    "text": "Which organisms contain these cells without assuming the cells share one genome?",
+    "source_ids": [
+      "CELL"
+    ],
+    "concept_hint": "CellPart",
+    "expression": "life:CellPart linking life:Cell to life:Organism",
+    "expected_type": "relationship",
+    "positive": "Cellular part of organism",
+    "negative": "Surface-associated bacterium automatically called host part",
+    "draft_order": 14,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "life-q15",
+    "text": "Can the evidence distinguish dormancy from death?",
+    "source_ids": [
+      "CELL"
+    ],
+    "concept_hint": "OrganismDeath",
+    "expression": null,
+    "expected_type": "explicit evidence gap",
+    "positive": "Repeated viability evidence under specified protocol",
+    "negative": "No activity detected once",
+    "draft_order": 15,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  }
+]

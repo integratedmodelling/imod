@@ -1,0 +1,112 @@
+{
+  "stage": "question-first editorial draft before local candidate tables",
+  "date": "2026-10-03",
+  "independence": "Author saw legacy and prior packet; not blind or independently validated. Fresh held-out probes must come from another reviewer.",
+  "questions": [
+    {
+      "id": "chemistry-q01",
+      "sequence": 1,
+      "text": "Does methane mean one molecule or a collection of the same kind?",
+      "source_id": "IUPAC-ENTITY",
+      "interpretation_seed": "Molecular entity vs species ensemble vs classifier."
+    },
+    {
+      "id": "chemistry-q02",
+      "sequence": 2,
+      "text": "Has a chemical change occurred or have materials only mixed?",
+      "source_id": "IUPAC-REACTION",
+      "interpretation_seed": "Species interconversion vs mixing."
+    },
+    {
+      "id": "chemistry-q03",
+      "sequence": 3,
+      "text": "When salt disappears into water, what material remains?",
+      "source_id": "IUPAC-DISSOLUTION",
+      "interpretation_seed": "Dissolution and solution rather than disappearance of matter."
+    },
+    {
+      "id": "chemistry-q04",
+      "sequence": 4,
+      "text": "Are oil and water one phase after stirring?",
+      "source_id": "IUPAC-PHASE",
+      "interpretation_seed": "Uniformity criterion vs visual emulsion."
+    },
+    {
+      "id": "chemistry-q05",
+      "sequence": 5,
+      "text": "Does a new solid in water mean it rained?",
+      "source_id": "IUPAC-PRECIP",
+      "interpretation_seed": "Chemical precipitation distinct from meteorological precipitation."
+    },
+    {
+      "id": "chemistry-q06",
+      "sequence": 6,
+      "text": "Can oxidation occur without adding oxygen?",
+      "source_id": "IUPAC-OX",
+      "interpretation_seed": "Electron loss/oxidation-state reading, not oxygen-only definition."
+    },
+    {
+      "id": "chemistry-q07",
+      "sequence": 7,
+      "text": "Which molecule is attached to the surface rather than dissolved in the bulk?",
+      "source_id": "IUPAC-ADSORB",
+      "interpretation_seed": "Surface association vs solution composition."
+    },
+    {
+      "id": "chemistry-q08",
+      "sequence": 8,
+      "text": "How much of each species is present in this sample?",
+      "source_id": "BIPM",
+      "interpretation_seed": "Species-specific amount/concentration requires denominator and phase."
+    },
+    {
+      "id": "chemistry-q09",
+      "sequence": 9,
+      "text": "Can equal masses of two substances contain different numbers of entities?",
+      "source_id": "BIPM",
+      "interpretation_seed": "Mass vs amount distinction."
+    },
+    {
+      "id": "chemistry-q10",
+      "sequence": 10,
+      "text": "Is a material uniform for one constituent but patchy for another?",
+      "source_id": "IUPAC-HOM",
+      "interpretation_seed": "Analyte-specific homogeneity."
+    },
+    {
+      "id": "chemistry-q11",
+      "sequence": 11,
+      "text": "What starts and finishes a single reaction episode?",
+      "source_id": "IUPAC-REACTION",
+      "interpretation_seed": "Operational bounded event around dependent reaction process."
+    },
+    {
+      "id": "chemistry-q12",
+      "sequence": 12,
+      "text": "Are the products different species or only a different physical state?",
+      "source_id": "IUPAC-REACTION",
+      "interpretation_seed": "Interconversion vs phase change may overlap; identify actual entities."
+    },
+    {
+      "id": "chemistry-q13",
+      "sequence": 13,
+      "text": "Does adsorption always leave a molecule intact?",
+      "source_id": "IUPAC-ADSORB",
+      "interpretation_seed": "Dissociative adsorption counterexample."
+    },
+    {
+      "id": "chemistry-q14",
+      "sequence": 14,
+      "text": "Does unknown chemical composition mean a new kind of substance?",
+      "source_id": "LOCAL",
+      "interpretation_seed": "Unknown evidence is not chemical identity."
+    },
+    {
+      "id": "chemistry-q15",
+      "sequence": 15,
+      "text": "Can a chemical classification code tell us how fast this reaction proceeds?",
+      "source_id": "IUPAC-REACTION",
+      "interpretation_seed": "Identity authority vs kinetic quality/model."
+    }
+  ]
+}

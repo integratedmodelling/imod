@@ -1,0 +1,112 @@
+{
+  "stage": "question-first editorial draft before local candidate tables",
+  "date": "2026-10-03",
+  "independence": "Author saw legacy and prior packet; not blind or independently validated. Fresh held-out probes must come from another reviewer.",
+  "questions": [
+    {
+      "id": "physical-q01",
+      "sequence": 1,
+      "text": "Which material object are we following when it heats without breaking?",
+      "source_id": "NASA-HEAT",
+      "interpretation_seed": "Identity continuity vs thermal change; boundary/identity policy is an upstream issue."
+    },
+    {
+      "id": "physical-q02",
+      "sequence": 2,
+      "text": "How much matter does the same bounded object contain?",
+      "source_id": "BIPM",
+      "interpretation_seed": "Mass must not mean amount of substance."
+    },
+    {
+      "id": "physical-q03",
+      "sequence": 3,
+      "text": "Can a hole be observed separately from the solid hosting it?",
+      "source_id": "LOCAL",
+      "interpretation_seed": "Dependent feature vs independent substantial."
+    },
+    {
+      "id": "physical-q04",
+      "sequence": 4,
+      "text": "Did the boulder remain one object after it cracked into detached pieces?",
+      "source_id": "USGS-DESERT",
+      "interpretation_seed": "Cessation requires bounded fragmentation occurrence and new identities."
+    },
+    {
+      "id": "physical-q05",
+      "sequence": 5,
+      "text": "Which parts of this rock are in physical contact?",
+      "source_id": "NASA-HEAT",
+      "interpretation_seed": "Contact does not entail attachment or common identity."
+    },
+    {
+      "id": "physical-q06",
+      "sequence": 6,
+      "text": "Is the hot stone bigger after warming?",
+      "source_id": "NASA-HEAT",
+      "interpretation_seed": "Volume and temperature are distinct dependent observables; thermal expansion is a mechanism."
+    },
+    {
+      "id": "physical-q07",
+      "sequence": 7,
+      "text": "Did the quantity of material change when fragments moved away?",
+      "source_id": "USGS-DESERT",
+      "interpretation_seed": "Open boundary material accounting vs identity loss."
+    },
+    {
+      "id": "physical-q08",
+      "sequence": 8,
+      "text": "Does an unmoving stone have no physical processes?",
+      "source_id": "NASA-MOTION",
+      "interpretation_seed": "Stillness in a chosen frame cannot establish absence of thermal change."
+    },
+    {
+      "id": "physical-q09",
+      "sequence": 9,
+      "text": "Is the same specimen uniform for both temperature and composition?",
+      "source_id": "IUPAC-HOM",
+      "interpretation_seed": "Homogeneity must name a property and support scale."
+    },
+    {
+      "id": "physical-q10",
+      "sequence": 10,
+      "text": "Can two objects have equal mass but different volumes?",
+      "source_id": "BIPM",
+      "interpretation_seed": "Independent qualities, not one size category."
+    },
+    {
+      "id": "physical-q11",
+      "sequence": 11,
+      "text": "When does a crack become a separate void rather than a surface mark?",
+      "source_id": "LOCAL",
+      "interpretation_seed": "Identity and host dependence need explicit criteria."
+    },
+    {
+      "id": "physical-q12",
+      "sequence": 12,
+      "text": "What evidence would show that the object ceased to exist as that object?",
+      "source_id": "LOCAL",
+      "interpretation_seed": "Collapse is identity loss, not missing sensor data."
+    },
+    {
+      "id": "physical-q13",
+      "sequence": 13,
+      "text": "Does a warmer classification mean a larger change in temperature?",
+      "source_id": "NASA-HEAT",
+      "interpretation_seed": "Relative level vs temporal difference."
+    },
+    {
+      "id": "physical-q14",
+      "sequence": 14,
+      "text": "Can the mass of an absent observation be treated as zero?",
+      "source_id": "LOCAL",
+      "interpretation_seed": "Evidence absence cannot resolve a quality or create cessation."
+    },
+    {
+      "id": "physical-q15",
+      "sequence": 15,
+      "text": "Which physical distinctions must every specialized domain import rather than redefine?",
+      "source_id": "LOCAL",
+      "interpretation_seed": "Root vs physical scope gate, not an extra domain taxonomy."
+    }
+  ]
+}

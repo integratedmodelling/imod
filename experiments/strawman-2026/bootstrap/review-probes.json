@@ -1,0 +1,14 @@
+[
+ {"id":"HYD-P01-concentration","expression":"hydrology:SedimentConcentration of hydrology:StreamReach","semantic_expectation":"partial only; concentration is not load and bearer ancestry blocked"},
+ {"id":"HYD-P01-throughput","expression":"hydrology:Discharge of hydrology:ChannelFlow","semantic_expectation":"partial throughput component; integration and sampling model missing"},
+ {"id":"HYD-P02","expression":"change in hydrology:Stage of hydrology:StreamReach","semantic_expectation":"requires compatible gauge reference, not arbitrary datum shift"},
+ {"id":"HYD-P03-gain","expression":"hydrology:GroundwaterFeeds linking hydrology:GroundwaterBody to hydrology:StreamReach","semantic_expectation":"directed exchange at stated support; blocked ancestry"},
+ {"id":"HYD-P03-loss","expression":"hydrology:LosesWaterTo linking hydrology:StreamReach to hydrology:GroundwaterBody","semantic_expectation":"opposite exchange may coexist at different support; blocked ancestry"},
+ {"id":"HYD-P04-stage","expression":"hydrology:Stage of hydrology:StreamReach","semantic_expectation":"stage is not discharge; geometry and model missing"},
+ {"id":"HYD-P04-discharge","expression":"hydrology:Discharge of hydrology:ChannelFlow","semantic_expectation":"throughput requires independent model under changed channel"},
+ {"id":"HYD-P05-process","expression":"hydrology:OpenWaterEvaporation","semantic_expectation":"process can occur with compensated net storage change"},
+ {"id":"HYD-P05-change","expression":"change in hydrology:StoredWaterVolume of hydrology:LakeWaterBody","semantic_expectation":"net storage change alone does not prove absence of evaporation"},
+ {"id":"HYD-N01","expression":"hydrology:GroundwaterFeeds linking hydrology:Discharge to hydrology:StreamReach","semantic_expectation":"reject quality as relationship source; not executed by syntax-only parser"},
+ {"id":"HYD-N02","expression":"hydrology:StoredWaterVolume of hydrology:Discharge","semantic_expectation":"reject throughput-quality bearer of stored water volume; not executed by syntax-only parser"},
+ {"id":"HYD-N04","expression":"hydrology:GroundwaterFeeds linking hydrology:StreamReach to hydrology:GroundwaterBody","semantic_expectation":"reject reversed endpoints under proposed definition; not executed by syntax-only parser"}
+]

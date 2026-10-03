@@ -1,0 +1,8 @@
+{
+  "scope": "Newly observed bootstrap baseline only; earlier preservation failure remains recorded.",
+  "source_files": 70,
+  "repositories": 3,
+  "master": "f8cba48615276c5852b72b9d88854353708f3d6d",
+  "errors": [],
+  "status": "PASS"
+}

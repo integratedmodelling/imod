@@ -1,0 +1,112 @@
+{
+  "stage": "question-first editorial draft before local candidate tables",
+  "date": "2026-10-03",
+  "independence": "Author saw legacy and prior packet; not blind or independently validated. Fresh held-out probes must come from another reviewer.",
+  "questions": [
+    {
+      "id": "physics-q01",
+      "sequence": 1,
+      "text": "Why does a metal spoon warm in a hot drink?",
+      "source_id": "NASA-HEAT",
+      "interpretation_seed": "Contact heat transfer and temperature are distinct observables."
+    },
+    {
+      "id": "physics-q02",
+      "sequence": 2,
+      "text": "Can an object gain energy without getting warmer?",
+      "source_id": "NASA-HEAT",
+      "interpretation_seed": "Energy transfer does not universally imply temperature rise."
+    },
+    {
+      "id": "physics-q03",
+      "sequence": 3,
+      "text": "Why does heated water circulate?",
+      "source_id": "NASA-THERMAL",
+      "interpretation_seed": "Fluid circulation and heat transport, without equating all convection with buoyancy."
+    },
+    {
+      "id": "physics-q04",
+      "sequence": 4,
+      "text": "How can a campfire warm a face without contact?",
+      "source_id": "NASA-THERMAL",
+      "interpretation_seed": "Radiative transfer rather than contact-only relation."
+    },
+    {
+      "id": "physics-q05",
+      "sequence": 5,
+      "text": "How does an unbalanced push change motion?",
+      "source_id": "NASA-MOTION",
+      "interpretation_seed": "Net force and vector acceleration require frame and classical regime."
+    },
+    {
+      "id": "physics-q06",
+      "sequence": 6,
+      "text": "Can motion change while speed stays the same?",
+      "source_id": "NASA-MOTION",
+      "interpretation_seed": "Direction vs speed; root Velocity/Speed mismatch blocks mapping."
+    },
+    {
+      "id": "physics-q07",
+      "sequence": 7,
+      "text": "What changes when a gas is squeezed?",
+      "source_id": "NASA-HEAT",
+      "interpretation_seed": "Pressure, volume, temperature and process conditions."
+    },
+    {
+      "id": "physics-q08",
+      "sequence": 8,
+      "text": "Do two touching objects eventually reach the same temperature?",
+      "source_id": "NASA-HEAT",
+      "interpretation_seed": "Equilibrium under suitable isolation, not unconditional law in ontology."
+    },
+    {
+      "id": "physics-q09",
+      "sequence": 9,
+      "text": "Why do equal pushes affect heavy and light objects differently?",
+      "source_id": "NASA-MOTION",
+      "interpretation_seed": "Inertial mass vs amount of substance."
+    },
+    {
+      "id": "physics-q10",
+      "sequence": 10,
+      "text": "Is warmth a property or something transferred?",
+      "source_id": "NASA-HEAT",
+      "interpretation_seed": "Temperature vs heat transfer, avoid heat as stored substance."
+    },
+    {
+      "id": "physics-q11",
+      "sequence": 11,
+      "text": "When does heating begin and end in this experiment?",
+      "source_id": "NASA-HEAT",
+      "interpretation_seed": "Bounded episode vs ongoing heat-transfer process."
+    },
+    {
+      "id": "physics-q12",
+      "sequence": 12,
+      "text": "Does an insulating layer stop all energy transfer?",
+      "source_id": "NASA-THERMAL",
+      "interpretation_seed": "Restricted conductance not absolute absence of radiation."
+    },
+    {
+      "id": "physics-q13",
+      "sequence": 13,
+      "text": "Can a stationary object exert a force?",
+      "source_id": "NASA-MOTION",
+      "interpretation_seed": "Force interaction vs motion; no velocity predicate from interaction alone."
+    },
+    {
+      "id": "physics-q14",
+      "sequence": 14,
+      "text": "How much thermal energy passes between the two bodies?",
+      "source_id": "NASA-HEAT",
+      "interpretation_seed": "Transfer quantity requires a process interval, not stored energy alias."
+    },
+    {
+      "id": "physics-q15",
+      "sequence": 15,
+      "text": "Does a missing temperature reading prove cooling stopped?",
+      "source_id": "LOCAL",
+      "interpretation_seed": "Open-world evidence state, not physical stasis."
+    }
+  ]
+}

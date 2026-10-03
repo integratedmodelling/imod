@@ -1,0 +1,212 @@
+[
+  {
+    "id": "biology-q01",
+    "text": "Are leaf cells taking up carbon while illuminated?",
+    "source_ids": [
+      "CELL"
+    ],
+    "concept_hint": "Photosynthesis",
+    "expression": "biology:Photosynthesis",
+    "expected_type": "process",
+    "positive": "Photosynthetic cells with carbon assimilation",
+    "negative": "Any green object in sunlight",
+    "draft_order": 1,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "biology-q02",
+    "text": "Are cells consuming stored compounds to sustain metabolism?",
+    "source_ids": [
+      "CELL"
+    ],
+    "concept_hint": "Respiration",
+    "expression": "biology:Respiration",
+    "expected_type": "process",
+    "positive": "Cellular respiratory transformation",
+    "negative": "Breathing motion alone",
+    "draft_order": 2,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "biology-q03",
+    "text": "How quickly is this individual accumulating living material?",
+    "source_ids": [
+      "NPS"
+    ],
+    "concept_hint": "GrowthRate",
+    "expression": "biology:GrowthRate of life:Organism",
+    "expected_type": "quality",
+    "positive": "Growth interval with mass observations",
+    "negative": "One mass measurement",
+    "draft_order": 3,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "biology-q04",
+    "text": "Is water moving through membranes while the cells remain intact?",
+    "source_ids": [
+      "CELL"
+    ],
+    "concept_hint": "MembraneTransport",
+    "expression": "biology:MembraneTransport",
+    "expected_type": "process",
+    "positive": "Transfer across intact cell membrane",
+    "negative": "Leakage after membrane destruction",
+    "draft_order": 4,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "biology-q05",
+    "text": "Do damaged tissues still exchange gases?",
+    "source_ids": [
+      "CELL"
+    ],
+    "concept_hint": "GasExchangeRate",
+    "expression": "biology:GasExchangeRate of life:Tissue",
+    "expected_type": "quality",
+    "positive": "Exchange across specified tissue boundary",
+    "negative": "Ambient gas concentration alone",
+    "draft_order": 5,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "biology-q06",
+    "text": "Did one cell divide into daughter cells?",
+    "source_ids": [
+      "MITOSIS"
+    ],
+    "concept_hint": "CellDivision",
+    "expression": "biology:CellDivision",
+    "expected_type": "event",
+    "positive": "Completed cytokinesis with identified daughters",
+    "negative": "Chromosome replication alone",
+    "draft_order": 6,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "biology-q07",
+    "text": "Has an injured cell died rather than temporarily stopped growing?",
+    "source_ids": [
+      "CELL"
+    ],
+    "concept_hint": "CellDeath",
+    "expression": "biology:CellDeath",
+    "expected_type": "event",
+    "positive": "Irreversible loss with recognized evidence",
+    "negative": "Reversible growth arrest",
+    "draft_order": 7,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "biology-q08",
+    "text": "Has a seedling formed new roots after heat injury?",
+    "source_ids": [
+      "NPS"
+    ],
+    "concept_hint": "RootInitiation",
+    "expression": "biology:RootInitiation",
+    "expected_type": "event",
+    "positive": "New root primordium bounded by chosen criterion",
+    "negative": "Elongation of old root",
+    "draft_order": 8,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "biology-q09",
+    "text": "Which organ supplies newly formed tissue with transported sugars?",
+    "source_ids": [
+      "CELL"
+    ],
+    "concept_hint": "TransportsTo",
+    "expression": "biology:TransportsTo linking life:Organ to life:Tissue",
+    "expected_type": "relationship",
+    "positive": "Demonstrated transport route",
+    "negative": "Spatial proximity",
+    "draft_order": 9,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "biology-q10",
+    "text": "Which cells exchange signals within this tissue?",
+    "source_ids": [
+      "CELL"
+    ],
+    "concept_hint": "SignalsTo",
+    "expression": "biology:SignalsTo linking life:Cell to life:Cell",
+    "expected_type": "relationship",
+    "positive": "Signal reception supported",
+    "negative": "Co-fluctuating measurements alone",
+    "draft_order": 10,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "biology-q11",
+    "text": "Is a change in leaf form development or a different species identity?",
+    "source_ids": [
+      "CELL"
+    ],
+    "concept_hint": "Differentiation",
+    "expression": "biology:Differentiation",
+    "expected_type": "process",
+    "positive": "Change of cell specialization within organism",
+    "negative": "Taxonomic reassignment only",
+    "draft_order": 11,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "biology-q12",
+    "text": "Is a small surviving tree growing slowly because of water shortage?",
+    "source_ids": [
+      "NPS"
+    ],
+    "concept_hint": "GrowthRate",
+    "expression": null,
+    "expected_type": "causal model gap",
+    "positive": "Growth and water status plus competing causes",
+    "negative": "Correlation asserted as cause",
+    "draft_order": 12,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "biology-q13",
+    "text": "Which structures distinguish the sampled leaf from a root?",
+    "source_ids": [
+      "CELL"
+    ],
+    "concept_hint": "Leaf",
+    "expression": "biology:Leaf",
+    "expected_type": "subject",
+    "positive": "Organ with established leaf morphology",
+    "negative": "Any photosynthetic tissue",
+    "draft_order": 13,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "biology-q14",
+    "text": "Has a shoot resumed growth after the fire or is it a new seedling?",
+    "source_ids": [
+      "NPS"
+    ],
+    "concept_hint": "Resprouting",
+    "expression": "biology:Resprouting",
+    "expected_type": "event",
+    "positive": "New shoot on surviving individual",
+    "negative": "Independent seedling",
+    "draft_order": 14,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "biology-q15",
+    "text": "Would failure to measure respiration prove that the organism is dead?",
+    "source_ids": [
+      "CELL"
+    ],
+    "concept_hint": "Respiration",
+    "expression": null,
+    "expected_type": "negative semantic probe",
+    "positive": "Unknown until adequate evidence",
+    "negative": "Undetected respiration automatically death",
+    "draft_order": 15,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  }
+]

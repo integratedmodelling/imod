@@ -2,7 +2,7 @@
 
 Draft for ontologists and domain experts, prepared 2026-10-03 for review in the week of November 16. All namespace names and placements are provisional. This branch does not supersede master.
 
-Start with [the review guide](experiments/strawman-2026/README.md), [domain coverage](experiments/strawman-2026/DOMAIN_MAP.md), and [the wildfire walkthrough](experiments/strawman-2026/WILDFIRE.md).
+Start with [the domain bootstrap workbench](experiments/strawman-2026/bootstrap/README.md), then [the earlier review guide](experiments/strawman-2026/README.md), [historical domain coverage](experiments/strawman-2026/DOMAIN_MAP.md), and [the wildfire walkthrough](experiments/strawman-2026/WILDFIRE.md).
 
 | ID | Working decision | Status / reason / next review |
 |---|---|---|
@@ -24,5 +24,9 @@ Start with [the review guide](experiments/strawman-2026/README.md), [domain cove
 | D16 | Exclude observer software machinery from domain Assessment. | agency:Assessment requires review because it appears to describe k.LAB's observation machinery. Human appraisal can remain domain content when independently defined. |
 | D17 | Use the existing context-pack schema and workflow envelope; Git automation remains future work. | Schema validation cannot imply scientific approval or permission to apply. Exact revision/action approval and immutable publication receipts are still required. |
 | D18 | Restrict executable experiment to one legacy-grounded surface catchment and an alias demonstration. | Parser and adapter tests determine its status; do not claim worldview loading or reasoner validation from syntax. Larger cross-domain concepts stay proposals. |
+| D19 | Retain 22 bootstrap review addresses, excluding obsolete decision; root, data and calendar remain separate. | User supersedes D01 retention scope. Existing source namespace not deleted because infrastructure/valuation still import it; historical inventories remain evidence. |
+| D20 | Source-led questions precede new candidate articulation; five per category is a target, not a quota. | Record shortfalls, question failures, source disagreements, ancestry gaps and source confidence separately from scientific and grammar validity. No expert review or self-approval claimed. |
+| D21 | Local dossier JSON is a research index, not a production proposal API. | Existing context-pack schema remains authoritative; explicit backend mapping preserves gaps and server-owned validation. Generic root alias references are implicit type context, never mechanical is clauses. |
+| D22 | Continue on the user-published sandbox without advancing protected master or disturbing the original checkout. | User authorizes sandbox use; no master merge or public review launch. Shared-branch worktree collision is isolated before commits. Exact branch/ref observations and preservation differences are recorded in bootstrap validation. |
 
-No decision above authorizes a push, PR, merge, deployment, external workflow transition, or modification of another checkout. Alternatives and disagreements are retained in this register and the domain map.
+The earlier no-push restriction is superseded only for the user's sandbox branch. No decision authorizes a master merge, deployment, external review launch, or modification of original source files. Alternatives and disagreements remain reviewable.

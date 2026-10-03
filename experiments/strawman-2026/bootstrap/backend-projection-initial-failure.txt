@@ -1,0 +1,23 @@
+C:\Users\Ferd\Documents\Codex\2026-10-03\task-4\imod-strawman\experiments\strawman-2026\tools\ValidateBackendDossier.java:4: error: package org.integratedmodelling.klab.api.services.resources.workflow.ProposalReview does not exist
+import org.integratedmodelling.klab.api.services.resources.workflow.ProposalReview.BootstrapDossier;
+                                                                                  ^
+C:\Users\Ferd\Documents\Codex\2026-10-03\task-4\imod-strawman\experiments\strawman-2026\tools\ValidateBackendDossier.java:5: error: package org.integratedmodelling.klab.api.services.resources.workflow does not exist
+import org.integratedmodelling.klab.api.services.resources.workflow.BootstrapDossierValidator;
+                                                                   ^
+C:\Users\Ferd\Documents\Codex\2026-10-03\task-4\imod-strawman\experiments\strawman-2026\tools\ValidateBackendDossier.java:11: error: cannot find symbol
+  var dossier=mapper.readValue(new File(args[0]),BootstrapDossier.class);
+                                                 ^
+  symbol:   class BootstrapDossier
+  location: class ValidateBackendDossier
+C:\Users\Ferd\Documents\Codex\2026-10-03\task-4\imod-strawman\experiments\strawman-2026\tools\ValidateBackendDossier.java:12: error: cannot find symbol
+  var errors=BootstrapDossierValidator.errors(dossier);
+             ^
+  symbol:   variable BootstrapDossierValidator
+  location: class ValidateBackendDossier
+C:\Users\Ferd\Documents\Codex\2026-10-03\task-4\imod-strawman\experiments\strawman-2026\tools\ValidateBackendDossier.java:13: error: cannot find symbol
+  System.out.println(mapper.writeValueAsString(Map.of("errors",errors,"coverage",BootstrapDossierValidator.coverage(dossier),"scope","Actual backend DTO deserialization and structural reference checks only; no scientific acceptance, workflow transition or production validator")));
+                                                                                 ^
+  symbol:   variable BootstrapDossierValidator
+  location: class ValidateBackendDossier
+5 errors
+error: compilation failed

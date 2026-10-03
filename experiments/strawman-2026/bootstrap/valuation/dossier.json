@@ -1,0 +1,1377 @@
+{
+  "dossier_version": "0.1",
+  "domain": "valuation",
+  "status": "draft; blocked for executable promotion and human approval",
+  "scope": "Perspective-dependent value attribution, preference, monetary meaning, loss and risk judgments for Climate-Nature-Economy. Accounts,algorithms,aggregation methods and model execution stay outside domain ontology.",
+  "imports": [
+    {
+      "namespace": "imod",
+      "source": "src/imod.kwv",
+      "revision": "46c695b8e360b4e2c1180c57c203844d53723258",
+      "status": "read current reference; semantic suitability provisional",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+    },
+    {
+      "namespace": "physical",
+      "source": "src/physical.kwv",
+      "revision": "46c695b8e360b4e2c1180c57c203844d53723258",
+      "status": "read current reference; semantic suitability provisional",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "3fb1809902f4d9534a5d8ac3d5e4372cd37a9a3b96de84e7f51e2d13270c345a"
+    },
+    {
+      "namespace": "society",
+      "source": "src/society.kwv",
+      "revision": "46c695b8e360b4e2c1180c57c203844d53723258",
+      "status": "read current reference; semantic suitability provisional",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "0319e0a11d4682a21505a84807c8f7865a7bcf75a5653dcb04bddba27a917744"
+    }
+  ],
+  "sources": [
+    {
+      "id": "IPBES",
+      "title": "IPBES Values Assessment",
+      "url": "https://www.ipbes.net/the-values-assessment",
+      "locator": "2022 assessment landing-page scope; 2022-12 official presentation at https://files.ipbes.net/ipbes-web-prod-public-files/2022-12/Values_IPBES%20Side%20Event_8%20December.pdf",
+      "scope": "Diverse values,stakeholder inclusion,power and deliberation motivate this dossier. Full assessment typology not audited; candidate distinctions remain interpretations pending chapter review.",
+      "status": "official indexed summary and presentation text reviewed; direct landing-page fetch403",
+      "retrieved_on": "2026-10-03",
+      "semantic_extraction": "Candidate definitions and k.LAB category choices are author interpretations pending human review,not source-approved ontologies.",
+      "source_confidence": {
+        "provenance": "primary institutional or author source",
+        "reading_depth": "official indexed summary and presentation text reviewed; direct landing-page fetch403",
+        "coverage": "Limited to stated locator and supported scope; publication authority does not validate ontology extraction."
+      }
+    },
+    {
+      "id": "SEEA",
+      "title": "United Nations etal.,SEEA Ecosystem Accounting",
+      "url": "https://seea.un.org/sites/default/files/files/documents/2021/Oct/seea_ea_white_cover_final.pdf",
+      "locator": "2021-09-29 pre-edited white cover,Annex12.1 Exchange and welfare values in an accounting context",
+      "scope": "Accounting valuation and welfare meanings require separation. Methods and equations remain outside domain ontology.",
+      "status": "official search extract/contents reviewed; annex full text pending",
+      "retrieved_on": "2026-10-03",
+      "semantic_extraction": "Candidate definitions and k.LAB category choices are author interpretations pending human review,not source-approved ontologies.",
+      "source_confidence": {
+        "provenance": "primary institutional or author source",
+        "reading_depth": "official search extract/contents reviewed; annex full text pending",
+        "coverage": "Limited to stated locator and supported scope; publication authority does not validate ontology extraction."
+      }
+    },
+    {
+      "id": "RISK",
+      "title": "UNDRR Sendai terminology: Disaster risk",
+      "url": "https://www.undrr.org/terminology/disaster-risk",
+      "locator": "2017 definition and annotation",
+      "scope": "Potential losses depend on hazard,exposure,vulnerability and capacity; tolerability varies with context. This does not endorse existing configuration formalization.",
+      "status": "official definition search text read",
+      "retrieved_on": "2026-10-03",
+      "semantic_extraction": "Candidate definitions and k.LAB category choices are author interpretations pending human review,not source-approved ontologies.",
+      "source_confidence": {
+        "provenance": "primary institutional or author source",
+        "reading_depth": "official definition search text read",
+        "coverage": "Limited to stated locator and supported scope; publication authority does not validate ontology extraction."
+      }
+    },
+    {
+      "id": "VULN",
+      "title": "UNDRR Sendai terminology: Vulnerability",
+      "url": "https://www.undrr.org/terminology/vulnerability",
+      "locator": "2017 definition",
+      "scope": "Susceptibility conditions include physical,social,economic and environmental factors; not synonymous with exposure.",
+      "status": "official definition search text read",
+      "retrieved_on": "2026-10-03",
+      "semantic_extraction": "Candidate definitions and k.LAB category choices are author interpretations pending human review,not source-approved ontologies.",
+      "source_confidence": {
+        "provenance": "primary institutional or author source",
+        "reading_depth": "official definition search text read",
+        "coverage": "Limited to stated locator and supported scope; publication authority does not validate ontology extraction."
+      }
+    }
+  ],
+  "concepts": [
+    {
+      "name": "ValuationPanel",
+      "category": "subject",
+      "definition": "Identifiable collective assembled to consider values in one specified assessment context.",
+      "parent": "society:Institution",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "ParticipantCount",
+        "ViewpointCoverage"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "IPBES"
+      ],
+      "positive": "A constituted review panel with declared membership.",
+      "negative": "All persons whose values a report mentions.",
+      "status": "blocked",
+      "gap": "Reusable society:Organization/group issue; not a new kind of substantial justified solely by valued function.",
+      "id": "valuation-c01",
+      "ancestry_evidence": "Imported reference society:Institution read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "ValueAttribution",
+      "category": "process",
+      "definition": "An agent assigns importance to an identified object under an explicit value perspective.",
+      "parent": "physical:Activity",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "imod:PreferenceValue"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Affects a separately observed attribution only when revised; no observer-independent universal value created."
+      },
+      "source_ids": [
+        "IPBES"
+      ],
+      "positive": "A resident expresses the forest's importance for a stated reason.",
+      "negative": "A forest automatically possesses the analyst's score.",
+      "status": "blocked",
+      "gap": "Assessment activity belongs in science-process/model workflow unless itself the explicit observed human activity; keep boundary unresolved.",
+      "id": "valuation-c02",
+      "ancestry_evidence": "Imported reference physical:Activity read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "ValueDeliberation",
+      "category": "process",
+      "definition": "Participants discuss and compare value judgments for a stated purpose.",
+      "parent": "physical:Activity",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "ReportedPreference"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "No creates consensus or common scale; disagreement may persist."
+      },
+      "source_ids": [
+        "IPBES"
+      ],
+      "positive": "Participants exchange reasons about forest-management alternatives.",
+      "negative": "Arithmetic aggregation without participant deliberation.",
+      "status": "blocked",
+      "gap": "Assessment activity belongs in science-process/model workflow unless itself the explicit observed human activity; keep boundary unresolved.",
+      "id": "valuation-c03",
+      "ancestry_evidence": "Imported reference physical:Activity read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "MonetaryAppraisal",
+      "category": "process",
+      "definition": "An agent estimates monetary value for an identified object under a specified valuation concept.",
+      "parent": "physical:Activity",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "imod:MonetaryValue"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Appraisal changes knowledge/assigned estimate,not necessarily the valued asset's physical qualities."
+      },
+      "source_ids": [
+        "SEEA"
+      ],
+      "positive": "A documented exchange-value appraisal.",
+      "negative": "Unspecified importance expressed as dollars without a valuation concept.",
+      "status": "blocked",
+      "gap": "Assessment activity belongs in science-process/model workflow unless itself the explicit observed human activity; keep boundary unresolved.",
+      "id": "valuation-c04",
+      "ancestry_evidence": "Imported reference physical:Activity read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "PreferenceRevision",
+      "category": "process",
+      "definition": "An agent changes an expressed preference in a specified comparison context.",
+      "parent": "physical:Activity",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "ReportedPreference"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Affects ReportedPreference only for same agent,objects and comparable context; reason for change belongs in models."
+      },
+      "source_ids": [
+        "IPBES"
+      ],
+      "positive": "A resident explicitly changes ranking after discussion.",
+      "negative": "A different resident provides a different ranking.",
+      "status": "blocked",
+      "gap": "Assessment activity belongs in science-process/model workflow unless itself the explicit observed human activity; keep boundary unresolved.",
+      "id": "valuation-c05",
+      "ancestry_evidence": "Imported reference physical:Activity read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "DamageDevelopment",
+      "category": "process",
+      "definition": "Progression of physical harm affecting a specifically identified valued subject.",
+      "parent": "imod:Process",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "DamageExtent"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Scoped affects DamageExtent; physical process belongs to physical/engineering imports,not duplicated valuation physics."
+      },
+      "source_ids": [
+        "RISK"
+      ],
+      "positive": "Fire damage progresses through a building.",
+      "negative": "An estimate of possible future loss.",
+      "status": "blocked",
+      "gap": "Physical damage parent/quality must be supplied upstream.",
+      "id": "valuation-c06",
+      "ancestry_evidence": "Imported reference imod:Process read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "ValuesObject",
+      "category": "relationship",
+      "definition": "Agent's context-qualified attribution of value to an identified subject.",
+      "parent": "imod:ValuationRelationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "imod:Agent",
+        "target": "imod:Subject",
+        "rationale": "Observer/viewpoint and comparison or loss context remain explicit; no automatic universalization."
+      },
+      "source_ids": [
+        "IPBES"
+      ],
+      "positive": "Residents value one woodland under their declared perspective.",
+      "negative": "Intrinsic-value claim reduced to its market price.",
+      "status": "provisional",
+      "gap": "",
+      "id": "valuation-c07",
+      "ancestry_evidence": "Imported reference imod:ValuationRelationship read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "ReportsPreferenceFor",
+      "category": "relationship",
+      "definition": "Agent's reported preference concerning a specified subject in a declared comparison.",
+      "parent": "imod:ValuationRelationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "imod:Agent",
+        "target": "imod:Subject",
+        "rationale": "Observer/viewpoint and comparison or loss context remain explicit; no automatic universalization."
+      },
+      "source_ids": [
+        "IPBES"
+      ],
+      "positive": "One resident ranks a specified option in a declared set.",
+      "negative": "An unqualified global preference ordering.",
+      "status": "blocked",
+      "gap": "May be qualities of a valuation relation or contextual compositions; do not commit redundant atomic relations.",
+      "id": "valuation-c08",
+      "ancestry_evidence": "Imported reference imod:ValuationRelationship read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "BearsLossOf",
+      "category": "relationship",
+      "definition": "Agent is a bearer of an identified loss involving an identified subject.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "imod:Agent",
+        "target": "imod:Subject",
+        "rationale": "Observer/viewpoint and comparison or loss context remain explicit; no automatic universalization."
+      },
+      "source_ids": [
+        "RISK"
+      ],
+      "positive": "A household bears documented damage to its home.",
+      "negative": "Damage assigned to everyone near the building.",
+      "status": "provisional",
+      "gap": "",
+      "id": "valuation-c09",
+      "ancestry_evidence": "Imported reference imod:Relationship read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "BenefitsFrom",
+      "category": "relationship",
+      "definition": "Agent receives a specified benefit associated with a subject in a declared context.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "imod:Agent",
+        "target": "imod:Subject",
+        "rationale": "Observer/viewpoint and comparison or loss context remain explicit; no automatic universalization."
+      },
+      "source_ids": [
+        "SEEA"
+      ],
+      "positive": "Downstream residents receive the specified flood-reduction benefit.",
+      "negative": "A habitat has monetary value,therefore everyone benefits equally.",
+      "status": "provisional",
+      "gap": "",
+      "id": "valuation-c10",
+      "ancestry_evidence": "Imported reference imod:Relationship read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "RegardsAsNonSubstitutable",
+      "category": "relationship",
+      "definition": "Agent treats a subject as non-substitutable under a specified evaluative frame.",
+      "parent": "imod:ValuationRelationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "imod:Agent",
+        "target": "imod:Subject",
+        "rationale": "Observer/viewpoint and comparison or loss context remain explicit; no automatic universalization."
+      },
+      "source_ids": [
+        "IPBES"
+      ],
+      "positive": "A group states that another place cannot replace this sacred site.",
+      "negative": "No price data are available,therefore it is non-substitutable.",
+      "status": "blocked",
+      "gap": "May be qualities of a valuation relation or contextual compositions; do not commit redundant atomic relations.",
+      "id": "valuation-c11",
+      "ancestry_evidence": "Imported reference imod:ValuationRelationship read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "ValuationStatement",
+      "category": "event",
+      "definition": "Bounded expression of a particular value judgment.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "No automatic confers Asset: existing positive-value Asset definition is contested."
+      },
+      "source_ids": [
+        "IPBES"
+      ],
+      "positive": "A participant communicates a scoped judgment.",
+      "negative": "A latent value inferred solely from group membership.",
+      "status": "blocked",
+      "gap": "Boundary and content dependence unresolved; no implemented consequence binding.",
+      "id": "valuation-c12",
+      "ancestry_evidence": "Imported reference imod:Event read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "RankingAdoption",
+      "category": "event",
+      "definition": "Bounded adoption of a ranking by specified participants under an explicit rule.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "No consensus inference from aggregation; possible affects adopted ranking after upstream comparison concept exists."
+      },
+      "source_ids": [
+        "IPBES"
+      ],
+      "positive": "A panel adopts a ranking while recording dissent.",
+      "negative": "An average score appears without panel adoption.",
+      "status": "blocked",
+      "gap": "Boundary and content dependence unresolved; no implemented consequence binding.",
+      "id": "valuation-c13",
+      "ancestry_evidence": "Imported reference imod:Event read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "AppraisalRevision",
+      "category": "event",
+      "definition": "Bounded replacement/revision of a stated appraisal for a specified asset and valuation concept.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Affects assigned monetary estimate; does not silently alter physical asset."
+      },
+      "source_ids": [
+        "SEEA"
+      ],
+      "positive": "An exchange-value estimate is formally revised.",
+      "negative": "An asset burns without a new appraisal.",
+      "status": "blocked",
+      "gap": "Boundary and content dependence unresolved; no implemented consequence binding.",
+      "id": "valuation-c14",
+      "ancestry_evidence": "Imported reference imod:Event read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "DamageOccurrence",
+      "category": "event",
+      "definition": "Bounded occurrence of harm to an identified valued subject.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Use upstream physical damage/collapse event; may affect dependent value observations but only resolved explicitly."
+      },
+      "source_ids": [
+        "RISK"
+      ],
+      "positive": "A fire damages a building.",
+      "negative": "High modeled risk with no observed harm.",
+      "status": "blocked",
+      "gap": "Boundary and content dependence unresolved; no implemented consequence binding.",
+      "id": "valuation-c15",
+      "ancestry_evidence": "Imported reference imod:Event read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "RiskToleranceDeclaration",
+      "category": "event",
+      "definition": "Bounded expression of a stakeholder's risk-tolerance criterion for a stated context.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Does not make risk disappear or confer objective Safe; viewpoint and criterion required."
+      },
+      "source_ids": [
+        "RISK"
+      ],
+      "positive": "A community states the loss criterion it is willing to accept.",
+      "negative": "An analyst labels risk acceptable for everyone.",
+      "status": "blocked",
+      "gap": "Boundary and content dependence unresolved; no implemented consequence binding.",
+      "id": "valuation-c16",
+      "ancestry_evidence": "Imported reference imod:Event read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "ExchangeValue",
+      "category": "quality",
+      "definition": "Monetary valuation under an explicitly specified exchange-value concept.",
+      "parent": "imod:MonetaryValue",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "bearer:valued subject in accounting context"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "SEEA"
+      ],
+      "positive": "An exchange-value estimate using the stated accounting convention.",
+      "negative": "Total welfare or ethical importance.",
+      "status": "blocked",
+      "gap": "Measurement concept,viewpoint and bearer/arity must be reviewed; not an approved declaration.",
+      "id": "valuation-c17",
+      "ancestry_evidence": "Imported reference imod:MonetaryValue read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "ReportedPreference",
+      "category": "quality",
+      "definition": "Agent's expressed ordering or rating in a declared comparison context.",
+      "parent": "imod:PreferenceValue",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "bearer:agent/valuation relation,arity pending"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "IPBES"
+      ],
+      "positive": "A ranking among stated alternatives from one respondent.",
+      "negative": "A universal objective ranking inferred from the survey average.",
+      "status": "blocked",
+      "gap": "Measurement concept,viewpoint and bearer/arity must be reviewed; not an approved declaration.",
+      "id": "valuation-c18",
+      "ancestry_evidence": "Imported reference imod:PreferenceValue read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "PotentialLoss",
+      "category": "quality",
+      "definition": "Possible loss magnitude for a specified asset/population,hazard scenario and assessment horizon.",
+      "parent": "imod:Quantity",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "bearer:valued subject; loss dimension must be specialized"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "RISK"
+      ],
+      "positive": "A scenario-specific quantity of damaged structures.",
+      "negative": "Probability alone or already observed damage.",
+      "status": "blocked",
+      "gap": "Measurement concept,viewpoint and bearer/arity must be reviewed; not an approved declaration.",
+      "id": "valuation-c19",
+      "ancestry_evidence": "Imported reference imod:Quantity read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "DamageExtent",
+      "category": "quality",
+      "definition": "Extent of actual harm to an identified subject under an explicit damage dimension.",
+      "parent": "imod:Quantity",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "bearer:imod:Subject"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "RISK"
+      ],
+      "positive": "Damaged floor area under a stated inspection definition.",
+      "negative": "The asset's entire market value automatically counted as damage.",
+      "status": "blocked",
+      "gap": "Measurement concept,viewpoint and bearer/arity must be reviewed; not an approved declaration.",
+      "id": "valuation-c20",
+      "ancestry_evidence": "Imported reference imod:Quantity read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "name": "RiskTolerability",
+      "category": "quality",
+      "definition": "Stakeholder-specific evaluation of risk against an explicit criterion.",
+      "parent": "imod:Quality",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "bearer:valuation relationship or agent context,unresolved"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "RISK"
+      ],
+      "positive": "Judgment under a stated tolerance criterion.",
+      "negative": "No risk estimate available,therefore acceptable.",
+      "status": "blocked",
+      "gap": "Measurement concept,viewpoint and bearer/arity must be reviewed; not an approved declaration.",
+      "id": "valuation-c21",
+      "ancestry_evidence": "Imported reference imod:Quality read in current src at repository base; identifier existence does not validate this specialization.",
+      "scientific_specialization": "unreviewed",
+      "approval": "not_requested_or_granted",
+      "semantic_validity": "unreviewed; blocked for executable promotion",
+      "grammar_validity": "no declaration emitted or tested",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    }
+  ],
+  "questions": [
+    {
+      "id": "valuation-q01",
+      "sequence": 1,
+      "text": "What do residents value about this forest besides income?",
+      "concept_ids": [
+        "valuation-c07"
+      ],
+      "expression": "valuation:ValuesObject",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Value subject and observer/perspective required; no scalar total importance inferred.",
+        "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
+        "imod",
+        "physical",
+        "society"
+      ],
+      "positive": "Resident values cultural connection.",
+      "negative": "Only timber price returned as complete value.",
+      "source_ids": [
+        "IPBES"
+      ],
+      "source_motivation": "multiple value meanings and perspectives",
+      "expected_interpretation": "Value subject and observer/perspective required; no scalar total importance inferred.",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "valuation-q02",
+      "sequence": 2,
+      "text": "Whose values were included when the fire-management options were compared?",
+      "concept_ids": [
+        "valuation-c01",
+        "valuation-c07"
+      ],
+      "expression": null,
+      "expected_type": "subject and valuation relationships",
+      "dependencies": [
+        "Need provenance linking included viewpoints to people/groups; attendance alone insufficient.",
+        "Explicit formulation gap: no complete observable expression claimed.",
+        "imod",
+        "physical",
+        "society"
+      ],
+      "positive": "Dissenting valuation retained.",
+      "negative": "Panel average treated as all residents' view.",
+      "source_ids": [
+        "IPBES"
+      ],
+      "source_motivation": "representation of valuations not universal value",
+      "expected_interpretation": "Need provenance linking included viewpoints to people/groups; attendance alone insufficient.",
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "valuation-q03",
+      "sequence": 3,
+      "text": "Is an estimate of market exchange value being mistaken for total importance?",
+      "concept_ids": [
+        "valuation-c17"
+      ],
+      "expression": "valuation:ExchangeValue of imod:Subject",
+      "expected_type": "quality",
+      "dependencies": [
+        "Specified accounting exchange concept only; not total value.",
+        "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
+        "imod",
+        "physical",
+        "society"
+      ],
+      "positive": "Scoped exchange estimate.",
+      "negative": "Exchange value called full social importance.",
+      "source_ids": [
+        "SEEA"
+      ],
+      "source_motivation": "exchange versus welfare and other values",
+      "expected_interpretation": "Specified accounting exchange concept only; not total value.",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "valuation-q04",
+      "sequence": 4,
+      "text": "What losses might a fire cause to people, assets and ways of life?",
+      "concept_ids": [
+        "valuation-c19"
+      ],
+      "expression": "valuation:PotentialLoss of imod:Subject",
+      "expected_type": "quality",
+      "dependencies": [
+        "Must specialize loss dimension and hazard scenario; potential not observed harm.",
+        "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
+        "imod",
+        "physical",
+        "society"
+      ],
+      "positive": "Scenario-specific damaged-building quantity.",
+      "negative": "All potential loss called actual loss.",
+      "source_ids": [
+        "RISK"
+      ],
+      "source_motivation": "potential loss not observed damage",
+      "expected_interpretation": "Must specialize loss dimension and hazard scenario; potential not observed harm.",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "valuation-q05",
+      "sequence": 5,
+      "text": "Which assets are exposed without necessarily being highly susceptible to damage?",
+      "concept_ids": [
+        "valuation-c20"
+      ],
+      "expression": null,
+      "expected_type": "exposure relationship and susceptibility quality",
+      "dependencies": [
+        "Upstream exposure/hazard and vulnerability measurements absent; existing valuation configurations not assumed equivalent.",
+        "Explicit formulation gap: no complete observable expression claimed.",
+        "imod",
+        "physical",
+        "society"
+      ],
+      "positive": "Exposed but resistant structure.",
+      "negative": "Presence in hazard area equated high damage.",
+      "source_ids": [
+        "VULN"
+      ],
+      "source_motivation": "exposure and susceptibility distinct",
+      "expected_interpretation": "Upstream exposure/hazard and vulnerability measurements absent; existing valuation configurations not assumed equivalent.",
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "valuation-q06",
+      "sequence": 6,
+      "text": "How does a community express an attachment that it will not trade for money?",
+      "concept_ids": [
+        "valuation-c11"
+      ],
+      "expression": "valuation:RegardsAsNonSubstitutable",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Contextual expression of non-substitutability; absence of monetary estimate insufficient.",
+        "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
+        "imod",
+        "physical",
+        "society"
+      ],
+      "positive": "Stated irreplaceable relationship to site.",
+      "negative": "Missing price treated as priceless predicate.",
+      "source_ids": [
+        "IPBES"
+      ],
+      "source_motivation": "nonmonetary and potentially noncompensatory judgment",
+      "expected_interpretation": "Contextual expression of non-substitutability; absence of monetary estimate insufficient.",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "valuation-q07",
+      "sequence": 7,
+      "text": "Could two reasonable assessors rank the same options differently?",
+      "concept_ids": [
+        "valuation-c18"
+      ],
+      "expression": "valuation:ReportedPreference of imod:Agent",
+      "expected_type": "quality",
+      "dependencies": [
+        "Observer-specific ordering; object/comparison set still requires binding.",
+        "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
+        "imod",
+        "physical",
+        "society"
+      ],
+      "positive": "Two explicit different rankings.",
+      "negative": "One respondent's ranking universalized.",
+      "source_ids": [
+        "IPBES"
+      ],
+      "source_motivation": "explicit observer and criteria",
+      "expected_interpretation": "Observer-specific ordering; object/comparison set still requires binding.",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "valuation-q08",
+      "sequence": 8,
+      "text": "Which observed damage changed the value assigned to a building?",
+      "concept_ids": [
+        "valuation-c15",
+        "valuation-c14"
+      ],
+      "expression": null,
+      "expected_type": "two events and qualities",
+      "dependencies": [
+        "Physical harm and appraisal change must be separately observed; economic conversion belongs in model.",
+        "Explicit formulation gap: no complete observable expression claimed.",
+        "imod",
+        "physical",
+        "society"
+      ],
+      "positive": "Damage followed by explicit reappraisal.",
+      "negative": "All damage automatically equals full replacement price.",
+      "source_ids": [
+        "RISK"
+      ],
+      "source_motivation": "damage versus valuation revision, no automatic monetary conversion",
+      "expected_interpretation": "Physical harm and appraisal change must be separately observed; economic conversion belongs in model.",
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "valuation-q09",
+      "sequence": 9,
+      "text": "What level of risk is acceptable to whom, and under which stated criterion?",
+      "concept_ids": [
+        "valuation-c21"
+      ],
+      "expression": "valuation:RiskTolerability of imod:Agent",
+      "expected_type": "quality",
+      "dependencies": [
+        "Agent,criterion,loss dimension and scenario required; no universal acceptable threshold.",
+        "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
+        "imod",
+        "physical",
+        "society"
+      ],
+      "positive": "Stated stakeholder criterion.",
+      "negative": "Analyst's tolerance imposed on all.",
+      "source_ids": [
+        "RISK"
+      ],
+      "source_motivation": "tolerability is contextual judgment",
+      "expected_interpretation": "Agent,criterion,loss dimension and scenario required; no universal acceptable threshold.",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "valuation-q10",
+      "sequence": 10,
+      "text": "Did the ranking change after participants learned about downstream flood effects?",
+      "concept_ids": [
+        "valuation-c05",
+        "valuation-c18"
+      ],
+      "expression": "change in valuation:ReportedPreference of imod:Agent",
+      "expected_type": "quality change",
+      "dependencies": [
+        "Same observer,alternatives and elicitation context; information effect is a testable mechanism outside ontology.",
+        "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
+        "imod",
+        "physical",
+        "society"
+      ],
+      "positive": "Documented changed ranking.",
+      "negative": "Different respondents compared as one person's change.",
+      "source_ids": [
+        "IPBES"
+      ],
+      "source_motivation": "valuation revision occurrence; causal mechanism remains model",
+      "expected_interpretation": "Same observer,alternatives and elicitation context; information effect is a testable mechanism outside ontology.",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "valuation-q11",
+      "sequence": 11,
+      "text": "Are costs and benefits distributed to the same people?",
+      "concept_ids": [
+        "valuation-c09",
+        "valuation-c10"
+      ],
+      "expression": null,
+      "expected_type": "directed relationships and amounts",
+      "dependencies": [
+        "Distribution among agents must be resolved; net total does not identify recipients.",
+        "Explicit formulation gap: no complete observable expression claimed.",
+        "imod",
+        "physical",
+        "society"
+      ],
+      "positive": "One group benefits while another bears loss.",
+      "negative": "Aggregate gain assumed gain for every resident.",
+      "source_ids": [
+        "SEEA"
+      ],
+      "source_motivation": "distribution cannot be inferred from aggregate value",
+      "expected_interpretation": "Distribution among agents must be resolved; net total does not identify recipients.",
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "valuation-q12",
+      "sequence": 12,
+      "text": "Is the quoted monetary amount an actual exchange, an accounting estimate or willingness to pay?",
+      "concept_ids": [
+        "valuation-c17",
+        "valuation-c04"
+      ],
+      "expression": null,
+      "expected_type": "monetary quality specializations",
+      "dependencies": [
+        "Exchange estimate,transaction and willingness-to-pay meanings must be split; latter upper specialization missing.",
+        "Explicit formulation gap: no complete observable expression claimed.",
+        "imod",
+        "physical",
+        "society"
+      ],
+      "positive": "Amount accompanied by exact valuation concept.",
+      "negative": "Any dollar figure treated equivalent.",
+      "source_ids": [
+        "SEEA"
+      ],
+      "source_motivation": "measurement concept explicit",
+      "expected_interpretation": "Exchange estimate,transaction and willingness-to-pay meanings must be split; latter upper specialization missing.",
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "valuation-q13",
+      "sequence": 13,
+      "text": "Was a site valued as replaceable, or as a relationship that cannot be substituted?",
+      "concept_ids": [
+        "valuation-c11"
+      ],
+      "expression": "valuation:RegardsAsNonSubstitutable",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Substitutability criterion and perspective independent of amount.",
+        "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
+        "imod",
+        "physical",
+        "society"
+      ],
+      "positive": "Explicit rejection of substitution in stated frame.",
+      "negative": "High price alone means non-substitutable.",
+      "source_ids": [
+        "IPBES"
+      ],
+      "source_motivation": "substitutability is not identical to price",
+      "expected_interpretation": "Substitutability criterion and perspective independent of amount.",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "valuation-q14",
+      "sequence": 14,
+      "text": "What happened when the panel could not reach a common ranking?",
+      "concept_ids": [
+        "valuation-c18",
+        "valuation-c13"
+      ],
+      "expression": null,
+      "expected_type": "quality plus judgment/evidence state",
+      "dependencies": [
+        "Distinguish explicit incomparability from incomplete elicitation; no Unknown predicate.",
+        "Explicit formulation gap: no complete observable expression claimed.",
+        "imod",
+        "physical",
+        "society"
+      ],
+      "positive": "Explicitly incomparable alternatives recorded.",
+      "negative": "No response interpreted as philosophical incomparability.",
+      "source_ids": [
+        "IPBES"
+      ],
+      "source_motivation": "incomparability versus insufficient evidence",
+      "expected_interpretation": "Distinguish explicit incomparability from incomplete elicitation; no Unknown predicate.",
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    },
+    {
+      "id": "valuation-q15",
+      "sequence": 15,
+      "text": "Does an unresolved risk estimate mean the forest is safe?",
+      "concept_ids": [
+        "valuation-c19"
+      ],
+      "expression": null,
+      "expected_type": "unresolved quality",
+      "dependencies": [
+        "Unknown risk resolution means no supported estimate; never infer Safe or zero potential loss.",
+        "Explicit formulation gap: no complete observable expression claimed.",
+        "imod",
+        "physical",
+        "society"
+      ],
+      "positive": "Available hazard knowledge retained despite absent loss estimate.",
+      "negative": "Unresolved risk taken as zero.",
+      "source_ids": [
+        "RISK"
+      ],
+      "source_motivation": "open-world unknown, not zero loss or absence of hazard",
+      "expected_interpretation": "Unknown risk resolution means no supported estimate; never infer Safe or zero potential loss.",
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "current_checks": [
+        "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
+        "No data/model execution; unresolved observations remain open-world unknown."
+      ],
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+    }
+  ],
+  "quality_summaries": [
+    {
+      "quality": "ReportedPreference",
+      "proposed_summary": "Preferred/equally ranked/incomparable",
+      "basis": "Potential partial ordering in one observer/comparison frame. Incomparability is explicit judgment,not missing data; no total-order axiom.",
+      "status": "blocked",
+      "unknown_policy": "No unknown/unmeasured/disputed predicate; preserve evidence state."
+    },
+    {
+      "quality": "RiskTolerability",
+      "proposed_summary": "Acceptable/unacceptable under criterion",
+      "basis": "Nominal judgment against stated loss/probability criterion and stakeholder frame. Boundaries supplied by contextual authority,not invented here.",
+      "status": "blocked",
+      "unknown_policy": "No unknown/unmeasured/disputed predicate; preserve evidence state."
+    },
+    {
+      "quality": "ExchangeValue",
+      "proposed_summary": "Positive/zero/negative amount",
+      "basis": "Ordered under matched valuation concept and monetary conventions. Does not define all-valued assets or a universal good/bad predicate.",
+      "status": "provisional",
+      "unknown_policy": "No unknown/unmeasured/disputed predicate; preserve evidence state."
+    },
+    {
+      "quality": "DamageExtent",
+      "proposed_summary": "Damage severity classes",
+      "basis": "Ordered only on an explicit damage dimension with declared thresholds; physical extent and monetary consequence are not interchangeable.",
+      "status": "blocked",
+      "unknown_policy": "No unknown/unmeasured/disputed predicate; preserve evidence state."
+    }
+  ],
+  "ambiguities": [
+    "A-VALUATION-01: intrinsic-value claims must be representable as expressed claims without declaring their truth merely the valuer's preference; normative stance unresolved.",
+    "A-VALUATION-02: exchange,welfare,reported preference and nonmonetary importance cannot be silently converted or totaled.",
+    "A-VALUATION-03: no universal HighRisk,Safe,Valuable or Sustainable predicate. A comparison rule,viewpoint and scenario are required.",
+    "A-VALUATION-04: existing valuation imports obsolete decision. Remove/replace dependency in a separately reviewed executable edit after reference audit; this dossier does not retain decision.",
+    "A-VALUATION-05: risk as potential-loss meaning differs from existing configuration formalization; align or deliberately break with source-backed explanation.",
+    "A-VALUATION-06: IPBES full chapters and SEEA Annex12.1 not completely read; exact detailed taxonomy,exchange/welfare distinctions and expert disagreements remain review gates.",
+    "A-VALUATION-07: damage and asset cessation belong to imported physical occurrences; do not embed value change in a valuation model without an explicit occurrence."
+  ],
+  "coverage": {
+    "counts": {
+      "subject": 1,
+      "process": 5,
+      "relationship": 5,
+      "event": 5,
+      "quality": 5,
+      "predicate": 0
+    },
+    "category_shortfalls": {
+      "subject": "1/5 provisional panel candidate,likely imported collective with role. Forests,people,buildings and other valued subjects must come from their domains; no five manufactured Asset subclasses.",
+      "process": "5/5 research candidates but assessment machinery boundary and physical damage import block execution.",
+      "relationship": "5/5 candidate readings,with two potentially redundant compositions awaiting review.",
+      "event": "5/5 bounded candidates; valuation content and physical damage ancestry still missing.",
+      "quality": "5 explicit qualities,each with unresolved measurement/observer context. PotentialLoss must split by loss dimension before execution."
+    },
+    "question_count": 15,
+    "question_concept_incidence": {
+      "valuation-c01": [
+        "valuation-q02"
+      ],
+      "valuation-c02": [],
+      "valuation-c03": [],
+      "valuation-c04": [
+        "valuation-q12"
+      ],
+      "valuation-c05": [
+        "valuation-q10"
+      ],
+      "valuation-c06": [],
+      "valuation-c07": [
+        "valuation-q01",
+        "valuation-q02"
+      ],
+      "valuation-c08": [],
+      "valuation-c09": [
+        "valuation-q11"
+      ],
+      "valuation-c10": [
+        "valuation-q11"
+      ],
+      "valuation-c11": [
+        "valuation-q06",
+        "valuation-q13"
+      ],
+      "valuation-c12": [],
+      "valuation-c13": [
+        "valuation-q14"
+      ],
+      "valuation-c14": [
+        "valuation-q08"
+      ],
+      "valuation-c15": [
+        "valuation-q08"
+      ],
+      "valuation-c16": [],
+      "valuation-c17": [
+        "valuation-q03",
+        "valuation-q12"
+      ],
+      "valuation-c18": [
+        "valuation-q07",
+        "valuation-q10",
+        "valuation-q14"
+      ],
+      "valuation-c19": [
+        "valuation-q04",
+        "valuation-q15"
+      ],
+      "valuation-c20": [
+        "valuation-q05"
+      ],
+      "valuation-c21": [
+        "valuation-q09"
+      ]
+    },
+    "unused_candidates": [
+      "valuation-c02",
+      "valuation-c03",
+      "valuation-c06",
+      "valuation-c08",
+      "valuation-c12",
+      "valuation-c16"
+    ],
+    "weak_source_areas": "Bounded official/primary sources; no disciplinary expert consultation. Reading-depth limitations recorded per source. All source-to-category translations need review.",
+    "fresh_independent_probes": "Not yet obtained. Drafting agent saw current vocabulary; source-first sequencing does not create independence.",
+    "formulation_counts": {
+      "expressions": 8,
+      "gaps": 7
+    }
+  },
+  "validation": {
+    "source_review": "scoped primary web reading and current source inspection; no expert discussion",
+    "grammar": "untested; parent will run actual parser on expression strings",
+    "adaptation": "not run for these undeclared research concepts",
+    "semantic_model_execution": "not run; proposed derivations,parameters and bindings blocked",
+    "negative_controls": [
+      {
+        "input": "valuation:ValuationPanel of",
+        "expected": "grammar rejection",
+        "status": "not_run"
+      },
+      {
+        "claim": "Only timber price returned as complete value.",
+        "expected": "scientific/semantic rejection independent of grammar",
+        "status": "conceptual counterexample only"
+      }
+    ],
+    "approval_gates": [
+      "Resolve blocking meaning/ancestry and upstream issues.",
+      "Confirm exact source sections and competing interpretations with domain experts.",
+      "Reconcile question meanings with proposed declarations; obtain fresh independent probes.",
+      "Create context-pack1.3 proposal with exact import revisions and artifact hashes.",
+      "Run parser,adapter and loaded-worldview tests separately; preserve failures.",
+      "Human approval of exact revision/actions before executable promotion; no self-approval."
+    ],
+    "local_structure": {
+      "result": "PASS",
+      "checks": [
+        "Local draft2020-12 dossier schema",
+        "Unique concept IDs and question/concept/source references",
+        "Source-first question text and order match QUESTION_ORIGIN.json",
+        "Imported parent names present in inspected namespace text"
+      ],
+      "implementation": "Python3.13 jsonschema from existing task .python-deps; identifier check is textual,not semantic resolution",
+      "scope": "Only these local research artifacts; no parser,adapter,reasoner or model claim."
+    },
+    "human_approval": "none; source/ontology review outstanding",
+    "type_context_warning": "Reference existence and grammar acceptance do not establish scientific specialization."
+  }
+}

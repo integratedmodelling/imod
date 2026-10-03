@@ -1,0 +1,24 @@
+{
+  "scope": "Isolated offline reactor at previously archived klab-services721f373; existing baseline and catchment-overlay adaptation only, not new dossier concepts or new backend.",
+  "tests": [
+    {
+      "name": "WorldviewValidationTest",
+      "tests": 12,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "sha256": "611a331e8aede94432711dd1ca4172e6b7bbda5bdef85c2869874eaa2d8b90e4"
+    },
+    {
+      "name": "WorldviewStrawmanAssessmentTest",
+      "tests": 2,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "sha256": "f493fe50b359d0a651fa1d91da185f758a27e23a78b9141127f1c7eced0facc2"
+    }
+  ],
+  "log_sha256": "fd00e039eab72e0dff2c899e814ed891a9e242580268eef9715eb128e66ebb4a",
+  "baseline": "Attempted=26 adapted=26 errors=0 warnings=0\nERRORS\n\nWARNINGS\n",
+  "overlay": "Attempted=27 adapted=27 errors=0 warnings=0\nERRORS\n\nWARNINGS\n"
+}

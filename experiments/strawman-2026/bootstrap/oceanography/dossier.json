@@ -1,0 +1,1456 @@
+{
+  "dossier_version": "0.1",
+  "domain": "oceanography",
+  "status": "research draft; no approval",
+  "scope": "Marine water bodies and physical/chemical ocean occurrences; ecosystems, fisheries and transport equations are outside.",
+  "imports": [
+    {
+      "namespace": "imod",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+    },
+    {
+      "namespace": "earth",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "424c0141849aac2b9ae762079ff31c8c14cff4f0d6506eb19971004e7f22d816"
+    }
+  ],
+  "sources": [
+    {
+      "id": "O1",
+      "title": "NOAA What is an estuary?",
+      "url": "https://oceanservice.noaa.gov/facts/estuary.html",
+      "locator": "Opening definition and freshwater counterexample; September 23 2026 update",
+      "scope": "Estuary includes freshwater systems; MarineEstuary intentionally narrower.",
+      "status": "primary selected text retrieved and reviewed",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    },
+    {
+      "id": "O2",
+      "title": "NOAA Ocean currents",
+      "url": "https://www.noaa.gov/education/resource-collections/ocean-coasts/ocean-currents",
+      "locator": "Surface/deep currents; density; biological influence",
+      "scope": "Water movement and temperature/salinity forcing; no guaranteed fisheries outcome.",
+      "status": "primary selected text retrieved and reviewed",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    },
+    {
+      "id": "O3",
+      "title": "NOAA What is upwelling?",
+      "url": "https://oceanservice.noaa.gov/facts/upwelling.html",
+      "locator": "Definition and coastal example",
+      "scope": "Upward transport; nutrient-rich water is common, not defining universal consequence.",
+      "status": "primary selected text retrieved and reviewed",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    },
+    {
+      "id": "O4",
+      "title": "NOAA What are tides?",
+      "url": "https://oceanservice.noaa.gov/facts/tides.html",
+      "locator": "High/low water and range; September 23 2026 update",
+      "scope": "Astronomical tides distinct from all water-level variations.",
+      "status": "primary selected text retrieved and reviewed",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    },
+    {
+      "id": "O5",
+      "title": "NOAA Ocean acidification",
+      "url": "https://www.noaa.gov/education/resource-collections/ocean-coasts/ocean-acidification",
+      "locator": "pH scale; carbon dioxide/seawater",
+      "scope": "Declining pH need not cross neutral; detailed pH conventions require dedicated primary standard.",
+      "status": "primary selected text retrieved and reviewed",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "oceanography:MarineEstuary",
+      "name": "MarineEstuary",
+      "category": "subject",
+      "definition": "Coastal water body with marine connection and freshwater mixing.",
+      "parent": "earth:WaterBody",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "oceanography:Salinity",
+        "oceanography:WaterTemperature"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "O1",
+        "O2",
+        "O4"
+      ],
+      "positive": "river-sea mixing estuary",
+      "negative": "freshwater Great Lakes estuary",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:MarineWaterBody",
+      "name": "MarineWaterBody",
+      "category": "subject",
+      "definition": "Individuated marine water body.",
+      "parent": "earth:WaterBody",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "oceanography:Salinity",
+        "oceanography:WaterTemperature"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "O1",
+        "O2",
+        "O4"
+      ],
+      "positive": "coastal sea body",
+      "negative": "temperature raster",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:OceanWaterMass",
+      "name": "OceanWaterMass",
+      "category": "subject",
+      "definition": "Mobile water body distinguished by coherent properties/history.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "oceanography:Salinity",
+        "oceanography:WaterTemperature"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "O1",
+        "O2",
+        "O4"
+      ],
+      "positive": "identified deep water mass",
+      "negative": "fixed grid cell",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:CoastalInlet",
+      "name": "CoastalInlet",
+      "category": "subject",
+      "definition": "Passage connecting coastal water bodies.",
+      "parent": "earth:Waterway",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "oceanography:CurrentSpeed"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "O1",
+        "O2",
+        "O4"
+      ],
+      "positive": "tidal inlet",
+      "negative": "arbitrary line through ocean",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:MarineSurfaceLayer",
+      "name": "MarineSurfaceLayer",
+      "category": "subject",
+      "definition": "Contextually delimited near-surface marine body.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "oceanography:WaterTemperature"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "O1",
+        "O2",
+        "O4"
+      ],
+      "positive": "surface mixed layer",
+      "negative": "universal fixed depth",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:Salinity",
+      "name": "Salinity",
+      "category": "quality",
+      "definition": "Marine salt content under selected convention.",
+      "parent": "imod:Quantity",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "oceanography:MarineWaterBody"
+      },
+      "source_ids": [
+        "O1",
+        "O2",
+        "O4",
+        "O5"
+      ],
+      "positive": "absolute salinity specified",
+      "negative": "practical salinity silently mass fraction",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:WaterTemperature",
+      "name": "WaterTemperature",
+      "category": "quality",
+      "definition": "Thermal quality of marine water.",
+      "parent": "imod:Temperature",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "oceanography:MarineWaterBody"
+      },
+      "source_ids": [
+        "O1",
+        "O2",
+        "O4",
+        "O5"
+      ],
+      "positive": "in-situ water temperature",
+      "negative": "potential temperature substituted",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:CurrentSpeed",
+      "name": "CurrentSpeed",
+      "category": "quality",
+      "definition": "Water-motion magnitude relative to reference.",
+      "parent": "imod:Velocity",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "oceanography:MarineWaterBody"
+      },
+      "source_ids": [
+        "O1",
+        "O2",
+        "O4",
+        "O5"
+      ],
+      "positive": "measured current",
+      "negative": "wave crest speed",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:SeawaterPH",
+      "name": "SeawaterPH",
+      "category": "quality",
+      "definition": "Hydrogen-ion activity-related quality on specified seawater pH scale.",
+      "parent": "imod:Quantity",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "oceanography:MarineWaterBody"
+      },
+      "source_ids": [
+        "O1",
+        "O2",
+        "O4",
+        "O5"
+      ],
+      "positive": "total-scale pH",
+      "negative": "alkalinity substituted",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:SeaSurfaceHeight",
+      "name": "SeaSurfaceHeight",
+      "category": "quality",
+      "definition": "Water surface height relative to stated vertical reference.",
+      "parent": "imod:Length",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "oceanography:MarineWaterBody"
+      },
+      "source_ids": [
+        "O1",
+        "O2",
+        "O4",
+        "O5"
+      ],
+      "positive": "gauge datum height",
+      "negative": "bathymetric depth",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:OceanWaterAdvection",
+      "name": "OceanWaterAdvection",
+      "category": "process",
+      "definition": "Directed transport of marine water.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "oceanography:CurrentSpeed"
+      ],
+      "bindings": {
+        "participants": [
+          "oceanography:MarineWaterBody"
+        ],
+        "affects": [
+          "oceanography:WaterTemperature",
+          "oceanography:Salinity"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Affects recipient contextual water body; direction/magnitude need models. No productive-role conferral or biological guarantee. IMPORTANT: a tracked material body can retain temperature/composition while a fixed recipient region changes. Resolve material-versus-Eulerian bearer distinction before affects binding is encoded; transport alone does not universally change carried quality.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "O2",
+        "O3",
+        "O4",
+        "O5"
+      ],
+      "positive": "inlet water flow",
+      "negative": "wave passage equated to net flow",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:Upwelling",
+      "name": "Upwelling",
+      "category": "process",
+      "definition": "Deeper marine water transported toward surface.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "oceanography:CurrentSpeed"
+      ],
+      "bindings": {
+        "participants": [
+          "oceanography:MarineWaterBody"
+        ],
+        "affects": [
+          "oceanography:WaterTemperature",
+          "oceanography:Salinity"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Affects recipient contextual water body; direction/magnitude need models. No productive-role conferral or biological guarantee. IMPORTANT: a tracked material body can retain temperature/composition while a fixed recipient region changes. Resolve material-versus-Eulerian bearer distinction before affects binding is encoded; transport alone does not universally change carried quality.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "O2",
+        "O3",
+        "O4",
+        "O5"
+      ],
+      "positive": "deep water reaches surface",
+      "negative": "surface cools through heat loss only",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:Downwelling",
+      "name": "Downwelling",
+      "category": "process",
+      "definition": "Surface marine water transported downward.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "oceanography:WaterTemperature",
+        "oceanography:Salinity"
+      ],
+      "bindings": {
+        "participants": [
+          "oceanography:MarineWaterBody"
+        ],
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Affects recipient contextual water body; direction/magnitude need models. No productive-role conferral or biological guarantee.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "O2",
+        "O3",
+        "O4",
+        "O5"
+      ],
+      "positive": "surface water descends",
+      "negative": "particles sink without bulk water",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:TidalOscillation",
+      "name": "TidalOscillation",
+      "category": "process",
+      "definition": "Astronomically forced water-level/motion oscillation.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "oceanography:SeaSurfaceHeight"
+      ],
+      "bindings": {
+        "participants": [
+          "oceanography:MarineWaterBody"
+        ],
+        "affects": [
+          "oceanography:SeaSurfaceHeight"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Affects recipient contextual water body; direction/magnitude need models. No productive-role conferral or biological guarantee.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "O2",
+        "O3",
+        "O4",
+        "O5"
+      ],
+      "positive": "tidal rise/fall",
+      "negative": "storm surge called tide",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:MarineAcidification",
+      "name": "MarineAcidification",
+      "category": "process",
+      "definition": "Process lowering seawater pH.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "oceanography:SeawaterPH"
+      ],
+      "bindings": {
+        "participants": [
+          "oceanography:MarineWaterBody"
+        ],
+        "affects": [
+          "oceanography:SeawaterPH"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Affects recipient contextual water body; direction/magnitude need models. No productive-role conferral or biological guarantee.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "O2",
+        "O3",
+        "O4",
+        "O5"
+      ],
+      "positive": "pH drops but remains alkaline",
+      "negative": "constant low pH called ongoing decline",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:MarineConnection",
+      "name": "MarineConnection",
+      "category": "relationship",
+      "definition": "Marine bodies connected by an identified water passage.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "oceanography:MarineWaterBody",
+        "target": "oceanography:MarineWaterBody",
+        "rationale": "Potential connection not flux; symmetric inverse pending."
+      },
+      "source_ids": [
+        "O1",
+        "O2",
+        "O3"
+      ],
+      "positive": "lagoon linked by inlet",
+      "negative": "nearby isolated pond",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 2,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:RiverReceivesInto",
+      "name": "RiverReceivesInto",
+      "category": "relationship",
+      "definition": "River waterway terminates into coastal water body.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "earth:Waterway",
+        "target": "oceanography:MarineWaterBody",
+        "rationale": "Endpoint connection; actual flow may reverse tidally."
+      },
+      "source_ids": [
+        "O1",
+        "O2",
+        "O3"
+      ],
+      "positive": "river mouth opens to estuary",
+      "negative": "current passes near river",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 2,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:SurfaceOverDeepWater",
+      "name": "SurfaceOverDeepWater",
+      "category": "relationship",
+      "definition": "Surface water overlies a deeper water body.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "oceanography:MarineSurfaceLayer",
+        "target": "oceanography:OceanWaterMass",
+        "rationale": "Arrangement not impermeable separation."
+      },
+      "source_ids": [
+        "O1",
+        "O2",
+        "O3"
+      ],
+      "positive": "surface above deep mass",
+      "negative": "remote masses compared on graph",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 2,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:UpwellingEpisode",
+      "name": "UpwellingEpisode",
+      "category": "event",
+      "definition": "Bounded upward marine-transport occurrence.",
+      "parent": "earth:GeolocatedEvent",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "participants": [
+          "oceanography:MarineWaterBody"
+        ],
+        "affects": [
+          "oceanography:WaterTemperature"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Occurrence requires contextual identity/evidence. High water is diagnostic phase, not autonomous cause; event individuation remains blocked.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "O3",
+        "O4",
+        "O5"
+      ],
+      "positive": "observed coastal interval",
+      "negative": "seasonal probability",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:TidalHighWaterOccurrence",
+      "name": "TidalHighWaterOccurrence",
+      "category": "event",
+      "definition": "Local high water in identified tidal cycle.",
+      "parent": "earth:GeolocatedEvent",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "participants": [
+          "oceanography:MarineWaterBody"
+        ],
+        "affects": [
+          "oceanography:SeaSurfaceHeight"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Occurrence requires contextual identity/evidence. High water is diagnostic phase, not autonomous cause; event individuation remains blocked.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "O3",
+        "O4",
+        "O5"
+      ],
+      "positive": "tidal crest at gauge",
+      "negative": "highest storm water called purely tidal",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "oceanography:AcidificationEpisode",
+      "name": "AcidificationEpisode",
+      "category": "event",
+      "definition": "Bounded seawater pH decline occurrence.",
+      "parent": "earth:GeolocatedEvent",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "participants": [
+          "oceanography:MarineWaterBody"
+        ],
+        "affects": [
+          "oceanography:SeawaterPH"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Occurrence requires contextual identity/evidence. High water is diagnostic phase, not autonomous cause; event individuation remains blocked.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "O3",
+        "O4",
+        "O5"
+      ],
+      "positive": "documented decline",
+      "negative": "sensor offset mimics decline",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    }
+  ],
+  "questions": [
+    {
+      "id": "oceanography-q01",
+      "order": 1,
+      "text": "How salty is the water in this inlet compared with the offshore sea?",
+      "source_ids": [
+        "O1"
+      ],
+      "concept_ids": [
+        "oceanography:Salinity",
+        "oceanography:MarineEstuary"
+      ],
+      "expression": "oceanography:Salinity of oceanography:MarineEstuary",
+      "expected_type": "quality",
+      "dependencies": [
+        "Comparable salinity conventions and sample context at inlet/offshore.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Comparable salinity conventions and sample context at inlet/offshore.",
+      "negative": "different salinity scales compared directly",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Comparable salinity conventions and sample context at inlet/offshore.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 1,
+        "independent": false
+      }
+    },
+    {
+      "id": "oceanography-q02",
+      "order": 2,
+      "text": "Is this estuary always salty?",
+      "source_ids": [
+        "O1"
+      ],
+      "concept_ids": [
+        "oceanography:MarineEstuary"
+      ],
+      "expression": null,
+      "expected_type": "gap",
+      "dependencies": [
+        "Unqualified estuary includes freshwater systems; narrowing must be explicit.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Unqualified estuary includes freshwater systems; narrowing must be explicit.",
+      "negative": "all estuaries marine",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Unqualified estuary includes freshwater systems; narrowing must be explicit.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 2,
+        "independent": false
+      }
+    },
+    {
+      "id": "oceanography-q03",
+      "order": 3,
+      "text": "Where is the surface water moving and how fast?",
+      "source_ids": [
+        "O2"
+      ],
+      "concept_ids": [
+        "oceanography:CurrentSpeed",
+        "oceanography:MarineSurfaceLayer"
+      ],
+      "expression": "oceanography:CurrentSpeed of oceanography:MarineSurfaceLayer",
+      "expected_type": "quality",
+      "dependencies": [
+        "Speed component only; direction missing and upstream fluid velocity convention needed.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Speed component only; direction missing and upstream fluid velocity convention needed.",
+      "negative": "wave propagation equals water current",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Speed component only; direction missing and upstream fluid velocity convention needed.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 3,
+        "independent": false
+      }
+    },
+    {
+      "id": "oceanography-q04",
+      "order": 4,
+      "text": "Is deeper water rising toward the coast today?",
+      "source_ids": [
+        "O3"
+      ],
+      "concept_ids": [
+        "oceanography:Upwelling"
+      ],
+      "expression": "oceanography:Upwelling",
+      "expected_type": "process",
+      "dependencies": [
+        "Resolve upward bulk water transport, not infer from cold surface alone.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Resolve upward bulk water transport, not infer from cold surface alone.",
+      "negative": "surface cooling guarantees upwelling",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Resolve upward bulk water transport, not infer from cold surface alone.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 4,
+        "independent": false
+      }
+    },
+    {
+      "id": "oceanography-q05",
+      "order": 5,
+      "text": "How much does water level rise between low and high tide here?",
+      "source_ids": [
+        "O4"
+      ],
+      "concept_ids": [
+        "oceanography:SeaSurfaceHeight",
+        "oceanography:TidalOscillation"
+      ],
+      "expression": "oceanography:SeaSurfaceHeight of oceanography:MarineWaterBody",
+      "expected_type": "quality",
+      "dependencies": [
+        "Multiple contextual resolutions plus range comparison model, not one height sufficient.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Multiple contextual resolutions plus range comparison model, not one height sufficient.",
+      "negative": "single height equals tidal range",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Multiple contextual resolutions plus range comparison model, not one height sufficient.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 5,
+        "independent": false
+      }
+    },
+    {
+      "id": "oceanography-q06",
+      "order": 6,
+      "text": "Did the high water result from the tide alone?",
+      "source_ids": [
+        "O4"
+      ],
+      "concept_ids": [
+        "oceanography:TidalOscillation"
+      ],
+      "expression": null,
+      "expected_type": "gap",
+      "dependencies": [
+        "Tidal/non-tidal decomposition needs model and atmospheric forcing evidence.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Tidal/non-tidal decomposition needs model and atmospheric forcing evidence.",
+      "negative": "all high water is astronomical tide",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Tidal/non-tidal decomposition needs model and atmospheric forcing evidence.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 6,
+        "independent": false
+      }
+    },
+    {
+      "id": "oceanography-q07",
+      "order": 7,
+      "text": "Is the colder water also denser after accounting for its salt content?",
+      "source_ids": [
+        "O2"
+      ],
+      "concept_ids": [
+        "oceanography:WaterTemperature",
+        "oceanography:Salinity"
+      ],
+      "expression": null,
+      "expected_type": "gap",
+      "dependencies": [
+        "Density definition and thermodynamic convention missing; temperature alone insufficient.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Density definition and thermodynamic convention missing; temperature alone insufficient.",
+      "negative": "cold necessarily denser without composition context",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Density definition and thermodynamic convention missing; temperature alone insufficient.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 7,
+        "independent": false
+      }
+    },
+    {
+      "id": "oceanography-q08",
+      "order": 8,
+      "text": "Which coastal water receives water from this river mouth?",
+      "source_ids": [
+        "O1"
+      ],
+      "concept_ids": [
+        "oceanography:RiverReceivesInto",
+        "oceanography:MarineWaterBody"
+      ],
+      "expression": "oceanography:RiverReceivesInto",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Endpoint relation; no automatic freshwater flux magnitude or fixed flow direction.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Endpoint relation; no automatic freshwater flux magnitude or fixed flow direction.",
+      "negative": "nearby coast assumed receiving",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Endpoint relation; no automatic freshwater flux magnitude or fixed flow direction.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 8,
+        "independent": false
+      }
+    },
+    {
+      "id": "oceanography-q09",
+      "order": 9,
+      "text": "Does a decrease in ocean pH mean the water has become acidic below neutral?",
+      "source_ids": [
+        "O5"
+      ],
+      "concept_ids": [
+        "oceanography:SeawaterPH",
+        "oceanography:MarineAcidification"
+      ],
+      "expression": "change in oceanography:SeawaterPH of oceanography:MarineWaterBody",
+      "expected_type": "change quality",
+      "dependencies": [
+        "Decreasing pH can remain alkaline; scale and event attribution needed.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Decreasing pH can remain alkaline; scale and event attribution needed.",
+      "negative": "acidification means pH below seven",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Decreasing pH can remain alkaline; scale and event attribution needed.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 9,
+        "independent": false
+      }
+    },
+    {
+      "id": "oceanography-q10",
+      "order": 10,
+      "text": "How does the surface temperature differ from deeper water?",
+      "source_ids": [
+        "O2"
+      ],
+      "concept_ids": [
+        "oceanography:WaterTemperature",
+        "oceanography:MarineSurfaceLayer",
+        "oceanography:OceanWaterMass"
+      ],
+      "expression": "oceanography:WaterTemperature of oceanography:MarineSurfaceLayer",
+      "expected_type": "quality",
+      "dependencies": [
+        "Surface component; deeper water separately resolved with same thermal convention.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Surface component; deeper water separately resolved with same thermal convention.",
+      "negative": "in-situ/potential temperature silently equated",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Surface component; deeper water separately resolved with same thermal convention.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 10,
+        "independent": false
+      }
+    },
+    {
+      "id": "oceanography-q11",
+      "order": 11,
+      "text": "Which way does water cross the inlet during this tidal exchange?",
+      "source_ids": [
+        "O4"
+      ],
+      "concept_ids": [
+        "oceanography:OceanWaterAdvection",
+        "oceanography:CoastalInlet"
+      ],
+      "expression": null,
+      "expected_type": "gap",
+      "dependencies": [
+        "Directional cross-section flux quality is missing; connection and speed alone do not answer.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Directional cross-section flux quality is missing; connection and speed alone do not answer.",
+      "negative": "open passage implies one-way flow",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Directional cross-section flux quality is missing; connection and speed alone do not answer.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 11,
+        "independent": false
+      }
+    },
+    {
+      "id": "oceanography-q12",
+      "order": 12,
+      "text": "Is nutrient-rich deep water reaching the surface without assuming fish production increased?",
+      "source_ids": [
+        "O3"
+      ],
+      "concept_ids": [
+        "oceanography:Upwelling"
+      ],
+      "expression": "oceanography:Upwelling",
+      "expected_type": "process",
+      "dependencies": [
+        "Need separate nutrient concentration and ecology observations; no creates fish binding.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Need separate nutrient concentration and ecology observations; no creates fish binding.",
+      "negative": "upwelling necessarily increases catch",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Need separate nutrient concentration and ecology observations; no creates fish binding.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 12,
+        "independent": false
+      }
+    },
+    {
+      "id": "oceanography-q13",
+      "order": 13,
+      "text": "Did a particular upwelling episode change coastal surface temperature?",
+      "source_ids": [
+        "O3"
+      ],
+      "concept_ids": [
+        "oceanography:UpwellingEpisode",
+        "oceanography:WaterTemperature"
+      ],
+      "expression": "change in oceanography:WaterTemperature of oceanography:MarineWaterBody",
+      "expected_type": "change quality",
+      "dependencies": [
+        "Change and bounded upwelling evidence separately; attribution remains model.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Change and bounded upwelling evidence separately; attribution remains model.",
+      "negative": "coincident cooling proves unique cause",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Change and bounded upwelling evidence separately; attribution remains model.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 13,
+        "independent": false
+      }
+    },
+    {
+      "id": "oceanography-q14",
+      "order": 14,
+      "text": "Does the mapped boundary of a current form an impermeable barrier?",
+      "source_ids": [
+        "O2"
+      ],
+      "concept_ids": [
+        "oceanography:OceanWaterAdvection"
+      ],
+      "expression": null,
+      "expected_type": "gap",
+      "dependencies": [
+        "Flow-feature boundary and mixing need configuration/physical models; map line not impermeability.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Flow-feature boundary and mixing need configuration/physical models; map line not impermeability.",
+      "negative": "current border is wall",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Flow-feature boundary and mixing need configuration/physical models; map line not impermeability.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 14,
+        "independent": false
+      }
+    },
+    {
+      "id": "oceanography-q15",
+      "order": 15,
+      "text": "If no current observation is available can we assume the sea is motionless?",
+      "source_ids": [
+        "O2"
+      ],
+      "concept_ids": [
+        "oceanography:CurrentSpeed"
+      ],
+      "expression": null,
+      "expected_type": "gap",
+      "dependencies": [
+        "Unobserved current remains unknown; no zero-motion inference.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Unobserved current remains unknown; no zero-motion inference.",
+      "negative": "missing observation means still sea",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Unobserved current remains unknown; no zero-motion inference.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 15,
+        "independent": false
+      }
+    }
+  ],
+  "quality_summaries": [
+    {
+      "quality": "oceanography:Salinity",
+      "proposed_summary": "RelativelySaline",
+      "basis": "Ordered comparison under same salinity convention and reference waters; brackish categories require named authority, no universal cutoff.",
+      "status": "blocked until comparison rule and evidence selected",
+      "kind": "ordering",
+      "nominal": false,
+      "ordered": true,
+      "overlap": "allowed across differently scoped comparisons; no exhaustive partition",
+      "context_scope": "explicit reference population and measurement convention",
+      "source_ids": [
+        "O1"
+      ],
+      "evidence_rule": "Requires resolved comparable quality observations; unknown/unmeasured is not this predicate.",
+      "measurement_state": "Missing measurement is unresolved evidence; not false and not an automatic nominal class."
+    }
+  ],
+  "ambiguities": [
+    "Ocean current process differs from persistent flow configuration; no subject Current invented for quota.",
+    "MarineEstuary excludes freshwater estuaries; jargon alias must not equate all estuaries.",
+    "Mobile water mass cannot derive from geostationary Location; fluid-body upstream distinction needed.",
+    "Practical and absolute salinity not equivalent: chemistry/physics upstream issue.",
+    "Tidal stage is contextual cyclic distinction, not generic calendar machinery."
+  ],
+  "coverage": {
+    "counts": {
+      "subject": 5,
+      "quality": 5,
+      "process": 5,
+      "relationship": 3,
+      "event": 3
+    },
+    "target": {
+      "subject": 5,
+      "process": 5,
+      "relationship": 5,
+      "event": 5
+    },
+    "shortfalls": {
+      "relationship": "2 slots unfilled; generic proximity or unsupported causal links would pad coverage. Soil includes one blocked machinery relation, so at most two domain relationship candidates.",
+      "event": "2 slots unfilled; avoid inventing threshold episodes or relabeling every process as an event."
+    },
+    "source_limits": "Agency primary materials are bounded starting evidence, often educational/descriptive. Sources do not endorse ontological categories, exact inferred bindings or exhaustive coverage. Retrieval failures are recorded per source.",
+    "concept_question_incidence": {
+      "oceanography:MarineEstuary": [
+        "oceanography-q01",
+        "oceanography-q02"
+      ],
+      "oceanography:MarineWaterBody": [
+        "oceanography-q08"
+      ],
+      "oceanography:OceanWaterMass": [
+        "oceanography-q10"
+      ],
+      "oceanography:CoastalInlet": [
+        "oceanography-q11"
+      ],
+      "oceanography:MarineSurfaceLayer": [
+        "oceanography-q03",
+        "oceanography-q10"
+      ],
+      "oceanography:Salinity": [
+        "oceanography-q01",
+        "oceanography-q07"
+      ],
+      "oceanography:WaterTemperature": [
+        "oceanography-q07",
+        "oceanography-q10",
+        "oceanography-q13"
+      ],
+      "oceanography:CurrentSpeed": [
+        "oceanography-q03",
+        "oceanography-q15"
+      ],
+      "oceanography:SeawaterPH": [
+        "oceanography-q09"
+      ],
+      "oceanography:SeaSurfaceHeight": [
+        "oceanography-q05"
+      ],
+      "oceanography:OceanWaterAdvection": [
+        "oceanography-q11",
+        "oceanography-q14"
+      ],
+      "oceanography:Upwelling": [
+        "oceanography-q04",
+        "oceanography-q12"
+      ],
+      "oceanography:Downwelling": [],
+      "oceanography:TidalOscillation": [
+        "oceanography-q05",
+        "oceanography-q06"
+      ],
+      "oceanography:MarineAcidification": [
+        "oceanography-q09"
+      ],
+      "oceanography:MarineConnection": [],
+      "oceanography:RiverReceivesInto": [
+        "oceanography-q08"
+      ],
+      "oceanography:SurfaceOverDeepWater": [],
+      "oceanography:UpwellingEpisode": [
+        "oceanography-q13"
+      ],
+      "oceanography:TidalHighWaterOccurrence": [],
+      "oceanography:AcidificationEpisode": []
+    },
+    "unused_candidates": [
+      "oceanography:Downwelling",
+      "oceanography:MarineConnection",
+      "oceanography:SurfaceOverDeepWater",
+      "oceanography:TidalHighWaterOccurrence",
+      "oceanography:AcidificationEpisode"
+    ],
+    "unused_policy": "Unused concepts are exposed for removal or fresh question testing, not silently declared needed.",
+    "held_out_status": "No independently authored held-out probes obtained. Questions were source-first but author knew legacy and is not independent; request fresh human/domain probes after freezing revision."
+  },
+  "validation": {
+    "source_review": "selected primary passages/indexed excerpts read; no expert discussion",
+    "grammar": "not run by author; parent batch parser planned",
+    "adaptation": "not run for these undeclared candidates",
+    "namespace_resolution": "existing parent names manually checked; candidates are prose, not installed concepts",
+    "scientific_semantics": "provisional/blocked per record; no human approval",
+    "models": "not run; no runtime answerability claim",
+    "consequence_execution": "not implemented; implication/detection syntax-only",
+    "negative_controls": [
+      {
+        "expression": "oceanography:DefinitelyMissing",
+        "expected": "qualified-name syntax may pass, namespace resolution must fail",
+        "status": "not_run"
+      },
+      {
+        "expression": "change in of oceanography:DefinitelyMissing",
+        "expected": "grammar reject",
+        "status": "not_run"
+      }
+    ],
+    "approval_gate": "Freeze dossier/import hashes, resolve blocking ambiguity/source gaps, human domain and ontology review, actual candidate parser/adaptation/reasoner checks, separate exact-revision approval; no self-approval.",
+    "local_structure": "PASS author check: 15 ordered unique questions, stable candidate/source references and exact ledger text; 21 candidate IDs; no executable source.",
+    "human_approval": "none; source/ontology review outstanding",
+    "type_context_warning": "Reference existence and grammar acceptance do not establish scientific specialization."
+  },
+  "question_generation": {
+    "ledger_sha256": "23b0e3ec7ec73854f2136658314524193be52d5df39305ed51bebcc5d32c0a5a",
+    "order": "source review -> saved 15-question ledger -> candidate records -> expression mapping",
+    "independent": false
+  },
+  "upstream_issues": [
+    {
+      "id": "ocean-fluid",
+      "missing_distinction": "Mobile fluid bodies, directional velocity, density and volume flux",
+      "required_action": "Physics upstream, marine specialization later; speeds alone cannot answer inlet transfer.",
+      "status": "blocking relevant concepts; no local workaround"
+    },
+    {
+      "id": "ocean-chemistry",
+      "missing_distinction": "Absolute/practical salinity and seawater pH scales",
+      "required_action": "Chemistry/thermodynamic conventions required; do not equate without evidence.",
+      "status": "blocking relevant concepts; no local workaround"
+    },
+    {
+      "id": "ocean-forcing",
+      "missing_distinction": "Wind stress, pressure, density gradients, buoyancy and vertical transport",
+      "required_action": "Process parameter coverage currently incomplete; no asserted equation or deterministic local effect.",
+      "status": "blocking relevant concepts; no local workaround"
+    }
+  ],
+  "import_evidence": [
+    {
+      "namespace": "imod",
+      "path": "src/imod.kwv",
+      "sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca",
+      "scope": "Exact imported bytes available at dossier authoring; reference existence only."
+    },
+    {
+      "namespace": "earth",
+      "path": "src/earth.kwv",
+      "sha256": "424c0141849aac2b9ae762079ff31c8c14cff4f0d6506eb19971004e7f22d816",
+      "scope": "Exact imported bytes available at dossier authoring; reference existence only."
+    }
+  ]
+}

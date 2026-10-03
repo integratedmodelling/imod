@@ -1,0 +1,1415 @@
+{
+  "dossier_version": "0.1",
+  "domain": "geology",
+  "status": "research draft; no approval",
+  "scope": "Earth materials, their arrangement and geological occurrences. Material identity is distinct from economic usefulness; geological-history mechanisms are models.",
+  "imports": [
+    {
+      "namespace": "imod",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+    },
+    {
+      "namespace": "earth",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "424c0141849aac2b9ae762079ff31c8c14cff4f0d6506eb19971004e7f22d816"
+    }
+  ],
+  "sources": [
+    {
+      "id": "L1",
+      "title": "USGS GIP 17 (2005), mineral deposits and contaminants",
+      "url": "https://pubs.usgs.gov/gip/2005/17/gip-17.pdf",
+      "locator": "Rock cycle; occurrence/deposit/ore distinction",
+      "scope": "Rock formation and economic distinctions from indexed primary excerpts. Direct PDF returned 403.",
+      "status": "indexed primary excerpts reviewed; full retrieval blocked",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    },
+    {
+      "id": "L2",
+      "title": "USGS Science of Earthquakes",
+      "url": "https://www.usgs.gov/programs/earthquake-hazards/science-earthquakes",
+      "locator": "Earthquake definition; causes; magnitude/intensity; prediction",
+      "scope": "Fault slip/shaking and prediction limits; educational simplifications require expert review.",
+      "status": "primary selected text retrieved and reviewed",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    },
+    {
+      "id": "L3",
+      "title": "USGS landslide FAQ",
+      "url": "https://www.usgs.gov/faqs/what-a-landslide-and-what-causes-one",
+      "locator": "Opening definition and causes",
+      "scope": "Gravity-driven movement, submarine cases, several modes and multiple triggers.",
+      "status": "primary selected text retrieved and reviewed",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "geology:RockBody",
+      "name": "RockBody",
+      "category": "subject",
+      "definition": "Individuated coherent geological material body.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "geology:BodyVolume",
+        "geology:MineralFraction"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "L1",
+        "L2"
+      ],
+      "positive": "granite outcrop body",
+      "negative": "granite type label",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:SedimentBody",
+      "name": "SedimentBody",
+      "category": "subject",
+      "definition": "Individuated unconsolidated particle accumulation.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "geology:BodyVolume"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "L1",
+        "L2"
+      ],
+      "positive": "sand deposit",
+      "negative": "grain-size value",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:MineralGrain",
+      "name": "MineralGrain",
+      "category": "subject",
+      "definition": "Individuated mineral particle.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "geology:GrainDiameter"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "L1",
+        "L2"
+      ],
+      "positive": "quartz grain",
+      "negative": "quartz species",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:FaultZone",
+      "name": "FaultZone",
+      "category": "subject",
+      "definition": "Finite fracture zone bearing displacement evidence.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "geology:SlipDisplacement"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "L1",
+        "L2"
+      ],
+      "positive": "mapped fault zone",
+      "negative": "earthquake forecast area",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:RockStratum",
+      "name": "RockStratum",
+      "category": "subject",
+      "definition": "Material layer distinguished in a stratified succession.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "geology:LayerThickness"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "L1",
+        "L2"
+      ],
+      "positive": "sandstone bed",
+      "negative": "age interval",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:BodyVolume",
+      "name": "BodyVolume",
+      "category": "quality",
+      "definition": "Volume of identified geological material.",
+      "parent": "imod:Volume",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "geology:RockBody or geology:SedimentBody"
+      },
+      "source_ids": [
+        "L1",
+        "L2"
+      ],
+      "positive": "displaced debris volume",
+      "negative": "hazard-map area",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:MineralFraction",
+      "name": "MineralFraction",
+      "category": "quality",
+      "definition": "Specified mineral share on declared mass or volume basis.",
+      "parent": "imod:Proportion",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "geology:RockBody"
+      },
+      "source_ids": [
+        "L1",
+        "L2"
+      ],
+      "positive": "quartz mass fraction",
+      "negative": "ore profitability",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:GrainDiameter",
+      "name": "GrainDiameter",
+      "category": "quality",
+      "definition": "Particle size under chosen geometric convention.",
+      "parent": "imod:Length",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "geology:MineralGrain"
+      },
+      "source_ids": [
+        "L1",
+        "L2"
+      ],
+      "positive": "equivalent grain diameter",
+      "negative": "diameter of whole rock body",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:SlipDisplacement",
+      "name": "SlipDisplacement",
+      "category": "quality",
+      "definition": "Relative movement of opposite fault sides during specified occurrence.",
+      "parent": "imod:Length",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "geology:FaultZone"
+      },
+      "source_ids": [
+        "L1",
+        "L2"
+      ],
+      "positive": "rupture offset",
+      "negative": "earthquake magnitude",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:LayerThickness",
+      "name": "LayerThickness",
+      "category": "quality",
+      "definition": "Stratum boundary separation in stated normal direction.",
+      "parent": "imod:Length",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "geology:RockStratum"
+      },
+      "source_ids": [
+        "L1",
+        "L2"
+      ],
+      "positive": "bed thickness",
+      "negative": "apparent outcrop width",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:InPlaceWeathering",
+      "name": "InPlaceWeathering",
+      "category": "process",
+      "definition": "Alteration of rock in place.",
+      "parent": "earth:Weathering",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "geology:MineralFraction"
+      ],
+      "bindings": {
+        "participants": [
+          "geology:RockBody",
+          "geology:SedimentBody"
+        ],
+        "affects": [
+          "geology:MineralFraction"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Relevant quality parameters only; pressure/composition and transport velocity need upstream articulation. Creates conditional on individuating a new body, not fixed product inference.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "L1"
+      ],
+      "positive": "altered stationary outcrop",
+      "negative": "unaltered transported particles",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:SedimentTransport",
+      "name": "SedimentTransport",
+      "category": "process",
+      "definition": "Movement of unconsolidated geological particles.",
+      "parent": "earth:LandformingProcess",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "geology:GrainDiameter"
+      ],
+      "bindings": {
+        "participants": [
+          "geology:RockBody",
+          "geology:SedimentBody"
+        ],
+        "affects": [
+          "geology:BodyVolume"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Relevant quality parameters only; pressure/composition and transport velocity need upstream articulation. Creates conditional on individuating a new body, not fixed product inference.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "L1"
+      ],
+      "positive": "sand transported downstream",
+      "negative": "sand only wetted",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:SedimentDeposition",
+      "name": "SedimentDeposition",
+      "category": "process",
+      "definition": "Accumulation of transported particles.",
+      "parent": "earth:Sedimentation",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "geology:GrainDiameter"
+      ],
+      "bindings": {
+        "participants": [
+          "geology:RockBody",
+          "geology:SedimentBody"
+        ],
+        "affects": [
+          "geology:BodyVolume"
+        ],
+        "creates": [
+          "geology:SedimentBody"
+        ],
+        "confers": [],
+        "rationale": "Relevant quality parameters only; pressure/composition and transport velocity need upstream articulation. Creates conditional on individuating a new body, not fixed product inference.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "L1"
+      ],
+      "positive": "new sand deposit",
+      "negative": "particles pass through",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:Lithification",
+      "name": "Lithification",
+      "category": "process",
+      "definition": "Consolidation of sediment into coherent rock.",
+      "parent": "earth:LandformingProcess",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "geology:BodyVolume"
+      ],
+      "bindings": {
+        "participants": [
+          "geology:RockBody",
+          "geology:SedimentBody"
+        ],
+        "affects": [],
+        "creates": [
+          "geology:RockBody"
+        ],
+        "confers": [],
+        "rationale": "Relevant quality parameters only; pressure/composition and transport velocity need upstream articulation. Creates conditional on individuating a new body, not fixed product inference.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "L1"
+      ],
+      "positive": "cemented sandstone forms",
+      "negative": "compressed but still loose sediment",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:MetamorphicAlteration",
+      "name": "MetamorphicAlteration",
+      "category": "process",
+      "definition": "Solid-state alteration of geological material.",
+      "parent": "earth:LandformingProcess",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "imod:Temperature"
+      ],
+      "bindings": {
+        "participants": [
+          "geology:RockBody",
+          "geology:SedimentBody"
+        ],
+        "affects": [
+          "geology:MineralFraction"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Relevant quality parameters only; pressure/composition and transport velocity need upstream articulation. Creates conditional on individuating a new body, not fixed product inference.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "L1"
+      ],
+      "positive": "changed minerals without bulk melting",
+      "negative": "magma crystallization",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:StratumSuperposition",
+      "name": "StratumSuperposition",
+      "category": "relationship",
+      "definition": "One stratum currently overlies another.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "geology:RockStratum",
+        "target": "geology:RockStratum",
+        "rationale": "Spatial order is not necessarily age order in overturned strata."
+      },
+      "source_ids": [
+        "L1",
+        "L2"
+      ],
+      "positive": "sandstone over shale",
+      "negative": "younger age assumed",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 2,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:FaultCutsBody",
+      "name": "FaultCutsBody",
+      "category": "relationship",
+      "definition": "Fault zone intersects a rock body.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "geology:FaultZone",
+        "target": "geology:RockBody",
+        "rationale": "Intersection does not assert future rupture."
+      },
+      "source_ids": [
+        "L1",
+        "L2"
+      ],
+      "positive": "fracture crosses bed",
+      "negative": "projected fault merely nearby",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 2,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:GrainConstituentOf",
+      "name": "GrainConstituentOf",
+      "category": "relationship",
+      "definition": "Grain is physically constituent of rock body.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "geology:MineralGrain",
+        "target": "geology:RockBody",
+        "rationale": "Membership of individuals, not mineral-type list."
+      },
+      "source_ids": [
+        "L1",
+        "L2"
+      ],
+      "positive": "grain in rock sample",
+      "negative": "mineral in regional handbook",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 2,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:FaultSlipEarthquake",
+      "name": "FaultSlipEarthquake",
+      "category": "event",
+      "definition": "Bounded earthquake involving sudden fault slip.",
+      "parent": "earth:GeologicalEvent",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "geology:BodyVolume"
+      ],
+      "bindings": {
+        "participants": [
+          "geology:RockBody",
+          "geology:SedimentBody"
+        ],
+        "affects": [
+          "geology:SlipDisplacement"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Volume applies to identified source/receiving bodies; material conservation is a model constraint. Separation may change identity, never through implicit inference.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "L2",
+        "L3"
+      ],
+      "positive": "recorded fault-slip earthquake",
+      "negative": "aseismic slow slip",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:LandslideEpisode",
+      "name": "LandslideEpisode",
+      "category": "event",
+      "definition": "Bounded gravity-driven downslope mass movement.",
+      "parent": "earth:GeologicalEvent",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "geology:BodyVolume"
+      ],
+      "bindings": {
+        "participants": [
+          "geology:RockBody",
+          "geology:SedimentBody"
+        ],
+        "affects": [
+          "geology:BodyVolume"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Volume applies to identified source/receiving bodies; material conservation is a model constraint. Separation may change identity, never through implicit inference.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "L2",
+        "L3"
+      ],
+      "positive": "submarine slope failure",
+      "negative": "susceptibility rating",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "geology:RockfallEpisode",
+      "name": "RockfallEpisode",
+      "category": "event",
+      "definition": "Bounded detachment and falling of slope rock.",
+      "parent": "earth:GeologicalEvent",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "geology:BodyVolume"
+      ],
+      "bindings": {
+        "participants": [
+          "geology:RockBody",
+          "geology:SedimentBody"
+        ],
+        "affects": [
+          "geology:BodyVolume"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Volume applies to identified source/receiving bodies; material conservation is a model constraint. Separation may change identity, never through implicit inference.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "L2",
+        "L3"
+      ],
+      "positive": "cliff block falls",
+      "negative": "in-place chemical weathering",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    }
+  ],
+  "questions": [
+    {
+      "id": "geology-q01",
+      "order": 1,
+      "text": "What is the rock beneath the soil here?",
+      "source_ids": [
+        "L1"
+      ],
+      "concept_ids": [
+        "geology:RockBody"
+      ],
+      "expression": "geology:RockBody",
+      "expected_type": "subject",
+      "dependencies": [
+        "Observe underlying rock body; lithological identity and overlying-soil context remain dependencies.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Observe underlying rock body; lithological identity and overlying-soil context remain dependencies.",
+      "negative": "soil taxon supplies rock identity",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Observe underlying rock body; lithological identity and overlying-soil context remain dependencies.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 1,
+        "independent": false
+      }
+    },
+    {
+      "id": "geology-q02",
+      "order": 2,
+      "text": "Which rock body contains the mineral grains seen in this sample?",
+      "source_ids": [
+        "L1"
+      ],
+      "concept_ids": [
+        "geology:GrainConstituentOf",
+        "geology:MineralGrain",
+        "geology:RockBody"
+      ],
+      "expression": "geology:GrainConstituentOf",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Resolve identified grain and containing rock endpoints, not type occurrence alone.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Resolve identified grain and containing rock endpoints, not type occurrence alone.",
+      "negative": "mineral in handbook proves membership",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Resolve identified grain and containing rock endpoints, not type occurrence alone.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 2,
+        "independent": false
+      }
+    },
+    {
+      "id": "geology-q03",
+      "order": 3,
+      "text": "Are these loose fragments sediment or a coherent rock body?",
+      "source_ids": [
+        "L1"
+      ],
+      "concept_ids": [
+        "geology:SedimentBody",
+        "geology:RockBody"
+      ],
+      "expression": "geology:SedimentBody",
+      "expected_type": "subject",
+      "dependencies": [
+        "Differentiate unconsolidated accumulation from coherent body.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Differentiate unconsolidated accumulation from coherent body.",
+      "negative": "all small rocks are sediment bodies",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Differentiate unconsolidated accumulation from coherent body.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 3,
+        "independent": false
+      }
+    },
+    {
+      "id": "geology-q04",
+      "order": 4,
+      "text": "Has an older layer been cut by a fault?",
+      "source_ids": [
+        "L2"
+      ],
+      "concept_ids": [
+        "geology:FaultCutsBody",
+        "geology:FaultZone",
+        "geology:RockStratum"
+      ],
+      "expression": "geology:FaultCutsBody",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Intersection tested; older chronology requires additional stratigraphic evidence.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Intersection tested; older chronology requires additional stratigraphic evidence.",
+      "negative": "map line crossing proves chronology",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Intersection tested; older chronology requires additional stratigraphic evidence.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 4,
+        "independent": false
+      }
+    },
+    {
+      "id": "geology-q05",
+      "order": 5,
+      "text": "Which ground moved during the earthquake?",
+      "source_ids": [
+        "L2"
+      ],
+      "concept_ids": [
+        "geology:SlipDisplacement",
+        "geology:FaultSlipEarthquake"
+      ],
+      "expression": "geology:SlipDisplacement of geology:FaultZone",
+      "expected_type": "quality",
+      "dependencies": [
+        "Relative fault-side displacement during specific earthquake; shaking motion is separate.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Relative fault-side displacement during specific earthquake; shaking motion is separate.",
+      "negative": "earthquake magnitude equals local displacement",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Relative fault-side displacement during specific earthquake; shaking motion is separate.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 5,
+        "independent": false
+      }
+    },
+    {
+      "id": "geology-q06",
+      "order": 6,
+      "text": "Was this slope failure a falling block or a flowing mixture?",
+      "source_ids": [
+        "L3"
+      ],
+      "concept_ids": [
+        "geology:LandslideEpisode",
+        "geology:RockfallEpisode"
+      ],
+      "expression": "geology:RockfallEpisode",
+      "expected_type": "event",
+      "dependencies": [
+        "Bounded falling mode versus flow; retain event classification evidence.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Bounded falling mode versus flow; retain event classification evidence.",
+      "negative": "all downslope motion is rockfall",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Bounded falling mode versus flow; retain event classification evidence.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 6,
+        "independent": false
+      }
+    },
+    {
+      "id": "geology-q07",
+      "order": 7,
+      "text": "Could the slide happen without an earthquake?",
+      "source_ids": [
+        "L3"
+      ],
+      "concept_ids": [
+        "geology:LandslideEpisode"
+      ],
+      "expression": null,
+      "expected_type": "gap",
+      "dependencies": [
+        "Causal alternatives require model/evidence; landslide meaning does not require earthquake.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Causal alternatives require model/evidence; landslide meaning does not require earthquake.",
+      "negative": "every slide implies quake",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Causal alternatives require model/evidence; landslide meaning does not require earthquake.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 7,
+        "independent": false
+      }
+    },
+    {
+      "id": "geology-q08",
+      "order": 8,
+      "text": "Is the rock breaking apart in place or being carried away?",
+      "source_ids": [
+        "L1"
+      ],
+      "concept_ids": [
+        "geology:InPlaceWeathering",
+        "geology:SedimentTransport"
+      ],
+      "expression": "geology:InPlaceWeathering",
+      "expected_type": "process",
+      "dependencies": [
+        "Separate in-place alteration from transport; both may co-occur.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Separate in-place alteration from transport; both may co-occur.",
+      "negative": "weathering necessarily means material moved away",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Separate in-place alteration from transport; both may co-occur.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 8,
+        "independent": false
+      }
+    },
+    {
+      "id": "geology-q09",
+      "order": 9,
+      "text": "Did deposited grains become a solid rock?",
+      "source_ids": [
+        "L1"
+      ],
+      "concept_ids": [
+        "geology:Lithification",
+        "geology:RockBody"
+      ],
+      "expression": "geology:Lithification",
+      "expected_type": "process",
+      "dependencies": [
+        "Observe consolidation; resulting rock identity needs boundary/continuity judgment.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Observe consolidation; resulting rock identity needs boundary/continuity judgment.",
+      "negative": "mere settling constitutes rock",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Observe consolidation; resulting rock identity needs boundary/continuity judgment.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 9,
+        "independent": false
+      }
+    },
+    {
+      "id": "geology-q10",
+      "order": 10,
+      "text": "Is this rock changing under heat and pressure without melting?",
+      "source_ids": [
+        "L1"
+      ],
+      "concept_ids": [
+        "geology:MetamorphicAlteration"
+      ],
+      "expression": "geology:MetamorphicAlteration",
+      "expected_type": "process",
+      "dependencies": [
+        "Solid-state alteration; temperature/pressure/composition dependencies incomplete.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Solid-state alteration; temperature/pressure/composition dependencies incomplete.",
+      "negative": "melting relabeled metamorphism",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Solid-state alteration; temperature/pressure/composition dependencies incomplete.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 10,
+        "independent": false
+      }
+    },
+    {
+      "id": "geology-q11",
+      "order": 11,
+      "text": "How much material was displaced by the landslide?",
+      "source_ids": [
+        "L3"
+      ],
+      "concept_ids": [
+        "geology:BodyVolume",
+        "geology:LandslideEpisode"
+      ],
+      "expression": "geology:BodyVolume of geology:SedimentBody",
+      "expected_type": "quality",
+      "dependencies": [
+        "Displaced participating body volume, not affected-map area; rock bodies need parallel observation.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Displaced participating body volume, not affected-map area; rock bodies need parallel observation.",
+      "negative": "source area treated as volume",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Displaced participating body volume, not affected-map area; rock bodies need parallel observation.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 11,
+        "independent": false
+      }
+    },
+    {
+      "id": "geology-q12",
+      "order": 12,
+      "text": "Does finding a mineral mean that it can profitably be mined?",
+      "source_ids": [
+        "L1"
+      ],
+      "concept_ids": [
+        "geology:MineralFraction"
+      ],
+      "expression": null,
+      "expected_type": "gap",
+      "dependencies": [
+        "Profitability requires economic/recoverability models, no Ore predicate inferred from presence.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Profitability requires economic/recoverability models, no Ore predicate inferred from presence.",
+      "negative": "any mineral grain means viable mine",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Profitability requires economic/recoverability models, no Ore predicate inferred from presence.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 12,
+        "independent": false
+      }
+    },
+    {
+      "id": "geology-q13",
+      "order": 13,
+      "text": "Did the cliff collapse remove the support for a neighboring block?",
+      "source_ids": [
+        "L3"
+      ],
+      "concept_ids": [
+        "geology:RockfallEpisode",
+        "geology:RockBody"
+      ],
+      "expression": null,
+      "expected_type": "gap",
+      "dependencies": [
+        "Support relation, collapse event and dependent identity consequences need upstream articulation; no engine.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Support relation, collapse event and dependent identity consequences need upstream articulation; no engine.",
+      "negative": "absence from image ends rock body",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Support relation, collapse event and dependent identity consequences need upstream articulation; no engine.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 13,
+        "independent": false
+      }
+    },
+    {
+      "id": "geology-q14",
+      "order": 14,
+      "text": "Can a quiet fault be classified as having no future earthquake hazard?",
+      "source_ids": [
+        "L2"
+      ],
+      "concept_ids": [
+        "geology:FaultZone"
+      ],
+      "expression": null,
+      "expected_type": "gap",
+      "dependencies": [
+        "No earthquake observation does not imply zero hazard; hazard models distinct from fault subject.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "No earthquake observation does not imply zero hazard; hazard models distinct from fault subject.",
+      "negative": "quiet period certifies safety",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "No earthquake observation does not imply zero hazard; hazard models distinct from fault subject.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 14,
+        "independent": false
+      }
+    },
+    {
+      "id": "geology-q15",
+      "order": 15,
+      "text": "Are underwater slope failures excluded from landslides?",
+      "source_ids": [
+        "L3"
+      ],
+      "concept_ids": [
+        "geology:LandslideEpisode"
+      ],
+      "expression": "geology:LandslideEpisode",
+      "expected_type": "event",
+      "dependencies": [
+        "Submarine movement remains within scoped landslide meaning; water cover is context.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Submarine movement remains within scoped landslide meaning; water cover is context.",
+      "negative": "underwater excludes landslide",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Submarine movement remains within scoped landslide meaning; water cover is context.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 15,
+        "independent": false
+      }
+    }
+  ],
+  "quality_summaries": [
+    {
+      "quality": "geology:GrainDiameter",
+      "proposed_summary": "CoarseGrained",
+      "basis": "Ordered particle-size summary only after named scheme and measurement population chosen; no universal threshold or rock-type equivalence.",
+      "status": "blocked until comparison rule and evidence selected",
+      "kind": "ordering",
+      "nominal": false,
+      "ordered": true,
+      "overlap": "allowed across differently scoped comparisons; no exhaustive partition",
+      "context_scope": "explicit reference population and measurement convention",
+      "source_ids": [
+        "L1"
+      ],
+      "evidence_rule": "Requires resolved comparable quality observations; unknown/unmeasured is not this predicate.",
+      "measurement_state": "Missing measurement is unresolved evidence; not false and not an automatic nominal class."
+    }
+  ],
+  "ambiguities": [
+    "Rock body is a material individual; rock type is identity/classification.",
+    "Fault zone is a finite physical subject; an idealized fault plane is another perspective, and neither is an earthquake event.",
+    "No universal Earthquake affects Landslide binding: triggering is contingent and requires a model.",
+    "Formation can mean formal stratigraphic unit or generic body; avoid unqualified Formation.",
+    "Material/aggregate parent is missing upstream. imod:Subject is verified broad ancestry, not a claim that finer specialization has been settled."
+  ],
+  "coverage": {
+    "counts": {
+      "subject": 5,
+      "quality": 5,
+      "process": 5,
+      "relationship": 3,
+      "event": 3
+    },
+    "target": {
+      "subject": 5,
+      "process": 5,
+      "relationship": 5,
+      "event": 5
+    },
+    "shortfalls": {
+      "relationship": "2 slots unfilled; generic proximity or unsupported causal links would pad coverage. Soil includes one blocked machinery relation, so at most two domain relationship candidates.",
+      "event": "2 slots unfilled; avoid inventing threshold episodes or relabeling every process as an event."
+    },
+    "source_limits": "Agency primary materials are bounded starting evidence, often educational/descriptive. Sources do not endorse ontological categories, exact inferred bindings or exhaustive coverage. Retrieval failures are recorded per source.",
+    "concept_question_incidence": {
+      "geology:RockBody": [
+        "geology-q01",
+        "geology-q02",
+        "geology-q03",
+        "geology-q09",
+        "geology-q13"
+      ],
+      "geology:SedimentBody": [
+        "geology-q03"
+      ],
+      "geology:MineralGrain": [
+        "geology-q02"
+      ],
+      "geology:FaultZone": [
+        "geology-q04",
+        "geology-q14"
+      ],
+      "geology:RockStratum": [
+        "geology-q04"
+      ],
+      "geology:BodyVolume": [
+        "geology-q11"
+      ],
+      "geology:MineralFraction": [
+        "geology-q12"
+      ],
+      "geology:GrainDiameter": [],
+      "geology:SlipDisplacement": [
+        "geology-q05"
+      ],
+      "geology:LayerThickness": [],
+      "geology:InPlaceWeathering": [
+        "geology-q08"
+      ],
+      "geology:SedimentTransport": [
+        "geology-q08"
+      ],
+      "geology:SedimentDeposition": [],
+      "geology:Lithification": [
+        "geology-q09"
+      ],
+      "geology:MetamorphicAlteration": [
+        "geology-q10"
+      ],
+      "geology:StratumSuperposition": [],
+      "geology:FaultCutsBody": [
+        "geology-q04"
+      ],
+      "geology:GrainConstituentOf": [
+        "geology-q02"
+      ],
+      "geology:FaultSlipEarthquake": [
+        "geology-q05"
+      ],
+      "geology:LandslideEpisode": [
+        "geology-q06",
+        "geology-q07",
+        "geology-q11",
+        "geology-q15"
+      ],
+      "geology:RockfallEpisode": [
+        "geology-q06",
+        "geology-q13"
+      ]
+    },
+    "unused_candidates": [
+      "geology:GrainDiameter",
+      "geology:LayerThickness",
+      "geology:SedimentDeposition",
+      "geology:StratumSuperposition"
+    ],
+    "unused_policy": "Unused concepts are exposed for removal or fresh question testing, not silently declared needed.",
+    "held_out_status": "No independently authored held-out probes obtained. Questions were source-first but author knew legacy and is not independent; request fresh human/domain probes after freezing revision."
+  },
+  "validation": {
+    "source_review": "selected primary passages/indexed excerpts read; no expert discussion",
+    "grammar": "not run by author; parent batch parser planned",
+    "adaptation": "not run for these undeclared candidates",
+    "namespace_resolution": "existing parent names manually checked; candidates are prose, not installed concepts",
+    "scientific_semantics": "provisional/blocked per record; no human approval",
+    "models": "not run; no runtime answerability claim",
+    "consequence_execution": "not implemented; implication/detection syntax-only",
+    "negative_controls": [
+      {
+        "expression": "geology:DefinitelyMissing",
+        "expected": "qualified-name syntax may pass, namespace resolution must fail",
+        "status": "not_run"
+      },
+      {
+        "expression": "change in of geology:DefinitelyMissing",
+        "expected": "grammar reject",
+        "status": "not_run"
+      }
+    ],
+    "approval_gate": "Freeze dossier/import hashes, resolve blocking ambiguity/source gaps, human domain and ontology review, actual candidate parser/adaptation/reasoner checks, separate exact-revision approval; no self-approval.",
+    "local_structure": "PASS author check: 15 ordered unique questions, stable candidate/source references and exact ledger text; 21 candidate IDs; no executable source.",
+    "human_approval": "none; source/ontology review outstanding",
+    "type_context_warning": "Reference existence and grammar acceptance do not establish scientific specialization."
+  },
+  "question_generation": {
+    "ledger_sha256": "1f86d058b1d9b21bf5f53cb728b4d689ecfec1e899a379185895931966386f9b",
+    "order": "source review -> saved 15-question ledger -> candidate records -> expression mapping",
+    "independent": false
+  },
+  "upstream_issues": [
+    {
+      "id": "geo-material",
+      "missing_distinction": "Material body/aggregate and mineral identity",
+      "required_action": "Request root/physics/chemistry distinction; broad Subject ancestry not a local invented material parent.",
+      "status": "blocking relevant concepts; no local workaround"
+    },
+    {
+      "id": "geo-parameters",
+      "missing_distinction": "Pressure, shear strength, stress, fluid transport velocity and composition",
+      "required_action": "Needed for geological process articulation; no local equations or fabricated quality declarations.",
+      "status": "blocking relevant concepts; no local workaround"
+    },
+    {
+      "id": "geo-support",
+      "missing_distinction": "Mechanical support between rock bodies",
+      "required_action": "Needed for cliff-collapse question; missing relation and consequence machinery explicitly separate.",
+      "status": "blocking relevant concepts; no local workaround"
+    }
+  ],
+  "import_evidence": [
+    {
+      "namespace": "imod",
+      "path": "src/imod.kwv",
+      "sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca",
+      "scope": "Exact imported bytes available at dossier authoring; reference existence only."
+    },
+    {
+      "namespace": "earth",
+      "path": "src/earth.kwv",
+      "sha256": "424c0141849aac2b9ae762079ff31c8c14cff4f0d6506eb19971004e7f22d816",
+      "scope": "Exact imported bytes available at dossier authoring; reference existence only."
+    }
+  ]
+}
