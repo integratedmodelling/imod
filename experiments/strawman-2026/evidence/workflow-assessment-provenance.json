@@ -1,0 +1,31 @@
+{
+  "source_task": "task-5 parallel workflow investigation",
+  "klab_services_commit": "721f3736596acff39d92a84566dfd364070be662",
+  "files": [
+    {
+      "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-03\\task-5\\WORLDVIEW_DEMO_ASSESSMENT.md",
+      "sha256": "5af7623021d01da13f4f4c373d14b6a094bb82d31413686a11b58c0dda8e021c"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-03\\task-5\\harness\\WorkflowDemoAssessmentTest.java",
+      "sha256": "8bd7843497c1f7d1becb134e2643f14450bf01021976e5b826415e88c3b8448e"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-03\\task-5\\harness\\run-reactor-assessment.ps1",
+      "sha256": "f3d0d88b9c2dacc5c1068ff832d7a9d392677cf99f614b2514d6c2cdbb15d6bb"
+    }
+  ],
+  "reviewed_on": "2026-10-03",
+  "focused_tests": {
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "existing_baseline": {
+    "tests": 14,
+    "failures": 3,
+    "errors": 0,
+    "skipped": 0
+  }
+}

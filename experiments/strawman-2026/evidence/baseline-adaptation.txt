@@ -1,0 +1,4 @@
+Attempted=26 adapted=26 errors=0 warnings=0
+ERRORS
+
+WARNINGS

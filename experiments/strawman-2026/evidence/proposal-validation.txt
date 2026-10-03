@@ -1,3 +1,4 @@
 PASS schema and local record references: surface-catchment-r1.yaml
 PASS schema and local record references: surface-catchment-r2-review-example.yaml
+PASS schema and local record references: surface-catchment-r3-validation.yaml
 No ontology reference resolution, scientific approval, or workflow execution performed.

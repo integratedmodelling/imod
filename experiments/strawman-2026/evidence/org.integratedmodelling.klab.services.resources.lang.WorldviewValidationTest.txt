@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.integratedmodelling.klab.services.resources.lang.WorldviewValidationTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.032 s -- in org.integratedmodelling.klab.services.resources.lang.WorldviewValidationTest

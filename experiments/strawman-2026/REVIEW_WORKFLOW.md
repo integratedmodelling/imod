@@ -6,6 +6,8 @@ The jargon alias is Tier 2 and intentionally not smuggled into this Tier-1 propo
 
 `surface-catchment-r2-review-example.yaml` demonstrates an **illustrative**, not real, reviewer request: clarify that the region's boundary is delineated for a specified drainage interpretation and outlet, rather than asserting observed water at every point. The asset ID is stable, feedback points to r1, and an unapplied modify action is recorded. It includes version/revision preconditions and an empty approval decision. There is no invented expert endorsement and no instruction to auto-apply the action.
 
+`surface-catchment-r3-validation.yaml` records the subsequent successful actual-source adapter checks while preserving r1 and r2. The review action remains proposed and unapplied; neither successful tests nor a new proposal revision provide its missing approval.
+
 ## Assisted workflow, using current envelopes
 
 The source-defined workflow is `ontology-expert-review`. A future authorized editor initializes through `POST /api/v1/flows/initialize?workflowId=ontology-expert-review`, uploads editing-stage attachments at `/api/v1/flows/{flowId}/states/{stateId}/attachments`, then uses `/api/v1/flows/{flowId}/transitions` for allowed transitions. These are instructions for future instrumentation, not calls performed here.
@@ -22,4 +24,4 @@ An eventual processor must consume a schema-valid immutable proposal revision an
 
 Generate a Git diff and draft PR containing old/new meanings, source provenance, rejected alternatives, affected models and test results. Reviewer approval must precede apply; PR approval and release remain separate governance. Current WorkflowManager's optional expectedRevision protects flow concurrency, not exact semantic-action approval. The default lifecycle callback is NO_OP. Neither workflow stage status nor parser success authorizes source mutation or publication.
 
-Implementation findings above combine inspected workflow YAML and WorkflowManager with a parent-supplied workflow investigation. That investigation reports 3 existing serialization/schema tests and 10 YAML structural checks passing; these are **not tests run by this packet**, nor proof of a working end-to-end workflow. Its runtime lifecycle work was still in progress when this packet was prepared. No external workflow was created or changed here.
+Implementation findings above combine inspected workflow YAML and WorkflowManager with the completed parent-supplied workflow investigation. The [verified workflow test summary](WORKFLOW_TESTS.md) supersedes the earlier source-only status: five focused manager characterization tests pass; the existing baseline has 14 tests with three documented failures. These were run in the task-5 isolated reactor and inspected here, not rerun by this packet. UI, HTTP, durable persistence and PR integration remain untested. No external workflow was created or changed here.

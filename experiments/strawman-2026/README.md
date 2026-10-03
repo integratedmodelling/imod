@@ -9,7 +9,7 @@ Read in this order:
 3. [Sources](SOURCES.md) and [source inventory](evidence/SOURCE_INVENTORY.md): inspectable source locations, hashes, local-edit patches.
 4. [Wildfire](WILDFIRE.md): semantic questions, counterexamples, and unavailable consequences.
 5. [Proposal/review example](REVIEW_WORKFLOW.md), with the machine-readable proposal and schema under `review/`.
-6. [Validation](VALIDATION.md): actual checks, failures, and promotion gates.
+6. [Validation](VALIDATION.md): actual checks, failures, and promotion gates, including the [recovered reactor](REACTOR_VALIDATION.md) and [verified workflow assessment](WORKFLOW_TESTS.md).
 
 The production `src` directory is unchanged. The candidate is an explicit overlay under `candidate/src`, pending semantic checks. Experimental review material is outside active `src`. A standalone experiment may be syntactically valid without being a service-discovered namespace. No runtime consequence behavior is implemented.
 
