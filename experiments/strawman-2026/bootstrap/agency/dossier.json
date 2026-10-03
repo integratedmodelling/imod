@@ -609,7 +609,7 @@
         "agency-c07"
       ],
       "expression": null,
-      "expected_type": "process and directed relationship",
+      "expected_type": "unresolved",
       "dependencies": [
         "Separate actual choosing,communication support and choice content; source cannot identify chooser from assistance record alone.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -629,7 +629,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Separate actual choosing,communication support and choice content; source cannot identify chooser from assistance record alone.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "agency-q02",
@@ -639,7 +642,7 @@
         "agency-c02"
       ],
       "expression": null,
-      "expected_type": "process plus legal-capacity context",
+      "expected_type": "unresolved",
       "dependencies": [
         "Legal-capacity upstream distinction is absent; neither performance nor support receipt entails incapacity.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -659,7 +662,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Legal-capacity upstream distinction is absent; neither performance nor support receipt entails incapacity.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "agency-q03",
@@ -690,7 +696,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Need authorizer,authorized agent,mandate scope and constituting occurrence.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "agency-q04",
@@ -720,7 +729,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Need observed permission expression and valid convention; unobserved consent is unknown.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "agency-q05",
@@ -730,7 +742,7 @@
         "agency-c01"
       ],
       "expression": null,
-      "expected_type": "process,event and intention quality",
+      "expected_type": "unresolved",
       "dependencies": [
         "Intention content and enacted-action link are upstream gaps; cannot equate intentions with actions.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -750,7 +762,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Intention content and enacted-action link are upstream gaps; cannot equate intentions with actions.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "agency-q06",
@@ -780,7 +795,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Withdrawal has a boundary and refers to a specific prior permission.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "agency-q07",
@@ -790,7 +808,7 @@
         "agency-c09"
       ],
       "expression": null,
-      "expected_type": "relationship and entitlement role",
+      "expected_type": "unresolved",
       "dependencies": [
         "Attendance can be observed but entitlement/rights require scoped norm relation upstream.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -810,7 +828,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Attendance can be observed but entitlement/rights require scoped norm relation upstream.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "agency-q08",
@@ -841,7 +862,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Draft available-option count cannot by itself establish absence of undue influence; options need individuating criteria.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "agency-q09",
@@ -871,7 +895,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Only reported control; actual decision authority is separate and may disagree.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "agency-q10",
@@ -902,7 +929,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Observed negotiations and separate comparisons of terms; no guaranteed successful outcome.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "agency-q11",
@@ -932,7 +962,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Representative to represented-agent direction; workers/employers contextual roles remain upstream.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "agency-q12",
@@ -962,7 +995,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Appointment evidence and participant recognition are separate,not universal legitimacy.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "agency-q13",
@@ -973,7 +1009,7 @@
         "agency-c14"
       ],
       "expression": null,
-      "expected_type": "process plus unresolved agreement",
+      "expected_type": "unresolved",
       "dependencies": [
         "No agreement observation remains unknown or explicit disagreement if observed; not absence of all agency.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -993,7 +1029,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "No agreement observation remains unknown or explicit disagreement if observed; not absence of all agency.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "agency-q14",
@@ -1003,7 +1042,7 @@
         "agency-c05"
       ],
       "expression": null,
-      "expected_type": "subject/agent category gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Artificial-agent criterion unavailable in sources; open upstream agency question.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -1023,7 +1062,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Artificial-agent criterion unavailable in sources; open upstream agency question.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "agency-q15",
@@ -1034,7 +1076,7 @@
         "agency-c08"
       ],
       "expression": null,
-      "expected_type": "authorization relationship and rule-change event",
+      "expected_type": "unresolved",
       "dependencies": [
         "Norm content and rule-amendment powers require upstream articulation; operational participation is insufficient.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -1054,7 +1096,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Norm content and rule-amendment powers require upstream articulation; operational participation is insufficient.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [

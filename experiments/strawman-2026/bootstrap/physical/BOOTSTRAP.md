@@ -30,7 +30,7 @@ Proposed dependency order: imod → physical → physics/chemistry/earth; earth 
 Identity continuity vs thermal change; boundary/identity policy is an upstream issue.
 - Source/provenance: NASA-HEAT; original order 1.
 - Draft observable: `physical:BodyTemperature of physical:MaterialBody`
-- Expected kind: quality. Positive: one identified rock specimen; temperature of a equilibrated specimen. Negative: a temperature reading; heat transferred during a process.
+- Expected expression-result category: quality. Positive: one identified rock specimen; temperature of a equilibrated specimen. Negative: a temperature reading; heat transferred during a process.
 - Dependencies: Identity continuity vs thermal change; boundary/identity policy is an upstream issue. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **provisional**, adaptation/reasoner/model not run.
 
@@ -39,7 +39,7 @@ Identity continuity vs thermal change; boundary/identity policy is an upstream i
 Mass must not mean amount of substance.
 - Source/provenance: BIPM; original order 2.
 - Draft observable: `physical:BodyMass of physical:MaterialBody`
-- Expected kind: quality. Positive: one identified rock specimen; mass of the specimen. Negative: a temperature reading; moles of its constituent species.
+- Expected expression-result category: quality. Positive: one identified rock specimen; mass of the specimen. Negative: a temperature reading; moles of its constituent species.
 - Dependencies: Mass must not mean amount of substance. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **provisional**, adaptation/reasoner/model not run.
 
@@ -48,7 +48,7 @@ Mass must not mean amount of substance.
 Dependent feature vs independent substantial.
 - Source/provenance: LOCAL; original order 3.
 - Draft observable: `physical:VoidHostedBy linking physical:HostBoundVoid to physical:MaterialBody`
-- Expected kind: relationship. Positive: pore within a specified rock; pore hosted by rock specimen. Negative: arbitrary region of open air; a coordinate point near the specimen.
+- Expected expression-result category: relationship. Positive: pore within a specified rock; pore hosted by rock specimen. Negative: arbitrary region of open air; a coordinate point near the specimen.
 - Dependencies: Dependent feature vs independent substantial. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -57,7 +57,7 @@ Dependent feature vs independent substantial.
 Cessation requires bounded fragmentation occurrence and new identities.
 - Source/provenance: USGS-DESERT; original order 4.
 - Draft observable: `physical:FragmentationEpisode`
-- Expected kind: event. Positive: one observed breakage episode; detached chip after breakage. Negative: two image files of one intact stone; crack whose sides remain attached.
+- Expected expression-result category: event. Positive: one observed breakage episode; detached chip after breakage. Negative: two image files of one intact stone; crack whose sides remain attached.
 - Dependencies: Cessation requires bounded fragmentation occurrence and new identities. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **provisional**, adaptation/reasoner/model not run.
 
@@ -66,7 +66,7 @@ Cessation requires bounded fragmentation occurrence and new identities.
 Contact does not entail attachment or common identity.
 - Source/provenance: NASA-HEAT; original order 5.
 - Draft observable: `physical:PhysicalContact linking physical:MaterialBody to physical:MaterialBody`
-- Expected kind: relationship. Positive: stone touching vessel wall. Negative: two separated warm stones.
+- Expected expression-result category: relationship. Positive: stone touching vessel wall. Negative: two separated warm stones.
 - Dependencies: Contact does not entail attachment or common identity. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -75,7 +75,7 @@ Contact does not entail attachment or common identity.
 Volume and temperature are distinct dependent observables; thermal expansion is a mechanism.
 - Source/provenance: NASA-HEAT; original order 6.
 - Draft observable: `imod:Volume of physical:MaterialBody`
-- Expected kind: quality. Positive: one identified rock specimen; temperature of a equilibrated specimen. Negative: a temperature reading; heat transferred during a process.
+- Expected expression-result category: quality. Positive: one identified rock specimen; temperature of a equilibrated specimen. Negative: a temperature reading; heat transferred during a process.
 - Dependencies: Volume and temperature are distinct dependent observables; thermal expansion is a mechanism. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **provisional**, adaptation/reasoner/model not run.
 
@@ -84,7 +84,7 @@ Volume and temperature are distinct dependent observables; thermal expansion is 
 Open boundary material accounting vs identity loss.
 - Source/provenance: USGS-DESERT; original order 7.
 - Draft observable: `change in physical:BodyMass`
-- Expected kind: change-quality. Positive: splitting rock through an extending crack; mass of the specimen. Negative: sensor losing sight of intact rock; moles of its constituent species.
+- Expected expression-result category: process. Positive: splitting rock through an extending crack; mass of the specimen. Negative: sensor losing sight of intact rock; moles of its constituent species.
 - Dependencies: Open boundary material accounting vs identity loss. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **provisional**, adaptation/reasoner/model not run.
 
@@ -93,7 +93,7 @@ Open boundary material accounting vs identity loss.
 Stillness in a chosen frame cannot establish absence of thermal change.
 - Source/provenance: NASA-MOTION; original order 8.
 - Explicit gap: gap: frame-dependent speed and process inventory cannot be inferred from stillness.
-- Expected kind: gap: frame-dependent speed and process inventory cannot be inferred from stillness. Positive: one identified rock specimen. Negative: a temperature reading.
+- Expected expression-result category: unresolved. Positive: one identified rock specimen. Negative: a temperature reading.
 - Dependencies: Stillness in a chosen frame cannot establish absence of thermal change. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: frame-dependent speed and process inventory cannot be inferred from stillness
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -102,7 +102,7 @@ Stillness in a chosen frame cannot establish absence of thermal change.
 Homogeneity must name a property and support scale.
 - Source/provenance: IUPAC-HOM; original order 9.
 - Explicit gap: gap: property-specific distribution/summary quality.
-- Expected kind: gap: property-specific distribution/summary quality. Positive: one identified rock specimen. Negative: a temperature reading.
+- Expected expression-result category: unresolved. Positive: one identified rock specimen. Negative: a temperature reading.
 - Dependencies: Homogeneity must name a property and support scale. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: property-specific distribution/summary quality
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -111,7 +111,7 @@ Homogeneity must name a property and support scale.
 Independent qualities, not one size category.
 - Source/provenance: BIPM; original order 10.
 - Draft observable: `physical:BodyMass of physical:MaterialBody`
-- Expected kind: quality. Positive: mass of the specimen; one identified rock specimen. Negative: moles of its constituent species; a temperature reading.
+- Expected expression-result category: quality. Positive: mass of the specimen; one identified rock specimen. Negative: moles of its constituent species; a temperature reading.
 - Dependencies: Independent qualities, not one size category. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **provisional**, adaptation/reasoner/model not run.
 
@@ -120,7 +120,7 @@ Independent qualities, not one size category.
 Identity and host dependence need explicit criteria.
 - Source/provenance: LOCAL; original order 11.
 - Explicit gap: gap: host/void individuation.
-- Expected kind: gap: host/void individuation. Positive: pore within a specified rock. Negative: arbitrary region of open air.
+- Expected expression-result category: unresolved. Positive: pore within a specified rock. Negative: arbitrary region of open air.
 - Dependencies: Identity and host dependence need explicit criteria. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: host/void individuation
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -129,7 +129,7 @@ Identity and host dependence need explicit criteria.
 Collapse is identity loss, not missing sensor data.
 - Source/provenance: LOCAL; original order 12.
 - Draft observable: `physical:IdentityLossEpisode`
-- Expected kind: event. Positive: destruction that defeats an agreed body identity criterion. Negative: unknown present location.
+- Expected expression-result category: event. Positive: destruction that defeats an agreed body identity criterion. Negative: unknown present location.
 - Dependencies: Collapse is identity loss, not missing sensor data. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -138,7 +138,7 @@ Collapse is identity loss, not missing sensor data.
 Relative level vs temporal difference.
 - Source/provenance: NASA-HEAT; original order 13.
 - Draft observable: `change in physical:BodyTemperature`
-- Expected kind: change-quality. Positive: temperature of a equilibrated specimen. Negative: heat transferred during a process.
+- Expected expression-result category: process. Positive: temperature of a equilibrated specimen. Negative: heat transferred during a process.
 - Dependencies: Relative level vs temporal difference. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **provisional**, adaptation/reasoner/model not run.
 
@@ -147,7 +147,7 @@ Relative level vs temporal difference.
 Evidence absence cannot resolve a quality or create cessation.
 - Source/provenance: LOCAL; original order 14.
 - Explicit gap: gap: epistemic evidence policy is not a domain predicate.
-- Expected kind: gap: epistemic evidence policy is not a domain predicate. Positive: mass of the specimen. Negative: moles of its constituent species.
+- Expected expression-result category: unresolved. Positive: mass of the specimen. Negative: moles of its constituent species.
 - Dependencies: Evidence absence cannot resolve a quality or create cessation. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: epistemic evidence policy is not a domain predicate
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -156,7 +156,7 @@ Evidence absence cannot resolve a quality or create cessation.
 Root vs physical scope gate, not an extra domain taxonomy.
 - Source/provenance: LOCAL; original order 15.
 - Explicit gap: gap: upstream context review.
-- Expected kind: gap: upstream context review. Positive: one identified rock specimen. Negative: a temperature reading.
+- Expected expression-result category: unresolved. Positive: one identified rock specimen. Negative: a temperature reading.
 - Dependencies: Root vs physical scope gate, not an extra domain taxonomy. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: upstream context review
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 

@@ -31,7 +31,7 @@ The saved questions-source-first.json was written before candidate records and k
 Source: O1; source-led order 1. Incidence: oceanography:Salinity, oceanography:MarineEstuary.
 
 Expression: `oceanography:Salinity of oceanography:MarineEstuary`
-Expected: quality. Comparable salinity conventions and sample context at inlet/offshore.
+Expected expression-result category: quality. Comparable salinity conventions and sample context at inlet/offshore.
 Positive case: Comparable salinity conventions and sample context at inlet/offshore. Negative case: different salinity scales compared directly.
 Semantic status: blocked; grammar: untested. Model/resolution not executed.
 
@@ -40,7 +40,7 @@ Semantic status: blocked; grammar: untested. Model/resolution not executed.
 Source: O1; source-led order 2. Incidence: oceanography:MarineEstuary.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Unqualified estuary includes freshwater systems; narrowing must be explicit.
+Expected expression-result category: unresolved. Unqualified estuary includes freshwater systems; narrowing must be explicit.
 Positive case: Unqualified estuary includes freshwater systems; narrowing must be explicit. Negative case: all estuaries marine.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -49,7 +49,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: O2; source-led order 3. Incidence: oceanography:CurrentSpeed, oceanography:MarineSurfaceLayer.
 
 Expression: `oceanography:CurrentSpeed of oceanography:MarineSurfaceLayer`
-Expected: quality. Speed component only; direction missing and upstream fluid velocity convention needed.
+Expected expression-result category: quality. Speed component only; direction missing and upstream fluid velocity convention needed.
 Positive case: Speed component only; direction missing and upstream fluid velocity convention needed. Negative case: wave propagation equals water current.
 Semantic status: blocked; grammar: untested. Model/resolution not executed.
 
@@ -58,7 +58,7 @@ Semantic status: blocked; grammar: untested. Model/resolution not executed.
 Source: O3; source-led order 4. Incidence: oceanography:Upwelling.
 
 Expression: `oceanography:Upwelling`
-Expected: process. Resolve upward bulk water transport, not infer from cold surface alone.
+Expected expression-result category: process. Resolve upward bulk water transport, not infer from cold surface alone.
 Positive case: Resolve upward bulk water transport, not infer from cold surface alone. Negative case: surface cooling guarantees upwelling.
 Semantic status: blocked; grammar: untested. Model/resolution not executed.
 
@@ -67,7 +67,7 @@ Semantic status: blocked; grammar: untested. Model/resolution not executed.
 Source: O4; source-led order 5. Incidence: oceanography:SeaSurfaceHeight, oceanography:TidalOscillation.
 
 Expression: `oceanography:SeaSurfaceHeight of oceanography:MarineWaterBody`
-Expected: quality. Multiple contextual resolutions plus range comparison model, not one height sufficient.
+Expected expression-result category: quality. Multiple contextual resolutions plus range comparison model, not one height sufficient.
 Positive case: Multiple contextual resolutions plus range comparison model, not one height sufficient. Negative case: single height equals tidal range.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -76,7 +76,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: O4; source-led order 6. Incidence: oceanography:TidalOscillation.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Tidal/non-tidal decomposition needs model and atmospheric forcing evidence.
+Expected expression-result category: unresolved. Tidal/non-tidal decomposition needs model and atmospheric forcing evidence.
 Positive case: Tidal/non-tidal decomposition needs model and atmospheric forcing evidence. Negative case: all high water is astronomical tide.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -85,7 +85,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: O2; source-led order 7. Incidence: oceanography:WaterTemperature, oceanography:Salinity.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Density definition and thermodynamic convention missing; temperature alone insufficient.
+Expected expression-result category: unresolved. Density definition and thermodynamic convention missing; temperature alone insufficient.
 Positive case: Density definition and thermodynamic convention missing; temperature alone insufficient. Negative case: cold necessarily denser without composition context.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -94,7 +94,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: O1; source-led order 8. Incidence: oceanography:RiverReceivesInto, oceanography:MarineWaterBody.
 
 Expression: `oceanography:RiverReceivesInto`
-Expected: relationship. Endpoint relation; no automatic freshwater flux magnitude or fixed flow direction.
+Expected expression-result category: relationship. Endpoint relation; no automatic freshwater flux magnitude or fixed flow direction.
 Positive case: Endpoint relation; no automatic freshwater flux magnitude or fixed flow direction. Negative case: nearby coast assumed receiving.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -103,7 +103,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: O5; source-led order 9. Incidence: oceanography:SeawaterPH, oceanography:MarineAcidification.
 
 Expression: `change in oceanography:SeawaterPH of oceanography:MarineWaterBody`
-Expected: change quality. Decreasing pH can remain alkaline; scale and event attribution needed.
+Expected expression-result category: process. Decreasing pH can remain alkaline; scale and event attribution needed.
 Positive case: Decreasing pH can remain alkaline; scale and event attribution needed. Negative case: acidification means pH below seven.
 Semantic status: blocked; grammar: untested. Model/resolution not executed.
 
@@ -112,7 +112,7 @@ Semantic status: blocked; grammar: untested. Model/resolution not executed.
 Source: O2; source-led order 10. Incidence: oceanography:WaterTemperature, oceanography:MarineSurfaceLayer, oceanography:OceanWaterMass.
 
 Expression: `oceanography:WaterTemperature of oceanography:MarineSurfaceLayer`
-Expected: quality. Surface component; deeper water separately resolved with same thermal convention.
+Expected expression-result category: quality. Surface component; deeper water separately resolved with same thermal convention.
 Positive case: Surface component; deeper water separately resolved with same thermal convention. Negative case: in-situ/potential temperature silently equated.
 Semantic status: blocked; grammar: untested. Model/resolution not executed.
 
@@ -121,7 +121,7 @@ Semantic status: blocked; grammar: untested. Model/resolution not executed.
 Source: O4; source-led order 11. Incidence: oceanography:OceanWaterAdvection, oceanography:CoastalInlet.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Directional cross-section flux quality is missing; connection and speed alone do not answer.
+Expected expression-result category: unresolved. Directional cross-section flux quality is missing; connection and speed alone do not answer.
 Positive case: Directional cross-section flux quality is missing; connection and speed alone do not answer. Negative case: open passage implies one-way flow.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -130,7 +130,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: O3; source-led order 12. Incidence: oceanography:Upwelling.
 
 Expression: `oceanography:Upwelling`
-Expected: process. Need separate nutrient concentration and ecology observations; no creates fish binding.
+Expected expression-result category: process. Need separate nutrient concentration and ecology observations; no creates fish binding.
 Positive case: Need separate nutrient concentration and ecology observations; no creates fish binding. Negative case: upwelling necessarily increases catch.
 Semantic status: blocked; grammar: untested. Model/resolution not executed.
 
@@ -139,7 +139,7 @@ Semantic status: blocked; grammar: untested. Model/resolution not executed.
 Source: O3; source-led order 13. Incidence: oceanography:UpwellingEpisode, oceanography:WaterTemperature.
 
 Expression: `change in oceanography:WaterTemperature of oceanography:MarineWaterBody`
-Expected: change quality. Change and bounded upwelling evidence separately; attribution remains model.
+Expected expression-result category: process. Change and bounded upwelling evidence separately; attribution remains model.
 Positive case: Change and bounded upwelling evidence separately; attribution remains model. Negative case: coincident cooling proves unique cause.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -148,7 +148,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: O2; source-led order 14. Incidence: oceanography:OceanWaterAdvection.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Flow-feature boundary and mixing need configuration/physical models; map line not impermeability.
+Expected expression-result category: unresolved. Flow-feature boundary and mixing need configuration/physical models; map line not impermeability.
 Positive case: Flow-feature boundary and mixing need configuration/physical models; map line not impermeability. Negative case: current border is wall.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -157,7 +157,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: O2; source-led order 15. Incidence: oceanography:CurrentSpeed.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Unobserved current remains unknown; no zero-motion inference.
+Expected expression-result category: unresolved. Unobserved current remains unknown; no zero-motion inference.
 Positive case: Unobserved current remains unknown; no zero-motion inference. Negative case: missing observation means still sea.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 

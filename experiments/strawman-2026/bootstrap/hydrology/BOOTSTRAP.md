@@ -195,77 +195,77 @@ Bindings and limits: {"participants": "groundwater body", "affects": ["hydrology
 
 ### hydrology-Q01 — Which land drains to the bridge outlet, and is it the same area feeding the well?
 Draft expression: `hydrology:SurfaceCatchment`.
-Expected: subject. Dependencies/gaps: Subsurface contributing-area distinction absent; two resolutions required.
+Expected expression-result category: subject. Dependencies/gaps: Subsurface contributing-area distinction absent; two resolutions required.
 Positive: Surface-drainage delineation. Negative: Groundwater contributing area asserted identical. Semantic status: blocked; grammar initially untested (see generated parser report).
 
 ### hydrology-Q02 — How much water is stored in this lake now?
 Draft expression: `hydrology:StoredWaterVolume of hydrology:LakeWaterBody`.
-Expected: volume. Dependencies/gaps: Lake identity and storage observation.
+Expected expression-result category: quality. Dependencies/gaps: Lake identity and storage observation.
 Positive: Body-borne storage. Negative: Throughput accumulated without lake balance. Semantic status: blocked; grammar initially untested (see generated parser report).
 
 ### hydrology-Q03 — Is river water moving faster after the storm, or is more water passing the section?
 Draft expression: `hydrology:Discharge of hydrology:ChannelFlow`.
-Expected: quantity. Dependencies/gaps: Second expression FlowVelocity of ChannelFlow; section/time basis required.
+Expected expression-result category: quality. Dependencies/gaps: Second expression FlowVelocity of ChannelFlow; section/time basis required.
 Positive: Compare discharge separately from speed. Negative: Treat speed as volume throughput. Semantic status: blocked; grammar initially untested (see generated parser report).
 
 ### hydrology-Q04 — How much rain enters the ground instead of running over it?
 Draft expression: `hydrology:InfiltrationFlux of hydrology:Infiltration`.
-Expected: quantity. Dependencies/gaps: Rain partition needs water-balance model; expression is one component.
+Expected expression-result category: quality. Dependencies/gaps: Rain partition needs water-balance model; expression is one component.
 Positive: Surface-entry flux. Negative: Assume all infiltration recharges aquifer. Semantic status: blocked; grammar initially untested (see generated parser report).
 
 ### hydrology-Q05 — Does this reach gain groundwater or lose water into the ground?
 Draft expression: `hydrology:GroundwaterFeeds linking hydrology:GroundwaterBody to hydrology:StreamReach`.
-Expected: relationship. Dependencies/gaps: Compare reverse relationship separately; direction can vary by context.
+Expected expression-result category: relationship. Dependencies/gaps: Compare reverse relationship separately; direction can vary by context.
 Positive: Supported groundwater-to-reach transfer. Negative: Infer gain from adjacent aquifer. Semantic status: blocked; grammar initially untested (see generated parser report).
 
 ### hydrology-Q06 — Can groundwater beneath one catchment feed a stream in another?
 Draft expression: `hydrology:GroundwaterFeeds linking hydrology:GroundwaterBody to hydrology:StreamReach`.
-Expected: relationship. Dependencies/gaps: Subsurface geometry and transfer model; geographical overlay outside expression.
+Expected expression-result category: relationship. Dependencies/gaps: Subsurface geometry and transfer model; geographical overlay outside expression.
 Positive: Transfer evidence crosses surface divide. Negative: Surface divide assumed groundwater barrier. Semantic status: blocked; grammar initially untested (see generated parser report).
 
 ### hydrology-Q07 — Why does this river flow after weeks without rain?
 Draft expression: `hydrology:GroundwaterDischarge`.
-Expected: process. Dependencies/gaps: Causal explanation also considers releases and diversions; model needed.
+Expected expression-result category: process. Dependencies/gaps: Causal explanation also considers releases and diversions; model needed.
 Positive: Supported groundwater contribution. Negative: All dry-weather flow declared groundwater by definition. Semantic status: blocked; grammar initially untested (see generated parser report).
 
 ### hydrology-Q08 — Did the storm cause actual overbank flooding or just a high reading?
 Draft expression: `presence of hydrology:OverbankFloodEpisode`.
-Expected: presence quality. Dependencies/gaps: Event boundaries/inundated-region link and attribution separate.
+Expected expression-result category: quality. Dependencies/gaps: Event boundaries/inundated-region link and attribution separate.
 Positive: Bounded observed overbank inundation. Negative: High in-channel stage. Semantic status: blocked; grammar initially untested (see generated parser report).
 
 ### hydrology-Q09 — Did lake water decline by evaporation during the hot spell?
 Draft expression: `change in hydrology:StoredWaterVolume of hydrology:LakeWaterBody`.
-Expected: change quality. Dependencies/gaps: Time transition and evaporation model; competing transfers.
+Expected expression-result category: process. Dependencies/gaps: Time transition and evaporation model; competing transfers.
 Positive: Separate storage change and evaporation contribution. Negative: Assume heat means net volume loss. Semantic status: blocked; grammar initially untested (see generated parser report).
 
 ### hydrology-Q10 — Are two tributaries joined even when one is dry?
 Draft expression: `hydrology:TributaryOf linking hydrology:StreamReach to hydrology:StreamReach`.
-Expected: relationship. Dependencies/gaps: Channel material identity versus water body must be split upstream.
+Expected expression-result category: relationship. Dependencies/gaps: Channel material identity versus water body must be split upstream.
 Positive: Mapped channel connection persists under selected channel identity. Negative: Actual transfer inferred in dry reach. Semantic status: blocked; grammar initially untested (see generated parser report).
 
 ### hydrology-Q11 — Has pumping reduced stored groundwater, and can we separate other losses?
 Draft expression: `change in hydrology:StoredWaterVolume of hydrology:GroundwaterBody`.
-Expected: change quality. Dependencies/gaps: Pumping belongs agency/engineering bridge; storage properties needed.
+Expected expression-result category: process. Dependencies/gaps: Pumping belongs agency/engineering bridge; storage properties needed.
 Positive: Observed storage change with attribution model. Negative: Head drop alone equals removed volume. Semantic status: blocked; grammar initially untested (see generated parser report).
 
 ### hydrology-Q12 — After wildfire, does the next storm carry more sediment to the river?
 Expression gap after reviewer correction: transported sediment mass/load requires concentration, discharge and contextual integration; concentration change alone does not answer this question.
-Expected: change quality. Dependencies/gaps: Soil erosion, sediment delivery and sampling model; no fire implication.
+Expected expression-result category: unresolved. Dependencies/gaps: Soil erosion, sediment delivery and sampling model; no fire implication.
 Positive: Observed concentration change at comparable support. Negative: Burn class entails increased concentration. Semantic status: blocked; grammar initially untested (see generated parser report).
 
 ### hydrology-Q13 — Is this river seasonally low, or has an agreed drought episode begun?
 Expression gap: no honest single observable expression yet.
-Expected: gap. Dependencies/gaps: Upstream drought definition and baseline source review outstanding.
+Expected expression-result category: unresolved. Dependencies/gaps: Upstream drought definition and baseline source review outstanding.
 Positive: Contextual low-flow evidence distinguished from episode criterion. Negative: Universal drought threshold invented. Semantic status: blocked; grammar initially untested (see generated parser report).
 
 ### hydrology-Q14 — Can a dry reach reconnect during a wetting episode?
 Draft expression: `presence of hydrology:ReachWettingEpisode`.
-Expected: presence quality. Dependencies/gaps: Wetting-process distinction, channel identity and emergence machinery unresolved.
+Expected expression-result category: quality. Dependencies/gaps: Wetting-process distinction, channel identity and emergence machinery unresolved.
 Positive: Bounded observed reconnection. Negative: Sensor availability mistaken for water arrival. Semantic status: blocked; grammar initially untested (see generated parser report).
 
 ### hydrology-Q15 — Without a resolved change estimate, what remains known about lake storage?
 Expression gap: no honest single observable expression yet.
-Expected: machinery gap. Dependencies/gaps: Open-world resolution policy is core; no invented retention semantics.
+Expected expression-result category: unresolved. Dependencies/gaps: Open-world resolution policy is core; no invented retention semantics.
 Positive: Twin continues with explicitly available evidence. Negative: Unresolved change treated as zero. Semantic status: blocked; grammar initially untested (see generated parser report).
 
 ## Poorly specified quality summaries

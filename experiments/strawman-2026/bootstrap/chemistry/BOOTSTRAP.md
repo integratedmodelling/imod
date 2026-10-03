@@ -34,7 +34,7 @@ Proposed dependency order: imod → physical → physics/chemistry/earth; earth 
 Molecular entity vs species ensemble vs classifier.
 - Source/provenance: IUPAC-ENTITY; original order 1.
 - Draft observable: `chemistry:MolecularEntity`
-- Expected kind: subject. Positive: specified methane molecule. Negative: all methane as a chemical species.
+- Expected expression-result category: subject. Positive: specified methane molecule. Negative: all methane as a chemical species.
 - Dependencies: Molecular entity vs species ensemble vs classifier. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -43,7 +43,7 @@ Molecular entity vs species ensemble vs classifier.
 Species interconversion vs mixing.
 - Source/provenance: IUPAC-REACTION; original order 2.
 - Draft observable: `chemistry:ChemicalReaction`
-- Expected kind: process. Positive: specified reactants interconvert; salt dissolves into water. Negative: physical transfer with unchanged species; sand simply suspended.
+- Expected expression-result category: process. Positive: specified reactants interconvert; salt dissolves into water. Negative: physical transfer with unchanged species; sand simply suspended.
 - Dependencies: Species interconversion vs mixing. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **provisional**, adaptation/reasoner/model not run.
 
@@ -52,7 +52,7 @@ Species interconversion vs mixing.
 Dissolution and solution rather than disappearance of matter.
 - Source/provenance: IUPAC-DISSOLUTION; original order 3.
 - Draft observable: `chemistry:SolutionPortion`
-- Expected kind: subject. Positive: salt dissolves into water; specified dissolved-salt solution portion. Negative: sand simply suspended; suspended grit.
+- Expected expression-result category: subject. Positive: salt dissolves into water; specified dissolved-salt solution portion. Negative: sand simply suspended; suspended grit.
 - Dependencies: Dissolution and solution rather than disappearance of matter. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -61,7 +61,7 @@ Dissolution and solution rather than disappearance of matter.
 Uniformity criterion vs visual emulsion.
 - Source/provenance: IUPAC-PHASE; original order 4.
 - Draft observable: `chemistry:PhasePortion`
-- Expected kind: subject. Positive: one specified liquid phase portion. Negative: stirred oil-water emulsion treated as uniform.
+- Expected expression-result category: subject. Positive: one specified liquid phase portion. Negative: stirred oil-water emulsion treated as uniform.
 - Dependencies: Uniformity criterion vs visual emulsion. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -70,7 +70,7 @@ Uniformity criterion vs visual emulsion.
 Chemical precipitation distinct from meteorological precipitation.
 - Source/provenance: IUPAC-PRECIP; original order 5.
 - Draft observable: `chemistry:ChemicalPrecipitation`
-- Expected kind: process. Positive: solid separates from supersaturated solution; specified separated crystalline deposit. Negative: rainfall or electrostatic dust collection; rain cloud.
+- Expected expression-result category: process. Positive: solid separates from supersaturated solution; specified separated crystalline deposit. Negative: rainfall or electrostatic dust collection; rain cloud.
 - Dependencies: Chemical precipitation distinct from meteorological precipitation. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -79,7 +79,7 @@ Chemical precipitation distinct from meteorological precipitation.
 Electron loss/oxidation-state reading, not oxygen-only definition.
 - Source/provenance: IUPAC-OX; original order 6.
 - Draft observable: `chemistry:Oxidation`
-- Expected kind: process. Positive: electron-removal transformation. Negative: oxygen gas simply moved past a sample.
+- Expected expression-result category: process. Positive: electron-removal transformation. Negative: oxygen gas simply moved past a sample.
 - Dependencies: Electron loss/oxidation-state reading, not oxygen-only definition. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **provisional**, adaptation/reasoner/model not run.
 
@@ -88,7 +88,7 @@ Electron loss/oxidation-state reading, not oxygen-only definition.
 Surface association vs solution composition.
 - Source/provenance: IUPAC-ADSORB; original order 7.
 - Draft observable: `chemistry:SurfaceBoundTo linking chemistry:MolecularEntity to chemistry:AdsorbentBody`
-- Expected kind: relationship. Positive: adsorbed fragment on grain; identified catalytic surface-bearing grain; specified methane molecule. Negative: molecule dissolved far from surface; dissolved solute with no specified surface; all methane as a chemical species.
+- Expected expression-result category: relationship. Positive: adsorbed fragment on grain; identified catalytic surface-bearing grain; specified methane molecule. Negative: molecule dissolved far from surface; dissolved solute with no specified surface; all methane as a chemical species.
 - Dependencies: Surface association vs solution composition. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -97,7 +97,7 @@ Surface association vs solution composition.
 Species-specific amount/concentration requires denominator and phase.
 - Source/provenance: BIPM; original order 8.
 - Explicit gap: gap: species amount/concentration and denominator binding.
-- Expected kind: gap: species amount/concentration and denominator binding. Positive: one specified liquid phase portion; specified methane molecule. Negative: stirred oil-water emulsion treated as uniform; all methane as a chemical species.
+- Expected expression-result category: unresolved. Positive: one specified liquid phase portion; specified methane molecule. Negative: stirred oil-water emulsion treated as uniform; all methane as a chemical species.
 - Dependencies: Species-specific amount/concentration requires denominator and phase. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: species amount/concentration and denominator binding
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -106,7 +106,7 @@ Species-specific amount/concentration requires denominator and phase.
 Mass vs amount distinction.
 - Source/provenance: BIPM; original order 9.
 - Explicit gap: gap: amount root definition must distinguish entity count from mass.
-- Expected kind: gap: amount root definition must distinguish entity count from mass. Positive: specified methane molecule. Negative: all methane as a chemical species.
+- Expected expression-result category: unresolved. Positive: specified methane molecule. Negative: all methane as a chemical species.
 - Dependencies: Mass vs amount distinction. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: amount root definition must distinguish entity count from mass
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -115,7 +115,7 @@ Mass vs amount distinction.
 Analyte-specific homogeneity.
 - Source/provenance: IUPAC-HOM; original order 10.
 - Explicit gap: gap: named-analyte distribution and homogeneity summary.
-- Expected kind: gap: named-analyte distribution and homogeneity summary. Positive: one specified liquid phase portion. Negative: stirred oil-water emulsion treated as uniform.
+- Expected expression-result category: unresolved. Positive: one specified liquid phase portion. Negative: stirred oil-water emulsion treated as uniform.
 - Dependencies: Analyte-specific homogeneity. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: named-analyte distribution and homogeneity summary
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -124,7 +124,7 @@ Analyte-specific homogeneity.
 Operational bounded event around dependent reaction process.
 - Source/provenance: IUPAC-REACTION; original order 11.
 - Draft observable: `chemistry:ReactionEpisode`
-- Expected kind: event. Positive: one chemically monitored reaction episode. Negative: reagent list without occurrence.
+- Expected expression-result category: event. Positive: one chemically monitored reaction episode. Negative: reagent list without occurrence.
 - Dependencies: Operational bounded event around dependent reaction process. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **provisional**, adaptation/reasoner/model not run.
 
@@ -133,7 +133,7 @@ Operational bounded event around dependent reaction process.
 Interconversion vs phase change may overlap; identify actual entities.
 - Source/provenance: IUPAC-REACTION; original order 12.
 - Explicit gap: gap: species identity authority and phase-state distinction.
-- Expected kind: gap: species identity authority and phase-state distinction. Positive: specified reactants interconvert; one specified liquid phase portion. Negative: physical transfer with unchanged species; stirred oil-water emulsion treated as uniform.
+- Expected expression-result category: unresolved. Positive: specified reactants interconvert; one specified liquid phase portion. Negative: physical transfer with unchanged species; stirred oil-water emulsion treated as uniform.
 - Dependencies: Interconversion vs phase change may overlap; identify actual entities. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: species identity authority and phase-state distinction
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -142,7 +142,7 @@ Interconversion vs phase change may overlap; identify actual entities.
 Dissociative adsorption counterexample.
 - Source/provenance: IUPAC-ADSORB; original order 13.
 - Draft observable: `chemistry:DissociativeAdsorption`
-- Expected kind: process. Positive: hydrogen dissociates and binds on catalytic surface; adsorbed fragment on grain. Negative: intact gas in container bulk; molecule dissolved far from surface.
+- Expected expression-result category: process. Positive: hydrogen dissociates and binds on catalytic surface; adsorbed fragment on grain. Negative: intact gas in container bulk; molecule dissolved far from surface.
 - Dependencies: Dissociative adsorption counterexample. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **provisional**, adaptation/reasoner/model not run.
 
@@ -151,7 +151,7 @@ Dissociative adsorption counterexample.
 Unknown evidence is not chemical identity.
 - Source/provenance: LOCAL; original order 14.
 - Explicit gap: gap: evidence-state metadata, not new chemical predicate.
-- Expected kind: gap: evidence-state metadata, not new chemical predicate. Positive: one specified liquid phase portion. Negative: stirred oil-water emulsion treated as uniform.
+- Expected expression-result category: unresolved. Positive: one specified liquid phase portion. Negative: stirred oil-water emulsion treated as uniform.
 - Dependencies: Unknown evidence is not chemical identity. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: evidence-state metadata, not new chemical predicate
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -160,7 +160,7 @@ Unknown evidence is not chemical identity.
 Identity authority vs kinetic quality/model.
 - Source/provenance: IUPAC-REACTION; original order 15.
 - Explicit gap: gap: kinetic quality and model; authority does not supply rate.
-- Expected kind: gap: kinetic quality and model; authority does not supply rate. Positive: specified reactants interconvert. Negative: physical transfer with unchanged species.
+- Expected expression-result category: unresolved. Positive: specified reactants interconvert. Negative: physical transfer with unchanged species.
 - Dependencies: Identity authority vs kinetic quality/model. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: kinetic quality and model; authority does not supply rate
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 

@@ -844,7 +844,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 1,
         "independent": false
-      }
+      },
+      "narrative_intent": "Top-to-base separation; darkness does not define identity by itself.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "soil-q02",
@@ -878,7 +881,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 2,
         "independent": false
-      }
+      },
+      "narrative_intent": "Clay component only; sand fraction is missing upstream/domain candidate and must be separately articulated.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "soil-q03",
@@ -912,7 +918,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 3,
         "independent": false
-      }
+      },
+      "narrative_intent": "Comparable dry bulk densities at track/reference; compaction attribution needs occurrence and particle context.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "soil-q04",
@@ -925,7 +934,7 @@
         "soil:SoilLeaching"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Water content, retention and throughflow meanings absent; hydrology imports required, no local workaround.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -945,7 +954,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 4,
         "independent": false
-      }
+      },
+      "narrative_intent": "Water content, retention and throughflow meanings absent; hydrology imports required, no local workaround.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "soil-q05",
@@ -979,7 +991,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 5,
         "independent": false
-      }
+      },
+      "narrative_intent": "Declared mass basis/method, organic carbon is distinct.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "soil-q06",
@@ -1013,7 +1028,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 6,
         "independent": false
-      }
+      },
+      "narrative_intent": "Endpoint relation for horizons; restrictive nonpedogenic layer requires generalized Layer endpoint upstream.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "soil-q07",
@@ -1046,7 +1064,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 7,
         "independent": false
-      }
+      },
+      "narrative_intent": "Solute removal with receiving-layer evidence; content/flux bindings missing.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "soil-q08",
@@ -1060,7 +1081,7 @@
         "soil:HorizonThickness"
       ],
       "expression": "change in soil:HorizonThickness of soil:SoilHorizon",
-      "expected_type": "change quality",
+      "expected_type": "process",
       "dependencies": [
         "Thinning while identity persists; complete removal needs cessation event and separate dependent handling.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1080,7 +1101,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 8,
         "independent": false
-      }
+      },
+      "narrative_intent": "Thinning while identity persists; complete removal needs cessation event and separate dependent handling.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "soil-q09",
@@ -1094,7 +1118,7 @@
         "soil:BulkDensity"
       ],
       "expression": "change in soil:BulkDensity of soil:SoilBody",
-      "expected_type": "change quality",
+      "expected_type": "process",
       "dependencies": [
         "Change plus machinery-loading evidence; no deterministic all-harvest compaction.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1114,7 +1138,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 9,
         "independent": false
-      }
+      },
+      "narrative_intent": "Change plus machinery-loading evidence; no deterministic all-harvest compaction.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "soil-q10",
@@ -1148,7 +1175,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 10,
         "independent": false
-      }
+      },
+      "narrative_intent": "Aggregate individuation plus stability test/model; stability quality missing.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "soil-q11",
@@ -1161,7 +1191,7 @@
         "soil:OrganicMatterFraction"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Color observation and carbon/organic matter relationship require qualified model; no universal implication.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1181,7 +1211,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 11,
         "independent": false
-      }
+      },
+      "narrative_intent": "Color observation and carbon/organic matter relationship require qualified model; no universal implication.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "soil-q12",
@@ -1194,7 +1227,7 @@
         "soil:SoilBody"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Plant-available water requires species/root context, water-retention quantities and hydrology models.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1214,7 +1247,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 12,
         "independent": false
-      }
+      },
+      "narrative_intent": "Plant-available water requires species/root context, water-retention quantities and hydrology models.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "soil-q13",
@@ -1228,7 +1264,7 @@
         "soil:SoilHorizon"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Sampling representativeness is evidence/provenance work, not universal domain relation.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1248,7 +1284,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 13,
         "independent": false
-      }
+      },
+      "narrative_intent": "Sampling representativeness is evidence/provenance work, not universal domain relation.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "soil-q14",
@@ -1261,7 +1300,7 @@
         "soil:ClayFraction"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Texture authority cannot imply crop suitability; additional plant/management/model dependencies.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1281,7 +1320,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 14,
         "independent": false
-      }
+      },
+      "narrative_intent": "Texture authority cannot imply crop suitability; additional plant/management/model dependencies.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "soil-q15",
@@ -1294,7 +1336,7 @@
         "soil:BulkDensity"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Unmeasured density leaves compaction status unresolved; no Uncompacted inference.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1314,7 +1356,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 15,
         "independent": false
-      }
+      },
+      "narrative_intent": "Unmeasured density leaves compaction status unresolved; no Uncompacted inference.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [

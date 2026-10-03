@@ -15,6 +15,14 @@ for path in sorted(bootstrap.glob('*/dossier.json')):
         if q.get('expression'):
             rows.append((d['domain']+'/'+q['id'],q['expression']))
 question_count=len(rows)
+component_count=0
+for path in sorted(bootstrap.glob('*/dossier.json')):
+    d=json.loads(path.read_text(encoding='utf8'))
+    for q in d['questions']:
+        for component in q.get('components',[]):
+            if component.get('expression'):
+                rows.append((d['domain']+'/'+q['id']+'#'+component['id'],component['expression']))
+                component_count+=1
 probes=json.loads((bootstrap/'review-probes.json').read_text()) if (bootstrap/'review-probes.json').exists() else []
 for probe in probes:rows.append(('review-'+probe['id'],probe['expression']))
 controls=[('control-valid','presence of earth:WaterBody','PASS'),
@@ -42,12 +50,15 @@ report=dict(scope='Actual ObservableSequence grammar only; no name resolution, t
             parser_source_sha256=hashlib.sha256(Path(__file__).with_name('ParseDossierQuestions.java').read_bytes()).hexdigest(),
             expressions=[dict(id=id,expression=e,sha256=hashlib.sha256(e.encode()).hexdigest(),**parsed[id]) for id,e in rows],
             controls='Invalid category and missing namespace intentionally parse: this proves parser acceptance is not semantic validity.')
-(bootstrap/'question-parser-results.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')
+(bootstrap/'question-parser-results.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf8',newline='\n')
 for path in sorted(bootstrap.glob('*/dossier.json')):
     d=json.loads(path.read_text(encoding='utf8'))
     for q in d['questions']:
         key=d['domain']+'/'+q['id']
         if key in parsed:q['grammar_status']='parse_pass' if parsed[key]['status']=='PASS' else 'parse_fail'
-    path.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n',encoding='utf8')
+        for component in q.get('components',[]):
+            ck=key+'#'+component['id']
+            if ck in parsed:component['grammar_status']='parse_pass' if parsed[ck]['status']=='PASS' else 'parse_fail'
+    path.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n',encoding='utf8',newline='\n')
 fails=[id for id,_ in rows if not id.startswith('control-') and parsed[id]['status']=='FAIL']
-print(json.dumps(dict(question_expressions=question_count,review_probe_components=len(probes),failed=fails,controls=4,scope=report['scope'])))
+print(json.dumps(dict(question_expressions=question_count,insufficient_components=component_count,review_probe_components=len(probes),failed=fails,controls=4,scope=report['scope'])))

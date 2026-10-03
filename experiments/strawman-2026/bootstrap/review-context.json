@@ -1,6 +1,6 @@
 {
-  "sandbox_start": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
-  "backend_commit": "e6ad32ca048c5e9468ab722909c44b541ee98b7a",
+  "sandbox_start": "1e75cd3ec5bf29943ae7cfb194b5a5b8778085a4",
+  "backend_commit": "d6e781daa0d440a11589fa550cdf69cdf765a04e",
   "context_sources": [
     {
       "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-03\\task-4\\imod-strawman\\src\\imod.kwv",
@@ -20,11 +20,11 @@
     },
     {
       "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-03\\task-7\\backend\\PROPOSAL_REVIEW_CONTRACT.md",
-      "sha256": "2e2dfdf0b3d2ae57936df952d770fef9708a251635c4a1becc8b2b1f470a0a77"
+      "sha256": "02013c7da85b2b6f8e621252ae08c43585ba330cae2c164834c7adb5c114a89a"
     },
     {
       "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-03\\task-7\\backend\\klab.core.api\\src\\main\\java\\org\\integratedmodelling\\klab\\api\\services\\resources\\workflow\\ProposalReview.java",
-      "sha256": "52359212524f3059a7b5f532bdc419c6aa36327abdfa63056556feb7fe859695"
+      "sha256": "97479d115eb3f4b114baeb4179525a3988a2329ae03f07631575c42cad08d86e"
     },
     {
       "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-03\\task-7\\backend\\DOSSIER_MAPPING.md",
@@ -32,7 +32,7 @@
     },
     {
       "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-03\\task-7\\backend\\klab.core.api\\src\\main\\java\\org\\integratedmodelling\\klab\\api\\services\\resources\\workflow\\BootstrapDossierValidator.java",
-      "sha256": "ca81b37baf8322e8545d49d5d8c5a43e0136fddeff8bcd9a2121fba057e6c0ef"
+      "sha256": "3e1dc68fdeeea807b885ea8124fa3fa49344982a7f0485f485e69be33e60b588"
     }
   ],
   "note": "Pinned inspected backend mapping; production acceptance remains blocked pending real validators and research manifest integration."

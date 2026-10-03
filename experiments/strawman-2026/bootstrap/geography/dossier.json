@@ -772,7 +772,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 1,
         "independent": false
-      }
+      },
+      "narrative_intent": "Ground-surface height with common datum; home location supplies context.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "geography-q02",
@@ -806,7 +809,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 2,
         "independent": false
-      }
+      },
+      "narrative_intent": "Aspect is needed; afternoon insolation additionally needs external solar/terrain model.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "geography-q03",
@@ -840,7 +846,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 3,
         "independent": false
-      }
+      },
+      "narrative_intent": "Resolve inclination across route context, then compare externally.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "geography-q04",
@@ -855,7 +864,7 @@
         "geography:RidgeLandform"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Equal height does not establish landform identity; form/configuration discrimination missing.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -875,7 +884,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 4,
         "independent": false
-      }
+      },
+      "narrative_intent": "Equal height does not establish landform identity; form/configuration discrimination missing.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "geography-q05",
@@ -909,7 +921,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 5,
         "independent": false
-      }
+      },
+      "narrative_intent": "Ridge observation contributes; drainage-divide role and flow routing need hydrology.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "geography-q06",
@@ -943,7 +958,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 6,
         "independent": false
-      }
+      },
+      "narrative_intent": "Test closed surface boundary at stated scale; distinguish outlet cropping.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "geography-q07",
@@ -957,7 +975,7 @@
         "geography:SlopeFailureEpisode"
       ],
       "expression": "change in geography:GroundElevation of earth:Location",
-      "expected_type": "change quality",
+      "expected_type": "process",
       "dependencies": [
         "Separate elevation change tied to slope-failure occurrence; no implicit elevation evolution.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -977,7 +995,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 7,
         "independent": false
-      }
+      },
+      "narrative_intent": "Separate elevation change tied to slope-failure occurrence; no implicit elevation evolution.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "geography-q08",
@@ -991,7 +1012,7 @@
         "geography:GroundElevation"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Requires tide-referenced shoreline geometry and observed removal event; elevation alone insufficient.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1011,7 +1032,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 8,
         "independent": false
-      }
+      },
+      "narrative_intent": "Requires tide-referenced shoreline geometry and observed removal event; elevation alone insufficient.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "geography-q09",
@@ -1045,7 +1069,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 9,
         "independent": false
-      }
+      },
+      "narrative_intent": "Track same dune crest; road proximity is a separate core spatial comparison.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "geography-q10",
@@ -1058,7 +1085,7 @@
         "geography:TerrainAbutment"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Jurisdictional boundary authority and society/policy imports absent; do not use terrain contact.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1078,7 +1105,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 10,
         "independent": false
-      }
+      },
+      "narrative_intent": "Jurisdictional boundary authority and society/policy imports absent; do not use terrain contact.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "geography-q11",
@@ -1111,7 +1141,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 11,
         "independent": false
-      }
+      },
+      "narrative_intent": "Reject roof returns as ground unless independent ground observation/model exists.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "geography-q12",
@@ -1145,7 +1178,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 12,
         "independent": false
-      }
+      },
+      "narrative_intent": "Resolve endpoints and shared ridge; bare relationship expression is only reusable meaning.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "geography-q13",
@@ -1159,7 +1195,7 @@
         "geography:GroundElevation"
       ],
       "expression": "change in geography:GroundElevation of earth:Location",
-      "expected_type": "change quality",
+      "expected_type": "process",
       "dependencies": [
         "Change plus deposition evidence; attribution to storm requires model.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1179,7 +1215,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 13,
         "independent": false
-      }
+      },
+      "narrative_intent": "Change plus deposition evidence; attribution to storm requires model.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "geography-q14",
@@ -1192,7 +1231,7 @@
         "geography:GroundElevation"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Evidence-state question: no new survey leaves change unresolved, not zero.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1212,7 +1251,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 14,
         "independent": false
-      }
+      },
+      "narrative_intent": "Evidence-state question: no new survey leaves change unresolved, not zero.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "geography-q15",
@@ -1225,7 +1267,7 @@
         "geography:RidgeLandform"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Mountain naming authority and chosen landform definition needed; no universal threshold inferred.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1245,7 +1287,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 15,
         "independent": false
-      }
+      },
+      "narrative_intent": "Mountain naming authority and chosen landform definition needed; no universal threshold inferred.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [

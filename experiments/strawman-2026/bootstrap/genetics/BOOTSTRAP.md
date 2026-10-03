@@ -12,7 +12,7 @@ QUESTIONS_FIRST.json preserves original source-led order before candidate rows. 
 
 Sources: DNA; original order 1; incidence: genetics-c21.
 Draft expression: `genetics:DNASequence of genetics:DNAMolecule`
-Expected type: quality. Positive: Sequence of an identified molecular bearer. Negative: Database identifier itself.
+Expected expression-result category: quality. Positive: Sequence of an identified molecular bearer. Negative: Database identifier itself.
 Sequence of an identified molecular bearer; excludes Database identifier itself. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -20,7 +20,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: ALLELE; original order 2; incidence: upstream gap.
 Expression: **explicit gap** — identity/reference gap.
-Expected type: identity/reference gap. Positive: Alleles aligned to one declared locus. Negative: Variants at unrelated loci.
+Expected expression-result category: unresolved. Positive: Alleles aligned to one declared locus. Negative: Variants at unrelated loci.
 Alleles aligned to one declared locus; excludes Variants at unrelated loci. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate. Explicit gap: identity/reference gap; unavailable evidence does not imply false/zero/unchanged. UPSTREAM GAP: AllelicIdentity identity/reference distinction not established; no local workaround.
 
@@ -28,7 +28,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: CHROMOSOME; original order 3; incidence: genetics-c03.
 Draft expression: `count of genetics:Chromosome contained in life:Cell`
-Expected type: numerosity. Positive: Chromosome count in specified cell. Negative: Human count assumed for all species.
+Expected expression-result category: quality. Positive: Chromosome count in specified cell. Negative: Human count assumed for all species.
 Chromosome count in specified cell; excludes Human count assumed for all species. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -36,7 +36,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: GENE; original order 4; incidence: genetics-c07.
 Draft expression: `genetics:Transcription`
-Expected type: process. Positive: Noncoding functional RNA transcript. Negative: All genes forced protein coding.
+Expected expression-result category: process. Positive: Noncoding functional RNA transcript. Negative: All genes forced protein coding.
 Noncoding functional RNA transcript; excludes All genes forced protein coding. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -44,7 +44,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: EXPRESSION; original order 5; incidence: genetics-c22.
 Draft expression: `genetics:TranscriptAbundance of life:Cell`
-Expected type: quality. Positive: Gene-specific transcripts and cell context. Negative: Expression inferred solely from DNA presence.
+Expected expression-result category: quality. Positive: Gene-specific transcripts and cell context. Negative: Expression inferred solely from DNA presence.
 Gene-specific transcripts and cell context; excludes Expression inferred solely from DNA presence. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -52,7 +52,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: MUTATION; original order 6; incidence: genetics-c16.
 Draft expression: `genetics:Mutation`
-Expected type: event. Positive: Bounded sequence alteration in lineage. Negative: Different samples with no lineage evidence.
+Expected expression-result category: event. Positive: Bounded sequence alteration in lineage. Negative: Different samples with no lineage evidence.
 Bounded sequence alteration in lineage; excludes Different samples with no lineage evidence. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -60,7 +60,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: MUTATION; original order 7; incidence: upstream gap.
 Expression: **explicit gap** — germline/lineage gap.
-Expected type: germline/lineage gap. Positive: Specified reproductive lineage with germline evidence. Negative: Somatic variant assumed inherited.
+Expected expression-result category: unresolved. Positive: Specified reproductive lineage with germline evidence. Negative: Somatic variant assumed inherited.
 Specified reproductive lineage with germline evidence; excludes Somatic variant assumed inherited. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate. Explicit gap: germline/lineage gap; unavailable evidence does not imply false/zero/unchanged. UPSTREAM GAP: Inheritance identity/reference distinction not established; no local workaround.
 
@@ -68,7 +68,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: GLOSSARY; original order 8; incidence: genetics-c18.
 Draft expression: `genetics:Duplication`
-Expected type: event. Positive: Extra segment copy relative to baseline. Negative: Higher sequencing coverage alone.
+Expected expression-result category: event. Positive: Extra segment copy relative to baseline. Negative: Higher sequencing coverage alone.
 Extra segment copy relative to baseline; excludes Higher sequencing coverage alone. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -76,7 +76,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: GLOSSARY; original order 9; incidence: genetics-c17.
 Draft expression: `genetics:Deletion`
-Expected type: event. Positive: Documented segment loss. Negative: Unsequenced interval.
+Expected expression-result category: event. Positive: Documented segment loss. Negative: Unsequenced interval.
 Documented segment loss; excludes Unsequenced interval. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -84,7 +84,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: GENE; original order 10; incidence: genetics-c11.
 Draft expression: `genetics:GenePart linking genetics:GeneSegment to genetics:DNAMolecule`
-Expected type: relationship. Positive: Physical segment on identified molecule. Negative: Information record contained in database.
+Expected expression-result category: relationship. Positive: Physical segment on identified molecule. Negative: Information record contained in database.
 Physical segment on identified molecule; excludes Information record contained in database. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -92,7 +92,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: MEIOSIS; original order 11; incidence: genetics-c09.
 Draft expression: `genetics:MeioticSegregation`
-Expected type: process. Positive: Reductional division in appropriate organism. Negative: Ordinary tissue growth.
+Expected expression-result category: process. Positive: Reductional division in appropriate organism. Negative: Ordinary tissue growth.
 Reductional division in appropriate organism; excludes Ordinary tissue growth. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -100,7 +100,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: GLOSSARY; original order 12; incidence: upstream gap.
 Expression: **explicit gap** — historical hypothesis gap.
-Expected type: historical hypothesis gap. Positive: Independent ancestry evidence. Negative: Similarity automatically asserted homology.
+Expected expression-result category: unresolved. Positive: Independent ancestry evidence. Negative: Similarity automatically asserted homology.
 Independent ancestry evidence; excludes Similarity automatically asserted homology. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate. Explicit gap: historical hypothesis gap; unavailable evidence does not imply false/zero/unchanged. UPSTREAM GAP: Homology identity/reference distinction not established; no local workaround.
 
@@ -108,7 +108,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: MEIOSIS; original order 13; incidence: genetics-c19.
 Draft expression: `genetics:Fertilization`
-Expected type: event. Positive: Fusion with lineage evidence. Negative: Two gametes merely adjacent.
+Expected expression-result category: event. Positive: Fusion with lineage evidence. Negative: Two gametes merely adjacent.
 Fusion with lineage evidence; excludes Two gametes merely adjacent. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -116,7 +116,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: EXPRESSION; original order 14; incidence: genetics-c08.
 Expression: **explicit gap** — causal model gap.
-Expected type: causal model gap. Positive: Expression comparison plus mechanism evidence. Negative: Association treated as sufficient explanation.
+Expected expression-result category: unresolved. Positive: Expression comparison plus mechanism evidence. Negative: Association treated as sufficient explanation.
 Expression comparison plus mechanism evidence; excludes Association treated as sufficient explanation. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate. Explicit gap: causal model gap; unavailable evidence does not imply false/zero/unchanged.
 
@@ -124,7 +124,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: GENE; original order 15; incidence: genetics-c02.
 Expression: **explicit gap** — negative evidence probe.
-Expected type: negative evidence probe. Positive: Adequate coverage and detection model needed. Negative: Missing record equated with gene deletion.
+Expected expression-result category: unresolved. Positive: Adequate coverage and detection model needed. Negative: Missing record equated with gene deletion.
 Adequate coverage and detection model needed; excludes Missing record equated with gene deletion. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate. Explicit gap: negative evidence probe; unavailable evidence does not imply false/zero/unchanged.
 

@@ -55,7 +55,7 @@ Checks: grammar untested; semantic blocked; adapter, reasoner and execution unte
 
 Source: EPA. Preserved source-question order 4; no independent holdout claim.
 
-Draft expression: `infrastructure:StoredWaterVolume of infrastructure:WaterStorageTank`. Expected category: subject.
+Draft expression: `infrastructure:StoredWaterVolume of infrastructure:WaterStorageTank`. Expected expression-result category: quality.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: finished-water tank. Negative boundary: natural lake.
@@ -75,7 +75,7 @@ Checks: grammar untested; semantic blocked; adapter, reasoner and execution unte
 
 Source: EPA. Preserved source-question order 6; no independent holdout claim.
 
-Draft expression: `infrastructure:WaterLeakage`. Expected category: process.
+Draft expression: `infrastructure:WaterLeakage`. Expected expression-result category: process.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: escape through a cracked main. Negative boundary: authorised delivery at a tap.
@@ -105,7 +105,7 @@ Checks: grammar untested; semantic blocked; adapter, reasoner and execution unte
 
 Source: FHWA. Preserved source-question order 9; no independent holdout claim.
 
-Draft expression: `change in infrastructure:StructuralCondition of infrastructure:Bridge`. Expected category: process (unary change); requires parser and active type validation.
+Draft expression: `change in infrastructure:StructuralCondition of infrastructure:Bridge`. Expected expression-result category: process.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: A value observed for the named bearer and stated convention.. Negative boundary: An unqualified score, missing observation or value from another bearer treated as equivalent..
@@ -135,7 +135,7 @@ Checks: grammar untested; semantic blocked; adapter, reasoner and execution unte
 
 Source: FHWA. Preserved source-question order 12; no independent holdout claim.
 
-Draft expression: `infrastructure:AssetReplacement`. Expected category: event.
+Draft expression: `infrastructure:AssetReplacement`. Expected expression-result category: event.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: old bridge replaced with new structure. Negative boundary: repainting the existing bridge.
@@ -145,7 +145,7 @@ Checks: grammar untested; semantic provisional; adapter, reasoner and execution 
 
 Source: EPA. Preserved source-question order 13; no independent holdout claim.
 
-Draft expression: `infrastructure:SuppliesAsset linking infrastructure:WaterStorageTank to infrastructure:WaterStorageTank`. Expected category: relationship.
+Draft expression: `infrastructure:SuppliesAsset linking infrastructure:WaterStorageTank to infrastructure:WaterStorageTank`. Expected expression-result category: relationship.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: transfer from upper to lower tank. Negative boundary: mere physical connection with valve shut.
@@ -155,7 +155,7 @@ Checks: grammar untested; semantic provisional; adapter, reasoner and execution 
 
 Source: NIST. Preserved source-question order 14; no independent holdout claim.
 
-Draft expression: `infrastructure:ConnectsAsset linking infrastructure:RoadSegment to infrastructure:Bridge`. Expected category: relationship.
+Draft expression: `infrastructure:ConnectsAsset linking infrastructure:RoadSegment to infrastructure:Bridge`. Expected expression-result category: relationship.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: road meeting a bridge deck. Negative boundary: two nearby roads with no junction.

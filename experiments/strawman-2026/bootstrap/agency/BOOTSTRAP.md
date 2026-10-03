@@ -203,7 +203,7 @@ Expressions below are candidate observable strings, not complete query programs.
 
 Source-first sequence 1; sources CRPD12. Motivation: choice, communication and support must remain distinct. Concepts: agency-c01, agency-c02, agency-c07.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: process and directed relationship. Expected interpretation: Separate actual choosing, communication support and choice content; source cannot identify chooser from assistance record alone.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Separate actual choosing, communication support and choice content; source cannot identify chooser from assistance record alone.
 
 Positive: Person communicates their own choice through interpreter. Negative: Helper's destination presented as the person's choice.
 
@@ -213,7 +213,7 @@ Dependencies/checks: Separate actual choosing, communication support and choice 
 
 Source-first sequence 2; sources CRPD12. Motivation: legal capacity is not measured cognitive performance. Concepts: agency-c02.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: process plus legal-capacity context. Expected interpretation: Legal-capacity upstream distinction is absent; neither performance nor support receipt entails incapacity.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Legal-capacity upstream distinction is absent; neither performance nor support receipt entails incapacity.
 
 Positive: Person chooses with requested support. Negative: Support need classified as incapacity.
 
@@ -223,7 +223,7 @@ Dependencies/checks: Legal-capacity upstream distinction is absent; neither perf
 
 Source-first sequence 3; sources OSTROM. Motivation: delegation is scoped to an action and rule system. Concepts: agency-c08, agency-c06.
 
-Draft expression: `agency:ActionAuthorization`. Expected type: relationship. Expected interpretation: Need authorizer, authorized agent, mandate scope and constituting occurrence.
+Draft expression: `agency:ActionAuthorization`. Expected expression-result category: relationship. Expected interpretation: Need authorizer, authorized agent, mandate scope and constituting occurrence.
 
 Positive: Association's scoped delegation to its crew. Negative: Crew acts without a mandate.
 
@@ -233,7 +233,7 @@ Dependencies/checks: Need authorizer, authorized agent, mandate scope and consti
 
 Source-first sequence 4; sources CRPD12. Motivation: missing response is not consent. Concepts: agency-c11.
 
-Draft expression: `agency:ConsentGrant`. Expected type: event. Expected interpretation: Need observed permission expression and valid convention; unobserved consent is unknown.
+Draft expression: `agency:ConsentGrant`. Expected expression-result category: event. Expected interpretation: Need observed permission expression and valid convention; unobserved consent is unknown.
 
 Positive: Recorded explicit permission. Negative: Silence interpreted as agreement.
 
@@ -243,7 +243,7 @@ Dependencies/checks: Need observed permission expression and valid convention; u
 
 Source-first sequence 5; sources OSTROM. Motivation: intention and enactment are different observations. Concepts: agency-c01.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: process, event and intention quality. Expected interpretation: Intention content and enacted-action link are upstream gaps; cannot equate intentions with actions.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Intention content and enacted-action link are upstream gaps; cannot equate intentions with actions.
 
 Positive: Expressed intention followed by separately observed action. Negative: Intention report alone counted as action.
 
@@ -253,7 +253,7 @@ Dependencies/checks: Intention content and enacted-action link are upstream gaps
 
 Source-first sequence 6; sources CRPD12. Motivation: cessation needs a bounded withdrawal occurrence. Concepts: agency-c12.
 
-Draft expression: `agency:ConsentWithdrawal`. Expected type: event. Expected interpretation: Withdrawal has a boundary and refers to a specific prior permission.
+Draft expression: `agency:ConsentWithdrawal`. Expected expression-result category: event. Expected interpretation: Withdrawal has a boundary and refers to a specific prior permission.
 
 Positive: Express revocation observed. Negative: No new data on permission.
 
@@ -263,7 +263,7 @@ Dependencies/checks: Withdrawal has a boundary and refers to a specific prior pe
 
 Source-first sequence 7; sources OSTROM. Motivation: participation entitlement differs from attendance. Concepts: agency-c09.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: relationship and entitlement role. Expected interpretation: Attendance can be observed but entitlement/rights require scoped norm relation upstream.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Attendance can be observed but entitlement/rights require scoped norm relation upstream.
 
 Positive: Eligible person absent from meeting. Negative: Attendance automatically confers right to decide.
 
@@ -273,7 +273,7 @@ Dependencies/checks: Attendance can be observed but entitlement/rights require s
 
 Source-first sequence 8; sources CRPD12. Motivation: support and undue influence are not automatically separable from observed outcomes. Concepts: agency-c02, agency-c15.
 
-Draft expression: `agency:AvailableOptionCount of imod:Agent`. Expected type: quality. Expected interpretation: Draft available-option count cannot by itself establish absence of undue influence; options need individuating criteria.
+Draft expression: `agency:AvailableOptionCount of imod:Agent`. Expected expression-result category: quality. Expected interpretation: Draft available-option count cannot by itself establish absence of undue influence; options need individuating criteria.
 
 Positive: Accessible options expand while person retains choice. Negative: More listed options interpreted as proof of freedom.
 
@@ -283,7 +283,7 @@ Dependencies/checks: Draft available-option count cannot by itself establish abs
 
 Source-first sequence 9; sources OSTROM. Motivation: control is action-context-specific. Concepts: agency-c16.
 
-Draft expression: `agency:PerceivedControl of imod:Agent`. Expected type: quality. Expected interpretation: Only reported control; actual decision authority is separate and may disagree.
+Draft expression: `agency:PerceivedControl of imod:Agent`. Expected expression-result category: quality. Expected interpretation: Only reported control; actual decision authority is separate and may disagree.
 
 Positive: Participant reports control in one allocation. Negative: Reported control used as legal authority.
 
@@ -293,7 +293,7 @@ Dependencies/checks: Only reported control; actual decision authority is separat
 
 Source-first sequence 10; sources ILO154. Motivation: negotiation does not guarantee agreement. Concepts: agency-c03, agency-c14.
 
-Draft expression: `agency:Negotiation`. Expected type: process. Expected interpretation: Observed negotiations and separate comparisons of terms; no guaranteed successful outcome.
+Draft expression: `agency:Negotiation`. Expected expression-result category: process. Expected interpretation: Observed negotiations and separate comparisons of terms; no guaranteed successful outcome.
 
 Positive: Terms discussed with parties identified. Negative: Outcome change assumed solely from negotiations occurring.
 
@@ -303,7 +303,7 @@ Dependencies/checks: Observed negotiations and separate comparisons of terms; no
 
 Source-first sequence 11; sources ILO154. Motivation: representation endpoints and scope. Concepts: agency-c06.
 
-Draft expression: `agency:Representation`. Expected type: relationship. Expected interpretation: Representative to represented-agent direction; workers/employers contextual roles remain upstream.
+Draft expression: `agency:Representation`. Expected expression-result category: relationship. Expected interpretation: Representative to represented-agent direction; workers/employers contextual roles remain upstream.
 
 Positive: Named worker mandate. Negative: Self-appointed spokesperson with no recognition.
 
@@ -313,7 +313,7 @@ Dependencies/checks: Representative to represented-agent direction; workers/empl
 
 Source-first sequence 12; sources OSTROM. Motivation: appointment and legitimacy differ. Concepts: agency-c13.
 
-Draft expression: `agency:RepresentativeAppointment`. Expected type: event. Expected interpretation: Appointment evidence and participant recognition are separate, not universal legitimacy.
+Draft expression: `agency:RepresentativeAppointment`. Expected expression-result category: event. Expected interpretation: Appointment evidence and participant recognition are separate, not universal legitimacy.
 
 Positive: Mandate adopted by represented group. Negative: External label treated as appointment.
 
@@ -323,7 +323,7 @@ Dependencies/checks: Appointment evidence and participant recognition are separa
 
 Source-first sequence 13; sources OSTROM. Motivation: non-agreement is not non-agency. Concepts: agency-c03, agency-c14.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: process plus unresolved agreement. Expected interpretation: No agreement observation remains unknown or explicit disagreement if observed; not absence of all agency.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: No agreement observation remains unknown or explicit disagreement if observed; not absence of all agency.
 
 Positive: Negotiation continues despite disagreement. Negative: No consensus interpreted as no agency.
 
@@ -333,7 +333,7 @@ Dependencies/checks: No agreement observation remains unknown or explicit disagr
 
 Source-first sequence 14; sources OSTROM. Motivation: source coverage gap on artificial agency. Concepts: agency-c05.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: subject/agent category gap. Expected interpretation: Artificial-agent criterion unavailable in sources; open upstream agency question.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Artificial-agent criterion unavailable in sources; open upstream agency question.
 
 Positive: Person authorizes a defined automated service, agent sense left open. Negative: Conscious intention assigned to dispatch software without evidence.
 
@@ -343,7 +343,7 @@ Dependencies/checks: Artificial-agent criterion unavailable in sources; open ups
 
 Source-first sequence 15; sources OSTROM. Motivation: rule-change power is separate from operational choice. Concepts: agency-c04, agency-c08.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: authorization relationship and rule-change event. Expected interpretation: Norm content and rule-amendment powers require upstream articulation; operational participation is insufficient.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Norm content and rule-amendment powers require upstream articulation; operational participation is insufficient.
 
 Positive: Members hold rule-amendment power under their charter. Negative: Any user inferred able to alter rules.
 

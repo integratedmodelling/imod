@@ -831,7 +831,7 @@
         "infrastructure-Building"
       ],
       "expression": null,
-      "expected_type": "subject",
+      "expected_type": "unresolved",
       "dependencies": [
         "shelter suitability needs occupancy purpose, access and capacity; a building count cannot answer",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -849,7 +849,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which buildings could shelter people displaced by a wildfire?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "infrastructure-q02",
@@ -858,7 +861,7 @@
         "infrastructure-RoadSegment"
       ],
       "expression": null,
-      "expected_type": "subject",
+      "expected_type": "unresolved",
       "dependencies": [
         "routing over physical connections plus operational restrictions; no generic route engine",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -876,7 +879,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which roads provide a usable route to the evacuation centre?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "infrastructure-q03",
@@ -885,7 +891,7 @@
         "infrastructure-Bridge"
       ],
       "expression": null,
-      "expected_type": "subject",
+      "expected_type": "unresolved",
       "dependencies": [
         "load and vehicle compatibility plus access relation",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -903,7 +909,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which bridge is restricting emergency vehicle access?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "infrastructure-q04",
@@ -913,7 +922,7 @@
         "infrastructure-StoredWaterVolume"
       ],
       "expression": "infrastructure:StoredWaterVolume of infrastructure:WaterStorageTank",
-      "expected_type": "subject",
+      "expected_type": "quality",
       "dependencies": [
         "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -931,7 +940,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which water tanks still hold usable firefighting water?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "infrastructure-q05",
@@ -940,7 +952,7 @@
         "infrastructure-ElectricalSubstation"
       ],
       "expression": null,
-      "expected_type": "subject",
+      "expected_type": "unresolved",
       "dependencies": [
         "directed electrical topology and actual operating configuration",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -958,7 +970,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which substations feed the neighbourhood that lost power?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "infrastructure-q06",
@@ -985,7 +1000,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Where is a water main losing water?",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "infrastructure-q07",
@@ -994,7 +1012,7 @@
         "infrastructure-DeliveryCapacity"
       ],
       "expression": null,
-      "expected_type": "quality",
+      "expected_type": "unresolved",
       "dependencies": [
         "operating system calculation; asset name and nominal rating insufficient",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1012,7 +1030,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "How much delivery capacity remains after a damaged pump is isolated?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "infrastructure-q08",
@@ -1021,7 +1042,7 @@
         "infrastructure-SuppliesAsset"
       ],
       "expression": null,
-      "expected_type": "relationship",
+      "expected_type": "unresolved",
       "dependencies": [
         "dependency graph and redundancy; not proximity",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1039,7 +1060,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which customers depend on one upstream electricity supply?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "infrastructure-q09",
@@ -1049,7 +1073,7 @@
         "infrastructure-Bridge"
       ],
       "expression": "change in infrastructure:StructuralCondition of infrastructure:Bridge",
-      "expected_type": "process (unary change); requires parser and active type validation",
+      "expected_type": "process",
       "dependencies": [
         "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1067,7 +1091,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Has a bridge's load-bearing condition changed during the fire?",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "infrastructure-q10",
@@ -1076,7 +1103,7 @@
         "infrastructure-ServiceInterruption"
       ],
       "expression": null,
-      "expected_type": "event",
+      "expected_type": "unresolved",
       "dependencies": [
         "event attribution needs operational records; interruption alone does not identify cause",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1094,7 +1121,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Was the interruption caused by damage or by a deliberate shutdown?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "infrastructure-q11",
@@ -1103,7 +1133,7 @@
         "infrastructure-ServiceRestoration"
       ],
       "expression": null,
-      "expected_type": "event",
+      "expected_type": "unresolved",
       "dependencies": [
         "physical connection plus clinic functional dependency and intervention records",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1121,7 +1151,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which repairs restored the water connection to the clinic?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "infrastructure-q12",
@@ -1148,7 +1181,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Did replacement create a new bridge or repair the existing one?",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "infrastructure-q13",
@@ -1176,7 +1212,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which asset supplies this water tank?",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "infrastructure-q14",
@@ -1205,7 +1244,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which road section physically connects to this bridge?",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "infrastructure-q15",
@@ -1214,7 +1256,7 @@
         "infrastructure-ElectricalSubstation"
       ],
       "expression": null,
-      "expected_type": "subject",
+      "expected_type": "unresolved",
       "dependencies": [
         "invalid sufficiency inference; other lifelines/social needs required",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1232,7 +1274,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Would a working substation alone ensure recovery of the community?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [

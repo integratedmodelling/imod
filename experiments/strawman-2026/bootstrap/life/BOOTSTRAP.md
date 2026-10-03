@@ -12,7 +12,7 @@ QUESTIONS_FIRST.json preserves original source-led order before candidate rows. 
 
 Sources: NPS; original order 1; incidence: life-c01.
 Draft expression: `presence of life:Organism`
-Expected type: subject presence. Positive: Living shoot inspected after fire. Negative: DNA from a dead stem.
+Expected expression-result category: quality. Positive: Living shoot inspected after fire. Negative: DNA from a dead stem.
 Living shoot inspected after fire; excludes DNA from a dead stem. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -20,7 +20,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: CELL; original order 2; incidence: life-c01.
 Draft expression: `count of life:Organism`
-Expected type: numerosity. Positive: Separately bounded individuals. Negative: Count of green pixels.
+Expected expression-result category: quality. Positive: Separately bounded individuals. Negative: Count of green pixels.
 Separately bounded individuals; excludes Count of green pixels. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -28,7 +28,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: CELL; original order 3; incidence: life-c18.
 Draft expression: `life:LivingMass of life:Organism`
-Expected type: mass quality. Positive: Mass assigned to a bounded organism. Negative: Dry soil mass.
+Expected expression-result category: quality. Positive: Mass assigned to a bounded organism. Negative: Dry soil mass.
 Mass assigned to a bounded organism; excludes Dry soil mass. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -36,7 +36,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: CELL; original order 4; incidence: life-c02.
 Draft expression: `presence of life:Cell`
-Expected type: subject presence. Positive: Membrane-bounded cell. Negative: Free DNA fragment.
+Expected expression-result category: quality. Positive: Membrane-bounded cell. Negative: Free DNA fragment.
 Membrane-bounded cell; excludes Free DNA fragment. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -44,7 +44,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: NPS; original order 5; incidence: life-c03.
 Draft expression: `life:Tissue`
-Expected type: subject. Positive: Bark tissue with assessed damage. Negative: Fire perimeter.
+Expected expression-result category: subject. Positive: Bark tissue with assessed damage. Negative: Fire perimeter.
 Bark tissue with assessed damage; excludes Fire perimeter. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -52,7 +52,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: CELL; original order 6; incidence: life-c13.
 Draft expression: `life:OrganPart linking life:Organ to life:Organism`
-Expected type: relationship. Positive: Root belonging to this plant. Negative: Nearby unrelated root.
+Expected expression-result category: relationship. Positive: Root belonging to this plant. Negative: Nearby unrelated root.
 Root belonging to this plant; excludes Nearby unrelated root. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -60,7 +60,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: NPS; original order 7; incidence: life-c05.
 Draft expression: `presence of life:Seed`
-Expected type: subject presence. Positive: Identified seed; viability separate. Negative: Assuming every seed viable.
+Expected expression-result category: quality. Positive: Identified seed; viability separate. Negative: Assuming every seed viable.
 Identified seed; viability separate; excludes Assuming every seed viable. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -68,7 +68,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: NPS; original order 8; incidence: life-c15.
 Draft expression: `life:OrganismDeath`
-Expected type: event. Positive: Bounded loss of viable organism. Negative: Missed survey.
+Expected expression-result category: event. Positive: Bounded loss of viable organism. Negative: Missed survey.
 Bounded loss of viable organism; excludes Missed survey. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -76,7 +76,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: CELL; original order 9; incidence: life-c08.
 Draft expression: `life:Reproduction`
-Expected type: process. Positive: Production of separately individuated offspring. Negative: Growth of one pre-existing cell.
+Expected expression-result category: process. Positive: Production of separately individuated offspring. Negative: Growth of one pre-existing cell.
 Production of separately individuated offspring; excludes Growth of one pre-existing cell. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -84,7 +84,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: NPS; original order 10; incidence: life-c07.
 Draft expression: `change in life:LivingMass of life:Organism`
-Expected type: change quality. Positive: Mass change attributed to growth occurrent. Negative: Missing resurvey interpreted as zero.
+Expected expression-result category: process. Positive: Mass change attributed to growth occurrent. Negative: Missing resurvey interpreted as zero.
 Mass change attributed to growth occurrent; excludes Missing resurvey interpreted as zero. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -92,7 +92,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: NPS; original order 11; incidence: life-c06.
 Draft expression: `life:BiologicalRemnant`
-Expected type: subject. Positive: Dead snag retains material continuity. Negative: Unburned live tree.
+Expected expression-result category: subject. Positive: Dead snag retains material continuity. Negative: Unburned live tree.
 Dead snag retains material continuity; excludes Unburned live tree. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -100,7 +100,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: CELL; original order 12; incidence: life-c14.
 Draft expression: `life:ParentOf linking life:Organism to life:Organism`
-Expected type: relationship. Positive: Reproductive lineage evidence. Negative: Nearest adult assumed parent.
+Expected expression-result category: relationship. Positive: Reproductive lineage evidence. Negative: Nearest adult assumed parent.
 Reproductive lineage evidence; excludes Nearest adult assumed parent. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -108,7 +108,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: NPS; original order 13; incidence: life-c16.
 Draft expression: `life:Germination`
-Expected type: event. Positive: Bounded seed-to-seedling transition. Negative: Transplanted seedling.
+Expected expression-result category: event. Positive: Bounded seed-to-seedling transition. Negative: Transplanted seedling.
 Bounded seed-to-seedling transition; excludes Transplanted seedling. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -116,7 +116,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: CELL; original order 14; incidence: life-c12.
 Draft expression: `life:CellPart linking life:Cell to life:Organism`
-Expected type: relationship. Positive: Cellular part of organism. Negative: Surface-associated bacterium automatically called host part.
+Expected expression-result category: relationship. Positive: Cellular part of organism. Negative: Surface-associated bacterium automatically called host part.
 Cellular part of organism; excludes Surface-associated bacterium automatically called host part. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -124,7 +124,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: CELL; original order 15; incidence: life-c15.
 Expression: **explicit gap** — explicit evidence gap.
-Expected type: explicit evidence gap. Positive: Repeated viability evidence under specified protocol. Negative: No activity detected once.
+Expected expression-result category: unresolved. Positive: Repeated viability evidence under specified protocol. Negative: No activity detected once.
 Repeated viability evidence under specified protocol; excludes No activity detected once. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate. Explicit gap: explicit evidence gap; unavailable evidence does not imply false/zero/unchanged.
 

@@ -916,7 +916,7 @@
         "engineering-Pump"
       ],
       "expression": null,
-      "expected_type": "subject",
+      "expected_type": "unresolved",
       "dependencies": [
         "pump performance relation and specified duty; nominal capacity alone insufficient",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -934,7 +934,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which pump can deliver water against the pressure required at the fire ground?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "engineering-q02",
@@ -943,7 +946,7 @@
         "engineering-Valve"
       ],
       "expression": null,
-      "expected_type": "subject",
+      "expected_type": "unresolved",
       "dependencies": [
         "topology and valve state intervention model",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -961,7 +964,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which valve isolates the damaged pipe without cutting off the clinic?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "engineering-q03",
@@ -988,7 +994,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which transformer changed the supply voltage?",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "engineering-q04",
@@ -997,7 +1006,7 @@
         "engineering-CircuitBreaker"
       ],
       "expression": null,
-      "expected_type": "subject",
+      "expected_type": "unresolved",
       "dependencies": [
         "device participation in a bounded switching episode",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1015,7 +1024,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which circuit breaker interrupted current during the fault?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "engineering-q05",
@@ -1025,7 +1037,7 @@
         "engineering-TransfersLoad"
       ],
       "expression": "engineering:TransfersLoad",
-      "expected_type": "subject",
+      "expected_type": "relationship",
       "dependencies": [
         "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1043,7 +1055,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which bridge bearing is transferring the deck's load?",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "engineering-q06",
@@ -1071,7 +1086,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Has the repaired component recovered its required load capacity?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "engineering-q07",
@@ -1080,7 +1098,7 @@
         "engineering-AcceptanceTestEpisode"
       ],
       "expression": null,
-      "expected_type": "event",
+      "expected_type": "unresolved",
       "dependencies": [
         "verification versus validation evidence; not a new physical property",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1098,7 +1116,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Did the test demonstrate specified performance or suitability for the intended use?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "engineering-q08",
@@ -1126,7 +1147,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which connected parts are joined into this assembly?",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "engineering-q09",
@@ -1137,7 +1161,7 @@
         "engineering-Valve"
       ],
       "expression": "change in engineering:OpeningFraction of engineering:Valve",
-      "expected_type": "process (unary change); requires parser and active type validation",
+      "expected_type": "process",
       "dependencies": [
         "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1155,7 +1179,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "What changed when the valve was opened?",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "engineering-q10",
@@ -1164,7 +1191,7 @@
         "engineering-CorrosionDamage"
       ],
       "expression": null,
-      "expected_type": "process",
+      "expected_type": "unresolved",
       "dependencies": [
         "chemistry process plus material and geometry qualities",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1182,7 +1209,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Did corrosion reduce the component's remaining section?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "engineering-q11",
@@ -1209,7 +1239,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Was the product replaced or only one component repaired?",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "engineering-q12",
@@ -1219,7 +1252,7 @@
         "engineering-OperatingTemperature"
       ],
       "expression": "engineering:OperatingTemperature of engineering:Pump",
-      "expected_type": "subject",
+      "expected_type": "quality",
       "dependencies": [
         "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1237,7 +1270,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which pump overheated during operation?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "engineering-q13",
@@ -1246,7 +1282,7 @@
         "engineering-FunctionalFailureEpisode"
       ],
       "expression": null,
-      "expected_type": "event",
+      "expected_type": "unresolved",
       "dependencies": [
         "mismatch of requirement and delivered function, not fracture entailment",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1264,7 +1300,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Can the same intact component fail the intended service without breaking?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "engineering-q14",
@@ -1291,7 +1330,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which assembly operation produced this unit?",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "engineering-q15",
@@ -1300,7 +1342,7 @@
         "engineering-AcceptanceTestEpisode"
       ],
       "expression": null,
-      "expected_type": "event",
+      "expected_type": "unresolved",
       "dependencies": [
         "invalid generalisation beyond tested envelope",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1318,7 +1360,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Does a passed inspection guarantee safe operation under every wildfire exposure?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [

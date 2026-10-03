@@ -46,7 +46,7 @@ Checks: grammar untested; semantic blocked; adapter, reasoner and execution unte
 
 Source: FAO-CA. Preserved source-question order 3; no independent holdout claim.
 
-Draft expression: `land:SurfaceCoverFraction of land:ManagedField`. Expected category: quality.
+Draft expression: `land:SurfaceCoverFraction of land:ManagedField`. Expected expression-result category: quality.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: A value observed for the named bearer and stated convention.. Negative boundary: An unqualified score, missing observation or value from another bearer treated as equivalent..
@@ -56,7 +56,7 @@ Checks: grammar untested; semantic provisional; adapter, reasoner and execution 
 
 Source: FAO-WATER. Preserved source-question order 4; no independent holdout claim.
 
-Draft expression: `land:Irrigation`. Expected category: process.
+Draft expression: `land:Irrigation`. Expected expression-result category: process.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: water applied to field. Negative boundary: natural rainfall.
@@ -66,7 +66,7 @@ Checks: grammar untested; semantic provisional; adapter, reasoner and execution 
 
 Source: FAO-SEED. Preserved source-question order 5; no independent holdout claim.
 
-Draft expression: `land:SowingEpisode`. Expected category: event.
+Draft expression: `land:SowingEpisode`. Expected expression-result category: event.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: one completed field sowing. Negative boundary: unbounded sowing practice.
@@ -76,7 +76,7 @@ Checks: grammar untested; semantic provisional; adapter, reasoner and execution 
 
 Source: FAO-CA. Preserved source-question order 6; no independent holdout claim.
 
-Draft expression: `land:DisturbedAreaFraction of land:ManagedField`. Expected category: quality.
+Draft expression: `land:DisturbedAreaFraction of land:ManagedField`. Expected expression-result category: quality.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: A value observed for the named bearer and stated convention.. Negative boundary: An unqualified score, missing observation or value from another bearer treated as equivalent..
@@ -96,7 +96,7 @@ Checks: grammar untested; semantic blocked; adapter, reasoner and execution unte
 
 Source: FAO-SEED. Preserved source-question order 8; no independent holdout claim.
 
-Draft expression: `change in land:SurfaceCoverFraction of land:ManagedField`. Expected category: process (unary change); requires parser and active type validation.
+Draft expression: `change in land:SurfaceCoverFraction of land:ManagedField`. Expected expression-result category: process.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: residue deliberately left after harvest. Negative boundary: claim all residue is retained without evidence.
@@ -106,7 +106,7 @@ Checks: grammar untested; semantic blocked; adapter, reasoner and execution unte
 
 Source: FAO-SEED. Preserved source-question order 9; no independent holdout claim.
 
-Draft expression: `land:HarvestEpisode`. Expected category: event.
+Draft expression: `land:HarvestEpisode`. Expected expression-result category: event.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: one harvest operation. Negative boundary: annual harvest statistic.
@@ -156,7 +156,7 @@ Checks: grammar untested; semantic blocked; adapter, reasoner and execution unte
 
 Source: FAO-SEED. Preserved source-question order 14; no independent holdout claim.
 
-Draft expression: `land:OccupiesField linking land:CropStand to land:ManagedField`. Expected category: relationship.
+Draft expression: `land:OccupiesField linking land:CropStand to land:ManagedField`. Expected expression-result category: relationship.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: crop stand located in field. Negative boundary: crop name listed in a future plan.
@@ -457,3 +457,5 @@ All change and cessation require occurrents. Changes in qualities are separately
 Recorded counts: {"subject":5,"process":5,"relationship":5,"event":5,"quality":7}; 15 narrative questions. 7 draft expressions, 8 explicit gaps.
 
 JSON and incidence are locally checkable. Actual parser results will be supplied by the parent validation runner; this dossier does not claim a pass. No subject/process/relationship/event list is approved simply because it reaches five. Every unused candidate remains exposed in dossier.json coverage.
+
+Predicate-specific evidence correction: the conservation-agriculture cover summary directly cites [FAO-CA, Permanent soil organic cover](https://www.fao.org/conservation-agriculture/overview/conservation-agriculture-principles/en/), including its post-direct-seeding observation scope. This is a scheme-specific classification, not a universal ecosystem-health predicate.

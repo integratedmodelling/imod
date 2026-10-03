@@ -860,7 +860,10 @@
       "semantic_status": "blocked",
       "grammar_status": "parse_pass",
       "source_order": 1,
-      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed"
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Which land drains to the bridge outlet, and is it the same area feeding the well?",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "hydrology-Q02",
@@ -870,7 +873,7 @@
         "hydrology-LakeWaterBody"
       ],
       "expression": "hydrology:StoredWaterVolume of hydrology:LakeWaterBody",
-      "expected_type": "volume",
+      "expected_type": "quality",
       "dependencies": [
         "Lake identity and storage observation"
       ],
@@ -882,7 +885,10 @@
       "semantic_status": "blocked",
       "grammar_status": "parse_pass",
       "source_order": 2,
-      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed"
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "How much water is stored in this lake now?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "hydrology-Q03",
@@ -893,7 +899,7 @@
         "hydrology-FlowVelocity"
       ],
       "expression": "hydrology:Discharge of hydrology:ChannelFlow",
-      "expected_type": "quantity",
+      "expected_type": "quality",
       "dependencies": [
         "Second expression FlowVelocity of ChannelFlow; section/time basis required"
       ],
@@ -905,7 +911,10 @@
       "semantic_status": "blocked",
       "grammar_status": "parse_pass",
       "source_order": 3,
-      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed"
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Is river water moving faster after the storm, or is more water passing the section?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "hydrology-Q04",
@@ -916,7 +925,7 @@
         "hydrology-OverlandFlow"
       ],
       "expression": "hydrology:InfiltrationFlux of hydrology:Infiltration",
-      "expected_type": "quantity",
+      "expected_type": "quality",
       "dependencies": [
         "Rain partition needs water-balance model; expression is one component"
       ],
@@ -929,7 +938,10 @@
       "semantic_status": "blocked",
       "grammar_status": "parse_pass",
       "source_order": 4,
-      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed"
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "How much rain enters the ground instead of running over it?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "hydrology-Q05",
@@ -954,7 +966,10 @@
       "semantic_status": "blocked",
       "grammar_status": "parse_pass",
       "source_order": 5,
-      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed"
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Does this reach gain groundwater or lose water into the ground?",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "hydrology-Q06",
@@ -978,7 +993,10 @@
       "semantic_status": "blocked",
       "grammar_status": "parse_pass",
       "source_order": 6,
-      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed"
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Can groundwater beneath one catchment feed a stream in another?",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "hydrology-Q07",
@@ -1001,7 +1019,10 @@
       "semantic_status": "blocked",
       "grammar_status": "parse_pass",
       "source_order": 7,
-      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed"
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Why does this river flow after weeks without rain?",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "hydrology-Q08",
@@ -1011,7 +1032,7 @@
         "hydrology-Stage"
       ],
       "expression": "presence of hydrology:OverbankFloodEpisode",
-      "expected_type": "presence quality",
+      "expected_type": "quality",
       "dependencies": [
         "Event boundaries/inundated-region link and attribution separate"
       ],
@@ -1023,7 +1044,10 @@
       "semantic_status": "blocked",
       "grammar_status": "parse_pass",
       "source_order": 8,
-      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed"
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Did the storm cause actual overbank flooding or just a high reading?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "hydrology-Q09",
@@ -1034,7 +1058,7 @@
         "hydrology-OpenWaterEvaporation"
       ],
       "expression": "change in hydrology:StoredWaterVolume of hydrology:LakeWaterBody",
-      "expected_type": "change quality",
+      "expected_type": "process",
       "dependencies": [
         "Time transition and evaporation model; competing transfers"
       ],
@@ -1046,7 +1070,10 @@
       "semantic_status": "blocked",
       "grammar_status": "parse_pass",
       "source_order": 9,
-      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed"
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Did lake water decline by evaporation during the hot spell?",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "hydrology-Q10",
@@ -1068,7 +1095,10 @@
       "semantic_status": "blocked",
       "grammar_status": "parse_pass",
       "source_order": 10,
-      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed"
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Are two tributaries joined even when one is dry?",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "hydrology-Q11",
@@ -1079,7 +1109,7 @@
         "hydrology-GroundwaterDepletionEpisode"
       ],
       "expression": "change in hydrology:StoredWaterVolume of hydrology:GroundwaterBody",
-      "expected_type": "change quality",
+      "expected_type": "process",
       "dependencies": [
         "Pumping belongs agency/engineering bridge; storage properties needed"
       ],
@@ -1091,7 +1121,10 @@
       "semantic_status": "blocked",
       "grammar_status": "parse_pass",
       "source_order": 11,
-      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed"
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Has pumping reduced stored groundwater, and can we separate other losses?",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "hydrology-Q12",
@@ -1102,7 +1135,7 @@
         "hydrology-OverlandFlow"
       ],
       "expression": null,
-      "expected_type": "transported sediment mass/load gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Question asks transported sediment amount, not concentration. Requires sediment mass flux from concentration plus water discharge and contextual integration, compatible sampling basis, and attribution model. No single supported expression currently supplied."
       ],
@@ -1114,14 +1147,17 @@
       "semantic_status": "blocked",
       "grammar_status": "not_applicable",
       "source_order": 12,
-      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed"
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "After wildfire, does the next storm carry more sediment to the river?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "hydrology-Q13",
       "text": "Is this river seasonally low, or has an agreed drought episode begun?",
       "concept_ids": [],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Upstream drought definition and baseline source review outstanding"
       ],
@@ -1133,7 +1169,10 @@
       "semantic_status": "blocked",
       "grammar_status": "not_applicable",
       "source_order": 13,
-      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed"
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Is this river seasonally low, or has an agreed drought episode begun?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "hydrology-Q14",
@@ -1143,7 +1182,7 @@
         "hydrology-TributaryOf"
       ],
       "expression": "presence of hydrology:ReachWettingEpisode",
-      "expected_type": "presence quality",
+      "expected_type": "quality",
       "dependencies": [
         "Wetting-process distinction, channel identity and emergence machinery unresolved"
       ],
@@ -1155,7 +1194,10 @@
       "semantic_status": "blocked",
       "grammar_status": "parse_pass",
       "source_order": 14,
-      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed"
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Can a dry reach reconnect during a wetting episode?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "hydrology-Q15",
@@ -1165,7 +1207,7 @@
         "hydrology-LakeWaterBody"
       ],
       "expression": null,
-      "expected_type": "machinery gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Open-world resolution policy is core; no invented retention semantics"
       ],
@@ -1177,7 +1219,10 @@
       "semantic_status": "blocked",
       "grammar_status": "not_applicable",
       "source_order": 15,
-      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed"
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Without a resolved change estimate, what remains known about lake storage?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [

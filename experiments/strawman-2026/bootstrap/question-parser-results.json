@@ -361,13 +361,6 @@
       "diagnostics": ""
     },
     {
-      "id": "ecology/ecology-q03",
-      "expression": "change in ecology:SpeciesRichness of ecology:Community",
-      "sha256": "acd64516b1429e013e654feff20ccda1094d1f92764781849b964abf5c0c3b13",
-      "status": "PASS",
-      "diagnostics": ""
-    },
-    {
       "id": "ecology/ecology-q04",
       "expression": "ecology:Shelters linking life:BiologicalRemnant to life:Organism",
       "sha256": "f5a5c47f3bc7d394eef9c4db45cab5350f78e7e7113ebded6ded76c7e9ff5449",
@@ -1498,6 +1491,13 @@
       "id": "valuation/valuation-q13",
       "expression": "valuation:RegardsAsNonSubstitutable",
       "sha256": "d236ad55613e087368a100c891c5740e41b0d1dfed652a43560d6e75c58e6ef9",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "ecology/ecology-q03#richness-only",
+      "expression": "change in ecology:SpeciesRichness of ecology:Community",
+      "sha256": "acd64516b1429e013e654feff20ccda1094d1f92764781849b964abf5c0c3b13",
       "status": "PASS",
       "diagnostics": ""
     },

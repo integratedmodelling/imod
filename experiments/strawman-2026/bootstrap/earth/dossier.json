@@ -538,7 +538,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Planet identity vs region vs material sample.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Planet identity vs region vs material sample.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "earth-q02",
@@ -564,7 +567,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Lithospheric plate composition vs crust.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Lithospheric plate composition vs crust.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "earth-q03",
@@ -573,7 +579,7 @@
         "earth-CrustalBody"
       ],
       "expression": null,
-      "expected_type": "gap: crust-mantle interface quality/identity and inverse model",
+      "expected_type": "unresolved",
       "dependencies": [
         "Boundary inferred from wave response; not arbitrary map border.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -590,14 +596,17 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Boundary inferred from wave response; not arbitrary map border.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Boundary inferred from wave response; not arbitrary map border.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "earth-q04",
       "text": "What distinguishes a water body from the region surrounding it?",
       "concept_ids": [],
       "expression": null,
-      "expected_type": "gap: earth:WaterBody existing empty definition and Region volumetric/areal conflict",
+      "expected_type": "unresolved",
       "dependencies": [
         "Material body vs volumetric geographical region.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -614,14 +623,17 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Material body vs volumetric geographical region.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Material body vs volumetric geographical region.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "earth-q05",
       "text": "Can a coastal strip be identified without classifying every land-cover pixel?",
       "concept_ids": [],
       "expression": null,
-      "expected_type": "gap: Coast bearer definition and shoreline convention; authorities separate",
+      "expected_type": "unresolved",
       "dependencies": [
         "Shared geographic bearer vs authority classification.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -638,7 +650,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Shared geographic bearer vs authority classification.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Shared geographic bearer vs authority classification.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "earth-q06",
@@ -648,7 +663,7 @@
         "earth-RockBody"
       ],
       "expression": null,
-      "expected_type": "gap: explicit elevation quality/reference; no implicit change model",
+      "expected_type": "unresolved",
       "dependencies": [
         "Erosion-driven elevation change vs representation correction.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -665,7 +680,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Erosion-driven elevation change vs representation correction.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Erosion-driven elevation change vs representation correction.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "earth-q07",
@@ -691,7 +709,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Weathering vs erosion and transport.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Weathering vs erosion and transport.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "earth-q08",
@@ -718,7 +739,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Material provenance needs transport occurrence, not mere proximity.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Material provenance needs transport occurrence, not mere proximity.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "earth-q09",
@@ -744,7 +768,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Competing occurrents, not mutually exclusive predicates.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Competing occurrents, not mutually exclusive predicates.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "earth-q10",
@@ -770,7 +797,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Landslide/debris event segmentation is contextual.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Landslide/debris event segmentation is contextual.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "earth-q11",
@@ -797,14 +827,17 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Deposition, deposited material and bearer extent distinguished.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Deposition, deposited material and bearer extent distinguished.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "earth-q12",
       "text": "Is a river reach a body of water or a geographical corridor?",
       "concept_ids": [],
       "expression": null,
-      "expected_type": "gap: Reach place/material split belongs in shared earth/hydrology review",
+      "expected_type": "unresolved",
       "dependencies": [
         "Persistent place vs changing material body needs split.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -821,7 +854,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Persistent place vs changing material body needs split.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Persistent place vs changing material body needs split.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "earth-q13",
@@ -830,7 +866,7 @@
         "earth-CrustalBody"
       ],
       "expression": null,
-      "expected_type": "gap: no land-cover-to-geology equivalence",
+      "expected_type": "unresolved",
       "dependencies": [
         "Administrative/land-use authority categories do not entail geology.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -847,7 +883,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Administrative/land-use authority categories do not entail geology.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Administrative/land-use authority categories do not entail geology.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "earth-q14",
@@ -856,7 +895,7 @@
         "earth-CrustalBody"
       ],
       "expression": null,
-      "expected_type": "gap: seismic quality and inversion model outside shared earth articulation",
+      "expected_type": "unresolved",
       "dependencies": [
         "Observable meaning vs observational method/inverse model.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -873,7 +912,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Observable meaning vs observational method/inverse model.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Observable meaning vs observational method/inverse model.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "earth-q15",
@@ -882,7 +924,7 @@
         "earth-Erosion"
       ],
       "expression": null,
-      "expected_type": "gap: unresolved change remains open-world; no executable retention machinery",
+      "expected_type": "unresolved",
       "dependencies": [
         "Unknown change remains unresolved; not zero change or retention rule.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -899,7 +941,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Unknown change remains unresolved; not zero change or retention rule.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Unknown change remains unresolved; not zero change or retention rule.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [

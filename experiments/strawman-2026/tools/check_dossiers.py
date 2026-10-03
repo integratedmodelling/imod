@@ -2,15 +2,19 @@
 import json, hashlib, re, argparse
 from pathlib import Path
 from jsonschema import Draft202012Validator
+from dossier_consistency import category_errors,predicate_evidence_errors
 root=Path(__file__).resolve().parents[1]/'bootstrap'
 schema=json.loads((root/'dossier.schema.json').read_text())
 ap=argparse.ArgumentParser();ap.add_argument('--partial',action='store_true');args=ap.parse_args()
 expected=set('physical physics chemistry earth geography geology atmosphere hydrology oceanography soil life biology genetics ecology agency society sociology infrastructure engineering economics land valuation'.split())
 paths=sorted(root.glob('*/dossier.json')); errors=[]; reports=[];graph={}; all_names=set(); all_ids=set()
+all_dossiers=[json.loads(p.read_text(encoding='utf8')) for p in paths]
+errors.extend(category_errors(all_dossiers))
 for p in paths:
  d=json.loads(p.read_text(encoding='utf8'));all_names.update(c['name'] for c in d['concepts']);all_ids.update(c['id'] for c in d['concepts'])
 for p in paths:
  d=json.loads(p.read_text(encoding='utf8'));ns=d['domain']
+ errors.extend(ns+': '+e for e in predicate_evidence_errors(d))
  for e in Draft202012Validator(schema).iter_errors(d):errors.append(ns+': '+str(list(e.path))+' '+e.message)
  source_ids={s['id'] for s in d['sources']}; concepts={c['id']:c for c in d['concepts']}
  if len(source_ids)!=len(d['sources']) or len(concepts)!=len(d['concepts']):errors.append(ns+': duplicate source/concept ids')
@@ -29,7 +33,8 @@ for p in paths:
  if ns in imports:errors.append(ns+': self-import')
  counts={cat:sum(c['category']==cat for c in d['concepts']) for cat in ['subject','quality','process','relationship','event','predicate']}
  blocked=sum('block' in str(c.get('status','')).lower() or c.get('parent_status')=='blocked' for c in d['concepts'])
- reports.append(dict(domain=ns,counts=counts,questions=len(d['questions']),expressions=sum(bool(q.get('expression')) for q in d['questions']),blocked_candidates=blocked,review_ready_candidates=0,incidence=incidence,unused_candidates=[k for k,v in incidence.items() if not v],sha256=hashlib.sha256(p.read_bytes()).hexdigest()))
+ targets={c:max(0,5-counts[c]) for c in ['subject','process','relationship','event']}
+ reports.append(dict(domain=ns,counts=counts,category_target_shortfalls=targets,all_four_category_targets_met=not any(targets.values()),questions=len(d['questions']),expressions=sum(bool(q.get('expression')) for q in d['questions']),insufficient_components=sum(len(q.get('components',[])) for q in d['questions']),blocked_candidates=blocked,review_ready_candidates=0,incidence=incidence,unused_candidates=[k for k,v in incidence.items() if not v],sha256=hashlib.sha256(p.read_bytes()).hexdigest()))
 seen=set();active=set()
 def visit(n):
  if n in active:errors.append('Dependency cycle at '+n);return
@@ -40,6 +45,13 @@ def visit(n):
 for n in graph:visit(n)
 if not args.partial and set(graph)!=expected:errors.append('Retained domain set mismatch: '+str(expected.symmetric_difference(graph)))
 report=dict(scope='Local research schema/reference/incidence/DAG checks only. Ready count zero: no human semantic approval or full validation.',domains=len(reports),concepts=sum(sum(r['counts'].values()) for r in reports),questions=sum(r['questions'] for r in reports),expressions=sum(r['expressions'] for r in reports),errors=errors,dependency_graph=graph,dossiers=reports)
-(root/'coverage-validation.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')
+report['domains_meeting_all_four_targets']=[r['domain'] for r in reports if r['all_four_category_targets_met']]
+report['domains_with_shortfalls']=[r['domain'] for r in reports if not r['all_four_category_targets_met']]
+report['question_count_limit']='330 initial research slots include scientific questions, methodological probes and counterexamples; not 330 answerable scientific questions. Non-null expression does not imply sufficient formulation.'
+(root/'coverage-validation.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf8',newline='\n')
+lines=['# Initial research coverage dashboard','',f"{len(report['domains_meeting_all_four_targets'])} of {len(reports)} domains meet all four five-record targets; {len(report['domains_with_shortfalls'])} have principled shortfalls. These are explored records, not accepted concepts. No padding is used.",'',report['question_count_limit'],'','| Domain | Subjects | Processes | Relationships | Events | Targets |','|---|---:|---:|---:|---:|---|']
+for r in reports:lines.append('| '+r['domain']+' | '+' | '.join(str(r['counts'][c]) for c in ['subject','process','relationship','event'])+' | '+('counts met' if r['all_four_category_targets_met'] else 'shortfall: '+', '.join(k+' '+str(v) for k,v in r['category_target_shortfalls'].items() if v))+' |')
+lines+=['',f"{report['expressions']} question slots retain draft expressions; {report['questions']-report['expressions']} have full-formulation gaps. One additional richness-change component is explicitly insufficient for ecology composition. Zero concepts are approved. See per-domain evidence and blockers; quantities above do not measure scientific breadth or readiness."]
+(root/'COVERAGE_DASHBOARD.md').write_text('\n'.join(lines)+'\n',encoding='utf8',newline='\n')
 print(json.dumps({k:v for k,v in report.items() if k not in ['dossiers','dependency_graph']}))
 raise SystemExit(bool(errors))

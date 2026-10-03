@@ -789,7 +789,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 1,
         "independent": false
-      }
+      },
+      "narrative_intent": "Ambient air bearer distinct from ground; observed height/context external.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "atmosphere-q02",
@@ -823,7 +826,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 2,
         "independent": false
-      }
+      },
+      "narrative_intent": "Vapor mass fraction convention needed; relative humidity not synonym.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "atmosphere-q03",
@@ -858,7 +864,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 3,
         "independent": false
-      }
+      },
+      "narrative_intent": "Speed component; direction requires separate WindDirection resolution with from/to convention.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "atmosphere-q04",
@@ -892,7 +901,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 4,
         "independent": false
-      }
+      },
+      "narrative_intent": "Transition-zone and air-mass thermal comparison; blocked subject/configuration choice.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "atmosphere-q05",
@@ -906,7 +918,7 @@
         "atmosphere:AirTemperature"
       ],
       "expression": "change in atmosphere:AirTemperature of atmosphere:AirBody",
-      "expected_type": "change quality",
+      "expected_type": "process",
       "dependencies": [
         "Contextual temperature change resolved separately with passage evidence.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -926,7 +938,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 5,
         "independent": false
-      }
+      },
+      "narrative_intent": "Contextual temperature change resolved separately with passage evidence.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "atmosphere-q06",
@@ -960,7 +975,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 6,
         "independent": false
-      }
+      },
+      "narrative_intent": "Condensation occurrence versus transport; dedicated microphysics evidence still needed.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "atmosphere-q07",
@@ -994,7 +1012,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 7,
         "independent": false
-      }
+      },
+      "narrative_intent": "Two endpoint assertions attach air masses to identified front.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "atmosphere-q08",
@@ -1027,7 +1048,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 8,
         "independent": false
-      }
+      },
+      "narrative_intent": "Ground-reaching liquid precipitation amount for event context; not rain aloft.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "atmosphere-q09",
@@ -1061,7 +1085,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 9,
         "independent": false
-      }
+      },
+      "narrative_intent": "Separate height-specific air bodies; compare their qualities, no universal shared wind.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "atmosphere-q10",
@@ -1094,7 +1121,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 10,
         "independent": false
-      }
+      },
+      "narrative_intent": "Thermally diagnosed local tropospheric boundary; variable height.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "atmosphere-q11",
@@ -1128,7 +1158,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 11,
         "independent": false
-      }
+      },
+      "narrative_intent": "Dry relative/source-region characterization does not entail vapor absence.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "atmosphere-q12",
@@ -1142,7 +1175,7 @@
         "atmosphere:WindDirection"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Smoke transport needs pressure-gradient/velocity/turbulence and chemistry aerosols; no single pressure solution.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1162,7 +1195,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 12,
         "independent": false
-      }
+      },
+      "narrative_intent": "Smoke transport needs pressure-gradient/velocity/turbulence and chemistry aerosols; no single pressure solution.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "atmosphere-q13",
@@ -1176,7 +1212,7 @@
         "atmosphere:WindShiftEpisode"
       ],
       "expression": "change in atmosphere:WindDirection of atmosphere:AirBody",
-      "expected_type": "change quality",
+      "expected_type": "process",
       "dependencies": [
         "Observed direction transition with circular-angle handling in model.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1196,7 +1232,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 13,
         "independent": false
-      }
+      },
+      "narrative_intent": "Observed direction transition with circular-angle handling in model.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "atmosphere-q14",
@@ -1209,7 +1248,7 @@
         "atmosphere:FrontalZone"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Representation question: map symbol is not a domain front subject; no impermeability binding.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1229,7 +1268,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 14,
         "independent": false
-      }
+      },
+      "narrative_intent": "Representation question: map symbol is not a domain front subject; no impermeability binding.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "atmosphere-q15",
@@ -1242,7 +1284,7 @@
         "atmosphere:SpecificHumidity"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Unknown humidity is an evidence state and cannot confer Dry.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1262,7 +1304,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 15,
         "independent": false
-      }
+      },
+      "narrative_intent": "Unknown humidity is an evidence state and cannot confer Dry.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [

@@ -636,7 +636,7 @@
         "NPS"
       ],
       "expression": "presence of life:Organism",
-      "expected_type": "subject presence",
+      "expected_type": "quality",
       "positive": "Living shoot inspected after fire",
       "negative": "DNA from a dead stem",
       "draft_order": 1,
@@ -653,7 +653,10 @@
       "expected_interpretation": "Living shoot inspected after fire; excludes DNA from a dead stem. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Living shoot inspected after fire; excludes DNA from a dead stem. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "life-q02",
@@ -662,7 +665,7 @@
         "CELL"
       ],
       "expression": "count of life:Organism",
-      "expected_type": "numerosity",
+      "expected_type": "quality",
       "positive": "Separately bounded individuals",
       "negative": "Count of green pixels",
       "draft_order": 2,
@@ -679,7 +682,10 @@
       "expected_interpretation": "Separately bounded individuals; excludes Count of green pixels. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Separately bounded individuals; excludes Count of green pixels. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "life-q03",
@@ -688,7 +694,7 @@
         "CELL"
       ],
       "expression": "life:LivingMass of life:Organism",
-      "expected_type": "mass quality",
+      "expected_type": "quality",
       "positive": "Mass assigned to a bounded organism",
       "negative": "Dry soil mass",
       "draft_order": 3,
@@ -705,7 +711,10 @@
       "expected_interpretation": "Mass assigned to a bounded organism; excludes Dry soil mass. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Mass assigned to a bounded organism; excludes Dry soil mass. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "life-q04",
@@ -714,7 +723,7 @@
         "CELL"
       ],
       "expression": "presence of life:Cell",
-      "expected_type": "subject presence",
+      "expected_type": "quality",
       "positive": "Membrane-bounded cell",
       "negative": "Free DNA fragment",
       "draft_order": 4,
@@ -731,7 +740,10 @@
       "expected_interpretation": "Membrane-bounded cell; excludes Free DNA fragment. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Membrane-bounded cell; excludes Free DNA fragment. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "life-q05",
@@ -757,7 +769,10 @@
       "expected_interpretation": "Bark tissue with assessed damage; excludes Fire perimeter. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Bark tissue with assessed damage; excludes Fire perimeter. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "life-q06",
@@ -783,7 +798,10 @@
       "expected_interpretation": "Root belonging to this plant; excludes Nearby unrelated root. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Root belonging to this plant; excludes Nearby unrelated root. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "life-q07",
@@ -792,7 +810,7 @@
         "NPS"
       ],
       "expression": "presence of life:Seed",
-      "expected_type": "subject presence",
+      "expected_type": "quality",
       "positive": "Identified seed; viability separate",
       "negative": "Assuming every seed viable",
       "draft_order": 7,
@@ -809,7 +827,10 @@
       "expected_interpretation": "Identified seed; viability separate; excludes Assuming every seed viable. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Identified seed; viability separate; excludes Assuming every seed viable. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "life-q08",
@@ -835,7 +856,10 @@
       "expected_interpretation": "Bounded loss of viable organism; excludes Missed survey. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Bounded loss of viable organism; excludes Missed survey. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "life-q09",
@@ -861,7 +885,10 @@
       "expected_interpretation": "Production of separately individuated offspring; excludes Growth of one pre-existing cell. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Production of separately individuated offspring; excludes Growth of one pre-existing cell. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "life-q10",
@@ -870,7 +897,7 @@
         "NPS"
       ],
       "expression": "change in life:LivingMass of life:Organism",
-      "expected_type": "change quality",
+      "expected_type": "process",
       "positive": "Mass change attributed to growth occurrent",
       "negative": "Missing resurvey interpreted as zero",
       "draft_order": 10,
@@ -887,7 +914,10 @@
       "expected_interpretation": "Mass change attributed to growth occurrent; excludes Missing resurvey interpreted as zero. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Mass change attributed to growth occurrent; excludes Missing resurvey interpreted as zero. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "life-q11",
@@ -913,7 +943,10 @@
       "expected_interpretation": "Dead snag retains material continuity; excludes Unburned live tree. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Dead snag retains material continuity; excludes Unburned live tree. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "life-q12",
@@ -939,7 +972,10 @@
       "expected_interpretation": "Reproductive lineage evidence; excludes Nearest adult assumed parent. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Reproductive lineage evidence; excludes Nearest adult assumed parent. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "life-q13",
@@ -965,7 +1001,10 @@
       "expected_interpretation": "Bounded seed-to-seedling transition; excludes Transplanted seedling. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Bounded seed-to-seedling transition; excludes Transplanted seedling. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "life-q14",
@@ -991,7 +1030,10 @@
       "expected_interpretation": "Cellular part of organism; excludes Surface-associated bacterium automatically called host part. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Cellular part of organism; excludes Surface-associated bacterium automatically called host part. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "life-q15",
@@ -1000,7 +1042,7 @@
         "CELL"
       ],
       "expression": null,
-      "expected_type": "explicit evidence gap",
+      "expected_type": "unresolved",
       "positive": "Repeated viability evidence under specified protocol",
       "negative": "No activity detected once",
       "draft_order": 15,
@@ -1018,7 +1060,10 @@
       "expected_interpretation": "Repeated viability evidence under specified protocol; excludes No activity detected once. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Repeated viability evidence under specified protocol; excludes No activity detected once. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [

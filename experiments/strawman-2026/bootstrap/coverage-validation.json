@@ -3,7 +3,7 @@
   "domains": 22,
   "concepts": 457,
   "questions": 330,
-  "expressions": 214,
+  "expressions": 213,
   "errors": [],
   "dependency_graph": {
     "agency": [
@@ -82,8 +82,16 @@
         "event": 5,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 5,
+        "process": 0,
+        "relationship": 1,
+        "event": 0
+      },
+      "all_four_category_targets_met": false,
       "questions": 15,
       "expressions": 8,
+      "insufficient_components": 0,
       "blocked_candidates": 12,
       "review_ready_candidates": 0,
       "incidence": {
@@ -144,7 +152,7 @@
       "unused_candidates": [
         "agency-c10"
       ],
-      "sha256": "f615a38e991008b0b72318e81f0ae36b5a3af006c808cccc58b75f172f3aede1"
+      "sha256": "1dd273fe027d630780d8f70932203c2c7baf11bdfa8903cbe339ebcc6c23f798"
     },
     {
       "domain": "atmosphere",
@@ -156,8 +164,16 @@
         "event": 3,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 2,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
       "questions": 15,
       "expressions": 12,
+      "insufficient_components": 0,
       "blocked_candidates": 7,
       "review_ready_candidates": 0,
       "incidence": {
@@ -233,7 +249,7 @@
         "atmosphere:CloudContainedInAir",
         "atmosphere:AirMassOriginRegion"
       ],
-      "sha256": "94504dafa3622c594d013c5748181b4e961d483f2bfd45b15bc2923aa6c4e8bc"
+      "sha256": "1b99168ddd446b3496ad2fbd1d1dbfae6ab89149798d800d6ff2fa7c456816ab"
     },
     {
       "domain": "biology",
@@ -245,8 +261,16 @@
         "event": 5,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 2,
+        "event": 0
+      },
+      "all_four_category_targets_met": false,
       "questions": 15,
       "expressions": 13,
+      "insufficient_components": 0,
       "blocked_candidates": 22,
       "review_ready_candidates": 0,
       "incidence": {
@@ -312,7 +336,7 @@
         "biology-c21",
         "biology-c22"
       ],
-      "sha256": "db89709d7c7731b7bd11dc6868cced92ecea25bd807d641ccff8cf60c174880c"
+      "sha256": "dd04b4a13dd9a2b63d5111e9820cec8062967ea477785fb867e79cfcb1e13c4b"
     },
     {
       "domain": "chemistry",
@@ -324,8 +348,16 @@
         "event": 3,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 3,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
       "questions": 15,
       "expressions": 9,
+      "insufficient_components": 0,
       "blocked_candidates": 5,
       "review_ready_candidates": 0,
       "incidence": {
@@ -385,7 +417,7 @@
         "chemistry-PrecipitationEpisode",
         "chemistry-DissolutionEpisode"
       ],
-      "sha256": "ac88841758c88dbe9ade8f45c995102d7302d2011340981fcf3eb1ad29a522f2"
+      "sha256": "e4c56da45d6ba9c72a1286116429f9fd6d9e573e86959b6a8312a73e9c9225ea"
     },
     {
       "domain": "earth",
@@ -397,8 +429,16 @@
         "event": 3,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 1,
+        "relationship": 3,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
       "questions": 15,
       "expressions": 7,
+      "insufficient_components": 0,
       "blocked_candidates": 5,
       "review_ready_candidates": 0,
       "incidence": {
@@ -454,7 +494,7 @@
       "unused_candidates": [
         "earth-PlateContactsPlate"
       ],
-      "sha256": "610d99d9aebbc1b3621e7a35376a8b41d968bd33c77a41885db9dc5b7cf62656"
+      "sha256": "9c1cdeacadcadffc7fe4f7d515dd8cc467168a1cf66e5687e948e1746c219820"
     },
     {
       "domain": "ecology",
@@ -466,13 +506,23 @@
         "event": 3,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 2,
+        "process": 0,
+        "relationship": 0,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
       "questions": 15,
-      "expressions": 13,
+      "expressions": 12,
+      "insufficient_components": 1,
       "blocked_candidates": 19,
       "review_ready_candidates": 0,
       "incidence": {
         "ecology-c01": [],
-        "ecology-c02": [],
+        "ecology-c02": [
+          "ecology-q03"
+        ],
         "ecology-c03": [
           "ecology-q13"
         ],
@@ -519,14 +569,13 @@
       },
       "unused_candidates": [
         "ecology-c01",
-        "ecology-c02",
         "ecology-c06",
         "ecology-c07",
         "ecology-c08",
         "ecology-c15",
         "ecology-c16"
       ],
-      "sha256": "3f826f0331909d0329603fac858ecdbcf1d535319486a5538896c1070bc11e33"
+      "sha256": "6e4cbae683b16de9c5faaa3e4f9388c30f7309f802ab9c9aca6700225e356e06"
     },
     {
       "domain": "economics",
@@ -538,8 +587,16 @@
         "event": 5,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 0,
+        "event": 0
+      },
+      "all_four_category_targets_met": true,
       "questions": 15,
       "expressions": 6,
+      "insufficient_components": 0,
       "blocked_candidates": 9,
       "review_ready_candidates": 0,
       "incidence": {
@@ -619,7 +676,7 @@
         "economics-ConsumptionValue",
         "economics-TransactionValue"
       ],
-      "sha256": "e2ae771e3513c0141a51bc4cd09e22ee34a283d3e0a18dde908b2425f2ac359f"
+      "sha256": "0885dfce932b21814ff6d7935190f213eb4b206951a2c5edea3a9b1410f7e775"
     },
     {
       "domain": "engineering",
@@ -631,8 +688,16 @@
         "event": 5,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 0,
+        "event": 0
+      },
+      "all_four_category_targets_met": true,
       "questions": 15,
       "expressions": 8,
+      "insufficient_components": 0,
       "blocked_candidates": 7,
       "review_ready_candidates": 0,
       "incidence": {
@@ -718,7 +783,7 @@
         "engineering-ContactResistance",
         "engineering-RemainingSection"
       ],
-      "sha256": "c9fe33ea85557cb50954cb8eea74955c187954a8f572149ecc6f5c8dc3afa465"
+      "sha256": "717bc2857ed8e9f201ac14a1713b316b2f8df4e6e0f26c71e8d838fcc50a9103"
     },
     {
       "domain": "genetics",
@@ -730,8 +795,16 @@
         "event": 5,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 0,
+        "event": 0
+      },
+      "all_four_category_targets_met": true,
       "questions": 15,
       "expressions": 10,
+      "insufficient_components": 0,
       "blocked_candidates": 22,
       "review_ready_candidates": 0,
       "incidence": {
@@ -794,7 +867,7 @@
         "genetics-c15",
         "genetics-c20"
       ],
-      "sha256": "2c57dea7db9f2aaf712f8ffac29339ed25aae119e98d9e5afd369a475320f3a6"
+      "sha256": "af010511a5af5cd5f8d80f4e618ef64609772f9fec014e735dbdac50956b1154"
     },
     {
       "domain": "geography",
@@ -806,8 +879,16 @@
         "event": 3,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 2,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
       "questions": 15,
       "expressions": 10,
+      "insufficient_components": 0,
       "blocked_candidates": 3,
       "review_ready_candidates": 0,
       "incidence": {
@@ -882,7 +963,7 @@
         "geography:DuneOverwashEpisode",
         "geography:ScarpCollapseEpisode"
       ],
-      "sha256": "c0ff727c805fab08c178a22618877c6738201d0ea0affb532dc08159897ad359"
+      "sha256": "1d761dc41d5fdf8497d8e9306878fb94a0e3c2adbb690d5471549aab9d4faa39"
     },
     {
       "domain": "geology",
@@ -894,8 +975,16 @@
         "event": 3,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 2,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
       "questions": 15,
       "expressions": 11,
+      "insufficient_components": 0,
       "blocked_candidates": 0,
       "review_ready_candidates": 0,
       "incidence": {
@@ -970,7 +1059,7 @@
         "geology:SedimentDeposition",
         "geology:StratumSuperposition"
       ],
-      "sha256": "f8d6ee8b3c9fc7fb54a03e017b7829b4e924e28b863c22a25283801f8b93f928"
+      "sha256": "68daf4337545f84b5e179010b168ed4b246f6eb5d283f8b2ef701be2f35644c9"
     },
     {
       "domain": "hydrology",
@@ -982,8 +1071,16 @@
         "event": 5,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 0,
+        "event": 0
+      },
+      "all_four_category_targets_met": true,
       "questions": 15,
       "expressions": 12,
+      "insufficient_components": 0,
       "blocked_candidates": 23,
       "review_ready_candidates": 0,
       "incidence": {
@@ -1084,7 +1181,7 @@
         "hydrology-RechargeEpisode",
         "hydrology-LakeDrawdownEpisode"
       ],
-      "sha256": "9ae260f2e94c12274ed540d1d7117796bda84cc0709acfc255633cc5d5f4d472"
+      "sha256": "fe8cb7418ccddd2bacd5cbe5a334bece0ecc1c0844e3d60e75ccb559e5146013"
     },
     {
       "domain": "infrastructure",
@@ -1096,8 +1193,16 @@
         "event": 5,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 0,
+        "event": 0
+      },
+      "all_four_category_targets_met": true,
       "questions": 15,
       "expressions": 6,
+      "insufficient_components": 0,
       "blocked_candidates": 2,
       "review_ready_candidates": 0,
       "incidence": {
@@ -1176,7 +1281,7 @@
         "infrastructure-LeakageRate",
         "infrastructure-InternalPressure"
       ],
-      "sha256": "850649e6e713798a74da4fc25b6e8032fb672007a23105352e6a948142e4e816"
+      "sha256": "9a6fd1ce82357e1abce7c0c6043b22a4387459aa9c810bfccea2244758008584"
     },
     {
       "domain": "land",
@@ -1188,8 +1293,16 @@
         "event": 5,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 0,
+        "event": 0
+      },
+      "all_four_category_targets_met": true,
       "questions": 15,
       "expressions": 7,
+      "insufficient_components": 0,
       "blocked_candidates": 11,
       "review_ready_candidates": 0,
       "incidence": {
@@ -1271,7 +1384,7 @@
         "land-AppliedWaterAmount",
         "land-SeedPlacementDepth"
       ],
-      "sha256": "23ae9f7f5fa647d87943961a27a70644049a48a1f0ae0e325efe2bb3e877d6ad"
+      "sha256": "a4fd7e6ad890b732bccf0a31bb0c735d9d37a211f3e0b21183e0edca410a7909"
     },
     {
       "domain": "life",
@@ -1283,8 +1396,16 @@
         "event": 3,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 2,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
       "questions": 15,
       "expressions": 14,
+      "insufficient_components": 0,
       "blocked_candidates": 18,
       "review_ready_candidates": 0,
       "incidence": {
@@ -1342,7 +1463,7 @@
         "life-c11",
         "life-c17"
       ],
-      "sha256": "1dde008b003400f36c992d4da30a03f8e466d3b1c4ef281cb0722ac3c7fb99fb"
+      "sha256": "ed3c39b374c13237c423561343c4ee3bb5a61f928a2795a40efc94993ec796b0"
     },
     {
       "domain": "oceanography",
@@ -1354,8 +1475,16 @@
         "event": 3,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 2,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
       "questions": 15,
       "expressions": 9,
+      "insufficient_components": 0,
       "blocked_candidates": 6,
       "review_ready_candidates": 0,
       "incidence": {
@@ -1429,7 +1558,7 @@
         "oceanography:TidalHighWaterOccurrence",
         "oceanography:AcidificationEpisode"
       ],
-      "sha256": "73bf87586cbdd557954bff24bfc4be55f84aab1df0b90033e47d339bc3c572af"
+      "sha256": "76183ea5849a86f17474cb927a5a83faa6359af6e33a5ee11dac0e5c54c780e9"
     },
     {
       "domain": "physical",
@@ -1441,8 +1570,16 @@
         "event": 2,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 2,
+        "process": 3,
+        "relationship": 3,
+        "event": 3
+      },
+      "all_four_category_targets_met": false,
       "questions": 15,
       "expressions": 10,
+      "insufficient_components": 0,
       "blocked_candidates": 5,
       "review_ready_candidates": 0,
       "incidence": {
@@ -1493,7 +1630,7 @@
       "unused_candidates": [
         "physical-MaterialAggregation"
       ],
-      "sha256": "f065b7812331dc01e522e880c8ff16a021514e830c1d92a7891b7f51733a01f9"
+      "sha256": "127d366814d9f9acbb19db7f600829a4113684b14212f8b8f9a813468a934a15"
     },
     {
       "domain": "physics",
@@ -1505,8 +1642,16 @@
         "event": 3,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 2,
+        "process": 0,
+        "relationship": 3,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
       "questions": 15,
       "expressions": 12,
+      "insufficient_components": 0,
       "blocked_candidates": 3,
       "review_ready_candidates": 0,
       "incidence": {
@@ -1565,7 +1710,7 @@
         "physics-CompressionEpisode",
         "physics-ImpulseEpisode"
       ],
-      "sha256": "44ac47491efd80a418c56c62ccfe27d258e53a044b33b749f26177ffac012739"
+      "sha256": "0350614545e223e240b49e18c308bd23984aad1f77a6d295eba7c560fcf5d2af"
     },
     {
       "domain": "society",
@@ -1577,8 +1722,16 @@
         "event": 5,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 2,
+        "relationship": 0,
+        "event": 0
+      },
+      "all_four_category_targets_met": false,
       "questions": 15,
       "expressions": 11,
+      "insufficient_components": 0,
       "blocked_candidates": 14,
       "review_ready_candidates": 0,
       "incidence": {
@@ -1657,7 +1810,7 @@
         "society-c22",
         "society-c23"
       ],
-      "sha256": "55e4e68e53f47812fcc1e3225c46e62474657d85ae8d9d656676322df4b5a0a0"
+      "sha256": "4f4ad091fda3437e5bc4c014ca01d7eccd5bf574697a29c02c4e61a493ae907e"
     },
     {
       "domain": "sociology",
@@ -1669,8 +1822,16 @@
         "event": 5,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 3,
+        "process": 0,
+        "relationship": 1,
+        "event": 0
+      },
+      "all_four_category_targets_met": false,
       "questions": 15,
       "expressions": 9,
+      "insufficient_components": 0,
       "blocked_candidates": 16,
       "review_ready_candidates": 0,
       "incidence": {
@@ -1740,7 +1901,7 @@
       "unused_candidates": [
         "sociology-c06"
       ],
-      "sha256": "fb91e598b426674c80103235d63fc0986b757d0c72a55ddfc308e6274ec5fd55"
+      "sha256": "aa18f4b6a810a3accae4ecb5c7da660cb16fd2ac99017ae0da26692c6e270d23"
     },
     {
       "domain": "soil",
@@ -1752,8 +1913,16 @@
         "event": 3,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 2,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
       "questions": 15,
       "expressions": 9,
+      "insufficient_components": 0,
       "blocked_candidates": 7,
       "review_ready_candidates": 0,
       "incidence": {
@@ -1826,7 +1995,7 @@
         "soil:PedonCharacterizesBody",
         "soil:AggregateDisruptionEpisode"
       ],
-      "sha256": "ed822a46035b5f45eb70b493c9edc52cc905ae7a28cd2b7fcb2804fd570bf796"
+      "sha256": "9250633ff77a732d90e421e67bd459dae67e4dd183b402ced508275d07e23e9e"
     },
     {
       "domain": "valuation",
@@ -1838,8 +2007,16 @@
         "event": 5,
         "predicate": 0
       },
+      "category_target_shortfalls": {
+        "subject": 4,
+        "process": 0,
+        "relationship": 0,
+        "event": 0
+      },
+      "all_four_category_targets_met": false,
       "questions": 15,
       "expressions": 8,
+      "insufficient_components": 0,
       "blocked_candidates": 18,
       "review_ready_candidates": 0,
       "incidence": {
@@ -1909,7 +2086,34 @@
         "valuation-c12",
         "valuation-c16"
       ],
-      "sha256": "01e6306dc1353959a601b7d27306e1d3644329091b83914f78a9170adfdb6109"
+      "sha256": "de9feff0c555384dc0848f18dcf42b132c30d4b902bdf991c9b61aa28c60bbe5"
     }
-  ]
+  ],
+  "domains_meeting_all_four_targets": [
+    "economics",
+    "engineering",
+    "genetics",
+    "hydrology",
+    "infrastructure",
+    "land"
+  ],
+  "domains_with_shortfalls": [
+    "agency",
+    "atmosphere",
+    "biology",
+    "chemistry",
+    "earth",
+    "ecology",
+    "geography",
+    "geology",
+    "life",
+    "oceanography",
+    "physical",
+    "physics",
+    "society",
+    "sociology",
+    "soil",
+    "valuation"
+  ],
+  "question_count_limit": "330 initial research slots include scientific questions, methodological probes and counterexamples; not 330 answerable scientific questions. Non-null expression does not imply sufficient formulation."
 }

@@ -882,7 +882,7 @@
         "land-ManagedField"
       ],
       "expression": null,
-      "expected_type": "subject",
+      "expected_type": "unresolved",
       "dependencies": [
         "observed cover plus management purpose; greenness does not establish use",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -900,7 +900,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which fields are being used for food crops rather than merely covered by green vegetation?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "land-q02",
@@ -909,7 +912,7 @@
         "land-LandEvaluationUnit"
       ],
       "expression": null,
-      "expected_type": "subject",
+      "expected_type": "unresolved",
       "dependencies": [
         "crop-specific requirements and land qualities; generic suitable is ambiguous",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -927,7 +930,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which land units can support the specified crop without irrigation?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "land-q03",
@@ -955,7 +961,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "How much soil surface remains covered after sowing?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "land-q04",
@@ -982,7 +991,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Where did irrigation add water during this dry spell?",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "land-q05",
@@ -1009,7 +1021,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which field was planted in this sowing episode?",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "land-q06",
@@ -1037,7 +1052,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "How much of the field was mechanically disturbed?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "land-q07",
@@ -1046,7 +1064,7 @@
         "land-ManagesField"
       ],
       "expression": null,
-      "expected_type": "relationship",
+      "expected_type": "unresolved",
       "dependencies": [
         "holding/operator identity and management records; adjacency insufficient",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1064,7 +1082,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which land is managed as part of the same agricultural holding?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "land-q08",
@@ -1075,7 +1096,7 @@
         "land-ManagedField"
       ],
       "expression": "change in land:SurfaceCoverFraction of land:ManagedField",
-      "expected_type": "process (unary change); requires parser and active type validation",
+      "expected_type": "process",
       "dependencies": [
         "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1093,7 +1114,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Did residue retention change surface cover without changing crop species?",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "land-q09",
@@ -1120,7 +1144,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which harvest removed products from this crop stand?",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "land-q10",
@@ -1129,7 +1156,7 @@
         "land-VegetationPatch"
       ],
       "expression": null,
-      "expected_type": "subject",
+      "expected_type": "unresolved",
       "dependencies": [
         "authority/version criteria; reject automatic equivalence",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1147,7 +1174,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Do two maps calling an area forest use the same definition?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "land-q11",
@@ -1156,7 +1186,7 @@
         "land-CoverChangeEpisode"
       ],
       "expression": null,
-      "expected_type": "event",
+      "expected_type": "unresolved",
       "dependencies": [
         "distinguish observed cover change from land-use conversion; fire event upstream",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1174,7 +1204,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Did fire change land cover while the intended farming use remained unchanged?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "land-q12",
@@ -1183,7 +1216,7 @@
         "land-PlantAvailableWater"
       ],
       "expression": null,
-      "expected_type": "quality",
+      "expected_type": "unresolved",
       "dependencies": [
         "distinct soil/root-zone qualities and causal models",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1201,7 +1234,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Is poor crop performance due to water shortage or an unsuitable soil condition?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "land-q13",
@@ -1210,7 +1246,7 @@
         "land-Tillage"
       ],
       "expression": null,
-      "expected_type": "process",
+      "expected_type": "unresolved",
       "dependencies": [
         "invalid implication; one practice is not comprehensive sustainability",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1228,7 +1264,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Does no-till automatically make this farm sustainable?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "land-q14",
@@ -1257,7 +1296,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which crop stand occupies this field now?",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "land-q15",
@@ -1266,7 +1308,7 @@
         "land-LandUseConversion"
       ],
       "expression": null,
-      "expected_type": "event",
+      "expected_type": "unresolved",
       "dependencies": [
         "bounded implemented management transition versus plan; observation evidence required",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1284,7 +1326,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which land-use change is observed, and which is only planned?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [
@@ -1293,17 +1338,28 @@
       "proposed_summary": "conservation agriculture cover class",
       "basis": "Ordered FAO-CA scheme-specific ranges at its prescribed observation stage; authority attachment, no universal ecosystem-health ordering.",
       "status": "provisional_no_predicate_declaration",
-      "evidence": "Source scope and measurement convention require human review; unknown/unmeasured/disputed remain evidence states.",
+      "evidence": "FAO-CA directly supports the scheme-specific cover categorization and observation timing. Other source IDs are background context, not substitutes for that claim.",
       "comparison_rule": "Ordered FAO-CA scheme-specific ranges at its prescribed observation stage; authority attachment, no universal ecosystem-health ordering.",
       "classification_kind": "ordered_contextual",
       "overlap": "Multiple limitation and performance summaries may coexist; no exclusive exhaustive partition asserted.",
       "context_scope": "Land management and agricultural use as observable practices on specified land units; biophysical cover, intended use, tenure and suitability are different axes.",
       "source_ids": [
+        "FAO-CA",
         "FAO-EVAL",
         "FAO-LCCS",
         "FAO-SEED"
       ],
-      "boundary_rule": "Use only the named authority/design/reference criterion in basis; absent criterion blocks classification."
+      "boundary_rule": "Use only the named authority/design/reference criterion in basis; absent criterion blocks classification.",
+      "claim_evidence": [
+        {
+          "source_id": "FAO-CA",
+          "url": "https://www.fao.org/conservation-agriculture/overview/conservation-agriculture-principles/en/",
+          "locator": "Permanent soil organic cover paragraph",
+          "scope": "FAO conservation-agriculture cover classes and timing immediately after direct seeding; does not establish an ecosystem-health ordering.",
+          "retrieved": "2026-10-03",
+          "status": "primary source reread; predicate remains unapproved"
+        }
+      ]
     },
     {
       "quality": "land:PlantAvailableWater",

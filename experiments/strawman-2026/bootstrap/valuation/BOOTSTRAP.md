@@ -242,7 +242,7 @@ Expressions below are candidate observable strings, not complete query programs.
 
 Source-first sequence 1; sources IPBES. Motivation: multiple value meanings and perspectives. Concepts: valuation-c07.
 
-Draft expression: `valuation:ValuesObject`. Expected type: relationship. Expected interpretation: Value subject and observer/perspective required; no scalar total importance inferred.
+Draft expression: `valuation:ValuesObject`. Expected expression-result category: relationship. Expected interpretation: Value subject and observer/perspective required; no scalar total importance inferred.
 
 Positive: Resident values cultural connection. Negative: Only timber price returned as complete value.
 
@@ -252,7 +252,7 @@ Dependencies/checks: Value subject and observer/perspective required; no scalar 
 
 Source-first sequence 2; sources IPBES. Motivation: representation of valuations not universal value. Concepts: valuation-c01, valuation-c07.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: subject and valuation relationships. Expected interpretation: Need provenance linking included viewpoints to people/groups; attendance alone insufficient.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Need provenance linking included viewpoints to people/groups; attendance alone insufficient.
 
 Positive: Dissenting valuation retained. Negative: Panel average treated as all residents' view.
 
@@ -262,7 +262,7 @@ Dependencies/checks: Need provenance linking included viewpoints to people/group
 
 Source-first sequence 3; sources SEEA. Motivation: exchange versus welfare and other values. Concepts: valuation-c17.
 
-Draft expression: `valuation:ExchangeValue of imod:Subject`. Expected type: quality. Expected interpretation: Specified accounting exchange concept only; not total value.
+Draft expression: `valuation:ExchangeValue of imod:Subject`. Expected expression-result category: quality. Expected interpretation: Specified accounting exchange concept only; not total value.
 
 Positive: Scoped exchange estimate. Negative: Exchange value called full social importance.
 
@@ -272,7 +272,7 @@ Dependencies/checks: Specified accounting exchange concept only; not total value
 
 Source-first sequence 4; sources RISK. Motivation: potential loss not observed damage. Concepts: valuation-c19.
 
-Draft expression: `valuation:PotentialLoss of imod:Subject`. Expected type: quality. Expected interpretation: Must specialize loss dimension and hazard scenario; potential not observed harm.
+Draft expression: `valuation:PotentialLoss of imod:Subject`. Expected expression-result category: quality. Expected interpretation: Must specialize loss dimension and hazard scenario; potential not observed harm.
 
 Positive: Scenario-specific damaged-building quantity. Negative: All potential loss called actual loss.
 
@@ -282,7 +282,7 @@ Dependencies/checks: Must specialize loss dimension and hazard scenario; potenti
 
 Source-first sequence 5; sources VULN. Motivation: exposure and susceptibility distinct. Concepts: valuation-c20.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: exposure relationship and susceptibility quality. Expected interpretation: Upstream exposure/hazard and vulnerability measurements absent; existing valuation configurations not assumed equivalent.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Upstream exposure/hazard and vulnerability measurements absent; existing valuation configurations not assumed equivalent.
 
 Positive: Exposed but resistant structure. Negative: Presence in hazard area equated high damage.
 
@@ -292,7 +292,7 @@ Dependencies/checks: Upstream exposure/hazard and vulnerability measurements abs
 
 Source-first sequence 6; sources IPBES. Motivation: nonmonetary and potentially noncompensatory judgment. Concepts: valuation-c11.
 
-Draft expression: `valuation:RegardsAsNonSubstitutable`. Expected type: relationship. Expected interpretation: Contextual expression of non-substitutability; absence of monetary estimate insufficient.
+Draft expression: `valuation:RegardsAsNonSubstitutable`. Expected expression-result category: relationship. Expected interpretation: Contextual expression of non-substitutability; absence of monetary estimate insufficient.
 
 Positive: Stated irreplaceable relationship to site. Negative: Missing price treated as priceless predicate.
 
@@ -302,7 +302,7 @@ Dependencies/checks: Contextual expression of non-substitutability; absence of m
 
 Source-first sequence 7; sources IPBES. Motivation: explicit observer and criteria. Concepts: valuation-c18.
 
-Draft expression: `valuation:ReportedPreference of imod:Agent`. Expected type: quality. Expected interpretation: Observer-specific ordering; object/comparison set still requires binding.
+Draft expression: `valuation:ReportedPreference of imod:Agent`. Expected expression-result category: quality. Expected interpretation: Observer-specific ordering; object/comparison set still requires binding.
 
 Positive: Two explicit different rankings. Negative: One respondent's ranking universalized.
 
@@ -312,7 +312,7 @@ Dependencies/checks: Observer-specific ordering; object/comparison set still req
 
 Source-first sequence 8; sources RISK. Motivation: damage versus valuation revision, no automatic monetary conversion. Concepts: valuation-c15, valuation-c14.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: two events and qualities. Expected interpretation: Physical harm and appraisal change must be separately observed; economic conversion belongs in model.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Physical harm and appraisal change must be separately observed; economic conversion belongs in model.
 
 Positive: Damage followed by explicit reappraisal. Negative: All damage automatically equals full replacement price.
 
@@ -322,7 +322,7 @@ Dependencies/checks: Physical harm and appraisal change must be separately obser
 
 Source-first sequence 9; sources RISK. Motivation: tolerability is contextual judgment. Concepts: valuation-c21.
 
-Draft expression: `valuation:RiskTolerability of imod:Agent`. Expected type: quality. Expected interpretation: Agent, criterion, loss dimension and scenario required; no universal acceptable threshold.
+Draft expression: `valuation:RiskTolerability of imod:Agent`. Expected expression-result category: quality. Expected interpretation: Agent, criterion, loss dimension and scenario required; no universal acceptable threshold.
 
 Positive: Stated stakeholder criterion. Negative: Analyst's tolerance imposed on all.
 
@@ -332,7 +332,7 @@ Dependencies/checks: Agent, criterion, loss dimension and scenario required; no 
 
 Source-first sequence 10; sources IPBES. Motivation: valuation revision occurrence; causal mechanism remains model. Concepts: valuation-c05, valuation-c18.
 
-Draft expression: `change in valuation:ReportedPreference of imod:Agent`. Expected type: quality change. Expected interpretation: Same observer, alternatives and elicitation context; information effect is a testable mechanism outside ontology.
+Draft expression: `change in valuation:ReportedPreference of imod:Agent`. Expected expression-result category: process. Expected interpretation: Same observer, alternatives and elicitation context; information effect is a testable mechanism outside ontology.
 
 Positive: Documented changed ranking. Negative: Different respondents compared as one person's change.
 
@@ -342,7 +342,7 @@ Dependencies/checks: Same observer, alternatives and elicitation context; inform
 
 Source-first sequence 11; sources SEEA. Motivation: distribution cannot be inferred from aggregate value. Concepts: valuation-c09, valuation-c10.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: directed relationships and amounts. Expected interpretation: Distribution among agents must be resolved; net total does not identify recipients.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Distribution among agents must be resolved; net total does not identify recipients.
 
 Positive: One group benefits while another bears loss. Negative: Aggregate gain assumed gain for every resident.
 
@@ -352,7 +352,7 @@ Dependencies/checks: Distribution among agents must be resolved; net total does 
 
 Source-first sequence 12; sources SEEA. Motivation: measurement concept explicit. Concepts: valuation-c17, valuation-c04.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: monetary quality specializations. Expected interpretation: Exchange estimate, transaction and willingness-to-pay meanings must be split; latter upper specialization missing.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Exchange estimate, transaction and willingness-to-pay meanings must be split; latter upper specialization missing.
 
 Positive: Amount accompanied by exact valuation concept. Negative: Any dollar figure treated equivalent.
 
@@ -362,7 +362,7 @@ Dependencies/checks: Exchange estimate, transaction and willingness-to-pay meani
 
 Source-first sequence 13; sources IPBES. Motivation: substitutability is not identical to price. Concepts: valuation-c11.
 
-Draft expression: `valuation:RegardsAsNonSubstitutable`. Expected type: relationship. Expected interpretation: Substitutability criterion and perspective independent of amount.
+Draft expression: `valuation:RegardsAsNonSubstitutable`. Expected expression-result category: relationship. Expected interpretation: Substitutability criterion and perspective independent of amount.
 
 Positive: Explicit rejection of substitution in stated frame. Negative: High price alone means non-substitutable.
 
@@ -372,7 +372,7 @@ Dependencies/checks: Substitutability criterion and perspective independent of a
 
 Source-first sequence 14; sources IPBES. Motivation: incomparability versus insufficient evidence. Concepts: valuation-c18, valuation-c13.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: quality plus judgment/evidence state. Expected interpretation: Distinguish explicit incomparability from incomplete elicitation; no Unknown predicate.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Distinguish explicit incomparability from incomplete elicitation; no Unknown predicate.
 
 Positive: Explicitly incomparable alternatives recorded. Negative: No response interpreted as philosophical incomparability.
 
@@ -382,7 +382,7 @@ Dependencies/checks: Distinguish explicit incomparability from incomplete elicit
 
 Source-first sequence 15; sources RISK. Motivation: open-world unknown, not zero loss or absence of hazard. Concepts: valuation-c19.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: unresolved quality. Expected interpretation: Unknown risk resolution means no supported estimate; never infer Safe or zero potential loss.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Unknown risk resolution means no supported estimate; never infer Safe or zero potential loss.
 
 Positive: Available hazard knowledge retained despite absent loss estimate. Negative: Unresolved risk taken as zero.
 

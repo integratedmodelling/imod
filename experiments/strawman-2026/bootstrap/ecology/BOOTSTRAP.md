@@ -12,7 +12,7 @@ QUESTIONS_FIRST.json preserves original source-led order before candidate rows. 
 
 Sources: FOOD; original order 1; incidence: ecology-c09.
 Draft expression: `ecology:FeedsOn linking life:Organism to life:Organism`
-Expected type: relationship. Positive: Observed trophic link. Negative: Spatial co-occurrence.
+Expected expression-result category: relationship. Positive: Observed trophic link. Negative: Spatial co-occurrence.
 Observed trophic link; excludes Spatial co-occurrence. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -20,23 +20,24 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: NPS; original order 2; incidence: ecology-c17.
 Draft expression: `ecology:PopulationAbundance of ecology:Population`
-Expected type: quality. Positive: Bounded population census. Negative: All organisms irrespective of population.
+Expected expression-result category: quality. Positive: Bounded population census. Negative: All organisms irrespective of population.
 Bounded population census; excludes All organisms irrespective of population. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
 ### ecology-q03: Has the mix of species changed during recovery?
 
-Sources: NPS; original order 3; incidence: ecology-c18.
-Draft expression: `change in ecology:SpeciesRichness of ecology:Community`
-Expected type: change quality. Positive: Before/after composition with succession context. Negative: Richness alone treated as full composition.
-Before/after composition with succession context; excludes Richness alone treated as full composition. Expression is a component observable where full question needs multiple resolutions.
-Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
+Sources: NPS; original order 3; incidence: ecology-c18 and ecology-c02.
+Full draft expression: absent; expected result category unresolved; grammar not applicable; semantic status blocked.
+
+Insufficient component: `change in ecology:SpeciesRichness of ecology:Community`. Its result category is process under the operator contract, and its syntax parsed successfully. It measures change in species count, not species replacement. For example, {A,B} -> {C,D} retains richness 2 while replacing all species.
+
+Missing observables are community species composition and compositional turnover. Review must choose incidence or abundance-weighted membership, establish the Community bearer, comparable boundaries/support, versioned taxon identities and detection evidence. A comparison metric/model remains separate and unselected. Before/after taxon-identified composition is the positive case; richness alone is the counterexample. No composition declaration is installed by this correction.
 
 ### ecology-q04: Are dead trees providing shelter for surviving animals?
 
 Sources: NPS; original order 4; incidence: ecology-c10.
 Draft expression: `ecology:Shelters linking life:BiologicalRemnant to life:Organism`
-Expected type: relationship. Positive: Occupied snag shelter. Negative: Any standing dead tree assigned benefit.
+Expected expression-result category: relationship. Positive: Occupied snag shelter. Negative: Any standing dead tree assigned benefit.
 Occupied snag shelter; excludes Any standing dead tree assigned benefit. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -44,7 +45,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: SYMBIOSIS; original order 5; incidence: ecology-c11.
 Draft expression: `ecology:Parasitizes linking life:Organism to life:Organism`
-Expected type: relationship. Positive: Evidence of feeding/harm in scoped interaction. Negative: Close association assumed parasitism.
+Expected expression-result category: relationship. Positive: Evidence of feeding/harm in scoped interaction. Negative: Close association assumed parasitism.
 Evidence of feeding/harm in scoped interaction; excludes Close association assumed parasitism. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -52,7 +53,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: SYMBIOSIS; original order 6; incidence: ecology-c12.
 Draft expression: `ecology:Mutualism linking life:Organism to life:Organism`
-Expected type: relationship. Positive: Benefits on specified outcome axes. Negative: Association alone.
+Expected expression-result category: relationship. Positive: Benefits on specified outcome axes. Negative: Association alone.
 Benefits on specified outcome axes; excludes Association alone. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -60,7 +61,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: NPS; original order 7; incidence: ecology-c04.
 Draft expression: `ecology:Colonization`
-Expected type: process. Positive: Arrival followed by establishment criterion. Negative: Transient visitor.
+Expected expression-result category: process. Positive: Arrival followed by establishment criterion. Negative: Transient visitor.
 Arrival followed by establishment criterion; excludes Transient visitor. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -68,7 +69,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: NPS; original order 8; incidence: ecology-c14.
 Draft expression: `ecology:LocalExtirpation`
-Expected type: event. Positive: Bounded local cessation with detection evidence. Negative: One negative survey.
+Expected expression-result category: event. Positive: Bounded local cessation with detection evidence. Negative: One negative survey.
 Bounded local cessation with detection evidence; excludes One negative survey. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -76,7 +77,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: FOOD; original order 9; incidence: ecology-c19.
 Draft expression: `ecology:CommunityBiomass of ecology:Community`
-Expected type: mass quality. Positive: Defined living biomass pool. Negative: Total wet soil mass.
+Expected expression-result category: quality. Positive: Defined living biomass pool. Negative: Total wet soil mass.
 Defined living biomass pool; excludes Total wet soil mass. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -84,7 +85,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: FOOD; original order 10; incidence: ecology-c09.
 Draft expression: `ecology:FeedsOn linking life:Organism to life:Organism`
-Expected type: relationship plus model gap. Positive: Supported links; effects require model. Negative: All links assumed equally strong.
+Expected expression-result category: relationship. Positive: Supported links; effects require model. Negative: All links assumed equally strong.
 Supported links; effects require model; excludes All links assumed equally strong. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -92,7 +93,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: EPA; original order 11; incidence: upstream gap.
 Expression: **explicit gap** — reference authority/model gap.
-Expected type: reference authority/model gap. Positive: Matched reference waterbody and criteria. Negative: Universal healthy threshold.
+Expected expression-result category: unresolved. Positive: Matched reference waterbody and criteria. Negative: Universal healthy threshold.
 Matched reference waterbody and criteria; excludes Universal healthy threshold. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate. Explicit gap: reference authority/model gap; unavailable evidence does not imply false/zero/unchanged. UPSTREAM GAP: BiologicalCondition identity/reference distinction not established; no local workaround.
 
@@ -100,7 +101,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: NPS; original order 12; incidence: ecology-c05.
 Draft expression: `ecology:Succession`
-Expected type: process. Positive: Documented temporal replacement. Negative: Automatic fixed trajectory after every fire.
+Expected expression-result category: process. Positive: Documented temporal replacement. Negative: Automatic fixed trajectory after every fire.
 Documented temporal replacement; excludes Automatic fixed trajectory after every fire. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -108,7 +109,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: FOOD; original order 13; incidence: ecology-c03.
 Draft expression: `ecology:HabitatPatch`
-Expected type: subject plus temporal model gap. Positive: Occupancy records for defined organism context. Negative: Suitability equated with presence.
+Expected expression-result category: subject. Positive: Occupancy records for defined organism context. Negative: Suitability equated with presence.
 Occupancy records for defined organism context; excludes Suitability equated with presence. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -116,7 +117,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: NPS; original order 14; incidence: ecology-c13.
 Draft expression: `ecology:CompetesWith linking life:Organism to life:Organism`
-Expected type: relationship. Positive: Resource limitation and interaction evidence. Negative: Same resource use alone.
+Expected expression-result category: relationship. Positive: Resource limitation and interaction evidence. Negative: Same resource use alone.
 Resource limitation and interaction evidence; excludes Same resource use alone. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate.
 
@@ -124,7 +125,7 @@ Semantic status: blocked; grammar untested. Dependencies: New names are dossier 
 
 Sources: EPA; original order 15; incidence: ecology-c18.
 Expression: **explicit gap** — negative semantic probe.
-Expected type: negative semantic probe. Positive: Composition/functions/reference considered separately. Negative: One summary metric equated with recovery.
+Expected expression-result category: unresolved. Positive: Composition/functions/reference considered separately. Negative: One summary metric equated with recovery.
 Composition/functions/reference considered separately; excludes One summary metric equated with recovery. Expression is a component observable where full question needs multiple resolutions.
 Semantic status: blocked; grammar untested. Dependencies: New names are dossier proposals, not installed declarations. Imported participant and quality meanings; human category review; observations and models separate. Explicit gap: negative semantic probe; unavailable evidence does not imply false/zero/unchanged.
 

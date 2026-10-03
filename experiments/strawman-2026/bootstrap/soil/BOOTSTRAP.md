@@ -30,7 +30,7 @@ The saved questions-source-first.json was written before candidate records and k
 Source: S1; source-led order 1. Incidence: soil:HorizonThickness, soil:SoilHorizon.
 
 Expression: `soil:HorizonThickness of soil:SoilHorizon`
-Expected: quality. Top-to-base separation; darkness does not define identity by itself.
+Expected expression-result category: quality. Top-to-base separation; darkness does not define identity by itself.
 Positive case: Top-to-base separation; darkness does not define identity by itself. Negative case: depth to top treated as thickness.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -39,7 +39,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: S2; source-led order 2. Incidence: soil:ClayFraction, soil:SoilHorizon.
 
 Expression: `soil:ClayFraction of soil:SoilHorizon`
-Expected: quality. Clay component only; sand fraction is missing upstream/domain candidate and must be separately articulated.
+Expected expression-result category: quality. Clay component only; sand fraction is missing upstream/domain candidate and must be separately articulated.
 Positive case: Clay component only; sand fraction is missing upstream/domain candidate and must be separately articulated. Negative case: clay mineralogy confused with particle size.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -48,7 +48,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: S3; source-led order 3. Incidence: soil:BulkDensity, soil:SoilCompaction.
 
 Expression: `soil:BulkDensity of soil:SoilBody`
-Expected: quality. Comparable dry bulk densities at track/reference; compaction attribution needs occurrence and particle context.
+Expected expression-result category: quality. Comparable dry bulk densities at track/reference; compaction attribution needs occurrence and particle context.
 Positive case: Comparable dry bulk densities at track/reference; compaction attribution needs occurrence and particle context. Negative case: high particle density proves compaction.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -57,7 +57,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: S2; source-led order 4. Incidence: soil:SoilLeaching.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Water content, retention and throughflow meanings absent; hydrology imports required, no local workaround.
+Expected expression-result category: unresolved. Water content, retention and throughflow meanings absent; hydrology imports required, no local workaround.
 Positive case: Water content, retention and throughflow meanings absent; hydrology imports required, no local workaround. Negative case: wet appearance means no drainage.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -66,7 +66,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: S2; source-led order 5. Incidence: soil:OrganicMatterFraction, soil:SoilHorizon.
 
 Expression: `soil:OrganicMatterFraction of soil:SoilHorizon`
-Expected: quality. Declared mass basis/method, organic carbon is distinct.
+Expected expression-result category: quality. Declared mass basis/method, organic carbon is distinct.
 Positive case: Declared mass basis/method, organic carbon is distinct. Negative case: fixed carbon-to-matter conversion assumed.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -75,7 +75,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: S1; source-led order 6. Incidence: soil:HorizonOverlies, soil:RestrictiveSoilLayer.
 
 Expression: `soil:HorizonOverlies`
-Expected: relationship. Endpoint relation for horizons; restrictive nonpedogenic layer requires generalized Layer endpoint upstream.
+Expected expression-result category: relationship. Endpoint relation for horizons; restrictive nonpedogenic layer requires generalized Layer endpoint upstream.
 Positive case: Endpoint relation for horizons; restrictive nonpedogenic layer requires generalized Layer endpoint upstream. Negative case: all layers forced into pedogenic Horizon.
 Semantic status: blocked; grammar: untested. Model/resolution not executed.
 
@@ -84,7 +84,7 @@ Semantic status: blocked; grammar: untested. Model/resolution not executed.
 Source: S2; source-led order 7. Incidence: soil:SoilLeaching.
 
 Expression: `soil:SoilLeaching`
-Expected: process. Solute removal with receiving-layer evidence; content/flux bindings missing.
+Expected expression-result category: process. Solute removal with receiving-layer evidence; content/flux bindings missing.
 Positive case: Solute removal with receiving-layer evidence; content/flux bindings missing. Negative case: visible stain alone proves transfer.
 Semantic status: blocked; grammar: untested. Model/resolution not executed.
 
@@ -93,7 +93,7 @@ Semantic status: blocked; grammar: untested. Model/resolution not executed.
 Source: S2; source-led order 8. Incidence: soil:HorizonRemovalEpisode, soil:HorizonThickness.
 
 Expression: `change in soil:HorizonThickness of soil:SoilHorizon`
-Expected: change quality. Thinning while identity persists; complete removal needs cessation event and separate dependent handling.
+Expected expression-result category: process. Thinning while identity persists; complete removal needs cessation event and separate dependent handling.
 Positive case: Thinning while identity persists; complete removal needs cessation event and separate dependent handling. Negative case: vanished horizon assigned zero as retained subject.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -102,7 +102,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: S3; source-led order 9. Incidence: soil:CompactionEpisode, soil:BulkDensity.
 
 Expression: `change in soil:BulkDensity of soil:SoilBody`
-Expected: change quality. Change plus machinery-loading evidence; no deterministic all-harvest compaction.
+Expected expression-result category: process. Change plus machinery-loading evidence; no deterministic all-harvest compaction.
 Positive case: Change plus machinery-loading evidence; no deterministic all-harvest compaction. Negative case: different sample location looks like change.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -111,7 +111,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: S3; source-led order 10. Incidence: soil:SoilAggregate, soil:AggregateDiameter.
 
 Expression: `soil:SoilAggregate`
-Expected: subject. Aggregate individuation plus stability test/model; stability quality missing.
+Expected expression-result category: subject. Aggregate individuation plus stability test/model; stability quality missing.
 Positive case: Aggregate individuation plus stability test/model; stability quality missing. Negative case: any particle cluster assumed stable.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -120,7 +120,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: S1; source-led order 11. Incidence: soil:OrganicMatterFraction.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Color observation and carbon/organic matter relationship require qualified model; no universal implication.
+Expected expression-result category: unresolved. Color observation and carbon/organic matter relationship require qualified model; no universal implication.
 Positive case: Color observation and carbon/organic matter relationship require qualified model; no universal implication. Negative case: darker guarantees more carbon.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -129,7 +129,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: S2; source-led order 12. Incidence: soil:SoilBody.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Plant-available water requires species/root context, water-retention quantities and hydrology models.
+Expected expression-result category: unresolved. Plant-available water requires species/root context, water-retention quantities and hydrology models.
 Positive case: Plant-available water requires species/root context, water-retention quantities and hydrology models. Negative case: total moisture equals plant-available water.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -138,7 +138,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: S1; source-led order 13. Incidence: soil:SoilPedon, soil:SoilHorizon.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Sampling representativeness is evidence/provenance work, not universal domain relation.
+Expected expression-result category: unresolved. Sampling representativeness is evidence/provenance work, not universal domain relation.
 Positive case: Sampling representativeness is evidence/provenance work, not universal domain relation. Negative case: one sample represents every horizon.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -147,7 +147,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: S2; source-led order 14. Incidence: soil:ClayFraction.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Texture authority cannot imply crop suitability; additional plant/management/model dependencies.
+Expected expression-result category: unresolved. Texture authority cannot imply crop suitability; additional plant/management/model dependencies.
 Positive case: Texture authority cannot imply crop suitability; additional plant/management/model dependencies. Negative case: texture class guarantees suitability.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -156,7 +156,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: S3; source-led order 15. Incidence: soil:BulkDensity.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Unmeasured density leaves compaction status unresolved; no Uncompacted inference.
+Expected expression-result category: unresolved. Unmeasured density leaves compaction status unresolved; no Uncompacted inference.
 Positive case: Unmeasured density leaves compaction status unresolved; no Uncompacted inference. Negative case: missing data establishes no compaction.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 

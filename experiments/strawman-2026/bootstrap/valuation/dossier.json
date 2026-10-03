@@ -762,7 +762,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Value subject and observer/perspective required; no scalar total importance inferred.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "valuation-q02",
@@ -773,7 +776,7 @@
         "valuation-c07"
       ],
       "expression": null,
-      "expected_type": "subject and valuation relationships",
+      "expected_type": "unresolved",
       "dependencies": [
         "Need provenance linking included viewpoints to people/groups; attendance alone insufficient.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -794,7 +797,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Need provenance linking included viewpoints to people/groups; attendance alone insufficient.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "valuation-q03",
@@ -825,7 +831,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Specified accounting exchange concept only; not total value.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "valuation-q04",
@@ -856,7 +865,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Must specialize loss dimension and hazard scenario; potential not observed harm.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "valuation-q05",
@@ -866,7 +878,7 @@
         "valuation-c20"
       ],
       "expression": null,
-      "expected_type": "exposure relationship and susceptibility quality",
+      "expected_type": "unresolved",
       "dependencies": [
         "Upstream exposure/hazard and vulnerability measurements absent; existing valuation configurations not assumed equivalent.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -887,7 +899,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Upstream exposure/hazard and vulnerability measurements absent; existing valuation configurations not assumed equivalent.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "valuation-q06",
@@ -918,7 +933,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Contextual expression of non-substitutability; absence of monetary estimate insufficient.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "valuation-q07",
@@ -949,7 +967,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Observer-specific ordering; object/comparison set still requires binding.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "valuation-q08",
@@ -960,7 +981,7 @@
         "valuation-c14"
       ],
       "expression": null,
-      "expected_type": "two events and qualities",
+      "expected_type": "unresolved",
       "dependencies": [
         "Physical harm and appraisal change must be separately observed; economic conversion belongs in model.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -981,7 +1002,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Physical harm and appraisal change must be separately observed; economic conversion belongs in model.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "valuation-q09",
@@ -1012,7 +1036,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Agent,criterion,loss dimension and scenario required; no universal acceptable threshold.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "valuation-q10",
@@ -1023,7 +1050,7 @@
         "valuation-c18"
       ],
       "expression": "change in valuation:ReportedPreference of imod:Agent",
-      "expected_type": "quality change",
+      "expected_type": "process",
       "dependencies": [
         "Same observer,alternatives and elicitation context; information effect is a testable mechanism outside ontology.",
         "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
@@ -1044,7 +1071,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Same observer,alternatives and elicitation context; information effect is a testable mechanism outside ontology.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "valuation-q11",
@@ -1055,7 +1085,7 @@
         "valuation-c10"
       ],
       "expression": null,
-      "expected_type": "directed relationships and amounts",
+      "expected_type": "unresolved",
       "dependencies": [
         "Distribution among agents must be resolved; net total does not identify recipients.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -1076,7 +1106,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Distribution among agents must be resolved; net total does not identify recipients.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "valuation-q12",
@@ -1087,7 +1120,7 @@
         "valuation-c04"
       ],
       "expression": null,
-      "expected_type": "monetary quality specializations",
+      "expected_type": "unresolved",
       "dependencies": [
         "Exchange estimate,transaction and willingness-to-pay meanings must be split; latter upper specialization missing.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -1108,7 +1141,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Exchange estimate,transaction and willingness-to-pay meanings must be split; latter upper specialization missing.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "valuation-q13",
@@ -1139,7 +1175,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Substitutability criterion and perspective independent of amount.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "valuation-q14",
@@ -1150,7 +1189,7 @@
         "valuation-c13"
       ],
       "expression": null,
-      "expected_type": "quality plus judgment/evidence state",
+      "expected_type": "unresolved",
       "dependencies": [
         "Distinguish explicit incomparability from incomplete elicitation; no Unknown predicate.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -1171,7 +1210,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Distinguish explicit incomparability from incomplete elicitation; no Unknown predicate.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "valuation-q15",
@@ -1181,7 +1223,7 @@
         "valuation-c19"
       ],
       "expression": null,
-      "expected_type": "unresolved quality",
+      "expected_type": "unresolved",
       "dependencies": [
         "Unknown risk resolution means no supported estimate; never infer Safe or zero potential loss.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -1202,7 +1244,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Unknown risk resolution means no supported estimate; never infer Safe or zero potential loss.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [

@@ -14,3 +14,5 @@ The original independent-agent findings remain in REVIEW_FINDINGS.md. These are 
 - Grammar: active confers absence is checked by an intentional failing fixture; affects and creates occupy one grammar clause choice, so review arrays are not direct source serialization. Reviewer probes are parsed as components only; semantic negatives remain expectations for future category/bearer validators.
 
 Remaining source weaknesses and scientific disagreements are not closed by these changes. Questions about thresholds, aggregation, biological individuality, roles/norms, social membership, economic editions and plural values stay in their domain dossiers. Backend sample mapping preserves unmapped data and uses no fabricated excerpt, ID, server validation or approval.
+
+Follow-up: [cross-domain corrections](CROSS_DOMAIN_REVIEW_CORRECTIONS.md) records the result-category audit, composition gap, lossless quality evidence and direct predicate-source binding. [Coverage dashboard](COVERAGE_DASHBOARD.md) distinguishes six count-complete domains from sixteen documented shortfalls.

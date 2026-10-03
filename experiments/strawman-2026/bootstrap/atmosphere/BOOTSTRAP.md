@@ -30,7 +30,7 @@ The saved questions-source-first.json was written before candidate records and k
 Source: A1; source-led order 1. Incidence: atmosphere:AirTemperature, atmosphere:AirBody.
 
 Expression: `atmosphere:AirTemperature of atmosphere:AirBody`
-Expected: quality. Ambient air bearer distinct from ground; observed height/context external.
+Expected expression-result category: quality. Ambient air bearer distinct from ground; observed height/context external.
 Positive case: Ambient air bearer distinct from ground; observed height/context external. Negative case: ground radiant temperature substituted.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -39,7 +39,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: A2; source-led order 2. Incidence: atmosphere:SpecificHumidity, atmosphere:AirMass.
 
 Expression: `atmosphere:SpecificHumidity of atmosphere:AirMass`
-Expected: quality. Vapor mass fraction convention needed; relative humidity not synonym.
+Expected expression-result category: quality. Vapor mass fraction convention needed; relative humidity not synonym.
 Positive case: Vapor mass fraction convention needed; relative humidity not synonym. Negative case: humidity percentage used without meaning.
 Semantic status: blocked; grammar: untested. Model/resolution not executed.
 
@@ -48,7 +48,7 @@ Semantic status: blocked; grammar: untested. Model/resolution not executed.
 Source: A1; source-led order 3. Incidence: atmosphere:WindSpeed, atmosphere:WindDirection, atmosphere:AirBody.
 
 Expression: `atmosphere:WindSpeed of atmosphere:AirBody`
-Expected: quality. Speed component; direction requires separate WindDirection resolution with from/to convention.
+Expected expression-result category: quality. Speed component; direction requires separate WindDirection resolution with from/to convention.
 Positive case: Speed component; direction requires separate WindDirection resolution with from/to convention. Negative case: single scalar answers both speed and direction.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -57,7 +57,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: A3; source-led order 4. Incidence: atmosphere:FrontalZone, atmosphere:FrontSeparatesAirMass.
 
 Expression: `atmosphere:FrontalZone`
-Expected: subject. Transition-zone and air-mass thermal comparison; blocked subject/configuration choice.
+Expected expression-result category: subject. Transition-zone and air-mass thermal comparison; blocked subject/configuration choice.
 Positive case: Transition-zone and air-mass thermal comparison; blocked subject/configuration choice. Negative case: symbol interpreted as physical wall.
 Semantic status: blocked; grammar: untested. Model/resolution not executed.
 
@@ -66,7 +66,7 @@ Semantic status: blocked; grammar: untested. Model/resolution not executed.
 Source: A3; source-led order 5. Incidence: atmosphere:FrontalPassage, atmosphere:AirTemperature.
 
 Expression: `change in atmosphere:AirTemperature of atmosphere:AirBody`
-Expected: change quality. Contextual temperature change resolved separately with passage evidence.
+Expected expression-result category: process. Contextual temperature change resolved separately with passage evidence.
 Positive case: Contextual temperature change resolved separately with passage evidence. Negative case: front universally causes same signed change.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -75,7 +75,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: A1; source-led order 6. Incidence: atmosphere:CloudCondensation, atmosphere:AirAdvection.
 
 Expression: `atmosphere:CloudCondensation`
-Expected: process. Condensation occurrence versus transport; dedicated microphysics evidence still needed.
+Expected expression-result category: process. Condensation occurrence versus transport; dedicated microphysics evidence still needed.
 Positive case: Condensation occurrence versus transport; dedicated microphysics evidence still needed. Negative case: cloud motion implies new condensation.
 Semantic status: blocked; grammar: untested. Model/resolution not executed.
 
@@ -84,7 +84,7 @@ Semantic status: blocked; grammar: untested. Model/resolution not executed.
 Source: A3; source-led order 7. Incidence: atmosphere:FrontSeparatesAirMass, atmosphere:AirMass.
 
 Expression: `atmosphere:FrontSeparatesAirMass`
-Expected: relationship. Two endpoint assertions attach air masses to identified front.
+Expected expression-result category: relationship. Two endpoint assertions attach air masses to identified front.
 Positive case: Two endpoint assertions attach air masses to identified front. Negative case: two endpoints compressed into unsupported ternary syntax.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -93,7 +93,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: A1; source-led order 8. Incidence: atmosphere:RainfallEpisode.
 
 Expression: `earth:RainfallVolume`
-Expected: quality. Ground-reaching liquid precipitation amount for event context; not rain aloft.
+Expected expression-result category: quality. Ground-reaching liquid precipitation amount for event context; not rain aloft.
 Positive case: Ground-reaching liquid precipitation amount for event context; not rain aloft. Negative case: virga counted as ground rainfall.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -102,7 +102,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: A1; source-led order 9. Incidence: atmosphere:WindSpeed, atmosphere:WindDirection.
 
 Expression: `atmosphere:WindSpeed of atmosphere:AirBody`
-Expected: quality. Separate height-specific air bodies; compare their qualities, no universal shared wind.
+Expected expression-result category: quality. Separate height-specific air bodies; compare their qualities, no universal shared wind.
 Positive case: Separate height-specific air bodies; compare their qualities, no universal shared wind. Negative case: surface station used as whole column.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -111,7 +111,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: A4; source-led order 10. Incidence: atmosphere:TroposphericRegion.
 
 Expression: `atmosphere:TroposphericRegion`
-Expected: subject. Thermally diagnosed local tropospheric boundary; variable height.
+Expected expression-result category: subject. Thermally diagnosed local tropospheric boundary; variable height.
 Positive case: Thermally diagnosed local tropospheric boundary; variable height. Negative case: fixed global altitude divides atmosphere.
 Semantic status: blocked; grammar: untested. Model/resolution not executed.
 
@@ -120,7 +120,7 @@ Semantic status: blocked; grammar: untested. Model/resolution not executed.
 Source: A2; source-led order 11. Incidence: atmosphere:SpecificHumidity, atmosphere:AirMass.
 
 Expression: `atmosphere:SpecificHumidity of atmosphere:AirMass`
-Expected: quality. Dry relative/source-region characterization does not entail vapor absence.
+Expected expression-result category: quality. Dry relative/source-region characterization does not entail vapor absence.
 Positive case: Dry relative/source-region characterization does not entail vapor absence. Negative case: dry is zero water.
 Semantic status: blocked; grammar: untested. Model/resolution not executed.
 
@@ -129,7 +129,7 @@ Semantic status: blocked; grammar: untested. Model/resolution not executed.
 Source: A1; source-led order 12. Incidence: atmosphere:AirAdvection, atmosphere:WindDirection.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Smoke transport needs pressure-gradient/velocity/turbulence and chemistry aerosols; no single pressure solution.
+Expected expression-result category: unresolved. Smoke transport needs pressure-gradient/velocity/turbulence and chemistry aerosols; no single pressure solution.
 Positive case: Smoke transport needs pressure-gradient/velocity/turbulence and chemistry aerosols; no single pressure solution. Negative case: pressure alone predicts plume route.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -138,7 +138,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: A3; source-led order 13. Incidence: atmosphere:WindDirection, atmosphere:WindShiftEpisode.
 
 Expression: `change in atmosphere:WindDirection of atmosphere:AirBody`
-Expected: change quality. Observed direction transition with circular-angle handling in model.
+Expected expression-result category: process. Observed direction transition with circular-angle handling in model.
 Positive case: Observed direction transition with circular-angle handling in model. Negative case: 359 to 1 degree treated as huge physical reversal.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -147,7 +147,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: A3; source-led order 14. Incidence: atmosphere:FrontalZone.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Representation question: map symbol is not a domain front subject; no impermeability binding.
+Expected expression-result category: unresolved. Representation question: map symbol is not a domain front subject; no impermeability binding.
 Positive case: Representation question: map symbol is not a domain front subject; no impermeability binding. Negative case: front is physical wall.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -156,7 +156,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: A2; source-led order 15. Incidence: atmosphere:SpecificHumidity.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Unknown humidity is an evidence state and cannot confer Dry.
+Expected expression-result category: unresolved. Unknown humidity is an evidence state and cannot confer Dry.
 Positive case: Unknown humidity is an evidence state and cannot confer Dry. Negative case: unmeasured means dry.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 

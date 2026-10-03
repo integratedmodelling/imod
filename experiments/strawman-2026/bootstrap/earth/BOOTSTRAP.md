@@ -28,7 +28,7 @@ Proposed dependency order: imod → physical → physics/chemistry/earth; earth 
 Planet identity vs region vs material sample.
 - Source/provenance: USGS-INTERIOR; original order 1.
 - Draft observable: `earth:TerrestrialPlanetBody`
-- Expected kind: subject. Positive: Earth as planetary body. Negative: administrative country.
+- Expected expression-result category: subject. Positive: Earth as planetary body. Negative: administrative country.
 - Dependencies: Planet identity vs region vs material sample. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -37,7 +37,7 @@ Planet identity vs region vs material sample.
 Lithospheric plate composition vs crust.
 - Source/provenance: USGS-INTERIOR; original order 2.
 - Draft observable: `earth:LithosphericPlate`
-- Expected kind: subject. Positive: identified tectonic plate; continental crustal section. Negative: crust alone or electoral district; whole lithospheric plate.
+- Expected expression-result category: subject. Positive: identified tectonic plate; continental crustal section. Negative: crust alone or electoral district; whole lithospheric plate.
 - Dependencies: Lithospheric plate composition vs crust. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -46,7 +46,7 @@ Lithospheric plate composition vs crust.
 Boundary inferred from wave response; not arbitrary map border.
 - Source/provenance: USGS-INTERIOR; original order 3.
 - Explicit gap: gap: crust-mantle interface quality/identity and inverse model.
-- Expected kind: gap: crust-mantle interface quality/identity and inverse model. Positive: continental crustal section. Negative: whole lithospheric plate.
+- Expected expression-result category: unresolved. Positive: continental crustal section. Negative: whole lithospheric plate.
 - Dependencies: Boundary inferred from wave response; not arbitrary map border. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: crust-mantle interface quality/identity and inverse model
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -55,7 +55,7 @@ Boundary inferred from wave response; not arbitrary map border.
 Material body vs volumetric geographical region.
 - Source/provenance: LOCAL; original order 4.
 - Explicit gap: gap: earth:WaterBody existing empty definition and Region volumetric/areal conflict.
-- Expected kind: gap: earth:WaterBody existing empty definition and Region volumetric/areal conflict. Positive: Material body vs volumetric geographical region.. Negative: Treating this evidence/representation distinction as an automatically valid domain declaration..
+- Expected expression-result category: unresolved. Positive: Material body vs volumetric geographical region.. Negative: Treating this evidence/representation distinction as an automatically valid domain declaration..
 - Dependencies: Material body vs volumetric geographical region. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: earth:WaterBody existing empty definition and Region volumetric/areal conflict
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -64,7 +64,7 @@ Material body vs volumetric geographical region.
 Shared geographic bearer vs authority classification.
 - Source/provenance: LOCAL; original order 5.
 - Explicit gap: gap: Coast bearer definition and shoreline convention; authorities separate.
-- Expected kind: gap: Coast bearer definition and shoreline convention; authorities separate. Positive: Shared geographic bearer vs authority classification.. Negative: Treating this evidence/representation distinction as an automatically valid domain declaration..
+- Expected expression-result category: unresolved. Positive: Shared geographic bearer vs authority classification.. Negative: Treating this evidence/representation distinction as an automatically valid domain declaration..
 - Dependencies: Shared geographic bearer vs authority classification. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: Coast bearer definition and shoreline convention; authorities separate
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -73,7 +73,7 @@ Shared geographic bearer vs authority classification.
 Erosion-driven elevation change vs representation correction.
 - Source/provenance: USGS-DESERT; original order 6.
 - Explicit gap: gap: explicit elevation quality/reference; no implicit change model.
-- Expected kind: gap: explicit elevation quality/reference; no implicit change model. Positive: material removed from slope; identified exposed rock mass. Negative: datum correction changes reported elevation; rock-type classification code.
+- Expected expression-result category: unresolved. Positive: material removed from slope; identified exposed rock mass. Negative: datum correction changes reported elevation; rock-type classification code.
 - Dependencies: Erosion-driven elevation change vs representation correction. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: explicit elevation quality/reference; no implicit change model
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -82,7 +82,7 @@ Erosion-driven elevation change vs representation correction.
 Weathering vs erosion and transport.
 - Source/provenance: USGS-DESERT; original order 7.
 - Draft observable: `earth:Weathering`
-- Expected kind: process. Positive: rock disintegrates in place; material removed from slope. Negative: unchanged rock transported downstream; datum correction changes reported elevation.
+- Expected expression-result category: process. Positive: rock disintegrates in place; material removed from slope. Negative: unchanged rock transported downstream; datum correction changes reported elevation.
 - Dependencies: Weathering vs erosion and transport. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **provisional**, adaptation/reasoner/model not run.
 
@@ -91,7 +91,7 @@ Weathering vs erosion and transport.
 Material provenance needs transport occurrence, not mere proximity.
 - Source/provenance: USGS-DESERT; original order 8.
 - Draft observable: `earth:DepositDerivedFrom linking earth:SedimentDeposit to earth:RockBody`
-- Expected kind: relationship. Positive: traced sediment source contribution; identified alluvial deposit; identified exposed rock mass. Negative: nearest mountain without transport evidence; particles still transported in fluid; rock-type classification code.
+- Expected expression-result category: relationship. Positive: traced sediment source contribution; identified alluvial deposit; identified exposed rock mass. Negative: nearest mountain without transport evidence; particles still transported in fluid; rock-type classification code.
 - Dependencies: Material provenance needs transport occurrence, not mere proximity. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -100,7 +100,7 @@ Material provenance needs transport occurrence, not mere proximity.
 Competing occurrents, not mutually exclusive predicates.
 - Source/provenance: USGS-DESERT; original order 9.
 - Draft observable: `earth:TectonicUplift`
-- Expected kind: process. Positive: tectonic rise of geological body; material removed from slope. Negative: new vertical datum; datum correction changes reported elevation.
+- Expected expression-result category: process. Positive: tectonic rise of geological body; material removed from slope. Negative: new vertical datum; datum correction changes reported elevation.
 - Dependencies: Competing occurrents, not mutually exclusive predicates. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **provisional**, adaptation/reasoner/model not run.
 
@@ -109,7 +109,7 @@ Competing occurrents, not mutually exclusive predicates.
 Landslide/debris event segmentation is contextual.
 - Source/provenance: USGS-DESERT; original order 10.
 - Draft observable: `earth:DebrisFlowEpisode`
-- Expected kind: event. Positive: observed rockfall; one observed debris-flow surge. Negative: slow chemical alteration without movement; clear streamflow without debris-rich moving mass.
+- Expected expression-result category: event. Positive: observed rockfall; one observed debris-flow surge. Negative: slow chemical alteration without movement; clear streamflow without debris-rich moving mass.
 - Dependencies: Landslide/debris event segmentation is contextual. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **provisional**, adaptation/reasoner/model not run.
 
@@ -118,7 +118,7 @@ Landslide/debris event segmentation is contextual.
 Deposition, deposited material and bearer extent distinguished.
 - Source/provenance: USGS-DESERT; original order 11.
 - Draft observable: `earth:SedimentDeposition`
-- Expected kind: process. Positive: sediment accumulates on fan; identified alluvial deposit; one bounded depositional pulse. Negative: sediment passes without settling; particles still transported in fluid; an old deposit observed without formation event.
+- Expected expression-result category: process. Positive: sediment accumulates on fan; identified alluvial deposit; one bounded depositional pulse. Negative: sediment passes without settling; particles still transported in fluid; an old deposit observed without formation event.
 - Dependencies: Deposition, deposited material and bearer extent distinguished. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -127,7 +127,7 @@ Deposition, deposited material and bearer extent distinguished.
 Persistent place vs changing material body needs split.
 - Source/provenance: LOCAL; original order 12.
 - Explicit gap: gap: Reach place/material split belongs in shared earth/hydrology review.
-- Expected kind: gap: Reach place/material split belongs in shared earth/hydrology review. Positive: Persistent place vs changing material body needs split.. Negative: Treating this evidence/representation distinction as an automatically valid domain declaration..
+- Expected expression-result category: unresolved. Positive: Persistent place vs changing material body needs split.. Negative: Treating this evidence/representation distinction as an automatically valid domain declaration..
 - Dependencies: Persistent place vs changing material body needs split. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: Reach place/material split belongs in shared earth/hydrology review
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -136,7 +136,7 @@ Persistent place vs changing material body needs split.
 Administrative/land-use authority categories do not entail geology.
 - Source/provenance: LOCAL; original order 13.
 - Explicit gap: gap: no land-cover-to-geology equivalence.
-- Expected kind: gap: no land-cover-to-geology equivalence. Positive: continental crustal section. Negative: whole lithospheric plate.
+- Expected expression-result category: unresolved. Positive: continental crustal section. Negative: whole lithospheric plate.
 - Dependencies: Administrative/land-use authority categories do not entail geology. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: no land-cover-to-geology equivalence
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -145,7 +145,7 @@ Administrative/land-use authority categories do not entail geology.
 Observable meaning vs observational method/inverse model.
 - Source/provenance: USGS-INTERIOR; original order 14.
 - Explicit gap: gap: seismic quality and inversion model outside shared earth articulation.
-- Expected kind: gap: seismic quality and inversion model outside shared earth articulation. Positive: continental crustal section. Negative: whole lithospheric plate.
+- Expected expression-result category: unresolved. Positive: continental crustal section. Negative: whole lithospheric plate.
 - Dependencies: Observable meaning vs observational method/inverse model. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: seismic quality and inversion model outside shared earth articulation
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -154,7 +154,7 @@ Observable meaning vs observational method/inverse model.
 Unknown change remains unresolved; not zero change or retention rule.
 - Source/provenance: LOCAL; original order 15.
 - Explicit gap: gap: unresolved change remains open-world; no executable retention machinery.
-- Expected kind: gap: unresolved change remains open-world; no executable retention machinery. Positive: material removed from slope. Negative: datum correction changes reported elevation.
+- Expected expression-result category: unresolved. Positive: material removed from slope. Negative: datum correction changes reported elevation.
 - Dependencies: Unknown change remains unresolved; not zero change or retention rule. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: unresolved change remains open-world; no executable retention machinery
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 

@@ -706,7 +706,10 @@
       "expected_interpretation": "Observed trophic link; excludes Spatial co-occurrence. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Observed trophic link; excludes Spatial co-occurrence. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "ecology-q02",
@@ -732,7 +735,10 @@
       "expected_interpretation": "Bounded population census; excludes All organisms irrespective of population. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Bounded population census; excludes All organisms irrespective of population. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "ecology-q03",
@@ -740,24 +746,62 @@
       "source_ids": [
         "NPS"
       ],
-      "expression": "change in ecology:SpeciesRichness of ecology:Community",
-      "expected_type": "change quality",
-      "positive": "Before/after composition with succession context",
-      "negative": "Richness alone treated as full composition",
+      "expression": null,
+      "expected_type": "unresolved",
+      "positive": "Compare {A,B} with {C,D}: richness remains 2 while species membership changes completely.",
+      "negative": "Zero richness change interpreted as unchanged species composition.",
       "draft_order": 3,
       "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
       "concept_ids": [
-        "ecology-c18"
+        "ecology-c18",
+        "ecology-c02"
       ],
       "dependencies": [
-        "New names are dossier proposals, not installed declarations.",
-        "Imported participant and quality meanings; human category review; observations and models separate."
+        "Missing community species-composition observable with taxon identity and optional relative-abundance basis.",
+        "Missing replacement/turnover comparison over compatible boundaries, supports and taxonomic versions.",
+        "Richness remains only an insufficient component: {A,B} and {C,D} both have richness 2 but complete species replacement.",
+        "No full grammar expression selected; community ancestry, sampling/detection and comparison model remain blocked."
       ],
       "semantic_status": "blocked",
-      "grammar_status": "parse_pass",
-      "expected_interpretation": "Before/after composition with succession context; excludes Richness alone treated as full composition. Expression is a component observable where full question needs multiple resolutions.",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Resolve changes in species identities (and abundance if selected), not merely the number of species.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Resolve changes in species identities (and abundance if selected), not merely the number of species.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation",
+      "components": [
+        {
+          "id": "richness-only",
+          "expression": "change in ecology:SpeciesRichness of ecology:Community",
+          "expression_result_category": "process",
+          "role": "insufficient_component",
+          "grammar_status": "parse_pass",
+          "limitation": "Change in species count cannot detect replacement when richness stays constant."
+        }
+      ],
+      "missing_observables": [
+        {
+          "working_name": "community species composition",
+          "status": "upstream/domain articulation gap, not a declared concept",
+          "meaning": "Taxon-identified membership of the delimited community, with an explicit choice of incidence-only or abundance-weighted representation.",
+          "bearer": "ecology:Community (identity and category still blocked)",
+          "dependencies": [
+            "Comparable community boundaries and observation supports",
+            "Versioned taxonomic authority/identity matching",
+            "Separate detection/sampling evidence so nondetection is not absence"
+          ]
+        },
+        {
+          "working_name": "species replacement or compositional turnover",
+          "status": "derived comparison/model gap, not a declared concept",
+          "meaning": "Changes in taxon identities and, if selected, relative abundances across comparable community observations; choice of comparison metric not yet made.",
+          "dependencies": [
+            "Resolved community species composition at compared contexts",
+            "An explicit metric or set comparison after meaning review; no generic richness substitution"
+          ]
+        }
       ]
     },
     {
@@ -784,7 +828,10 @@
       "expected_interpretation": "Occupied snag shelter; excludes Any standing dead tree assigned benefit. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Occupied snag shelter; excludes Any standing dead tree assigned benefit. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "ecology-q05",
@@ -810,7 +857,10 @@
       "expected_interpretation": "Evidence of feeding/harm in scoped interaction; excludes Close association assumed parasitism. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Evidence of feeding/harm in scoped interaction; excludes Close association assumed parasitism. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "ecology-q06",
@@ -836,7 +886,10 @@
       "expected_interpretation": "Benefits on specified outcome axes; excludes Association alone. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Benefits on specified outcome axes; excludes Association alone. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "ecology-q07",
@@ -862,7 +915,10 @@
       "expected_interpretation": "Arrival followed by establishment criterion; excludes Transient visitor. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Arrival followed by establishment criterion; excludes Transient visitor. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "ecology-q08",
@@ -888,7 +944,10 @@
       "expected_interpretation": "Bounded local cessation with detection evidence; excludes One negative survey. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Bounded local cessation with detection evidence; excludes One negative survey. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "ecology-q09",
@@ -897,7 +956,7 @@
         "FOOD"
       ],
       "expression": "ecology:CommunityBiomass of ecology:Community",
-      "expected_type": "mass quality",
+      "expected_type": "quality",
       "positive": "Defined living biomass pool",
       "negative": "Total wet soil mass",
       "draft_order": 9,
@@ -914,7 +973,10 @@
       "expected_interpretation": "Defined living biomass pool; excludes Total wet soil mass. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Defined living biomass pool; excludes Total wet soil mass. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "ecology-q10",
@@ -923,7 +985,7 @@
         "FOOD"
       ],
       "expression": "ecology:FeedsOn linking life:Organism to life:Organism",
-      "expected_type": "relationship plus model gap",
+      "expected_type": "relationship",
       "positive": "Supported links; effects require model",
       "negative": "All links assumed equally strong",
       "draft_order": 10,
@@ -940,7 +1002,10 @@
       "expected_interpretation": "Supported links; effects require model; excludes All links assumed equally strong. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Supported links; effects require model; excludes All links assumed equally strong. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "ecology-q11",
@@ -949,7 +1014,7 @@
         "EPA"
       ],
       "expression": null,
-      "expected_type": "reference authority/model gap",
+      "expected_type": "unresolved",
       "positive": "Matched reference waterbody and criteria",
       "negative": "Universal healthy threshold",
       "draft_order": 11,
@@ -966,7 +1031,10 @@
       "expected_interpretation": "Matched reference waterbody and criteria; excludes Universal healthy threshold. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Matched reference waterbody and criteria; excludes Universal healthy threshold. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "ecology-q12",
@@ -992,7 +1060,10 @@
       "expected_interpretation": "Documented temporal replacement; excludes Automatic fixed trajectory after every fire. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Documented temporal replacement; excludes Automatic fixed trajectory after every fire. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "ecology-q13",
@@ -1001,7 +1072,7 @@
         "FOOD"
       ],
       "expression": "ecology:HabitatPatch",
-      "expected_type": "subject plus temporal model gap",
+      "expected_type": "subject",
       "positive": "Occupancy records for defined organism context",
       "negative": "Suitability equated with presence",
       "draft_order": 13,
@@ -1018,7 +1089,10 @@
       "expected_interpretation": "Occupancy records for defined organism context; excludes Suitability equated with presence. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Occupancy records for defined organism context; excludes Suitability equated with presence. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "ecology-q14",
@@ -1044,7 +1118,10 @@
       "expected_interpretation": "Resource limitation and interaction evidence; excludes Same resource use alone. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Resource limitation and interaction evidence; excludes Same resource use alone. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "ecology-q15",
@@ -1053,7 +1130,7 @@
         "EPA"
       ],
       "expression": null,
-      "expected_type": "negative semantic probe",
+      "expected_type": "unresolved",
       "positive": "Composition/functions/reference considered separately",
       "negative": "One summary metric equated with recovery",
       "draft_order": 15,
@@ -1071,7 +1148,10 @@
       "expected_interpretation": "Composition/functions/reference considered separately; excludes One summary metric equated with recovery. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Composition/functions/reference considered separately; excludes One summary metric equated with recovery. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [

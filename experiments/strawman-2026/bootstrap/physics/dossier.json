@@ -542,7 +542,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Contact heat transfer and temperature are distinct observables.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Contact heat transfer and temperature are distinct observables.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physics-q02",
@@ -568,7 +571,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Energy transfer does not universally imply temperature rise.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Energy transfer does not universally imply temperature rise.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physics-q03",
@@ -594,7 +600,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Fluid circulation and heat transport, without equating all convection with buoyancy.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Fluid circulation and heat transport, without equating all convection with buoyancy.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physics-q04",
@@ -619,7 +628,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Radiative transfer rather than contact-only relation.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Radiative transfer rather than contact-only relation.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physics-q05",
@@ -645,7 +657,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Net force and vector acceleration require frame and classical regime.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Net force and vector acceleration require frame and classical regime.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physics-q06",
@@ -654,7 +669,7 @@
         "physics-MechanicalAcceleration"
       ],
       "expression": null,
-      "expected_type": "gap: vector velocity versus scalar speed upstream distinction",
+      "expected_type": "unresolved",
       "dependencies": [
         "Direction vs speed; root Velocity/Speed mismatch blocks mapping.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -671,7 +686,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Direction vs speed; root Velocity/Speed mismatch blocks mapping.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Direction vs speed; root Velocity/Speed mismatch blocks mapping.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "physics-q07",
@@ -697,7 +715,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Pressure, volume, temperature and process conditions.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Pressure, volume, temperature and process conditions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physics-q08",
@@ -723,7 +744,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Equilibrium under suitable isolation, not unconditional law in ontology.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Equilibrium under suitable isolation, not unconditional law in ontology.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physics-q09",
@@ -748,7 +772,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Inertial mass vs amount of substance.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Inertial mass vs amount of substance.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physics-q10",
@@ -774,7 +801,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Temperature vs heat transfer, avoid heat as stored substance.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Temperature vs heat transfer, avoid heat as stored substance.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physics-q11",
@@ -799,7 +829,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Bounded episode vs ongoing heat-transfer process.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Bounded episode vs ongoing heat-transfer process.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physics-q12",
@@ -809,7 +842,7 @@
         "physics-RadiativeEnergyTransfer"
       ],
       "expression": null,
-      "expected_type": "gap: conductance and boundary conditions; cannot infer absence",
+      "expected_type": "unresolved",
       "dependencies": [
         "Restricted conductance not absolute absence of radiation.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -826,7 +859,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Restricted conductance not absolute absence of radiation.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Restricted conductance not absolute absence of radiation.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "physics-q13",
@@ -851,7 +887,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Force interaction vs motion; no velocity predicate from interaction alone.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Force interaction vs motion; no velocity predicate from interaction alone.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physics-q14",
@@ -877,7 +916,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Transfer quantity requires a process interval, not stored energy alias.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Transfer quantity requires a process interval, not stored energy alias.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physics-q15",
@@ -886,7 +928,7 @@
         "physics-HeatingEpisode"
       ],
       "expression": null,
-      "expected_type": "gap: no-reading is evidence state, no stop-event inference",
+      "expected_type": "unresolved",
       "dependencies": [
         "Open-world evidence state, not physical stasis.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -903,7 +945,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Open-world evidence state, not physical stasis.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Open-world evidence state, not physical stasis.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [

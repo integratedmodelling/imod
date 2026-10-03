@@ -1,11 +1,12 @@
 """Record research context and generate a loss-aware backend sample, never a command."""
-import json,hashlib,subprocess
+import json,hashlib,subprocess,sys
 from pathlib import Path
+from dossier_consistency import retain_quality_analyses
 packet=Path(__file__).resolve().parents[1];root=packet/'bootstrap';repo=packet.parents[1]
 git=['git','-c','safe.directory='+repo.as_posix(),'-C',str(repo)]
 head=subprocess.check_output(git+['rev-parse','HEAD'],text=True).strip()
 generic={'imod:Subject','imod:Agent','imod:Process','imod:Event','imod:Relationship','imod:Quality','imod:Volume','imod:Length','imod:Area','imod:Mass','imod:Temperature','imod:Quantity','imod:Velocity'}
-for p in root.glob('*/dossier.json'):
+for p in ([] if '--projection-only' in sys.argv else root.glob('*/dossier.json')):
  d=json.loads(p.read_text(encoding='utf8'))
  imported=[]
  for item in d['imports']:
@@ -22,7 +23,7 @@ for p in root.glob('*/dossier.json'):
  d['validation']['human_approval']='none; source/ontology review outstanding'
  d['validation']['type_context_warning']='Reference existence and grammar acceptance do not establish scientific specialization.'
  p.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n',encoding='utf8')
-d=json.loads((root/'hydrology/dossier.json').read_text())
+d=json.loads((root/'hydrology/dossier.json').read_text(encoding='utf8'))
 kind={'subject':'SUBJECT','quality':'QUALITY','process':'PROCESS','relationship':'RELATIONSHIP','event':'EVENT','predicate':'ATTRIBUTE'}
 projection={'evidence':[dict(id=s['id'],source=s.get('url') or s['title'],locator=s['locator'],excerpt=None) for s in d['sources']], 'concepts':[], 'questions':[], 'qualityAnalyses':[], 'unresolvedSemantics':d['ambiguities']+['Illustrative client BootstrapDossier projection only. No Candidate attachment identity/contextDigest, Command, server validation or approval.','All ancestry strings are unvalidated context claims. Generic root aliases are implicit type context, not executable is statements.','Evidence excerpts omitted: no verbatim source quotations supplied. Source scope/status remains in original research attachment.'], 'coverageShortfalls':d['coverage']['weaknesses']}
 by_name={c['name']:c['id'] for c in d['concepts']}
@@ -42,8 +43,9 @@ for q in d['quality_summaries']:
   projection['unresolvedSemantics'].append('Unmapped quality analysis retained in research dossier: '+json.dumps(q));continue
  qc=next(c for c in d['concepts'] if c['name']==q['quality'])
  projection['qualityAnalyses'].append(dict(qualityId=by_name[q['quality']],limitation=q['basis'],attributeIds=[],realmIds=[],orderingIds=[],boundaryOrComparison=q['comparison_rule'],valueStructure=q['value_structure'],contextAndScope=q['context']+'; overlap: '+q['overlap'],evidenceIds=qc['source_ids'],unknownRatherThanCategory=True))
-projection['unresolvedSemantics'].append('Quality-analysis evidence is not yet split into atomic evidence IDs; no predicate assets created. Proposed summary names retained only in full research dossier.')
-(root/'hydrology/backend-dossier.sample.json').write_text(json.dumps(projection,indent=2)+'\n',encoding='utf8')
+retain_quality_analyses(projection,d['quality_summaries'],(root/'hydrology/dossier.json').read_bytes(),'hydrology/dossier.json')
+projection['unresolvedSemantics'].append('Complete quality analyses, including proposed summary names and blocker/status fields, are retained losslessly above. The full research bytes are hash-bound locally; this is not a server attachment or completed four-artifact manifest. No predicate assets created.')
+(root/'hydrology/backend-dossier.sample.json').write_text(json.dumps(projection,indent=2)+'\n',encoding='utf8',newline='\n')
 context=[]
 for f in [repo/'src/imod.kwv',Path('C:/Users/Ferd/git/klab-services/llm/DOMAIN_CONTEXT_PACK.md'),Path('C:/Users/Ferd/git/klab-languages/org.integratedmodelling.languages.observable/src/org/integratedmodelling/languages/Observable.xtext'),Path('C:/Users/Ferd/git/klab-languages/org.integratedmodelling.languages.worldview/src/org/integratedmodelling/languages/Worldview.xtext'),Path('C:/Users/Ferd/Documents/Codex/2026-10-03/task-7/backend/PROPOSAL_REVIEW_CONTRACT.md'),Path('C:/Users/Ferd/Documents/Codex/2026-10-03/task-7/backend/klab.core.api/src/main/java/org/integratedmodelling/klab/api/services/resources/workflow/ProposalReview.java')]:
  context.append(dict(path=str(f),sha256=hashlib.sha256(f.read_bytes()).hexdigest()))
@@ -51,5 +53,5 @@ backend=Path('C:/Users/Ferd/Documents/Codex/2026-10-03/task-7/backend')
 for f in [backend/'DOSSIER_MAPPING.md',backend/'klab.core.api/src/main/java/org/integratedmodelling/klab/api/services/resources/workflow/BootstrapDossierValidator.java']:
  context.append(dict(path=str(f),sha256=hashlib.sha256(f.read_bytes()).hexdigest()))
 backend_head=subprocess.check_output(['git','-c','safe.directory='+backend.as_posix(),'-C',str(backend),'rev-parse','HEAD'],text=True).strip()
-(root/'review-context.json').write_text(json.dumps(dict(sandbox_start=head,backend_commit=backend_head,context_sources=context,note='Pinned inspected backend mapping; production acceptance remains blocked pending real validators and research manifest integration.'),indent=2)+'\n',encoding='utf8')
+(root/'review-context.json').write_text(json.dumps(dict(sandbox_start=head,backend_commit=backend_head,context_sources=context,note='Pinned inspected backend mapping; production acceptance remains blocked pending real validators and research manifest integration.'),indent=2)+'\n',encoding='utf8',newline='\n')
 print('Frozen context for',len(list(root.glob('*/dossier.json'))),'dossiers; no approval granted')

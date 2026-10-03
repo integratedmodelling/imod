@@ -254,7 +254,7 @@ Expressions below are candidate observable strings, not complete query programs.
 
 Source-first sequence 1; sources CENSUS3. Motivation: usual residence versus current presence. Concepts: society-c04, society-c19.
 
-Draft expression: `society:ResidentCount of society:ResidentPopulation`. Expected type: quality. Expected interpretation: Count residents under stated convention, including qualifying temporary absences.
+Draft expression: `society:ResidentCount of society:ResidentPopulation`. Expected expression-result category: quality. Expected interpretation: Count residents under stated convention, including qualifying temporary absences.
 
 Positive: Temporarily absent usual resident included. Negative: Tourist included solely by current presence.
 
@@ -264,7 +264,7 @@ Dependencies/checks: Count residents under stated convention, including qualifyi
 
 Source-first sequence 2; sources CENSUS3. Motivation: housekeeping versus dwelling-based convention. Concepts: society-c02, society-c05.
 
-Draft expression: `society:HousekeepingHousehold`. Expected type: subject. Expected interpretation: Need provisioning evidence; dwelling and family counts cannot substitute.
+Draft expression: `society:HousekeepingHousehold`. Expected expression-result category: subject. Expected interpretation: Need provisioning evidence; dwelling and family counts cannot substitute.
 
 Positive: Two separate provision arrangements in one dwelling. Negative: One building forced to one household.
 
@@ -274,7 +274,7 @@ Dependencies/checks: Need provisioning evidence; dwelling and family counts cann
 
 Source-first sequence 3; sources CENSUS3. Motivation: single-person household does not imply helplessness. Concepts: society-c02, society-c20.
 
-Draft expression: `society:HouseholdSize of society:HousekeepingHousehold`. Expected type: quality. Expected interpretation: Size-one household is observable; assistance need is separate.
+Draft expression: `society:HouseholdSize of society:HousekeepingHousehold`. Expected expression-result category: quality. Expected interpretation: Size-one household is observable; assistance need is separate.
 
 Positive: One-person household independently observed. Negative: Living alone deemed unable to evacuate.
 
@@ -284,7 +284,7 @@ Dependencies/checks: Size-one household is observable; assistance need is separa
 
 Source-first sequence 4; sources CENSUS3. Motivation: membership rule and reference context. Concepts: society-c09.
 
-Draft expression: `society:HouseholdMembership`. Expected type: relationship. Expected interpretation: Person-to-household membership under a named rule.
+Draft expression: `society:HouseholdMembership`. Expected expression-result category: relationship. Expected interpretation: Person-to-household membership under a named rule.
 
 Positive: Members share housekeeping arrangement. Negative: Visitors automatically members.
 
@@ -294,7 +294,7 @@ Dependencies/checks: Person-to-household membership under a named rule.; Draft n
 
 Source-first sequence 5; sources EVAC. Motivation: temporary protective movement versus usual-residence change. Concepts: society-c06, society-c18.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: process/event comparison. Expected interpretation: Distinguish usual-residence transition from temporary evacuation; requires linked residence observations.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Distinguish usual-residence transition from temporary evacuation; requires linked residence observations.
 
 Positive: Qualifying residence move. Negative: Overnight shelter stay classified as migration.
 
@@ -304,7 +304,7 @@ Dependencies/checks: Distinguish usual-residence transition from temporary evacu
 
 Source-first sequence 6; sources VITAL. Motivation: birth occurrence versus registration. Concepts: society-c14, society-c09.
 
-Draft expression: `society:LiveBirth`. Expected type: event. Expected interpretation: Birth event and household-membership change independently identified; no automatic household assignment.
+Draft expression: `society:LiveBirth`. Expected expression-result category: event. Expected interpretation: Birth event and household-membership change independently identified; no automatic household assignment.
 
 Positive: Birth plus observed admission to household. Negative: Registration timestamp used as birth time.
 
@@ -314,7 +314,7 @@ Dependencies/checks: Birth event and household-membership change independently i
 
 Source-first sequence 7; sources VITAL. Motivation: death occurrence versus causal attribution. Concepts: society-c15.
 
-Draft expression: `society:Death`. Expected type: event. Expected interpretation: Count deaths in context separately from fire-attribution models.
+Draft expression: `society:Death`. Expected expression-result category: event. Expected interpretation: Count deaths in context separately from fire-attribution models.
 
 Positive: Confirmed death during event window. Negative: Missing resident presumed dead.
 
@@ -324,7 +324,7 @@ Dependencies/checks: Count deaths in context separately from fire-attribution mo
 
 Source-first sequence 8; sources CENSUS3. Motivation: family relationship versus coresidence. Concepts: society-c11.
 
-Draft expression: `society:ParentOf`. Expected type: relationship. Expected interpretation: Choose and expose biological/adoptive/legal reading; living apart irrelevant to relation criterion.
+Draft expression: `society:ParentOf`. Expected expression-result category: relationship. Expected interpretation: Choose and expose biological/adoptive/legal reading; living apart irrelevant to relation criterion.
 
 Positive: Qualifying adoptive parent living elsewhere. Negative: Co-resident adult inferred parent.
 
@@ -334,7 +334,7 @@ Dependencies/checks: Choose and expose biological/adoptive/legal reading; living
 
 Source-first sequence 9; sources OSTROM. Motivation: organization persistence is not personnel equality. Concepts: society-c03, society-c13.
 
-Draft expression: `society:Organization`. Expected type: subject. Expected interpretation: Identity persists under reviewed constitution rules despite roster changes.
+Draft expression: `society:Organization`. Expected expression-result category: subject. Expected interpretation: Identity persists under reviewed constitution rules despite roster changes.
 
 Positive: Association continues after officer election. Negative: Mailing list treated as collective agent.
 
@@ -344,7 +344,7 @@ Dependencies/checks: Identity persists under reviewed constitution rules despite
 
 Source-first sequence 10; sources VITAL. Motivation: jurisdiction and recognized union boundaries. Concepts: society-c16, society-c17, society-c12.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: event and relationship. Expected interpretation: Jurisdiction and recognition convention needed; no universal marriage status taxonomy.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Jurisdiction and recognition convention needed; no universal marriage status taxonomy.
 
 Positive: Recognized dissolution with identified parties. Negative: Estrangement equated to divorce.
 
@@ -354,7 +354,7 @@ Dependencies/checks: Jurisdiction and recognition convention needed; no universa
 
 Source-first sequence 11; sources CENSUS3. Motivation: household not equivalent to kinship. Concepts: society-c02, society-c05.
 
-Draft expression: `society:HousekeepingHousehold`. Expected type: subject. Expected interpretation: Housekeeping relation independent of family kinship.
+Draft expression: `society:HousekeepingHousehold`. Expected expression-result category: subject. Expected interpretation: Housekeeping relation independent of family kinship.
 
 Positive: Unrelated housemates share provision. Negative: Related persons living separately assumed one household.
 
@@ -364,7 +364,7 @@ Dependencies/checks: Housekeeping relation independent of family kinship.; Draft
 
 Source-first sequence 12; sources DISPLACE. Motivation: observation gap cannot imply return. Concepts: society-c10.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: relationship plus displacement event/history. Expected interpretation: Need current whereabouts and return observations; no automatic retention or return inference.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Need current whereabouts and return observations; no automatic retention or return inference.
 
 Positive: Confirmed person still away after evacuation. Negative: Missing follow-up interpreted as return.
 
@@ -374,7 +374,7 @@ Dependencies/checks: Need current whereabouts and return observations; no automa
 
 Source-first sequence 13; sources OSTROM. Motivation: institutional constituting or dissolving occurrence. Concepts: society-c08, society-c03.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: creation/cessation events. Expected interpretation: Organization constitution/dissolution event concepts unresolved; do not infer cease from roster silence.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Organization constitution/dissolution event concepts unresolved; do not infer cease from roster silence.
 
 Positive: Explicit dissolution act under rules. Negative: No recent website update treated as dissolution.
 
@@ -384,7 +384,7 @@ Dependencies/checks: Organization constitution/dissolution event concepts unreso
 
 Source-first sequence 14; sources CENSUS3. Motivation: reference-population convention explicit. Concepts: society-c04, society-c19.
 
-Draft expression: `society:ResidentPopulation`. Expected type: subject. Expected interpretation: Reference convention distinguishes visitors and usual residents.
+Draft expression: `society:ResidentPopulation`. Expected expression-result category: subject. Expected interpretation: Reference convention distinguishes visitors and usual residents.
 
 Positive: Visitor excluded from usual-resident count. Negative: All overnight guests included without convention.
 
@@ -394,7 +394,7 @@ Dependencies/checks: Reference convention distinguishes visitors and usual resid
 
 Source-first sequence 15; sources CENSUS3. Motivation: household does not require dwelling ownership. Concepts: society-c02.
 
-Draft expression: `society:HousekeepingHousehold`. Expected type: subject. Expected interpretation: Housekeeping convention admits arrangements without conventional housing.
+Draft expression: `society:HousekeepingHousehold`. Expected expression-result category: subject. Expected interpretation: Housekeeping convention admits arrangements without conventional housing.
 
 Positive: People without a dwelling share essentials. Negative: No address means no household.
 

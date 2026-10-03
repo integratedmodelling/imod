@@ -45,7 +45,7 @@ Checks: grammar untested; semantic blocked; adapter, reasoner and execution unte
 
 Source: DOE. Preserved source-question order 3; no independent holdout claim.
 
-Draft expression: `engineering:Transformer`. Expected category: subject.
+Draft expression: `engineering:Transformer`. Expected expression-result category: subject.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: identified substation transformer. Negative boundary: a voltage conversion formula.
@@ -65,7 +65,7 @@ Checks: grammar untested; semantic blocked; adapter, reasoner and execution unte
 
 Source: FHWA. Preserved source-question order 5; no independent holdout claim.
 
-Draft expression: `engineering:TransfersLoad`. Expected category: subject.
+Draft expression: `engineering:TransfersLoad`. Expected expression-result category: relationship.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: bridge support bearing. Negative boundary: a compass bearing.
@@ -75,7 +75,7 @@ Checks: grammar untested; semantic provisional; adapter, reasoner and execution 
 
 Source: FHWA. Preserved source-question order 6; no independent holdout claim.
 
-Draft expression: `engineering:LoadCapacity of engineering:Bearing`. Expected category: quality.
+Draft expression: `engineering:LoadCapacity of engineering:Bearing`. Expected expression-result category: quality.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: A value observed for the named bearer and stated convention.. Negative boundary: An unqualified score, missing observation or value from another bearer treated as equivalent..
@@ -95,7 +95,7 @@ Checks: grammar untested; semantic blocked; adapter, reasoner and execution unte
 
 Source: NASA. Preserved source-question order 8; no independent holdout claim.
 
-Draft expression: `engineering:JoinsComponent linking engineering:Bearing to imod:Subject`. Expected category: relationship.
+Draft expression: `engineering:JoinsComponent linking engineering:Bearing to imod:Subject`. Expected expression-result category: relationship.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: bearing attached to support. Negative boundary: two components listed together but unconnected.
@@ -105,7 +105,7 @@ Checks: grammar untested; semantic provisional; adapter, reasoner and execution 
 
 Source: EPA. Preserved source-question order 9; no independent holdout claim.
 
-Draft expression: `change in engineering:OpeningFraction of engineering:Valve`. Expected category: process (unary change); requires parser and active type validation.
+Draft expression: `change in engineering:OpeningFraction of engineering:Valve`. Expected expression-result category: process.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: turning a valve toward closed. Negative boundary: changing only the displayed command.
@@ -125,7 +125,7 @@ Checks: grammar untested; semantic blocked; adapter, reasoner and execution unte
 
 Source: FHWA. Preserved source-question order 11; no independent holdout claim.
 
-Draft expression: `engineering:ComponentReplacement`. Expected category: event.
+Draft expression: `engineering:ComponentReplacement`. Expected expression-result category: event.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: replacement of a bearing. Negative boundary: adjustment of existing bearing.
@@ -135,7 +135,7 @@ Checks: grammar untested; semantic provisional; adapter, reasoner and execution 
 
 Source: EPA. Preserved source-question order 12; no independent holdout claim.
 
-Draft expression: `engineering:OperatingTemperature of engineering:Pump`. Expected category: subject.
+Draft expression: `engineering:OperatingTemperature of engineering:Pump`. Expected expression-result category: quality.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: identified water pump. Negative boundary: a pumping schedule.
@@ -155,7 +155,7 @@ Checks: grammar untested; semantic blocked; adapter, reasoner and execution unte
 
 Source: NASA. Preserved source-question order 14; no independent holdout claim.
 
-Draft expression: `engineering:ProductAssembly`. Expected category: process.
+Draft expression: `engineering:ProductAssembly`. Expected expression-result category: process.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: physical assembly of pump components. Negative boundary: editing a bill of materials.

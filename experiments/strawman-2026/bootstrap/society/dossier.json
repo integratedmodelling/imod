@@ -834,7 +834,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Count residents under stated convention,including qualifying temporary absences.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "society-q02",
@@ -866,7 +869,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Need provisioning evidence; dwelling and family counts cannot substitute.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "society-q03",
@@ -898,7 +904,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Size-one household is observable; assistance need is separate.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "society-q04",
@@ -929,7 +938,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Person-to-household membership under a named rule.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "society-q05",
@@ -940,7 +952,7 @@
         "society-c18"
       ],
       "expression": null,
-      "expected_type": "process/event comparison",
+      "expected_type": "unresolved",
       "dependencies": [
         "Distinguish usual-residence transition from temporary evacuation; requires linked residence observations.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -961,7 +973,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Distinguish usual-residence transition from temporary evacuation; requires linked residence observations.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "society-q06",
@@ -993,7 +1008,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Birth event and household-membership change independently identified; no automatic household assignment.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "society-q07",
@@ -1024,7 +1042,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Count deaths in context separately from fire-attribution models.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "society-q08",
@@ -1055,7 +1076,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Choose and expose biological/adoptive/legal reading; living apart irrelevant to relation criterion.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "society-q09",
@@ -1087,7 +1111,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Identity persists under reviewed constitution rules despite roster changes.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "society-q10",
@@ -1099,7 +1126,7 @@
         "society-c12"
       ],
       "expression": null,
-      "expected_type": "event and relationship",
+      "expected_type": "unresolved",
       "dependencies": [
         "Jurisdiction and recognition convention needed; no universal marriage status taxonomy.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -1120,7 +1147,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Jurisdiction and recognition convention needed; no universal marriage status taxonomy.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "society-q11",
@@ -1152,7 +1182,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Housekeeping relation independent of family kinship.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "society-q12",
@@ -1162,7 +1195,7 @@
         "society-c10"
       ],
       "expression": null,
-      "expected_type": "relationship plus displacement event/history",
+      "expected_type": "unresolved",
       "dependencies": [
         "Need current whereabouts and return observations; no automatic retention or return inference.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -1183,7 +1216,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Need current whereabouts and return observations; no automatic retention or return inference.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "society-q13",
@@ -1194,7 +1230,7 @@
         "society-c03"
       ],
       "expression": null,
-      "expected_type": "creation/cessation events",
+      "expected_type": "unresolved",
       "dependencies": [
         "Organization constitution/dissolution event concepts unresolved; do not infer cease from roster silence.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -1215,7 +1251,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Organization constitution/dissolution event concepts unresolved; do not infer cease from roster silence.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "society-q14",
@@ -1247,7 +1286,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Reference convention distinguishes visitors and usual residents.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "society-q15",
@@ -1278,7 +1320,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Housekeeping convention admits arrangements without conventional housing.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     }
   ],
   "quality_summaries": [

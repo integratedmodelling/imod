@@ -828,7 +828,10 @@
       "expected_interpretation": "Sequence of an identified molecular bearer; excludes Database identifier itself. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Sequence of an identified molecular bearer; excludes Database identifier itself. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "genetics-q02",
@@ -837,7 +840,7 @@
         "ALLELE"
       ],
       "expression": null,
-      "expected_type": "identity/reference gap",
+      "expected_type": "unresolved",
       "positive": "Alleles aligned to one declared locus",
       "negative": "Variants at unrelated loci",
       "draft_order": 2,
@@ -854,7 +857,10 @@
       "expected_interpretation": "Alleles aligned to one declared locus; excludes Variants at unrelated loci. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Alleles aligned to one declared locus; excludes Variants at unrelated loci. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "genetics-q03",
@@ -863,7 +869,7 @@
         "CHROMOSOME"
       ],
       "expression": "count of genetics:Chromosome contained in life:Cell",
-      "expected_type": "numerosity",
+      "expected_type": "quality",
       "positive": "Chromosome count in specified cell",
       "negative": "Human count assumed for all species",
       "draft_order": 3,
@@ -880,7 +886,10 @@
       "expected_interpretation": "Chromosome count in specified cell; excludes Human count assumed for all species. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Chromosome count in specified cell; excludes Human count assumed for all species. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "genetics-q04",
@@ -906,7 +915,10 @@
       "expected_interpretation": "Noncoding functional RNA transcript; excludes All genes forced protein coding. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Noncoding functional RNA transcript; excludes All genes forced protein coding. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "genetics-q05",
@@ -932,7 +944,10 @@
       "expected_interpretation": "Gene-specific transcripts and cell context; excludes Expression inferred solely from DNA presence. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Gene-specific transcripts and cell context; excludes Expression inferred solely from DNA presence. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "genetics-q06",
@@ -958,7 +973,10 @@
       "expected_interpretation": "Bounded sequence alteration in lineage; excludes Different samples with no lineage evidence. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Bounded sequence alteration in lineage; excludes Different samples with no lineage evidence. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "genetics-q07",
@@ -967,7 +985,7 @@
         "MUTATION"
       ],
       "expression": null,
-      "expected_type": "germline/lineage gap",
+      "expected_type": "unresolved",
       "positive": "Specified reproductive lineage with germline evidence",
       "negative": "Somatic variant assumed inherited",
       "draft_order": 7,
@@ -984,7 +1002,10 @@
       "expected_interpretation": "Specified reproductive lineage with germline evidence; excludes Somatic variant assumed inherited. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Specified reproductive lineage with germline evidence; excludes Somatic variant assumed inherited. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "genetics-q08",
@@ -1010,7 +1031,10 @@
       "expected_interpretation": "Extra segment copy relative to baseline; excludes Higher sequencing coverage alone. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Extra segment copy relative to baseline; excludes Higher sequencing coverage alone. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "genetics-q09",
@@ -1036,7 +1060,10 @@
       "expected_interpretation": "Documented segment loss; excludes Unsequenced interval. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Documented segment loss; excludes Unsequenced interval. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "genetics-q10",
@@ -1062,7 +1089,10 @@
       "expected_interpretation": "Physical segment on identified molecule; excludes Information record contained in database. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Physical segment on identified molecule; excludes Information record contained in database. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "genetics-q11",
@@ -1088,7 +1118,10 @@
       "expected_interpretation": "Reductional division in appropriate organism; excludes Ordinary tissue growth. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Reductional division in appropriate organism; excludes Ordinary tissue growth. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "genetics-q12",
@@ -1097,7 +1130,7 @@
         "GLOSSARY"
       ],
       "expression": null,
-      "expected_type": "historical hypothesis gap",
+      "expected_type": "unresolved",
       "positive": "Independent ancestry evidence",
       "negative": "Similarity automatically asserted homology",
       "draft_order": 12,
@@ -1114,7 +1147,10 @@
       "expected_interpretation": "Independent ancestry evidence; excludes Similarity automatically asserted homology. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Independent ancestry evidence; excludes Similarity automatically asserted homology. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "genetics-q13",
@@ -1140,7 +1176,10 @@
       "expected_interpretation": "Fusion with lineage evidence; excludes Two gametes merely adjacent. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Fusion with lineage evidence; excludes Two gametes merely adjacent. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "genetics-q14",
@@ -1149,7 +1188,7 @@
         "EXPRESSION"
       ],
       "expression": null,
-      "expected_type": "causal model gap",
+      "expected_type": "unresolved",
       "positive": "Expression comparison plus mechanism evidence",
       "negative": "Association treated as sufficient explanation",
       "draft_order": 14,
@@ -1167,7 +1206,10 @@
       "expected_interpretation": "Expression comparison plus mechanism evidence; excludes Association treated as sufficient explanation. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Expression comparison plus mechanism evidence; excludes Association treated as sufficient explanation. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "genetics-q15",
@@ -1176,7 +1218,7 @@
         "GENE"
       ],
       "expression": null,
-      "expected_type": "negative evidence probe",
+      "expected_type": "unresolved",
       "positive": "Adequate coverage and detection model needed",
       "negative": "Missing record equated with gene deletion",
       "draft_order": 15,
@@ -1194,7 +1236,10 @@
       "expected_interpretation": "Adequate coverage and detection model needed; excludes Missing record equated with gene deletion. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Adequate coverage and detection model needed; excludes Missing record equated with gene deletion. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [

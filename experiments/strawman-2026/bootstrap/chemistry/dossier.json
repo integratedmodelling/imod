@@ -630,7 +630,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Molecular entity vs species ensemble vs classifier.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Molecular entity vs species ensemble vs classifier.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "chemistry-q02",
@@ -656,7 +659,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Species interconversion vs mixing.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Species interconversion vs mixing.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "chemistry-q03",
@@ -682,7 +688,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Dissolution and solution rather than disappearance of matter.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Dissolution and solution rather than disappearance of matter.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "chemistry-q04",
@@ -707,7 +716,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Uniformity criterion vs visual emulsion.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Uniformity criterion vs visual emulsion.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "chemistry-q05",
@@ -733,7 +745,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Chemical precipitation distinct from meteorological precipitation.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Chemical precipitation distinct from meteorological precipitation.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "chemistry-q06",
@@ -758,7 +773,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Electron loss/oxidation-state reading, not oxygen-only definition.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Electron loss/oxidation-state reading, not oxygen-only definition.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "chemistry-q07",
@@ -785,7 +803,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Surface association vs solution composition.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Surface association vs solution composition.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "chemistry-q08",
@@ -795,7 +816,7 @@
         "chemistry-MolecularEntity"
       ],
       "expression": null,
-      "expected_type": "gap: species amount/concentration and denominator binding",
+      "expected_type": "unresolved",
       "dependencies": [
         "Species-specific amount/concentration requires denominator and phase.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -812,7 +833,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Species-specific amount/concentration requires denominator and phase.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Species-specific amount/concentration requires denominator and phase.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "chemistry-q09",
@@ -821,7 +845,7 @@
         "chemistry-MolecularEntity"
       ],
       "expression": null,
-      "expected_type": "gap: amount root definition must distinguish entity count from mass",
+      "expected_type": "unresolved",
       "dependencies": [
         "Mass vs amount distinction.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -838,7 +862,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Mass vs amount distinction.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Mass vs amount distinction.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "chemistry-q10",
@@ -847,7 +874,7 @@
         "chemistry-PhasePortion"
       ],
       "expression": null,
-      "expected_type": "gap: named-analyte distribution and homogeneity summary",
+      "expected_type": "unresolved",
       "dependencies": [
         "Analyte-specific homogeneity.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -864,7 +891,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Analyte-specific homogeneity.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Analyte-specific homogeneity.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "chemistry-q11",
@@ -889,7 +919,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Operational bounded event around dependent reaction process.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Operational bounded event around dependent reaction process.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "chemistry-q12",
@@ -899,7 +932,7 @@
         "chemistry-PhasePortion"
       ],
       "expression": null,
-      "expected_type": "gap: species identity authority and phase-state distinction",
+      "expected_type": "unresolved",
       "dependencies": [
         "Interconversion vs phase change may overlap; identify actual entities.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -916,7 +949,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Interconversion vs phase change may overlap; identify actual entities.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Interconversion vs phase change may overlap; identify actual entities.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "chemistry-q13",
@@ -942,7 +978,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Dissociative adsorption counterexample.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Dissociative adsorption counterexample.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "chemistry-q14",
@@ -951,7 +990,7 @@
         "chemistry-PhasePortion"
       ],
       "expression": null,
-      "expected_type": "gap: evidence-state metadata, not new chemical predicate",
+      "expected_type": "unresolved",
       "dependencies": [
         "Unknown evidence is not chemical identity.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -968,7 +1007,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Unknown evidence is not chemical identity.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Unknown evidence is not chemical identity.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "chemistry-q15",
@@ -977,7 +1019,7 @@
         "chemistry-ChemicalReaction"
       ],
       "expression": null,
-      "expected_type": "gap: kinetic quality and model; authority does not supply rate",
+      "expected_type": "unresolved",
       "dependencies": [
         "Identity authority vs kinetic quality/model.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -994,7 +1036,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Identity authority vs kinetic quality/model.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Identity authority vs kinetic quality/model.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [

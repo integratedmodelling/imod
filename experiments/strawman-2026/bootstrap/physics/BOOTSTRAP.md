@@ -28,7 +28,7 @@ Proposed dependency order: imod → physical → physics/chemistry/earth; earth 
 Contact heat transfer and temperature are distinct observables.
 - Source/provenance: NASA-HEAT; original order 1.
 - Draft observable: `physics:ThermalConduction`
-- Expected kind: process. Positive: spoon heated through contact; specified heated metal sample. Negative: sunlight crossing a vacuum; temperature number.
+- Expected expression-result category: process. Positive: spoon heated through contact; specified heated metal sample. Negative: sunlight crossing a vacuum; temperature number.
 - Dependencies: Contact heat transfer and temperature are distinct observables. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -37,7 +37,7 @@ Contact heat transfer and temperature are distinct observables.
 Energy transfer does not universally imply temperature rise.
 - Source/provenance: NASA-HEAT; original order 2.
 - Draft observable: `physics:TransferredThermalEnergy`
-- Expected kind: quality. Positive: specified heated metal sample; energy transferred during the heating pulse. Negative: temperature number; stored temperature.
+- Expected expression-result category: quality. Positive: specified heated metal sample; energy transferred during the heating pulse. Negative: temperature number; stored temperature.
 - Dependencies: Energy transfer does not universally imply temperature rise. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -46,7 +46,7 @@ Energy transfer does not universally imply temperature rise.
 Fluid circulation and heat transport, without equating all convection with buoyancy.
 - Source/provenance: NASA-THERMAL; original order 3.
 - Draft observable: `physics:ConvectiveHeatTransport`
-- Expected kind: process. Positive: heat redistributed by circulating water; marked parcel followed through circulation. Negative: conduction through stationary solid; fixed Eulerian grid cell without material identity.
+- Expected expression-result category: process. Positive: heat redistributed by circulating water; marked parcel followed through circulation. Negative: conduction through stationary solid; fixed Eulerian grid cell without material identity.
 - Dependencies: Fluid circulation and heat transport, without equating all convection with buoyancy. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -55,7 +55,7 @@ Fluid circulation and heat transport, without equating all convection with buoya
 Radiative transfer rather than contact-only relation.
 - Source/provenance: NASA-THERMAL; original order 4.
 - Draft observable: `physics:RadiativeEnergyTransfer`
-- Expected kind: process. Positive: campfire radiation absorbed by skin. Negative: contact conduction alone.
+- Expected expression-result category: process. Positive: campfire radiation absorbed by skin. Negative: contact conduction alone.
 - Dependencies: Radiative transfer rather than contact-only relation. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **provisional**, adaptation/reasoner/model not run.
 
@@ -64,7 +64,7 @@ Radiative transfer rather than contact-only relation.
 Net force and vector acceleration require frame and classical regime.
 - Source/provenance: NASA-MOTION; original order 5.
 - Draft observable: `physics:MechanicalAcceleration`
-- Expected kind: process. Positive: turning motion at constant speed; stone subject to a push. Negative: constant straight-line motion; a force vector.
+- Expected expression-result category: process. Positive: turning motion at constant speed; stone subject to a push. Negative: constant straight-line motion; a force vector.
 - Dependencies: Net force and vector acceleration require frame and classical regime. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -73,7 +73,7 @@ Net force and vector acceleration require frame and classical regime.
 Direction vs speed; root Velocity/Speed mismatch blocks mapping.
 - Source/provenance: NASA-MOTION; original order 6.
 - Explicit gap: gap: vector velocity versus scalar speed upstream distinction.
-- Expected kind: gap: vector velocity versus scalar speed upstream distinction. Positive: turning motion at constant speed. Negative: constant straight-line motion.
+- Expected expression-result category: unresolved. Positive: turning motion at constant speed. Negative: constant straight-line motion.
 - Dependencies: Direction vs speed; root Velocity/Speed mismatch blocks mapping. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: vector velocity versus scalar speed upstream distinction
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -82,7 +82,7 @@ Direction vs speed; root Velocity/Speed mismatch blocks mapping.
 Pressure, volume, temperature and process conditions.
 - Source/provenance: NASA-HEAT; original order 7.
 - Draft observable: `imod:Volume of physics:FluidParcel`
-- Expected kind: quality. Positive: piston compresses gas; marked parcel followed through circulation. Negative: gas moved without volume change; fixed Eulerian grid cell without material identity.
+- Expected expression-result category: quality. Positive: piston compresses gas; marked parcel followed through circulation. Negative: gas moved without volume change; fixed Eulerian grid cell without material identity.
 - Dependencies: Pressure, volume, temperature and process conditions. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -91,7 +91,7 @@ Pressure, volume, temperature and process conditions.
 Equilibrium under suitable isolation, not unconditional law in ontology.
 - Source/provenance: NASA-HEAT; original order 8.
 - Draft observable: `physics:ThermallyContacts linking physics:ThermalBody to physics:ThermalBody`
-- Expected kind: relationship. Positive: spoon touches drink; specified heated metal sample. Negative: radiation across vacuum; temperature number.
+- Expected expression-result category: relationship. Positive: spoon touches drink; specified heated metal sample. Negative: radiation across vacuum; temperature number.
 - Dependencies: Equilibrium under suitable isolation, not unconditional law in ontology. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -100,7 +100,7 @@ Equilibrium under suitable isolation, not unconditional law in ontology.
 Inertial mass vs amount of substance.
 - Source/provenance: NASA-MOTION; original order 9.
 - Draft observable: `imod:Mass of physics:MechanicalBody`
-- Expected kind: quality. Positive: stone subject to a push. Negative: a force vector.
+- Expected expression-result category: quality. Positive: stone subject to a push. Negative: a force vector.
 - Dependencies: Inertial mass vs amount of substance. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -109,7 +109,7 @@ Inertial mass vs amount of substance.
 Temperature vs heat transfer, avoid heat as stored substance.
 - Source/provenance: NASA-HEAT; original order 10.
 - Draft observable: `imod:Temperature of physics:ThermalBody`
-- Expected kind: quality. Positive: specified heated metal sample; energy transferred during the heating pulse. Negative: temperature number; stored temperature.
+- Expected expression-result category: quality. Positive: specified heated metal sample; energy transferred during the heating pulse. Negative: temperature number; stored temperature.
 - Dependencies: Temperature vs heat transfer, avoid heat as stored substance. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -118,7 +118,7 @@ Temperature vs heat transfer, avoid heat as stored substance.
 Bounded episode vs ongoing heat-transfer process.
 - Source/provenance: NASA-HEAT; original order 11.
 - Draft observable: `physics:HeatingEpisode`
-- Expected kind: event. Positive: one pulse of heating. Negative: unbounded generic conduction.
+- Expected expression-result category: event. Positive: one pulse of heating. Negative: unbounded generic conduction.
 - Dependencies: Bounded episode vs ongoing heat-transfer process. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **provisional**, adaptation/reasoner/model not run.
 
@@ -127,7 +127,7 @@ Bounded episode vs ongoing heat-transfer process.
 Restricted conductance not absolute absence of radiation.
 - Source/provenance: NASA-THERMAL; original order 12.
 - Explicit gap: gap: conductance and boundary conditions; cannot infer absence.
-- Expected kind: gap: conductance and boundary conditions; cannot infer absence. Positive: spoon heated through contact; campfire radiation absorbed by skin. Negative: sunlight crossing a vacuum; contact conduction alone.
+- Expected expression-result category: unresolved. Positive: spoon heated through contact; campfire radiation absorbed by skin. Negative: sunlight crossing a vacuum; contact conduction alone.
 - Dependencies: Restricted conductance not absolute absence of radiation. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: conductance and boundary conditions; cannot infer absence
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 
@@ -136,7 +136,7 @@ Restricted conductance not absolute absence of radiation.
 Force interaction vs motion; no velocity predicate from interaction alone.
 - Source/provenance: NASA-MOTION; original order 13.
 - Draft observable: `physics:ExertsForceOn linking physics:MechanicalBody to physics:MechanicalBody`
-- Expected kind: relationship. Positive: hand pushes stone. Negative: stone appears in photograph.
+- Expected expression-result category: relationship. Positive: hand pushes stone. Negative: stone appears in photograph.
 - Dependencies: Force interaction vs motion; no velocity predicate from interaction alone. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **provisional**, adaptation/reasoner/model not run.
 
@@ -145,7 +145,7 @@ Force interaction vs motion; no velocity predicate from interaction alone.
 Transfer quantity requires a process interval, not stored energy alias.
 - Source/provenance: NASA-HEAT; original order 14.
 - Draft observable: `physics:TransferredThermalEnergy`
-- Expected kind: quality. Positive: energy transferred during the heating pulse; one pulse of heating. Negative: stored temperature; unbounded generic conduction.
+- Expected expression-result category: quality. Positive: energy transferred during the heating pulse; one pulse of heating. Negative: stored temperature; unbounded generic conduction.
 - Dependencies: Transfer quantity requires a process interval, not stored energy alias. Imported ancestry and all proposed names must resolve; no model or data availability assumed.
 - Checks: grammar **untested**, semantic **provisional**, adaptation/reasoner/model not run.
 
@@ -154,7 +154,7 @@ Transfer quantity requires a process interval, not stored energy alias.
 Open-world evidence state, not physical stasis.
 - Source/provenance: LOCAL; original order 15.
 - Explicit gap: gap: no-reading is evidence state, no stop-event inference.
-- Expected kind: gap: no-reading is evidence state, no stop-event inference. Positive: one pulse of heating. Negative: unbounded generic conduction.
+- Expected expression-result category: unresolved. Positive: one pulse of heating. Negative: unbounded generic conduction.
 - Dependencies: Open-world evidence state, not physical stasis. Imported ancestry and all proposed names must resolve; no model or data availability assumed. gap: no-reading is evidence state, no stop-event inference
 - Checks: grammar **untested**, semantic **blocked**, adaptation/reasoner/model not run.
 

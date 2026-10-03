@@ -29,7 +29,7 @@ The saved questions-source-first.json was written before candidate records and k
 Source: L1; source-led order 1. Incidence: geology:RockBody.
 
 Expression: `geology:RockBody`
-Expected: subject. Observe underlying rock body; lithological identity and overlying-soil context remain dependencies.
+Expected expression-result category: subject. Observe underlying rock body; lithological identity and overlying-soil context remain dependencies.
 Positive case: Observe underlying rock body; lithological identity and overlying-soil context remain dependencies. Negative case: soil taxon supplies rock identity.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -38,7 +38,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: L1; source-led order 2. Incidence: geology:GrainConstituentOf, geology:MineralGrain, geology:RockBody.
 
 Expression: `geology:GrainConstituentOf`
-Expected: relationship. Resolve identified grain and containing rock endpoints, not type occurrence alone.
+Expected expression-result category: relationship. Resolve identified grain and containing rock endpoints, not type occurrence alone.
 Positive case: Resolve identified grain and containing rock endpoints, not type occurrence alone. Negative case: mineral in handbook proves membership.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -47,7 +47,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: L1; source-led order 3. Incidence: geology:SedimentBody, geology:RockBody.
 
 Expression: `geology:SedimentBody`
-Expected: subject. Differentiate unconsolidated accumulation from coherent body.
+Expected expression-result category: subject. Differentiate unconsolidated accumulation from coherent body.
 Positive case: Differentiate unconsolidated accumulation from coherent body. Negative case: all small rocks are sediment bodies.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -56,7 +56,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: L2; source-led order 4. Incidence: geology:FaultCutsBody, geology:FaultZone, geology:RockStratum.
 
 Expression: `geology:FaultCutsBody`
-Expected: relationship. Intersection tested; older chronology requires additional stratigraphic evidence.
+Expected expression-result category: relationship. Intersection tested; older chronology requires additional stratigraphic evidence.
 Positive case: Intersection tested; older chronology requires additional stratigraphic evidence. Negative case: map line crossing proves chronology.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -65,7 +65,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: L2; source-led order 5. Incidence: geology:SlipDisplacement, geology:FaultSlipEarthquake.
 
 Expression: `geology:SlipDisplacement of geology:FaultZone`
-Expected: quality. Relative fault-side displacement during specific earthquake; shaking motion is separate.
+Expected expression-result category: quality. Relative fault-side displacement during specific earthquake; shaking motion is separate.
 Positive case: Relative fault-side displacement during specific earthquake; shaking motion is separate. Negative case: earthquake magnitude equals local displacement.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -74,7 +74,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: L3; source-led order 6. Incidence: geology:LandslideEpisode, geology:RockfallEpisode.
 
 Expression: `geology:RockfallEpisode`
-Expected: event. Bounded falling mode versus flow; retain event classification evidence.
+Expected expression-result category: event. Bounded falling mode versus flow; retain event classification evidence.
 Positive case: Bounded falling mode versus flow; retain event classification evidence. Negative case: all downslope motion is rockfall.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -83,7 +83,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: L3; source-led order 7. Incidence: geology:LandslideEpisode.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Causal alternatives require model/evidence; landslide meaning does not require earthquake.
+Expected expression-result category: unresolved. Causal alternatives require model/evidence; landslide meaning does not require earthquake.
 Positive case: Causal alternatives require model/evidence; landslide meaning does not require earthquake. Negative case: every slide implies quake.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -92,7 +92,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: L1; source-led order 8. Incidence: geology:InPlaceWeathering, geology:SedimentTransport.
 
 Expression: `geology:InPlaceWeathering`
-Expected: process. Separate in-place alteration from transport; both may co-occur.
+Expected expression-result category: process. Separate in-place alteration from transport; both may co-occur.
 Positive case: Separate in-place alteration from transport; both may co-occur. Negative case: weathering necessarily means material moved away.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -101,7 +101,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: L1; source-led order 9. Incidence: geology:Lithification, geology:RockBody.
 
 Expression: `geology:Lithification`
-Expected: process. Observe consolidation; resulting rock identity needs boundary/continuity judgment.
+Expected expression-result category: process. Observe consolidation; resulting rock identity needs boundary/continuity judgment.
 Positive case: Observe consolidation; resulting rock identity needs boundary/continuity judgment. Negative case: mere settling constitutes rock.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -110,7 +110,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: L1; source-led order 10. Incidence: geology:MetamorphicAlteration.
 
 Expression: `geology:MetamorphicAlteration`
-Expected: process. Solid-state alteration; temperature/pressure/composition dependencies incomplete.
+Expected expression-result category: process. Solid-state alteration; temperature/pressure/composition dependencies incomplete.
 Positive case: Solid-state alteration; temperature/pressure/composition dependencies incomplete. Negative case: melting relabeled metamorphism.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -119,7 +119,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: L3; source-led order 11. Incidence: geology:BodyVolume, geology:LandslideEpisode.
 
 Expression: `geology:BodyVolume of geology:SedimentBody`
-Expected: quality. Displaced participating body volume, not affected-map area; rock bodies need parallel observation.
+Expected expression-result category: quality. Displaced participating body volume, not affected-map area; rock bodies need parallel observation.
 Positive case: Displaced participating body volume, not affected-map area; rock bodies need parallel observation. Negative case: source area treated as volume.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -128,7 +128,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: L1; source-led order 12. Incidence: geology:MineralFraction.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Profitability requires economic/recoverability models, no Ore predicate inferred from presence.
+Expected expression-result category: unresolved. Profitability requires economic/recoverability models, no Ore predicate inferred from presence.
 Positive case: Profitability requires economic/recoverability models, no Ore predicate inferred from presence. Negative case: any mineral grain means viable mine.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -137,7 +137,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: L3; source-led order 13. Incidence: geology:RockfallEpisode, geology:RockBody.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Support relation, collapse event and dependent identity consequences need upstream articulation; no engine.
+Expected expression-result category: unresolved. Support relation, collapse event and dependent identity consequences need upstream articulation; no engine.
 Positive case: Support relation, collapse event and dependent identity consequences need upstream articulation; no engine. Negative case: absence from image ends rock body.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -146,7 +146,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: L2; source-led order 14. Incidence: geology:FaultZone.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. No earthquake observation does not imply zero hazard; hazard models distinct from fault subject.
+Expected expression-result category: unresolved. No earthquake observation does not imply zero hazard; hazard models distinct from fault subject.
 Positive case: No earthquake observation does not imply zero hazard; hazard models distinct from fault subject. Negative case: quiet period certifies safety.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -155,7 +155,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: L3; source-led order 15. Incidence: geology:LandslideEpisode.
 
 Expression: `geology:LandslideEpisode`
-Expected: event. Submarine movement remains within scoped landslide meaning; water cover is context.
+Expected expression-result category: event. Submarine movement remains within scoped landslide meaning; water cover is context.
 Positive case: Submarine movement remains within scoped landslide meaning; water cover is context. Negative case: underwater excludes landslide.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 

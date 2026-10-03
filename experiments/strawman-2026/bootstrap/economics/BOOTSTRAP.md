@@ -25,7 +25,7 @@ The linked sources establish disciplinary examples and distinctions. All named c
 
 Source: SNA2008. Preserved source-question order 1; no independent holdout claim.
 
-Draft expression: `economics:DisposableIncome of economics:HouseholdUnit`. Expected category: subject.
+Draft expression: `economics:DisposableIncome of economics:HouseholdUnit`. Expected expression-result category: quality.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: identified household unit. Negative boundary: everyone living within one wildfire perimeter.
@@ -45,7 +45,7 @@ Checks: grammar untested; semantic blocked; adapter, reasoner and execution unte
 
 Source: GDP. Preserved source-question order 3; no independent holdout claim.
 
-Draft expression: `economics:OutputValue of economics:EstablishmentUnit`. Expected category: process.
+Draft expression: `economics:OutputValue of economics:EstablishmentUnit`. Expected expression-result category: quality.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: observed factory production. Negative boundary: asset price appreciation alone.
@@ -55,7 +55,7 @@ Checks: grammar untested; semantic provisional; adapter, reasoner and execution 
 
 Source: SNA2008. Preserved source-question order 4; no independent holdout claim.
 
-Draft expression: `economics:IntermediateConsumption`. Expected category: process.
+Draft expression: `economics:IntermediateConsumption`. Expected expression-result category: process.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: fuel consumed by a plant. Negative boundary: purchase of an enduring machine.
@@ -85,7 +85,7 @@ Checks: grammar untested; semantic blocked; adapter, reasoner and execution unte
 
 Source: SNA2008. Preserved source-question order 7; no independent holdout claim.
 
-Draft expression: `economics:OwesPayment linking economics:EnterpriseUnit to economics:EnterpriseUnit`. Expected category: relationship.
+Draft expression: `economics:OwesPayment linking economics:EnterpriseUnit to economics:EnterpriseUnit`. Expected expression-result category: relationship.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: accepted contractor payable. Negative boundary: unaccepted quotation.
@@ -125,7 +125,7 @@ Checks: grammar untested; semantic blocked; adapter, reasoner and execution unte
 
 Source: SNA2008. Preserved source-question order 11; no independent holdout claim.
 
-Draft expression: `economics:AssetSale`. Expected category: event.
+Draft expression: `economics:AssetSale`. Expected expression-result category: event.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: completed machine sale. Negative boundary: offer not accepted.
@@ -135,7 +135,7 @@ Checks: grammar untested; semantic provisional; adapter, reasoner and execution 
 
 Source: BEA. Preserved source-question order 12; no independent holdout claim.
 
-Draft expression: `economics:TransferReceipt`. Expected category: event.
+Draft expression: `economics:TransferReceipt`. Expected expression-result category: event.
 
 This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.
 Positive boundary: household receives emergency transfer. Negative boundary: announcement of future support.

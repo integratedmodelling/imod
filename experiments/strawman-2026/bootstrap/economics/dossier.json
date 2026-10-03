@@ -837,7 +837,7 @@
         "economics-DisposableIncome"
       ],
       "expression": "economics:DisposableIncome of economics:HouseholdUnit",
-      "expected_type": "subject",
+      "expected_type": "quality",
       "dependencies": [
         "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -855,7 +855,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which households lost income while businesses were closed by wildfire?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "economics-q02",
@@ -864,7 +867,7 @@
         "economics-EnterpriseUnit"
       ],
       "expression": null,
-      "expected_type": "subject",
+      "expected_type": "unresolved",
       "dependencies": [
         "production interruption plus infrastructure dependency and causal attribution",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -882,7 +885,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which businesses stopped producing because electricity was unavailable?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "economics-q03",
@@ -893,7 +899,7 @@
         "economics-EstablishmentUnit"
       ],
       "expression": "economics:OutputValue of economics:EstablishmentUnit",
-      "expected_type": "process",
+      "expected_type": "quality",
       "dependencies": [
         "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -911,7 +917,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "How much output did the affected plant produce before and after the fire?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "economics-q04",
@@ -938,7 +947,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "How much of the plant's purchases was used up in production?",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "economics-q05",
@@ -947,7 +959,7 @@
         "economics-ProducedAsset"
       ],
       "expression": null,
-      "expected_type": "subject",
+      "expected_type": "unresolved",
       "dependencies": [
         "benefit/control criteria plus physical condition; price alone insufficient",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -965,7 +977,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which damaged machines remain economic assets rather than scrap?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "economics-q06",
@@ -974,7 +989,7 @@
         "economics-TransfersTo"
       ],
       "expression": null,
-      "expected_type": "relationship",
+      "expected_type": "unresolved",
       "dependencies": [
         "classify the transaction under applicable accounting treatment; payment is not automatically production",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -992,7 +1007,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Did the insurance payment compensate damage or create new output?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "economics-q07",
@@ -1020,7 +1038,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Who owes the repair contractor payment?",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "economics-q08",
@@ -1029,7 +1050,7 @@
         "economics-PaysCompensation"
       ],
       "expression": null,
-      "expected_type": "relationship",
+      "expected_type": "unresolved",
       "dependencies": [
         "worker/employee distinction upstream and observed payment",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1047,7 +1068,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which workers received wages while operations were suspended?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "economics-q09",
@@ -1056,7 +1080,7 @@
         "economics-CapitalFormation"
       ],
       "expression": null,
-      "expected_type": "process",
+      "expected_type": "unresolved",
       "dependencies": [
         "opening stock, destruction and additions; spending is not net wealth change",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1074,7 +1098,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Did the reconstruction spending restore wealth or increase it?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "economics-q10",
@@ -1083,7 +1110,7 @@
         "economics-OutputValue"
       ],
       "expression": null,
-      "expected_type": "quality",
+      "expected_type": "unresolved",
       "dependencies": [
         "invalid inference; separate price and physical output",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1101,7 +1128,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Did an increase in timber price mean more timber was produced?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "economics-q11",
@@ -1128,7 +1158,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which asset changed hands in this sale?",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "economics-q12",
@@ -1155,7 +1188,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question."
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which households received emergency cash transfers?",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "economics-q13",
@@ -1164,7 +1200,7 @@
         "economics-AssetDestruction"
       ],
       "expression": null,
-      "expected_type": "event",
+      "expected_type": "unresolved",
       "dependencies": [
         "separate consumption of fixed capital and catastrophic asset change",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1182,7 +1218,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Was the loss due to wear during use or to sudden wildfire destruction?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "economics-q14",
@@ -1191,7 +1230,7 @@
         "economics-HouseholdUnit"
       ],
       "expression": null,
-      "expected_type": "subject",
+      "expected_type": "unresolved",
       "dependencies": [
         "current accounting boundary must be specified; no equivalence inferred",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1209,7 +1248,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Are unpaid household care and purchased care counted in the same production boundary?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "economics-q15",
@@ -1218,7 +1260,7 @@
         "economics-OutputValue"
       ],
       "expression": null,
-      "expected_type": "quality",
+      "expected_type": "unresolved",
       "dependencies": [
         "invalid welfare inference; distribution, environment and welfare concepts needed",
         "No observation/resolution means open-world unknown, not zero or absence."
@@ -1236,7 +1278,10 @@
         "independence": "not blinded; existing worldview and author analysis visible",
         "register": "QUESTIONS_FIRST.md"
       },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid."
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Would higher local GDP prove that recovery improved everyone's wellbeing?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [

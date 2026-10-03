@@ -203,7 +203,8 @@
           },
           "expected_type": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "description": "Compatibility alias for expression_result_category; unresolved for a full-formulation gap. Not narrative intent or a type-check result."
           },
           "dependencies": {
             "type": "array"
@@ -231,6 +232,22 @@
           "grammar_status": {
             "type": "string",
             "minLength": 1
+          },
+          "narrative_intent": {
+            "type": "string"
+          },
+          "expression_result_category": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "expression_result_basis": {
+            "type": "string"
+          },
+          "components": {
+            "type": "array",
+            "description": "Explicitly insufficient or partial component expressions; not counted as complete question formulations."
           }
         },
         "additionalProperties": true

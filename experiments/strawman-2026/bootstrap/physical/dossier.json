@@ -440,7 +440,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Identity continuity vs thermal change; boundary/identity policy is an upstream issue.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Identity continuity vs thermal change; boundary/identity policy is an upstream issue.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physical-q02",
@@ -466,7 +469,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Mass must not mean amount of substance.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Mass must not mean amount of substance.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physical-q03",
@@ -496,7 +502,10 @@
       "blocking_dependencies": [
         "physical-HostBoundVoid",
         "physical-VoidHostedBy"
-      ]
+      ],
+      "narrative_intent": "Dependent feature vs independent substantial.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physical-q04",
@@ -522,7 +531,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Cessation requires bounded fragmentation occurrence and new identities.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Cessation requires bounded fragmentation occurrence and new identities.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physical-q05",
@@ -550,7 +562,10 @@
       "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
       "blocking_dependencies": [
         "physical-PhysicalContact"
-      ]
+      ],
+      "narrative_intent": "Contact does not entail attachment or common identity.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physical-q06",
@@ -576,7 +591,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Volume and temperature are distinct dependent observables; thermal expansion is a mechanism.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Volume and temperature are distinct dependent observables; thermal expansion is a mechanism.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physical-q07",
@@ -586,7 +604,7 @@
         "physical-BodyMass"
       ],
       "expression": "change in physical:BodyMass",
-      "expected_type": "change-quality",
+      "expected_type": "process",
       "dependencies": [
         "Open boundary material accounting vs identity loss.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
@@ -602,7 +620,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Open boundary material accounting vs identity loss.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Open boundary material accounting vs identity loss.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "physical-q08",
@@ -611,7 +632,7 @@
         "physical-MaterialBody"
       ],
       "expression": null,
-      "expected_type": "gap: frame-dependent speed and process inventory cannot be inferred from stillness",
+      "expected_type": "unresolved",
       "dependencies": [
         "Stillness in a chosen frame cannot establish absence of thermal change.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -628,7 +649,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Stillness in a chosen frame cannot establish absence of thermal change.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Stillness in a chosen frame cannot establish absence of thermal change.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "physical-q09",
@@ -637,7 +661,7 @@
         "physical-MaterialBody"
       ],
       "expression": null,
-      "expected_type": "gap: property-specific distribution/summary quality",
+      "expected_type": "unresolved",
       "dependencies": [
         "Homogeneity must name a property and support scale.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -654,7 +678,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Homogeneity must name a property and support scale.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Homogeneity must name a property and support scale.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "physical-q10",
@@ -680,7 +707,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Independent qualities, not one size category.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Independent qualities, not one size category.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physical-q11",
@@ -689,7 +719,7 @@
         "physical-HostBoundVoid"
       ],
       "expression": null,
-      "expected_type": "gap: host/void individuation",
+      "expected_type": "unresolved",
       "dependencies": [
         "Identity and host dependence need explicit criteria.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -709,7 +739,10 @@
       "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
       "blocking_dependencies": [
         "physical-HostBoundVoid"
-      ]
+      ],
+      "narrative_intent": "Identity and host dependence need explicit criteria.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "physical-q12",
@@ -737,7 +770,10 @@
       "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
       "blocking_dependencies": [
         "physical-IdentityLossEpisode"
-      ]
+      ],
+      "narrative_intent": "Collapse is identity loss, not missing sensor data.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "physical-q13",
@@ -746,7 +782,7 @@
         "physical-BodyTemperature"
       ],
       "expression": "change in physical:BodyTemperature",
-      "expected_type": "change-quality",
+      "expected_type": "process",
       "dependencies": [
         "Relative level vs temporal difference.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
@@ -762,7 +798,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Relative level vs temporal difference.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Relative level vs temporal difference.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "physical-q14",
@@ -771,7 +810,7 @@
         "physical-BodyMass"
       ],
       "expression": null,
-      "expected_type": "gap: epistemic evidence policy is not a domain predicate",
+      "expected_type": "unresolved",
       "dependencies": [
         "Evidence absence cannot resolve a quality or create cessation.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -788,7 +827,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Evidence absence cannot resolve a quality or create cessation.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Evidence absence cannot resolve a quality or create cessation.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "physical-q15",
@@ -797,7 +839,7 @@
         "physical-MaterialBody"
       ],
       "expression": null,
-      "expected_type": "gap: upstream context review",
+      "expected_type": "unresolved",
       "dependencies": [
         "Root vs physical scope gate, not an extra domain taxonomy.",
         "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
@@ -814,7 +856,10 @@
       "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
       "expected_interpretation": "Root vs physical scope gate, not an extra domain taxonomy.",
       "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
-      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change."
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Root vs physical scope gate, not an extra domain taxonomy.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [

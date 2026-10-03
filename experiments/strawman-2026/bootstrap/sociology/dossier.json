@@ -707,7 +707,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Explicit warning-source referent and elicitation context; this expression omits referent binding and is incomplete semantically.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "sociology-q02",
@@ -739,7 +742,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Provider,recipient,help type and availability conditions required.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "sociology-q03",
@@ -771,7 +777,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Need eligible/reference group and attendance; underrepresentation criterion separate.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "sociology-q04",
@@ -802,7 +811,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Shared undertaking and actual contributions; benefit success separate.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "sociology-q05",
@@ -813,7 +825,7 @@
         "sociology-c10"
       ],
       "expression": null,
-      "expected_type": "process and authorization relation",
+      "expected_type": "unresolved",
       "dependencies": [
         "Agency authorization plus upstream norm content needed; user access is not rule-change power.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -834,7 +846,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Agency authorization plus upstream norm content needed; user access is not rule-change power.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "sociology-q06",
@@ -845,7 +860,7 @@
         "sociology-c10"
       ],
       "expression": null,
-      "expected_type": "multiple qualities/relationships",
+      "expected_type": "unresolved",
       "dependencies": [
         "Compare practical access and hazard exposure separately,with no single generic vulnerability label.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -866,7 +881,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Compare practical access and hazard exposure separately,with no single generic vulnerability label.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "sociology-q07",
@@ -898,7 +916,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Responsibility/authority norm missing; coordination alone insufficient for legal duty.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "sociology-q08",
@@ -908,7 +929,7 @@
         "sociology-c04"
       ],
       "expression": null,
-      "expected_type": "process and communication relationship gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Message transfer observable upstream missing; trust tie cannot substitute for receipt.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -929,7 +950,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Message transfer observable upstream missing; trust tie cannot substitute for receipt.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "sociology-q09",
@@ -939,7 +963,7 @@
         "sociology-c17"
       ],
       "expression": "change in sociology:ReportedTrust of society:HumanIndividual",
-      "expected_type": "quality change",
+      "expected_type": "process",
       "dependencies": [
         "Separate resolutions at occurrence-induced transition; report before/after with comparable referent,not causal proof.",
         "Draft names are research candidates,not declarations in active src; namespace and type resolution remain blocked.",
@@ -960,7 +984,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Separate resolutions at occurrence-induced transition; report before/after with comparable referent,not causal proof.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "sociology-q10",
@@ -970,7 +997,7 @@
         "sociology-c07"
       ],
       "expression": null,
-      "expected_type": "process and agency representation relationship",
+      "expected_type": "unresolved",
       "dependencies": [
         "Representation must import reviewed agency relation; worker status from relevant domain/authority.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -991,7 +1018,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Representation must import reviewed agency relation; worker status from relevant domain/authority.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "sociology-q11",
@@ -1023,7 +1053,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Identity/constitution criteria; creation target depends on society group review.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "sociology-q12",
@@ -1054,7 +1087,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Need agreed settlement criterion and event evidence.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "sociology-q13",
@@ -1086,7 +1122,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Delivered help versus network opportunity; compare recipients without conflating isolation and need.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "sociology-q14",
@@ -1097,7 +1136,7 @@
         "sociology-c03"
       ],
       "expression": null,
-      "expected_type": "quality/process comparison",
+      "expected_type": "unresolved",
       "dependencies": [
         "Reject deterministic mapping between reported trust and cooperation; model hypothesis only.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -1118,7 +1157,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Reject deterministic mapping between reported trust and cooperation; model hypothesis only.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "sociology-q15",
@@ -1129,7 +1171,7 @@
         "sociology-c13"
       ],
       "expression": null,
-      "expected_type": "process/event with reasons unresolved",
+      "expected_type": "unresolved",
       "dependencies": [
         "Observed joint action need not imply common values; reason content upstream gap.",
         "Explicit formulation gap: no complete observable expression claimed.",
@@ -1150,7 +1192,10 @@
         "Source motivation and positive/negative meaning reviewed by same drafting agent only; no expert approval.",
         "No data/model execution; unresolved observations remain open-world unknown."
       ],
-      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out."
+      "provenance": "QUESTION_ORIGIN.json, source-first order retained; same-agent drafting,not independent held-out.",
+      "narrative_intent": "Observed joint action need not imply common values; reason content upstream gap.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [

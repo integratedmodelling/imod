@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "new_consistency_tests": 13,
+  "existing_proposal_tests": 11,
+  "total_tests": 24,
+  "command": "python -B -m unittest discover -s experiments/strawman-2026/tools -p test_*.py -v",
+  "scope": "Bounded static consistency and negative mutation checks. No reasoner, model execution, scientific or human approval.",
+  "test_source_sha256": {
+    "test_dossier_consistency.py": "58e13fcf54d6d55a97940527b12c35726da8f9b71e892f413ced6a680c392dbb",
+    "dossier_consistency.py": "1ce3eaf8cfd384a473db42a6d410bab4a8a409231a5936248c7d03d49381713f",
+    "test_validate_proposal.py": "63c094c8e772e93bf2f65acaa8a0a09c937af3a5c06ad38ade3200f54d1cc44a"
+  }
+}

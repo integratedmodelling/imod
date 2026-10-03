@@ -31,7 +31,7 @@ The saved questions-source-first.json was written before candidate records and k
 Source: G1; source-led order 1. Incidence: geography:GroundElevation.
 
 Expression: `geography:GroundElevation of earth:Location`
-Expected: quality. Ground-surface height with common datum; home location supplies context.
+Expected expression-result category: quality. Ground-surface height with common datum; home location supplies context.
 Positive case: Ground-surface height with common datum; home location supplies context. Negative case: roof height.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -40,7 +40,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: G2; source-led order 2. Incidence: geography:TerrainAspect, geography:Hillslope.
 
 Expression: `geography:TerrainAspect of geography:Hillslope`
-Expected: quality. Aspect is needed; afternoon insolation additionally needs external solar/terrain model.
+Expected expression-result category: quality. Aspect is needed; afternoon insolation additionally needs external solar/terrain model.
 Positive case: Aspect is needed; afternoon insolation additionally needs external solar/terrain model. Negative case: aspect alone guarantees sunshine.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -49,7 +49,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: G2; source-led order 3. Incidence: geography:TerrainInclination, geography:Hillslope.
 
 Expression: `geography:TerrainInclination of geography:Hillslope`
-Expected: quality. Resolve inclination across route context, then compare externally.
+Expected expression-result category: quality. Resolve inclination across route context, then compare externally.
 Positive case: Resolve inclination across route context, then compare externally. Negative case: route slope confused with every adjacent hillside.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -58,7 +58,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: G2; source-led order 4. Incidence: geography:GroundElevation, geography:ValleyLandform, geography:RidgeLandform.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Equal height does not establish landform identity; form/configuration discrimination missing.
+Expected expression-result category: unresolved. Equal height does not establish landform identity; form/configuration discrimination missing.
 Positive case: Equal height does not establish landform identity; form/configuration discrimination missing. Negative case: same contour means same landform.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -67,7 +67,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: G2; source-led order 5. Incidence: geography:RidgeLandform, geography:SurfaceOutletConnection.
 
 Expression: `geography:RidgeLandform`
-Expected: subject. Ridge observation contributes; drainage-divide role and flow routing need hydrology.
+Expected expression-result category: subject. Ridge observation contributes; drainage-divide role and flow routing need hydrology.
 Positive case: Ridge observation contributes; drainage-divide role and flow routing need hydrology. Negative case: all ridges assumed catchment divides.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -76,7 +76,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: G2; source-led order 6. Incidence: geography:ClosedDepression, geography:ValleyLandform.
 
 Expression: `geography:ClosedDepression`
-Expected: subject. Test closed surface boundary at stated scale; distinguish outlet cropping.
+Expected expression-result category: subject. Test closed surface boundary at stated scale; distinguish outlet cropping.
 Positive case: Test closed surface boundary at stated scale; distinguish outlet cropping. Negative case: groundwater exit disproves surface closure.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -85,7 +85,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: G3; source-led order 7. Incidence: geography:GroundElevation, geography:SlopeFailureEpisode.
 
 Expression: `change in geography:GroundElevation of earth:Location`
-Expected: change quality. Separate elevation change tied to slope-failure occurrence; no implicit elevation evolution.
+Expected expression-result category: process. Separate elevation change tied to slope-failure occurrence; no implicit elevation evolution.
 Positive case: Separate elevation change tied to slope-failure occurrence; no implicit elevation evolution. Negative case: survey datum shift treated as erosion.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -94,7 +94,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: G3; source-led order 8. Incidence: geography:CoastalRetreat, geography:GroundElevation.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Requires tide-referenced shoreline geometry and observed removal event; elevation alone insufficient.
+Expected expression-result category: unresolved. Requires tide-referenced shoreline geometry and observed removal event; elevation alone insufficient.
 Positive case: Requires tide-referenced shoreline geometry and observed removal event; elevation alone insufficient. Negative case: tidal exposure called land loss.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -103,7 +103,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: G3; source-led order 9. Incidence: geography:CrestDisplacement, geography:CoastalDune.
 
 Expression: `geography:CrestDisplacement of geography:CoastalDune`
-Expected: quality. Track same dune crest; road proximity is a separate core spatial comparison.
+Expected expression-result category: quality. Track same dune crest; road proximity is a separate core spatial comparison.
 Positive case: Track same dune crest; road proximity is a separate core spatial comparison. Negative case: new crest substituted without identity evidence.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -112,7 +112,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: G1; source-led order 10. Incidence: geography:TerrainAbutment.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Jurisdictional boundary authority and society/policy imports absent; do not use terrain contact.
+Expected expression-result category: unresolved. Jurisdictional boundary authority and society/policy imports absent; do not use terrain contact.
 Positive case: Jurisdictional boundary authority and society/policy imports absent; do not use terrain contact. Negative case: political boundary assumed natural wall.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -121,7 +121,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: G1; source-led order 11. Incidence: geography:GroundElevation.
 
 Expression: `geography:GroundElevation of earth:Location`
-Expected: quality. Reject roof returns as ground unless independent ground observation/model exists.
+Expected expression-result category: quality. Reject roof returns as ground unless independent ground observation/model exists.
 Positive case: Reject roof returns as ground unless independent ground observation/model exists. Negative case: roof equals ground.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -130,7 +130,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: G2; source-led order 12. Incidence: geography:OppositeFlanks, geography:Hillslope.
 
 Expression: `geography:OppositeFlanks`
-Expected: relationship. Resolve endpoints and shared ridge; bare relationship expression is only reusable meaning.
+Expected expression-result category: relationship. Resolve endpoints and shared ridge; bare relationship expression is only reusable meaning.
 Positive case: Resolve endpoints and shared ridge; bare relationship expression is only reusable meaning. Negative case: nearby slopes assumed shared ridge.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -139,7 +139,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: G3; source-led order 13. Incidence: geography:SurfaceAccumulation, geography:GroundElevation.
 
 Expression: `change in geography:GroundElevation of earth:Location`
-Expected: change quality. Change plus deposition evidence; attribution to storm requires model.
+Expected expression-result category: process. Change plus deposition evidence; attribution to storm requires model.
 Positive case: Change plus deposition evidence; attribution to storm requires model. Negative case: water depth mistaken for new sediment.
 Semantic status: provisional; grammar: untested. Model/resolution not executed.
 
@@ -148,7 +148,7 @@ Semantic status: provisional; grammar: untested. Model/resolution not executed.
 Source: G3; source-led order 14. Incidence: geography:GroundElevation.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Evidence-state question: no new survey leaves change unresolved, not zero.
+Expected expression-result category: unresolved. Evidence-state question: no new survey leaves change unresolved, not zero.
 Positive case: Evidence-state question: no new survey leaves change unresolved, not zero. Negative case: unknown means unchanged.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 
@@ -157,7 +157,7 @@ Semantic status: blocked; grammar: not_applicable. Model/resolution not executed
 Source: G2; source-led order 15. Incidence: geography:RidgeLandform.
 
 Expression: **gap; no faithful complete expression proposed**.
-Expected: gap. Mountain naming authority and chosen landform definition needed; no universal threshold inferred.
+Expected expression-result category: unresolved. Mountain naming authority and chosen landform definition needed; no universal threshold inferred.
 Positive case: Mountain naming authority and chosen landform definition needed; no universal threshold inferred. Negative case: map name establishes minimum height.
 Semantic status: blocked; grammar: not_applicable. Model/resolution not executed.
 

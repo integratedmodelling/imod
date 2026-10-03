@@ -753,7 +753,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 1,
         "independent": false
-      }
+      },
+      "narrative_intent": "Observe underlying rock body; lithological identity and overlying-soil context remain dependencies.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "geology-q02",
@@ -788,7 +791,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 2,
         "independent": false
-      }
+      },
+      "narrative_intent": "Resolve identified grain and containing rock endpoints, not type occurrence alone.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "geology-q03",
@@ -822,7 +828,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 3,
         "independent": false
-      }
+      },
+      "narrative_intent": "Differentiate unconsolidated accumulation from coherent body.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "geology-q04",
@@ -857,7 +866,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 4,
         "independent": false
-      }
+      },
+      "narrative_intent": "Intersection tested; older chronology requires additional stratigraphic evidence.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "geology-q05",
@@ -891,7 +903,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 5,
         "independent": false
-      }
+      },
+      "narrative_intent": "Relative fault-side displacement during specific earthquake; shaking motion is separate.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "geology-q06",
@@ -925,7 +940,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 6,
         "independent": false
-      }
+      },
+      "narrative_intent": "Bounded falling mode versus flow; retain event classification evidence.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "geology-q07",
@@ -938,7 +956,7 @@
         "geology:LandslideEpisode"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Causal alternatives require model/evidence; landslide meaning does not require earthquake.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -958,7 +976,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 7,
         "independent": false
-      }
+      },
+      "narrative_intent": "Causal alternatives require model/evidence; landslide meaning does not require earthquake.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "geology-q08",
@@ -992,7 +1013,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 8,
         "independent": false
-      }
+      },
+      "narrative_intent": "Separate in-place alteration from transport; both may co-occur.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "geology-q09",
@@ -1026,7 +1050,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 9,
         "independent": false
-      }
+      },
+      "narrative_intent": "Observe consolidation; resulting rock identity needs boundary/continuity judgment.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "geology-q10",
@@ -1059,7 +1086,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 10,
         "independent": false
-      }
+      },
+      "narrative_intent": "Solid-state alteration; temperature/pressure/composition dependencies incomplete.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "geology-q11",
@@ -1093,7 +1123,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 11,
         "independent": false
-      }
+      },
+      "narrative_intent": "Displaced participating body volume, not affected-map area; rock bodies need parallel observation.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "geology-q12",
@@ -1106,7 +1139,7 @@
         "geology:MineralFraction"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Profitability requires economic/recoverability models, no Ore predicate inferred from presence.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1126,7 +1159,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 12,
         "independent": false
-      }
+      },
+      "narrative_intent": "Profitability requires economic/recoverability models, no Ore predicate inferred from presence.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "geology-q13",
@@ -1140,7 +1176,7 @@
         "geology:RockBody"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Support relation, collapse event and dependent identity consequences need upstream articulation; no engine.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1160,7 +1196,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 13,
         "independent": false
-      }
+      },
+      "narrative_intent": "Support relation, collapse event and dependent identity consequences need upstream articulation; no engine.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "geology-q14",
@@ -1173,7 +1212,7 @@
         "geology:FaultZone"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "No earthquake observation does not imply zero hazard; hazard models distinct from fault subject.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1193,7 +1232,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 14,
         "independent": false
-      }
+      },
+      "narrative_intent": "No earthquake observation does not imply zero hazard; hazard models distinct from fault subject.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "geology-q15",
@@ -1226,7 +1268,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 15,
         "independent": false
-      }
+      },
+      "narrative_intent": "Submarine movement remains within scoped landslide meaning; water cover is context.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     }
   ],
   "quality_summaries": [

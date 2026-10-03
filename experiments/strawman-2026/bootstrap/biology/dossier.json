@@ -804,7 +804,10 @@
       "expected_interpretation": "Photosynthetic cells with carbon assimilation; excludes Any green object in sunlight. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Photosynthetic cells with carbon assimilation; excludes Any green object in sunlight. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "biology-q02",
@@ -830,7 +833,10 @@
       "expected_interpretation": "Cellular respiratory transformation; excludes Breathing motion alone. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Cellular respiratory transformation; excludes Breathing motion alone. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "biology-q03",
@@ -856,7 +862,10 @@
       "expected_interpretation": "Growth interval with mass observations; excludes One mass measurement. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Growth interval with mass observations; excludes One mass measurement. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "biology-q04",
@@ -882,7 +891,10 @@
       "expected_interpretation": "Transfer across intact cell membrane; excludes Leakage after membrane destruction. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Transfer across intact cell membrane; excludes Leakage after membrane destruction. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "biology-q05",
@@ -908,7 +920,10 @@
       "expected_interpretation": "Exchange across specified tissue boundary; excludes Ambient gas concentration alone. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Exchange across specified tissue boundary; excludes Ambient gas concentration alone. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "biology-q06",
@@ -934,7 +949,10 @@
       "expected_interpretation": "Completed cytokinesis with identified daughters; excludes Chromosome replication alone. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Completed cytokinesis with identified daughters; excludes Chromosome replication alone. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "biology-q07",
@@ -960,7 +978,10 @@
       "expected_interpretation": "Irreversible loss with recognized evidence; excludes Reversible growth arrest. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Irreversible loss with recognized evidence; excludes Reversible growth arrest. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "biology-q08",
@@ -986,7 +1007,10 @@
       "expected_interpretation": "New root primordium bounded by chosen criterion; excludes Elongation of old root. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "New root primordium bounded by chosen criterion; excludes Elongation of old root. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "biology-q09",
@@ -1012,7 +1036,10 @@
       "expected_interpretation": "Demonstrated transport route; excludes Spatial proximity. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Demonstrated transport route; excludes Spatial proximity. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "biology-q10",
@@ -1038,7 +1065,10 @@
       "expected_interpretation": "Signal reception supported; excludes Co-fluctuating measurements alone. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Signal reception supported; excludes Co-fluctuating measurements alone. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "biology-q11",
@@ -1064,7 +1094,10 @@
       "expected_interpretation": "Change of cell specialization within organism; excludes Taxonomic reassignment only. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Change of cell specialization within organism; excludes Taxonomic reassignment only. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "biology-q12",
@@ -1073,7 +1106,7 @@
         "NPS"
       ],
       "expression": null,
-      "expected_type": "causal model gap",
+      "expected_type": "unresolved",
       "positive": "Growth and water status plus competing causes",
       "negative": "Correlation asserted as cause",
       "draft_order": 12,
@@ -1091,7 +1124,10 @@
       "expected_interpretation": "Growth and water status plus competing causes; excludes Correlation asserted as cause. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Growth and water status plus competing causes; excludes Correlation asserted as cause. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "biology-q13",
@@ -1117,7 +1153,10 @@
       "expected_interpretation": "Organ with established leaf morphology; excludes Any photosynthetic tissue. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Organ with established leaf morphology; excludes Any photosynthetic tissue. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "biology-q14",
@@ -1143,7 +1182,10 @@
       "expected_interpretation": "New shoot on surviving individual; excludes Independent seedling. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "New shoot on surviving individual; excludes Independent seedling. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "biology-q15",
@@ -1152,7 +1194,7 @@
         "CELL"
       ],
       "expression": null,
-      "expected_type": "negative semantic probe",
+      "expected_type": "unresolved",
       "positive": "Unknown until adequate evidence",
       "negative": "Undetected respiration automatically death",
       "draft_order": 15,
@@ -1170,7 +1212,10 @@
       "expected_interpretation": "Unknown until adequate evidence; excludes Undetected respiration automatically death. Expression is a component observable where full question needs multiple resolutions.",
       "current_checks": [
         "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
-      ]
+      ],
+      "narrative_intent": "Unknown until adequate evidence; excludes Undetected respiration automatically death. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [

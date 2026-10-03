@@ -225,7 +225,7 @@ Expressions below are candidate observable strings, not complete query programs.
 
 Source-first sequence 1; sources TRUST. Motivation: directed reported trust, not demonstrated reliability. Concepts: sociology-c08, sociology-c17.
 
-Draft expression: `sociology:ReportedTrust of society:HumanIndividual`. Expected type: quality. Expected interpretation: Explicit warning-source referent and elicitation context; this expression omits referent binding and is incomplete semantically.
+Draft expression: `sociology:ReportedTrust of society:HumanIndividual`. Expected expression-result category: quality. Expected interpretation: Explicit warning-source referent and elicitation context; this expression omits referent binding and is incomplete semantically.
 
 Positive: Reported trust toward named fire service. Negative: Accuracy substituted for trust.
 
@@ -235,7 +235,7 @@ Dependencies/checks: Explicit warning-source referent and elicitation context; t
 
 Source-first sequence 2; sources TRUST. Motivation: support availability differs from delivered help. Concepts: sociology-c09, sociology-c19.
 
-Draft expression: `sociology:AvailableSupportTie`. Expected type: relationship. Expected interpretation: Provider, recipient, help type and availability conditions required.
+Draft expression: `sociology:AvailableSupportTie`. Expected expression-result category: relationship. Expected interpretation: Provider, recipient, help type and availability conditions required.
 
 Positive: Named neighbor can provide an accessible ride. Negative: Vague friendship counted as available ride.
 
@@ -245,7 +245,7 @@ Dependencies/checks: Provider, recipient, help type and availability conditions 
 
 Source-first sequence 3; sources OSTROM. Motivation: representation, eligibility and actual attendance. Concepts: sociology-c12, sociology-c18.
 
-Draft expression: `sociology:ParticipationShare of sociology:ParticipationMeeting`. Expected type: quality. Expected interpretation: Need eligible/reference group and attendance; underrepresentation criterion separate.
+Draft expression: `sociology:ParticipationShare of sociology:ParticipationMeeting`. Expected expression-result category: quality. Expected interpretation: Need eligible/reference group and attendance; underrepresentation criterion separate.
 
 Positive: Some eligible group members absent. Negative: No attendees of a group inferred no stake.
 
@@ -255,7 +255,7 @@ Dependencies/checks: Need eligible/reference group and attendance; underrepresen
 
 Source-first sequence 4; sources OSTROM. Motivation: joint action versus spatial coincidence. Concepts: sociology-c03.
 
-Draft expression: `sociology:Cooperation`. Expected type: process. Expected interpretation: Shared undertaking and actual contributions; benefit success separate.
+Draft expression: `sociology:Cooperation`. Expected expression-result category: process. Expected interpretation: Shared undertaking and actual contributions; benefit success separate.
 
 Positive: Joint maintenance with complementary tasks. Negative: Adjacent independent clearing counted cooperation.
 
@@ -265,7 +265,7 @@ Dependencies/checks: Shared undertaking and actual contributions; benefit succes
 
 Source-first sequence 5; sources OSTROM. Motivation: rule-change participation and appeal. Concepts: sociology-c05, sociology-c10.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: process and authorization relation. Expected interpretation: Agency authorization plus upstream norm content needed; user access is not rule-change power.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Agency authorization plus upstream norm content needed; user access is not rule-change power.
 
 Positive: Recognized appeal/revision route exists. Negative: Use of water inferred authority to change rules.
 
@@ -275,7 +275,7 @@ Dependencies/checks: Agency authorization plus upstream norm content needed; use
 
 Source-first sequence 6; sources VULN. Motivation: access conditions differ from physical exposure. Concepts: sociology-c19, sociology-c10.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: multiple qualities/relationships. Expected interpretation: Compare practical access and hazard exposure separately, with no single generic vulnerability label.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Compare practical access and hazard exposure separately, with no single generic vulnerability label.
 
 Positive: Equal exposure with unequal transport access. Negative: Equal hazard assumed equal ability to leave.
 
@@ -285,7 +285,7 @@ Dependencies/checks: Compare practical access and hazard exposure separately, wi
 
 Source-first sequence 7; sources OSTROM. Motivation: polycentric arrangements not a single hierarchy. Concepts: sociology-c02, sociology-c11.
 
-Draft expression: `sociology:CoordinationTie`. Expected type: relationship. Expected interpretation: Responsibility/authority norm missing; coordination alone insufficient for legal duty.
+Draft expression: `sociology:CoordinationTie`. Expected expression-result category: relationship. Expected interpretation: Responsibility/authority norm missing; coordination alone insufficient for legal duty.
 
 Positive: Two associations coordinate different responsibilities. Negative: Coordination inferred single command hierarchy.
 
@@ -295,7 +295,7 @@ Dependencies/checks: Responsibility/authority norm missing; coordination alone i
 
 Source-first sequence 8; sources TRUST. Motivation: communication ties are not trust ties. Concepts: sociology-c04.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: process and communication relationship gap. Expected interpretation: Message transfer observable upstream missing; trust tie cannot substitute for receipt.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Message transfer observable upstream missing; trust tie cannot substitute for receipt.
 
 Positive: Observed warning relay between groups. Negative: Shared trust score treated as communication edge.
 
@@ -305,7 +305,7 @@ Dependencies/checks: Message transfer observable upstream missing; trust tie can
 
 Source-first sequence 9; sources TRUST. Motivation: reported trust change requires occurrence context; no assumed causation. Concepts: sociology-c17.
 
-Draft expression: `change in sociology:ReportedTrust of society:HumanIndividual`. Expected type: quality change. Expected interpretation: Separate resolutions at occurrence-induced transition; report before/after with comparable referent, not causal proof.
+Draft expression: `change in sociology:ReportedTrust of society:HumanIndividual`. Expected expression-result category: process. Expected interpretation: Separate resolutions at occurrence-induced transition; report before/after with comparable referent, not causal proof.
 
 Positive: Comparable reports differ after evacuation. Negative: No follow-up treated as unchanged trust.
 
@@ -315,7 +315,7 @@ Dependencies/checks: Separate resolutions at occurrence-induced transition; repo
 
 Source-first sequence 10; sources ILO154. Motivation: representation scope and negotiation participants. Concepts: sociology-c07.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: process and agency representation relationship. Expected interpretation: Representation must import reviewed agency relation; worker status from relevant domain/authority.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Representation must import reviewed agency relation; worker status from relevant domain/authority.
 
 Positive: Authorized delegates negotiate cleanup terms. Negative: Workers present assumed represented.
 
@@ -325,7 +325,7 @@ Dependencies/checks: Representation must import reviewed agency relation; worker
 
 Source-first sequence 11; sources OSTROM. Motivation: formation event versus website creation. Concepts: sociology-c15, sociology-c01.
 
-Draft expression: `sociology:CollectiveFormation`. Expected type: event. Expected interpretation: Identity/constitution criteria; creation target depends on society group review.
+Draft expression: `sociology:CollectiveFormation`. Expected expression-result category: event. Expected interpretation: Identity/constitution criteria; creation target depends on society group review.
 
 Positive: Recognized collective formation. Negative: New social media page equated with new group.
 
@@ -335,7 +335,7 @@ Dependencies/checks: Identity/constitution criteria; creation target depends on 
 
 Source-first sequence 12; sources OSTROM. Motivation: settlement and withdrawal have different interpretations. Concepts: sociology-c14.
 
-Draft expression: `sociology:DisputeSettlement`. Expected type: event. Expected interpretation: Need agreed settlement criterion and event evidence.
+Draft expression: `sociology:DisputeSettlement`. Expected expression-result category: event. Expected interpretation: Need agreed settlement criterion and event evidence.
 
 Positive: Parties adopt settlement. Negative: Silence interpreted as agreement.
 
@@ -345,7 +345,7 @@ Dependencies/checks: Need agreed settlement criterion and event evidence.; Draft
 
 Source-first sequence 13; sources VULN. Motivation: network isolation and material need are separate. Concepts: sociology-c16, sociology-c09.
 
-Draft expression: `sociology:SupportDelivery`. Expected type: event. Expected interpretation: Delivered help versus network opportunity; compare recipients without conflating isolation and need.
+Draft expression: `sociology:SupportDelivery`. Expected expression-result category: event. Expected interpretation: Delivered help versus network opportunity; compare recipients without conflating isolation and need.
 
 Positive: Documented delivery to isolated resident. Negative: Promised assistance counted delivered.
 
@@ -355,7 +355,7 @@ Dependencies/checks: Delivered help versus network opportunity; compare recipien
 
 Source-first sequence 14; sources TRUST. Motivation: counterexample to unsupported deterministic relation. Concepts: sociology-c17, sociology-c03.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: quality/process comparison. Expected interpretation: Reject deterministic mapping between reported trust and cooperation; model hypothesis only.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Reject deterministic mapping between reported trust and cooperation; model hypothesis only.
 
 Positive: Low-trust resident still contributes. Negative: Low trust implies no cooperation.
 
@@ -365,7 +365,7 @@ Dependencies/checks: Reject deterministic mapping between reported trust and coo
 
 Source-first sequence 15; sources OSTROM. Motivation: coordination is not value consensus. Concepts: sociology-c03, sociology-c13.
 
-Expression: **gap — no complete observable expression claimed**. Expected type: process/event with reasons unresolved. Expected interpretation: Observed joint action need not imply common values; reason content upstream gap.
+Expression: **gap — no complete observable expression claimed**. Expected expression-result category: unresolved. Expected interpretation: Observed joint action need not imply common values; reason content upstream gap.
 
 Positive: Different reasons for same adopted action. Negative: Agreement on action recorded as philosophical consensus.
 

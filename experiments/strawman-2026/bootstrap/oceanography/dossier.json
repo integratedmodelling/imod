@@ -797,7 +797,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 1,
         "independent": false
-      }
+      },
+      "narrative_intent": "Comparable salinity conventions and sample context at inlet/offshore.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "oceanography-q02",
@@ -810,7 +813,7 @@
         "oceanography:MarineEstuary"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Unqualified estuary includes freshwater systems; narrowing must be explicit.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -830,7 +833,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 2,
         "independent": false
-      }
+      },
+      "narrative_intent": "Unqualified estuary includes freshwater systems; narrowing must be explicit.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "oceanography-q03",
@@ -864,7 +870,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 3,
         "independent": false
-      }
+      },
+      "narrative_intent": "Speed component only; direction missing and upstream fluid velocity convention needed.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "oceanography-q04",
@@ -897,7 +906,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 4,
         "independent": false
-      }
+      },
+      "narrative_intent": "Resolve upward bulk water transport, not infer from cold surface alone.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "oceanography-q05",
@@ -931,7 +943,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 5,
         "independent": false
-      }
+      },
+      "narrative_intent": "Multiple contextual resolutions plus range comparison model, not one height sufficient.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "oceanography-q06",
@@ -944,7 +959,7 @@
         "oceanography:TidalOscillation"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Tidal/non-tidal decomposition needs model and atmospheric forcing evidence.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -964,7 +979,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 6,
         "independent": false
-      }
+      },
+      "narrative_intent": "Tidal/non-tidal decomposition needs model and atmospheric forcing evidence.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "oceanography-q07",
@@ -978,7 +996,7 @@
         "oceanography:Salinity"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Density definition and thermodynamic convention missing; temperature alone insufficient.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -998,7 +1016,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 7,
         "independent": false
-      }
+      },
+      "narrative_intent": "Density definition and thermodynamic convention missing; temperature alone insufficient.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "oceanography-q08",
@@ -1032,7 +1053,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 8,
         "independent": false
-      }
+      },
+      "narrative_intent": "Endpoint relation; no automatic freshwater flux magnitude or fixed flow direction.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "oceanography-q09",
@@ -1046,7 +1070,7 @@
         "oceanography:MarineAcidification"
       ],
       "expression": "change in oceanography:SeawaterPH of oceanography:MarineWaterBody",
-      "expected_type": "change quality",
+      "expected_type": "process",
       "dependencies": [
         "Decreasing pH can remain alkaline; scale and event attribution needed.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1066,7 +1090,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 9,
         "independent": false
-      }
+      },
+      "narrative_intent": "Decreasing pH can remain alkaline; scale and event attribution needed.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "oceanography-q10",
@@ -1101,7 +1128,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 10,
         "independent": false
-      }
+      },
+      "narrative_intent": "Surface component; deeper water separately resolved with same thermal convention.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "oceanography-q11",
@@ -1115,7 +1145,7 @@
         "oceanography:CoastalInlet"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Directional cross-section flux quality is missing; connection and speed alone do not answer.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1135,7 +1165,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 11,
         "independent": false
-      }
+      },
+      "narrative_intent": "Directional cross-section flux quality is missing; connection and speed alone do not answer.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "oceanography-q12",
@@ -1168,7 +1201,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 12,
         "independent": false
-      }
+      },
+      "narrative_intent": "Need separate nutrient concentration and ecology observations; no creates fish binding.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
     },
     {
       "id": "oceanography-q13",
@@ -1182,7 +1218,7 @@
         "oceanography:WaterTemperature"
       ],
       "expression": "change in oceanography:WaterTemperature of oceanography:MarineWaterBody",
-      "expected_type": "change quality",
+      "expected_type": "process",
       "dependencies": [
         "Change and bounded upwelling evidence separately; attribution remains model.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1202,7 +1238,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 13,
         "independent": false
-      }
+      },
+      "narrative_intent": "Change and bounded upwelling evidence separately; attribution remains model.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
     },
     {
       "id": "oceanography-q14",
@@ -1215,7 +1254,7 @@
         "oceanography:OceanWaterAdvection"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Flow-feature boundary and mixing need configuration/physical models; map line not impermeability.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1235,7 +1274,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 14,
         "independent": false
-      }
+      },
+      "narrative_intent": "Flow-feature boundary and mixing need configuration/physical models; map line not impermeability.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     },
     {
       "id": "oceanography-q15",
@@ -1248,7 +1290,7 @@
         "oceanography:CurrentSpeed"
       ],
       "expression": null,
-      "expected_type": "gap",
+      "expected_type": "unresolved",
       "dependencies": [
         "Unobserved current remains unknown; no zero-motion inference.",
         "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
@@ -1268,7 +1310,10 @@
         "phase": "source-first ledger preceding candidate records",
         "sequence": 15,
         "independent": false
-      }
+      },
+      "narrative_intent": "Unobserved current remains unknown; no zero-motion inference.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [
