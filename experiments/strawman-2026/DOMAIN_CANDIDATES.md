@@ -140,7 +140,7 @@ Types use the context pack's implicit upper-derived meanings: `thing` = structur
 
 | Tentative meaning and status | Upper-derived category; bearer/participants/applicability | Evidence and scope | Discriminating counterexample / unresolved choice |
 |---|---|---|---|
-| **Machine — B:** manufactured device organized to perform a specified operation. | thing specializing artifact; designed operation and components. | legacy:engineering.kim Machine/ManufacturedProduct, but definition is sparse. | A static monument is not a machine merely because manufactured. Functional criterion needs specialist evidence. |
+| **Machine — B:** manufactured device organized to perform a specified operation. | thing specializing artifact; designed operation and components. | Machine is declared in legacy:engineering.kim:5; its parent ManufacturedProduct is declared in legacy:infrastructure.kim:278 and referenced at engineering.kim:6. Definition remains sparse. | A static monument is not a machine merely because manufactured. Functional criterion needs specialist evidence. |
 | **TransportVehicle — P:** machine/artifact configured for transporting participants or material. | thing or compositional alias with transport function, equality review pending. | legacy:engineering.kim Vehicle is Machine for infrastructure:Transportation. | A road supports transport but is not thereby a vehicle. Present motion not required; capability versus actual use separated. |
 
 ## economics
