@@ -23,4 +23,4 @@ The checkout owner's uncommitted CHEM change replaces ChemicalSpecies with broad
 
 The im.aries local change replaces HeatHazardMetric's quality/is declaration with quantity/describes. This is evidence of an unresolved observable-versus-descriptor distinction, not permission to migrate all risk metrics automatically. Legacy source comments question biomass/flow classification and income/wealth stock-flow semantics. Those disagreements are retained in DOMAIN_MAP.md.
 
-Source-backed does not mean every proposed domain has adequate literature coverage: physics, oceanography, genetics and sociology need additional primary specialist evidence before accepting their minimal corpora. The inventory deliberately marks that absence.
+Source-backed does not mean every proposed domain has adequate literature coverage: physics, oceanography, genetics and sociology now have bounded primary-source footholds in the [evidence supplement](DOMAIN_EVIDENCE_SUPPLEMENT.md), but still need specialist review and broader evidence before accepting their minimal corpora. The inventory deliberately marks that absence.

@@ -1,0 +1,16 @@
+test_application_claim_fails (__main__.ProposalChainTests.test_application_claim_fails) ... ok
+test_duplicate_revision_identity_fails (__main__.ProposalChainTests.test_duplicate_revision_identity_fails) ... ok
+test_incorrect_source_hash_fails (__main__.ProposalChainTests.test_incorrect_source_hash_fails) ... ok
+test_missing_feedback_link_fails (__main__.ProposalChainTests.test_missing_feedback_link_fails) ... ok
+test_nonexistent_action_base_fails (__main__.ProposalChainTests.test_nonexistent_action_base_fails) ... ok
+test_nonexistent_action_target_fails (__main__.ProposalChainTests.test_nonexistent_action_target_fails) ... ok
+test_nonexistent_predecessor_fails (__main__.ProposalChainTests.test_nonexistent_predecessor_fails) ... ok
+test_record_version_precondition_fails (__main__.ProposalChainTests.test_record_version_precondition_fails) ... ok
+test_silent_action_and_feedback_removal_fails (__main__.ProposalChainTests.test_silent_action_and_feedback_removal_fails) ... ok
+test_unchanged_chain_passes (__main__.ProposalChainTests.test_unchanged_chain_passes) ... ok
+test_unknown_feedback_action_fails (__main__.ProposalChainTests.test_unknown_feedback_action_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.757s
+
+OK

@@ -279,7 +279,8 @@ proposal:
     semantic_review: pending
     syntax_validation: not_run
     warnings:
-    - Alias is a separate Tier-2 experiment, not an asset of this Tier-1 proposal.
+    - Alias module repeats the Tier-1 meaning through equals; module tier policy is
+      pending explicit decision, not automatically Tier 2.
     - Schema validity is not acceptance or authorization.
     - No loaded-worldview or reasoner check yet.
   corpus_feedback:

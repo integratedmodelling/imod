@@ -290,7 +290,7 @@ proposal:
     preconditions:
       record_version: 1
       base_revision_id: hydrology-surface-catchment-r1
-      source_proposal_sha256: 24d97cab4c7af5357219bed1f2ad79baab828ca2509622ea8e7cb57d65d01f30
+      source_proposal_sha256: 8977dcac048bff1cc7f6e6adabce296646b57140ab4850c54557984986ff805e
     payload:
       field: definition
       proposed_value: A region delineated for a specified surface-drainage interpretation
@@ -336,7 +336,8 @@ proposal:
       for actual 26-file baseline and 27-file overlay; service load, full semantic
       visitor and Reasoner untested.
     warnings:
-    - Alias is a separate Tier-2 experiment, not an asset of this Tier-1 proposal.
+    - Alias module repeats the Tier-1 meaning through equals; module tier policy is
+      pending explicit decision, not automatically Tier 2.
     - Schema validity is not acceptance or authorization.
     - No service-load/full-semantic-visitor/Reasoner check; review action remains
       unapplied.

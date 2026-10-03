@@ -1,0 +1,2 @@
+# Proposal action hashes refer to exact saved bytes; preserve LF on checkout.
+review/*.yaml text eol=lf

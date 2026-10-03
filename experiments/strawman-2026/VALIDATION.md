@@ -10,8 +10,10 @@ Date: 2026-10-03. Branch base: `608bef150ced0a109db98a5aad64ba4461beaa54`. This 
 | Parser negative control: unqualified `is Missing` | Rejected as expected (nonzero exit); see negative-parser.txt | All possible invalid input is rejected |
 | Embedded Worldview/Observable grammar compared with local source after newline normalization | Both match | Every adapter/reasoner artifact is synchronized with source |
 | Candidate overlay static namespace/import checks | 27 unique namespaces, imports exist, acyclic; alias-only convention passes | Service discovery, symbol existence/type compatibility, OWL consistency |
-| Proposal r1, illustrative r2 and validation r3 JSON Schema Draft 2020-12 | All three pass; local evidence/source/asset reference checks pass | Domain correctness, real reviewer approval, action authorization |
+| Proposal r1, illustrative r2 and validation r3 JSON Schema Draft 2020-12 plus bounded cross-revision checks | All three pass; lineage, history, action base/targets/hash/version and reciprocal feedback/action links checked | Domain correctness, real reviewer approval, action authorization |
+| Bounded validator positive/negative tests | 11 tests pass: unchanged chain plus ten corruptions, including missing predecessor, missing action target, wrong source hash and silent removal of carried actions/feedback | Production approval/apply processor or every possible malformed history |
 | Final source preservation and local Markdown links | All 70 original source hashes, three original HEAD/status pairs, and packet links pass | Concurrent edits made after this check |
+| Independent-review documentation structure | 52 provisional/blocked records across 23 domain addresses; all local links/anchors pass | Scientific completeness or consensus |
 | Initial Maven offline dependency-classpath bootstrap | Failed, later bypassed by the normal isolated reactor | The initial failure is retained, not the final validation status |
 | Normal offline reactor: existing WorldviewValidationTest | 12 tests pass, zero failures/errors/skips | Passing these unit tests is not candidate Reasoner validation |
 | Normal offline reactor: new WorldviewStrawmanAssessmentTest | 2 tests pass; baseline 26 and overlay 27 ontologies adapt with zero errors/warnings | This exercises LanguageAdapter/WorldviewValidationScope, not service startup or the full semantic visitor |
@@ -30,12 +32,16 @@ From this packet directory, with PyYAML and jsonschema available:
 
 ```powershell
 python tools/validate_proposal.py
+python -B tools/test_validate_proposal.py
+python -B tools/check_review_docs.py
 python tools/check_overlay.py
 python tools/run_parser.py --languages C:/Users/Ferd/git/klab-languages --maven C:/Users/Ferd/.m2/repository --report evidence/baseline-parser.txt ../../src
 python tools/run_parser.py --languages C:/Users/Ferd/git/klab-languages --maven C:/Users/Ferd/.m2/repository --report evidence/candidate-parser.txt candidate/src
 ```
 
 Python packages used in this task: PyYAML 6.0.3, jsonschema 4.26.0, installed into the task workspace `.python-deps`, not the repository or global Python installation. Local validation sets PYTHONPATH to that location. The schema copy is byte-identical to the current guidance schema; source hash recorded in guidance-hashes.json.
+
+The independent-review follow-up changed documentation, bounded sample validation and sample tier-policy wording, not candidate `.kwv` files. The prior parser/adapter results therefore remain applicable; the affected schema/sample tests and documentation checks were rerun. Saved YAML byte hashes were recomputed for the explicit editorial repair and are stabilized by LF checkout attributes. The validator intentionally accepts only this single linear history with proposed, unapproved, unapplied modify actions. Passing it cannot authorize applying the carried r1 action to r3 or another candidate.
 
 ## Promotion gates and remaining limitations
 

@@ -6,6 +6,8 @@ SurfaceCatchment is a `thing` (structural, independent, bounded region) speciali
 
 The proposed import edges are hydrology → imod, earth; hydrology.terms → imod, hydrology. There is no import back from hydrology to jargon. The physical/knowledge placement is inherited provisionally, not a new claim about physical versus mental reality. A functional view of drainage remains a separate process meaning.
 
+The dotted jargon namespace is an alias module for the same Tier-1 meaning, not a Tier-2 specialization. Module tier policy remains pending. Exact equality must not be replaced with an artificial `is` subclass just to fit a tier label.
+
 Sources: legacy im/src/hydrology.kim, Watershed definition and RiverBasin alias; IPCC AR6 WGII catchment glossary entry. The narrower explicit outlet criterion follows the legacy source. Names are new proposals. Groundwater/administrative exclusions are scope choices informed by GWML2 distinctions.
 
 Pass/fail details are in `../VALIDATION.md`. Parsing cannot establish that Region and Hydrosphere resolve, that the aliases have compatible categories, or that a resource service recursively discovers jargon files. Those are separate promotion gates.

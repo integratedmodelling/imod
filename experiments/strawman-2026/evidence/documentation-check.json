@@ -1,0 +1,32 @@
+{
+  "domain_addresses": 23,
+  "candidate_records": 52,
+  "records_per_domain": {
+    "physical": 2,
+    "physics": 3,
+    "chemistry": 2,
+    "earth": 2,
+    "geography": 2,
+    "geology": 2,
+    "atmosphere": 2,
+    "hydrology": 2,
+    "oceanography": 3,
+    "soil": 2,
+    "life": 2,
+    "biology": 2,
+    "genetics": 3,
+    "ecology": 2,
+    "agency": 2,
+    "society": 2,
+    "sociology": 3,
+    "infrastructure": 2,
+    "engineering": 2,
+    "economics": 3,
+    "land": 2,
+    "decision": 2,
+    "valuation": 3
+  },
+  "local_links_checked": 47,
+  "status": "PASS",
+  "scope": "Structural checks only; no scientific completeness or acceptance inferred"
+}

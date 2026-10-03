@@ -5,7 +5,7 @@ This is an initial articulation proposal, not a replacement worldview or a decla
 Read in this order:
 
 1. [Root decision register](../../DECISIONS.md): constraints, disagreements, provisional choices.
-2. [Domain map](DOMAIN_MAP.md): every proposed Tier-1 review address, dependency rationale, recovery and gaps.
+2. [Domain map](DOMAIN_MAP.md): every proposed Tier-1 review address, dependency rationale, recovery and gaps; [candidate tables](DOMAIN_CANDIDATES.md) supply minimal meanings/categories/bearers/counterexamples for all 23 addresses. The [evidence supplement](DOMAIN_EVIDENCE_SUPPLEMENT.md) adds bounded physics, oceanography, genetics and sociology support.
 3. [Sources](SOURCES.md) and [source inventory](evidence/SOURCE_INVENTORY.md): inspectable source locations, hashes, local-edit patches.
 4. [Wildfire](WILDFIRE.md): semantic questions, counterexamples, and unavailable consequences.
 5. [Proposal/review example](REVIEW_WORKFLOW.md), with the machine-readable proposal and schema under `review/`.
