@@ -1,0 +1,1398 @@
+[
+  {
+    "path": "C:\\Users\\Ferd\\git\\klab-languages\\org.integratedmodelling.languages.worldview\\target\\org.integratedmodelling.languages.worldview-1.0.0-SNAPSHOT.jar",
+    "sha256": "a83f83d14971666874cf19110b7662162aeee8214151b0f659075290d370423d"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\git\\klab-languages\\org.integratedmodelling.languages.observable\\target\\org.integratedmodelling.languages.observable-1.0.0-SNAPSHOT.jar",
+    "sha256": "3d2c991aebe6152e3f3dbadc1d5d4969f8839cbbccde230c2693640006db30c7"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\aether\\aether-api\\1.1.0\\aether-api-1.1.0.jar",
+    "sha256": "e196bd5e61c5fc3139fb3d12161b122ce657bab6a34c38f1e338a3aab18992f5"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\aether\\aether-impl\\1.0.0.v20140518\\aether-impl-1.0.0.v20140518.jar",
+    "sha256": "9a9b60e685385225f08e662cb9f60d96610b0987f0f47bbf3f0c92df8a897d00"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\aether\\aether-spi\\1.0.0.v20140518\\aether-spi-1.0.0.v20140518.jar",
+    "sha256": "a3266d127a4e9f4aa9c4fa0986e31eec784e866f79112e1840d1667e17c10fb2"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\aether\\aether-util\\1.1.0\\aether-util-1.1.0.jar",
+    "sha256": "556f083dd35fe7f430ac4a7705784191e39df6df89abc31b30cb538f53828d62"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\angus\\angus-activation\\2.0.2\\angus-activation-2.0.2.jar",
+    "sha256": "6dd3bcffc22bce83b07376a0e2e094e4964a3195d4118fb43e380ef35436cc1e"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\angus\\angus-mail\\2.0.3\\angus-mail-2.0.3.jar",
+    "sha256": "6b5b6fc2ba633c53733d829c56cae51d343fb1eadee3e17b8eea01a49edc72d3"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\angus\\jakarta.mail\\1.1.0\\jakarta.mail-1.1.0.jar",
+    "sha256": "d73e40989af4b4335f27dd5a1fca6e04be15a784c0d273472200868bc1ff5ed3"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\collections\\eclipse-collections\\12.0.0.M3\\eclipse-collections-12.0.0.M3.jar",
+    "sha256": "570c396b6970152539ea2e77f70e7874d0635faaa08aaa125892d1e585b8a41a"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\collections\\eclipse-collections-api\\12.0.0.M3\\eclipse-collections-api-12.0.0.M3.jar",
+    "sha256": "269d732394d3fe9e6f1fcebcb8b945e785257d4700dd229bd70625536cff418b"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\collections\\eclipse-collections-forkjoin\\12.0.0.M3\\eclipse-collections-forkjoin-12.0.0.M3.jar",
+    "sha256": "93f7cc54e235e067d05d2a14703dea27c67702f78981c8a8b6a81071e720cec4"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\ecf\\org.eclipse.ecf\\3.11.0\\org.eclipse.ecf-3.11.0.jar",
+    "sha256": "f0e001f7079db888a10a176bf63883656bbd1e2ed03779118ebe305a7cd845aa"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\ecf\\org.eclipse.ecf.filetransfer\\5.1.102\\org.eclipse.ecf.filetransfer-5.1.102.jar",
+    "sha256": "e96e2bfe14830f7455dd765c2efb39604badef9010de2047f7f9ec40fd370ab4"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\ecf\\org.eclipse.ecf.identity\\3.10.0\\org.eclipse.ecf.identity-3.10.0.jar",
+    "sha256": "831c0b21b6c508d8adc49842a8f61b9c00dac75e7a36c814f3651412ee03865c"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\ecf\\org.eclipse.ecf.provider.filetransfer\\3.3.0\\org.eclipse.ecf.provider.filetransfer-3.3.0.jar",
+    "sha256": "b13575c542f2e11be92bae04f4d35813d4fe32462a8b748df64060815bd0c721"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\elk\\org.eclipse.elk.alg.common\\0.8.1\\org.eclipse.elk.alg.common-0.8.1.jar",
+    "sha256": "24679867a63850d40a0c4305726bdbd6cbb33e3c84c4bdbbea72a02e15d014ce"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\elk\\org.eclipse.elk.alg.layered\\0.8.1\\org.eclipse.elk.alg.layered-0.8.1.jar",
+    "sha256": "ea8c7eacc7b36ab4027ca4cbf0b64e3bba1ff1b195331d81610029059c9931ea"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\elk\\org.eclipse.elk.core\\0.8.1\\org.eclipse.elk.core-0.8.1.jar",
+    "sha256": "066e6e442bf1f8e9e3ceb97cb4b80805db059a1915d6e8836a61dbf85b313a9b"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\elk\\org.eclipse.elk.core.meta\\0.8.1\\org.eclipse.elk.core.meta-0.8.1.jar",
+    "sha256": "f23ddab22c9f98693cd2228c1d21e493db506bc541a62c7a70ce9e88c476bdec"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\elk\\org.eclipse.elk.graph\\0.8.1\\org.eclipse.elk.graph-0.8.1.jar",
+    "sha256": "f685adf0818ce993dcb51ad17105f607b9f2ae13da8d48837b5a265bd325eaf3"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\elk\\org.eclipse.elk.graph.json\\0.8.1\\org.eclipse.elk.graph.json-0.8.1.jar",
+    "sha256": "0ed79ebd8d02169b191556ca7119c0efcd6addee4480156c2e7736a9cb7f76a0"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\emf\\org.eclipse.emf.codegen\\2.22.0\\org.eclipse.emf.codegen-2.22.0.jar",
+    "sha256": "4d979dcfc6c678018366ef68fc9a9a5755c3c9662d7c37bca134c287f16a295f"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\emf\\org.eclipse.emf.codegen.ecore\\2.29.0\\org.eclipse.emf.codegen.ecore-2.29.0.jar",
+    "sha256": "d3f1c73da614e579739d9e02103237c9410a4ad42c71175bc856523b497b0506"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\emf\\org.eclipse.emf.common\\2.46.0\\org.eclipse.emf.common-2.46.0.jar",
+    "sha256": "8329ca6f84a27a46517e6351697fc44060ed413ad231b4bbc0d813dd7ac87264"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\emf\\org.eclipse.emf.ecore\\2.41.0\\org.eclipse.emf.ecore-2.41.0.jar",
+    "sha256": "c2473ebf30c2e8daf446638913257b8c3f5219a35318f3679c234482dd23228b"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\emf\\org.eclipse.emf.ecore.change\\2.14.0\\org.eclipse.emf.ecore.change-2.14.0.jar",
+    "sha256": "32c7237f90e1c14b765903d02f5a50f1e88d4b9b53641c224a51d877a36835f8"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\emf\\org.eclipse.emf.ecore.xmi\\2.16.0\\org.eclipse.emf.ecore.xmi-2.16.0.jar",
+    "sha256": "d8da1146cd83675f5d5417fdd91fc89f2af4b43e4a30110661326994dc71176d"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\emf\\org.eclipse.emf.mwe.core\\1.13.0\\org.eclipse.emf.mwe.core-1.13.0.jar",
+    "sha256": "72d6aad2f6a15fc9b4e00c588f281df2915b4406cd19ede39a8adfafd334b68e"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\emf\\org.eclipse.emf.mwe.utils\\1.13.0\\org.eclipse.emf.mwe.utils-1.13.0.jar",
+    "sha256": "52be02a731dfe970d1e3c98fd9db2c31050684096f1f453f18499c511067ac48"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\emf\\org.eclipse.emf.mwe2.language\\2.19.0\\org.eclipse.emf.mwe2.language-2.19.0.jar",
+    "sha256": "d5861cd63b1601a31f6429a22e4d24f24d7c51639b1971b88eb216d08540878f"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\emf\\org.eclipse.emf.mwe2.launch\\2.19.0\\org.eclipse.emf.mwe2.launch-2.19.0.jar",
+    "sha256": "93265b7395eb29dd4e38dfcdb271e49864cb65326f1e4e612392f80025ec2d4c"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\emf\\org.eclipse.emf.mwe2.lib\\2.19.0\\org.eclipse.emf.mwe2.lib-2.19.0.jar",
+    "sha256": "3e7d685a8e6068ca3e71d2044f450bb027f75ade2e0ec769e5e7f75aff1cbdf8"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\emf\\org.eclipse.emf.mwe2.runtime\\2.19.0\\org.eclipse.emf.mwe2.runtime-2.19.0.jar",
+    "sha256": "97640e2055ef00030007a2b337e57a74bca41f42dfadb6cccd6c4bf3c5ff1c8b"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\affine\\0.9.1\\affine-0.9.1.jar",
+    "sha256": "ea17734a50db1d2b4c2fd3c072dd93a30b4d5edcdc77da82ed9a14f3fedfa30b"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\algebra\\0.9.1\\algebra-0.9.1.jar",
+    "sha256": "6bf8ff9556c7ef16dad6da59005f0161a8fd6d6b88a0704afafef017ced056bb"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\bandcombine\\0.9.1\\bandcombine-0.9.1.jar",
+    "sha256": "97828f8eee97319c10d45e4aa9b3eb6a90690d85e86c7b1e42f483f0e582f566"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\bandmerge\\0.9.1\\bandmerge-0.9.1.jar",
+    "sha256": "27301747560ffb1418eeb27d097ef7039ea1e2fe4b6ecf6826cbe5fcec478a85"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\bandselect\\0.9.1\\bandselect-0.9.1.jar",
+    "sha256": "6c496c88b5d293a04beb96e4cfa8172da87c12235e452a6f0c5d7af503f8d40d"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\binarize\\0.9.1\\binarize-0.9.1.jar",
+    "sha256": "4aefc9d63390ab367d4ca87fe78c52e7a5462a28c5dfe10ba2d1416c1a6b9d9d"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\border\\0.9.1\\border-0.9.1.jar",
+    "sha256": "4d35b6ac3f345e32cc202ebc0f28d3c2fcc03c376f4d21f553e706f4d30b5c1c"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\buffer\\0.9.1\\buffer-0.9.1.jar",
+    "sha256": "c89ab4ffd23d48e511a455a0a8ec5581d029e90bb8007be040d7f6fcacdbb80d"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\classbreaks\\0.9.1\\classbreaks-0.9.1.jar",
+    "sha256": "29522bf84dd63134db0420a8fa05e80e2c30120cd5252c55f5c57cc5b546eccf"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\classifier\\0.9.1\\classifier-0.9.1.jar",
+    "sha256": "1925850ad983c9ada3218307367b8776724b817d1af9a1c1b142357fd925fb1f"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\colorconvert\\0.9.1\\colorconvert-0.9.1.jar",
+    "sha256": "c447f7745619981c21f4a11602f10af217c85738492ff74afe329442e07045cd"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\colorindexer\\0.9.1\\colorindexer-0.9.1.jar",
+    "sha256": "5263fcb581f9b76ae88c596d63ab932d6c7439524000d12e127e768f3c6b5760"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\contour\\0.9.1\\contour-0.9.1.jar",
+    "sha256": "80f57931241c96696e084ca69a4b7f1a981b2287084b21f82bee4aaaebd0fede"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\convolve\\0.9.1\\convolve-0.9.1.jar",
+    "sha256": "473ac7079441f5414613ecf47a408d64432195b1a4c0fcd4ea77003e026bdd74"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\crop\\0.9.1\\crop-0.9.1.jar",
+    "sha256": "8beb2df31ddee38ee77cf8871fc4b964f4969ea1cb0c3d934f2c0d2b3b451b10"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\errordiffusion\\0.9.1\\errordiffusion-0.9.1.jar",
+    "sha256": "122ac072a375962b0ae3796eb31364fc4e0b1da1c6d42d26fe134159ac025443"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\format\\0.9.1\\format-0.9.1.jar",
+    "sha256": "d1d8d0808906014294f4956a76cd60c42a67f347465c8282a049cbba62c0f955"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\imagefunction\\0.9.1\\imagefunction-0.9.1.jar",
+    "sha256": "4384858d8d90f734f261eb4709b717761883ea1bb8cbc244315a2b560b7808a4"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\imagen-core\\0.9.1\\imagen-core-0.9.1.jar",
+    "sha256": "4f1a8aa346ff2d2460b0372fd47b536a295543aa921e311f4e74bbf2e169ba48"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\imageread\\0.9.1\\imageread-0.9.1.jar",
+    "sha256": "54c5b41513cb0d2b7dca735569536bd8f384fbfc2645241081b31f2d4849a66d"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\iterators\\0.9.1\\iterators-0.9.1.jar",
+    "sha256": "ba0a3bf97f28410d33f7991f4327b7447184a10bda7275c85b5146446a9de4d7"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\jiffle-language\\0.9.1\\jiffle-language-0.9.1.jar",
+    "sha256": "5ef446479f83146474a6c7dbc514c264d114c9d8e16e4ea8c87a11876e6962a5"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\jiffle-op\\0.9.1\\jiffle-op-0.9.1.jar",
+    "sha256": "a769f6614e35b4af87b66c7f788b8148bf8c5614f72cd00f55a5ec5289420664"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\lookup\\0.9.1\\lookup-0.9.1.jar",
+    "sha256": "f8f29026ca6825215a174bf546020af63ed8a8528c8bc9b6093c466f58a2440f"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\mosaic\\0.9.1\\mosaic-0.9.1.jar",
+    "sha256": "d2c3444ab90415ec544b2a9c25d0e5ac967864437d0c2d9da44662e95206c5b0"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\nullop\\0.9.1\\nullop-0.9.1.jar",
+    "sha256": "8f808fd67929e0a428112f234bfa2cfe403c1633961734a6e11b237fddd088b5"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\orderdither\\0.9.1\\orderdither-0.9.1.jar",
+    "sha256": "a8bf7c0e8c3b79ddcc5d93b365f9e5160f0864191702ba7a0c5fb3fdfc196574"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\piecewise\\0.9.1\\piecewise-0.9.1.jar",
+    "sha256": "16b1b54a91a4591569dc7982301dc91b2e718d4c4fedd1d18eb345c346e26bc1"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\rendered-image-browser\\0.9.1\\rendered-image-browser-0.9.1.jar",
+    "sha256": "53f15c24e4bb3a7d54bb1768d27a4ea5971535650493f3c5ddab7bf52972f6b9"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\rescale\\0.9.1\\rescale-0.9.1.jar",
+    "sha256": "30b6ef4bdf18478b1f7ce2d6119995407890f40836a0a7e5e068411ab5952ca3"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\rlookup\\0.9.1\\rlookup-0.9.1.jar",
+    "sha256": "121100161fb0f3640e040b43fb5aa0868d22aec27900a19547a85be70a9077e7"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\scale\\0.9.1\\scale-0.9.1.jar",
+    "sha256": "66bf20efc61f75f0907a5d883a275ba10f6afa8c7fbae2c8629182e56a7cdc30"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\scale2\\0.9.1\\scale2-0.9.1.jar",
+    "sha256": "51426197a136ad3c72a1821b927c2cf3c86304668a527636726d31b3126b77f4"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\shadedrelief\\0.9.1\\shadedrelief-0.9.1.jar",
+    "sha256": "a0746f65fe17b3fd1a94154877458a59728f8a0dfd90e77ca6c4d4d843436c57"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\stats\\0.9.1\\stats-0.9.1.jar",
+    "sha256": "1b1aeefeca8aaa9181bb0cc3825f33f8bd21bc9f78e02a56851eb3afc47069e9"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\translate\\0.9.1\\translate-0.9.1.jar",
+    "sha256": "13f22977814da3b1f903435e80fa3dfc404e79c2e377beac72ce621f1eb9bb2d"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\utilities\\0.9.1\\utilities-0.9.1.jar",
+    "sha256": "29db1c076961bcd67f797d8375b22cdffb8c7bba0e9243639bc33edee50ed4cc"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\vectorbin\\0.9.1\\vectorbin-0.9.1.jar",
+    "sha256": "40254421d6aadb6d3adad3e205b1616980c562338cb43c0a124e4366bb704087"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\vectorize\\0.9.1\\vectorize-0.9.1.jar",
+    "sha256": "f4c1adeac0c9e2ef321707fe2bc9dd5194cc17367f8383c7047a1389b8fd4a30"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\warp\\0.9.1\\warp-0.9.1.jar",
+    "sha256": "7d36d1a17389dacd460788ea3b5f63757c5acb7ae2f9da94c7f8a5f3d17e3651"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\imagen\\zonal\\0.9.1\\zonal-0.9.1.jar",
+    "sha256": "a7c487f10c2c61d42272eec4cdd039eeda3bbd4aa2950766b7f086d0f67481f5"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jdt\\ecj\\3.38.0\\ecj-3.38.0.jar",
+    "sha256": "97c566b120009c203a2fc8b291f4a9adbc171cf1ccb70f06f6b4e1828c00ce8e"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jdt\\org.eclipse.jdt.core\\3.38.0\\org.eclipse.jdt.core-3.38.0.jar",
+    "sha256": "f0387e80ed4327d39f1f63da8773ee460af4edd78f7c2efecb4ba9bc0628bf60"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jdt\\org.eclipse.jdt.debug\\3.20.100\\org.eclipse.jdt.debug-3.20.100.jar",
+    "sha256": "a806b1f3c590557966edc1bf9abd1ec8749caca099edb1457d527df5e19aaa20"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jdt\\org.eclipse.jdt.launching\\3.19.900\\org.eclipse.jdt.launching-3.19.900.jar",
+    "sha256": "d4a787792759581435ce9460d2f498b0554457d0a578fdcb63f0d78dfcf89976"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\apache-jsp\\11.0.15\\apache-jsp-11.0.15.jar",
+    "sha256": "dba82cccc5f119a4c20c29de9be3ab78493d50e5121cd68b4a9a3e5412231556"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\ee10\\jetty-ee10-annotations\\12.0.16\\jetty-ee10-annotations-12.0.16.jar",
+    "sha256": "08ad96a3071d6161f23b5a00c76562ce4a34a83b3000ed6d572707879edb8b44"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\ee10\\jetty-ee10-apache-jsp\\12.0.16\\jetty-ee10-apache-jsp-12.0.16.jar",
+    "sha256": "9286e391b4aec4baac213f48eb18fc61704c0b889d91955406614f71fc794114"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\ee10\\jetty-ee10-glassfish-jstl\\12.0.16\\jetty-ee10-glassfish-jstl-12.0.16.jar",
+    "sha256": "c823365622aae3a173e453c17a84ceb0de445ffeadff2a8c85ecba82f0a957a9"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\ee10\\jetty-ee10-plus\\12.0.16\\jetty-ee10-plus-12.0.16.jar",
+    "sha256": "73e7441a24e2d7ab79ed0907b9ad73e4015a726e7f26a9b54c32b405415760e6"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\ee10\\jetty-ee10-servlet\\12.0.16\\jetty-ee10-servlet-12.0.16.jar",
+    "sha256": "18a6c41074061a0ff440d618b43e7ab328e81226ec21c4d6a4d53b90b2c94a55"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\ee10\\jetty-ee10-servlets\\12.0.16\\jetty-ee10-servlets-12.0.16.jar",
+    "sha256": "c5a750269f66300183dc4ea7ae158a20b933e7733f7718d4b3b7d037c08e56f1"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\ee10\\jetty-ee10-webapp\\12.0.16\\jetty-ee10-webapp-12.0.16.jar",
+    "sha256": "743dfe48056e6338171ca5ac05d79fde1389148368d9764e85dac1d1bca6ede2"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\ee8\\jetty-ee8-nested\\12.0.25\\jetty-ee8-nested-12.0.25.jar",
+    "sha256": "297888a6283136f3523f2fe49d3af9bb2068f8706c5e4d5e13e54157bbb91908"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\ee8\\jetty-ee8-security\\12.0.25\\jetty-ee8-security-12.0.25.jar",
+    "sha256": "e5efd31bb8fd43b5b587c207ac8d9c71b8dc33abebb6f15ab213ea44ea8b1ead"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\ee8\\jetty-ee8-servlet\\12.0.25\\jetty-ee8-servlet-12.0.25.jar",
+    "sha256": "4c4724b1d8413ab474c8cedcef2a7e1056d1de2edc33aa86bbd638bcc55feb55"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\ee8\\jetty-ee8-webapp\\12.0.25\\jetty-ee8-webapp-12.0.25.jar",
+    "sha256": "dce2a2922e8eb40ec6330b60b3d8b2328ffd6ba7a795bc432e3cd8c5ec27c205"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\glassfish-jstl\\11.0.15\\glassfish-jstl-11.0.15.jar",
+    "sha256": "13ec4a49710766b957039e03a691715c6dd4e6208d7ba0d2b86d526328c0d909"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\http2\\http2-common\\10.0.20\\http2-common-10.0.20.jar",
+    "sha256": "9e1bf3b2942f48b29adb561233983e46cbce4165872e49675d45d0b6e46795b0"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\http2\\http2-hpack\\10.0.20\\http2-hpack-10.0.20.jar",
+    "sha256": "7dbae39e6bef15acfeb892e699d2e37a7e04061b3b59a78a2e8c228885b91c2f"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\http2\\http2-server\\10.0.20\\http2-server-10.0.20.jar",
+    "sha256": "0c14d49cbee753089b7149f5dfb47ab3b4b31452ac3a832b4a19b2d6f4834d2d"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\http2\\jetty-http2-common\\12.0.25\\jetty-http2-common-12.0.25.jar",
+    "sha256": "a12f02585d63158ab8bc71e1cd636dae448691549489c1e3a60e5d2e5f5d197c"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\http2\\jetty-http2-hpack\\12.0.25\\jetty-http2-hpack-12.0.25.jar",
+    "sha256": "65c738b2886b78e9637aa40d8b71b82d8b97ae49c791ea4cbc40028b94414269"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\http2\\jetty-http2-server\\12.0.25\\jetty-http2-server-12.0.25.jar",
+    "sha256": "75d61272d4a792ad2ae183811b662a7bff34d2e5e52f2fd1daf6eabdd463f1b9"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-alpn-client\\11.0.15\\jetty-alpn-client-11.0.15.jar",
+    "sha256": "827ed69d2fe3b95fa69b35a2f046d47632ee03837456ad74174e412c111f851a"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-alpn-java-server\\12.0.25\\jetty-alpn-java-server-12.0.25.jar",
+    "sha256": "fff9e71baeac7373af89a0c19ae36463bd6d5a128746b44a25939aa8b124c773"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-alpn-server\\12.0.25\\jetty-alpn-server-12.0.25.jar",
+    "sha256": "1dae45beb18b9adfd8b2a21af526004ab9fc62b4cb4e3e604fdf9d15e4624bbf"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-annotations\\11.0.15\\jetty-annotations-11.0.15.jar",
+    "sha256": "84f917aafc2fcfab10c08c1426ac41b8f31004935f3ecb50b8da64d56b820265"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-client\\11.0.15\\jetty-client-11.0.15.jar",
+    "sha256": "08b1bd3c10c1e2167152b7a342c8bd0e59a2b21ea415dcc97323523a313bd199"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-deploy\\12.0.16\\jetty-deploy-12.0.16.jar",
+    "sha256": "ccf08f749a2987221bfe0c6ce0e4bbe8d3e24c161b757295322df383e60770ae"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-ee\\12.0.25\\jetty-ee-12.0.25.jar",
+    "sha256": "3fc2ecde2f13fe776bf20b0e59d57098ea1301d8ab4e6897b97fe8960ec7288e"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-http\\9.4.46.v20220331\\jetty-http-9.4.46.v20220331.jar",
+    "sha256": "9ef45ccee991c35ce50bb78f0733aab5e8bceb770c4abecef95c52c42753e4f6"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-io\\9.4.46.v20220331\\jetty-io-9.4.46.v20220331.jar",
+    "sha256": "72b060ab6afa645660212880a7c073315cd4ca5022be85a16c749dac4e2f9726"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-jaas\\11.0.15\\jetty-jaas-11.0.15.jar",
+    "sha256": "480f73b09c115cbe62e21fbece1fdcdd98357be1519ee63a3ca8bbadc5989405"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-jmx\\11.0.15\\jetty-jmx-11.0.15.jar",
+    "sha256": "2fa6621d3ddc8c9dac8b661a8d0d519866370c89d9b12d5b0a0d376fd4c98c5d"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-jndi\\12.0.16\\jetty-jndi-12.0.16.jar",
+    "sha256": "0ef04c69b04d11bc2f5e76314f8035b631b8783f4d2d13901dfc0908c12cc8f9"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-maven-plugin\\11.0.15\\jetty-maven-plugin-11.0.15.jar",
+    "sha256": "d29d8df1f013fbc5a9c5213c9948c7a2d897796c07fbe78dac48b377d2fb6c41"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-plus\\12.0.16\\jetty-plus-12.0.16.jar",
+    "sha256": "9cdc3f050a92af8aa2a601fa846e649b3b60e81a3450e970a7ccc2da6f64bf8a"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-quickstart\\11.0.15\\jetty-quickstart-11.0.15.jar",
+    "sha256": "84374f435e31a4f8ad84f452cb7e60bab5dfe9cb5e41bed7d84cbd168b9c03c4"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-rewrite\\11.0.19\\jetty-rewrite-11.0.19.jar",
+    "sha256": "2b950c34c44379e4a9481888b40342804ae710282cb9a90bc0b458978eeb60c3"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-security\\9.4.46.v20220331\\jetty-security-9.4.46.v20220331.jar",
+    "sha256": "ee01b1b6e926b9f2da3b49b0828b618c96e4b153b97c63b357788924d1a8fe04"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-server\\9.4.46.v20220331\\jetty-server-9.4.46.v20220331.jar",
+    "sha256": "da8100240eef4b493c6bdb6a794bbc26bca1dbd115ca35d15764fb3a4220e533"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-servlet\\9.4.46.v20220331\\jetty-servlet-9.4.46.v20220331.jar",
+    "sha256": "02c12885ac250e685eafe7130846077222a7ec1776123f13c2c04f086abdb995"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-servlets\\11.0.19\\jetty-servlets-11.0.19.jar",
+    "sha256": "7551ae219eb6b82f94a48b0624cda93133cdda61d90fc71e4ab42c3d28db1aa5"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-session\\12.0.25\\jetty-session-12.0.25.jar",
+    "sha256": "6771937fcc69143bd0408d89994fc59927e354a686914b12d176f17921ee0fc0"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-util\\9.4.46.v20220331\\jetty-util-9.4.46.v20220331.jar",
+    "sha256": "09410f674d2a2bb532b1bf92f80ad5b8412317589308da13bf9362fbedf1d572"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-util-ajax\\9.4.46.v20220331\\jetty-util-ajax-9.4.46.v20220331.jar",
+    "sha256": "45fa58ac969758ad96b2636df91f588596cc35c8a0abeb0710e776cfc64d0cb4"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-webapp\\9.4.46.v20220331\\jetty-webapp-9.4.46.v20220331.jar",
+    "sha256": "4cca9a1e25ad0de5ef85aeba29a28f851442119af3090fa3c3a4e16f673fd234"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\jetty-xml\\9.4.46.v20220331\\jetty-xml-9.4.46.v20220331.jar",
+    "sha256": "ae42e2a0e7ac6bb13cb1b7e1895572b6a1a2c38193786a0ea070eb35147ac480"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\toolchain\\jetty-jakarta-servlet-api\\5.0.2\\jetty-jakarta-servlet-api-5.0.2.jar",
+    "sha256": "efb20997729f32bfa6c8a8319037c353f7ad460d5d49f336bf232998ea2358db"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\toolchain\\jetty-jakarta-websocket-api\\2.0.0\\jetty-jakarta-websocket-api-2.0.0.jar",
+    "sha256": "7b276ee285707a522302d7788525affef844b0549e624cd491c9f35e0588d9bf"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\toolchain\\jetty-schemas\\5.2\\jetty-schemas-5.2.jar",
+    "sha256": "1ff442f8de5d09a6653991bfd95fc03b3344fc0de2c6e87ce17ada2c1405bc88"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\toolchain\\jetty-servlet-api\\4.0.6\\jetty-servlet-api-4.0.6.jar",
+    "sha256": "d90bf1f8a9d2ba89f4510bb51e1516dcf94ef6dc034e00f233654abdd78f2210"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\websocket\\websocket-core-client\\11.0.15\\websocket-core-client-11.0.15.jar",
+    "sha256": "a4350f1a6743267e8e8ebaceaac8abd8fb12f264ef2cde94544615bafd669b79"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\websocket\\websocket-core-common\\11.0.15\\websocket-core-common-11.0.15.jar",
+    "sha256": "e6777175804593ce826cdc2ad0617768174a765180949141f2e00e47f7908c83"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\websocket\\websocket-core-server\\11.0.15\\websocket-core-server-11.0.15.jar",
+    "sha256": "b04d6ded305acf76c417a89c08d739ec54363f82f08134e28bc74dc371c5c22a"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\websocket\\websocket-jakarta-client\\11.0.15\\websocket-jakarta-client-11.0.15.jar",
+    "sha256": "fdbcf06ed37587e406bc9dfe0826357e5a0e667588f9ae8272763a88eb9812bf"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\websocket\\websocket-jakarta-common\\11.0.15\\websocket-jakarta-common-11.0.15.jar",
+    "sha256": "5264dec8928c13dcd278462c7349283c438ad7cd3a57ff7d9515ee412b353dd8"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\websocket\\websocket-jakarta-server\\11.0.15\\websocket-jakarta-server-11.0.15.jar",
+    "sha256": "659a5a98df6888258caa0dbd0f39bde6fc1166e5c5431dbb6378a5d6eacb95b1"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\websocket\\websocket-jetty-api\\11.0.15\\websocket-jetty-api-11.0.15.jar",
+    "sha256": "5f9e53cd79557981340556e20fdaced8a3770e4c45e3bcc683610ffd8bc7a1be"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\websocket\\websocket-jetty-common\\11.0.15\\websocket-jetty-common-11.0.15.jar",
+    "sha256": "89a7e52bb3d02621a522f5204fa8e5419962062d2ce40b9bb230ecb01cca703c"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\websocket\\websocket-jetty-server\\11.0.15\\websocket-jetty-server-11.0.15.jar",
+    "sha256": "5381a2c74c04cd482502db2f4000d071cdc1e8e3351bc730188feda777edb224"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jetty\\websocket\\websocket-servlet\\11.0.15\\websocket-servlet-11.0.15.jar",
+    "sha256": "ebc61cccbdfeaede4fe9cac561f5af0fcae89d934e4468fcf8ac2b8a8070f1c2"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\jgit\\org.eclipse.jgit\\6.8.0.202311291450-r\\org.eclipse.jgit-6.8.0.202311291450-r.jar",
+    "sha256": "b0ca6129b0614f5f90e9456c51bcfe141483248aec6a2cc2a7816f638bb04abf"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\lsp4j\\org.eclipse.lsp4j\\0.23.1\\org.eclipse.lsp4j-0.23.1.jar",
+    "sha256": "b16bbc6232a3946e03d537bb9be74e18489dbc6a8b8c5ab6cb7980854df8440f"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\lsp4j\\org.eclipse.lsp4j.generator\\0.19.0\\org.eclipse.lsp4j.generator-0.19.0.jar",
+    "sha256": "6b3758e4f6eecbf48bfcb6e9c4f860bd1455c5c3852cd807460b6b2623d9b634"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\lsp4j\\org.eclipse.lsp4j.jsonrpc\\0.23.1\\org.eclipse.lsp4j.jsonrpc-0.23.1.jar",
+    "sha256": "4e1aa77474de1791d96dc55932fb46efdf53233548f38f62ba7376f8b0bc6650"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\microprofile\\openapi\\microprofile-openapi-api\\3.1.1\\microprofile-openapi-api-3.1.1.jar",
+    "sha256": "b482278365efc155fe8de06aac2e715911df4abc01562391a958cae2ce941814"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.core.commands\\3.12.100\\org.eclipse.core.commands-3.12.100.jar",
+    "sha256": "443adcdec30c0563e4d7bafe6f7eeca704749e4b5a8620d18626fb1d640b41f7"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.core.contenttype\\3.9.400\\org.eclipse.core.contenttype-3.9.400.jar",
+    "sha256": "7622d903f85e8c11afe6ae662ffa1a2c33a5f694c6510758299f070ec520d4ca"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.core.expressions\\3.9.400\\org.eclipse.core.expressions-3.9.400.jar",
+    "sha256": "2d8ef98092c1260b6b7743c762a4b1cc4b1679f8fbbb94e1d254d91ca232bd49"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.core.filesystem\\1.9.500\\org.eclipse.core.filesystem-1.9.500.jar",
+    "sha256": "0c4810a1fa6e871c0bb23b29090a72c83b760af8171495c1325b4711b919072b"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.core.jobs\\3.15.300\\org.eclipse.core.jobs-3.15.300.jar",
+    "sha256": "ad6db9d0e7d8579d01b750fdced6d6e1d410919047d4bfd3b7d6a65627e5063a"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.core.net\\1.5.0\\org.eclipse.core.net-1.5.0.jar",
+    "sha256": "f5b5c82cfbf14ce1137d8734aaacd27a4442097a3be60596c5e8a46b59736761"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.core.resources\\3.20.200\\org.eclipse.core.resources-3.20.200.jar",
+    "sha256": "8b51dd0c72e54ecfd4b56a160769ca00a0d944ace10d47ef372fa4e103698b13"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.core.runtime\\3.31.100\\org.eclipse.core.runtime-3.31.100.jar",
+    "sha256": "aa484a9f9ecb6a2575d19d1a73bd943dbc9b2292751f4874109b7ac67fd904a8"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.core.variables\\3.5.100\\org.eclipse.core.variables-3.5.100.jar",
+    "sha256": "4f52ebce3af1010fd2536d6a8b362fd8c6daafc0835c84b71ccdb7afd9a23402"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.debug.core\\3.20.100\\org.eclipse.debug.core-3.20.100.jar",
+    "sha256": "92cfc45260e850b8fc683e92be71d063358b929b4fd9e466fd0d83a2d4e35e66"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.app\\1.7.200\\org.eclipse.equinox.app-1.7.200.jar",
+    "sha256": "4584f6a46013aa3ecaf5b1ac67ac6e1bdc5ce7ba89ce61d857047cff30bd92f4"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.common\\3.19.100\\org.eclipse.equinox.common-3.19.100.jar",
+    "sha256": "77da20b3d040b9a00509add8583c659243a62e9f9633bc3f82b55e96b0a09427"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.concurrent\\1.3.100\\org.eclipse.equinox.concurrent-1.3.100.jar",
+    "sha256": "e8d2f8628fdedf682ecdf609957c7e4104e6b1c8181302d3a513e89295fa4bbe"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.frameworkadmin\\2.3.200\\org.eclipse.equinox.frameworkadmin-2.3.200.jar",
+    "sha256": "ba8e40e273da69b73735629573c39de73aeed181da6198371c9ceb0de11100ed"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.frameworkadmin.equinox\\1.3.200\\org.eclipse.equinox.frameworkadmin.equinox-1.3.200.jar",
+    "sha256": "f9e9e7a4ad5f6be9065cea19ca14c2b1962d0e2061639ea4093592f0f5205ab3"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.p2.artifact.repository\\1.5.400\\org.eclipse.equinox.p2.artifact.repository-1.5.400.jar",
+    "sha256": "b681c8471999ae6c073af6acb72243709db1d5d75357f20b377960e001045425"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.p2.core\\2.9.200\\org.eclipse.equinox.p2.core-2.9.200.jar",
+    "sha256": "a518eae0a5a412186486268eb56add03740dff830b8a9879cde35f28e6fb5a2f"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.p2.director\\2.6.400\\org.eclipse.equinox.p2.director-2.6.400.jar",
+    "sha256": "843edb0d052d33b707fd707503add9b6857503d63637f5e9cafdabe036b84b33"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.p2.director.app\\1.3.400\\org.eclipse.equinox.p2.director.app-1.3.400.jar",
+    "sha256": "b92aa6d3df198b7e422ded291b5ae102b629a614b1da96a53d4ef834c1ae7874"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.p2.engine\\2.9.0\\org.eclipse.equinox.p2.engine-2.9.0.jar",
+    "sha256": "9e3bca55bf55edd70a897c9c8a5250d355b8ef005686d5ea81ff372f1e131a0f"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.p2.garbagecollector\\1.3.300\\org.eclipse.equinox.p2.garbagecollector-1.3.300.jar",
+    "sha256": "2c6c74cda38a42d94e66f2e254de91f112f9446e2f6ec00fce51e4552fbc59ac"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.p2.jarprocessor\\1.3.400\\org.eclipse.equinox.p2.jarprocessor-1.3.400.jar",
+    "sha256": "6147a8f871186327afa5487070f52bd47bcaf26f271d68c3f60b098247d250d4"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.p2.metadata\\2.9.100\\org.eclipse.equinox.p2.metadata-2.9.100.jar",
+    "sha256": "be9ccf3e3d41bf946d214765728985cdc8c71d937d8b7639faedc03ce6450e09"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.p2.metadata.repository\\1.5.400\\org.eclipse.equinox.p2.metadata.repository-1.5.400.jar",
+    "sha256": "ccffb49f10582948bb2260696d13383ca5fc8a594be2523c7e656d5856c35362"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.p2.publisher\\1.9.200\\org.eclipse.equinox.p2.publisher-1.9.200.jar",
+    "sha256": "c7f50252a70a691937a13042208d637de47ffdb985f79444d75c1ef53e503490"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.p2.publisher.eclipse\\1.6.200\\org.eclipse.equinox.p2.publisher.eclipse-1.6.200.jar",
+    "sha256": "473efcbd5c211c82a2ccb985e79e22dc3d77373088e0f82b0abac55053e5a7bb"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.p2.repository\\2.9.100\\org.eclipse.equinox.p2.repository-2.9.100.jar",
+    "sha256": "e8f1f7670abfc02514a540646df02aa25347100c5f6481f3bd162110aae086e2"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.p2.repository.tools\\2.4.400\\org.eclipse.equinox.p2.repository.tools-2.4.400.jar",
+    "sha256": "d98f4686e16b40e8e1bfd1d247374e6105991c5cb4d8fb600a52623b5d396d0f"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.p2.touchpoint.eclipse\\2.4.300\\org.eclipse.equinox.p2.touchpoint.eclipse-2.4.300.jar",
+    "sha256": "6527414a490e7e5a044404a9cb289b340851439abbe58cebf9e6a04c2683c7fa"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.p2.touchpoint.natives\\1.5.300\\org.eclipse.equinox.p2.touchpoint.natives-1.5.300.jar",
+    "sha256": "b01024f7a60396151059669dc984c57b98a0dd94eeaed530177108c1de90c28b"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.p2.transport.ecf\\1.3.300\\org.eclipse.equinox.p2.transport.ecf-1.3.300.jar",
+    "sha256": "37eb6c9bee61c17f45f3ee0fce10f99795658c359efd6751419155c44294d298"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.p2.updatesite\\1.3.400\\org.eclipse.equinox.p2.updatesite-1.3.400.jar",
+    "sha256": "f6e93ef4cc76bd204ae4dd0b0cd86141e98e6d152d43847f33ccd5b46c438ac2"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.preferences\\3.11.100\\org.eclipse.equinox.preferences-3.11.100.jar",
+    "sha256": "2dece57392142293cd35b58132b7f6bb0ac599a35f2ce734fd2551440ec27b47"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.registry\\3.12.100\\org.eclipse.equinox.registry-3.12.100.jar",
+    "sha256": "23ded56b950ae846e006870f836c29b8d545f3a7bf9ced28baf41b5a2e5e8dbb"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.security\\1.4.300\\org.eclipse.equinox.security-1.4.300.jar",
+    "sha256": "45aabc7f8ff2a316d8f1df2b6d1af99694fbb96615269bf0c15533996805f0e6"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.simpleconfigurator\\1.5.300\\org.eclipse.equinox.simpleconfigurator-1.5.300.jar",
+    "sha256": "ebe255b36af8c02bb80acc8c9b2be48f2eb34cba68f19b8e00198794f8b5443a"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.equinox.simpleconfigurator.manipulator\\2.3.300\\org.eclipse.equinox.simpleconfigurator.manipulator-2.3.300.jar",
+    "sha256": "2096e6686b2a0683f6097df84ae5497557d36d0b16e54191630ad4d7b24efeff"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.osgi\\3.23.100\\org.eclipse.osgi-3.23.100.jar",
+    "sha256": "9164f40fd0b424caf21ca6518186d2af82691f2a8de452f8a7d290b955280a21"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.osgi.compatibility.state\\1.2.900\\org.eclipse.osgi.compatibility.state-1.2.900.jar",
+    "sha256": "7ea42a0db22e3d5b7ffeda7ec97f2e9995fdd5a2ddcfc2525db4b5ed759380d8"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\platform\\org.eclipse.text\\3.14.100\\org.eclipse.text-3.14.100.jar",
+    "sha256": "7c9791768a715b1fef29dec8ba6a15a968bcc1cf7a766d439273fe52362eec65"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-common-annotation\\5.0.2\\rdf4j-common-annotation-5.0.2.jar",
+    "sha256": "8860c175c0ac1ac7aa2e195b4895502a15060c44bc1092ece7a59db24d2423c5"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-common-exception\\5.0.2\\rdf4j-common-exception-5.0.2.jar",
+    "sha256": "ae5aa914291b4cebeb5fd3657cb0fd4097bfc7df43cb4aeeed36343b94c5eca9"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-common-io\\5.0.2\\rdf4j-common-io-5.0.2.jar",
+    "sha256": "2268c55e5c7f968020fba63b1c917c87955624c691ad827485a2d2b9e444b05e"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-common-iterator\\5.0.2\\rdf4j-common-iterator-5.0.2.jar",
+    "sha256": "cf53dce94ca08c24e3f3a6ef0a23c3d21b5baeafd482139c8a00155891c65c8f"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-common-order\\5.0.2\\rdf4j-common-order-5.0.2.jar",
+    "sha256": "c3f43a907aaac7446fbac6b95f9e60d0c3a2a645798a7ee3f9a9d657afa57e73"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-common-text\\5.0.2\\rdf4j-common-text-5.0.2.jar",
+    "sha256": "4e37650e9f124ab13dd5a5464630c83539ea6b70f4f7f024d60174853e57595b"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-common-util\\4.3.7\\rdf4j-common-util-4.3.7.jar",
+    "sha256": "c8acd6db47c1672a8fe0a6db7c324b705922c76ffe2811817d2a9e7acd843b4c"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-common-xml\\5.0.2\\rdf4j-common-xml-5.0.2.jar",
+    "sha256": "f908c335f4127a395ab33bc5a463842cdde0cf944029bd8908c5b8eaa42fd56d"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-model\\5.0.2\\rdf4j-model-5.0.2.jar",
+    "sha256": "c56becf8915a8e27d74ed6accc391d4cd6d231844766b07101aebae0c5eeab71"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-model-api\\5.0.2\\rdf4j-model-api-5.0.2.jar",
+    "sha256": "9e13d31c4e090aa9f0af912ba2da0f46d0018414a8413e161dbbc208538e2029"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-model-vocabulary\\5.0.2\\rdf4j-model-vocabulary-5.0.2.jar",
+    "sha256": "b44d8d219a01377cb6b20b96baea4ba3e7549041112023117a183d40e8968ebf"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-rio-api\\5.0.2\\rdf4j-rio-api-5.0.2.jar",
+    "sha256": "7a4c190d974c2090f6d88b78427934b453dff34ad90ff520283df7f4adc82951"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-rio-binary\\5.0.2\\rdf4j-rio-binary-5.0.2.jar",
+    "sha256": "92095b0e5e967693f678792703fad5822c13dc13c01ffb84b3e60847b37f3d33"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-rio-datatypes\\5.0.2\\rdf4j-rio-datatypes-5.0.2.jar",
+    "sha256": "44bdaa515ea28c962d036560a44530f24aea7cd10b4966053c3dee933bbcbf03"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-rio-hdt\\5.0.2\\rdf4j-rio-hdt-5.0.2.jar",
+    "sha256": "5afa049723e69fe70aae7575ab44bd52ee2aef11ab323285aa360f8d2dc26605"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-rio-jsonld\\5.0.2\\rdf4j-rio-jsonld-5.0.2.jar",
+    "sha256": "e11b682c8688ccd6be62a519a8f4d86c438f76497ed64b7910f328d7edd1bbab"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-rio-languages\\5.0.2\\rdf4j-rio-languages-5.0.2.jar",
+    "sha256": "10de37ce1a132ab9ed6cb735c2be7a2fda9eb7289e83b0695aa2af6af93749d2"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-rio-n3\\5.0.2\\rdf4j-rio-n3-5.0.2.jar",
+    "sha256": "9d13afdc134eb460a5199163c10fa2d701cf4ba90775f470c940c1d57767a853"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-rio-nquads\\5.0.2\\rdf4j-rio-nquads-5.0.2.jar",
+    "sha256": "e8c0612c6c1750dd5123378909d8e7e4a4f79e5271a78a37493a37c3feee96d1"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-rio-ntriples\\5.0.2\\rdf4j-rio-ntriples-5.0.2.jar",
+    "sha256": "4b774744a461d6939de98f3e37aff8faeac99cf233328f95933d0df8b5eb92ad"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-rio-rdfjson\\5.0.2\\rdf4j-rio-rdfjson-5.0.2.jar",
+    "sha256": "0e923f6f2003ac8d1fd1e10c758fe14a767782a43ce45a8e6257008a90751ac3"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-rio-rdfxml\\5.0.2\\rdf4j-rio-rdfxml-5.0.2.jar",
+    "sha256": "fcd8ee30ae466ad44843308bce39173af1a71a3c8523bcd4678a696e3a4b64b2"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-rio-trig\\5.0.2\\rdf4j-rio-trig-5.0.2.jar",
+    "sha256": "1958859b71979e5e3e09ee82821a1bc7d41bb2725ac873e115e279f89fd7c208"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-rio-trix\\5.0.2\\rdf4j-rio-trix-5.0.2.jar",
+    "sha256": "ee4b4337a80a86d226398750952d2352ba19fcf9f6074d1a2cfc99038ab8e716"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-rio-turtle\\5.0.2\\rdf4j-rio-turtle-5.0.2.jar",
+    "sha256": "68b5f3b70ebbcf6505bda7f10a0febf45e2da17daa98b0ae0ec5730894ea97d4"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\rdf4j\\rdf4j-util\\3.7.3\\rdf4j-util-3.7.3.jar",
+    "sha256": "53bad9fcfbaf22929bcd928388afde03a93af923dace2522b76a8bebf136696e"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\sisu\\org.eclipse.sisu.inject\\0.9.0.M3\\org.eclipse.sisu.inject-0.9.0.M3.jar",
+    "sha256": "15335c4dcf082f599fb8eddcfb58d6a7e9a9c97de2883c257089a479b9b24522"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\sisu\\org.eclipse.sisu.plexus\\0.9.0.M3\\org.eclipse.sisu.plexus-0.9.0.M3.jar",
+    "sha256": "c99674d3773e26154885661711f0b6d63aa5008f5cc99227a236756d4ad9de5e"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\extras\\tycho-p2-extras-plugin\\2.7.5\\tycho-p2-extras-plugin-2.7.5.jar",
+    "sha256": "8761ef766f3b379035ebccd734f6b1d713b94a9d836d9dd85eca569ae583f563"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\extras\\tycho-pomless\\1.0.0\\tycho-pomless-1.0.0.jar",
+    "sha256": "24b0e026f33f20aaaaba74d1a1808109d55e48a4c6566f387b950e11fb369767"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.osgi\\3.11.2.v20161107-1947\\org.eclipse.osgi-3.11.2.v20161107-1947.jar",
+    "sha256": "38f989c51e63f98589724d39d50c5634a553f50e6b5aa5b065b59210c44b3047"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.osgi.compatibility.state\\1.0.200.v20160504-1419\\org.eclipse.osgi.compatibility.state-1.0.200.v20160504-1419.jar",
+    "sha256": "d1c60595ddae995f265381f7de561556cee4d66b72dad5896ad3fdfba1602400"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.core.shared\\3.0.5\\org.eclipse.tycho.core.shared-3.0.5.jar",
+    "sha256": "89fd83db79fc8c5c3d9ef98be9ff1ff199e97e8bf445ca65c47245f7bf2c26ee"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.embedder.shared\\3.0.5\\org.eclipse.tycho.embedder.shared-3.0.5.jar",
+    "sha256": "08db3af007cdb6f04ce9bd90beba32cf4c88a5993fca13fb48437b6fcfd1e7a9"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.noopsecurity\\3.0.5\\org.eclipse.tycho.noopsecurity-3.0.5.jar",
+    "sha256": "f6a4dc4a790aa286ab193f4b19ce7651e28dc5fab3afcda9cdb04b7fa0c0e9ba"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.p2.maven.repository\\3.0.5\\org.eclipse.tycho.p2.maven.repository-3.0.5.jar",
+    "sha256": "45be4efa83b79380c75e71819352c6c37db11410d817b04c70d1d70506cd4f14"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.p2.resolver.impl\\3.0.5\\org.eclipse.tycho.p2.resolver.impl-3.0.5.jar",
+    "sha256": "55107a786d125dd476a5b22cbbec192e49795c5e51571f9b59fdd9306de23922"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.p2.resolver.shared\\3.0.5\\org.eclipse.tycho.p2.resolver.shared-3.0.5.jar",
+    "sha256": "e21c916d76ef1caf497569aa8274c44dc320243fd51586de9c2a662c3c37af7c"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.p2.tools.impl\\3.0.5\\org.eclipse.tycho.p2.tools.impl-3.0.5.jar",
+    "sha256": "0109272b67d26c573c9df23b38a7afe9456a84fb4618fe4c4021a0d215a8a03b"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.p2.tools.shared\\3.0.5\\org.eclipse.tycho.p2.tools.shared-3.0.5.jar",
+    "sha256": "05afe13d5ad5a0c1175c7d4299a458eaf236a367e97f86289af83aad924d7bcb"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.surefire.junit\\3.0.5\\org.eclipse.tycho.surefire.junit-3.0.5.jar",
+    "sha256": "93299a7baf3ec016dcf5ac8428eb12b3132ab97534cdb9fe66e234a2798266f2"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.surefire.junit4\\3.0.5\\org.eclipse.tycho.surefire.junit4-3.0.5.jar",
+    "sha256": "8d953f3fec79aeb2bbff10277372fbd2628f02c8a65cf94de480e32bd94d2341"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.surefire.junit47\\3.0.5\\org.eclipse.tycho.surefire.junit47-3.0.5.jar",
+    "sha256": "8fd98da41a779af655c3a1412afe6af2232bdcf709f1d7d952ca39df7bce2e5c"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.surefire.junit5\\3.0.5\\org.eclipse.tycho.surefire.junit5-3.0.5.jar",
+    "sha256": "242a43eb3adff8f6cb48fabc14549a71a73764f3b30c2f09ece4aee53d88dd59"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.surefire.junit54\\3.0.5\\org.eclipse.tycho.surefire.junit54-3.0.5.jar",
+    "sha256": "0ea104e6fced9aab22771cccec3c04841c389deb4d14e79d8dd3ef59933d0fba"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.surefire.junit55\\3.0.5\\org.eclipse.tycho.surefire.junit55-3.0.5.jar",
+    "sha256": "555bf1cb5b87db14e0f2a2201f4acc9182d1b8f97a327a1e2c3cd9d0701eb736"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.surefire.junit56\\3.0.5\\org.eclipse.tycho.surefire.junit56-3.0.5.jar",
+    "sha256": "8d9bbc4cf67f72d05203e326cb74520df4439ec1704b7ad5f99aaa5ee24cf96b"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.surefire.junit57\\3.0.5\\org.eclipse.tycho.surefire.junit57-3.0.5.jar",
+    "sha256": "d969fbe45d52f115669c5a8652dbc7c397a2390e1c63a3bbccd1bea2db1a9245"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.surefire.junit57withvintage\\3.0.5\\org.eclipse.tycho.surefire.junit57withvintage-3.0.5.jar",
+    "sha256": "3a428679803f303c4ee31a9158783a11609d8013391029093cd48d91ca9676f7"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.surefire.junit58\\3.0.5\\org.eclipse.tycho.surefire.junit58-3.0.5.jar",
+    "sha256": "29d5d6ebf5481b57ef1376c0be9149b3af4e44abc6ef35a94f07f77e8d532f12"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.surefire.junit58withvintage\\3.0.5\\org.eclipse.tycho.surefire.junit58withvintage-3.0.5.jar",
+    "sha256": "c00e33c01645ce547c36cd6ebfb7169f7f42c6ef57032fdc2790bc0b5bad4f1e"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.surefire.junit59\\3.0.5\\org.eclipse.tycho.surefire.junit59-3.0.5.jar",
+    "sha256": "1e9fdef7e27b681e514597639cfc549eb647a0ce46ef531e3b37eb80d40fe03e"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.surefire.junit59withvintage\\3.0.5\\org.eclipse.tycho.surefire.junit59withvintage-3.0.5.jar",
+    "sha256": "9b85e31675f1c587d33aa277f1337e6c1177963e70a3439c67cf6d3e4274bd6d"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.surefire.osgibooter\\3.0.5\\org.eclipse.tycho.surefire.osgibooter-3.0.5.jar",
+    "sha256": "8944f73ce6d9382c7b643fe1b31c7d31d5b8b39e000580e30f2dc07469092b56"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\org.eclipse.tycho.surefire.testng\\3.0.5\\org.eclipse.tycho.surefire.testng-3.0.5.jar",
+    "sha256": "3b9f159d33768ce1b341628c027064ac26316f891439e28e5d459d8ef899c8ff"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\p2-maven-plugin\\4.0.9\\p2-maven-plugin-4.0.9.jar",
+    "sha256": "d8ace8aa1263b92134f21c7f2381e9c9e284d776f6f5009131fdc0bd7857c519"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\sisu-equinox-api\\2.7.5\\sisu-equinox-api-2.7.5.jar",
+    "sha256": "926fc7ecfce132217d89c7d322fc8d42697533c01df39f9cf8451e07c6634d8e"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\sisu-equinox-embedder\\3.0.5\\sisu-equinox-embedder-3.0.5.jar",
+    "sha256": "1896788b0b2d0caa445c60414cb3ad504b3e81180c9958058d6785c4391716d3"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\sisu-equinox-launching\\4.0.9\\sisu-equinox-launching-4.0.9.jar",
+    "sha256": "b17cf792f3f84fa7484102112f170cada82b38d2e183803a3cc438232f9741bb"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\sisu-osgi-api\\4.0.9\\sisu-osgi-api-4.0.9.jar",
+    "sha256": "2acbf16c00e59d6b7f8d3346bc513799e531e273b0616aaf605a8a5fcd7909af"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\sisu-osgi-connect\\4.0.9\\sisu-osgi-connect-4.0.9.jar",
+    "sha256": "1169734c8d3d6cee7d261c4fd44f5339016044f6bb1bdcafb8b4978ba457a911"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\target-platform-configuration\\4.0.9\\target-platform-configuration-4.0.9.jar",
+    "sha256": "b831eb6dc2f2b03c5288efbcafe3273e527180b7967ee5d8236216d445689990"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-api\\4.0.9\\tycho-api-4.0.9.jar",
+    "sha256": "ade6384a99d4c567511ef761126a82a93e2b2628f37c4d57abbc5c47d673befe"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-artifactcomparator\\4.0.9\\tycho-artifactcomparator-4.0.9.jar",
+    "sha256": "66ad0ad4120dca1720a5dcbe54f10c17c14c92cfd000a91687236dcae59b1826"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-bnd-plugin\\4.0.9\\tycho-bnd-plugin-4.0.9.jar",
+    "sha256": "53009e045119da006dee785b89b679556a8c1202931cdfca0e0d3024e329fc88"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-bundles-external\\1.0.0\\eclipse\\plugins\\org.apache.commons.codec_1.6.0.v201305230611.jar",
+    "sha256": "4607e146c96206abb44288436581df0fec7fe6548b82b14f2503812bad0d0a83"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-bundles-external\\2.7.5\\eclipse\\artifacts.jar",
+    "sha256": "e05c2eafeec97d762dbbb6615874a47f8aafe831130e4f5feb7afa1110828f4f"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-bundles-external\\2.7.5\\eclipse\\plugins\\biz.aQute.bndlib_5.1.2.202007211702.jar",
+    "sha256": "1c764d9f3f08c1b56be4cacea33a0a5a21f4a46e14698047748b9ed3d8d752cc"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-compiler-jdt\\4.0.9\\tycho-compiler-jdt-4.0.9.jar",
+    "sha256": "c0d9803ebcbdf13d2d5bef36f51abec5ee26a0bf32a0066d0e31c660a967d5a0"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-compiler-plugin\\4.0.9\\tycho-compiler-plugin-4.0.9.jar",
+    "sha256": "fa5c2dfda64b5066c5dae234328cad198f6b3e74ad96ff168b6592cda5f7127c"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-core\\4.0.9\\tycho-core-4.0.9.jar",
+    "sha256": "6bba2bb2c0f04a533fbb2d0839aa1db23a15dd45de831080063bd16efd76db38"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-ds-plugin\\4.0.9\\tycho-ds-plugin-4.0.9.jar",
+    "sha256": "cb663196c3f375ec0f5d174eca40b159822477a670f15bb67df047a3ef856a22"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-embedder-api\\3.0.5\\tycho-embedder-api-3.0.5.jar",
+    "sha256": "cbe75242437322b040abf02eb36fbf1bb99432d24e0c56a60861d9b7b645f8ba"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-lib-detector\\4.0.9\\tycho-lib-detector-4.0.9.jar",
+    "sha256": "bab598f1e08ac0c207babfddfaef230937909b8786dbd04c38b1274e7ec020a1"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-maven-plugin\\4.0.9\\tycho-maven-plugin-4.0.9.jar",
+    "sha256": "ebef26da32f7eb4d37541f73c1c9a91086ba746f77d005b581bdfd26237f73b3"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-metadata-model\\4.0.9\\tycho-metadata-model-4.0.9.jar",
+    "sha256": "9f2819e488f1120dfd16b793806c7a023fa7180516cfdf30d7e876cc1b6e168c"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-p2\\4.0.9\\tycho-p2-4.0.9.jar",
+    "sha256": "11e37f5d3e1a8402609f52ceba5f382837a95bbdac7190c4eb39fda0918a1911"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-p2-director-plugin\\4.0.9\\tycho-p2-director-plugin-4.0.9.jar",
+    "sha256": "a9d83cd810922949b09845b4ed2029a8697fb0a4d66b5abe6c9d92ec60821f69"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-p2-facade\\3.0.5\\tycho-p2-facade-3.0.5.jar",
+    "sha256": "a92c22a3b4a3a6f2a9779cf86f8b3782b14694505263c5b4a1d8c6aff13822e9"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-p2-plugin\\4.0.9\\tycho-p2-plugin-4.0.9.jar",
+    "sha256": "7e65fcb940706ca4e24c6bb13d4a710eb4b08dc751764e0e083d74e7d4116b9f"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-p2-publisher-plugin\\4.0.9\\tycho-p2-publisher-plugin-4.0.9.jar",
+    "sha256": "f2e73b7f903fe90d30d3b8ebcc253065335240ee8fe2080ebc8589c4581ddc02"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-p2-repository-plugin\\4.0.9\\tycho-p2-repository-plugin-4.0.9.jar",
+    "sha256": "0f5408fbdd195d1079ef5f2c7cb3a8a317a86bfcbfbe85e5fa2509d0778de33e"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-packaging-plugin\\4.0.9\\tycho-packaging-plugin-4.0.9.jar",
+    "sha256": "9d434437a2fbe43e05858055c4c42782de8d91e3cec53328600faae64d57ee45"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-source-plugin\\4.0.9\\tycho-source-plugin-4.0.9.jar",
+    "sha256": "3ca681bd2073159fc0ac657e0f16fc07089ce3059991f648f022d2de1d122405"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-spi\\4.0.9\\tycho-spi-4.0.9.jar",
+    "sha256": "378d7edc1aa087653af4192451495a7177b6bf0955bbb4a606c00b07f88dae57"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-surefire-plugin\\3.0.5\\tycho-surefire-plugin-3.0.5.jar",
+    "sha256": "a5d2834ae22c3cb634d59f32aff34f76000e0579c522cf1c2b086f2361a42f09"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\tycho\\tycho-targetplatform\\4.0.9\\tycho-targetplatform-4.0.9.jar",
+    "sha256": "a3522000981211f648e5f2d0fd263edf0a08846d6ecc44025dd80677a72d5a07"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xsd\\org.eclipse.xsd\\2.12.0\\org.eclipse.xsd-2.12.0.jar",
+    "sha256": "0cbded7b090a2205c367b6d08f6ab32dc6857265b87673a4e51b77301ef1b953"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtend\\org.eclipse.xtend.core\\2.33.0\\org.eclipse.xtend.core-2.33.0.jar",
+    "sha256": "655f4a321d45fe5bdb1816b1eb97b0c12351b58fa7b2c14b6b09fdfb41a0015c"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtend\\org.eclipse.xtend.lib\\2.36.0\\org.eclipse.xtend.lib-2.36.0.jar",
+    "sha256": "ac53dfb1a9bc49500350d8d2d0f7b6d7c733bde58eb504f5c441140aade98675"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtend\\org.eclipse.xtend.lib.macro\\2.36.0\\org.eclipse.xtend.lib.macro-2.36.0.jar",
+    "sha256": "be6b0addefc8c1a93c7eb690a6367c2ba3bcc29c7f14518a30baeaa1c2d89acd"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtend\\xtend-maven-plugin\\2.36.0\\xtend-maven-plugin-2.36.0.jar",
+    "sha256": "18c3053bfe2f09857f60a2b79584940a8ef5a4577ee7cc1163a2ca4d62ad96b9"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtext\\org.eclipse.xtext\\2.36.0\\org.eclipse.xtext-2.36.0.jar",
+    "sha256": "d117d425126629e66bfe02dc2494867b01675e79820c442194dd486d261cc78e"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtext\\org.eclipse.xtext.common.types\\2.36.0\\org.eclipse.xtext.common.types-2.36.0.jar",
+    "sha256": "881867a9773ef7de29afb73f25b34360b18ebe0a5faf0ef350bf7636d69d44e4"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtext\\org.eclipse.xtext.ecore\\2.36.0\\org.eclipse.xtext.ecore-2.36.0.jar",
+    "sha256": "e6e86da5801ee23c5b1c3a438102da8794f8c6aa385ceeaa9234b543283a5a6c"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtext\\org.eclipse.xtext.ide\\2.36.0\\org.eclipse.xtext.ide-2.36.0.jar",
+    "sha256": "492783911f5d365ded44e16a16a522e6e7b16c46c79faff3efe5d389ab048dfa"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtext\\org.eclipse.xtext.smap\\2.33.0\\org.eclipse.xtext.smap-2.33.0.jar",
+    "sha256": "ebc3ca6757ed7ac146004473b94515c91bc4acbc451b2cae0ddc80f8b660b5df"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtext\\org.eclipse.xtext.testing\\2.36.0\\org.eclipse.xtext.testing-2.36.0.jar",
+    "sha256": "f182e22c14d5dce1ee47efb0680257ea4abc4406f1548ed2a58c23442c17ea6c"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtext\\org.eclipse.xtext.util\\2.36.0\\org.eclipse.xtext.util-2.36.0.jar",
+    "sha256": "dbeb968a02bbf67e92da767bb9b4ddc4a3cf261faf889bcff8e1a1efa19cf671"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtext\\org.eclipse.xtext.web\\2.32.0\\org.eclipse.xtext.web-2.32.0.jar",
+    "sha256": "4eb1d4282baf36abb8dc9e17ee6d3d34ddf9a1c35e4600af0822846cc5ae4b1d"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtext\\org.eclipse.xtext.web.servlet\\2.32.0\\org.eclipse.xtext.web.servlet-2.32.0.jar",
+    "sha256": "e1db88552b3cad6681edf73f72956ecd867a99c8555ca388040975c0968a92e5"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtext\\org.eclipse.xtext.xbase\\2.36.0\\org.eclipse.xtext.xbase-2.36.0.jar",
+    "sha256": "e117fd88561099f1c70f97994a85bacdaef4979f20b8f60c07696bf70ad2e441"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtext\\org.eclipse.xtext.xbase.ide\\2.32.0\\org.eclipse.xtext.xbase.ide-2.32.0.jar",
+    "sha256": "01b4c9cf6648b5e6c54fc061a2329b629ce4f96774b3de97b7877054d80be07c"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtext\\org.eclipse.xtext.xbase.lib\\2.36.0\\org.eclipse.xtext.xbase.lib-2.36.0.jar",
+    "sha256": "e94d17a7e8f2f27c4f9cceabca5f639e1d83214c38cb964f3a9c974c05297c5f"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtext\\org.eclipse.xtext.xbase.testing\\2.36.0\\org.eclipse.xtext.xbase.testing-2.36.0.jar",
+    "sha256": "7a8a3d9d7f34401a683f149b46d2c272631837518386769a04d5d25df4239d02"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtext\\org.eclipse.xtext.xbase.web\\2.32.0\\org.eclipse.xtext.xbase.web-2.32.0.jar",
+    "sha256": "8c7f4538227ebe7176aea017a4209ee79c2fe4c8b6acf63707e7c043917074bb"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtext\\org.eclipse.xtext.xtext.generator\\2.36.0\\org.eclipse.xtext.xtext.generator-2.36.0.jar",
+    "sha256": "3f8dad11cd0ddc0e184220e23d769eaafaa22e83d0bbcad06ad295c95d7723e9"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\eclipse\\xtext\\xtext-antlr-generator\\2.1.1\\xtext-antlr-generator-2.1.1.jar",
+    "sha256": "187a061cb542e0f0aae51a82433d8e9e5e6b2708003709b021c6bf7b8dcf8a61"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\android\\annotations\\4.1.1.4\\annotations-4.1.1.4.jar",
+    "sha256": "ba734e1e84c09d615af6a09d33034b4f0442f8772dec120efb376d86a565ae15"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\api\\api-common\\2.0.1\\api-common-2.0.1.jar",
+    "sha256": "83ccaa16502f0f0c586e8b0152b5a82b76715bddc443376f6f4deeeccd9b52f1"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\api\\gax\\2.3.0\\gax-2.3.0.jar",
+    "sha256": "78c383fbc05090d7fa85bdc151556ed1794227adb9115f7abb5896a188490e41"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\api\\gax-httpjson\\0.88.0\\gax-httpjson-0.88.0.jar",
+    "sha256": "9474a14c50fc4cb619e8e837025c5dc4335acfe8beccecc7c571fadb54dfafb2"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\api\\grpc\\proto-google-common-protos\\2.9.0\\proto-google-common-protos-2.9.0.jar",
+    "sha256": "0d830380ec66bd7e25eee63aa0a5a08578e46ad187fb72d99b44d9ba22827f91"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\api\\grpc\\proto-google-iam-v1\\1.0.14\\proto-google-iam-v1-1.0.14.jar",
+    "sha256": "e722e8d67172a87ad1b5bd3ba02c678484958190c49c059494453b07e7ea5dca"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\api-client\\google-api-client\\1.32.1\\google-api-client-1.32.1.jar",
+    "sha256": "77adc2aeface4fc92a698bafa0f8bab716ab051bb21cb410600f5de2a7e6b30e"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\apis\\google-api-services-storage\\v1-rev20210127-1.32.1\\google-api-services-storage-v1-rev20210127-1.32.1.jar",
+    "sha256": "c23beb05bb842abed14c8fd75a3e6b7a2f51b0d3ece1903a9c5fd3ab770ad93e"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\auth\\google-auth-library-credentials\\1.1.0\\google-auth-library-credentials-1.1.0.jar",
+    "sha256": "6e92f773bf4431d6ab51b5419e116b0dd31a901677e4ff96dcce48f4f2b76778"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\auth\\google-auth-library-oauth2-http\\1.1.0\\google-auth-library-oauth2-http-1.1.0.jar",
+    "sha256": "c23ebfe3ee67534143f9e2509526d4eefbb806d4ce5180754a6c721fa941c186"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\auto\\value\\auto-value-annotations\\1.8.2\\auto-value-annotations-1.8.2.jar",
+    "sha256": "392a848fc611fff5fd317c2453a9a1bf7775e4f4de9c5af0d688bff57f691f6e"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\cloud\\google-cloud-core\\2.1.0\\google-cloud-core-2.1.0.jar",
+    "sha256": "57efe5a25c5c90ef8ed637d14272e1ee1ddd15d673bc7eb50f2595b94b6ca1b7"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\cloud\\google-cloud-core-http\\2.1.0\\google-cloud-core-http-2.1.0.jar",
+    "sha256": "446564422bfcecbe196ee2daaff5d6fda608a06a5a72e05b6302e0d502de758a"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\cloud\\google-cloud-storage\\2.1.0\\google-cloud-storage-2.1.0.jar",
+    "sha256": "dfc9135f3340ef99731dda8f5e0c2a39af19324f23f3fcdd3c8f56cacd8bb232"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\cloud\\tools\\jib-maven-plugin\\3.5.1\\jib-maven-plugin-3.5.1.jar",
+    "sha256": "c49371fd2b9fe7ffe8117a4d466cb2f50504a636955bb1996c2ce3f8613571ea"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\code\\findbugs\\jsr305\\3.0.2\\jsr305-3.0.2.jar",
+    "sha256": "766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\code\\gson\\gson\\2.9.1\\gson-2.9.1.jar",
+    "sha256": "378534e339e6e6d50b1736fb3abb76f1c15d1be3f4c13cec6d536412e23da603"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\code\\maven-scm-provider-svnjava\\maven-scm-provider-svnjava\\2.2.1\\maven-scm-provider-svnjava-2.2.1.jar",
+    "sha256": "85eab865d596355924ed839cb564d37f9a02e18f55718b309010d99a7a26ac72"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\errorprone\\error_prone_annotations\\2.9.0\\error_prone_annotations-2.9.0.jar",
+    "sha256": "f947bdc33ae27a6b4aa44799e6c21e1944797bd0010ba43eb82d11446e163694"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\flatbuffers\\flatbuffers-java\\25.2.10\\flatbuffers-java-25.2.10.jar",
+    "sha256": "587bd6c31cda747587493a113bec8602d3a0b0ca579b2b1b838ef71b19e6525d"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\guava\\failureaccess\\1.0.3\\failureaccess-1.0.3.jar",
+    "sha256": "cbfc3906b19b8f55dd7cfd6dfe0aa4532e834250d7f080bd8d211a3e246b59cb"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\guava\\guava\\33.4.8-jre\\guava-33.4.8-jre.jar",
+    "sha256": "f3d7f57f67fd622f4d468dfdd692b3a5e3909246c28017ac3263405f0fe617ed"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\guava\\listenablefuture\\9999.0-empty-to-avoid-conflict-with-guava\\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+    "sha256": "b372a037d4230aa57fbeffdef30fd6123f9c0c2db85d0aced00c91b974f33f99"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\http-client\\google-http-client\\1.39.2\\google-http-client-1.39.2.jar",
+    "sha256": "6ab4967860927f051dd7f2b575e4b7a8ef35f367dc2e3408073aa4dee328e227"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\http-client\\google-http-client-apache-v2\\1.39.2\\google-http-client-apache-v2-1.39.2.jar",
+    "sha256": "52d39209f65abf6f577e1cab466adb99f12d1cd2ba4e98d86e501f75d7f850cf"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\http-client\\google-http-client-appengine\\1.39.2\\google-http-client-appengine-1.39.2.jar",
+    "sha256": "f6320dc0db035aff6eab2e28748560da718ab465fbc3481b653ea3f27aa5cac9"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\http-client\\google-http-client-gson\\1.39.2\\google-http-client-gson-1.39.2.jar",
+    "sha256": "cf81944fd41fe0daa869b913bd0aaaef0e4d8fe6774a195540f454ecd3cf50b6"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\http-client\\google-http-client-jackson2\\1.39.2\\google-http-client-jackson2-1.39.2.jar",
+    "sha256": "74a493a7ba25e1dfb3d3a4ddf713306d5a3786db00a3489d59061dc8cff321b1"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\inject\\guice\\7.0.0\\guice-7.0.0.jar",
+    "sha256": "de5b0e359bd7b03ca42806b368846efd95484380fe05ae2a4ea71bc338c59c00"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\j2objc\\j2objc-annotations\\3.0.0\\j2objc-annotations-3.0.0.jar",
+    "sha256": "88241573467ddca44ffd4d74aa04c2bbfd11bf7c17e0c342c94c9de7a70a7c64"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\oauth-client\\google-oauth-client\\1.31.5\\google-oauth-client-1.31.5.jar",
+    "sha256": "f827130fb11f8d4be9cd4a3a34167fe1b83071b6096d26a51a9f79494393ea8d"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\protobuf\\protobuf-java\\4.30.2\\protobuf-java-4.30.2.jar",
+    "sha256": "0f3a4e9264db07cec429f2a68a66030e9b7487277b76863cdd0e9238cece249b"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\protobuf\\protobuf-java-util\\4.30.2\\protobuf-java-util-4.30.2.jar",
+    "sha256": "35a2c968a94f85d443c2bbed3770e2dc4d0a5b571b7d8d4debbade18d405dbc5"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\protobuf\\protobuf-javalite\\3.9.1\\protobuf-javalite-3.9.1.jar",
+    "sha256": "0ad0e65a5523896fa8b822f424b7bc2dac663651b0c54b1f584b3e8fc1005bd3"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\re2j\\re2j\\1.8\\re2j-1.8.jar",
+    "sha256": "7b52c72156dd7f98b3237a5b35c1d34fba381b21048c89208913ad80a45dfbd7"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\com\\google\\uzaygezen\\uzaygezen-core\\0.2\\uzaygezen-core-0.2.jar",
+    "sha256": "29aabe951d220f03b3789332f9f455ca2eba953c91ecef8aa06f76f458cedc4e"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\antlr\\antlr-runtime\\3.2\\antlr-runtime-3.2.jar",
+    "sha256": "6d9f997202cc02d4d4fa3d4e84e6d2d3de3a1b1f951e9a1a83b40d0279a50389"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\antlr\\antlr4-runtime\\4.9.3\\antlr4-runtime-4.9.3.jar",
+    "sha256": "131a6594969bc4f321d652ea2a33bc0e378ca312685ef87791b2c60b29d01ea5"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\antlr\\stringtemplate\\3.2\\stringtemplate-3.2.jar",
+    "sha256": "013bddbade90e8311d55b3655d410ebfcbdaf3a49a995023edeb0840fb6e85f6"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\aopalliance\\aopalliance\\1.0\\aopalliance-1.0.jar",
+    "sha256": "0addec670fedcd3f113c5c8091d783280d23f75e3acb841b61a9cdb079376a08"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\javax\\inject\\javax.inject\\1\\javax.inject-1.jar",
+    "sha256": "91c77044a50c481636c32d916fd89c9118a72195390452c81065080f957de7ff"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\jakarta\\inject\\jakarta.inject-api\\2.0.1\\jakarta.inject-api-2.0.1.jar",
+    "sha256": "f7dc98062fccf14126abb751b64fab12c312566e8cbdc8483598bffcea93af7c"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\log4j\\log4j\\1.2.17\\log4j-1.2.17.jar",
+    "sha256": "1d31696445697720527091754369082a6651bd49781b6005deb94e56753406f9"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-api\\2.25.2\\log4j-api-2.25.2.jar",
+    "sha256": "9fd66c9fe0bea06fa9666c147989a46cafaa92b4a88753697d3945cc43338cbb"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-core\\2.25.2\\log4j-core-2.25.2.jar",
+    "sha256": "e50db7701430ff907981850ef527a41d51a53dd0017f53a0860afcbab8570277"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-layout-template-json\\2.25.2\\log4j-layout-template-json-2.25.2.jar",
+    "sha256": "782f3a941ccf07915c0dc86870a736c825018c4ab682949271a3cf5ee721252e"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-slf4j-impl\\2.20.0\\log4j-slf4j-impl-2.20.0.jar",
+    "sha256": "776e3f6087bb82ec34ab6dd795a6dca6733b965ad0da0fa92cbe370fa9aac7bc"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-to-slf4j\\2.24.3\\log4j-to-slf4j-2.24.3.jar",
+    "sha256": "c7f2b0c612a4eb05b1587d1c880eb4cf5f4f53850676a8ede8da2b8fabb4f73f"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\slf4j\\jcl-over-slf4j\\2.0.9\\jcl-over-slf4j-2.0.9.jar",
+    "sha256": "f98f1eb8179bcb312aeb76a607746f4f2d0f03ce265ee78141f5c3c8302102af"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\slf4j\\jul-to-slf4j\\2.0.9\\jul-to-slf4j-2.0.9.jar",
+    "sha256": "69b4e5f8d3bd3f6f54367d19f2c1ee95dd5877802f12d868282e218dd76b00bf"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\slf4j\\log4j-over-slf4j\\2.0.16\\log4j-over-slf4j-2.0.16.jar",
+    "sha256": "0a4c4314b80d7b0ec733efb3cfbeb9005e7488e64132716396e33ef0ca1ac52d"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\slf4j\\slf4j-api\\2.0.9\\slf4j-api-2.0.9.jar",
+    "sha256": "0818930dc8d7debb403204611691da58e49d42c50b6ffcfdce02dadb7c3c2b6c"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\slf4j\\slf4j-jdk14\\2.0.16\\slf4j-jdk14-2.0.16.jar",
+    "sha256": "0fcf97cf6dd1f5768cfd57ed5d742fe7114b55a4948dab0d76271a30af859057"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\slf4j\\slf4j-simple\\2.0.5\\slf4j-simple-2.0.5.jar",
+    "sha256": "a28c64b8a1d61f769fd24e1193ec354ffee5b03063a37602dd70aa09503101f2"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\ow2\\asm\\asm\\9.9\\asm-9.9.jar",
+    "sha256": "03d99a74ad1ee5c71334ef67437f4ef4fe3488caa7c96d8645abc73c8e2017d4"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\ow2\\asm\\asm-analysis\\9.9\\asm-analysis-9.9.jar",
+    "sha256": "6a15d28e8bd29ba4fd5bca4baf9b50e8fba2d7b51fbf78cfa0c875a7214c678b"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\ow2\\asm\\asm-commons\\9.7.1\\asm-commons-9.7.1.jar",
+    "sha256": "9a579b54d292ad9be171d4313fd4739c635592c2b5ac3a459bbd1049cddec6a0"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\ow2\\asm\\asm-tree\\9.9\\asm-tree-9.9.jar",
+    "sha256": "42178f3775c9c63f9e5e1446747d29b4eca4d91bd6e75e5c43cfa372a47d38c6"
+  },
+  {
+    "path": "C:\\Users\\Ferd\\.m2\\repository\\org\\ow2\\asm\\asm-util\\9.9\\asm-util-9.9.jar",
+    "sha256": "3842e13cfe324ee9ab7cdc4914be9943541ead397c17e26daf0b8a755bede717"
+  }
+]

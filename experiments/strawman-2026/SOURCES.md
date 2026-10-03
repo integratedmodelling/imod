@@ -1,0 +1,26 @@
+# Evidence and scope
+
+Local implementation guidance is pinned by repository revisions in `evidence/baseline.json` and SHA-256 values in `guidance-hashes.json`. The current context pack is version 1.3; its associated schema is copied unchanged for local validation. Current grammar is the syntax authority. Legacy files support domain recovery, not current syntax. No external text was copied wholesale.
+
+| ID | Source / locator | Use and limit |
+|---|---|---|
+| CP | klab-services/llm/DOMAIN_CONTEXT_PACK.md, sections 2–3, schema/example and review sections | Observational categories, tiers, implicit type inheritance, unambiguity, orthogonality and review records. Root-only foundational access. |
+| LANG | klab-services/docs/ONTOLOGY_LANGUAGE.md; klab-languages/.../Worldview.xtext; resources WorldviewValidationTest | Source form and operational test boundaries. Current source and older built artifacts can differ; parser results are explicitly pinned. |
+| AUTH | klab-services/docs/AUTHORITIES.md | Configured identity anchors, provider URN, versioned bindings; authority support does not make arbitrary cross-scheme equalities true. |
+| LEGACY | im and im.aries, all 44 .kim files in source-inventory.json | Recover quantities, processes and roles with existing disagreements intact. Commented/incubating concepts need renewed review. |
+| CLC334 | [Copernicus CORINE 3.3.4 Burnt areas](https://land.copernicus.eu/content/corine-land-cover-nomenclature-guidelines/html/index-clc-334.html), Definition/Clarification/Exclusions; retrieved 2026-10-03 | This is a recent, visible burn classification of specified vegetation, with exclusions and regeneration limits. It cannot equal every historical burn, every fire event, or every affected ecosystem. |
+| GWML | [OGC GroundWaterML2 2.2, 16-032r2](https://docs.ogc.org/is/16-032r2/16-032r2.html), scope and conceptual sections 7–7.1, 7.6; retrieved 2026-10-03 | Distinguish geological units, fluid bodies, constituents, voids, flow and management. Exchange model classes need an observational interpretation; an aquifer label must not assert currently resolved water. |
+| CBD | [Convention on Biological Diversity, Article 2](https://www.cbd.int/convention/articles?a=cbd-02); retrieved 2026-10-03 | Organism/habitat/ecosystem distinctions and genetic material versus resources. Convention definitions are scoped; a resource's value is not a universal material identity. |
+| FAO | [FAO Soils Portal, All definitions](https://www.fao.org/soils-portal/about/all-definitions/en/); retrieved 2026-10-03 | Soil and constituent distinctions. Plant-growth framing is useful but not sufficient to settle every boundary of soil observability. |
+| IPCC | [AR6 WGII Annex II glossary](https://www.ipcc.ch/report/ar6/wg2/chapter/annex-ii/), hazard/exposure/vulnerability/risk; retrieved 2026-10-03 | Keep possible harmful occurrence, presence, susceptibility, risk and realized damage distinct. Current valuation:Hazard is an occurrent role whose implication targets collapse probability; it is not itself a probability definition. |
+| NWCG | [Glossary of Wildland Fire PMS 205](https://www.nwcg.gov/publications/pms205/nwcg-glossary-of-wildland-fire-pms-205); retrieved 2026-10-03 | Community terminology resource for future fire/incident review. Terms have status and stewardship; not every listed/requested term is a universally accepted ontology concept. No automatic import proposed. |
+
+Further source pointers supplied by the parent research thread, retained with verification limits: [GeoSciML 4](https://docs.ogc.org/is/16-008/16-008r1.html) sections 8.4.1–8.4.2; [IUPAC chemical substance](https://goldbook.iupac.org/terms/view/C01039/plain); [SEEA Ecosystem Accounting](https://seea.un.org/en/methodology/ecosystem-accounting). Direct fetches returned tool errors here, so their detailed claims have not been independently verified in this worktree task. [SNA 2008](https://unstats.un.org/unsd/nationalaccount/docs/sna2008.pdf), chapter 4, is a proposed institutional-unit reference, not an assertion that an organization equals an accounting unit. These pointers motivate review gaps; they do not supply accepted candidate axioms.
+
+## Local-edit attribution and disagreements
+
+The checkout owner's uncommitted CHEM change replaces ChemicalSpecies with broader ChemicalIdentity and binds `klab.authority.pubchem`; neither provider availability nor family semantics was validated. TAXA binds `klab.authority.taxa` with datasetKey 312578; Human moves into society and uses `TAXA:[6MB3T]`. Those exact choices are preserved in the patch, not silently replaced by a guessed current dataset or identifier.
+
+The im.aries local change replaces HeatHazardMetric's quality/is declaration with quantity/describes. This is evidence of an unresolved observable-versus-descriptor distinction, not permission to migrate all risk metrics automatically. Legacy source comments question biomass/flow classification and income/wealth stock-flow semantics. Those disagreements are retained in DOMAIN_MAP.md.
+
+Source-backed does not mean every proposed domain has adequate literature coverage: physics, oceanography, genetics and sociology need additional primary specialist evidence before accepting their minimal corpora. The inventory deliberately marks that absence.

@@ -1,0 +1,3 @@
+C:\Users\Ferd\Documents\Codex\2026-10-03\task-4\parser-negative-control\invalid.kwv:1: no viable alternative at input 'Missing'
+PARSE FAIL C:\Users\Ferd\Documents\Codex\2026-10-03\task-4\parser-negative-control\invalid.kwv errors=1
+SUMMARY files=1 failed=1 syntax-only

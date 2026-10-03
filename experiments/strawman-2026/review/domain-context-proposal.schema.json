@@ -1,0 +1,1328 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://integratedmodelling.org/schemas/llm/domain-context-proposal.schema.json",
+  "title": "k.LAB domain-context asset proposal",
+  "description": "Versioned, reviewable proposals for k.LAB semantic assets. Concept proposals are fully specified; ontology, namespace and model records share the same lifecycle and extension envelope.",
+  "type": "object",
+  "required": ["proposal_schema", "context_pack_version", "proposal"],
+  "properties": {
+    "proposal_schema": {
+      "const": "classpath:/schemas/llm/domain-context-proposal.schema.json"
+    },
+    "context_pack_version": {
+      "const": "1.3"
+    },
+    "proposal": {
+      "$ref": "#/$defs/proposal"
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "nullableString": {
+      "type": ["string", "null"]
+    },
+    "stringArray": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "identifier": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9._-]*$"
+    },
+    "qualifiedName": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*:[A-Z][A-Za-z0-9_]*$"
+    },
+    "feedbackContainer": {
+      "type": "object",
+      "required": ["state", "comments", "decisions", "proposed_action_ids", "applied_action_ids", "last_reviewed_iteration"],
+      "properties": {
+        "state": {
+          "enum": ["open", "changes_requested", "accepted", "rejected", "deferred"]
+        },
+        "comments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/feedbackRecord"
+          }
+        },
+        "decisions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/decisionRecord"
+          }
+        },
+        "proposed_action_ids": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "applied_action_ids": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "last_reviewed_iteration": {
+          "type": ["integer", "null"],
+          "minimum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "feedbackRecord": {
+      "type": "object",
+      "required": ["comment_id", "author", "iteration", "proposal_revision_id", "target", "stance", "comment", "evidence_refs", "proposed_action_ids", "status"],
+      "properties": {
+        "comment_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "author": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "iteration": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "proposal_revision_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "target": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "field": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "area": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "stance": {
+          "enum": ["question", "support", "object", "request_change"]
+        },
+        "comment": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "affected_asset_ids": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "proposed_change": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "proposed_action_ids": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "status": {
+          "enum": ["open", "accepted", "rejected", "superseded", "resolved"]
+        },
+        "resolution": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "resolved_in_iteration": {
+          "type": ["integer", "null"],
+          "minimum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "decisionRecord": {
+      "type": "object",
+      "required": ["decision_id", "iteration", "decision", "rationale"],
+      "properties": {
+        "decision_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "iteration": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "decision": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "rationale": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "action_ids": {
+          "$ref": "#/$defs/stringArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "lifecycle": {
+      "type": "object",
+      "required": ["state", "introduced_in_iteration", "last_modified_in_iteration", "deleted_in_iteration", "replacement_asset_ids"],
+      "properties": {
+        "state": {
+          "enum": ["proposed", "active", "deprecated", "deleted", "rejected"]
+        },
+        "introduced_in_iteration": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "last_modified_in_iteration": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "deleted_in_iteration": {
+          "type": ["integer", "null"],
+          "minimum": 1
+        },
+        "replacement_asset_ids": {
+          "$ref": "#/$defs/stringArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "nameHistory": {
+      "type": "object",
+      "required": ["qualified_name", "from_iteration", "to_iteration"],
+      "properties": {
+        "qualified_name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "from_iteration": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "to_iteration": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "rename_action_id": {
+          "$ref": "#/$defs/nullableString"
+        }
+      },
+      "additionalProperties": false
+    },
+    "assetBase": {
+      "type": "object",
+      "required": ["asset_id", "asset_type", "qualified_name", "record_version", "name_history", "label", "disposition", "definition", "evidence_refs", "feedback", "lifecycle"],
+      "properties": {
+        "asset_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "asset_type": {
+          "enum": ["concept", "ontology", "namespace", "model"]
+        },
+        "qualified_name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "record_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "record_hash": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "name_history": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nameHistory"
+          }
+        },
+        "label": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "aliases": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "disposition": {
+          "enum": ["propose", "reuse", "align", "needs_review", "defer", "not_a_worldview_concept"]
+        },
+        "definition": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "extraction_rationale": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "epistemic_status": {
+          "enum": ["explicit", "inferred", "modeling_choice", "contested"]
+        },
+        "feedback": {
+          "$ref": "#/$defs/feedbackContainer"
+        },
+        "lifecycle": {
+          "$ref": "#/$defs/lifecycle"
+        },
+        "open_questions": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "alternatives": {
+          "type": "array"
+        },
+        "metadata": {
+          "type": "object"
+        }
+      }
+    },
+    "boundaries": {
+      "type": "object",
+      "required": ["includes", "excludes", "examples", "counterexamples"],
+      "properties": {
+        "includes": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "excludes": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "examples": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "counterexamples": {
+          "$ref": "#/$defs/stringArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "semanticCoordinates": {
+      "type": "object",
+      "required": ["kind", "flags", "perspective", "dependence", "arity", "countable", "bearer_types", "participant_types", "relationship_source", "relationship_target", "value_kind", "aggregation_behavior"],
+      "properties": {
+        "kind": {
+          "enum": ["thing", "agent", "event", "process", "relationship", "bond", "configuration", "quality", "class", "quantity", "ordering", "extent", "amount", "area", "duration", "length", "mass", "money", "volume", "weight", "acceleration", "angle", "charge", "electric-potential", "energy", "entropy", "pressure", "priority", "resistance", "resistivity", "temperature", "velocity", "viscosity", "attribute", "identity", "role", "realm", "domain"]
+        },
+        "flags": {
+          "type": "array",
+          "items": {
+            "enum": ["abstract", "subjective", "individual", "deliberative", "interactive", "reactive", "functional", "structural", "deniable", "rescaling"]
+          },
+          "uniqueItems": true
+        },
+        "perspective": {
+          "enum": ["structural", "functional", "cross_perspective", "not_applicable"]
+        },
+        "dependence": {
+          "enum": ["independent", "dependent", "relational", "not_applicable"]
+        },
+        "arity": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "const": ">=1"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "countable": {
+          "type": ["boolean", "null"]
+        },
+        "bearer_types": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "participant_types": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "relationship_source": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "relationship_target": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "value_kind": {
+          "enum": ["boolean", "concept", "number", "rank", "geometry", "duration", "other", null]
+        },
+        "aggregation_behavior": {
+          "enum": ["extensive", "intensive", "not_applicable", "unresolved", null]
+        }
+      },
+      "additionalProperties": false
+    },
+    "typeInheritance": {
+      "type": "object",
+      "required": ["declaration_keyword", "odo_im_chain", "explicit_odo_derivation_required", "rationale"],
+      "properties": {
+        "declaration_keyword": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "odo_im_chain": {
+          "const": "implicit"
+        },
+        "explicit_odo_derivation_required": {
+          "const": false
+        },
+        "rationale": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ambiguity": {
+      "type": "object",
+      "required": ["status", "source_senses", "selected_sense", "excluded_senses", "resolution_rationale"],
+      "properties": {
+        "status": {
+          "enum": ["unambiguous", "qualified", "unresolved"]
+        },
+        "source_senses": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "selected_sense": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "excluded_senses": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "resolution_rationale": {
+          "$ref": "#/$defs/nullableString"
+        }
+      },
+      "additionalProperties": false
+    },
+    "orthogonalityRelation": {
+      "type": "object",
+      "required": ["other_asset_id", "relation", "a_varies_with_b_fixed", "b_varies_with_a_fixed", "rationale", "required_action"],
+      "properties": {
+        "other_asset_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "relation": {
+          "enum": ["orthogonal", "taxonomic", "dependent", "derived", "compositional", "partially_overlapping", "redundant", "conflicting"]
+        },
+        "a_varies_with_b_fixed": {
+          "type": ["boolean", "null"]
+        },
+        "b_varies_with_a_fixed": {
+          "type": ["boolean", "null"]
+        },
+        "rationale": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "required_action": {
+          "$ref": "#/$defs/nullableString"
+        }
+      },
+      "additionalProperties": false
+    },
+    "orthogonality": {
+      "type": "object",
+      "required": ["atomic_dimension", "composite_of", "independently_variable_from", "relations", "assessment"],
+      "properties": {
+        "atomic_dimension": {
+          "type": "boolean"
+        },
+        "composite_of": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "independently_variable_from": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "relations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/orthogonalityRelation"
+          }
+        },
+        "assessment": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      },
+      "additionalProperties": false
+    },
+    "namedComposition": {
+      "type": "object",
+      "required": ["applicable", "domain_term", "articulated_expression", "naming_rationale", "salience", "equals_vs_is_review_required", "proposed_outcome", "equivalence_assessment", "reviewer_decision"],
+      "properties": {
+        "applicable": {
+          "type": "boolean"
+        },
+        "domain_term": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "articulated_expression": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "naming_rationale": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "salience": {
+          "type": "object",
+          "required": ["level", "citation_evidence_refs", "occurrence_count", "independent_source_count", "canonical_definition_refs", "discourse_uses"],
+          "properties": {
+            "level": {
+              "enum": ["peripheral", "established", "core"]
+            },
+            "citation_evidence_refs": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "occurrence_count": {
+              "type": ["integer", "null"],
+              "minimum": 0
+            },
+            "independent_source_count": {
+              "type": ["integer", "null"],
+              "minimum": 0
+            },
+            "canonical_definition_refs": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "discourse_uses": {
+              "type": "array",
+              "items": {
+                "enum": ["explanation", "annotation", "query", "model_definition", "community_governance"]
+              },
+              "uniqueItems": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "equals_vs_is_review_required": {
+          "type": "boolean"
+        },
+        "proposed_outcome": {
+          "enum": ["keep_expression", "alias_with_equals", "specialize_with_is", "unresolved"]
+        },
+        "equivalence_assessment": {
+          "type": "object",
+          "required": ["same_intension", "same_extension", "same_perspective_and_category", "same_context_and_dependence", "same_value_space_and_predicates", "rationale"],
+          "properties": {
+            "same_intension": {
+              "type": ["boolean", "null"]
+            },
+            "same_extension": {
+              "type": ["boolean", "null"]
+            },
+            "same_perspective_and_category": {
+              "type": ["boolean", "null"]
+            },
+            "same_context_and_dependence": {
+              "type": ["boolean", "null"]
+            },
+            "same_value_space_and_predicates": {
+              "type": ["boolean", "null"]
+            },
+            "rationale": {
+              "$ref": "#/$defs/nullableString"
+            }
+          },
+          "additionalProperties": false
+        },
+        "reviewer_decision": {}
+      },
+      "additionalProperties": false
+    },
+    "alignmentCandidate": {
+      "type": "object",
+      "required": ["concept", "relation", "score", "rationale"],
+      "properties": {
+        "concept": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "relation": {
+          "enum": ["is", "equals", "reuse", "authority"]
+        },
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "rationale": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ancestryReference": {
+      "type": "object",
+      "required": ["ref_kind", "asset_id", "qualified_name"],
+      "properties": {
+        "ref_kind": {
+          "enum": ["internal", "external"]
+        },
+        "asset_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "qualified_name": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      },
+      "additionalProperties": false
+    },
+    "alignment": {
+      "type": "object",
+      "required": ["action", "selected_parent", "direct_parent_tier", "tier_1_ancestor", "ancestry_to_tier_1", "ancestry_status", "contextualized_within", "candidates", "rejected_candidates"],
+      "properties": {
+        "action": {
+          "enum": ["implicit_type_only", "reuse_exact", "specialize", "authority_reference", "new_root_candidate", "unresolved"]
+        },
+        "selected_parent": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "direct_parent_tier": {
+          "type": ["integer", "null"],
+          "minimum": 1
+        },
+        "tier_1_ancestor": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "ancestry_to_tier_1": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ancestryReference"
+          }
+        },
+        "ancestry_status": {
+          "enum": ["verified", "missing_parent", "missing_tier_1_ancestor", "unresolved", "not_applicable"]
+        },
+        "contextualized_within": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/alignmentCandidate"
+          }
+        },
+        "rejected_candidates": {
+          "type": "array"
+        }
+      },
+      "additionalProperties": false
+    },
+    "conceptAsset": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/assetBase"
+        },
+        {
+          "type": "object",
+          "required": ["asset_type", "abstract", "section", "tier", "tier_rationale", "conceptual_dimension", "boundaries", "semantic_coordinates", "category_rationale", "type_inheritance", "generalized_scope_aliases_used", "ambiguity", "orthogonality", "named_composition", "alignment", "predicates", "derivation", "clauses", "dependencies", "candidate_expression", "candidate_kwv", "syntax_status", "confidence"],
+          "properties": {
+            "asset_type": {
+              "const": "concept"
+            },
+            "abstract": {
+              "type": "boolean"
+            },
+            "section": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "tier": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "tier_rationale": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "conceptual_dimension": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "boundaries": {
+              "$ref": "#/$defs/boundaries"
+            },
+            "semantic_coordinates": {
+              "$ref": "#/$defs/semanticCoordinates"
+            },
+            "category_rationale": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "type_inheritance": {
+              "$ref": "#/$defs/typeInheritance"
+            },
+            "generalized_scope_aliases_used": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "ambiguity": {
+              "$ref": "#/$defs/ambiguity"
+            },
+            "orthogonality": {
+              "$ref": "#/$defs/orthogonality"
+            },
+            "named_composition": {
+              "$ref": "#/$defs/namedComposition"
+            },
+            "alignment": {
+              "$ref": "#/$defs/alignment"
+            },
+            "predicates": {
+              "type": "object",
+              "required": ["identities", "realms", "attributes", "roles"],
+              "properties": {
+                "identities": {
+                  "$ref": "#/$defs/stringArray"
+                },
+                "realms": {
+                  "$ref": "#/$defs/stringArray"
+                },
+                "attributes": {
+                  "$ref": "#/$defs/stringArray"
+                },
+                "roles": {
+                  "$ref": "#/$defs/stringArray"
+                }
+              },
+              "additionalProperties": false
+            },
+            "derivation": {
+              "type": "object",
+              "required": ["operator", "operand", "secondary_operand", "rationale"],
+              "properties": {
+                "operator": {
+                  "$ref": "#/$defs/nullableString"
+                },
+                "operand": {
+                  "$ref": "#/$defs/nullableString"
+                },
+                "secondary_operand": {
+                  "$ref": "#/$defs/nullableString"
+                },
+                "rationale": {
+                  "$ref": "#/$defs/nullableString"
+                }
+              },
+              "additionalProperties": false
+            },
+            "clauses": {
+              "type": "object",
+              "required": ["inherits", "applies_to", "links", "creates", "affects", "emerges_from", "implies", "describes", "requires", "children"],
+              "properties": {
+                "inherits": {
+                  "$ref": "#/$defs/stringArray"
+                },
+                "applies_to": {
+                  "$ref": "#/$defs/stringArray"
+                },
+                "links": {},
+                "creates": {
+                  "$ref": "#/$defs/stringArray"
+                },
+                "affects": {
+                  "$ref": "#/$defs/stringArray"
+                },
+                "emerges_from": {
+                  "$ref": "#/$defs/stringArray"
+                },
+                "implies": {
+                  "$ref": "#/$defs/stringArray"
+                },
+                "describes": {},
+                "requires": {
+                  "type": "array"
+                },
+                "children": {
+                  "type": "array"
+                }
+              },
+              "additionalProperties": false
+            },
+            "dependencies": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "candidate_expression": {
+              "$ref": "#/$defs/nullableString"
+            },
+            "candidate_kwv": {
+              "$ref": "#/$defs/nullableString"
+            },
+            "syntax_status": {
+              "enum": ["not_attempted", "illustrative", "parsed", "adapted", "reasoner_validated"]
+            },
+            "confidence": {
+              "type": "object",
+              "required": ["extraction", "category", "alignment", "unambiguity", "orthogonality"],
+              "additionalProperties": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ontologyAsset": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/assetBase"
+        },
+        {
+          "type": "object",
+          "required": ["asset_type", "tier", "domain_expression", "imports", "member_asset_ids"],
+          "properties": {
+            "asset_type": {
+              "const": "ontology"
+            },
+            "tier": {
+              "type": ["integer", "null"],
+              "minimum": 1
+            },
+            "domain_expression": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "imports": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "member_asset_ids": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "proposal_data": {
+              "type": "object"
+            }
+          }
+        }
+      ]
+    },
+    "namespaceAsset": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/assetBase"
+        },
+        {
+          "type": "object",
+          "required": ["asset_type", "namespace_kind", "imports", "member_asset_ids"],
+          "properties": {
+            "asset_type": {
+              "const": "namespace"
+            },
+            "namespace_kind": {
+              "enum": ["namespace", "scenario", "worldview"]
+            },
+            "imports": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "member_asset_ids": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "proposal_data": {
+              "type": "object"
+            }
+          }
+        }
+      ]
+    },
+    "modelAsset": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/assetBase"
+        },
+        {
+          "type": "object",
+          "required": ["asset_type", "namespace_asset_id", "observables", "dependencies", "strategy_summary"],
+          "properties": {
+            "asset_type": {
+              "const": "model"
+            },
+            "namespace_asset_id": {
+              "$ref": "#/$defs/identifier"
+            },
+            "observables": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "dependencies": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "strategy_summary": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "proposal_data": {
+              "type": "object"
+            }
+          }
+        }
+      ]
+    },
+    "source": {
+      "type": "object",
+      "required": ["source_id", "citation", "version", "locator", "authority_note"],
+      "properties": {
+        "source_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "citation": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "version": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "locator": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "authority_note": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ontologyContext": {
+      "type": "object",
+      "required": ["ontology_id", "version", "role", "tier", "domain_scope", "mandatory_context"],
+      "properties": {
+        "ontology_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "version": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "role": {
+          "enum": ["root_domain", "upper", "tier_1_mandatory", "intervening_tier", "neighboring", "authority", "prior_domain"]
+        },
+        "tier": {
+          "type": ["integer", "null"],
+          "minimum": 1
+        },
+        "domain_scope": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "mandatory_context": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["evidence_id", "source_id", "locator", "source_term", "paraphrase", "evidence_kind", "interpretation"],
+      "properties": {
+        "evidence_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "source_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "locator": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "source_term": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "paraphrase": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "evidence_kind": {
+          "enum": ["definition", "distinction", "classification", "mechanism", "measurement", "example", "contested_claim"]
+        },
+        "interpretation": {
+          "$ref": "#/$defs/nullableString"
+        }
+      },
+      "additionalProperties": false
+    },
+    "action": {
+      "type": "object",
+      "required": ["action_id", "proposal_id", "base_revision_id", "requested_in_iteration", "requested_by_feedback_ids", "operation", "target_asset_ids", "status", "semantic_review_required", "preconditions", "payload", "impact", "required_validations", "approval", "apply_result"],
+      "properties": {
+        "action_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "proposal_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "base_revision_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "requested_in_iteration": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "requested_by_feedback_ids": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "operation": {
+          "enum": ["add", "rename", "modify", "expand", "delete", "deprecate", "restore", "split", "merge", "replace"]
+        },
+        "target_asset_ids": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "status": {
+          "enum": ["proposed", "needs_review", "approved", "rejected", "applied", "failed", "superseded"]
+        },
+        "semantic_review_required": {
+          "type": "boolean"
+        },
+        "preconditions": {
+          "type": "object"
+        },
+        "payload": {
+          "type": "object"
+        },
+        "impact": {
+          "type": "object"
+        },
+        "required_validations": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "approval": {
+          "type": "object"
+        },
+        "apply_result": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    "gap": {
+      "type": "object",
+      "required": ["gap_id", "status"],
+      "properties": {
+        "gap_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "gap_type": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "required_tier": {
+          "type": ["integer", "null"],
+          "minimum": 1
+        },
+        "required_concept": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "requested_alias": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "intended_foundational_meaning": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "intended_scope_uses": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "reason": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "rationale": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "status": {
+          "enum": ["open", "supplied", "resolved_upstream", "resolved_in_root", "rejected", "superseded"]
+        },
+        "root_revision_resolving_gap": {
+          "$ref": "#/$defs/nullableString"
+        }
+      },
+      "additionalProperties": false
+    },
+    "proposal": {
+      "type": "object",
+      "required": ["id", "revision_id", "title", "iteration", "supersedes_revision", "status", "generated_at", "scope", "source_policy", "sources", "existing_ontologies", "root_scope_aliases", "evidence", "assets", "dependency_order", "upstream_gaps", "root_domain_gaps", "iteration_control", "actions", "orthogonality_review", "validation", "corpus_feedback", "change_log"],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "revision_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "iteration": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "supersedes_revision": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "status": {
+          "enum": ["blocked", "draft", "community_review", "revised", "accepted", "rejected"]
+        },
+        "generated_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "scope": {
+          "type": "object",
+          "required": ["domain", "purpose", "requested_tier", "target_community", "tier_1_context_required", "tier_1_context_status", "included", "excluded", "spatial_context", "temporal_context", "intended_scales"],
+          "properties": {
+            "domain": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "purpose": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "requested_tier": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "target_community": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "tier_1_context_required": {
+              "type": "boolean"
+            },
+            "tier_1_context_status": {
+              "enum": ["not_required", "present", "missing", "incomplete"]
+            },
+            "included": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "excluded": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "spatial_context": {
+              "$ref": "#/$defs/nullableString"
+            },
+            "temporal_context": {
+              "$ref": "#/$defs/nullableString"
+            },
+            "intended_scales": {
+              "$ref": "#/$defs/stringArray"
+            }
+          },
+          "additionalProperties": false
+        },
+        "source_policy": {
+          "type": "object",
+          "required": ["authority_criteria", "inference_policy"],
+          "properties": {
+            "authority_criteria": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "inference_policy": {
+              "$ref": "#/$defs/nonEmptyString"
+            }
+          },
+          "additionalProperties": false
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source"
+          }
+        },
+        "existing_ontologies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ontologyContext"
+          }
+        },
+        "root_scope_aliases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["alias", "foundational_concept", "source_ontology_id", "available_for"],
+            "properties": {
+              "alias": {
+                "$ref": "#/$defs/nonEmptyString"
+              },
+              "foundational_concept": {
+                "$ref": "#/$defs/nonEmptyString"
+              },
+              "source_ontology_id": {
+                "$ref": "#/$defs/identifier"
+              },
+              "available_for": {
+                "$ref": "#/$defs/stringArray"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "assets": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/conceptAsset"
+              },
+              {
+                "$ref": "#/$defs/ontologyAsset"
+              },
+              {
+                "$ref": "#/$defs/namespaceAsset"
+              },
+              {
+                "$ref": "#/$defs/modelAsset"
+              }
+            ]
+          }
+        },
+        "dependency_order": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "upstream_gaps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/gap"
+          }
+        },
+        "root_domain_gaps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/gap"
+          }
+        },
+        "iteration_control": {
+          "type": "object",
+          "required": ["current_iteration", "previous_revision_id", "next_iteration", "state", "unresolved_feedback_ids", "proposed_action_ids", "applied_action_ids"],
+          "properties": {
+            "current_iteration": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "previous_revision_id": {
+              "$ref": "#/$defs/nullableString"
+            },
+            "next_iteration": {
+              "type": "integer",
+              "minimum": 2
+            },
+            "state": {
+              "enum": ["open_for_feedback", "actions_proposed", "approved_for_apply", "applied", "closed"]
+            },
+            "unresolved_feedback_ids": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "proposed_action_ids": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "applied_action_ids": {
+              "$ref": "#/$defs/stringArray"
+            }
+          },
+          "additionalProperties": false
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/action"
+          }
+        },
+        "orthogonality_review": {
+          "type": "object",
+          "required": ["hard_unambiguity_gate_passed", "pairwise_review_complete", "matrix", "unresolved_ambiguities", "unresolved_overlaps"],
+          "properties": {
+            "hard_unambiguity_gate_passed": {
+              "type": "boolean"
+            },
+            "pairwise_review_complete": {
+              "type": "boolean"
+            },
+            "matrix": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            },
+            "unresolved_ambiguities": {
+              "type": "array"
+            },
+            "unresolved_overlaps": {
+              "type": "array"
+            }
+          },
+          "additionalProperties": false
+        },
+        "validation": {
+          "type": "object",
+          "required": ["schema_valid", "references_resolve", "acyclic", "requested_tier_valid", "mandatory_tier_1_context_present", "tier_ancestry_valid", "orthogonality_reviewed", "internally_unambiguous", "named_composition_reviews_complete", "semantic_review", "syntax_validation", "warnings"],
+          "properties": {
+            "schema_valid": {
+              "type": "boolean"
+            },
+            "references_resolve": {
+              "type": "boolean"
+            },
+            "acyclic": {
+              "type": "boolean"
+            },
+            "requested_tier_valid": {
+              "type": "boolean"
+            },
+            "mandatory_tier_1_context_present": {
+              "type": "boolean"
+            },
+            "tier_ancestry_valid": {
+              "type": "boolean"
+            },
+            "orthogonality_reviewed": {
+              "type": "boolean"
+            },
+            "internally_unambiguous": {
+              "type": "boolean"
+            },
+            "named_composition_reviews_complete": {
+              "type": "boolean"
+            },
+            "semantic_review": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "syntax_validation": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "warnings": {
+              "$ref": "#/$defs/stringArray"
+            }
+          },
+          "additionalProperties": false
+        },
+        "corpus_feedback": {
+          "type": "object",
+          "required": ["state", "coverage_comments", "structural_comments", "cross_cutting_issues", "decisions", "requested_changes"],
+          "properties": {
+            "state": {
+              "enum": ["open", "changes_requested", "accepted", "rejected", "deferred"]
+            },
+            "coverage_comments": {
+              "type": "array"
+            },
+            "structural_comments": {
+              "type": "array"
+            },
+            "cross_cutting_issues": {
+              "type": "array"
+            },
+            "decisions": {
+              "type": "array"
+            },
+            "requested_changes": {
+              "type": "array"
+            }
+          },
+          "additionalProperties": false
+        },
+        "change_log": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["iteration", "revision_id", "previous_revision_id", "changes", "feedback_resolved", "actions_applied"],
+            "properties": {
+              "iteration": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "revision_id": {
+                "$ref": "#/$defs/identifier"
+              },
+              "previous_revision_id": {
+                "$ref": "#/$defs/nullableString"
+              },
+              "changes": {
+                "$ref": "#/$defs/stringArray"
+              },
+              "feedback_resolved": {
+                "$ref": "#/$defs/stringArray"
+              },
+              "actions_applied": {
+                "$ref": "#/$defs/stringArray"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

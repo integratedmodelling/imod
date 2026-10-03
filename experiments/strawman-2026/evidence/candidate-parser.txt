@@ -1,0 +1,3 @@
+PARSE PASS C:\Users\Ferd\Documents\Codex\2026-10-03\task-4\imod-strawman\experiments\strawman-2026\candidate\src\hydrology.kwv errors=0
+PARSE PASS C:\Users\Ferd\Documents\Codex\2026-10-03\task-4\imod-strawman\experiments\strawman-2026\candidate\src\jargon\hydrology.terms.kwv errors=0
+SUMMARY files=2 failed=0 syntax-only

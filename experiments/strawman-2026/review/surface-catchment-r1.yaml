@@ -1,0 +1,299 @@
+proposal_schema: classpath:/schemas/llm/domain-context-proposal.schema.json
+context_pack_version: '1.3'
+proposal:
+  id: hydrology-surface-catchment
+  revision_id: hydrology-surface-catchment-r1
+  title: Surface catchment and scoped watershed alias
+  iteration: 1
+  supersedes_revision: null
+  status: draft
+  generated_at: '2026-10-03'
+  scope:
+    domain: hydrology
+    purpose: Review minimal surface drainage region meaning for postfire water questions
+    requested_tier: 1
+    target_community: hydrologists and worldview ontologists
+    tier_1_context_required: false
+    tier_1_context_status: not_required
+    included:
+    - surface drainage regions
+    excluded:
+    - groundwater recharge zones
+    - management districts
+    - flow models
+    - consequence execution
+    spatial_context: null
+    temporal_context: null
+    intended_scales: []
+  source_policy:
+    authority_criteria:
+    - Legacy source for recoverable meaning; current context pack for observational
+      commitments; primary domain sources for review boundaries
+    inference_policy: state interpretations and modeling choices explicitly
+  sources:
+  - source_id: legacy-hydrology
+    citation: im/src/hydrology.kim, Watershed declaration
+    version: 60906d81521550238b21dbd64513c36e0f184f00
+    locator: im/src/hydrology.kim:17
+    authority_note: Existing worldview meaning; not authority for current syntax
+  - source_id: ipcc-glossary
+    citation: IPCC AR6 WGII Annex II, Catchment
+    version: '2022'
+    locator: https://www.ipcc.ch/report/ar6/wg2/chapter/annex-ii/
+    authority_note: Primary assessment glossary; broad drainage meaning
+  existing_ontologies:
+  - ontology_id: imod
+    version: 608bef150ced0a109db98a5aad64ba4461beaa54
+    role: root_domain
+    tier: null
+    domain_scope: worldview foundational aliases
+    mandatory_context: true
+  - ontology_id: earth
+    version: 608bef150ced0a109db98a5aad64ba4461beaa54
+    role: neighboring
+    tier: 1
+    domain_scope: Earth regions
+    mandatory_context: true
+  root_scope_aliases: []
+  evidence:
+  - evidence_id: ev-catchment
+    source_id: legacy-hydrology
+    locator: Watershed, lines 17-24
+    source_term: Watershed
+    paraphrase: Surface water converges toward a common lower point within a region.
+    evidence_kind: definition
+    interpretation: Name SurfaceCatchment makes the selected surface-drainage sense
+      explicit; exclude groundwater and management boundaries.
+  - evidence_id: ev-ipcc
+    source_id: ipcc-glossary
+    locator: Catchment entry
+    source_term: Catchment
+    paraphrase: A region collects and drains precipitation.
+    evidence_kind: definition
+    interpretation: Supports drainage focus; the outlet restriction follows legacy
+      source, not inferred universal source equivalence.
+  assets:
+  - asset_id: concept-surface-catchment
+    asset_type: concept
+    qualified_name: hydrology:SurfaceCatchment
+    record_version: 1
+    record_hash: null
+    name_history: []
+    label: Surface catchment
+    abstract: false
+    aliases: []
+    section: regions
+    tier: 1
+    tier_rationale: Reusable region type across hydrological applications
+    disposition: propose
+    definition: A region delineated by convergence of surface drainage toward one
+      specified outlet.
+    conceptual_dimension: surface drainage convergence boundary
+    boundaries:
+      includes:
+      - surface drainage regions for specified outlets
+      excludes:
+      - groundwater recharge zones
+      - water management districts
+      examples:
+      - a delineated surface catchment upstream of a gauging outlet
+      counterexamples:
+      - an administrative district crossing drainage divides
+    extraction_rationale: Distinguish catchment from groundwater and administrative
+      regions in postfire water questions.
+    evidence_refs:
+    - ev-catchment
+    - ev-ipcc
+    epistemic_status: modeling_choice
+    semantic_coordinates:
+      kind: thing
+      flags: []
+      perspective: structural
+      dependence: independent
+      arity: 0
+      countable: true
+      bearer_types: []
+      participant_types: []
+      relationship_source: null
+      relationship_target: null
+      value_kind: null
+      aggregation_behavior: null
+    category_rationale: A bounded region provides identity for a structural observation;
+      actual flow is a separate process.
+    type_inheritance:
+      declaration_keyword: thing
+      odo_im_chain: implicit
+      explicit_odo_derivation_required: false
+      rationale: thing supplies implicit foundational substantial type; earth:Region
+        supplies genuine domain specialization.
+    generalized_scope_aliases_used: []
+    ambiguity:
+      status: unambiguous
+      source_senses:
+      - surface catchment
+      - drainage divide in other English usage
+      selected_sense: surface drainage region
+      excluded_senses:
+      - drainage divide
+      - management district
+      resolution_rationale: Explicit convergence and outlet criterion; other senses
+        excluded.
+    orthogonality:
+      atomic_dimension: true
+      composite_of: []
+      independently_variable_from: []
+      relations: []
+      assessment: Region meaning is separate from water amount, actual flow, management
+        and damage; no claim of independence from its drainage-boundary criterion.
+    named_composition:
+      applicable: false
+      domain_term: null
+      articulated_expression: null
+      naming_rationale: null
+      salience:
+        level: core
+        citation_evidence_refs:
+        - ev-catchment
+        occurrence_count: null
+        independent_source_count: null
+        canonical_definition_refs:
+        - ev-catchment
+        discourse_uses: []
+      equals_vs_is_review_required: false
+      proposed_outcome: specialize_with_is
+      equivalence_assessment:
+        same_intension: null
+        same_extension: null
+        same_perspective_and_category: null
+        same_context_and_dependence: null
+        same_value_space_and_predicates: null
+        rationale: null
+      reviewer_decision: null
+    alignment:
+      action: specialize
+      selected_parent: earth:Region
+      direct_parent_tier: 1
+      tier_1_ancestor: earth:Region
+      ancestry_to_tier_1:
+      - ref_kind: internal
+        asset_id: concept-surface-catchment
+        qualified_name: hydrology:SurfaceCatchment
+      - ref_kind: external
+        asset_id: null
+        qualified_name: earth:Region
+      ancestry_status: unresolved
+      contextualized_within: null
+      candidates:
+      - concept: earth:Region
+        relation: is
+        score: 0.9
+        rationale: Catchment is a drainage-defined region; semantic loading remains
+          untested.
+      rejected_candidates: []
+    predicates:
+      identities: []
+      realms: []
+      attributes: []
+      roles: []
+    derivation:
+      operator: null
+      operand: null
+      secondary_operand: null
+      rationale: null
+    clauses:
+      inherits: []
+      applies_to: []
+      links: null
+      creates: []
+      affects: []
+      emerges_from: []
+      implies: []
+      describes: null
+      requires: []
+      children: []
+    dependencies:
+    - earth:Region
+    candidate_expression: hydrology:SurfaceCatchment
+    candidate_kwv: "ontology hydrology\n    \"Experimental minimal surface-water articulation;\
+      \ review before promotion.\"\n    using imod, earth\n    in domain imod:Knowledge\
+      \ of imod:Hydrosphere\n    version 1.0\n;\n\nthing SurfaceCatchment\n    \"\
+      A region delineated by convergence of surface drainage toward one specified\
+      \ outlet.\n     This reading excludes groundwater recharge zones and administrative\
+      \ water-management\n     districts. Delineation is contextual; the concept does\
+      \ not assert observed flow.\"\n    is earth:Region\n;\n"
+    syntax_status: illustrative
+    confidence:
+      extraction: 0.9
+      category: 0.85
+      alignment: 0.75
+      unambiguity: 0.95
+      orthogonality: 0.85
+    open_questions:
+    - Can domain reviewers approve the outlet and boundary criterion across intended
+      scales?
+    - Does the full pinned worldview validate the earth:Region specialization?
+    alternatives: []
+    feedback:
+      state: open
+      comments: []
+      decisions: []
+      proposed_action_ids: []
+      applied_action_ids: []
+      last_reviewed_iteration: null
+    lifecycle:
+      state: proposed
+      introduced_in_iteration: 1
+      last_modified_in_iteration: 1
+      deleted_in_iteration: null
+      replacement_asset_ids: []
+  dependency_order:
+  - concept-surface-catchment
+  upstream_gaps: []
+  root_domain_gaps: []
+  iteration_control:
+    current_iteration: 1
+    previous_revision_id: null
+    next_iteration: 2
+    state: open_for_feedback
+    unresolved_feedback_ids: []
+    proposed_action_ids: []
+    applied_action_ids: []
+  actions: []
+  orthogonality_review:
+    hard_unambiguity_gate_passed: false
+    pairwise_review_complete: false
+    matrix: []
+    unresolved_ambiguities:
+    - Boundary criterion awaits hydrological review.
+    unresolved_overlaps: []
+  validation:
+    schema_valid: true
+    references_resolve: false
+    acyclic: true
+    requested_tier_valid: true
+    mandatory_tier_1_context_present: true
+    tier_ancestry_valid: false
+    orthogonality_reviewed: false
+    internally_unambiguous: false
+    named_composition_reviews_complete: false
+    semantic_review: pending
+    syntax_validation: not_run
+    warnings:
+    - Alias is a separate Tier-2 experiment, not an asset of this Tier-1 proposal.
+    - Schema validity is not acceptance or authorization.
+    - No loaded-worldview or reasoner check yet.
+  corpus_feedback:
+    state: open
+    coverage_comments: []
+    structural_comments: []
+    cross_cutting_issues: []
+    decisions: []
+    requested_changes: []
+  change_log:
+  - iteration: 1
+    revision_id: hydrology-surface-catchment-r1
+    previous_revision_id: null
+    changes:
+    - Initial Tier-1 surface catchment proposal; separate alias syntax experiment.
+    feedback_resolved: []
+    actions_applied: []

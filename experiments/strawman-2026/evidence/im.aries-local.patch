@@ -1,0 +1,15 @@
+diff --git a/src/es/risk.kim b/src/es/risk.kim
+index 313f36e..7c2d0af 100644
+--- a/src/es/risk.kim
++++ b/src/es/risk.kim
+@@ -20,8 +20,8 @@ quality HeatRiskMetric
+ 	is risk:RiskMetric probability of im:Collapse of demography:SocialGroup
+ 		caused by ExtremeHeatEvent;
+ 
+-quality HeatHazardMetric
+-	is risk:HazardMetric earth:AtmosphericTemperature during ExtremeHeatEvent;
++quantity HeatHazardMetric
++	describes risk:HazardMetric earth:AtmosphericTemperature during ExtremeHeatEvent;
+ 
+ configuration HeatRisk is risk:Risk
+ 	emerges from ExtremeHeatEvent

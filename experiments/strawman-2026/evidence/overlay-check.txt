@@ -1,0 +1,2 @@
+PASS 27 unique overlay namespaces; imports exist and are acyclic; alias-only convention; canonical domain does not import jargon.
+No symbol resolution, adaptation, discovery/load, or semantic reasoning performed.

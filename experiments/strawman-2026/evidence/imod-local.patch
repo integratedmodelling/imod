@@ -1,0 +1,85 @@
+diff --git a/src/biology.kwv b/src/biology.kwv
+index bbca796..aac66b5 100644
+--- a/src/biology.kwv
++++ b/src/biology.kwv
+@@ -1,4 +1,5 @@
+ ontology biology
+ 	version 1.0
+ 	using imod, life
+-	in domain imod:Knowledge of imod:Biosphere;
+\ No newline at end of file
++	in domain imod:Knowledge of imod:Biosphere;
++
+diff --git a/src/chemistry.kwv b/src/chemistry.kwv
+index a462a13..e43b3bc 100644
+--- a/src/chemistry.kwv
++++ b/src/chemistry.kwv
+@@ -14,8 +14,13 @@ ontology chemistry
+ 	using imod, physical
+ 	in domain imod:Knowledge of imod:PhysicalSystem;
+ 
+-abstract identity ChemicalSpecies
+-	"Any chemical, elements or compounds, but not mixtures."
++abstract identity ChemicalIdentity
++	"Any chemical, element, compounds, or compound family, but not mixtures."
++	requires authority CHEM {
++        urn: "klab.authority.pubchem",
++        searchLimit: 10,
++        gifDepictions: true
++    }
+ ;
+ 
+ abstract identity Mixture
+@@ -34,4 +39,4 @@ abstract identity Mixture
+ 	 	(Colloid 
+ 	 		"TODO"
+ 	 	);
+-//	 contains at least 1 ChemicalSpecies /* inheriting Soluble */;
++//	 contains at least 1 ChemicalSpecies /* inheriting Soluble */;
+\ No newline at end of file
+diff --git a/src/life.kwv b/src/life.kwv
+index df3e2e0..63d7b5a 100644
+--- a/src/life.kwv
++++ b/src/life.kwv
+@@ -12,7 +12,13 @@ ontology life
+ 	using imod
+ 	in domain imod:Physical of imod:Biosphere;
+ 
+-identity Human; // equals GBIF.SPECIES:2436436;
++abstract identity TaxonomicIdentity
++	requires authority TAXA {
++        urn: "klab.authority.taxa",
++        datasetKey: 312578
++	};
++
++ // equals GBIF.SPECIES:2436436;
+ 
+ abstract agent Individual;
+ 
+diff --git a/src/society.kwv b/src/society.kwv
+index 57a49c8..40c3a9f 100644
+--- a/src/society.kwv
++++ b/src/society.kwv
+@@ -8,7 +8,11 @@ ontology society
+ 	version 1.0
+ 	using imod, life, agency
+ 	in domain imod:Physical;
+-	
++
++identity Human
++	equals TAXA:[6MB3T]
++;
++
+ // TODO check out FAIR population/demography vocabularies from https://zenodo.org/records/7818157
+ // FIXME remove the `deliberative` etc. keywords
+ // use agency:Participant roles according to what the individual is doing, not here
+@@ -16,7 +20,7 @@ ontology society
+ // TODO default observer should be an `agency:Volitional society:HumanIndividual` or an Institution if 
+ // federated
+ agent HumanIndividual
+-	is life:Human life:Individual;
++	is society:Human life:Individual;
+ 
+ // TODO also. Here for the default observer - Volitional Institution w/ name of federation
+ agent Institution;
+\ No newline at end of file

@@ -1,0 +1,32 @@
+{
+  "imod": {
+    "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod",
+    "head": "608bef150ced0a109db98a5aad64ba4461beaa54",
+    "status": " M src/biology.kwv\n M src/chemistry.kwv\n M src/decision.kwv\n M src/life.kwv\n M src/society.kwv\n",
+    "diff_stat": " src/biology.kwv   |  3 ++-\n src/chemistry.kwv | 11 ++++++++---\n src/life.kwv      |  8 +++++++-\n src/society.kwv   |  8 ++++++--\n 4 files changed, 23 insertions(+), 7 deletions(-)\n"
+  },
+  "im": {
+    "path": "C:\\Users\\Ferd\\.klab\\worldview\\im",
+    "head": "60906d81521550238b21dbd64513c36e0f184f00",
+    "status": "",
+    "diff_stat": ""
+  },
+  "im.aries": {
+    "path": "C:\\Users\\Ferd\\.klab\\worldview\\im.aries",
+    "head": "287112999ad8745098e31d772143e4fc91136059",
+    "status": " M src/es/risk.kim\n",
+    "diff_stat": " src/es/risk.kim | 4 ++--\n 1 file changed, 2 insertions(+), 2 deletions(-)\n"
+  },
+  "klab-services": {
+    "path": "C:\\Users\\Ferd\\git\\klab-services",
+    "head": "721f3736596acff39d92a84566dfd364070be662",
+    "status": "",
+    "diff_stat": ""
+  },
+  "klab-languages": {
+    "path": "C:\\Users\\Ferd\\git\\klab-languages",
+    "head": "8f5c29363f4362bddd13f9fdd4f43e7e2c9fb024",
+    "status": "",
+    "diff_stat": ""
+  }
+}

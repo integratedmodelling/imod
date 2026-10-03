@@ -1,0 +1,13 @@
+ontology hydrology
+    "Experimental minimal surface-water articulation; review before promotion."
+    using imod, earth
+    in domain imod:Knowledge of imod:Hydrosphere
+    version 1.0
+;
+
+thing SurfaceCatchment
+    "A region delineated by convergence of surface drainage toward one specified outlet.
+     This reading excludes groundwater recharge zones and administrative water-management
+     districts. Delineation is contextual; the concept does not assert observed flow."
+    is earth:Region
+;

@@ -1,0 +1,22 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------< org.integratedmodelling:klab.services.resources >-----------
+[INFO] Building k.LAB resources service 1.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Artifact org.apache.geronimo.genesis:genesis-java5-flava:pom:2.0 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central-portal-snapshots (https://central.sonatype.com/repository/maven-snapshots/, default, snapshots), sonatype-nexus-snapshots (https://oss.sonatype.org/content/repositories/snapshots, default, releases+snapshots), central (https://repo.maven.apache.org/maven2, default, releases), maven-default-http-blocker (http://0.0.0.0/, default, snapshots, blocked)]
+[INFO] Artifact org.apache.geronimo.genesis:genesis-java5-flava:pom:2.0 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central-portal-snapshots (https://central.sonatype.com/repository/maven-snapshots/, default, snapshots), sonatype-nexus-snapshots (https://oss.sonatype.org/content/repositories/snapshots, default, releases+snapshots), central (https://repo.maven.apache.org/maven2, default, releases), maven-default-http-blocker (http://0.0.0.0/, default, snapshots, blocked)]
+[INFO] Artifact org.apache:apache:pom:10 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central-portal-snapshots (https://central.sonatype.com/repository/maven-snapshots/, default, snapshots), sonatype-nexus-snapshots (https://oss.sonatype.org/content/repositories/snapshots, default, releases+snapshots), central (https://repo.maven.apache.org/maven2, default, releases), maven-default-http-blocker (http://0.0.0.0/, default, snapshots, blocked)]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.032 s
+[INFO] Finished at: 2026-10-03T09:35:42+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project klab.services.resources: Could not resolve dependencies for project org.integratedmodelling:klab.services.resources:jar:1.0.0-SNAPSHOT: Failed to collect dependencies at org.integratedmodelling:klab.services.reasoner:jar:1.0.0-SNAPSHOT -> net.sourceforge.owlapi:org.semanticweb.hermit:jar:1.4.5.519 -> org.apache.ws.commons.axiom:axiom-api:jar:1.2.14 -> org.apache.geronimo.specs:geronimo-activation_1.1_spec:jar:1.1: Failed to read artifact descriptor for org.apache.geronimo.specs:geronimo-activation_1.1_spec:jar:1.1: The following artifacts could not be resolved: org.apache.geronimo.genesis:genesis-java5-flava:pom:2.0 (present, but unavailable): Cannot access sonatype-nexus-snapshots (https://oss.sonatype.org/content/repositories/snapshots) in offline mode and the artifact org.apache.geronimo.genesis:genesis-java5-flava:pom:2.0 has not been downloaded from it before. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException

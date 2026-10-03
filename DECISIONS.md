@@ -1,0 +1,28 @@
+# Worldview strawman: decision register
+
+Draft for ontologists and domain experts, prepared 2026-10-03 for review in the week of November 16. All namespace names and placements are provisional. This branch does not supersede master.
+
+Start with [the review guide](experiments/strawman-2026/README.md), [domain coverage](experiments/strawman-2026/DOMAIN_MAP.md), and [the wildfire walkthrough](experiments/strawman-2026/WILDFIRE.md).
+
+| ID | Working decision | Status / reason / next review |
+|---|---|---|
+| D01 | Retain the existing namespace names as review addresses; assess 23 domain namespaces. Treat data and calendar separately and imod as root. | Provisional, not endorsement of 23 independent Tier-1 domains. Avoid migrations before ownership and overlap review. |
+| D02 | Only the root exposes ODO-IM. Domain declarations use implicit type inheritance and genuine specializations; never copy the entire upper ontology into each domain. | Context pack requirement. Root alias completeness remains a separate semantic audit. |
+| D03 | Do not require a unique complete physical ontology or assert that knowledge perspectives are less real. | Proposed correction to root commentary (imod.kwv introductory discussion and Domains section). Phenomenological observational commitments take precedence. No root rewrite in this experiment. |
+| D04 | Physical/Knowledge remain provisional domain coordinates; a Norms division is an open alternative. | Normative content may concern commitments, rights, permissions and institutions, but a new metaphysical partition is not justified by this slice. |
+| D05 | Articulate observables and predicates, with explicit bearer/participants and discriminating boundaries. | Accepted task constraint. Models, equations, units, reports, variables, science-process infrastructure and generic space/time/scale do not become domain taxonomy. |
+| D06 | Established jargon gets ordinary alias-only .kwv files using equals, with imports and independent equivalence review. | Proposed convention, no new resource type. Distinguish equality from additional specialization. Aliases must not import back into their canonical domain. |
+| D07 | Implication and detection have syntax only; no runtime execution is claimed. | User's implementation constraint. Parsed implies/emerges-from clauses are not evidence of graph consequences. No engine, retention rule, or implicit closed-world inference is added. |
+| D08 | Only an occurrent can make something cease to hold. Collapse ends a substantial and affects dependent configurations/chains. | Intended future behavior, not a current executable contract. Identity and dependency policies require review before implementation. |
+| D09 | Elevation's observation model must not hide change. Erosion or an explicit change description supplies change in Elevation. | Intended resolution contract. When an occurrent gives a context a time transition, all qualities resolve change in X. Unresolved change neither blocks the twin nor proves no real change; run with then-available knowledge. No state retention semantics selected. |
+| D10 | Hypotheses/mechanisms belong in k.IM. affects/creates only for narrow, broadly supported commitments. | Do not infer erosion, service loss, mortality or monetary damage merely from fire. Candidate contains no causal clauses. |
+| D11 | Land-cover schemes use authorities; no automatic CORINE/CCI/NLCD/Colombia equivalence. | Supported by CORINE334's observation and time restrictions. Split canopy, height, inundation, composition and management dimensions before considering aliases. |
+| D12 | Keep local CHEM/TAXA changes and Human move as attributed pending inputs. | Patches and hashes recorded; not copied into active source. ChemicalIdentity broadens ChemicalSpecies; inspect family versus species semantics. TAXA dataset and identifier resolution need provider tests. |
+| D13 | Do not equate reactive biological individuality with intentional agency. | Open disagreement: imod Agent description versus life/agency usage. Life's Individual is not thereby a deliberative actor. |
+| D14 | Separate decision occurrence from decision-making process. | agency:Decision prose says event while declaration says process. Keep both alternatives in prose pending identity/boundary examples. |
+| D15 | Separate hazard, exposure, vulnerability, collapse probability and actual loss. | valuation:Hazard is an occurrent role with a collapse-probability implication, not itself a probability quantity. Review its narrow consequence target and nonterminal harm; do not silently equate it with IPCC hazard. |
+| D16 | Exclude observer software machinery from domain Assessment. | agency:Assessment requires review because it appears to describe k.LAB's observation machinery. Human appraisal can remain domain content when independently defined. |
+| D17 | Use the existing context-pack schema and workflow envelope; Git automation remains future work. | Schema validation cannot imply scientific approval or permission to apply. Exact revision/action approval and immutable publication receipts are still required. |
+| D18 | Restrict executable experiment to one legacy-grounded surface catchment and an alias demonstration. | Parser and adapter tests determine its status; do not claim worldview loading or reasoner validation from syntax. Larger cross-domain concepts stay proposals. |
+
+No decision above authorizes a push, PR, merge, deployment, external workflow transition, or modification of another checkout. Alternatives and disagreements are retained in this register and the domain map.
