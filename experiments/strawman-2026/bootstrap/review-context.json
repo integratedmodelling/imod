@@ -1,0 +1,39 @@
+{
+  "sandbox_start": "1e75cd3ec5bf29943ae7cfb194b5a5b8778085a4",
+  "backend_commit": "d6e781daa0d440a11589fa550cdf69cdf765a04e",
+  "context_sources": [
+    {
+      "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-03\\task-4\\imod-strawman\\src\\imod.kwv",
+      "sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\git\\klab-services\\llm\\DOMAIN_CONTEXT_PACK.md",
+      "sha256": "f6076fbb06d5440eae29302f9ed105e9cdb7a59eea129046fefe60877e4cbadc"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\git\\klab-languages\\org.integratedmodelling.languages.observable\\src\\org\\integratedmodelling\\languages\\Observable.xtext",
+      "sha256": "6267e5ea26b0a9c1820647f6f8a99e09064699fcd6182ac7e84c970040117089"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\git\\klab-languages\\org.integratedmodelling.languages.worldview\\src\\org\\integratedmodelling\\languages\\Worldview.xtext",
+      "sha256": "973e26e2b977e3c68098d7bfa5332168cdb9ce8e257b6ec05e54549d37dc2ace"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-03\\task-7\\backend\\PROPOSAL_REVIEW_CONTRACT.md",
+      "sha256": "02013c7da85b2b6f8e621252ae08c43585ba330cae2c164834c7adb5c114a89a"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-03\\task-7\\backend\\klab.core.api\\src\\main\\java\\org\\integratedmodelling\\klab\\api\\services\\resources\\workflow\\ProposalReview.java",
+      "sha256": "97479d115eb3f4b114baeb4179525a3988a2329ae03f07631575c42cad08d86e"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-03\\task-7\\backend\\DOSSIER_MAPPING.md",
+      "sha256": "2849331ed97ed964a261aec5f5c7304d17f818df1076ca7a4232e1fa48624f3f"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-03\\task-7\\backend\\klab.core.api\\src\\main\\java\\org\\integratedmodelling\\klab\\api\\services\\resources\\workflow\\BootstrapDossierValidator.java",
+      "sha256": "3e1dc68fdeeea807b885ea8124fa3fa49344982a7f0485f485e69be33e60b588"
+    }
+  ],
+  "note": "Pinned inspected backend mapping; production acceptance remains blocked pending real validators and research manifest integration."
+}

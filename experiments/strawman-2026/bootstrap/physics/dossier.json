@@ -1,0 +1,1064 @@
+{
+  "dossier_version": "0.1",
+  "domain": "physics",
+  "status": "draft_for_human_review_with_blockers",
+  "scope": "Classical mechanics and macroscopic thermal transfer as a narrow cross-domain physics seed; quantum, electromagnetic field individuation and nuclear processes are intentionally not covered.",
+  "imports": [
+    {
+      "namespace": "imod",
+      "source": "src/imod.kwv",
+      "revision": "46c695b8e360b4e2c1180c57c203844d53723258",
+      "role": "imported upper context",
+      "status": "source_exists; proposed concepts separately blocked",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+    },
+    {
+      "namespace": "physical",
+      "source": "src/physical.kwv",
+      "revision": "46c695b8e360b4e2c1180c57c203844d53723258",
+      "role": "imported upper context",
+      "status": "source_exists; proposed concepts separately blocked",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "3fb1809902f4d9534a5d8ac3d5e4372cd37a9a3b96de84e7f51e2d13270c345a"
+    }
+  ],
+  "sources": [
+    {
+      "id": "LOCAL",
+      "title": "Pinned ontology/context pack and user change commitments",
+      "url": "../METHOD.md",
+      "locator": "METHOD change boundary; src/imod.kwv:289-447; src/physical.kwv; src/earth.kwv",
+      "scope": "Local design evidence, not external science; current comments not automatically accepted.",
+      "status": "local_source_read",
+      "retrieved": "2026-10-03",
+      "access_note": "Web tool search-index/full content read; Gold Book HTML403 avoided by returned primary PDF/plain/JSON. No expert discussion."
+    },
+    {
+      "id": "NASA-HEAT",
+      "title": "NASA Glenn Heat Transfer",
+      "url": "https://www.grc.nasa.gov/www/k-12/airplane/heat.html",
+      "locator": "Updated2021-05-13; thermodynamic equilibrium and gas state paragraphs",
+      "scope": "Macroscopic thermodynamics; simplified constant heat capacity example is not universal.",
+      "status": "primary_source_content_reviewed",
+      "retrieved": "2026-10-03",
+      "access_note": "Web tool search-index/full content read; Gold Book HTML403 avoided by returned primary PDF/plain/JSON. No expert discussion."
+    },
+    {
+      "id": "NASA-MOTION",
+      "title": "NASA Glenn Newton second law",
+      "url": "https://www.grc.nasa.gov/WWW/K-12/BGP/newton2.html",
+      "locator": "Momentum and vector-quantity paragraphs",
+      "scope": "Classical mechanical scope; momentum, force and velocity directional; no relativistic extension.",
+      "status": "primary_source_content_reviewed",
+      "retrieved": "2026-10-03",
+      "access_note": "Web tool search-index/full content read; Gold Book HTML403 avoided by returned primary PDF/plain/JSON. No expert discussion."
+    },
+    {
+      "id": "NASA-THERMAL",
+      "title": "NASA STEMonstrations Thermal Energy",
+      "url": "https://www.nasa.gov/stem-content/stemonstrations-thermal-energy/",
+      "locator": "2024; three transfer modes and classroom connection",
+      "scope": "Teaching evidence for mode distinctions; not exhaustive physics or universal causal law.",
+      "status": "primary_source_content_reviewed",
+      "retrieved": "2026-10-03",
+      "access_note": "Web tool search-index/full content read; Gold Book HTML403 avoided by returned primary PDF/plain/JSON. No expert discussion."
+    }
+  ],
+  "concepts": [
+    {
+      "id": "physics-ThermalBody",
+      "name": "ThermalBody",
+      "category": "subject",
+      "definition": "Material body delimited for a thermodynamic observation; not necessarily isothermal.",
+      "parent": "physical:MaterialBody",
+      "parent_status": "blocked",
+      "ancestry_note": "Proposed imported physical:MaterialBody is absent from current src; upstream issue, no local workaround.",
+      "qualities": [
+        "imod:Temperature",
+        "imod:Energy",
+        "imod:Mass"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "NASA-HEAT"
+      ],
+      "positive": "specified heated metal sample",
+      "negative": "temperature number",
+      "status": "blocked",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "blocked",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physics-FluidParcel",
+      "name": "FluidParcel",
+      "category": "subject",
+      "definition": "Bounded portion of fluid tracked by a stated material-following identity convention.",
+      "parent": "physical:MaterialBody",
+      "parent_status": "blocked",
+      "ancestry_note": "Proposed imported physical:MaterialBody is absent from current src; upstream issue, no local workaround.",
+      "qualities": [
+        "imod:Temperature",
+        "imod:Volume",
+        "pressure quality missing"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "NASA-THERMAL"
+      ],
+      "positive": "marked parcel followed through circulation",
+      "negative": "fixed Eulerian grid cell without material identity",
+      "status": "blocked",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "blocked",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physics-MechanicalBody",
+      "name": "MechanicalBody",
+      "category": "subject",
+      "definition": "Material body followed under a classical mechanical identity and reference frame.",
+      "parent": "physical:MaterialBody",
+      "parent_status": "blocked",
+      "ancestry_note": "Proposed imported physical:MaterialBody is absent from current src; upstream issue, no local workaround.",
+      "qualities": [
+        "imod:Mass",
+        "vector velocity upstream gap"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "NASA-MOTION"
+      ],
+      "positive": "stone subject to a push",
+      "negative": "a force vector",
+      "status": "blocked",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "blocked",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physics-ThermalConduction",
+      "name": "ThermalConduction",
+      "category": "process",
+      "definition": "Heat transfer through material/contact under a temperature gradient.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "imod:Temperature",
+        "thermal conductivity missing"
+      ],
+      "bindings": {
+        "affects": "internal energy of specified participating bodies; temperature need not increase during phase change",
+        "creates": [],
+        "confers": []
+      },
+      "source_ids": [
+        "NASA-THERMAL"
+      ],
+      "positive": "spoon heated through contact",
+      "negative": "sunlight crossing a vacuum",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physics-ConvectiveHeatTransport",
+      "name": "ConvectiveHeatTransport",
+      "category": "process",
+      "definition": "Thermal energy transport accompanying bulk fluid motion.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "fluid velocity upstream gap",
+        "imod:Temperature",
+        "density missing"
+      ],
+      "bindings": {
+        "affects": "spatial distribution of internal energy in participating fluid",
+        "creates": [],
+        "confers": []
+      },
+      "source_ids": [
+        "NASA-THERMAL"
+      ],
+      "positive": "heat redistributed by circulating water",
+      "negative": "conduction through stationary solid",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physics-RadiativeEnergyTransfer",
+      "name": "RadiativeEnergyTransfer",
+      "category": "process",
+      "definition": "Energy transfer by electromagnetic radiation between participating systems.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "radiant power missing",
+        "absorptivity missing",
+        "imod:Temperature"
+      ],
+      "bindings": {
+        "affects": "energy of emitting/absorbing bodies in specified interaction",
+        "creates": [],
+        "confers": []
+      },
+      "source_ids": [
+        "NASA-THERMAL"
+      ],
+      "positive": "campfire radiation absorbed by skin",
+      "negative": "contact conduction alone",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physics-MechanicalAcceleration",
+      "name": "MechanicalAcceleration",
+      "category": "process",
+      "definition": "Change in vector velocity of a mechanical body during an interaction.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "net force missing",
+        "imod:Mass",
+        "vector velocity upstream gap"
+      ],
+      "bindings": {
+        "affects": "vector velocity under classical scope; equations belong in model",
+        "creates": [],
+        "confers": []
+      },
+      "source_ids": [
+        "NASA-MOTION"
+      ],
+      "positive": "turning motion at constant speed",
+      "negative": "constant straight-line motion",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physics-GasCompression",
+      "name": "GasCompression",
+      "category": "process",
+      "definition": "Decrease of occupied gas volume under mechanical compression.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "pressure missing",
+        "imod:Volume",
+        "imod:Temperature"
+      ],
+      "bindings": {
+        "affects": "gas volume; temperature response depends on thermal exchange and model",
+        "creates": [],
+        "confers": []
+      },
+      "source_ids": [
+        "NASA-HEAT"
+      ],
+      "positive": "piston compresses gas",
+      "negative": "gas moved without volume change",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physics-ThermallyContacts",
+      "name": "ThermallyContacts",
+      "category": "relationship",
+      "definition": "Material contact between two thermal bodies permitting conductive transfer in the chosen regime.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "thermal conductance missing"
+      ],
+      "bindings": {
+        "source": "physics:ThermalBody",
+        "target": "physics:ThermalBody",
+        "rationale": "Symmetric contact vs directed current; bond/relationship unresolved. Does not assert nonzero net transfer."
+      },
+      "source_ids": [
+        "NASA-HEAT"
+      ],
+      "positive": "spoon touches drink",
+      "negative": "radiation across vacuum",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physics-ExertsForceOn",
+      "name": "ExertsForceOn",
+      "category": "relationship",
+      "definition": "Directed mechanical interaction with an identified source body and target body.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "force vector missing"
+      ],
+      "bindings": {
+        "source": "physics:MechanicalBody",
+        "target": "physics:MechanicalBody",
+        "rationale": "Counterforce on other bearer is a separate directed interaction, not same observation."
+      },
+      "source_ids": [
+        "NASA-MOTION"
+      ],
+      "positive": "hand pushes stone",
+      "negative": "stone appears in photograph",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physics-HeatingEpisode",
+      "name": "HeatingEpisode",
+      "category": "event",
+      "definition": "Bounded experimental or naturally individuated interval of energy transfer into a specified body.",
+      "parent": "imod:Event",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "transferred energy missing",
+        "imod:Temperature"
+      ],
+      "bindings": {
+        "affects": "body energy; no universal temperature increase",
+        "creates": [],
+        "confers": []
+      },
+      "source_ids": [
+        "NASA-HEAT"
+      ],
+      "positive": "one pulse of heating",
+      "negative": "unbounded generic conduction",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physics-CompressionEpisode",
+      "name": "CompressionEpisode",
+      "category": "event",
+      "definition": "Bounded compression of an identified gas body with declared start and end.",
+      "parent": "imod:Event",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "imod:Volume",
+        "pressure missing"
+      ],
+      "bindings": {
+        "affects": "gas volume",
+        "creates": [],
+        "confers": []
+      },
+      "source_ids": [
+        "NASA-HEAT"
+      ],
+      "positive": "one piston stroke",
+      "negative": "small gas volume observed once",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physics-ImpulseEpisode",
+      "name": "ImpulseEpisode",
+      "category": "event",
+      "definition": "Bounded mechanical interaction changing momentum of the specified body.",
+      "parent": "imod:Event",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "momentum missing",
+        "force missing",
+        "imod:Mass"
+      ],
+      "bindings": {
+        "affects": "body momentum in classical regime",
+        "creates": [],
+        "confers": []
+      },
+      "source_ids": [
+        "NASA-MOTION"
+      ],
+      "positive": "one short push",
+      "negative": "force balance without net impulse",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physics-TransferredThermalEnergy",
+      "name": "TransferredThermalEnergy",
+      "category": "quality",
+      "definition": "Energy transferred as heat during a specified thermal process interval.",
+      "parent": "imod:Energy",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "bearer thermal transfer process"
+      ],
+      "bindings": {},
+      "source_ids": [
+        "NASA-HEAT"
+      ],
+      "positive": "energy transferred during the heating pulse",
+      "negative": "stored temperature",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    }
+  ],
+  "questions": [
+    {
+      "id": "physics-q01",
+      "text": "Why does a metal spoon warm in a hot drink?",
+      "concept_ids": [
+        "physics-ThermalConduction",
+        "physics-ThermalBody"
+      ],
+      "expression": "physics:ThermalConduction",
+      "expected_type": "process",
+      "dependencies": [
+        "Contact heat transfer and temperature are distinct observables.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "spoon heated through contact; specified heated metal sample",
+      "negative": "sunlight crossing a vacuum; temperature number",
+      "source_ids": [
+        "NASA-HEAT"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "sequence": 1,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Contact heat transfer and temperature are distinct observables.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Contact heat transfer and temperature are distinct observables.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physics-q02",
+      "text": "Can an object gain energy without getting warmer?",
+      "concept_ids": [
+        "physics-ThermalBody",
+        "physics-TransferredThermalEnergy"
+      ],
+      "expression": "physics:TransferredThermalEnergy",
+      "expected_type": "quality",
+      "dependencies": [
+        "Energy transfer does not universally imply temperature rise.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "specified heated metal sample; energy transferred during the heating pulse",
+      "negative": "temperature number; stored temperature",
+      "source_ids": [
+        "NASA-HEAT"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "sequence": 2,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Energy transfer does not universally imply temperature rise.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Energy transfer does not universally imply temperature rise.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physics-q03",
+      "text": "Why does heated water circulate?",
+      "concept_ids": [
+        "physics-ConvectiveHeatTransport",
+        "physics-FluidParcel"
+      ],
+      "expression": "physics:ConvectiveHeatTransport",
+      "expected_type": "process",
+      "dependencies": [
+        "Fluid circulation and heat transport, without equating all convection with buoyancy.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "heat redistributed by circulating water; marked parcel followed through circulation",
+      "negative": "conduction through stationary solid; fixed Eulerian grid cell without material identity",
+      "source_ids": [
+        "NASA-THERMAL"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "sequence": 3,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Fluid circulation and heat transport, without equating all convection with buoyancy.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Fluid circulation and heat transport, without equating all convection with buoyancy.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physics-q04",
+      "text": "How can a campfire warm a face without contact?",
+      "concept_ids": [
+        "physics-RadiativeEnergyTransfer"
+      ],
+      "expression": "physics:RadiativeEnergyTransfer",
+      "expected_type": "process",
+      "dependencies": [
+        "Radiative transfer rather than contact-only relation.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "campfire radiation absorbed by skin",
+      "negative": "contact conduction alone",
+      "source_ids": [
+        "NASA-THERMAL"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "sequence": 4,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Radiative transfer rather than contact-only relation.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Radiative transfer rather than contact-only relation.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physics-q05",
+      "text": "How does an unbalanced push change motion?",
+      "concept_ids": [
+        "physics-MechanicalAcceleration",
+        "physics-MechanicalBody"
+      ],
+      "expression": "physics:MechanicalAcceleration",
+      "expected_type": "process",
+      "dependencies": [
+        "Net force and vector acceleration require frame and classical regime.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "turning motion at constant speed; stone subject to a push",
+      "negative": "constant straight-line motion; a force vector",
+      "source_ids": [
+        "NASA-MOTION"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "sequence": 5,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Net force and vector acceleration require frame and classical regime.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Net force and vector acceleration require frame and classical regime.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physics-q06",
+      "text": "Can motion change while speed stays the same?",
+      "concept_ids": [
+        "physics-MechanicalAcceleration"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Direction vs speed; root Velocity/Speed mismatch blocks mapping.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
+        "gap: vector velocity versus scalar speed upstream distinction"
+      ],
+      "positive": "turning motion at constant speed",
+      "negative": "constant straight-line motion",
+      "source_ids": [
+        "NASA-MOTION"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "sequence": 6,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Direction vs speed; root Velocity/Speed mismatch blocks mapping.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Direction vs speed; root Velocity/Speed mismatch blocks mapping.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "physics-q07",
+      "text": "What changes when a gas is squeezed?",
+      "concept_ids": [
+        "physics-GasCompression",
+        "physics-FluidParcel"
+      ],
+      "expression": "imod:Volume of physics:FluidParcel",
+      "expected_type": "quality",
+      "dependencies": [
+        "Pressure, volume, temperature and process conditions.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "piston compresses gas; marked parcel followed through circulation",
+      "negative": "gas moved without volume change; fixed Eulerian grid cell without material identity",
+      "source_ids": [
+        "NASA-HEAT"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "sequence": 7,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Pressure, volume, temperature and process conditions.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Pressure, volume, temperature and process conditions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physics-q08",
+      "text": "Do two touching objects eventually reach the same temperature?",
+      "concept_ids": [
+        "physics-ThermallyContacts",
+        "physics-ThermalBody"
+      ],
+      "expression": "physics:ThermallyContacts linking physics:ThermalBody to physics:ThermalBody",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Equilibrium under suitable isolation, not unconditional law in ontology.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "spoon touches drink; specified heated metal sample",
+      "negative": "radiation across vacuum; temperature number",
+      "source_ids": [
+        "NASA-HEAT"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "sequence": 8,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Equilibrium under suitable isolation, not unconditional law in ontology.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Equilibrium under suitable isolation, not unconditional law in ontology.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physics-q09",
+      "text": "Why do equal pushes affect heavy and light objects differently?",
+      "concept_ids": [
+        "physics-MechanicalBody"
+      ],
+      "expression": "imod:Mass of physics:MechanicalBody",
+      "expected_type": "quality",
+      "dependencies": [
+        "Inertial mass vs amount of substance.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "stone subject to a push",
+      "negative": "a force vector",
+      "source_ids": [
+        "NASA-MOTION"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "sequence": 9,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Inertial mass vs amount of substance.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Inertial mass vs amount of substance.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physics-q10",
+      "text": "Is warmth a property or something transferred?",
+      "concept_ids": [
+        "physics-ThermalBody",
+        "physics-TransferredThermalEnergy"
+      ],
+      "expression": "imod:Temperature of physics:ThermalBody",
+      "expected_type": "quality",
+      "dependencies": [
+        "Temperature vs heat transfer, avoid heat as stored substance.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "specified heated metal sample; energy transferred during the heating pulse",
+      "negative": "temperature number; stored temperature",
+      "source_ids": [
+        "NASA-HEAT"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "sequence": 10,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Temperature vs heat transfer, avoid heat as stored substance.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Temperature vs heat transfer, avoid heat as stored substance.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physics-q11",
+      "text": "When does heating begin and end in this experiment?",
+      "concept_ids": [
+        "physics-HeatingEpisode"
+      ],
+      "expression": "physics:HeatingEpisode",
+      "expected_type": "event",
+      "dependencies": [
+        "Bounded episode vs ongoing heat-transfer process.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "one pulse of heating",
+      "negative": "unbounded generic conduction",
+      "source_ids": [
+        "NASA-HEAT"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "sequence": 11,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Bounded episode vs ongoing heat-transfer process.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Bounded episode vs ongoing heat-transfer process.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physics-q12",
+      "text": "Does an insulating layer stop all energy transfer?",
+      "concept_ids": [
+        "physics-ThermalConduction",
+        "physics-RadiativeEnergyTransfer"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Restricted conductance not absolute absence of radiation.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
+        "gap: conductance and boundary conditions; cannot infer absence"
+      ],
+      "positive": "spoon heated through contact; campfire radiation absorbed by skin",
+      "negative": "sunlight crossing a vacuum; contact conduction alone",
+      "source_ids": [
+        "NASA-THERMAL"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "sequence": 12,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Restricted conductance not absolute absence of radiation.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Restricted conductance not absolute absence of radiation.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "physics-q13",
+      "text": "Can a stationary object exert a force?",
+      "concept_ids": [
+        "physics-ExertsForceOn"
+      ],
+      "expression": "physics:ExertsForceOn linking physics:MechanicalBody to physics:MechanicalBody",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Force interaction vs motion; no velocity predicate from interaction alone.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "hand pushes stone",
+      "negative": "stone appears in photograph",
+      "source_ids": [
+        "NASA-MOTION"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "sequence": 13,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Force interaction vs motion; no velocity predicate from interaction alone.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Force interaction vs motion; no velocity predicate from interaction alone.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physics-q14",
+      "text": "How much thermal energy passes between the two bodies?",
+      "concept_ids": [
+        "physics-TransferredThermalEnergy",
+        "physics-HeatingEpisode"
+      ],
+      "expression": "physics:TransferredThermalEnergy",
+      "expected_type": "quality",
+      "dependencies": [
+        "Transfer quantity requires a process interval, not stored energy alias.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "energy transferred during the heating pulse; one pulse of heating",
+      "negative": "stored temperature; unbounded generic conduction",
+      "source_ids": [
+        "NASA-HEAT"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "sequence": 14,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Transfer quantity requires a process interval, not stored energy alias.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Transfer quantity requires a process interval, not stored energy alias.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physics-q15",
+      "text": "Does a missing temperature reading prove cooling stopped?",
+      "concept_ids": [
+        "physics-HeatingEpisode"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Open-world evidence state, not physical stasis.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
+        "gap: no-reading is evidence state, no stop-event inference"
+      ],
+      "positive": "one pulse of heating",
+      "negative": "unbounded generic conduction",
+      "source_ids": [
+        "LOCAL"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "sequence": 15,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Open-world evidence state, not physical stasis.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Open-world evidence state, not physical stasis.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    }
+  ],
+  "quality_summaries": [
+    {
+      "quality": "temperature difference between named bodies",
+      "proposed_summary": "ThermalEquilibriumWithinConvention",
+      "basis": "Nominal summary of compatible thermodynamic temperatures and allowed tolerance, with regime/context specified. No literal equality inferred from missing readings.",
+      "status": "blocked: tolerance and scope unsupplied"
+    },
+    {
+      "quality": "heat exchange across specified process boundary",
+      "proposed_summary": "AdiabaticWithinConvention",
+      "basis": "Nominal process summary about heat transfer, not body temperature or energy constancy; ordered near-adiabatic variants need a quantitative convention.",
+      "status": "blocked: transfer quality and boundary convention required"
+    }
+  ],
+  "ambiguities": [
+    "UPSTREAM-MATERIAL: physical:MaterialBody is proposed in neighboring dossier, absent from executable src. All subject specialization paths blocked.",
+    "ROOT-VECTOR: imod:Velocity aliases odo:Speed; vector change and force relations cannot use it as if direction were represented.",
+    "ROOT-MASS: distinguish inertial mass and amount of substance before interpreting mechanical questions.",
+    "PHYS-QUALITY: force, momentum, pressure, conductivity, heat capacity and radiant power need separate upper-derived quality proposals; do not manufacture generic Quantity declarations here.",
+    "PHYS-EQUILIBRIUM: thermal contact does not guarantee equilibration in an open driven system; episode and boundary conditions belong in observations/models."
+  ],
+  "coverage": {
+    "counts": {
+      "subject": 3,
+      "process": 5,
+      "relationship": 2,
+      "event": 3,
+      "quality": 1
+    },
+    "question_count": 15,
+    "shortfalls": {
+      "subject": 2,
+      "process": 0,
+      "relationship": 3,
+      "event": 2
+    },
+    "rationale": "The most useful questions concern energy transfer, body state and mechanical interaction. There are three justified subject perspectives and five processes, but only two binary relationships and three episode types. ThermalBody and MechanicalBody overlap as perspectives on the same body; do not declare disjoint subclasses or create two twins by fiat. They may become role/perspective compositions after review. FluidParcel is material-following: a fixed map cell is not the same bearer. No laws or equations are encoded. Temperature response to transfer depends on phase and constraints, so affects internal energy does not license universal temperature increase. NASA classroom distinctions support a starting vocabulary, not a comprehensive disciplinary consensus.",
+    "concept_question_incidence": {
+      "physics-ThermalBody": [
+        "physics-q01",
+        "physics-q02",
+        "physics-q08",
+        "physics-q10"
+      ],
+      "physics-FluidParcel": [
+        "physics-q03",
+        "physics-q07"
+      ],
+      "physics-MechanicalBody": [
+        "physics-q05",
+        "physics-q09"
+      ],
+      "physics-ThermalConduction": [
+        "physics-q01",
+        "physics-q12"
+      ],
+      "physics-ConvectiveHeatTransport": [
+        "physics-q03"
+      ],
+      "physics-RadiativeEnergyTransfer": [
+        "physics-q04",
+        "physics-q12"
+      ],
+      "physics-MechanicalAcceleration": [
+        "physics-q05",
+        "physics-q06"
+      ],
+      "physics-GasCompression": [
+        "physics-q07"
+      ],
+      "physics-ThermallyContacts": [
+        "physics-q08"
+      ],
+      "physics-ExertsForceOn": [
+        "physics-q13"
+      ],
+      "physics-HeatingEpisode": [
+        "physics-q11",
+        "physics-q14",
+        "physics-q15"
+      ],
+      "physics-CompressionEpisode": [],
+      "physics-ImpulseEpisode": [],
+      "physics-TransferredThermalEnergy": [
+        "physics-q02",
+        "physics-q10",
+        "physics-q14"
+      ]
+    },
+    "unused_candidates": [
+      "physics-CompressionEpisode",
+      "physics-ImpulseEpisode"
+    ],
+    "missing_vocabulary": "See null-expression questions and named upstream gaps. Missing models and unavailable consequence execution are separate.",
+    "question_first_sha256": "895c87b1087f5f0cba595ebf895162ecc8c30d18979c1b951764e40917d6dcaf",
+    "held_out": "No independence claimed; independent domain-expert probes are pending. Q14/Q15 are not labelled held-out merely because late in sequence."
+  },
+  "validation": {
+    "source_review": "Author bounded reading only; no expert approval",
+    "local_structure": "assembled with all60 source-first questions; parent may run schema/incidence checks",
+    "grammar": "untested",
+    "adaptation": "not_run",
+    "semantic_type": "provisional/blocked per record",
+    "reasoner": "not_run",
+    "model_execution": "not_run",
+    "approval": "none",
+    "semantic_negative_control": "physics:ThermalBody of imod:Temperature intentionally reverses bearer/quality; no semantic acceptance expected. Using imod:Velocity for vector direction is also a semantic negative, not a parser-negative claim.",
+    "human_approval": "none; source/ontology review outstanding",
+    "type_context_warning": "Reference existence and grammar acceptance do not establish scientific specialization."
+  }
+}

@@ -1,0 +1,1497 @@
+{
+  "dossier_version": "0.1",
+  "domain": "atmosphere",
+  "status": "research draft; no approval",
+  "scope": "Atmospheric bodies, bearer-specific qualities and weather occurrences. Climate statistics, smoke transport and forecasting strategies are models.",
+  "imports": [
+    {
+      "namespace": "imod",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+    },
+    {
+      "namespace": "earth",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "424c0141849aac2b9ae762079ff31c8c14cff4f0d6506eb19971004e7f22d816"
+    }
+  ],
+  "sources": [
+    {
+      "id": "A1",
+      "title": "NOAA Weather systems and patterns",
+      "url": "https://www.noaa.gov/education/resource-collections/weather-atmosphere/weather-systems-patterns",
+      "locator": "Global winds; air masses; fronts; jet streams",
+      "scope": "Interactions and atmospheric movement; no single-factor deterministic forecast.",
+      "status": "primary selected text retrieved and reviewed",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    },
+    {
+      "id": "A2",
+      "title": "NOAA JetStream Air Masses",
+      "url": "https://www.noaa.gov/jetstream/synoptic/air-masses",
+      "locator": "Definition; source regions; boundaries",
+      "scope": "Temperature/moisture coherence, modification and front types.",
+      "status": "primary selected text retrieved and reviewed",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    },
+    {
+      "id": "A3",
+      "title": "NOAA Reading Surface Weather Maps",
+      "url": "https://www.noaa.gov/jetstream/wxmaps",
+      "locator": "Front and pressure symbols",
+      "scope": "Interpretation of maps; symbols not physical entities.",
+      "status": "primary selected text retrieved and reviewed",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    },
+    {
+      "id": "A4",
+      "title": "NOAA Layers of the Atmosphere",
+      "url": "https://www.noaa.gov/jetstream/atmosphere/layers-of-atmosphere",
+      "locator": "Layer criteria; troposphere; stratosphere",
+      "scope": "Variable thermal boundaries, not universal fixed altitudes.",
+      "status": "primary selected text retrieved and reviewed",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "atmosphere:AirBody",
+      "name": "AirBody",
+      "category": "subject",
+      "definition": "Individuated physical portion of atmospheric air.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "atmosphere:AirTemperature",
+        "atmosphere:SpecificHumidity"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "A1",
+        "A2",
+        "A4"
+      ],
+      "positive": "tracked coherent air volume",
+      "negative": "air mixture identity",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:AirMass",
+      "name": "AirMass",
+      "category": "subject",
+      "definition": "Large air body with relative thermal/moisture coherence.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "atmosphere:AirTemperature",
+        "atmosphere:SpecificHumidity"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "A1",
+        "A2",
+        "A4"
+      ],
+      "positive": "continental air mass",
+      "negative": "arbitrary map rectangle",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:CloudBody",
+      "name": "CloudBody",
+      "category": "subject",
+      "definition": "Individuated suspended condensed-water assemblage.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "atmosphere:CloudWaterContent"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "A1",
+        "A2",
+        "A4"
+      ],
+      "positive": "cumulus body",
+      "negative": "invisible vapor alone",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:FrontalZone",
+      "name": "FrontalZone",
+      "category": "subject",
+      "definition": "Finite atmospheric transition separating distinguishable air masses.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "atmosphere:AirTemperature",
+        "atmosphere:WindSpeed"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "A1",
+        "A2",
+        "A4"
+      ],
+      "positive": "resolved transition volume",
+      "negative": "colored map line",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:TroposphericRegion",
+      "name": "TroposphericRegion",
+      "category": "subject",
+      "definition": "Contextually delimited tropospheric atmospheric portion.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "atmosphere:AirTemperature"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "A1",
+        "A2",
+        "A4"
+      ],
+      "positive": "column under local tropopause",
+      "negative": "universal altitude cutoff",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:AirTemperature",
+      "name": "AirTemperature",
+      "category": "quality",
+      "definition": "Thermal quality of air body.",
+      "parent": "imod:Temperature",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "atmosphere:AirBody"
+      },
+      "source_ids": [
+        "A1",
+        "A2"
+      ],
+      "positive": "shielded ambient air reading",
+      "negative": "sunlit soil temperature",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:SpecificHumidity",
+      "name": "SpecificHumidity",
+      "category": "quality",
+      "definition": "Vapor mass share of moist air.",
+      "parent": "imod:Proportion",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "atmosphere:AirBody"
+      },
+      "source_ids": [
+        "A1",
+        "A2"
+      ],
+      "positive": "vapor per moist-air mass",
+      "negative": "relative humidity treated as same",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:WindSpeed",
+      "name": "WindSpeed",
+      "category": "quality",
+      "definition": "Air-velocity magnitude relative to reference.",
+      "parent": "imod:Velocity",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "atmosphere:AirBody"
+      },
+      "source_ids": [
+        "A1",
+        "A2"
+      ],
+      "positive": "air movement above canopy",
+      "negative": "particle settling speed",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:WindDirection",
+      "name": "WindDirection",
+      "category": "quality",
+      "definition": "Horizontal air-motion orientation with stated from/to convention.",
+      "parent": "imod:Angle",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "atmosphere:AirBody"
+      },
+      "source_ids": [
+        "A1",
+        "A2"
+      ],
+      "positive": "meteorological from-direction",
+      "negative": "to-direction silently substituted",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:CloudWaterContent",
+      "name": "CloudWaterContent",
+      "category": "quality",
+      "definition": "Condensed water amount per selected cloud-body basis.",
+      "parent": "imod:Quantity",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "atmosphere:CloudBody"
+      },
+      "source_ids": [
+        "A1",
+        "A2"
+      ],
+      "positive": "liquid-water mass per volume",
+      "negative": "vapor content substituted",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:AirAdvection",
+      "name": "AirAdvection",
+      "category": "process",
+      "definition": "Transport of atmospheric air and carried properties.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "atmosphere:WindSpeed",
+        "atmosphere:WindDirection"
+      ],
+      "bindings": {
+        "participants": [
+          "atmosphere:AirBody",
+          "atmosphere:AirMass"
+        ],
+        "affects": [
+          "atmosphere:AirTemperature",
+          "atmosphere:SpecificHumidity"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Conditional recipient-body effects; mechanisms/rates are models. Dedicated phase-change source and parameter conventions needed for condensation/evaporation. IMPORTANT: a tracked material body can retain temperature/composition while a fixed recipient region changes. Resolve material-versus-Eulerian bearer distinction before affects binding is encoded; transport alone does not universally change carried quality.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "A1",
+        "A2"
+      ],
+      "positive": "different air reaches site",
+      "negative": "instrument recalibration",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:AtmosphericConvection",
+      "name": "AtmosphericConvection",
+      "category": "process",
+      "definition": "Buoyancy-associated atmospheric vertical transport.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "atmosphere:AirTemperature"
+      ],
+      "bindings": {
+        "participants": [
+          "atmosphere:AirBody",
+          "atmosphere:AirMass"
+        ],
+        "affects": [
+          "atmosphere:AirTemperature"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Conditional recipient-body effects; mechanisms/rates are models. Dedicated phase-change source and parameter conventions needed for condensation/evaporation.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "A1",
+        "A2"
+      ],
+      "positive": "buoyant ascent",
+      "negative": "all upward air assumed buoyant",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:CloudCondensation",
+      "name": "CloudCondensation",
+      "category": "process",
+      "definition": "Conversion of atmospheric vapor to cloud liquid.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "atmosphere:AirTemperature",
+        "atmosphere:SpecificHumidity"
+      ],
+      "bindings": {
+        "participants": [
+          "atmosphere:AirBody",
+          "atmosphere:AirMass"
+        ],
+        "affects": [
+          "atmosphere:CloudWaterContent"
+        ],
+        "creates": [
+          "atmosphere:CloudBody"
+        ],
+        "confers": [],
+        "rationale": "Conditional recipient-body effects; mechanisms/rates are models. Dedicated phase-change source and parameter conventions needed for condensation/evaporation.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "A1",
+        "A2"
+      ],
+      "positive": "new droplet assemblage",
+      "negative": "existing cloud transported",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:CloudEvaporation",
+      "name": "CloudEvaporation",
+      "category": "process",
+      "definition": "Transfer of cloud liquid to vapor.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "atmosphere:AirTemperature",
+        "atmosphere:SpecificHumidity"
+      ],
+      "bindings": {
+        "participants": [
+          "atmosphere:AirBody",
+          "atmosphere:AirMass"
+        ],
+        "affects": [
+          "atmosphere:CloudWaterContent"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Conditional recipient-body effects; mechanisms/rates are models. Dedicated phase-change source and parameter conventions needed for condensation/evaporation.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "A1",
+        "A2"
+      ],
+      "positive": "droplets evaporate",
+      "negative": "cloud leaves camera view",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:AirMassModification",
+      "name": "AirMassModification",
+      "category": "process",
+      "definition": "Thermal/moisture alteration through exchanges.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "atmosphere:AirTemperature",
+        "atmosphere:SpecificHumidity"
+      ],
+      "bindings": {
+        "participants": [
+          "atmosphere:AirBody",
+          "atmosphere:AirMass"
+        ],
+        "affects": [
+          "atmosphere:AirTemperature",
+          "atmosphere:SpecificHumidity"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Conditional recipient-body effects; mechanisms/rates are models. Dedicated phase-change source and parameter conventions needed for condensation/evaporation.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "A1",
+        "A2"
+      ],
+      "positive": "dry air warms over ocean",
+      "negative": "weather map relabeling",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:FrontSeparatesAirMass",
+      "name": "FrontSeparatesAirMass",
+      "category": "relationship",
+      "definition": "Frontal zone bounds an identified air-mass side.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "atmosphere:FrontalZone",
+        "target": "atmosphere:AirMass",
+        "rationale": "Represent two sides by two assertions, not a disguised ternary relation."
+      },
+      "source_ids": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "positive": "warm side of identified front",
+      "negative": "map line associated with arbitrary station",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 2,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:CloudContainedInAir",
+      "name": "CloudContainedInAir",
+      "category": "relationship",
+      "definition": "Cloud body is hosted by surrounding air body.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "atmosphere:CloudBody",
+        "target": "atmosphere:AirBody",
+        "rationale": "Contextual hosting, not permanent identity."
+      },
+      "source_ids": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "positive": "cloud embedded in air mass",
+      "negative": "projection overlap at different altitude",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 2,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:AirMassOriginRegion",
+      "name": "AirMassOriginRegion",
+      "category": "relationship",
+      "definition": "Air mass acquired initial source-region character over a region.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "atmosphere:AirMass",
+        "target": "earth:Region",
+        "rationale": "Historical origin does not force present properties."
+      },
+      "source_ids": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "positive": "documented origin trajectory",
+      "negative": "present location treated as origin",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 2,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:FrontalPassage",
+      "name": "FrontalPassage",
+      "category": "event",
+      "definition": "Bounded passage of front across contextual site.",
+      "parent": "earth:MeteorologicalEvent",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "atmosphere:WindSpeed"
+      ],
+      "bindings": {
+        "participants": [
+          "atmosphere:AirBody",
+          "earth:Location"
+        ],
+        "affects": [
+          "atmosphere:AirTemperature",
+          "atmosphere:WindDirection"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "No front-to-rain universal implication. Geostationary inherited event parent requires review for moving storms; site occurrence is scoped.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "positive": "observed front crosses village",
+      "negative": "forecast never arrives",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:WindShiftEpisode",
+      "name": "WindShiftEpisode",
+      "category": "event",
+      "definition": "Bounded air-motion direction transition at site.",
+      "parent": "earth:MeteorologicalEvent",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "atmosphere:WindSpeed"
+      ],
+      "bindings": {
+        "participants": [
+          "atmosphere:AirBody",
+          "earth:Location"
+        ],
+        "affects": [
+          "atmosphere:WindDirection"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "No front-to-rain universal implication. Geostationary inherited event parent requires review for moving storms; site occurrence is scoped.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "positive": "observed wind turns",
+      "negative": "direction convention changes",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "atmosphere:RainfallEpisode",
+      "name": "RainfallEpisode",
+      "category": "event",
+      "definition": "Bounded liquid precipitation reaching ground.",
+      "parent": "earth:MeteorologicalEvent",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "atmosphere:WindSpeed"
+      ],
+      "bindings": {
+        "participants": [
+          "atmosphere:AirBody",
+          "earth:Location"
+        ],
+        "affects": [
+          "earth:RainfallVolume"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "No front-to-rain universal implication. Geostationary inherited event parent requires review for moving storms; site occurrence is scoped.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "positive": "rain reaches surface",
+      "negative": "virga evaporates aloft",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    }
+  ],
+  "questions": [
+    {
+      "id": "atmosphere-q01",
+      "order": 1,
+      "text": "How warm is the air around the village rather than the sunlit ground?",
+      "source_ids": [
+        "A1"
+      ],
+      "concept_ids": [
+        "atmosphere:AirTemperature",
+        "atmosphere:AirBody"
+      ],
+      "expression": "atmosphere:AirTemperature of atmosphere:AirBody",
+      "expected_type": "quality",
+      "dependencies": [
+        "Ambient air bearer distinct from ground; observed height/context external.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Ambient air bearer distinct from ground; observed height/context external.",
+      "negative": "ground radiant temperature substituted",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Ambient air bearer distinct from ground; observed height/context external.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 1,
+        "independent": false
+      },
+      "narrative_intent": "Ambient air bearer distinct from ground; observed height/context external.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "atmosphere-q02",
+      "order": 2,
+      "text": "How much moisture is in this air mass?",
+      "source_ids": [
+        "A2"
+      ],
+      "concept_ids": [
+        "atmosphere:SpecificHumidity",
+        "atmosphere:AirMass"
+      ],
+      "expression": "atmosphere:SpecificHumidity of atmosphere:AirMass",
+      "expected_type": "quality",
+      "dependencies": [
+        "Vapor mass fraction convention needed; relative humidity not synonym.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Vapor mass fraction convention needed; relative humidity not synonym.",
+      "negative": "humidity percentage used without meaning",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Vapor mass fraction convention needed; relative humidity not synonym.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 2,
+        "independent": false
+      },
+      "narrative_intent": "Vapor mass fraction convention needed; relative humidity not synonym.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "atmosphere-q03",
+      "order": 3,
+      "text": "Which way and how fast is the air moving above the trees?",
+      "source_ids": [
+        "A1"
+      ],
+      "concept_ids": [
+        "atmosphere:WindSpeed",
+        "atmosphere:WindDirection",
+        "atmosphere:AirBody"
+      ],
+      "expression": "atmosphere:WindSpeed of atmosphere:AirBody",
+      "expected_type": "quality",
+      "dependencies": [
+        "Speed component; direction requires separate WindDirection resolution with from/to convention.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Speed component; direction requires separate WindDirection resolution with from/to convention.",
+      "negative": "single scalar answers both speed and direction",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Speed component; direction requires separate WindDirection resolution with from/to convention.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 3,
+        "independent": false
+      },
+      "narrative_intent": "Speed component; direction requires separate WindDirection resolution with from/to convention.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "atmosphere-q04",
+      "order": 4,
+      "text": "Is the approaching boundary separating warmer and colder air?",
+      "source_ids": [
+        "A3"
+      ],
+      "concept_ids": [
+        "atmosphere:FrontalZone",
+        "atmosphere:FrontSeparatesAirMass"
+      ],
+      "expression": "atmosphere:FrontalZone",
+      "expected_type": "subject",
+      "dependencies": [
+        "Transition-zone and air-mass thermal comparison; blocked subject/configuration choice.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Transition-zone and air-mass thermal comparison; blocked subject/configuration choice.",
+      "negative": "symbol interpreted as physical wall",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Transition-zone and air-mass thermal comparison; blocked subject/configuration choice.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 4,
+        "independent": false
+      },
+      "narrative_intent": "Transition-zone and air-mass thermal comparison; blocked subject/configuration choice.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "atmosphere-q05",
+      "order": 5,
+      "text": "Did the front passing the village change its temperature?",
+      "source_ids": [
+        "A3"
+      ],
+      "concept_ids": [
+        "atmosphere:FrontalPassage",
+        "atmosphere:AirTemperature"
+      ],
+      "expression": "change in atmosphere:AirTemperature of atmosphere:AirBody",
+      "expected_type": "process",
+      "dependencies": [
+        "Contextual temperature change resolved separately with passage evidence.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Contextual temperature change resolved separately with passage evidence.",
+      "negative": "front universally causes same signed change",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Contextual temperature change resolved separately with passage evidence.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 5,
+        "independent": false
+      },
+      "narrative_intent": "Contextual temperature change resolved separately with passage evidence.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
+    },
+    {
+      "id": "atmosphere-q06",
+      "order": 6,
+      "text": "Is rising air forming cloud droplets or only moving existing cloud?",
+      "source_ids": [
+        "A1"
+      ],
+      "concept_ids": [
+        "atmosphere:CloudCondensation",
+        "atmosphere:AirAdvection"
+      ],
+      "expression": "atmosphere:CloudCondensation",
+      "expected_type": "process",
+      "dependencies": [
+        "Condensation occurrence versus transport; dedicated microphysics evidence still needed.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Condensation occurrence versus transport; dedicated microphysics evidence still needed.",
+      "negative": "cloud motion implies new condensation",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Condensation occurrence versus transport; dedicated microphysics evidence still needed.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 6,
+        "independent": false
+      },
+      "narrative_intent": "Condensation occurrence versus transport; dedicated microphysics evidence still needed.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "atmosphere-q07",
+      "order": 7,
+      "text": "Which air mass lies on each side of this front?",
+      "source_ids": [
+        "A3"
+      ],
+      "concept_ids": [
+        "atmosphere:FrontSeparatesAirMass",
+        "atmosphere:AirMass"
+      ],
+      "expression": "atmosphere:FrontSeparatesAirMass",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Two endpoint assertions attach air masses to identified front.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Two endpoint assertions attach air masses to identified front.",
+      "negative": "two endpoints compressed into unsupported ternary syntax",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Two endpoint assertions attach air masses to identified front.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 7,
+        "independent": false
+      },
+      "narrative_intent": "Two endpoint assertions attach air masses to identified front.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "atmosphere-q08",
+      "order": 8,
+      "text": "How much rain reached the ground during this storm?",
+      "source_ids": [
+        "A1"
+      ],
+      "concept_ids": [
+        "atmosphere:RainfallEpisode"
+      ],
+      "expression": "earth:RainfallVolume",
+      "expected_type": "quality",
+      "dependencies": [
+        "Ground-reaching liquid precipitation amount for event context; not rain aloft.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Ground-reaching liquid precipitation amount for event context; not rain aloft.",
+      "negative": "virga counted as ground rainfall",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Ground-reaching liquid precipitation amount for event context; not rain aloft.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 8,
+        "independent": false
+      },
+      "narrative_intent": "Ground-reaching liquid precipitation amount for event context; not rain aloft.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "atmosphere-q09",
+      "order": 9,
+      "text": "Could air above the surface move differently from air near the ground?",
+      "source_ids": [
+        "A1"
+      ],
+      "concept_ids": [
+        "atmosphere:WindSpeed",
+        "atmosphere:WindDirection"
+      ],
+      "expression": "atmosphere:WindSpeed of atmosphere:AirBody",
+      "expected_type": "quality",
+      "dependencies": [
+        "Separate height-specific air bodies; compare their qualities, no universal shared wind.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Separate height-specific air bodies; compare their qualities, no universal shared wind.",
+      "negative": "surface station used as whole column",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Separate height-specific air bodies; compare their qualities, no universal shared wind.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 9,
+        "independent": false
+      },
+      "narrative_intent": "Separate height-specific air bodies; compare their qualities, no universal shared wind.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "atmosphere-q10",
+      "order": 10,
+      "text": "Which vertical layer contains most of this weather?",
+      "source_ids": [
+        "A4"
+      ],
+      "concept_ids": [
+        "atmosphere:TroposphericRegion"
+      ],
+      "expression": "atmosphere:TroposphericRegion",
+      "expected_type": "subject",
+      "dependencies": [
+        "Thermally diagnosed local tropospheric boundary; variable height.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Thermally diagnosed local tropospheric boundary; variable height.",
+      "negative": "fixed global altitude divides atmosphere",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Thermally diagnosed local tropospheric boundary; variable height.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 10,
+        "independent": false
+      },
+      "narrative_intent": "Thermally diagnosed local tropospheric boundary; variable height.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "atmosphere-q11",
+      "order": 11,
+      "text": "Does a dry air mass mean there is no water vapor at all?",
+      "source_ids": [
+        "A2"
+      ],
+      "concept_ids": [
+        "atmosphere:SpecificHumidity",
+        "atmosphere:AirMass"
+      ],
+      "expression": "atmosphere:SpecificHumidity of atmosphere:AirMass",
+      "expected_type": "quality",
+      "dependencies": [
+        "Dry relative/source-region characterization does not entail vapor absence.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Dry relative/source-region characterization does not entail vapor absence.",
+      "negative": "dry is zero water",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Dry relative/source-region characterization does not entail vapor absence.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 11,
+        "independent": false
+      },
+      "narrative_intent": "Dry relative/source-region characterization does not entail vapor absence.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "atmosphere-q12",
+      "order": 12,
+      "text": "Can a surface pressure reading alone tell us where smoke will go?",
+      "source_ids": [
+        "A1"
+      ],
+      "concept_ids": [
+        "atmosphere:AirAdvection",
+        "atmosphere:WindDirection"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Smoke transport needs pressure-gradient/velocity/turbulence and chemistry aerosols; no single pressure solution.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Smoke transport needs pressure-gradient/velocity/turbulence and chemistry aerosols; no single pressure solution.",
+      "negative": "pressure alone predicts plume route",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Smoke transport needs pressure-gradient/velocity/turbulence and chemistry aerosols; no single pressure solution.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 12,
+        "independent": false
+      },
+      "narrative_intent": "Smoke transport needs pressure-gradient/velocity/turbulence and chemistry aerosols; no single pressure solution.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "atmosphere-q13",
+      "order": 13,
+      "text": "Has a wind shift occurred since the last observation?",
+      "source_ids": [
+        "A3"
+      ],
+      "concept_ids": [
+        "atmosphere:WindDirection",
+        "atmosphere:WindShiftEpisode"
+      ],
+      "expression": "change in atmosphere:WindDirection of atmosphere:AirBody",
+      "expected_type": "process",
+      "dependencies": [
+        "Observed direction transition with circular-angle handling in model.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Observed direction transition with circular-angle handling in model.",
+      "negative": "359 to 1 degree treated as huge physical reversal",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Observed direction transition with circular-angle handling in model.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 13,
+        "independent": false
+      },
+      "narrative_intent": "Observed direction transition with circular-angle handling in model.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
+    },
+    {
+      "id": "atmosphere-q14",
+      "order": 14,
+      "text": "Does a front symbol on the map constitute a physical wall?",
+      "source_ids": [
+        "A3"
+      ],
+      "concept_ids": [
+        "atmosphere:FrontalZone"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Representation question: map symbol is not a domain front subject; no impermeability binding.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Representation question: map symbol is not a domain front subject; no impermeability binding.",
+      "negative": "front is physical wall",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Representation question: map symbol is not a domain front subject; no impermeability binding.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 14,
+        "independent": false
+      },
+      "narrative_intent": "Representation question: map symbol is not a domain front subject; no impermeability binding.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "atmosphere-q15",
+      "order": 15,
+      "text": "If humidity is unmeasured should we treat the air as dry?",
+      "source_ids": [
+        "A2"
+      ],
+      "concept_ids": [
+        "atmosphere:SpecificHumidity"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Unknown humidity is an evidence state and cannot confer Dry.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Unknown humidity is an evidence state and cannot confer Dry.",
+      "negative": "unmeasured means dry",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Unknown humidity is an evidence state and cannot confer Dry.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 15,
+        "independent": false
+      },
+      "narrative_intent": "Unknown humidity is an evidence state and cannot confer Dry.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    }
+  ],
+  "quality_summaries": [
+    {
+      "quality": "atmosphere:SpecificHumidity",
+      "proposed_summary": "RelativelyDry",
+      "basis": "Ordered comparison within comparable temperature/air-mass context; not zero vapor, not source-region identity, no invented cutoff.",
+      "status": "blocked until comparison rule and evidence selected",
+      "kind": "ordering",
+      "nominal": false,
+      "ordered": true,
+      "overlap": "allowed across differently scoped comparisons; no exhaustive partition",
+      "context_scope": "explicit reference population and measurement convention",
+      "source_ids": [
+        "A2"
+      ],
+      "evidence_rule": "Requires resolved comparable quality observations; unknown/unmeasured is not this predicate.",
+      "measurement_state": "Missing measurement is unresolved evidence; not false and not an automatic nominal class."
+    }
+  ],
+  "ambiguities": [
+    "atmosphere:Air is a chemical identity, not an air subject/bearer.",
+    "earth:Location is geostationary and feature-derived: mobile AirMass cannot silently specialize it. Root Subject is broad verified ancestry pending material-body parent.",
+    "Existing Atmosphere realm excludes layers inconsistently with source: rewrite instead of preserving text.",
+    "Air-mass source-region classes bundle origin/temperature/moisture; separate dimensions or authority categories.",
+    "Frontal zone subject versus boundary/configuration remains blocked; exact host and identity matter."
+  ],
+  "coverage": {
+    "counts": {
+      "subject": 5,
+      "quality": 5,
+      "process": 5,
+      "relationship": 3,
+      "event": 3
+    },
+    "target": {
+      "subject": 5,
+      "process": 5,
+      "relationship": 5,
+      "event": 5
+    },
+    "shortfalls": {
+      "relationship": "2 slots unfilled; generic proximity or unsupported causal links would pad coverage. Soil includes one blocked machinery relation, so at most two domain relationship candidates.",
+      "event": "2 slots unfilled; avoid inventing threshold episodes or relabeling every process as an event."
+    },
+    "source_limits": "Agency primary materials are bounded starting evidence, often educational/descriptive. Sources do not endorse ontological categories, exact inferred bindings or exhaustive coverage. Retrieval failures are recorded per source.",
+    "concept_question_incidence": {
+      "atmosphere:AirBody": [
+        "atmosphere-q01",
+        "atmosphere-q03"
+      ],
+      "atmosphere:AirMass": [
+        "atmosphere-q02",
+        "atmosphere-q07",
+        "atmosphere-q11"
+      ],
+      "atmosphere:CloudBody": [],
+      "atmosphere:FrontalZone": [
+        "atmosphere-q04",
+        "atmosphere-q14"
+      ],
+      "atmosphere:TroposphericRegion": [
+        "atmosphere-q10"
+      ],
+      "atmosphere:AirTemperature": [
+        "atmosphere-q01",
+        "atmosphere-q05"
+      ],
+      "atmosphere:SpecificHumidity": [
+        "atmosphere-q02",
+        "atmosphere-q11",
+        "atmosphere-q15"
+      ],
+      "atmosphere:WindSpeed": [
+        "atmosphere-q03",
+        "atmosphere-q09"
+      ],
+      "atmosphere:WindDirection": [
+        "atmosphere-q03",
+        "atmosphere-q09",
+        "atmosphere-q12",
+        "atmosphere-q13"
+      ],
+      "atmosphere:CloudWaterContent": [],
+      "atmosphere:AirAdvection": [
+        "atmosphere-q06",
+        "atmosphere-q12"
+      ],
+      "atmosphere:AtmosphericConvection": [],
+      "atmosphere:CloudCondensation": [
+        "atmosphere-q06"
+      ],
+      "atmosphere:CloudEvaporation": [],
+      "atmosphere:AirMassModification": [],
+      "atmosphere:FrontSeparatesAirMass": [
+        "atmosphere-q04",
+        "atmosphere-q07"
+      ],
+      "atmosphere:CloudContainedInAir": [],
+      "atmosphere:AirMassOriginRegion": [],
+      "atmosphere:FrontalPassage": [
+        "atmosphere-q05"
+      ],
+      "atmosphere:WindShiftEpisode": [
+        "atmosphere-q13"
+      ],
+      "atmosphere:RainfallEpisode": [
+        "atmosphere-q08"
+      ]
+    },
+    "unused_candidates": [
+      "atmosphere:CloudBody",
+      "atmosphere:CloudWaterContent",
+      "atmosphere:AtmosphericConvection",
+      "atmosphere:CloudEvaporation",
+      "atmosphere:AirMassModification",
+      "atmosphere:CloudContainedInAir",
+      "atmosphere:AirMassOriginRegion"
+    ],
+    "unused_policy": "Unused concepts are exposed for removal or fresh question testing, not silently declared needed.",
+    "held_out_status": "No independently authored held-out probes obtained. Questions were source-first but author knew legacy and is not independent; request fresh human/domain probes after freezing revision."
+  },
+  "validation": {
+    "source_review": "selected primary passages/indexed excerpts read; no expert discussion",
+    "grammar": "not run by author; parent batch parser planned",
+    "adaptation": "not run for these undeclared candidates",
+    "namespace_resolution": "existing parent names manually checked; candidates are prose, not installed concepts",
+    "scientific_semantics": "provisional/blocked per record; no human approval",
+    "models": "not run; no runtime answerability claim",
+    "consequence_execution": "not implemented; implication/detection syntax-only",
+    "negative_controls": [
+      {
+        "expression": "atmosphere:DefinitelyMissing",
+        "expected": "qualified-name syntax may pass, namespace resolution must fail",
+        "status": "not_run"
+      },
+      {
+        "expression": "change in of atmosphere:DefinitelyMissing",
+        "expected": "grammar reject",
+        "status": "not_run"
+      }
+    ],
+    "approval_gate": "Freeze dossier/import hashes, resolve blocking ambiguity/source gaps, human domain and ontology review, actual candidate parser/adaptation/reasoner checks, separate exact-revision approval; no self-approval.",
+    "local_structure": "PASS author check: 15 ordered unique questions, stable candidate/source references and exact ledger text; 21 candidate IDs; no executable source.",
+    "human_approval": "none; source/ontology review outstanding",
+    "type_context_warning": "Reference existence and grammar acceptance do not establish scientific specialization."
+  },
+  "question_generation": {
+    "ledger_sha256": "165d192e83a6c9080b33f4c9efc20e5bcc2ceca4a01e9cdf0b07be89ba6168ef",
+    "order": "source review -> saved 15-question ledger -> candidate records -> expression mapping",
+    "independent": false
+  },
+  "upstream_issues": [
+    {
+      "id": "atm-material",
+      "missing_distinction": "Mobile physical gas body/mixture identity",
+      "required_action": "Cannot inherit mobile AirMass from geostationary Location. Root/physics/chemistry issue.",
+      "status": "blocking relevant concepts; no local workaround"
+    },
+    {
+      "id": "atm-parameters",
+      "missing_distinction": "Pressure, density, buoyancy, heat exchange and vapor saturation",
+      "required_action": "Convection/advection/phase-change parameter set incomplete; dedicated primary meteorology definitions required.",
+      "status": "blocking relevant concepts; no local workaround"
+    },
+    {
+      "id": "atm-humidity",
+      "missing_distinction": "Specific versus relative humidity and phase-specific cloud water content",
+      "required_action": "Split convention-dependent meanings before review-ready proposal.",
+      "status": "blocking relevant concepts; no local workaround"
+    }
+  ],
+  "import_evidence": [
+    {
+      "namespace": "imod",
+      "path": "src/imod.kwv",
+      "sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca",
+      "scope": "Exact imported bytes available at dossier authoring; reference existence only."
+    },
+    {
+      "namespace": "earth",
+      "path": "src/earth.kwv",
+      "sha256": "424c0141849aac2b9ae762079ff31c8c14cff4f0d6506eb19971004e7f22d816",
+      "scope": "Exact imported bytes available at dossier authoring; reference existence only."
+    }
+  ]
+}

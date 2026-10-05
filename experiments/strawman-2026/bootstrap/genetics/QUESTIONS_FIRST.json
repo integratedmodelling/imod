@@ -1,0 +1,212 @@
+[
+  {
+    "id": "genetics-q01",
+    "text": "What DNA sequence is present in this sampled molecule?",
+    "source_ids": [
+      "DNA"
+    ],
+    "concept_hint": "DNASequence",
+    "expression": "genetics:DNASequence of genetics:DNAMolecule",
+    "expected_type": "quality",
+    "positive": "Sequence of an identified molecular bearer",
+    "negative": "Database identifier itself",
+    "draft_order": 1,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "genetics-q02",
+    "text": "Are two versions found at the same genomic location?",
+    "source_ids": [
+      "ALLELE"
+    ],
+    "concept_hint": "AllelicIdentity",
+    "expression": null,
+    "expected_type": "identity/reference gap",
+    "positive": "Alleles aligned to one declared locus",
+    "negative": "Variants at unrelated loci",
+    "draft_order": 2,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "genetics-q03",
+    "text": "How many chromosomes are present in this cell?",
+    "source_ids": [
+      "CHROMOSOME"
+    ],
+    "concept_hint": "Chromosome",
+    "expression": "count of genetics:Chromosome contained in life:Cell",
+    "expected_type": "numerosity",
+    "positive": "Chromosome count in specified cell",
+    "negative": "Human count assumed for all species",
+    "draft_order": 3,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "genetics-q04",
+    "text": "Does this gene produce a functional RNA rather than a protein?",
+    "source_ids": [
+      "GENE"
+    ],
+    "concept_hint": "Transcription",
+    "expression": "genetics:Transcription",
+    "expected_type": "process",
+    "positive": "Noncoding functional RNA transcript",
+    "negative": "All genes forced protein coding",
+    "draft_order": 4,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "genetics-q05",
+    "text": "Which cells are expressing a particular gene after heat exposure?",
+    "source_ids": [
+      "EXPRESSION"
+    ],
+    "concept_hint": "TranscriptAbundance",
+    "expression": "genetics:TranscriptAbundance of life:Cell",
+    "expected_type": "quality",
+    "positive": "Gene-specific transcripts and cell context",
+    "negative": "Expression inferred solely from DNA presence",
+    "draft_order": 5,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "genetics-q06",
+    "text": "Did a DNA sequence change in this lineage?",
+    "source_ids": [
+      "MUTATION"
+    ],
+    "concept_hint": "Mutation",
+    "expression": "genetics:Mutation",
+    "expected_type": "event",
+    "positive": "Bounded sequence alteration in lineage",
+    "negative": "Different samples with no lineage evidence",
+    "draft_order": 6,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "genetics-q07",
+    "text": "Can the detected variant be inherited by offspring?",
+    "source_ids": [
+      "MUTATION"
+    ],
+    "concept_hint": "Inheritance",
+    "expression": null,
+    "expected_type": "germline/lineage gap",
+    "positive": "Specified reproductive lineage with germline evidence",
+    "negative": "Somatic variant assumed inherited",
+    "draft_order": 7,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "genetics-q08",
+    "text": "Has a chromosome segment been copied again?",
+    "source_ids": [
+      "GLOSSARY"
+    ],
+    "concept_hint": "Duplication",
+    "expression": "genetics:Duplication",
+    "expected_type": "event",
+    "positive": "Extra segment copy relative to baseline",
+    "negative": "Higher sequencing coverage alone",
+    "draft_order": 8,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "genetics-q09",
+    "text": "Has a segment been lost from a chromosome?",
+    "source_ids": [
+      "GLOSSARY"
+    ],
+    "concept_hint": "Deletion",
+    "expression": "genetics:Deletion",
+    "expected_type": "event",
+    "positive": "Documented segment loss",
+    "negative": "Unsequenced interval",
+    "draft_order": 9,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "genetics-q10",
+    "text": "Which DNA molecule contains this gene segment?",
+    "source_ids": [
+      "GENE"
+    ],
+    "concept_hint": "GenePart",
+    "expression": "genetics:GenePart linking genetics:GeneSegment to genetics:DNAMolecule",
+    "expected_type": "relationship",
+    "positive": "Physical segment on identified molecule",
+    "negative": "Information record contained in database",
+    "draft_order": 10,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "genetics-q11",
+    "text": "Are chromosomes being segregated into gametes?",
+    "source_ids": [
+      "MEIOSIS"
+    ],
+    "concept_hint": "MeioticSegregation",
+    "expression": "genetics:MeioticSegregation",
+    "expected_type": "process",
+    "positive": "Reductional division in appropriate organism",
+    "negative": "Ordinary tissue growth",
+    "draft_order": 11,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "genetics-q12",
+    "text": "Does a sequence similarity establish shared descent?",
+    "source_ids": [
+      "GLOSSARY"
+    ],
+    "concept_hint": "Homology",
+    "expression": null,
+    "expected_type": "historical hypothesis gap",
+    "positive": "Independent ancestry evidence",
+    "negative": "Similarity automatically asserted homology",
+    "draft_order": 12,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "genetics-q13",
+    "text": "Did fertilization combine genetic contributions from the observed gametes?",
+    "source_ids": [
+      "MEIOSIS"
+    ],
+    "concept_hint": "Fertilization",
+    "expression": "genetics:Fertilization",
+    "expected_type": "event",
+    "positive": "Fusion with lineage evidence",
+    "negative": "Two gametes merely adjacent",
+    "draft_order": 13,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "genetics-q14",
+    "text": "Would a gene expression difference alone explain survival after wildfire?",
+    "source_ids": [
+      "EXPRESSION"
+    ],
+    "concept_hint": "GeneExpression",
+    "expression": null,
+    "expected_type": "causal model gap",
+    "positive": "Expression comparison plus mechanism evidence",
+    "negative": "Association treated as sufficient explanation",
+    "draft_order": 14,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  },
+  {
+    "id": "genetics-q15",
+    "text": "Is missing sequence information evidence that the gene is absent?",
+    "source_ids": [
+      "GENE"
+    ],
+    "concept_hint": "GeneSegment",
+    "expression": null,
+    "expected_type": "negative evidence probe",
+    "positive": "Adequate coverage and detection model needed",
+    "negative": "Missing record equated with gene deletion",
+    "draft_order": 15,
+    "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation."
+  }
+]

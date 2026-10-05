@@ -1,0 +1,1308 @@
+{
+  "dossier_version": "0.1",
+  "domain": "ecology",
+  "status": "draft-requires-human-review",
+  "scope": "Interactions, population/community observations and disturbance/recovery. Population and Community compete with configuration readings; their existing agent declarations are not presumed valid.",
+  "imports": [
+    {
+      "namespace": "imod",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+    },
+    {
+      "namespace": "life",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "2e54cea39b2e65ed927da5bc371c2bca3de297009b9d77943dfc00a127fd45e0"
+    },
+    {
+      "namespace": "biology",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "35da924d96576350dcfacc3e2c0fceb4aeac817cdd44a091068e415ebbccc018"
+    }
+  ],
+  "sources": [
+    {
+      "id": "DENALI",
+      "title": "NPS Denali: Ecosystems After Fire",
+      "url": "https://www.nps.gov/dena/learn/nature/ecosystems-after-fire.htm",
+      "locator": "Deep Dive; Changes to Patterns of Fire",
+      "scope": "Boreal/tundra recovery and ecological variation",
+      "status": "retrieved 2026-10-03; author synthesis, no expert endorsement"
+    },
+    {
+      "id": "EPA",
+      "title": "EPA: Estuarine and Coastal Marine Waters bioassessment guidance",
+      "url": "https://www.epa.gov/wqc/fact-sheet-estuarine-and-coastal-marine-waters-bioassessment-and-biocriteria-technical-guidance",
+      "locator": "Biological Integrity; Reference Condition",
+      "scope": "Reference-dependent assessment, not intrinsic universal health",
+      "status": "retrieved 2026-10-03; author synthesis, no expert endorsement"
+    },
+    {
+      "id": "FOOD",
+      "title": "NOAA: Aquatic food webs",
+      "url": "https://www.noaa.gov/education/resource-collections/marine-life/aquatic-food-webs",
+      "locator": "Food webs; direct/indirect effects",
+      "scope": "Aquatic feeding associations; terrestrial transfer requires review",
+      "status": "retrieved 2026-10-03; author synthesis, no expert endorsement"
+    },
+    {
+      "id": "NPS",
+      "title": "NPS Bryce Canyon: Fire Ecology",
+      "url": "https://www.nps.gov/brca/learn/nature/fire-ecology.htm",
+      "locator": "Forest Succession; adaptations; wildlife",
+      "scope": "Ponderosa-pine examples; not universal fire benefits",
+      "status": "retrieved 2026-10-03; author synthesis, no expert endorsement"
+    },
+    {
+      "id": "SYMBIOSIS",
+      "title": "NOAA Ocean Exploration: What is symbiosis?",
+      "url": "https://oceanexplorer.noaa.gov/ocean-fact/symbiosis/",
+      "locator": "updated 2022-07-08; outcome distinctions",
+      "scope": "Close association and mutualistic/commensal/parasitic outcomes; no universal benefit metric",
+      "status": "retrieved 2026-10-03; author synthesis, no expert endorsement"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "ecology-c01",
+      "name": "Population",
+      "category": "subject",
+      "definition": "Individuals of selected biological identity in a declared ecological context.",
+      "parent": "imod:Subject",
+      "parent_status": "blocked",
+      "qualities": [
+        "PopulationAbundance",
+        "age composition"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "FOOD"
+      ],
+      "positive": "Delimited fish population",
+      "negative": "All co-located organisms",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "blocked",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Subject",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "ecology-c02",
+      "name": "Community",
+      "category": "subject",
+      "definition": "Co-occurring biological populations under ecological interactions and stated boundary.",
+      "parent": "imod:Subject",
+      "parent_status": "blocked",
+      "qualities": [
+        "SpeciesRichness",
+        "CommunityBiomass"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "FOOD"
+      ],
+      "positive": "Defined aquatic community",
+      "negative": "Intentional agent assumed",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "blocked",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Subject",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "ecology-c03",
+      "name": "HabitatPatch",
+      "category": "subject",
+      "definition": "Delimited place considered as habitat for a specified organism/population.",
+      "parent": "imod:Subject",
+      "parent_status": "blocked",
+      "qualities": [
+        "Area",
+        "resource availability"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "NPS"
+      ],
+      "positive": "Organism-specific patch",
+      "negative": "Suitability independent of organism",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Subject",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "ecology-c04",
+      "name": "Colonization",
+      "category": "process",
+      "definition": "Arrival and establishment in a previously unoccupied ecological context.",
+      "parent": "imod:Process",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "PopulationAbundance",
+        "establishment evidence"
+      ],
+      "bindings": {
+        "affects": [
+          "ecology:PopulationAbundance"
+        ],
+        "rationale": "Arrival alone insufficient; establishment criterion required."
+      },
+      "source_ids": [
+        "NPS"
+      ],
+      "positive": "Establishing immigrants",
+      "negative": "Transient visitor",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Process",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "ecology-c05",
+      "name": "Succession",
+      "category": "process",
+      "definition": "Temporal community-composition alteration through ecological occurrences.",
+      "parent": "imod:Process",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "Species composition",
+        "CommunityBiomass"
+      ],
+      "bindings": {
+        "affects": [
+          "ecology:Community"
+        ],
+        "rationale": "No universal endpoint or obligatory postfire sequence."
+      },
+      "source_ids": [
+        "DENALI"
+      ],
+      "positive": "Observed composition trajectory",
+      "negative": "Fixed climax assumed",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Process",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "ecology-c06",
+      "name": "Predation",
+      "category": "process",
+      "definition": "Consumption involving predator and prey in a feeding context.",
+      "parent": "imod:Process",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "Prey availability",
+        "consumption rate"
+      ],
+      "bindings": {
+        "affects": [
+          "life:Organism"
+        ],
+        "rationale": "Consequences require evidence; no automatic extinction cascade."
+      },
+      "source_ids": [
+        "FOOD"
+      ],
+      "positive": "Supported consumption",
+      "negative": "Co-location",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Process",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "ecology-c07",
+      "name": "Herbivory",
+      "category": "process",
+      "definition": "Consumption of plant material by an organism.",
+      "parent": "imod:Process",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "Plant material availability",
+        "consumption rate"
+      ],
+      "bindings": {
+        "affects": [
+          "life:LivingMass"
+        ],
+        "rationale": "May alter plant pool; whole-plant death not entailed."
+      },
+      "source_ids": [
+        "NPS"
+      ],
+      "positive": "Observed grazing",
+      "negative": "Mortality without feeding evidence",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Process",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "ecology-c08",
+      "name": "ResourceCompetition",
+      "category": "process",
+      "definition": "Interaction through limiting shared resource affecting participants.",
+      "parent": "imod:Process",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "Resource availability",
+        "participant performance"
+      ],
+      "bindings": {
+        "affects": [
+          "ecology:PopulationAbundance"
+        ],
+        "rationale": "Potential demographics require context; shared use insufficient."
+      },
+      "source_ids": [
+        "NPS"
+      ],
+      "positive": "Supported limitation",
+      "negative": "Use without limitation",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Process",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "ecology-c09",
+      "name": "FeedsOn",
+      "category": "relationship",
+      "definition": "Consumer-to-food-organism trophic association in stated context.",
+      "parent": "imod:Relationship",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "life:Organism",
+        "target": "life:Organism",
+        "rationale": "Supported link, not energy-flow mechanism."
+      },
+      "source_ids": [
+        "FOOD"
+      ],
+      "positive": "Supported trophic association",
+      "negative": "Proximity",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Relationship",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "ecology-c10",
+      "name": "Shelters",
+      "category": "relationship",
+      "definition": "Remnant-to-organism shelter provision in documented use context.",
+      "parent": "imod:Relationship",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "life:BiologicalRemnant",
+        "target": "life:Organism",
+        "rationale": "Use/effect evidence required; not generic value."
+      },
+      "source_ids": [
+        "NPS"
+      ],
+      "positive": "Animal uses snag",
+      "negative": "Unoccupied snag assumed benefit",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Relationship",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "ecology-c11",
+      "name": "Parasitizes",
+      "category": "relationship",
+      "definition": "Association benefiting parasite and harming host on specified outcome axes.",
+      "parent": "imod:Relationship",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "life:Organism",
+        "target": "life:Organism",
+        "rationale": "Direction matters; close association alone insufficient."
+      },
+      "source_ids": [
+        "SYMBIOSIS"
+      ],
+      "positive": "Host harm with parasite benefit",
+      "negative": "Commensal association",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Relationship",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "ecology-c12",
+      "name": "Mutualism",
+      "category": "relationship",
+      "definition": "Association benefiting both participants under specified outcomes/context.",
+      "parent": "imod:Relationship",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "life:Organism",
+        "target": "life:Organism",
+        "rationale": "Two-sided evaluation; outcome can vary by context."
+      },
+      "source_ids": [
+        "SYMBIOSIS"
+      ],
+      "positive": "Supported reciprocal benefits",
+      "negative": "Association alone",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Relationship",
+      "category_issue": "Scientifically symmetric reading; bond versus directed relationship unresolved. Endpoint labels do not establish direction.",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "ecology-c13",
+      "name": "CompetesWith",
+      "category": "relationship",
+      "definition": "Organism pair sharing limiting resource with interaction evidence.",
+      "parent": "imod:Relationship",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "life:Organism",
+        "target": "life:Organism",
+        "rationale": "Ecological competition; no inference from shared resource alone."
+      },
+      "source_ids": [
+        "NPS"
+      ],
+      "positive": "Competitive effect supported",
+      "negative": "Unlimited shared resource",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Relationship",
+      "category_issue": "Scientifically symmetric reading; bond versus directed relationship unresolved. Endpoint labels do not establish direction.",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "ecology-c14",
+      "name": "LocalExtirpation",
+      "category": "event",
+      "definition": "Bounded local population cessation through occurrences.",
+      "parent": "imod:Event",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "PopulationAbundance",
+        "detection evidence"
+      ],
+      "bindings": {
+        "affects": [
+          "ecology:Population"
+        ],
+        "rationale": "Not global extinction; nondetection insufficient, consequences unimplemented."
+      },
+      "source_ids": [
+        "NPS"
+      ],
+      "positive": "Supported local cessation",
+      "negative": "Empty survey",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Event",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "ecology-c15",
+      "name": "Recruitment",
+      "category": "event",
+      "definition": "Entry of individual into defined demographic observation class.",
+      "parent": "imod:Event",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "Individual size or stage",
+        "PopulationAbundance"
+      ],
+      "bindings": {
+        "affects": [
+          "ecology:PopulationAbundance"
+        ],
+        "rationale": "Boundary explicit and contextual; not necessarily birth. Specialist source pending."
+      },
+      "source_ids": [
+        "NPS"
+      ],
+      "positive": "Entry to census class",
+      "negative": "Growth without class crossing",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "blocked",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Event",
+      "evidence_scope": "Insufficient direct source support for this precise proposed boundary or binding in inspected source; research lead only, blocked pending targeted primary evidence.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "ecology-c16",
+      "name": "CommunityDisturbance",
+      "category": "event",
+      "definition": "Bounded disturbance episode affecting a delimited community.",
+      "parent": "imod:Event",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "CommunityBiomass",
+        "species composition"
+      ],
+      "bindings": {
+        "affects": [
+          "ecology:Community"
+        ],
+        "rationale": "Fire one trigger; magnitude/direction not guaranteed."
+      },
+      "source_ids": [
+        "DENALI"
+      ],
+      "positive": "Observed fire episode",
+      "negative": "Any change assumed disturbance",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Event",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "ecology-c17",
+      "name": "PopulationAbundance",
+      "category": "quality",
+      "definition": "Number of population members at the observation support.",
+      "parent": "imod:Numerosity",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "target": "ecology:Population",
+        "rationale": "Membership/detection explicit."
+      },
+      "source_ids": [
+        "FOOD"
+      ],
+      "positive": "Defined member count",
+      "negative": "Species count",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Numerosity",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "ecology-c18",
+      "name": "SpeciesRichness",
+      "category": "quality",
+      "definition": "Number of distinct species identities under declared classification and sampling context.",
+      "parent": "imod:Numerosity",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "target": "ecology:Community",
+        "rationale": "Authority/detection convention required; not total biodiversity."
+      },
+      "source_ids": [
+        "EPA"
+      ],
+      "positive": "Species count",
+      "negative": "Individual count",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Numerosity",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "ecology-c19",
+      "name": "CommunityBiomass",
+      "category": "quality",
+      "definition": "Mass in delimited living community components.",
+      "parent": "imod:Mass",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "target": "ecology:Community",
+        "rationale": "Pool/wet-dry convention external; dead material separate."
+      },
+      "source_ids": [
+        "FOOD"
+      ],
+      "positive": "Living mass pool",
+      "negative": "All organic matter",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Mass",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    }
+  ],
+  "questions": [
+    {
+      "id": "ecology-q01",
+      "text": "Which organisms are feeding on which others in the recovering burn area?",
+      "source_ids": [
+        "FOOD"
+      ],
+      "expression": "ecology:FeedsOn linking life:Organism to life:Organism",
+      "expected_type": "relationship",
+      "positive": "Observed trophic link",
+      "negative": "Spatial co-occurrence",
+      "draft_order": 1,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "ecology-c09"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Observed trophic link; excludes Spatial co-occurrence. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Observed trophic link; excludes Spatial co-occurrence. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "ecology-q02",
+      "text": "How many individuals of a specified population remain after fire?",
+      "source_ids": [
+        "NPS"
+      ],
+      "expression": "ecology:PopulationAbundance of ecology:Population",
+      "expected_type": "quality",
+      "positive": "Bounded population census",
+      "negative": "All organisms irrespective of population",
+      "draft_order": 2,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "ecology-c17"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Bounded population census; excludes All organisms irrespective of population. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Bounded population census; excludes All organisms irrespective of population. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "ecology-q03",
+      "text": "Has the mix of species changed during recovery?",
+      "source_ids": [
+        "NPS"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "positive": "Compare {A,B} with {C,D}: richness remains 2 while species membership changes completely.",
+      "negative": "Zero richness change interpreted as unchanged species composition.",
+      "draft_order": 3,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "ecology-c18",
+        "ecology-c02"
+      ],
+      "dependencies": [
+        "Missing community species-composition observable with taxon identity and optional relative-abundance basis.",
+        "Missing replacement/turnover comparison over compatible boundaries, supports and taxonomic versions.",
+        "Richness remains only an insufficient component: {A,B} and {C,D} both have richness 2 but complete species replacement.",
+        "No full grammar expression selected; community ancestry, sampling/detection and comparison model remain blocked."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Resolve changes in species identities (and abundance if selected), not merely the number of species.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Resolve changes in species identities (and abundance if selected), not merely the number of species.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation",
+      "components": [
+        {
+          "id": "richness-only",
+          "expression": "change in ecology:SpeciesRichness of ecology:Community",
+          "expression_result_category": "process",
+          "role": "insufficient_component",
+          "grammar_status": "parse_pass",
+          "limitation": "Change in species count cannot detect replacement when richness stays constant."
+        }
+      ],
+      "missing_observables": [
+        {
+          "working_name": "community species composition",
+          "status": "upstream/domain articulation gap, not a declared concept",
+          "meaning": "Taxon-identified membership of the delimited community, with an explicit choice of incidence-only or abundance-weighted representation.",
+          "bearer": "ecology:Community (identity and category still blocked)",
+          "dependencies": [
+            "Comparable community boundaries and observation supports",
+            "Versioned taxonomic authority/identity matching",
+            "Separate detection/sampling evidence so nondetection is not absence"
+          ]
+        },
+        {
+          "working_name": "species replacement or compositional turnover",
+          "status": "derived comparison/model gap, not a declared concept",
+          "meaning": "Changes in taxon identities and, if selected, relative abundances across comparable community observations; choice of comparison metric not yet made.",
+          "dependencies": [
+            "Resolved community species composition at compared contexts",
+            "An explicit metric or set comparison after meaning review; no generic richness substitution"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ecology-q04",
+      "text": "Are dead trees providing shelter for surviving animals?",
+      "source_ids": [
+        "NPS"
+      ],
+      "expression": "ecology:Shelters linking life:BiologicalRemnant to life:Organism",
+      "expected_type": "relationship",
+      "positive": "Occupied snag shelter",
+      "negative": "Any standing dead tree assigned benefit",
+      "draft_order": 4,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "ecology-c10"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Occupied snag shelter; excludes Any standing dead tree assigned benefit. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Occupied snag shelter; excludes Any standing dead tree assigned benefit. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "ecology-q05",
+      "text": "Does a parasite benefit while its host is harmed?",
+      "source_ids": [
+        "SYMBIOSIS"
+      ],
+      "expression": "ecology:Parasitizes linking life:Organism to life:Organism",
+      "expected_type": "relationship",
+      "positive": "Evidence of feeding/harm in scoped interaction",
+      "negative": "Close association assumed parasitism",
+      "draft_order": 5,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "ecology-c11"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Evidence of feeding/harm in scoped interaction; excludes Close association assumed parasitism. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Evidence of feeding/harm in scoped interaction; excludes Close association assumed parasitism. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "ecology-q06",
+      "text": "Are two associated organisms both benefiting from the interaction?",
+      "source_ids": [
+        "SYMBIOSIS"
+      ],
+      "expression": "ecology:Mutualism linking life:Organism to life:Organism",
+      "expected_type": "relationship",
+      "positive": "Benefits on specified outcome axes",
+      "negative": "Association alone",
+      "draft_order": 6,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "ecology-c12"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Benefits on specified outcome axes; excludes Association alone. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Benefits on specified outcome axes; excludes Association alone. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "ecology-q07",
+      "text": "Are newly arriving organisms establishing local reproducing populations?",
+      "source_ids": [
+        "NPS"
+      ],
+      "expression": "ecology:Colonization",
+      "expected_type": "process",
+      "positive": "Arrival followed by establishment criterion",
+      "negative": "Transient visitor",
+      "draft_order": 7,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "ecology-c04"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Arrival followed by establishment criterion; excludes Transient visitor. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Arrival followed by establishment criterion; excludes Transient visitor. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "ecology-q08",
+      "text": "Did the last locally surviving individual die, or was the population not found?",
+      "source_ids": [
+        "NPS"
+      ],
+      "expression": "ecology:LocalExtirpation",
+      "expected_type": "event",
+      "positive": "Bounded local cessation with detection evidence",
+      "negative": "One negative survey",
+      "draft_order": 8,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "ecology-c14"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Bounded local cessation with detection evidence; excludes One negative survey. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Bounded local cessation with detection evidence; excludes One negative survey. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "ecology-q09",
+      "text": "How much living material is present in the community?",
+      "source_ids": [
+        "FOOD"
+      ],
+      "expression": "ecology:CommunityBiomass of ecology:Community",
+      "expected_type": "quality",
+      "positive": "Defined living biomass pool",
+      "negative": "Total wet soil mass",
+      "draft_order": 9,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "ecology-c19"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Defined living biomass pool; excludes Total wet soil mass. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Defined living biomass pool; excludes Total wet soil mass. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "ecology-q10",
+      "text": "Which feeding links could carry a disturbance beyond the burned patch?",
+      "source_ids": [
+        "FOOD"
+      ],
+      "expression": "ecology:FeedsOn linking life:Organism to life:Organism",
+      "expected_type": "relationship",
+      "positive": "Supported links; effects require model",
+      "negative": "All links assumed equally strong",
+      "draft_order": 10,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "ecology-c09"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Supported links; effects require model; excludes All links assumed equally strong. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Supported links; effects require model; excludes All links assumed equally strong. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "ecology-q11",
+      "text": "Does an aquatic community meet a locally chosen reference condition?",
+      "source_ids": [
+        "EPA"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "positive": "Matched reference waterbody and criteria",
+      "negative": "Universal healthy threshold",
+      "draft_order": 11,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate.",
+        "Explicit gap: reference authority/model gap; unavailable evidence does not imply false/zero/unchanged.",
+        "UPSTREAM GAP: BiologicalCondition identity/reference distinction not established; no local workaround."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "expected_interpretation": "Matched reference waterbody and criteria; excludes Universal healthy threshold. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Matched reference waterbody and criteria; excludes Universal healthy threshold. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "ecology-q12",
+      "text": "Has a disturbance started a shift in community composition?",
+      "source_ids": [
+        "NPS"
+      ],
+      "expression": "ecology:Succession",
+      "expected_type": "process",
+      "positive": "Documented temporal replacement",
+      "negative": "Automatic fixed trajectory after every fire",
+      "draft_order": 12,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "ecology-c05"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Documented temporal replacement; excludes Automatic fixed trajectory after every fire. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Documented temporal replacement; excludes Automatic fixed trajectory after every fire. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "ecology-q13",
+      "text": "Is a habitat patch occupied continuously or only occasionally?",
+      "source_ids": [
+        "FOOD"
+      ],
+      "expression": "ecology:HabitatPatch",
+      "expected_type": "subject",
+      "positive": "Occupancy records for defined organism context",
+      "negative": "Suitability equated with presence",
+      "draft_order": 13,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "ecology-c03"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Occupancy records for defined organism context; excludes Suitability equated with presence. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Occupancy records for defined organism context; excludes Suitability equated with presence. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "ecology-q14",
+      "text": "Do organisms compete for the same limiting resource?",
+      "source_ids": [
+        "NPS"
+      ],
+      "expression": "ecology:CompetesWith linking life:Organism to life:Organism",
+      "expected_type": "relationship",
+      "positive": "Resource limitation and interaction evidence",
+      "negative": "Same resource use alone",
+      "draft_order": 14,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "ecology-c13"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Resource limitation and interaction evidence; excludes Same resource use alone. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Resource limitation and interaction evidence; excludes Same resource use alone. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "ecology-q15",
+      "text": "Would unchanged species richness prove the ecosystem has recovered?",
+      "source_ids": [
+        "EPA"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "positive": "Composition/functions/reference considered separately",
+      "negative": "One summary metric equated with recovery",
+      "draft_order": 15,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "ecology-c18"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate.",
+        "Explicit gap: negative semantic probe; unavailable evidence does not imply false/zero/unchanged."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "expected_interpretation": "Composition/functions/reference considered separately; excludes One summary metric equated with recovery. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Composition/functions/reference considered separately; excludes One summary metric equated with recovery. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    }
+  ],
+  "quality_summaries": [
+    {
+      "quality": "Composition, abundance and reference-comparable functions",
+      "proposed_summary": "Biological condition class",
+      "basis": "Authority-defined multi-quality summary; not universal health. Schemes may overlap and need not be exhaustive.",
+      "status": "provisional; no declaration"
+    },
+    {
+      "quality": "Participant outcomes of interaction",
+      "proposed_summary": "Mutualistic/commensal/parasitic",
+      "basis": "Benefit/harm comparisons need stated outcome and counterfactual. Context can reverse outcome; no fixed universal identity.",
+      "status": "provisional; no declaration"
+    }
+  ],
+  "ambiguities": [
+    {
+      "id": "ecology-a01",
+      "issue": "Interactions, population/community observations and disturbance/recovery. Population and Community compete with configuration readings; their existing agent declarations are not presumed valid.",
+      "decision": "Human category/namespace consolidation required; legacy compatibility is not sufficient reason to retain meanings.",
+      "blocking": true
+    },
+    {
+      "id": "ecology-a02",
+      "issue": "Many relevant parameter qualities and participant kinds lack current declarations.",
+      "decision": "Open upstream issues. Parameters here describe relevant qualities, not ontology model inputs or equations.",
+      "blocking": true
+    },
+    {
+      "id": "ecology-a03",
+      "issue": "Bounded event versus ongoing process reading and object continuity.",
+      "decision": "Review delimitation and identity; separate change resolution requires occurrent, never no-change inference.",
+      "blocking": true
+    },
+    {
+      "id": "ecology-a04",
+      "issue": "Bryce and Denali have different ecological settings and variable fire responses.",
+      "decision": "No universal recovery trajectory or mandatory fire benefit; mechanisms belong in models.",
+      "blocking": false
+    },
+    {
+      "id": "ecology-a05",
+      "issue": "Generic root inheritance is not an additional scientific specialization.",
+      "decision": "Keep foundational type reference separate from selected parent; seek meaningful imported context or explicit user-reviewed relaxation upstream. No redundant is declaration.",
+      "blocking": true
+    }
+  ],
+  "coverage": {
+    "category_counts": {
+      "subject": 3,
+      "process": 5,
+      "relationship": 5,
+      "event": 3,
+      "quality": 3
+    },
+    "category_shortfalls": {
+      "subject": 2,
+      "event": 2
+    },
+    "question_count": 15,
+    "weak_source_areas": "No expert interviews, systematic synthesis or assay-standard review. Introductory sources motivate vocabulary but do not establish all operational boundaries.",
+    "incidence": {
+      "ecology-c01": [],
+      "ecology-c02": [],
+      "ecology-c03": [
+        "ecology-q13"
+      ],
+      "ecology-c04": [
+        "ecology-q07"
+      ],
+      "ecology-c05": [
+        "ecology-q12"
+      ],
+      "ecology-c06": [],
+      "ecology-c07": [],
+      "ecology-c08": [],
+      "ecology-c09": [
+        "ecology-q01",
+        "ecology-q10"
+      ],
+      "ecology-c10": [
+        "ecology-q04"
+      ],
+      "ecology-c11": [
+        "ecology-q05"
+      ],
+      "ecology-c12": [
+        "ecology-q06"
+      ],
+      "ecology-c13": [
+        "ecology-q14"
+      ],
+      "ecology-c14": [
+        "ecology-q08"
+      ],
+      "ecology-c15": [],
+      "ecology-c16": [],
+      "ecology-c17": [
+        "ecology-q02"
+      ],
+      "ecology-c18": [
+        "ecology-q03",
+        "ecology-q15"
+      ],
+      "ecology-c19": [
+        "ecology-q09"
+      ]
+    },
+    "unused_candidates": [
+      "ecology-c01",
+      "ecology-c02",
+      "ecology-c06",
+      "ecology-c07",
+      "ecology-c08",
+      "ecology-c15",
+      "ecology-c16"
+    ],
+    "independent_holdout": "None. Source-first order is retained; author had prior domain knowledge. Fresh expert probes required.",
+    "explored_candidates": 19,
+    "blocked_candidates": 19,
+    "scientifically_reviewed_candidates": 0,
+    "semantically_ready_candidates": 0,
+    "count_interpretation": "Category counts are explored records, not validated coverage. The current imported-derivation gate blocks all records; conceptual scientific plausibility is separately recorded."
+  },
+  "validation": {
+    "source_review": "Retrieved agency explanations and authored textbook references; not human domain review.",
+    "grammar": "untested by dossier author",
+    "adaptation": "not run on draft inventory",
+    "semantic": "unapproved; root reference existence is not valid scientific specialization",
+    "model_execution": "not run; unresolved is open-world unknown",
+    "consequence_runtime": "not implemented; syntax-only implication/detection",
+    "approval": "none",
+    "import_baseline": "imod master 608bef150ced0a109db98a5aad64ba4461beaa54; src files inspected in sandbox; current dossier does not change those imports",
+    "alignment_rule": "Generic root parent values record foundational type context only. Never serialize them as redundant explicit is aliases. User-specific imported-domain derivation remains blocked; context pack permits keyword inheritance but this task asks for stronger context.",
+    "human_approval": "none; source/ontology review outstanding",
+    "type_context_warning": "Reference existence and grammar acceptance do not establish scientific specialization."
+  },
+  "invalid_probes": [
+    {
+      "id": "ecology-negative01",
+      "expression": "ecology:FeedsOn linking life:Organism to life:Organism",
+      "mutation": "Treat absence of model/evidence as false, zero or unchanged.",
+      "expected": "Reject semantic interpretation; open-world unknown. Grammar may accept unchanged expression.",
+      "execution": "not run"
+    },
+    {
+      "id": "ecology-negative02",
+      "expression": "ecology:FeedsOn linking imod:Mass to imod:Mass",
+      "expected": "Reject quality endpoints for substantial relationship. Syntax may still pass.",
+      "execution": "not run"
+    }
+  ]
+}

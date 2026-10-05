@@ -1,0 +1,1057 @@
+{
+  "dossier_version": "0.1",
+  "domain": "earth",
+  "status": "draft_for_human_review_with_blockers",
+  "scope": "Minimal shared physical Earth bearers and earth-surface transformations that other disciplines can import. Not land-cover taxonomy, coordinate infrastructure or a replacement for climate/hydrology/geology.",
+  "imports": [
+    {
+      "namespace": "imod",
+      "source": "src/imod.kwv",
+      "revision": "46c695b8e360b4e2c1180c57c203844d53723258",
+      "role": "imported upper context",
+      "status": "source_exists; proposed concepts separately blocked",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+    },
+    {
+      "namespace": "physical",
+      "source": "src/physical.kwv",
+      "revision": "46c695b8e360b4e2c1180c57c203844d53723258",
+      "role": "imported upper context",
+      "status": "source_exists; proposed concepts separately blocked",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "3fb1809902f4d9534a5d8ac3d5e4372cd37a9a3b96de84e7f51e2d13270c345a"
+    }
+  ],
+  "sources": [
+    {
+      "id": "LOCAL",
+      "title": "Pinned ontology/context pack and user change commitments",
+      "url": "../METHOD.md",
+      "locator": "METHOD change boundary; src/imod.kwv:289-447; src/physical.kwv; src/earth.kwv",
+      "scope": "Local design evidence, not external science; current comments not automatically accepted.",
+      "status": "local_source_read",
+      "retrieved": "2026-10-03",
+      "access_note": "Web tool search-index/full content read; Gold Book HTML403 avoided by returned primary PDF/plain/JSON. No expert discussion."
+    },
+    {
+      "id": "USGS-DESERT",
+      "title": "USGS Our Dynamic Desert",
+      "url": "https://pubs.usgs.gov/of/2004/1007/erosion.html",
+      "locator": "2004 report; page updated2009-12-18; Weathering and Erosion",
+      "scope": "Mojave observations distinguish weathering, erosion, debris transport; regional evidence not universal rates.",
+      "status": "primary_source_content_reviewed",
+      "retrieved": "2026-10-03",
+      "access_note": "Web tool search-index/full content read; Gold Book HTML403 avoided by returned primary PDF/plain/JSON. No expert discussion."
+    },
+    {
+      "id": "USGS-INTERIOR",
+      "title": "USGS The Interior of the Earth",
+      "url": "https://pubs.usgs.gov/gip/interior/",
+      "locator": "Crust, mantle and core sections; available search-index text",
+      "scope": "Earth layering, plate composition and seismic inference; approximate pedagogical model.",
+      "status": "primary_source_content_reviewed",
+      "retrieved": "2026-10-03",
+      "access_note": "Web tool search-index/full content read; Gold Book HTML403 avoided by returned primary PDF/plain/JSON. No expert discussion."
+    },
+    {
+      "id": "USGS-TRACER",
+      "title": "Bierman et al. Erosion weathering sedimentation",
+      "url": "https://pubs.usgs.gov/publication/70196623",
+      "locator": "1998 chapter19 pp647-678; abstract only",
+      "scope": "Tracer interpretation limitations; historical integration not instantaneous weathering.",
+      "status": "primary_source_content_reviewed",
+      "retrieved": "2026-10-03",
+      "access_note": "Web tool search-index/full content read; Gold Book HTML403 avoided by returned primary PDF/plain/JSON. No expert discussion."
+    }
+  ],
+  "concepts": [
+    {
+      "id": "earth-TerrestrialPlanetBody",
+      "name": "TerrestrialPlanetBody",
+      "category": "subject",
+      "definition": "Earth viewed as one physical planetary body; terrestrial here identifies Earth, not all rocky planets.",
+      "parent": "physical:MaterialBody",
+      "parent_status": "blocked",
+      "ancestry_note": "Proposed imported physical:MaterialBody is absent from current src; upstream issue, no local workaround.",
+      "qualities": [
+        "imod:Mass",
+        "imod:Volume"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "USGS-INTERIOR"
+      ],
+      "positive": "Earth as planetary body",
+      "negative": "administrative country",
+      "status": "blocked",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "blocked",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "earth-CrustalBody",
+      "name": "CrustalBody",
+      "category": "subject",
+      "definition": "Specified bounded crustal portion, distinguished from mantle by geological evidence.",
+      "parent": "physical:MaterialBody",
+      "parent_status": "blocked",
+      "ancestry_note": "Proposed imported physical:MaterialBody is absent from current src; upstream issue, no local workaround.",
+      "qualities": [
+        "physical:Depth",
+        "imod:Temperature",
+        "composition missing"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "USGS-INTERIOR"
+      ],
+      "positive": "continental crustal section",
+      "negative": "whole lithospheric plate",
+      "status": "blocked",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "blocked",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "earth-LithosphericPlate",
+      "name": "LithosphericPlate",
+      "category": "subject",
+      "definition": "Coherently moving lithospheric body including crust and uppermost mantle.",
+      "parent": "physical:MaterialBody",
+      "parent_status": "blocked",
+      "ancestry_note": "Proposed imported physical:MaterialBody is absent from current src; upstream issue, no local workaround.",
+      "qualities": [
+        "thickness missing",
+        "vector velocity upstream gap"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "USGS-INTERIOR"
+      ],
+      "positive": "identified tectonic plate",
+      "negative": "crust alone or electoral district",
+      "status": "blocked",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "blocked",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "earth-RockBody",
+      "name": "RockBody",
+      "category": "subject",
+      "definition": "Bounded coherent geological material body under a specified continuity criterion.",
+      "parent": "physical:MaterialBody",
+      "parent_status": "blocked",
+      "ancestry_note": "Proposed imported physical:MaterialBody is absent from current src; upstream issue, no local workaround.",
+      "qualities": [
+        "imod:Mass",
+        "imod:Volume",
+        "composition missing"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "positive": "identified exposed rock mass",
+      "negative": "rock-type classification code",
+      "status": "blocked",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "blocked",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "earth-SedimentDeposit",
+      "name": "SedimentDeposit",
+      "category": "subject",
+      "definition": "Bounded accumulation of deposited geological particulate material.",
+      "parent": "physical:MaterialBody",
+      "parent_status": "blocked",
+      "ancestry_note": "Proposed imported physical:MaterialBody is absent from current src; upstream issue, no local workaround.",
+      "qualities": [
+        "imod:Mass",
+        "imod:Volume",
+        "grain-size distribution missing"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "positive": "identified alluvial deposit",
+      "negative": "particles still transported in fluid",
+      "status": "blocked",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "blocked",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "earth-Weathering",
+      "name": "Weathering",
+      "category": "process",
+      "definition": "In-place alteration or breakdown of geological material.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "imod:Temperature",
+        "water availability missing",
+        "composition missing"
+      ],
+      "bindings": {
+        "affects": "rock constitution or fragmentation",
+        "creates": "weathered material only when separately individuated",
+        "confers": []
+      },
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "positive": "rock disintegrates in place",
+      "negative": "unchanged rock transported downstream",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "earth-Erosion",
+      "name": "Erosion",
+      "category": "process",
+      "definition": "Removal of material from an identified source land/rock body.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "transport forcing missing",
+        "material cohesion missing",
+        "mass removal rate missing"
+      ],
+      "bindings": {
+        "affects": "source material mass and potentially topographic elevation",
+        "creates": [],
+        "confers": []
+      },
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "positive": "material removed from slope",
+      "negative": "datum correction changes reported elevation",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "earth-SedimentDeposition",
+      "name": "SedimentDeposition",
+      "category": "process",
+      "definition": "Accumulation of previously transported sediment at an identified receiving location.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "transport velocity upstream gap",
+        "grain size missing",
+        "sediment flux missing"
+      ],
+      "bindings": {
+        "affects": "receiving deposit mass",
+        "creates": "earth:SedimentDeposit only when new body meets individuation rule",
+        "confers": []
+      },
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "positive": "sediment accumulates on fan",
+      "negative": "sediment passes without settling",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "earth-TectonicUplift",
+      "name": "TectonicUplift",
+      "category": "process",
+      "definition": "Upward displacement of geological material relative to a specified reference under tectonic deformation.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "vertical displacement missing",
+        "stress missing"
+      ],
+      "bindings": {
+        "affects": "material elevation relative to declared reference",
+        "creates": [],
+        "confers": []
+      },
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "positive": "tectonic rise of geological body",
+      "negative": "new vertical datum",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "earth-DepositDerivedFrom",
+      "name": "DepositDerivedFrom",
+      "category": "relationship",
+      "definition": "Directed material provenance of a deposit from a specified source geological body through identified transport.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "provenance fraction missing"
+      ],
+      "bindings": {
+        "source": "earth:SedimentDeposit",
+        "target": "earth:RockBody",
+        "rationale": "Requires material provenance evidence, not proximity or universal single source."
+      },
+      "source_ids": [
+        "USGS-TRACER"
+      ],
+      "positive": "traced sediment source contribution",
+      "negative": "nearest mountain without transport evidence",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "earth-PlateContactsPlate",
+      "name": "PlateContactsPlate",
+      "category": "relationship",
+      "definition": "Physical contact of specified lithospheric plate bodies along their interface.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "relative vector motion missing"
+      ],
+      "bindings": {
+        "source": "earth:LithosphericPlate",
+        "target": "earth:LithosphericPlate",
+        "rationale": "Symmetric physical relation; bond choice pending. Divergent/convergent are kinematic summaries, not disjoint bodies."
+      },
+      "source_ids": [
+        "USGS-INTERIOR"
+      ],
+      "positive": "identified contacting plate pair",
+      "negative": "two distant named plates",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "earth-RockfallEpisode",
+      "name": "RockfallEpisode",
+      "category": "event",
+      "definition": "Bounded detachment and downslope fall of rock from a source slope.",
+      "parent": "imod:Event",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "imod:Mass",
+        "displacement missing"
+      ],
+      "bindings": {
+        "affects": "source body continuity",
+        "creates": "detached rock bodies when separately individuated",
+        "confers": []
+      },
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "positive": "observed rockfall",
+      "negative": "slow chemical alteration without movement",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "earth-DebrisFlowEpisode",
+      "name": "DebrisFlowEpisode",
+      "category": "event",
+      "definition": "Bounded movement of water and geological debris as a flowing mass with declared initiation and cessation criteria.",
+      "parent": "imod:Event",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "water content missing",
+        "sediment concentration missing",
+        "velocity upstream gap"
+      ],
+      "bindings": {
+        "affects": "source/receiving material distribution",
+        "creates": "deposit only if deposition occurs; not guaranteed",
+        "confers": []
+      },
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "positive": "one observed debris-flow surge",
+      "negative": "clear streamflow without debris-rich moving mass",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "earth-DepositionalEpisode",
+      "name": "DepositionalEpisode",
+      "category": "event",
+      "definition": "Bounded interval of sediment accumulation at a specified receiving body.",
+      "parent": "imod:Event",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "sediment mass flux missing",
+        "imod:Mass"
+      ],
+      "bindings": {
+        "affects": "deposit mass and extent",
+        "creates": "new deposit if identity criteria satisfied",
+        "confers": []
+      },
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "positive": "one bounded depositional pulse",
+      "negative": "an old deposit observed without formation event",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    }
+  ],
+  "questions": [
+    {
+      "id": "earth-q01",
+      "text": "What physical body is meant by the Earth in this observation?",
+      "concept_ids": [
+        "earth-TerrestrialPlanetBody"
+      ],
+      "expression": "earth:TerrestrialPlanetBody",
+      "expected_type": "subject",
+      "dependencies": [
+        "Planet identity vs region vs material sample.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "Earth as planetary body",
+      "negative": "administrative country",
+      "source_ids": [
+        "USGS-INTERIOR"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "sequence": 1,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Planet identity vs region vs material sample.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Planet identity vs region vs material sample.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "earth-q02",
+      "text": "Does a plate contain only crust or also upper mantle?",
+      "concept_ids": [
+        "earth-LithosphericPlate",
+        "earth-CrustalBody"
+      ],
+      "expression": "earth:LithosphericPlate",
+      "expected_type": "subject",
+      "dependencies": [
+        "Lithospheric plate composition vs crust.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "identified tectonic plate; continental crustal section",
+      "negative": "crust alone or electoral district; whole lithospheric plate",
+      "source_ids": [
+        "USGS-INTERIOR"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "sequence": 2,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Lithospheric plate composition vs crust.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Lithospheric plate composition vs crust.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "earth-q03",
+      "text": "Where does the crust end beneath this place?",
+      "concept_ids": [
+        "earth-CrustalBody"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Boundary inferred from wave response; not arbitrary map border.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
+        "gap: crust-mantle interface quality/identity and inverse model"
+      ],
+      "positive": "continental crustal section",
+      "negative": "whole lithospheric plate",
+      "source_ids": [
+        "USGS-INTERIOR"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "sequence": 3,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Boundary inferred from wave response; not arbitrary map border.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Boundary inferred from wave response; not arbitrary map border.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "earth-q04",
+      "text": "What distinguishes a water body from the region surrounding it?",
+      "concept_ids": [],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Material body vs volumetric geographical region.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
+        "gap: earth:WaterBody existing empty definition and Region volumetric/areal conflict"
+      ],
+      "positive": "Material body vs volumetric geographical region.",
+      "negative": "Treating this evidence/representation distinction as an automatically valid domain declaration.",
+      "source_ids": [
+        "LOCAL"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "sequence": 4,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Material body vs volumetric geographical region.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Material body vs volumetric geographical region.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "earth-q05",
+      "text": "Can a coastal strip be identified without classifying every land-cover pixel?",
+      "concept_ids": [],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Shared geographic bearer vs authority classification.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
+        "gap: Coast bearer definition and shoreline convention; authorities separate"
+      ],
+      "positive": "Shared geographic bearer vs authority classification.",
+      "negative": "Treating this evidence/representation distinction as an automatically valid domain declaration.",
+      "source_ids": [
+        "LOCAL"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "sequence": 5,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Shared geographic bearer vs authority classification.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Shared geographic bearer vs authority classification.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "earth-q06",
+      "text": "Is this hill lower because material left it or because our datum changed?",
+      "concept_ids": [
+        "earth-Erosion",
+        "earth-RockBody"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Erosion-driven elevation change vs representation correction.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
+        "gap: explicit elevation quality/reference; no implicit change model"
+      ],
+      "positive": "material removed from slope; identified exposed rock mass",
+      "negative": "datum correction changes reported elevation; rock-type classification code",
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "sequence": 6,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Erosion-driven elevation change vs representation correction.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Erosion-driven elevation change vs representation correction.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "earth-q07",
+      "text": "Did rock break down in place or move elsewhere?",
+      "concept_ids": [
+        "earth-Weathering",
+        "earth-Erosion"
+      ],
+      "expression": "earth:Weathering",
+      "expected_type": "process",
+      "dependencies": [
+        "Weathering vs erosion and transport.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "rock disintegrates in place; material removed from slope",
+      "negative": "unchanged rock transported downstream; datum correction changes reported elevation",
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "sequence": 7,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Weathering vs erosion and transport.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Weathering vs erosion and transport.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "earth-q08",
+      "text": "Where did the sediment on this fan come from?",
+      "concept_ids": [
+        "earth-DepositDerivedFrom",
+        "earth-SedimentDeposit",
+        "earth-RockBody"
+      ],
+      "expression": "earth:DepositDerivedFrom linking earth:SedimentDeposit to earth:RockBody",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Material provenance needs transport occurrence, not mere proximity.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "traced sediment source contribution; identified alluvial deposit; identified exposed rock mass",
+      "negative": "nearest mountain without transport evidence; particles still transported in fluid; rock-type classification code",
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "sequence": 8,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Material provenance needs transport occurrence, not mere proximity.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Material provenance needs transport occurrence, not mere proximity.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "earth-q09",
+      "text": "Can slow uplift and erosion happen at the same time?",
+      "concept_ids": [
+        "earth-TectonicUplift",
+        "earth-Erosion"
+      ],
+      "expression": "earth:TectonicUplift",
+      "expected_type": "process",
+      "dependencies": [
+        "Competing occurrents, not mutually exclusive predicates.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "tectonic rise of geological body; material removed from slope",
+      "negative": "new vertical datum; datum correction changes reported elevation",
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "sequence": 9,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Competing occurrents, not mutually exclusive predicates.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Competing occurrents, not mutually exclusive predicates.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "earth-q10",
+      "text": "Was this slope movement one bounded episode?",
+      "concept_ids": [
+        "earth-RockfallEpisode",
+        "earth-DebrisFlowEpisode"
+      ],
+      "expression": "earth:DebrisFlowEpisode",
+      "expected_type": "event",
+      "dependencies": [
+        "Landslide/debris event segmentation is contextual.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "observed rockfall; one observed debris-flow surge",
+      "negative": "slow chemical alteration without movement; clear streamflow without debris-rich moving mass",
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "sequence": 10,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Landslide/debris event segmentation is contextual.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Landslide/debris event segmentation is contextual.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "earth-q11",
+      "text": "What changed when a new rock deposit formed?",
+      "concept_ids": [
+        "earth-SedimentDeposition",
+        "earth-SedimentDeposit",
+        "earth-DepositionalEpisode"
+      ],
+      "expression": "earth:SedimentDeposition",
+      "expected_type": "process",
+      "dependencies": [
+        "Deposition, deposited material and bearer extent distinguished.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "sediment accumulates on fan; identified alluvial deposit; one bounded depositional pulse",
+      "negative": "sediment passes without settling; particles still transported in fluid; an old deposit observed without formation event",
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "sequence": 11,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Deposition, deposited material and bearer extent distinguished.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Deposition, deposited material and bearer extent distinguished.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "earth-q12",
+      "text": "Is a river reach a body of water or a geographical corridor?",
+      "concept_ids": [],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Persistent place vs changing material body needs split.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
+        "gap: Reach place/material split belongs in shared earth/hydrology review"
+      ],
+      "positive": "Persistent place vs changing material body needs split.",
+      "negative": "Treating this evidence/representation distinction as an automatically valid domain declaration.",
+      "source_ids": [
+        "LOCAL"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "sequence": 12,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Persistent place vs changing material body needs split.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Persistent place vs changing material body needs split.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "earth-q13",
+      "text": "Does every visible land boundary mark a geological difference?",
+      "concept_ids": [
+        "earth-CrustalBody"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Administrative/land-use authority categories do not entail geology.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
+        "gap: no land-cover-to-geology equivalence"
+      ],
+      "positive": "continental crustal section",
+      "negative": "whole lithospheric plate",
+      "source_ids": [
+        "LOCAL"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "sequence": 13,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Administrative/land-use authority categories do not entail geology.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Administrative/land-use authority categories do not entail geology.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "earth-q14",
+      "text": "Can earthquake measurements tell us about inaccessible layers?",
+      "concept_ids": [
+        "earth-CrustalBody"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Observable meaning vs observational method/inverse model.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
+        "gap: seismic quality and inversion model outside shared earth articulation"
+      ],
+      "positive": "continental crustal section",
+      "negative": "whole lithospheric plate",
+      "source_ids": [
+        "USGS-INTERIOR"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "sequence": 14,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Observable meaning vs observational method/inverse model.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Observable meaning vs observational method/inverse model.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "earth-q15",
+      "text": "If elevation change is unresolved after erosion, may the twin continue?",
+      "concept_ids": [
+        "earth-Erosion"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Unknown change remains unresolved; not zero change or retention rule.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
+        "gap: unresolved change remains open-world; no executable retention machinery"
+      ],
+      "positive": "material removed from slope",
+      "negative": "datum correction changes reported elevation",
+      "source_ids": [
+        "LOCAL"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "sequence": 15,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Unknown change remains unresolved; not zero change or retention rule.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Unknown change remains unresolved; not zero change or retention rule.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    }
+  ],
+  "quality_summaries": [
+    {
+      "quality": "relative motion of two contacting lithospheric plates",
+      "proposed_summary": "ConvergentRelativeMotion",
+      "basis": "Directional comparison in an explicit frame, not ordinal intensity. Oblique motion may have multiple components; no universal disjoint/exhaustive partition.",
+      "status": "blocked: vector relative-motion quality upstream"
+    },
+    {
+      "quality": "grain-size distribution of sediment deposit",
+      "proposed_summary": "CoarseRelativeToClassification",
+      "basis": "Ordered summary only under a cited grain-size convention; no new thresholds supplied. Mixed distributions can overlap classes or require authority classification.",
+      "status": "blocked: standard and distribution quality not selected"
+    }
+  ],
+  "ambiguities": [
+    "UPSTREAM-MATERIAL: all five new body paths depend on absent physical:MaterialBody.",
+    "EARTH-REGION: current Region prose is volumetric while inherited identity is Areal; shared geographical bearer decision is blocking for hydrology.",
+    "EARTH-ELEVATION: relative vertical quality must identify reference; Erosion supplies change separately, never hidden in Elevation model.",
+    "EARTH-PLACEMENT: geological processes/events may migrate to geology; no mutual earth/geology imports allowed.",
+    "EARTH-PROVENANCE: DepositDerivedFrom is many-source scientifically although each relationship observation has one source/target pair; require occurrence/evidence, not adjacency.",
+    "EARTH-WATER: body/place/material meanings in existing WaterBody/Reach not resolved; water classes not copied blindly."
+  ],
+  "coverage": {
+    "counts": {
+      "subject": 5,
+      "process": 4,
+      "relationship": 2,
+      "event": 3
+    },
+    "question_count": 15,
+    "shortfalls": {
+      "subject": 0,
+      "process": 1,
+      "relationship": 3,
+      "event": 2
+    },
+    "rationale": "Five bodies, four processes, two relationships and three events expose the dependencies without making earth import downstream climate, hydrology or ecology. Chemistry is omitted from the proposed minimal dependency map until a particular composition observable needs it; this is a proposal, not a source edit. CrustalBody and LithosphericPlate are not synonyms: a plate includes uppermost mantle. RockBody and SedimentDeposit distinguish coherent source material from accumulated particulate material, but consolidation is a boundary case. Earth remains provisional: geology may own specialized tectonics and debris events, with earth retaining only common parents. Keeping these candidates visible does not prejudge that allocation. WaterBody, Region, Reach and Coast are intentionally gaps because inherited empty/ambiguous definitions should not gain authority through retention.",
+    "concept_question_incidence": {
+      "earth-TerrestrialPlanetBody": [
+        "earth-q01"
+      ],
+      "earth-CrustalBody": [
+        "earth-q02",
+        "earth-q03",
+        "earth-q13",
+        "earth-q14"
+      ],
+      "earth-LithosphericPlate": [
+        "earth-q02"
+      ],
+      "earth-RockBody": [
+        "earth-q06",
+        "earth-q08"
+      ],
+      "earth-SedimentDeposit": [
+        "earth-q08",
+        "earth-q11"
+      ],
+      "earth-Weathering": [
+        "earth-q07"
+      ],
+      "earth-Erosion": [
+        "earth-q06",
+        "earth-q07",
+        "earth-q09",
+        "earth-q15"
+      ],
+      "earth-SedimentDeposition": [
+        "earth-q11"
+      ],
+      "earth-TectonicUplift": [
+        "earth-q09"
+      ],
+      "earth-DepositDerivedFrom": [
+        "earth-q08"
+      ],
+      "earth-PlateContactsPlate": [],
+      "earth-RockfallEpisode": [
+        "earth-q10"
+      ],
+      "earth-DebrisFlowEpisode": [
+        "earth-q10"
+      ],
+      "earth-DepositionalEpisode": [
+        "earth-q11"
+      ]
+    },
+    "unused_candidates": [
+      "earth-PlateContactsPlate"
+    ],
+    "missing_vocabulary": "See null-expression questions and named upstream gaps. Missing models and unavailable consequence execution are separate.",
+    "question_first_sha256": "fea847f9ef0995161e477848f122181565f7037f370eaafb088ffb22f51ca20a",
+    "held_out": "No independence claimed; independent domain-expert probes are pending. Q14/Q15 are not labelled held-out merely because late in sequence."
+  },
+  "validation": {
+    "source_review": "Author bounded reading only; no expert approval",
+    "local_structure": "assembled with all60 source-first questions; parent may run schema/incidence checks",
+    "grammar": "untested",
+    "adaptation": "not_run",
+    "semantic_type": "provisional/blocked per record",
+    "reasoner": "not_run",
+    "model_execution": "not_run",
+    "approval": "none",
+    "semantic_negative_control": "earth:SedimentDeposit linking earth:RockBody to earth:RockBody deliberately treats a subject as relationship. Replacing Erosion by a changed elevation datum is a scientific negative even if both are syntactically expressible.",
+    "human_approval": "none; source/ontology review outstanding",
+    "type_context_warning": "Reference existence and grammar acceptance do not establish scientific specialization."
+  }
+}

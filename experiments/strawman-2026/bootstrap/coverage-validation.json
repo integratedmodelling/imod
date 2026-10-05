@@ -1,0 +1,2119 @@
+{
+  "scope": "Local research schema/reference/incidence/DAG checks only. Ready count zero: no human semantic approval or full validation.",
+  "domains": 22,
+  "concepts": 457,
+  "questions": 330,
+  "expressions": 213,
+  "errors": [],
+  "dependency_graph": {
+    "agency": [
+      "physical"
+    ],
+    "atmosphere": [
+      "earth"
+    ],
+    "biology": [
+      "life"
+    ],
+    "chemistry": [
+      "physical"
+    ],
+    "earth": [
+      "physical"
+    ],
+    "ecology": [
+      "life",
+      "biology"
+    ],
+    "economics": [],
+    "engineering": [
+      "infrastructure"
+    ],
+    "genetics": [
+      "life",
+      "biology"
+    ],
+    "geography": [
+      "earth",
+      "physical"
+    ],
+    "geology": [
+      "earth"
+    ],
+    "hydrology": [
+      "earth"
+    ],
+    "infrastructure": [],
+    "land": [
+      "earth"
+    ],
+    "life": [],
+    "oceanography": [
+      "earth"
+    ],
+    "physical": [],
+    "physics": [
+      "physical"
+    ],
+    "society": [
+      "life",
+      "physical"
+    ],
+    "sociology": [
+      "physical",
+      "society"
+    ],
+    "soil": [
+      "earth"
+    ],
+    "valuation": [
+      "physical",
+      "society"
+    ]
+  },
+  "dossiers": [
+    {
+      "domain": "agency",
+      "counts": {
+        "subject": 0,
+        "quality": 2,
+        "process": 5,
+        "relationship": 4,
+        "event": 5,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 5,
+        "process": 0,
+        "relationship": 1,
+        "event": 0
+      },
+      "all_four_category_targets_met": false,
+      "questions": 15,
+      "expressions": 8,
+      "insufficient_components": 0,
+      "blocked_candidates": 12,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "agency-c01": [
+          "agency-q01",
+          "agency-q05"
+        ],
+        "agency-c02": [
+          "agency-q01",
+          "agency-q02",
+          "agency-q08"
+        ],
+        "agency-c03": [
+          "agency-q10",
+          "agency-q13"
+        ],
+        "agency-c04": [
+          "agency-q15"
+        ],
+        "agency-c05": [
+          "agency-q14"
+        ],
+        "agency-c06": [
+          "agency-q03",
+          "agency-q11"
+        ],
+        "agency-c07": [
+          "agency-q01"
+        ],
+        "agency-c08": [
+          "agency-q03",
+          "agency-q15"
+        ],
+        "agency-c09": [
+          "agency-q07"
+        ],
+        "agency-c10": [],
+        "agency-c11": [
+          "agency-q04"
+        ],
+        "agency-c12": [
+          "agency-q06"
+        ],
+        "agency-c13": [
+          "agency-q12"
+        ],
+        "agency-c14": [
+          "agency-q10",
+          "agency-q13"
+        ],
+        "agency-c15": [
+          "agency-q08"
+        ],
+        "agency-c16": [
+          "agency-q09"
+        ]
+      },
+      "unused_candidates": [
+        "agency-c10"
+      ],
+      "sha256": "1dd273fe027d630780d8f70932203c2c7baf11bdfa8903cbe339ebcc6c23f798"
+    },
+    {
+      "domain": "atmosphere",
+      "counts": {
+        "subject": 5,
+        "quality": 5,
+        "process": 5,
+        "relationship": 3,
+        "event": 3,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 2,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
+      "questions": 15,
+      "expressions": 12,
+      "insufficient_components": 0,
+      "blocked_candidates": 7,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "atmosphere:AirBody": [
+          "atmosphere-q01",
+          "atmosphere-q03"
+        ],
+        "atmosphere:AirMass": [
+          "atmosphere-q02",
+          "atmosphere-q07",
+          "atmosphere-q11"
+        ],
+        "atmosphere:CloudBody": [],
+        "atmosphere:FrontalZone": [
+          "atmosphere-q04",
+          "atmosphere-q14"
+        ],
+        "atmosphere:TroposphericRegion": [
+          "atmosphere-q10"
+        ],
+        "atmosphere:AirTemperature": [
+          "atmosphere-q01",
+          "atmosphere-q05"
+        ],
+        "atmosphere:SpecificHumidity": [
+          "atmosphere-q02",
+          "atmosphere-q11",
+          "atmosphere-q15"
+        ],
+        "atmosphere:WindSpeed": [
+          "atmosphere-q03",
+          "atmosphere-q09"
+        ],
+        "atmosphere:WindDirection": [
+          "atmosphere-q03",
+          "atmosphere-q09",
+          "atmosphere-q12",
+          "atmosphere-q13"
+        ],
+        "atmosphere:CloudWaterContent": [],
+        "atmosphere:AirAdvection": [
+          "atmosphere-q06",
+          "atmosphere-q12"
+        ],
+        "atmosphere:AtmosphericConvection": [],
+        "atmosphere:CloudCondensation": [
+          "atmosphere-q06"
+        ],
+        "atmosphere:CloudEvaporation": [],
+        "atmosphere:AirMassModification": [],
+        "atmosphere:FrontSeparatesAirMass": [
+          "atmosphere-q04",
+          "atmosphere-q07"
+        ],
+        "atmosphere:CloudContainedInAir": [],
+        "atmosphere:AirMassOriginRegion": [],
+        "atmosphere:FrontalPassage": [
+          "atmosphere-q05"
+        ],
+        "atmosphere:WindShiftEpisode": [
+          "atmosphere-q13"
+        ],
+        "atmosphere:RainfallEpisode": [
+          "atmosphere-q08"
+        ]
+      },
+      "unused_candidates": [
+        "atmosphere:CloudBody",
+        "atmosphere:CloudWaterContent",
+        "atmosphere:AtmosphericConvection",
+        "atmosphere:CloudEvaporation",
+        "atmosphere:AirMassModification",
+        "atmosphere:CloudContainedInAir",
+        "atmosphere:AirMassOriginRegion"
+      ],
+      "sha256": "1b99168ddd446b3496ad2fbd1d1dbfae6ab89149798d800d6ff2fa7c456816ab"
+    },
+    {
+      "domain": "biology",
+      "counts": {
+        "subject": 5,
+        "quality": 4,
+        "process": 5,
+        "relationship": 3,
+        "event": 5,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 2,
+        "event": 0
+      },
+      "all_four_category_targets_met": false,
+      "questions": 15,
+      "expressions": 13,
+      "insufficient_components": 0,
+      "blocked_candidates": 22,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "biology-c01": [
+          "biology-q13"
+        ],
+        "biology-c02": [],
+        "biology-c03": [],
+        "biology-c04": [],
+        "biology-c05": [],
+        "biology-c06": [
+          "biology-q01"
+        ],
+        "biology-c07": [
+          "biology-q02",
+          "biology-q15"
+        ],
+        "biology-c08": [
+          "biology-q04"
+        ],
+        "biology-c09": [
+          "biology-q11"
+        ],
+        "biology-c10": [],
+        "biology-c11": [
+          "biology-q10"
+        ],
+        "biology-c12": [
+          "biology-q09"
+        ],
+        "biology-c13": [],
+        "biology-c14": [
+          "biology-q06"
+        ],
+        "biology-c15": [
+          "biology-q07"
+        ],
+        "biology-c16": [
+          "biology-q08"
+        ],
+        "biology-c17": [
+          "biology-q14"
+        ],
+        "biology-c18": [],
+        "biology-c19": [
+          "biology-q03",
+          "biology-q12"
+        ],
+        "biology-c20": [
+          "biology-q05"
+        ],
+        "biology-c21": [],
+        "biology-c22": []
+      },
+      "unused_candidates": [
+        "biology-c02",
+        "biology-c03",
+        "biology-c04",
+        "biology-c05",
+        "biology-c10",
+        "biology-c13",
+        "biology-c18",
+        "biology-c21",
+        "biology-c22"
+      ],
+      "sha256": "dd04b4a13dd9a2b63d5111e9820cec8062967ea477785fb867e79cfcb1e13c4b"
+    },
+    {
+      "domain": "chemistry",
+      "counts": {
+        "subject": 5,
+        "quality": 0,
+        "process": 5,
+        "relationship": 2,
+        "event": 3,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 3,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
+      "questions": 15,
+      "expressions": 9,
+      "insufficient_components": 0,
+      "blocked_candidates": 5,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "chemistry-MolecularEntity": [
+          "chemistry-q01",
+          "chemistry-q07",
+          "chemistry-q08",
+          "chemistry-q09"
+        ],
+        "chemistry-PhasePortion": [
+          "chemistry-q04",
+          "chemistry-q08",
+          "chemistry-q10",
+          "chemistry-q12",
+          "chemistry-q14"
+        ],
+        "chemistry-SolutionPortion": [
+          "chemistry-q03"
+        ],
+        "chemistry-PrecipitateBody": [
+          "chemistry-q05"
+        ],
+        "chemistry-AdsorbentBody": [
+          "chemistry-q07"
+        ],
+        "chemistry-ChemicalReaction": [
+          "chemistry-q02",
+          "chemistry-q12",
+          "chemistry-q15"
+        ],
+        "chemistry-Dissolution": [
+          "chemistry-q02",
+          "chemistry-q03"
+        ],
+        "chemistry-ChemicalPrecipitation": [
+          "chemistry-q05"
+        ],
+        "chemistry-Oxidation": [
+          "chemistry-q06"
+        ],
+        "chemistry-DissociativeAdsorption": [
+          "chemistry-q13"
+        ],
+        "chemistry-SurfaceBoundTo": [
+          "chemistry-q07",
+          "chemistry-q13"
+        ],
+        "chemistry-ConstituentOfPhase": [],
+        "chemistry-ReactionEpisode": [
+          "chemistry-q11"
+        ],
+        "chemistry-PrecipitationEpisode": [],
+        "chemistry-DissolutionEpisode": []
+      },
+      "unused_candidates": [
+        "chemistry-ConstituentOfPhase",
+        "chemistry-PrecipitationEpisode",
+        "chemistry-DissolutionEpisode"
+      ],
+      "sha256": "e4c56da45d6ba9c72a1286116429f9fd6d9e573e86959b6a8312a73e9c9225ea"
+    },
+    {
+      "domain": "earth",
+      "counts": {
+        "subject": 5,
+        "quality": 0,
+        "process": 4,
+        "relationship": 2,
+        "event": 3,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 1,
+        "relationship": 3,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
+      "questions": 15,
+      "expressions": 7,
+      "insufficient_components": 0,
+      "blocked_candidates": 5,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "earth-TerrestrialPlanetBody": [
+          "earth-q01"
+        ],
+        "earth-CrustalBody": [
+          "earth-q02",
+          "earth-q03",
+          "earth-q13",
+          "earth-q14"
+        ],
+        "earth-LithosphericPlate": [
+          "earth-q02"
+        ],
+        "earth-RockBody": [
+          "earth-q06",
+          "earth-q08"
+        ],
+        "earth-SedimentDeposit": [
+          "earth-q08",
+          "earth-q11"
+        ],
+        "earth-Weathering": [
+          "earth-q07"
+        ],
+        "earth-Erosion": [
+          "earth-q06",
+          "earth-q07",
+          "earth-q09",
+          "earth-q15"
+        ],
+        "earth-SedimentDeposition": [
+          "earth-q11"
+        ],
+        "earth-TectonicUplift": [
+          "earth-q09"
+        ],
+        "earth-DepositDerivedFrom": [
+          "earth-q08"
+        ],
+        "earth-PlateContactsPlate": [],
+        "earth-RockfallEpisode": [
+          "earth-q10"
+        ],
+        "earth-DebrisFlowEpisode": [
+          "earth-q10"
+        ],
+        "earth-DepositionalEpisode": [
+          "earth-q11"
+        ]
+      },
+      "unused_candidates": [
+        "earth-PlateContactsPlate"
+      ],
+      "sha256": "9c1cdeacadcadffc7fe4f7d515dd8cc467168a1cf66e5687e948e1746c219820"
+    },
+    {
+      "domain": "ecology",
+      "counts": {
+        "subject": 3,
+        "quality": 3,
+        "process": 5,
+        "relationship": 5,
+        "event": 3,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 2,
+        "process": 0,
+        "relationship": 0,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
+      "questions": 15,
+      "expressions": 12,
+      "insufficient_components": 1,
+      "blocked_candidates": 19,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "ecology-c01": [],
+        "ecology-c02": [
+          "ecology-q03"
+        ],
+        "ecology-c03": [
+          "ecology-q13"
+        ],
+        "ecology-c04": [
+          "ecology-q07"
+        ],
+        "ecology-c05": [
+          "ecology-q12"
+        ],
+        "ecology-c06": [],
+        "ecology-c07": [],
+        "ecology-c08": [],
+        "ecology-c09": [
+          "ecology-q01",
+          "ecology-q10"
+        ],
+        "ecology-c10": [
+          "ecology-q04"
+        ],
+        "ecology-c11": [
+          "ecology-q05"
+        ],
+        "ecology-c12": [
+          "ecology-q06"
+        ],
+        "ecology-c13": [
+          "ecology-q14"
+        ],
+        "ecology-c14": [
+          "ecology-q08"
+        ],
+        "ecology-c15": [],
+        "ecology-c16": [],
+        "ecology-c17": [
+          "ecology-q02"
+        ],
+        "ecology-c18": [
+          "ecology-q03",
+          "ecology-q15"
+        ],
+        "ecology-c19": [
+          "ecology-q09"
+        ]
+      },
+      "unused_candidates": [
+        "ecology-c01",
+        "ecology-c06",
+        "ecology-c07",
+        "ecology-c08",
+        "ecology-c15",
+        "ecology-c16"
+      ],
+      "sha256": "6e4cbae683b16de9c5faaa3e4f9388c30f7309f802ab9c9aca6700225e356e06"
+    },
+    {
+      "domain": "economics",
+      "counts": {
+        "subject": 5,
+        "quality": 7,
+        "process": 5,
+        "relationship": 5,
+        "event": 5,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 0,
+        "event": 0
+      },
+      "all_four_category_targets_met": true,
+      "questions": 15,
+      "expressions": 6,
+      "insufficient_components": 0,
+      "blocked_candidates": 9,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "economics-HouseholdUnit": [
+          "economics-q01",
+          "economics-q14"
+        ],
+        "economics-EnterpriseUnit": [
+          "economics-q02",
+          "economics-q07"
+        ],
+        "economics-EstablishmentUnit": [
+          "economics-q03"
+        ],
+        "economics-ProducedAsset": [
+          "economics-q05"
+        ],
+        "economics-InventoryLot": [],
+        "economics-Production": [
+          "economics-q03"
+        ],
+        "economics-IntermediateConsumption": [
+          "economics-q04"
+        ],
+        "economics-FinalConsumption": [],
+        "economics-CapitalFormation": [
+          "economics-q09"
+        ],
+        "economics-ConsumptionOfFixedCapital": [],
+        "economics-ControlsAsset": [],
+        "economics-OwesPayment": [
+          "economics-q07"
+        ],
+        "economics-SuppliesProducer": [],
+        "economics-PaysCompensation": [
+          "economics-q08"
+        ],
+        "economics-TransfersTo": [
+          "economics-q06"
+        ],
+        "economics-AssetSale": [
+          "economics-q11"
+        ],
+        "economics-TransferReceipt": [
+          "economics-q12"
+        ],
+        "economics-AssetDestruction": [
+          "economics-q13"
+        ],
+        "economics-ProductionInterruption": [],
+        "economics-PaymentSettlement": [],
+        "economics-DisposableIncome": [
+          "economics-q01"
+        ],
+        "economics-OutputValue": [
+          "economics-q03",
+          "economics-q10",
+          "economics-q15"
+        ],
+        "economics-AssetValue": [],
+        "economics-InventoryValue": [],
+        "economics-InputValue": [],
+        "economics-ConsumptionValue": [],
+        "economics-TransactionValue": []
+      },
+      "unused_candidates": [
+        "economics-InventoryLot",
+        "economics-FinalConsumption",
+        "economics-ConsumptionOfFixedCapital",
+        "economics-ControlsAsset",
+        "economics-SuppliesProducer",
+        "economics-ProductionInterruption",
+        "economics-PaymentSettlement",
+        "economics-AssetValue",
+        "economics-InventoryValue",
+        "economics-InputValue",
+        "economics-ConsumptionValue",
+        "economics-TransactionValue"
+      ],
+      "sha256": "0885dfce932b21814ff6d7935190f213eb4b206951a2c5edea3a9b1410f7e775"
+    },
+    {
+      "domain": "engineering",
+      "counts": {
+        "subject": 5,
+        "quality": 9,
+        "process": 5,
+        "relationship": 5,
+        "event": 5,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 0,
+        "event": 0
+      },
+      "all_four_category_targets_met": true,
+      "questions": 15,
+      "expressions": 8,
+      "insufficient_components": 0,
+      "blocked_candidates": 7,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "engineering-Pump": [
+          "engineering-q01",
+          "engineering-q12"
+        ],
+        "engineering-Valve": [
+          "engineering-q02",
+          "engineering-q09"
+        ],
+        "engineering-Transformer": [
+          "engineering-q03"
+        ],
+        "engineering-CircuitBreaker": [
+          "engineering-q04"
+        ],
+        "engineering-Bearing": [
+          "engineering-q05",
+          "engineering-q06",
+          "engineering-q08"
+        ],
+        "engineering-ProductAssembly": [
+          "engineering-q14"
+        ],
+        "engineering-ValveActuation": [
+          "engineering-q09"
+        ],
+        "engineering-ElectricalSwitching": [],
+        "engineering-ComponentRepair": [],
+        "engineering-CorrosionDamage": [
+          "engineering-q10"
+        ],
+        "engineering-JoinsComponent": [
+          "engineering-q08"
+        ],
+        "engineering-TransfersLoad": [
+          "engineering-q05"
+        ],
+        "engineering-ControlsFlow": [],
+        "engineering-TransformsSupply": [],
+        "engineering-ProtectsCircuit": [],
+        "engineering-AcceptanceTestEpisode": [
+          "engineering-q07",
+          "engineering-q15"
+        ],
+        "engineering-ComponentReplacement": [
+          "engineering-q11"
+        ],
+        "engineering-BreakerTrip": [],
+        "engineering-FunctionalFailureEpisode": [
+          "engineering-q13"
+        ],
+        "engineering-RepairCompletionEpisode": [],
+        "engineering-DeliveryCapacity": [],
+        "engineering-OperatingTemperature": [
+          "engineering-q12"
+        ],
+        "engineering-OpeningFraction": [
+          "engineering-q09"
+        ],
+        "engineering-VoltageRatio": [],
+        "engineering-BreakingCapacity": [],
+        "engineering-LoadCapacity": [
+          "engineering-q06"
+        ],
+        "engineering-AlignmentDeviation": [],
+        "engineering-ContactResistance": [],
+        "engineering-RemainingSection": []
+      },
+      "unused_candidates": [
+        "engineering-ElectricalSwitching",
+        "engineering-ComponentRepair",
+        "engineering-ControlsFlow",
+        "engineering-TransformsSupply",
+        "engineering-ProtectsCircuit",
+        "engineering-BreakerTrip",
+        "engineering-RepairCompletionEpisode",
+        "engineering-DeliveryCapacity",
+        "engineering-VoltageRatio",
+        "engineering-BreakingCapacity",
+        "engineering-AlignmentDeviation",
+        "engineering-ContactResistance",
+        "engineering-RemainingSection"
+      ],
+      "sha256": "717bc2857ed8e9f201ac14a1713b316b2f8df4e6e0f26c71e8d838fcc50a9103"
+    },
+    {
+      "domain": "genetics",
+      "counts": {
+        "subject": 5,
+        "quality": 2,
+        "process": 5,
+        "relationship": 5,
+        "event": 5,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 0,
+        "event": 0
+      },
+      "all_four_category_targets_met": true,
+      "questions": 15,
+      "expressions": 10,
+      "insufficient_components": 0,
+      "blocked_candidates": 22,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "genetics-c01": [],
+        "genetics-c02": [
+          "genetics-q15"
+        ],
+        "genetics-c03": [
+          "genetics-q03"
+        ],
+        "genetics-c04": [],
+        "genetics-c05": [],
+        "genetics-c06": [],
+        "genetics-c07": [
+          "genetics-q04"
+        ],
+        "genetics-c08": [
+          "genetics-q14"
+        ],
+        "genetics-c09": [
+          "genetics-q11"
+        ],
+        "genetics-c10": [],
+        "genetics-c11": [
+          "genetics-q10"
+        ],
+        "genetics-c12": [],
+        "genetics-c13": [],
+        "genetics-c14": [],
+        "genetics-c15": [],
+        "genetics-c16": [
+          "genetics-q06"
+        ],
+        "genetics-c17": [
+          "genetics-q09"
+        ],
+        "genetics-c18": [
+          "genetics-q08"
+        ],
+        "genetics-c19": [
+          "genetics-q13"
+        ],
+        "genetics-c20": [],
+        "genetics-c21": [
+          "genetics-q01"
+        ],
+        "genetics-c22": [
+          "genetics-q05"
+        ]
+      },
+      "unused_candidates": [
+        "genetics-c01",
+        "genetics-c04",
+        "genetics-c05",
+        "genetics-c06",
+        "genetics-c10",
+        "genetics-c12",
+        "genetics-c13",
+        "genetics-c14",
+        "genetics-c15",
+        "genetics-c20"
+      ],
+      "sha256": "af010511a5af5cd5f8d80f4e618ef64609772f9fec014e735dbdac50956b1154"
+    },
+    {
+      "domain": "geography",
+      "counts": {
+        "subject": 5,
+        "quality": 5,
+        "process": 5,
+        "relationship": 3,
+        "event": 3,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 2,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
+      "questions": 15,
+      "expressions": 10,
+      "insufficient_components": 0,
+      "blocked_candidates": 3,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "geography:Hillslope": [
+          "geography-q02",
+          "geography-q03",
+          "geography-q12"
+        ],
+        "geography:RidgeLandform": [
+          "geography-q04",
+          "geography-q05",
+          "geography-q15"
+        ],
+        "geography:ValleyLandform": [
+          "geography-q04",
+          "geography-q06"
+        ],
+        "geography:ClosedDepression": [
+          "geography-q06"
+        ],
+        "geography:CoastalDune": [
+          "geography-q09"
+        ],
+        "geography:GroundElevation": [
+          "geography-q01",
+          "geography-q04",
+          "geography-q07",
+          "geography-q08",
+          "geography-q11",
+          "geography-q13",
+          "geography-q14"
+        ],
+        "geography:LocalRelief": [],
+        "geography:TerrainInclination": [
+          "geography-q03"
+        ],
+        "geography:TerrainAspect": [
+          "geography-q02"
+        ],
+        "geography:CrestDisplacement": [
+          "geography-q09"
+        ],
+        "geography:SurfaceRemoval": [],
+        "geography:SurfaceAccumulation": [
+          "geography-q13"
+        ],
+        "geography:SlopeMassMovement": [],
+        "geography:DuneMigration": [],
+        "geography:CoastalRetreat": [
+          "geography-q08"
+        ],
+        "geography:OppositeFlanks": [
+          "geography-q12"
+        ],
+        "geography:TerrainAbutment": [
+          "geography-q10"
+        ],
+        "geography:SurfaceOutletConnection": [
+          "geography-q05"
+        ],
+        "geography:SlopeFailureEpisode": [
+          "geography-q07"
+        ],
+        "geography:DuneOverwashEpisode": [],
+        "geography:ScarpCollapseEpisode": []
+      },
+      "unused_candidates": [
+        "geography:LocalRelief",
+        "geography:SurfaceRemoval",
+        "geography:SlopeMassMovement",
+        "geography:DuneMigration",
+        "geography:DuneOverwashEpisode",
+        "geography:ScarpCollapseEpisode"
+      ],
+      "sha256": "1d761dc41d5fdf8497d8e9306878fb94a0e3c2adbb690d5471549aab9d4faa39"
+    },
+    {
+      "domain": "geology",
+      "counts": {
+        "subject": 5,
+        "quality": 5,
+        "process": 5,
+        "relationship": 3,
+        "event": 3,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 2,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
+      "questions": 15,
+      "expressions": 11,
+      "insufficient_components": 0,
+      "blocked_candidates": 0,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "geology:RockBody": [
+          "geology-q01",
+          "geology-q02",
+          "geology-q03",
+          "geology-q09",
+          "geology-q13"
+        ],
+        "geology:SedimentBody": [
+          "geology-q03"
+        ],
+        "geology:MineralGrain": [
+          "geology-q02"
+        ],
+        "geology:FaultZone": [
+          "geology-q04",
+          "geology-q14"
+        ],
+        "geology:RockStratum": [
+          "geology-q04"
+        ],
+        "geology:BodyVolume": [
+          "geology-q11"
+        ],
+        "geology:MineralFraction": [
+          "geology-q12"
+        ],
+        "geology:GrainDiameter": [],
+        "geology:SlipDisplacement": [
+          "geology-q05"
+        ],
+        "geology:LayerThickness": [],
+        "geology:InPlaceWeathering": [
+          "geology-q08"
+        ],
+        "geology:SedimentTransport": [
+          "geology-q08"
+        ],
+        "geology:SedimentDeposition": [],
+        "geology:Lithification": [
+          "geology-q09"
+        ],
+        "geology:MetamorphicAlteration": [
+          "geology-q10"
+        ],
+        "geology:StratumSuperposition": [],
+        "geology:FaultCutsBody": [
+          "geology-q04"
+        ],
+        "geology:GrainConstituentOf": [
+          "geology-q02"
+        ],
+        "geology:FaultSlipEarthquake": [
+          "geology-q05"
+        ],
+        "geology:LandslideEpisode": [
+          "geology-q06",
+          "geology-q07",
+          "geology-q11",
+          "geology-q15"
+        ],
+        "geology:RockfallEpisode": [
+          "geology-q06",
+          "geology-q13"
+        ]
+      },
+      "unused_candidates": [
+        "geology:GrainDiameter",
+        "geology:LayerThickness",
+        "geology:SedimentDeposition",
+        "geology:StratumSuperposition"
+      ],
+      "sha256": "68daf4337545f84b5e179010b168ed4b246f6eb5d283f8b2ef701be2f35644c9"
+    },
+    {
+      "domain": "hydrology",
+      "counts": {
+        "subject": 5,
+        "quality": 9,
+        "process": 5,
+        "relationship": 5,
+        "event": 5,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 0,
+        "event": 0
+      },
+      "all_four_category_targets_met": true,
+      "questions": 15,
+      "expressions": 12,
+      "insufficient_components": 0,
+      "blocked_candidates": 23,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "hydrology-SurfaceCatchment": [
+          "hydrology-Q01",
+          "hydrology-Q06"
+        ],
+        "hydrology-StreamReach": [
+          "hydrology-Q05",
+          "hydrology-Q10",
+          "hydrology-Q12"
+        ],
+        "hydrology-LakeWaterBody": [
+          "hydrology-Q02",
+          "hydrology-Q09",
+          "hydrology-Q15"
+        ],
+        "hydrology-GroundwaterBody": [
+          "hydrology-Q05",
+          "hydrology-Q06",
+          "hydrology-Q11"
+        ],
+        "hydrology-SpringWaterBody": [],
+        "hydrology-StoredWaterVolume": [
+          "hydrology-Q02",
+          "hydrology-Q09",
+          "hydrology-Q11",
+          "hydrology-Q15"
+        ],
+        "hydrology-CatchmentArea": [],
+        "hydrology-Stage": [
+          "hydrology-Q08"
+        ],
+        "hydrology-Discharge": [
+          "hydrology-Q03"
+        ],
+        "hydrology-WaterTemperature": [],
+        "hydrology-HydraulicHead": [],
+        "hydrology-InfiltrationFlux": [
+          "hydrology-Q04"
+        ],
+        "hydrology-FlowVelocity": [
+          "hydrology-Q03"
+        ],
+        "hydrology-SedimentConcentration": [
+          "hydrology-Q12"
+        ],
+        "hydrology-ChannelFlow": [
+          "hydrology-Q03",
+          "hydrology-Q07"
+        ],
+        "hydrology-OverlandFlow": [
+          "hydrology-Q04",
+          "hydrology-Q12"
+        ],
+        "hydrology-Infiltration": [
+          "hydrology-Q04"
+        ],
+        "hydrology-GroundwaterDischarge": [
+          "hydrology-Q07"
+        ],
+        "hydrology-OpenWaterEvaporation": [
+          "hydrology-Q09"
+        ],
+        "hydrology-SurfaceDrainsTo": [
+          "hydrology-Q01"
+        ],
+        "hydrology-TributaryOf": [
+          "hydrology-Q10",
+          "hydrology-Q14"
+        ],
+        "hydrology-GroundwaterFeeds": [
+          "hydrology-Q05",
+          "hydrology-Q06"
+        ],
+        "hydrology-LosesWaterTo": [
+          "hydrology-Q05"
+        ],
+        "hydrology-NestedCatchmentIn": [],
+        "hydrology-OverbankFloodEpisode": [
+          "hydrology-Q08"
+        ],
+        "hydrology-RechargeEpisode": [],
+        "hydrology-LakeDrawdownEpisode": [],
+        "hydrology-ReachWettingEpisode": [
+          "hydrology-Q14"
+        ],
+        "hydrology-GroundwaterDepletionEpisode": [
+          "hydrology-Q11"
+        ]
+      },
+      "unused_candidates": [
+        "hydrology-SpringWaterBody",
+        "hydrology-CatchmentArea",
+        "hydrology-WaterTemperature",
+        "hydrology-HydraulicHead",
+        "hydrology-NestedCatchmentIn",
+        "hydrology-RechargeEpisode",
+        "hydrology-LakeDrawdownEpisode"
+      ],
+      "sha256": "fe8cb7418ccddd2bacd5cbe5a334bece0ecc1c0844e3d60e75ccb559e5146013"
+    },
+    {
+      "domain": "infrastructure",
+      "counts": {
+        "subject": 5,
+        "quality": 6,
+        "process": 5,
+        "relationship": 5,
+        "event": 5,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 0,
+        "event": 0
+      },
+      "all_four_category_targets_met": true,
+      "questions": 15,
+      "expressions": 6,
+      "insufficient_components": 0,
+      "blocked_candidates": 2,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "infrastructure-Building": [
+          "infrastructure-q01"
+        ],
+        "infrastructure-RoadSegment": [
+          "infrastructure-q02",
+          "infrastructure-q14"
+        ],
+        "infrastructure-Bridge": [
+          "infrastructure-q03",
+          "infrastructure-q09",
+          "infrastructure-q14"
+        ],
+        "infrastructure-WaterStorageTank": [
+          "infrastructure-q04",
+          "infrastructure-q13"
+        ],
+        "infrastructure-ElectricalSubstation": [
+          "infrastructure-q05",
+          "infrastructure-q15"
+        ],
+        "infrastructure-WaterLeakage": [
+          "infrastructure-q06"
+        ],
+        "infrastructure-WaterConveyance": [],
+        "infrastructure-ElectricityDelivery": [],
+        "infrastructure-AssetDeterioration": [],
+        "infrastructure-AssetRepair": [],
+        "infrastructure-ConnectsAsset": [
+          "infrastructure-q14"
+        ],
+        "infrastructure-SuppliesAsset": [
+          "infrastructure-q08",
+          "infrastructure-q13"
+        ],
+        "infrastructure-ContainsComponent": [],
+        "infrastructure-ServesBuilding": [],
+        "infrastructure-DependsOnAsset": [],
+        "infrastructure-ServiceInterruption": [
+          "infrastructure-q10"
+        ],
+        "infrastructure-MainBreak": [],
+        "infrastructure-ServiceRestoration": [
+          "infrastructure-q11"
+        ],
+        "infrastructure-AssetReplacement": [
+          "infrastructure-q12"
+        ],
+        "infrastructure-BridgeRepairEpisode": [],
+        "infrastructure-FloorArea": [],
+        "infrastructure-StructuralCondition": [
+          "infrastructure-q09"
+        ],
+        "infrastructure-StoredWaterVolume": [
+          "infrastructure-q04"
+        ],
+        "infrastructure-DeliveryCapacity": [
+          "infrastructure-q07"
+        ],
+        "infrastructure-LeakageRate": [],
+        "infrastructure-InternalPressure": []
+      },
+      "unused_candidates": [
+        "infrastructure-WaterConveyance",
+        "infrastructure-ElectricityDelivery",
+        "infrastructure-AssetDeterioration",
+        "infrastructure-AssetRepair",
+        "infrastructure-ContainsComponent",
+        "infrastructure-ServesBuilding",
+        "infrastructure-DependsOnAsset",
+        "infrastructure-MainBreak",
+        "infrastructure-BridgeRepairEpisode",
+        "infrastructure-FloorArea",
+        "infrastructure-LeakageRate",
+        "infrastructure-InternalPressure"
+      ],
+      "sha256": "9a6fd1ce82357e1abce7c0c6043b22a4387459aa9c810bfccea2244758008584"
+    },
+    {
+      "domain": "land",
+      "counts": {
+        "subject": 5,
+        "quality": 7,
+        "process": 5,
+        "relationship": 5,
+        "event": 5,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 0,
+        "event": 0
+      },
+      "all_four_category_targets_met": true,
+      "questions": 15,
+      "expressions": 7,
+      "insufficient_components": 0,
+      "blocked_candidates": 11,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "land-ManagedField": [
+          "land-q01",
+          "land-q03",
+          "land-q06",
+          "land-q08",
+          "land-q14"
+        ],
+        "land-LandEvaluationUnit": [
+          "land-q02"
+        ],
+        "land-CropStand": [
+          "land-q14"
+        ],
+        "land-VegetationPatch": [
+          "land-q10"
+        ],
+        "land-AgriculturalHolding": [],
+        "land-Irrigation": [
+          "land-q04"
+        ],
+        "land-Tillage": [
+          "land-q13"
+        ],
+        "land-Sowing": [],
+        "land-Harvesting": [],
+        "land-ResidueRetention": [
+          "land-q08"
+        ],
+        "land-OccupiesField": [
+          "land-q14"
+        ],
+        "land-ManagesField": [
+          "land-q07"
+        ],
+        "land-OverlapsEvaluationUnit": [],
+        "land-AdjacentField": [],
+        "land-SupportsCropStand": [],
+        "land-SowingEpisode": [
+          "land-q05"
+        ],
+        "land-HarvestEpisode": [
+          "land-q09"
+        ],
+        "land-IrrigationEpisode": [],
+        "land-LandUseConversion": [
+          "land-q15"
+        ],
+        "land-CoverChangeEpisode": [
+          "land-q11"
+        ],
+        "land-SurfaceCoverFraction": [
+          "land-q03",
+          "land-q08"
+        ],
+        "land-DisturbedAreaFraction": [
+          "land-q06"
+        ],
+        "land-PlantAvailableWater": [
+          "land-q12"
+        ],
+        "land-HarvestableBiomass": [],
+        "land-ManagedArea": [],
+        "land-AppliedWaterAmount": [],
+        "land-SeedPlacementDepth": []
+      },
+      "unused_candidates": [
+        "land-AgriculturalHolding",
+        "land-Sowing",
+        "land-Harvesting",
+        "land-OverlapsEvaluationUnit",
+        "land-AdjacentField",
+        "land-SupportsCropStand",
+        "land-IrrigationEpisode",
+        "land-HarvestableBiomass",
+        "land-ManagedArea",
+        "land-AppliedWaterAmount",
+        "land-SeedPlacementDepth"
+      ],
+      "sha256": "a4fd7e6ad890b732bccf0a31bb0c735d9d37a211f3e0b21183e0edca410a7909"
+    },
+    {
+      "domain": "life",
+      "counts": {
+        "subject": 6,
+        "quality": 1,
+        "process": 5,
+        "relationship": 3,
+        "event": 3,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 2,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
+      "questions": 15,
+      "expressions": 14,
+      "insufficient_components": 0,
+      "blocked_candidates": 18,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "life-c01": [
+          "life-q01",
+          "life-q02"
+        ],
+        "life-c02": [
+          "life-q04"
+        ],
+        "life-c03": [
+          "life-q05"
+        ],
+        "life-c04": [],
+        "life-c05": [
+          "life-q07"
+        ],
+        "life-c06": [
+          "life-q11"
+        ],
+        "life-c07": [
+          "life-q10"
+        ],
+        "life-c08": [
+          "life-q09"
+        ],
+        "life-c09": [],
+        "life-c10": [],
+        "life-c11": [],
+        "life-c12": [
+          "life-q14"
+        ],
+        "life-c13": [
+          "life-q06"
+        ],
+        "life-c14": [
+          "life-q12"
+        ],
+        "life-c15": [
+          "life-q08",
+          "life-q15"
+        ],
+        "life-c16": [
+          "life-q13"
+        ],
+        "life-c17": [],
+        "life-c18": [
+          "life-q03"
+        ]
+      },
+      "unused_candidates": [
+        "life-c04",
+        "life-c09",
+        "life-c10",
+        "life-c11",
+        "life-c17"
+      ],
+      "sha256": "ed3c39b374c13237c423561343c4ee3bb5a61f928a2795a40efc94993ec796b0"
+    },
+    {
+      "domain": "oceanography",
+      "counts": {
+        "subject": 5,
+        "quality": 5,
+        "process": 5,
+        "relationship": 3,
+        "event": 3,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 2,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
+      "questions": 15,
+      "expressions": 9,
+      "insufficient_components": 0,
+      "blocked_candidates": 6,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "oceanography:MarineEstuary": [
+          "oceanography-q01",
+          "oceanography-q02"
+        ],
+        "oceanography:MarineWaterBody": [
+          "oceanography-q08"
+        ],
+        "oceanography:OceanWaterMass": [
+          "oceanography-q10"
+        ],
+        "oceanography:CoastalInlet": [
+          "oceanography-q11"
+        ],
+        "oceanography:MarineSurfaceLayer": [
+          "oceanography-q03",
+          "oceanography-q10"
+        ],
+        "oceanography:Salinity": [
+          "oceanography-q01",
+          "oceanography-q07"
+        ],
+        "oceanography:WaterTemperature": [
+          "oceanography-q07",
+          "oceanography-q10",
+          "oceanography-q13"
+        ],
+        "oceanography:CurrentSpeed": [
+          "oceanography-q03",
+          "oceanography-q15"
+        ],
+        "oceanography:SeawaterPH": [
+          "oceanography-q09"
+        ],
+        "oceanography:SeaSurfaceHeight": [
+          "oceanography-q05"
+        ],
+        "oceanography:OceanWaterAdvection": [
+          "oceanography-q11",
+          "oceanography-q14"
+        ],
+        "oceanography:Upwelling": [
+          "oceanography-q04",
+          "oceanography-q12"
+        ],
+        "oceanography:Downwelling": [],
+        "oceanography:TidalOscillation": [
+          "oceanography-q05",
+          "oceanography-q06"
+        ],
+        "oceanography:MarineAcidification": [
+          "oceanography-q09"
+        ],
+        "oceanography:MarineConnection": [],
+        "oceanography:RiverReceivesInto": [
+          "oceanography-q08"
+        ],
+        "oceanography:SurfaceOverDeepWater": [],
+        "oceanography:UpwellingEpisode": [
+          "oceanography-q13"
+        ],
+        "oceanography:TidalHighWaterOccurrence": [],
+        "oceanography:AcidificationEpisode": []
+      },
+      "unused_candidates": [
+        "oceanography:Downwelling",
+        "oceanography:MarineConnection",
+        "oceanography:SurfaceOverDeepWater",
+        "oceanography:TidalHighWaterOccurrence",
+        "oceanography:AcidificationEpisode"
+      ],
+      "sha256": "76183ea5849a86f17474cb927a5a83faa6359af6e33a5ee11dac0e5c54c780e9"
+    },
+    {
+      "domain": "physical",
+      "counts": {
+        "subject": 3,
+        "quality": 2,
+        "process": 2,
+        "relationship": 2,
+        "event": 2,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 2,
+        "process": 3,
+        "relationship": 3,
+        "event": 3
+      },
+      "all_four_category_targets_met": false,
+      "questions": 15,
+      "expressions": 10,
+      "insufficient_components": 0,
+      "blocked_candidates": 5,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "physical-MaterialBody": [
+          "physical-q01",
+          "physical-q02",
+          "physical-q06",
+          "physical-q08",
+          "physical-q09",
+          "physical-q10",
+          "physical-q15"
+        ],
+        "physical-HostBoundVoid": [
+          "physical-q03",
+          "physical-q11"
+        ],
+        "physical-DetachedFragment": [
+          "physical-q04"
+        ],
+        "physical-MaterialSeparation": [
+          "physical-q07"
+        ],
+        "physical-MaterialAggregation": [],
+        "physical-PhysicalContact": [
+          "physical-q05"
+        ],
+        "physical-VoidHostedBy": [
+          "physical-q03"
+        ],
+        "physical-FragmentationEpisode": [
+          "physical-q04"
+        ],
+        "physical-IdentityLossEpisode": [
+          "physical-q12"
+        ],
+        "physical-BodyTemperature": [
+          "physical-q01",
+          "physical-q06",
+          "physical-q13"
+        ],
+        "physical-BodyMass": [
+          "physical-q02",
+          "physical-q07",
+          "physical-q10",
+          "physical-q14"
+        ]
+      },
+      "unused_candidates": [
+        "physical-MaterialAggregation"
+      ],
+      "sha256": "127d366814d9f9acbb19db7f600829a4113684b14212f8b8f9a813468a934a15"
+    },
+    {
+      "domain": "physics",
+      "counts": {
+        "subject": 3,
+        "quality": 1,
+        "process": 5,
+        "relationship": 2,
+        "event": 3,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 2,
+        "process": 0,
+        "relationship": 3,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
+      "questions": 15,
+      "expressions": 12,
+      "insufficient_components": 0,
+      "blocked_candidates": 3,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "physics-ThermalBody": [
+          "physics-q01",
+          "physics-q02",
+          "physics-q08",
+          "physics-q10"
+        ],
+        "physics-FluidParcel": [
+          "physics-q03",
+          "physics-q07"
+        ],
+        "physics-MechanicalBody": [
+          "physics-q05",
+          "physics-q09"
+        ],
+        "physics-ThermalConduction": [
+          "physics-q01",
+          "physics-q12"
+        ],
+        "physics-ConvectiveHeatTransport": [
+          "physics-q03"
+        ],
+        "physics-RadiativeEnergyTransfer": [
+          "physics-q04",
+          "physics-q12"
+        ],
+        "physics-MechanicalAcceleration": [
+          "physics-q05",
+          "physics-q06"
+        ],
+        "physics-GasCompression": [
+          "physics-q07"
+        ],
+        "physics-ThermallyContacts": [
+          "physics-q08"
+        ],
+        "physics-ExertsForceOn": [
+          "physics-q13"
+        ],
+        "physics-HeatingEpisode": [
+          "physics-q11",
+          "physics-q14",
+          "physics-q15"
+        ],
+        "physics-CompressionEpisode": [],
+        "physics-ImpulseEpisode": [],
+        "physics-TransferredThermalEnergy": [
+          "physics-q02",
+          "physics-q10",
+          "physics-q14"
+        ]
+      },
+      "unused_candidates": [
+        "physics-CompressionEpisode",
+        "physics-ImpulseEpisode"
+      ],
+      "sha256": "0350614545e223e240b49e18c308bd23984aad1f77a6d295eba7c560fcf5d2af"
+    },
+    {
+      "domain": "society",
+      "counts": {
+        "subject": 5,
+        "quality": 5,
+        "process": 3,
+        "relationship": 5,
+        "event": 5,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 2,
+        "relationship": 0,
+        "event": 0
+      },
+      "all_four_category_targets_met": false,
+      "questions": 15,
+      "expressions": 11,
+      "insufficient_components": 0,
+      "blocked_candidates": 14,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "society-c01": [],
+        "society-c02": [
+          "society-q02",
+          "society-q03",
+          "society-q11",
+          "society-q15"
+        ],
+        "society-c03": [
+          "society-q09",
+          "society-q13"
+        ],
+        "society-c04": [
+          "society-q01",
+          "society-q14"
+        ],
+        "society-c05": [
+          "society-q02",
+          "society-q11"
+        ],
+        "society-c06": [
+          "society-q05"
+        ],
+        "society-c07": [],
+        "society-c08": [
+          "society-q13"
+        ],
+        "society-c09": [
+          "society-q04",
+          "society-q06"
+        ],
+        "society-c10": [
+          "society-q12"
+        ],
+        "society-c11": [
+          "society-q08"
+        ],
+        "society-c12": [
+          "society-q10"
+        ],
+        "society-c13": [
+          "society-q09"
+        ],
+        "society-c14": [
+          "society-q06"
+        ],
+        "society-c15": [
+          "society-q07"
+        ],
+        "society-c16": [
+          "society-q10"
+        ],
+        "society-c17": [
+          "society-q10"
+        ],
+        "society-c18": [
+          "society-q05"
+        ],
+        "society-c19": [
+          "society-q01",
+          "society-q14"
+        ],
+        "society-c20": [
+          "society-q03"
+        ],
+        "society-c21": [],
+        "society-c22": [],
+        "society-c23": []
+      },
+      "unused_candidates": [
+        "society-c01",
+        "society-c07",
+        "society-c21",
+        "society-c22",
+        "society-c23"
+      ],
+      "sha256": "4f4ad091fda3437e5bc4c014ca01d7eccd5bf574697a29c02c4e61a493ae907e"
+    },
+    {
+      "domain": "sociology",
+      "counts": {
+        "subject": 2,
+        "quality": 3,
+        "process": 5,
+        "relationship": 4,
+        "event": 5,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 3,
+        "process": 0,
+        "relationship": 1,
+        "event": 0
+      },
+      "all_four_category_targets_met": false,
+      "questions": 15,
+      "expressions": 9,
+      "insufficient_components": 0,
+      "blocked_candidates": 16,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "sociology-c01": [
+          "sociology-q11"
+        ],
+        "sociology-c02": [
+          "sociology-q07"
+        ],
+        "sociology-c03": [
+          "sociology-q04",
+          "sociology-q14",
+          "sociology-q15"
+        ],
+        "sociology-c04": [
+          "sociology-q08"
+        ],
+        "sociology-c05": [
+          "sociology-q05"
+        ],
+        "sociology-c06": [],
+        "sociology-c07": [
+          "sociology-q10"
+        ],
+        "sociology-c08": [
+          "sociology-q01"
+        ],
+        "sociology-c09": [
+          "sociology-q02",
+          "sociology-q13"
+        ],
+        "sociology-c10": [
+          "sociology-q05",
+          "sociology-q06"
+        ],
+        "sociology-c11": [
+          "sociology-q07"
+        ],
+        "sociology-c12": [
+          "sociology-q03"
+        ],
+        "sociology-c13": [
+          "sociology-q15"
+        ],
+        "sociology-c14": [
+          "sociology-q12"
+        ],
+        "sociology-c15": [
+          "sociology-q11"
+        ],
+        "sociology-c16": [
+          "sociology-q13"
+        ],
+        "sociology-c17": [
+          "sociology-q01",
+          "sociology-q09",
+          "sociology-q14"
+        ],
+        "sociology-c18": [
+          "sociology-q03"
+        ],
+        "sociology-c19": [
+          "sociology-q02",
+          "sociology-q06"
+        ]
+      },
+      "unused_candidates": [
+        "sociology-c06"
+      ],
+      "sha256": "aa18f4b6a810a3accae4ecb5c7da660cb16fd2ac99017ae0da26692c6e270d23"
+    },
+    {
+      "domain": "soil",
+      "counts": {
+        "subject": 5,
+        "quality": 5,
+        "process": 5,
+        "relationship": 3,
+        "event": 3,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 2,
+        "event": 2
+      },
+      "all_four_category_targets_met": false,
+      "questions": 15,
+      "expressions": 9,
+      "insufficient_components": 0,
+      "blocked_candidates": 7,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "soil:SoilBody": [
+          "soil-q12"
+        ],
+        "soil:SoilHorizon": [
+          "soil-q01",
+          "soil-q02",
+          "soil-q05",
+          "soil-q13"
+        ],
+        "soil:SoilAggregate": [
+          "soil-q10"
+        ],
+        "soil:SoilPedon": [
+          "soil-q13"
+        ],
+        "soil:RestrictiveSoilLayer": [
+          "soil-q06"
+        ],
+        "soil:BulkDensity": [
+          "soil-q03",
+          "soil-q09",
+          "soil-q15"
+        ],
+        "soil:HorizonThickness": [
+          "soil-q01",
+          "soil-q08"
+        ],
+        "soil:ClayFraction": [
+          "soil-q02",
+          "soil-q14"
+        ],
+        "soil:OrganicMatterFraction": [
+          "soil-q05",
+          "soil-q11"
+        ],
+        "soil:AggregateDiameter": [
+          "soil-q10"
+        ],
+        "soil:SoilCompaction": [
+          "soil-q03"
+        ],
+        "soil:SoilAggregation": [],
+        "soil:SoilLeaching": [
+          "soil-q04",
+          "soil-q07"
+        ],
+        "soil:SoilMaterialErosion": [],
+        "soil:HorizonDevelopment": [],
+        "soil:HorizonOverlies": [
+          "soil-q06"
+        ],
+        "soil:AggregateConstituentOf": [],
+        "soil:PedonCharacterizesBody": [],
+        "soil:CompactionEpisode": [
+          "soil-q09"
+        ],
+        "soil:HorizonRemovalEpisode": [
+          "soil-q08"
+        ],
+        "soil:AggregateDisruptionEpisode": []
+      },
+      "unused_candidates": [
+        "soil:SoilAggregation",
+        "soil:SoilMaterialErosion",
+        "soil:HorizonDevelopment",
+        "soil:AggregateConstituentOf",
+        "soil:PedonCharacterizesBody",
+        "soil:AggregateDisruptionEpisode"
+      ],
+      "sha256": "9250633ff77a732d90e421e67bd459dae67e4dd183b402ced508275d07e23e9e"
+    },
+    {
+      "domain": "valuation",
+      "counts": {
+        "subject": 1,
+        "quality": 5,
+        "process": 5,
+        "relationship": 5,
+        "event": 5,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 4,
+        "process": 0,
+        "relationship": 0,
+        "event": 0
+      },
+      "all_four_category_targets_met": false,
+      "questions": 15,
+      "expressions": 8,
+      "insufficient_components": 0,
+      "blocked_candidates": 18,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "valuation-c01": [
+          "valuation-q02"
+        ],
+        "valuation-c02": [],
+        "valuation-c03": [],
+        "valuation-c04": [
+          "valuation-q12"
+        ],
+        "valuation-c05": [
+          "valuation-q10"
+        ],
+        "valuation-c06": [],
+        "valuation-c07": [
+          "valuation-q01",
+          "valuation-q02"
+        ],
+        "valuation-c08": [],
+        "valuation-c09": [
+          "valuation-q11"
+        ],
+        "valuation-c10": [
+          "valuation-q11"
+        ],
+        "valuation-c11": [
+          "valuation-q06",
+          "valuation-q13"
+        ],
+        "valuation-c12": [],
+        "valuation-c13": [
+          "valuation-q14"
+        ],
+        "valuation-c14": [
+          "valuation-q08"
+        ],
+        "valuation-c15": [
+          "valuation-q08"
+        ],
+        "valuation-c16": [],
+        "valuation-c17": [
+          "valuation-q03",
+          "valuation-q12"
+        ],
+        "valuation-c18": [
+          "valuation-q07",
+          "valuation-q10",
+          "valuation-q14"
+        ],
+        "valuation-c19": [
+          "valuation-q04",
+          "valuation-q15"
+        ],
+        "valuation-c20": [
+          "valuation-q05"
+        ],
+        "valuation-c21": [
+          "valuation-q09"
+        ]
+      },
+      "unused_candidates": [
+        "valuation-c02",
+        "valuation-c03",
+        "valuation-c06",
+        "valuation-c08",
+        "valuation-c12",
+        "valuation-c16"
+      ],
+      "sha256": "de9feff0c555384dc0848f18dcf42b132c30d4b902bdf991c9b61aa28c60bbe5"
+    }
+  ],
+  "domains_meeting_all_four_targets": [
+    "economics",
+    "engineering",
+    "genetics",
+    "hydrology",
+    "infrastructure",
+    "land"
+  ],
+  "domains_with_shortfalls": [
+    "agency",
+    "atmosphere",
+    "biology",
+    "chemistry",
+    "earth",
+    "ecology",
+    "geography",
+    "geology",
+    "life",
+    "oceanography",
+    "physical",
+    "physics",
+    "society",
+    "sociology",
+    "soil",
+    "valuation"
+  ],
+  "question_count_limit": "330 initial research slots include scientific questions, methodological probes and counterexamples; not 330 answerable scientific questions. Non-null expression does not imply sufficient formulation."
+}

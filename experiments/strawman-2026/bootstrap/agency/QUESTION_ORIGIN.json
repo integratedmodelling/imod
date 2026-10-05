@@ -1,0 +1,143 @@
+{
+  "domain": "agency",
+  "stage": "source-first questions frozen before candidate vocabulary",
+  "created_on": "2026-10-03",
+  "independence": "Same author had read current ontology and prior packet. Questions preceded this dossier's candidate construction, but are not independent held-out tests. Fresh external probes still required.",
+  "questions": [
+    {
+      "id": "agency-q01",
+      "sequence": 1,
+      "text": "Who actually chose the evacuation destination, and who only helped communicate that choice?",
+      "source_ids": [
+        "CRPD12"
+      ],
+      "source_motivation": "choice, communication and support must remain distinct"
+    },
+    {
+      "id": "agency-q02",
+      "sequence": 2,
+      "text": "Can someone need assistance yet retain authority to decide?",
+      "source_ids": [
+        "CRPD12"
+      ],
+      "source_motivation": "legal capacity is not measured cognitive performance"
+    },
+    {
+      "id": "agency-q03",
+      "sequence": 3,
+      "text": "Which organization authorized the fire crew to act on its behalf?",
+      "source_ids": [
+        "OSTROM"
+      ],
+      "source_motivation": "delegation is scoped to an action and rule system"
+    },
+    {
+      "id": "agency-q04",
+      "sequence": 4,
+      "text": "Did the person agree to relocation or was agreement assumed from silence?",
+      "source_ids": [
+        "CRPD12"
+      ],
+      "source_motivation": "missing response is not consent"
+    },
+    {
+      "id": "agency-q05",
+      "sequence": 5,
+      "text": "Was a stated intention to protect the forest followed by any action?",
+      "source_ids": [
+        "OSTROM"
+      ],
+      "source_motivation": "intention and enactment are different observations"
+    },
+    {
+      "id": "agency-q06",
+      "sequence": 6,
+      "text": "When did a person withdraw permission for a representative to act?",
+      "source_ids": [
+        "CRPD12"
+      ],
+      "source_motivation": "cessation needs a bounded withdrawal occurrence"
+    },
+    {
+      "id": "agency-q07",
+      "sequence": 7,
+      "text": "Who was entitled to take part in the shared water-use discussion?",
+      "source_ids": [
+        "OSTROM"
+      ],
+      "source_motivation": "participation entitlement differs from attendance"
+    },
+    {
+      "id": "agency-q08",
+      "sequence": 8,
+      "text": "Did helpers increase the person's available options or substitute their own preference?",
+      "source_ids": [
+        "CRPD12"
+      ],
+      "source_motivation": "support and undue influence are not automatically separable from observed outcomes"
+    },
+    {
+      "id": "agency-q09",
+      "sequence": 9,
+      "text": "How much control did a participant have over the final allocation?",
+      "source_ids": [
+        "OSTROM"
+      ],
+      "source_motivation": "control is action-context-specific"
+    },
+    {
+      "id": "agency-q10",
+      "sequence": 10,
+      "text": "Did negotiations change the terms offered to workers?",
+      "source_ids": [
+        "ILO154"
+      ],
+      "source_motivation": "negotiation does not guarantee agreement"
+    },
+    {
+      "id": "agency-q11",
+      "sequence": 11,
+      "text": "Which party represented workers and which represented employers?",
+      "source_ids": [
+        "ILO154"
+      ],
+      "source_motivation": "representation endpoints and scope"
+    },
+    {
+      "id": "agency-q12",
+      "sequence": 12,
+      "text": "Was the appointment of a spokesperson accepted by the people represented?",
+      "source_ids": [
+        "OSTROM"
+      ],
+      "source_motivation": "appointment and legitimacy differ"
+    },
+    {
+      "id": "agency-q13",
+      "sequence": 13,
+      "text": "What happened when the group could not agree on a response?",
+      "source_ids": [
+        "OSTROM"
+      ],
+      "source_motivation": "non-agreement is not non-agency"
+    },
+    {
+      "id": "agency-q14",
+      "sequence": 14,
+      "text": "Does an automated dispatch system count as an agent in the same sense as a person?",
+      "source_ids": [
+        "OSTROM"
+      ],
+      "source_motivation": "source coverage gap on artificial agency"
+    },
+    {
+      "id": "agency-q15",
+      "sequence": 15,
+      "text": "Could the participants revise the rules under which they acted?",
+      "source_ids": [
+        "OSTROM"
+      ],
+      "source_motivation": "rule-change power is separate from operational choice"
+    }
+  ]
+}

@@ -1,0 +1,2975 @@
+{
+  "scope": "Context-pack operator result contract and proposed named-head categories only; no reference/bearer/Reasoner validation. Audit before Q03 full formulation was replaced by a gap.",
+  "records": [
+    {
+      "domain": "agency",
+      "id": "agency-q01",
+      "expression": null,
+      "previous_expected_type": "process and directed relationship",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "agency",
+      "id": "agency-q02",
+      "expression": null,
+      "previous_expected_type": "process plus legal-capacity context",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "agency",
+      "id": "agency-q03",
+      "expression": "agency:ActionAuthorization",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "agency",
+      "id": "agency-q04",
+      "expression": "agency:ConsentGrant",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "agency",
+      "id": "agency-q05",
+      "expression": null,
+      "previous_expected_type": "process,event and intention quality",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "agency",
+      "id": "agency-q06",
+      "expression": "agency:ConsentWithdrawal",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "agency",
+      "id": "agency-q07",
+      "expression": null,
+      "previous_expected_type": "relationship and entitlement role",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "agency",
+      "id": "agency-q08",
+      "expression": "agency:AvailableOptionCount of imod:Agent",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "agency",
+      "id": "agency-q09",
+      "expression": "agency:PerceivedControl of imod:Agent",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "agency",
+      "id": "agency-q10",
+      "expression": "agency:Negotiation",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "agency",
+      "id": "agency-q11",
+      "expression": "agency:Representation",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "agency",
+      "id": "agency-q12",
+      "expression": "agency:RepresentativeAppointment",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "agency",
+      "id": "agency-q13",
+      "expression": null,
+      "previous_expected_type": "process plus unresolved agreement",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "agency",
+      "id": "agency-q14",
+      "expression": null,
+      "previous_expected_type": "subject/agent category gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "agency",
+      "id": "agency-q15",
+      "expression": null,
+      "previous_expected_type": "authorization relationship and rule-change event",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "atmosphere",
+      "id": "atmosphere-q01",
+      "expression": "atmosphere:AirTemperature of atmosphere:AirBody",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "atmosphere",
+      "id": "atmosphere-q02",
+      "expression": "atmosphere:SpecificHumidity of atmosphere:AirMass",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "atmosphere",
+      "id": "atmosphere-q03",
+      "expression": "atmosphere:WindSpeed of atmosphere:AirBody",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "atmosphere",
+      "id": "atmosphere-q04",
+      "expression": "atmosphere:FrontalZone",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "atmosphere",
+      "id": "atmosphere-q05",
+      "expression": "change in atmosphere:AirTemperature of atmosphere:AirBody",
+      "previous_expected_type": "change quality",
+      "result_category": "process",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "atmosphere",
+      "id": "atmosphere-q06",
+      "expression": "atmosphere:CloudCondensation",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "atmosphere",
+      "id": "atmosphere-q07",
+      "expression": "atmosphere:FrontSeparatesAirMass",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "atmosphere",
+      "id": "atmosphere-q08",
+      "expression": "earth:RainfallVolume",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "atmosphere",
+      "id": "atmosphere-q09",
+      "expression": "atmosphere:WindSpeed of atmosphere:AirBody",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "atmosphere",
+      "id": "atmosphere-q10",
+      "expression": "atmosphere:TroposphericRegion",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "atmosphere",
+      "id": "atmosphere-q11",
+      "expression": "atmosphere:SpecificHumidity of atmosphere:AirMass",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "atmosphere",
+      "id": "atmosphere-q12",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "atmosphere",
+      "id": "atmosphere-q13",
+      "expression": "change in atmosphere:WindDirection of atmosphere:AirBody",
+      "previous_expected_type": "change quality",
+      "result_category": "process",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "atmosphere",
+      "id": "atmosphere-q14",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "atmosphere",
+      "id": "atmosphere-q15",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "biology",
+      "id": "biology-q01",
+      "expression": "biology:Photosynthesis",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "biology",
+      "id": "biology-q02",
+      "expression": "biology:Respiration",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "biology",
+      "id": "biology-q03",
+      "expression": "biology:GrowthRate of life:Organism",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "biology",
+      "id": "biology-q04",
+      "expression": "biology:MembraneTransport",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "biology",
+      "id": "biology-q05",
+      "expression": "biology:GasExchangeRate of life:Tissue",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "biology",
+      "id": "biology-q06",
+      "expression": "biology:CellDivision",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "biology",
+      "id": "biology-q07",
+      "expression": "biology:CellDeath",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "biology",
+      "id": "biology-q08",
+      "expression": "biology:RootInitiation",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "biology",
+      "id": "biology-q09",
+      "expression": "biology:TransportsTo linking life:Organ to life:Tissue",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "biology",
+      "id": "biology-q10",
+      "expression": "biology:SignalsTo linking life:Cell to life:Cell",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "biology",
+      "id": "biology-q11",
+      "expression": "biology:Differentiation",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "biology",
+      "id": "biology-q12",
+      "expression": null,
+      "previous_expected_type": "causal model gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "biology",
+      "id": "biology-q13",
+      "expression": "biology:Leaf",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "biology",
+      "id": "biology-q14",
+      "expression": "biology:Resprouting",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "biology",
+      "id": "biology-q15",
+      "expression": null,
+      "previous_expected_type": "negative semantic probe",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "chemistry",
+      "id": "chemistry-q01",
+      "expression": "chemistry:MolecularEntity",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "chemistry",
+      "id": "chemistry-q02",
+      "expression": "chemistry:ChemicalReaction",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "chemistry",
+      "id": "chemistry-q03",
+      "expression": "chemistry:SolutionPortion",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "chemistry",
+      "id": "chemistry-q04",
+      "expression": "chemistry:PhasePortion",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "chemistry",
+      "id": "chemistry-q05",
+      "expression": "chemistry:ChemicalPrecipitation",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "chemistry",
+      "id": "chemistry-q06",
+      "expression": "chemistry:Oxidation",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "chemistry",
+      "id": "chemistry-q07",
+      "expression": "chemistry:SurfaceBoundTo linking chemistry:MolecularEntity to chemistry:AdsorbentBody",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "chemistry",
+      "id": "chemistry-q08",
+      "expression": null,
+      "previous_expected_type": "gap: species amount/concentration and denominator binding",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "chemistry",
+      "id": "chemistry-q09",
+      "expression": null,
+      "previous_expected_type": "gap: amount root definition must distinguish entity count from mass",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "chemistry",
+      "id": "chemistry-q10",
+      "expression": null,
+      "previous_expected_type": "gap: named-analyte distribution and homogeneity summary",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "chemistry",
+      "id": "chemistry-q11",
+      "expression": "chemistry:ReactionEpisode",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "chemistry",
+      "id": "chemistry-q12",
+      "expression": null,
+      "previous_expected_type": "gap: species identity authority and phase-state distinction",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "chemistry",
+      "id": "chemistry-q13",
+      "expression": "chemistry:DissociativeAdsorption",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "chemistry",
+      "id": "chemistry-q14",
+      "expression": null,
+      "previous_expected_type": "gap: evidence-state metadata, not new chemical predicate",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "chemistry",
+      "id": "chemistry-q15",
+      "expression": null,
+      "previous_expected_type": "gap: kinetic quality and model; authority does not supply rate",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "earth",
+      "id": "earth-q01",
+      "expression": "earth:TerrestrialPlanetBody",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "earth",
+      "id": "earth-q02",
+      "expression": "earth:LithosphericPlate",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "earth",
+      "id": "earth-q03",
+      "expression": null,
+      "previous_expected_type": "gap: crust-mantle interface quality/identity and inverse model",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "earth",
+      "id": "earth-q04",
+      "expression": null,
+      "previous_expected_type": "gap: earth:WaterBody existing empty definition and Region volumetric/areal conflict",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "earth",
+      "id": "earth-q05",
+      "expression": null,
+      "previous_expected_type": "gap: Coast bearer definition and shoreline convention; authorities separate",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "earth",
+      "id": "earth-q06",
+      "expression": null,
+      "previous_expected_type": "gap: explicit elevation quality/reference; no implicit change model",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "earth",
+      "id": "earth-q07",
+      "expression": "earth:Weathering",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "earth",
+      "id": "earth-q08",
+      "expression": "earth:DepositDerivedFrom linking earth:SedimentDeposit to earth:RockBody",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "earth",
+      "id": "earth-q09",
+      "expression": "earth:TectonicUplift",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "earth",
+      "id": "earth-q10",
+      "expression": "earth:DebrisFlowEpisode",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "earth",
+      "id": "earth-q11",
+      "expression": "earth:SedimentDeposition",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "earth",
+      "id": "earth-q12",
+      "expression": null,
+      "previous_expected_type": "gap: Reach place/material split belongs in shared earth/hydrology review",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "earth",
+      "id": "earth-q13",
+      "expression": null,
+      "previous_expected_type": "gap: no land-cover-to-geology equivalence",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "earth",
+      "id": "earth-q14",
+      "expression": null,
+      "previous_expected_type": "gap: seismic quality and inversion model outside shared earth articulation",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "earth",
+      "id": "earth-q15",
+      "expression": null,
+      "previous_expected_type": "gap: unresolved change remains open-world; no executable retention machinery",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "ecology",
+      "id": "ecology-q01",
+      "expression": "ecology:FeedsOn linking life:Organism to life:Organism",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "ecology",
+      "id": "ecology-q02",
+      "expression": "ecology:PopulationAbundance of ecology:Population",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "ecology",
+      "id": "ecology-q03",
+      "expression": "change in ecology:SpeciesRichness of ecology:Community",
+      "previous_expected_type": "change quality",
+      "result_category": "process",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "ecology",
+      "id": "ecology-q04",
+      "expression": "ecology:Shelters linking life:BiologicalRemnant to life:Organism",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "ecology",
+      "id": "ecology-q05",
+      "expression": "ecology:Parasitizes linking life:Organism to life:Organism",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "ecology",
+      "id": "ecology-q06",
+      "expression": "ecology:Mutualism linking life:Organism to life:Organism",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "ecology",
+      "id": "ecology-q07",
+      "expression": "ecology:Colonization",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "ecology",
+      "id": "ecology-q08",
+      "expression": "ecology:LocalExtirpation",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "ecology",
+      "id": "ecology-q09",
+      "expression": "ecology:CommunityBiomass of ecology:Community",
+      "previous_expected_type": "mass quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "ecology",
+      "id": "ecology-q10",
+      "expression": "ecology:FeedsOn linking life:Organism to life:Organism",
+      "previous_expected_type": "relationship plus model gap",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "ecology",
+      "id": "ecology-q11",
+      "expression": null,
+      "previous_expected_type": "reference authority/model gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "ecology",
+      "id": "ecology-q12",
+      "expression": "ecology:Succession",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "ecology",
+      "id": "ecology-q13",
+      "expression": "ecology:HabitatPatch",
+      "previous_expected_type": "subject plus temporal model gap",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "ecology",
+      "id": "ecology-q14",
+      "expression": "ecology:CompetesWith linking life:Organism to life:Organism",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "ecology",
+      "id": "ecology-q15",
+      "expression": null,
+      "previous_expected_type": "negative semantic probe",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "economics",
+      "id": "economics-q01",
+      "expression": "economics:DisposableIncome of economics:HouseholdUnit",
+      "previous_expected_type": "subject",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "economics",
+      "id": "economics-q02",
+      "expression": null,
+      "previous_expected_type": "subject",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "economics",
+      "id": "economics-q03",
+      "expression": "economics:OutputValue of economics:EstablishmentUnit",
+      "previous_expected_type": "process",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "economics",
+      "id": "economics-q04",
+      "expression": "economics:IntermediateConsumption",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "economics",
+      "id": "economics-q05",
+      "expression": null,
+      "previous_expected_type": "subject",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "economics",
+      "id": "economics-q06",
+      "expression": null,
+      "previous_expected_type": "relationship",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "economics",
+      "id": "economics-q07",
+      "expression": "economics:OwesPayment linking economics:EnterpriseUnit to economics:EnterpriseUnit",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "economics",
+      "id": "economics-q08",
+      "expression": null,
+      "previous_expected_type": "relationship",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "economics",
+      "id": "economics-q09",
+      "expression": null,
+      "previous_expected_type": "process",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "economics",
+      "id": "economics-q10",
+      "expression": null,
+      "previous_expected_type": "quality",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "economics",
+      "id": "economics-q11",
+      "expression": "economics:AssetSale",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "economics",
+      "id": "economics-q12",
+      "expression": "economics:TransferReceipt",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "economics",
+      "id": "economics-q13",
+      "expression": null,
+      "previous_expected_type": "event",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "economics",
+      "id": "economics-q14",
+      "expression": null,
+      "previous_expected_type": "subject",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "economics",
+      "id": "economics-q15",
+      "expression": null,
+      "previous_expected_type": "quality",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "engineering",
+      "id": "engineering-q01",
+      "expression": null,
+      "previous_expected_type": "subject",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "engineering",
+      "id": "engineering-q02",
+      "expression": null,
+      "previous_expected_type": "subject",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "engineering",
+      "id": "engineering-q03",
+      "expression": "engineering:Transformer",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "engineering",
+      "id": "engineering-q04",
+      "expression": null,
+      "previous_expected_type": "subject",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "engineering",
+      "id": "engineering-q05",
+      "expression": "engineering:TransfersLoad",
+      "previous_expected_type": "subject",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "engineering",
+      "id": "engineering-q06",
+      "expression": "engineering:LoadCapacity of engineering:Bearing",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "engineering",
+      "id": "engineering-q07",
+      "expression": null,
+      "previous_expected_type": "event",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "engineering",
+      "id": "engineering-q08",
+      "expression": "engineering:JoinsComponent linking engineering:Bearing to imod:Subject",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "engineering",
+      "id": "engineering-q09",
+      "expression": "change in engineering:OpeningFraction of engineering:Valve",
+      "previous_expected_type": "process (unary change); requires parser and active type validation",
+      "result_category": "process",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "engineering",
+      "id": "engineering-q10",
+      "expression": null,
+      "previous_expected_type": "process",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "engineering",
+      "id": "engineering-q11",
+      "expression": "engineering:ComponentReplacement",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "engineering",
+      "id": "engineering-q12",
+      "expression": "engineering:OperatingTemperature of engineering:Pump",
+      "previous_expected_type": "subject",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "engineering",
+      "id": "engineering-q13",
+      "expression": null,
+      "previous_expected_type": "event",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "engineering",
+      "id": "engineering-q14",
+      "expression": "engineering:ProductAssembly",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "engineering",
+      "id": "engineering-q15",
+      "expression": null,
+      "previous_expected_type": "event",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "genetics",
+      "id": "genetics-q01",
+      "expression": "genetics:DNASequence of genetics:DNAMolecule",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "genetics",
+      "id": "genetics-q02",
+      "expression": null,
+      "previous_expected_type": "identity/reference gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "genetics",
+      "id": "genetics-q03",
+      "expression": "count of genetics:Chromosome contained in life:Cell",
+      "previous_expected_type": "numerosity",
+      "result_category": "quality",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "genetics",
+      "id": "genetics-q04",
+      "expression": "genetics:Transcription",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "genetics",
+      "id": "genetics-q05",
+      "expression": "genetics:TranscriptAbundance of life:Cell",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "genetics",
+      "id": "genetics-q06",
+      "expression": "genetics:Mutation",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "genetics",
+      "id": "genetics-q07",
+      "expression": null,
+      "previous_expected_type": "germline/lineage gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "genetics",
+      "id": "genetics-q08",
+      "expression": "genetics:Duplication",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "genetics",
+      "id": "genetics-q09",
+      "expression": "genetics:Deletion",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "genetics",
+      "id": "genetics-q10",
+      "expression": "genetics:GenePart linking genetics:GeneSegment to genetics:DNAMolecule",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "genetics",
+      "id": "genetics-q11",
+      "expression": "genetics:MeioticSegregation",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "genetics",
+      "id": "genetics-q12",
+      "expression": null,
+      "previous_expected_type": "historical hypothesis gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "genetics",
+      "id": "genetics-q13",
+      "expression": "genetics:Fertilization",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "genetics",
+      "id": "genetics-q14",
+      "expression": null,
+      "previous_expected_type": "causal model gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "genetics",
+      "id": "genetics-q15",
+      "expression": null,
+      "previous_expected_type": "negative evidence probe",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geography",
+      "id": "geography-q01",
+      "expression": "geography:GroundElevation of earth:Location",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geography",
+      "id": "geography-q02",
+      "expression": "geography:TerrainAspect of geography:Hillslope",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geography",
+      "id": "geography-q03",
+      "expression": "geography:TerrainInclination of geography:Hillslope",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geography",
+      "id": "geography-q04",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geography",
+      "id": "geography-q05",
+      "expression": "geography:RidgeLandform",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geography",
+      "id": "geography-q06",
+      "expression": "geography:ClosedDepression",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geography",
+      "id": "geography-q07",
+      "expression": "change in geography:GroundElevation of earth:Location",
+      "previous_expected_type": "change quality",
+      "result_category": "process",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geography",
+      "id": "geography-q08",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geography",
+      "id": "geography-q09",
+      "expression": "geography:CrestDisplacement of geography:CoastalDune",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geography",
+      "id": "geography-q10",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geography",
+      "id": "geography-q11",
+      "expression": "geography:GroundElevation of earth:Location",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geography",
+      "id": "geography-q12",
+      "expression": "geography:OppositeFlanks",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geography",
+      "id": "geography-q13",
+      "expression": "change in geography:GroundElevation of earth:Location",
+      "previous_expected_type": "change quality",
+      "result_category": "process",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geography",
+      "id": "geography-q14",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geography",
+      "id": "geography-q15",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geology",
+      "id": "geology-q01",
+      "expression": "geology:RockBody",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geology",
+      "id": "geology-q02",
+      "expression": "geology:GrainConstituentOf",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geology",
+      "id": "geology-q03",
+      "expression": "geology:SedimentBody",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geology",
+      "id": "geology-q04",
+      "expression": "geology:FaultCutsBody",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geology",
+      "id": "geology-q05",
+      "expression": "geology:SlipDisplacement of geology:FaultZone",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geology",
+      "id": "geology-q06",
+      "expression": "geology:RockfallEpisode",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geology",
+      "id": "geology-q07",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geology",
+      "id": "geology-q08",
+      "expression": "geology:InPlaceWeathering",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geology",
+      "id": "geology-q09",
+      "expression": "geology:Lithification",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geology",
+      "id": "geology-q10",
+      "expression": "geology:MetamorphicAlteration",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geology",
+      "id": "geology-q11",
+      "expression": "geology:BodyVolume of geology:SedimentBody",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geology",
+      "id": "geology-q12",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geology",
+      "id": "geology-q13",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geology",
+      "id": "geology-q14",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "geology",
+      "id": "geology-q15",
+      "expression": "geology:LandslideEpisode",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "hydrology",
+      "id": "hydrology-Q01",
+      "expression": "hydrology:SurfaceCatchment",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "hydrology",
+      "id": "hydrology-Q02",
+      "expression": "hydrology:StoredWaterVolume of hydrology:LakeWaterBody",
+      "previous_expected_type": "volume",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "hydrology",
+      "id": "hydrology-Q03",
+      "expression": "hydrology:Discharge of hydrology:ChannelFlow",
+      "previous_expected_type": "quantity",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "hydrology",
+      "id": "hydrology-Q04",
+      "expression": "hydrology:InfiltrationFlux of hydrology:Infiltration",
+      "previous_expected_type": "quantity",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "hydrology",
+      "id": "hydrology-Q05",
+      "expression": "hydrology:GroundwaterFeeds linking hydrology:GroundwaterBody to hydrology:StreamReach",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "hydrology",
+      "id": "hydrology-Q06",
+      "expression": "hydrology:GroundwaterFeeds linking hydrology:GroundwaterBody to hydrology:StreamReach",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "hydrology",
+      "id": "hydrology-Q07",
+      "expression": "hydrology:GroundwaterDischarge",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "hydrology",
+      "id": "hydrology-Q08",
+      "expression": "presence of hydrology:OverbankFloodEpisode",
+      "previous_expected_type": "presence quality",
+      "result_category": "quality",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "hydrology",
+      "id": "hydrology-Q09",
+      "expression": "change in hydrology:StoredWaterVolume of hydrology:LakeWaterBody",
+      "previous_expected_type": "change quality",
+      "result_category": "process",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "hydrology",
+      "id": "hydrology-Q10",
+      "expression": "hydrology:TributaryOf linking hydrology:StreamReach to hydrology:StreamReach",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "hydrology",
+      "id": "hydrology-Q11",
+      "expression": "change in hydrology:StoredWaterVolume of hydrology:GroundwaterBody",
+      "previous_expected_type": "change quality",
+      "result_category": "process",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "hydrology",
+      "id": "hydrology-Q12",
+      "expression": null,
+      "previous_expected_type": "transported sediment mass/load gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "hydrology",
+      "id": "hydrology-Q13",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "hydrology",
+      "id": "hydrology-Q14",
+      "expression": "presence of hydrology:ReachWettingEpisode",
+      "previous_expected_type": "presence quality",
+      "result_category": "quality",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "hydrology",
+      "id": "hydrology-Q15",
+      "expression": null,
+      "previous_expected_type": "machinery gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "infrastructure",
+      "id": "infrastructure-q01",
+      "expression": null,
+      "previous_expected_type": "subject",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "infrastructure",
+      "id": "infrastructure-q02",
+      "expression": null,
+      "previous_expected_type": "subject",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "infrastructure",
+      "id": "infrastructure-q03",
+      "expression": null,
+      "previous_expected_type": "subject",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "infrastructure",
+      "id": "infrastructure-q04",
+      "expression": "infrastructure:StoredWaterVolume of infrastructure:WaterStorageTank",
+      "previous_expected_type": "subject",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "infrastructure",
+      "id": "infrastructure-q05",
+      "expression": null,
+      "previous_expected_type": "subject",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "infrastructure",
+      "id": "infrastructure-q06",
+      "expression": "infrastructure:WaterLeakage",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "infrastructure",
+      "id": "infrastructure-q07",
+      "expression": null,
+      "previous_expected_type": "quality",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "infrastructure",
+      "id": "infrastructure-q08",
+      "expression": null,
+      "previous_expected_type": "relationship",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "infrastructure",
+      "id": "infrastructure-q09",
+      "expression": "change in infrastructure:StructuralCondition of infrastructure:Bridge",
+      "previous_expected_type": "process (unary change); requires parser and active type validation",
+      "result_category": "process",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "infrastructure",
+      "id": "infrastructure-q10",
+      "expression": null,
+      "previous_expected_type": "event",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "infrastructure",
+      "id": "infrastructure-q11",
+      "expression": null,
+      "previous_expected_type": "event",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "infrastructure",
+      "id": "infrastructure-q12",
+      "expression": "infrastructure:AssetReplacement",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "infrastructure",
+      "id": "infrastructure-q13",
+      "expression": "infrastructure:SuppliesAsset linking infrastructure:WaterStorageTank to infrastructure:WaterStorageTank",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "infrastructure",
+      "id": "infrastructure-q14",
+      "expression": "infrastructure:ConnectsAsset linking infrastructure:RoadSegment to infrastructure:Bridge",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "infrastructure",
+      "id": "infrastructure-q15",
+      "expression": null,
+      "previous_expected_type": "subject",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "land",
+      "id": "land-q01",
+      "expression": null,
+      "previous_expected_type": "subject",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "land",
+      "id": "land-q02",
+      "expression": null,
+      "previous_expected_type": "subject",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "land",
+      "id": "land-q03",
+      "expression": "land:SurfaceCoverFraction of land:ManagedField",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "land",
+      "id": "land-q04",
+      "expression": "land:Irrigation",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "land",
+      "id": "land-q05",
+      "expression": "land:SowingEpisode",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "land",
+      "id": "land-q06",
+      "expression": "land:DisturbedAreaFraction of land:ManagedField",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "land",
+      "id": "land-q07",
+      "expression": null,
+      "previous_expected_type": "relationship",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "land",
+      "id": "land-q08",
+      "expression": "change in land:SurfaceCoverFraction of land:ManagedField",
+      "previous_expected_type": "process (unary change); requires parser and active type validation",
+      "result_category": "process",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "land",
+      "id": "land-q09",
+      "expression": "land:HarvestEpisode",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "land",
+      "id": "land-q10",
+      "expression": null,
+      "previous_expected_type": "subject",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "land",
+      "id": "land-q11",
+      "expression": null,
+      "previous_expected_type": "event",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "land",
+      "id": "land-q12",
+      "expression": null,
+      "previous_expected_type": "quality",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "land",
+      "id": "land-q13",
+      "expression": null,
+      "previous_expected_type": "process",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "land",
+      "id": "land-q14",
+      "expression": "land:OccupiesField linking land:CropStand to land:ManagedField",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "land",
+      "id": "land-q15",
+      "expression": null,
+      "previous_expected_type": "event",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "life",
+      "id": "life-q01",
+      "expression": "presence of life:Organism",
+      "previous_expected_type": "subject presence",
+      "result_category": "quality",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "life",
+      "id": "life-q02",
+      "expression": "count of life:Organism",
+      "previous_expected_type": "numerosity",
+      "result_category": "quality",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "life",
+      "id": "life-q03",
+      "expression": "life:LivingMass of life:Organism",
+      "previous_expected_type": "mass quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "life",
+      "id": "life-q04",
+      "expression": "presence of life:Cell",
+      "previous_expected_type": "subject presence",
+      "result_category": "quality",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "life",
+      "id": "life-q05",
+      "expression": "life:Tissue",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "life",
+      "id": "life-q06",
+      "expression": "life:OrganPart linking life:Organ to life:Organism",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "life",
+      "id": "life-q07",
+      "expression": "presence of life:Seed",
+      "previous_expected_type": "subject presence",
+      "result_category": "quality",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "life",
+      "id": "life-q08",
+      "expression": "life:OrganismDeath",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "life",
+      "id": "life-q09",
+      "expression": "life:Reproduction",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "life",
+      "id": "life-q10",
+      "expression": "change in life:LivingMass of life:Organism",
+      "previous_expected_type": "change quality",
+      "result_category": "process",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "life",
+      "id": "life-q11",
+      "expression": "life:BiologicalRemnant",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "life",
+      "id": "life-q12",
+      "expression": "life:ParentOf linking life:Organism to life:Organism",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "life",
+      "id": "life-q13",
+      "expression": "life:Germination",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "life",
+      "id": "life-q14",
+      "expression": "life:CellPart linking life:Cell to life:Organism",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "life",
+      "id": "life-q15",
+      "expression": null,
+      "previous_expected_type": "explicit evidence gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "oceanography",
+      "id": "oceanography-q01",
+      "expression": "oceanography:Salinity of oceanography:MarineEstuary",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "oceanography",
+      "id": "oceanography-q02",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "oceanography",
+      "id": "oceanography-q03",
+      "expression": "oceanography:CurrentSpeed of oceanography:MarineSurfaceLayer",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "oceanography",
+      "id": "oceanography-q04",
+      "expression": "oceanography:Upwelling",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "oceanography",
+      "id": "oceanography-q05",
+      "expression": "oceanography:SeaSurfaceHeight of oceanography:MarineWaterBody",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "oceanography",
+      "id": "oceanography-q06",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "oceanography",
+      "id": "oceanography-q07",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "oceanography",
+      "id": "oceanography-q08",
+      "expression": "oceanography:RiverReceivesInto",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "oceanography",
+      "id": "oceanography-q09",
+      "expression": "change in oceanography:SeawaterPH of oceanography:MarineWaterBody",
+      "previous_expected_type": "change quality",
+      "result_category": "process",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "oceanography",
+      "id": "oceanography-q10",
+      "expression": "oceanography:WaterTemperature of oceanography:MarineSurfaceLayer",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "oceanography",
+      "id": "oceanography-q11",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "oceanography",
+      "id": "oceanography-q12",
+      "expression": "oceanography:Upwelling",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "oceanography",
+      "id": "oceanography-q13",
+      "expression": "change in oceanography:WaterTemperature of oceanography:MarineWaterBody",
+      "previous_expected_type": "change quality",
+      "result_category": "process",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "oceanography",
+      "id": "oceanography-q14",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "oceanography",
+      "id": "oceanography-q15",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physical",
+      "id": "physical-q01",
+      "expression": "physical:BodyTemperature of physical:MaterialBody",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physical",
+      "id": "physical-q02",
+      "expression": "physical:BodyMass of physical:MaterialBody",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physical",
+      "id": "physical-q03",
+      "expression": "physical:VoidHostedBy linking physical:HostBoundVoid to physical:MaterialBody",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physical",
+      "id": "physical-q04",
+      "expression": "physical:FragmentationEpisode",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physical",
+      "id": "physical-q05",
+      "expression": "physical:PhysicalContact linking physical:MaterialBody to physical:MaterialBody",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physical",
+      "id": "physical-q06",
+      "expression": "imod:Volume of physical:MaterialBody",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physical",
+      "id": "physical-q07",
+      "expression": "change in physical:BodyMass",
+      "previous_expected_type": "change-quality",
+      "result_category": "process",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physical",
+      "id": "physical-q08",
+      "expression": null,
+      "previous_expected_type": "gap: frame-dependent speed and process inventory cannot be inferred from stillness",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physical",
+      "id": "physical-q09",
+      "expression": null,
+      "previous_expected_type": "gap: property-specific distribution/summary quality",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physical",
+      "id": "physical-q10",
+      "expression": "physical:BodyMass of physical:MaterialBody",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physical",
+      "id": "physical-q11",
+      "expression": null,
+      "previous_expected_type": "gap: host/void individuation",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physical",
+      "id": "physical-q12",
+      "expression": "physical:IdentityLossEpisode",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physical",
+      "id": "physical-q13",
+      "expression": "change in physical:BodyTemperature",
+      "previous_expected_type": "change-quality",
+      "result_category": "process",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physical",
+      "id": "physical-q14",
+      "expression": null,
+      "previous_expected_type": "gap: epistemic evidence policy is not a domain predicate",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physical",
+      "id": "physical-q15",
+      "expression": null,
+      "previous_expected_type": "gap: upstream context review",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physics",
+      "id": "physics-q01",
+      "expression": "physics:ThermalConduction",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physics",
+      "id": "physics-q02",
+      "expression": "physics:TransferredThermalEnergy",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physics",
+      "id": "physics-q03",
+      "expression": "physics:ConvectiveHeatTransport",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physics",
+      "id": "physics-q04",
+      "expression": "physics:RadiativeEnergyTransfer",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physics",
+      "id": "physics-q05",
+      "expression": "physics:MechanicalAcceleration",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physics",
+      "id": "physics-q06",
+      "expression": null,
+      "previous_expected_type": "gap: vector velocity versus scalar speed upstream distinction",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physics",
+      "id": "physics-q07",
+      "expression": "imod:Volume of physics:FluidParcel",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physics",
+      "id": "physics-q08",
+      "expression": "physics:ThermallyContacts linking physics:ThermalBody to physics:ThermalBody",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physics",
+      "id": "physics-q09",
+      "expression": "imod:Mass of physics:MechanicalBody",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physics",
+      "id": "physics-q10",
+      "expression": "imod:Temperature of physics:ThermalBody",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physics",
+      "id": "physics-q11",
+      "expression": "physics:HeatingEpisode",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physics",
+      "id": "physics-q12",
+      "expression": null,
+      "previous_expected_type": "gap: conductance and boundary conditions; cannot infer absence",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physics",
+      "id": "physics-q13",
+      "expression": "physics:ExertsForceOn linking physics:MechanicalBody to physics:MechanicalBody",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physics",
+      "id": "physics-q14",
+      "expression": "physics:TransferredThermalEnergy",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "physics",
+      "id": "physics-q15",
+      "expression": null,
+      "previous_expected_type": "gap: no-reading is evidence state, no stop-event inference",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "society",
+      "id": "society-q01",
+      "expression": "society:ResidentCount of society:ResidentPopulation",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "society",
+      "id": "society-q02",
+      "expression": "society:HousekeepingHousehold",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "society",
+      "id": "society-q03",
+      "expression": "society:HouseholdSize of society:HousekeepingHousehold",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "society",
+      "id": "society-q04",
+      "expression": "society:HouseholdMembership",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "society",
+      "id": "society-q05",
+      "expression": null,
+      "previous_expected_type": "process/event comparison",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "society",
+      "id": "society-q06",
+      "expression": "society:LiveBirth",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "society",
+      "id": "society-q07",
+      "expression": "society:Death",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "society",
+      "id": "society-q08",
+      "expression": "society:ParentOf",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "society",
+      "id": "society-q09",
+      "expression": "society:Organization",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "society",
+      "id": "society-q10",
+      "expression": null,
+      "previous_expected_type": "event and relationship",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "society",
+      "id": "society-q11",
+      "expression": "society:HousekeepingHousehold",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "society",
+      "id": "society-q12",
+      "expression": null,
+      "previous_expected_type": "relationship plus displacement event/history",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "society",
+      "id": "society-q13",
+      "expression": null,
+      "previous_expected_type": "creation/cessation events",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "society",
+      "id": "society-q14",
+      "expression": "society:ResidentPopulation",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "society",
+      "id": "society-q15",
+      "expression": "society:HousekeepingHousehold",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "sociology",
+      "id": "sociology-q01",
+      "expression": "sociology:ReportedTrust of society:HumanIndividual",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "sociology",
+      "id": "sociology-q02",
+      "expression": "sociology:AvailableSupportTie",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "sociology",
+      "id": "sociology-q03",
+      "expression": "sociology:ParticipationShare of sociology:ParticipationMeeting",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "sociology",
+      "id": "sociology-q04",
+      "expression": "sociology:Cooperation",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "sociology",
+      "id": "sociology-q05",
+      "expression": null,
+      "previous_expected_type": "process and authorization relation",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "sociology",
+      "id": "sociology-q06",
+      "expression": null,
+      "previous_expected_type": "multiple qualities/relationships",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "sociology",
+      "id": "sociology-q07",
+      "expression": "sociology:CoordinationTie",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "sociology",
+      "id": "sociology-q08",
+      "expression": null,
+      "previous_expected_type": "process and communication relationship gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "sociology",
+      "id": "sociology-q09",
+      "expression": "change in sociology:ReportedTrust of society:HumanIndividual",
+      "previous_expected_type": "quality change",
+      "result_category": "process",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "sociology",
+      "id": "sociology-q10",
+      "expression": null,
+      "previous_expected_type": "process and agency representation relationship",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "sociology",
+      "id": "sociology-q11",
+      "expression": "sociology:CollectiveFormation",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "sociology",
+      "id": "sociology-q12",
+      "expression": "sociology:DisputeSettlement",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "sociology",
+      "id": "sociology-q13",
+      "expression": "sociology:SupportDelivery",
+      "previous_expected_type": "event",
+      "result_category": "event",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "sociology",
+      "id": "sociology-q14",
+      "expression": null,
+      "previous_expected_type": "quality/process comparison",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "sociology",
+      "id": "sociology-q15",
+      "expression": null,
+      "previous_expected_type": "process/event with reasons unresolved",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "soil",
+      "id": "soil-q01",
+      "expression": "soil:HorizonThickness of soil:SoilHorizon",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "soil",
+      "id": "soil-q02",
+      "expression": "soil:ClayFraction of soil:SoilHorizon",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "soil",
+      "id": "soil-q03",
+      "expression": "soil:BulkDensity of soil:SoilBody",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "soil",
+      "id": "soil-q04",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "soil",
+      "id": "soil-q05",
+      "expression": "soil:OrganicMatterFraction of soil:SoilHorizon",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "soil",
+      "id": "soil-q06",
+      "expression": "soil:HorizonOverlies",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "soil",
+      "id": "soil-q07",
+      "expression": "soil:SoilLeaching",
+      "previous_expected_type": "process",
+      "result_category": "process",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "soil",
+      "id": "soil-q08",
+      "expression": "change in soil:HorizonThickness of soil:SoilHorizon",
+      "previous_expected_type": "change quality",
+      "result_category": "process",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "soil",
+      "id": "soil-q09",
+      "expression": "change in soil:BulkDensity of soil:SoilBody",
+      "previous_expected_type": "change quality",
+      "result_category": "process",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "soil",
+      "id": "soil-q10",
+      "expression": "soil:SoilAggregate",
+      "previous_expected_type": "subject",
+      "result_category": "subject",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "soil",
+      "id": "soil-q11",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "soil",
+      "id": "soil-q12",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "soil",
+      "id": "soil-q13",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "soil",
+      "id": "soil-q14",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "soil",
+      "id": "soil-q15",
+      "expression": null,
+      "previous_expected_type": "gap",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "valuation",
+      "id": "valuation-q01",
+      "expression": "valuation:ValuesObject",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "valuation",
+      "id": "valuation-q02",
+      "expression": null,
+      "previous_expected_type": "subject and valuation relationships",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "valuation",
+      "id": "valuation-q03",
+      "expression": "valuation:ExchangeValue of imod:Subject",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "valuation",
+      "id": "valuation-q04",
+      "expression": "valuation:PotentialLoss of imod:Subject",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "valuation",
+      "id": "valuation-q05",
+      "expression": null,
+      "previous_expected_type": "exposure relationship and susceptibility quality",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "valuation",
+      "id": "valuation-q06",
+      "expression": "valuation:RegardsAsNonSubstitutable",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "valuation",
+      "id": "valuation-q07",
+      "expression": "valuation:ReportedPreference of imod:Agent",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "valuation",
+      "id": "valuation-q08",
+      "expression": null,
+      "previous_expected_type": "two events and qualities",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "valuation",
+      "id": "valuation-q09",
+      "expression": "valuation:RiskTolerability of imod:Agent",
+      "previous_expected_type": "quality",
+      "result_category": "quality",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "valuation",
+      "id": "valuation-q10",
+      "expression": "change in valuation:ReportedPreference of imod:Agent",
+      "previous_expected_type": "quality change",
+      "result_category": "process",
+      "basis": "context-pack section6; conditional on valid operand, operand not validated",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "valuation",
+      "id": "valuation-q11",
+      "expression": null,
+      "previous_expected_type": "directed relationships and amounts",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "valuation",
+      "id": "valuation-q12",
+      "expression": null,
+      "previous_expected_type": "monetary quality specializations",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "valuation",
+      "id": "valuation-q13",
+      "expression": "valuation:RegardsAsNonSubstitutable",
+      "previous_expected_type": "relationship",
+      "result_category": "relationship",
+      "basis": "proposed named-head category only; no semantic validation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "valuation",
+      "id": "valuation-q14",
+      "expression": null,
+      "previous_expected_type": "quality plus judgment/evidence state",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    },
+    {
+      "domain": "valuation",
+      "id": "valuation-q15",
+      "expression": null,
+      "previous_expected_type": "unresolved quality",
+      "result_category": null,
+      "basis": "no formulation",
+      "status": "bounded consistency audit; not reasoner validation"
+    }
+  ]
+}

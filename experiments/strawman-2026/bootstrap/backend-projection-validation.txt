@@ -1,0 +1,1 @@
+{"coverage":{"SUBJECT":5,"QUALITY":9,"PROCESS":5,"RELATIONSHIP":5,"EVENT":5,"ATTRIBUTE":0,"REALM":0,"ORDERING":0,"QUESTIONS":15},"errors":[],"scope":"Actual backend DTO deserialization and structural reference checks only; no scientific acceptance, workflow transition or production validator"}

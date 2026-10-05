@@ -1,0 +1,112 @@
+{
+  "stage": "question-first editorial draft before local candidate tables",
+  "date": "2026-10-03",
+  "independence": "Author saw legacy and prior packet; not blind or independently validated. Fresh held-out probes must come from another reviewer.",
+  "questions": [
+    {
+      "id": "earth-q01",
+      "sequence": 1,
+      "text": "What physical body is meant by the Earth in this observation?",
+      "source_id": "USGS-INTERIOR",
+      "interpretation_seed": "Planet identity vs region vs material sample."
+    },
+    {
+      "id": "earth-q02",
+      "sequence": 2,
+      "text": "Does a plate contain only crust or also upper mantle?",
+      "source_id": "USGS-INTERIOR",
+      "interpretation_seed": "Lithospheric plate composition vs crust."
+    },
+    {
+      "id": "earth-q03",
+      "sequence": 3,
+      "text": "Where does the crust end beneath this place?",
+      "source_id": "USGS-INTERIOR",
+      "interpretation_seed": "Boundary inferred from wave response; not arbitrary map border."
+    },
+    {
+      "id": "earth-q04",
+      "sequence": 4,
+      "text": "What distinguishes a water body from the region surrounding it?",
+      "source_id": "LOCAL",
+      "interpretation_seed": "Material body vs volumetric geographical region."
+    },
+    {
+      "id": "earth-q05",
+      "sequence": 5,
+      "text": "Can a coastal strip be identified without classifying every land-cover pixel?",
+      "source_id": "LOCAL",
+      "interpretation_seed": "Shared geographic bearer vs authority classification."
+    },
+    {
+      "id": "earth-q06",
+      "sequence": 6,
+      "text": "Is this hill lower because material left it or because our datum changed?",
+      "source_id": "USGS-DESERT",
+      "interpretation_seed": "Erosion-driven elevation change vs representation correction."
+    },
+    {
+      "id": "earth-q07",
+      "sequence": 7,
+      "text": "Did rock break down in place or move elsewhere?",
+      "source_id": "USGS-DESERT",
+      "interpretation_seed": "Weathering vs erosion and transport."
+    },
+    {
+      "id": "earth-q08",
+      "sequence": 8,
+      "text": "Where did the sediment on this fan come from?",
+      "source_id": "USGS-DESERT",
+      "interpretation_seed": "Material provenance needs transport occurrence, not mere proximity."
+    },
+    {
+      "id": "earth-q09",
+      "sequence": 9,
+      "text": "Can slow uplift and erosion happen at the same time?",
+      "source_id": "USGS-DESERT",
+      "interpretation_seed": "Competing occurrents, not mutually exclusive predicates."
+    },
+    {
+      "id": "earth-q10",
+      "sequence": 10,
+      "text": "Was this slope movement one bounded episode?",
+      "source_id": "USGS-DESERT",
+      "interpretation_seed": "Landslide/debris event segmentation is contextual."
+    },
+    {
+      "id": "earth-q11",
+      "sequence": 11,
+      "text": "What changed when a new rock deposit formed?",
+      "source_id": "USGS-DESERT",
+      "interpretation_seed": "Deposition, deposited material and bearer extent distinguished."
+    },
+    {
+      "id": "earth-q12",
+      "sequence": 12,
+      "text": "Is a river reach a body of water or a geographical corridor?",
+      "source_id": "LOCAL",
+      "interpretation_seed": "Persistent place vs changing material body needs split."
+    },
+    {
+      "id": "earth-q13",
+      "sequence": 13,
+      "text": "Does every visible land boundary mark a geological difference?",
+      "source_id": "LOCAL",
+      "interpretation_seed": "Administrative/land-use authority categories do not entail geology."
+    },
+    {
+      "id": "earth-q14",
+      "sequence": 14,
+      "text": "Can earthquake measurements tell us about inaccessible layers?",
+      "source_id": "USGS-INTERIOR",
+      "interpretation_seed": "Observable meaning vs observational method/inverse model."
+    },
+    {
+      "id": "earth-q15",
+      "sequence": 15,
+      "text": "If elevation change is unresolved after erosion, may the twin continue?",
+      "source_id": "LOCAL",
+      "interpretation_seed": "Unknown change remains unresolved; not zero change or retention rule."
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "domain": "valuation",
+  "stage": "source-first questions frozen before candidate vocabulary",
+  "created_on": "2026-10-03",
+  "independence": "Same author had read current ontology and prior packet. Questions preceded this dossier's candidate construction, but are not independent held-out tests. Fresh external probes still required.",
+  "questions": [
+    {
+      "id": "valuation-q01",
+      "sequence": 1,
+      "text": "What do residents value about this forest besides income?",
+      "source_ids": [
+        "IPBES"
+      ],
+      "source_motivation": "multiple value meanings and perspectives"
+    },
+    {
+      "id": "valuation-q02",
+      "sequence": 2,
+      "text": "Whose values were included when the fire-management options were compared?",
+      "source_ids": [
+        "IPBES"
+      ],
+      "source_motivation": "representation of valuations not universal value"
+    },
+    {
+      "id": "valuation-q03",
+      "sequence": 3,
+      "text": "Is an estimate of market exchange value being mistaken for total importance?",
+      "source_ids": [
+        "SEEA"
+      ],
+      "source_motivation": "exchange versus welfare and other values"
+    },
+    {
+      "id": "valuation-q04",
+      "sequence": 4,
+      "text": "What losses might a fire cause to people, assets and ways of life?",
+      "source_ids": [
+        "RISK"
+      ],
+      "source_motivation": "potential loss not observed damage"
+    },
+    {
+      "id": "valuation-q05",
+      "sequence": 5,
+      "text": "Which assets are exposed without necessarily being highly susceptible to damage?",
+      "source_ids": [
+        "VULN"
+      ],
+      "source_motivation": "exposure and susceptibility distinct"
+    },
+    {
+      "id": "valuation-q06",
+      "sequence": 6,
+      "text": "How does a community express an attachment that it will not trade for money?",
+      "source_ids": [
+        "IPBES"
+      ],
+      "source_motivation": "nonmonetary and potentially noncompensatory judgment"
+    },
+    {
+      "id": "valuation-q07",
+      "sequence": 7,
+      "text": "Could two reasonable assessors rank the same options differently?",
+      "source_ids": [
+        "IPBES"
+      ],
+      "source_motivation": "explicit observer and criteria"
+    },
+    {
+      "id": "valuation-q08",
+      "sequence": 8,
+      "text": "Which observed damage changed the value assigned to a building?",
+      "source_ids": [
+        "RISK"
+      ],
+      "source_motivation": "damage versus valuation revision, no automatic monetary conversion"
+    },
+    {
+      "id": "valuation-q09",
+      "sequence": 9,
+      "text": "What level of risk is acceptable to whom, and under which stated criterion?",
+      "source_ids": [
+        "RISK"
+      ],
+      "source_motivation": "tolerability is contextual judgment"
+    },
+    {
+      "id": "valuation-q10",
+      "sequence": 10,
+      "text": "Did the ranking change after participants learned about downstream flood effects?",
+      "source_ids": [
+        "IPBES"
+      ],
+      "source_motivation": "valuation revision occurrence; causal mechanism remains model"
+    },
+    {
+      "id": "valuation-q11",
+      "sequence": 11,
+      "text": "Are costs and benefits distributed to the same people?",
+      "source_ids": [
+        "SEEA"
+      ],
+      "source_motivation": "distribution cannot be inferred from aggregate value"
+    },
+    {
+      "id": "valuation-q12",
+      "sequence": 12,
+      "text": "Is the quoted monetary amount an actual exchange, an accounting estimate or willingness to pay?",
+      "source_ids": [
+        "SEEA"
+      ],
+      "source_motivation": "measurement concept explicit"
+    },
+    {
+      "id": "valuation-q13",
+      "sequence": 13,
+      "text": "Was a site valued as replaceable, or as a relationship that cannot be substituted?",
+      "source_ids": [
+        "IPBES"
+      ],
+      "source_motivation": "substitutability is not identical to price"
+    },
+    {
+      "id": "valuation-q14",
+      "sequence": 14,
+      "text": "What happened when the panel could not reach a common ranking?",
+      "source_ids": [
+        "IPBES"
+      ],
+      "source_motivation": "incomparability versus insufficient evidence"
+    },
+    {
+      "id": "valuation-q15",
+      "sequence": 15,
+      "text": "Does an unresolved risk estimate mean the forest is safe?",
+      "source_ids": [
+        "RISK"
+      ],
+      "source_motivation": "open-world unknown, not zero loss or absence of hazard"
+    }
+  ]
+}

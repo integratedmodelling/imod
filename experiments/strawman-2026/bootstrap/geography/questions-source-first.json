@@ -1,0 +1,126 @@
+{
+  "phase": "source-question ledger saved before candidate records",
+  "independence": "Author saw legacy namespaces; source-led questions are not blind or independent probes. Fresh human probes remain required.",
+  "questions": [
+    {
+      "id": "geography-q01",
+      "order": 1,
+      "text": "How high is the ground beside this house relative to the same vertical reference?",
+      "source_ids": [
+        "G1"
+      ]
+    },
+    {
+      "id": "geography-q02",
+      "order": 2,
+      "text": "Which side of this hillside faces the afternoon sun?",
+      "source_ids": [
+        "G2"
+      ]
+    },
+    {
+      "id": "geography-q03",
+      "order": 3,
+      "text": "Where is the steepest ground along the planned walking route?",
+      "source_ids": [
+        "G2"
+      ]
+    },
+    {
+      "id": "geography-q04",
+      "order": 4,
+      "text": "Do two places with the same height belong to the same landform?",
+      "source_ids": [
+        "G2"
+      ]
+    },
+    {
+      "id": "geography-q05",
+      "order": 5,
+      "text": "Where does this ridge separate surface drainage directions?",
+      "source_ids": [
+        "G2"
+      ]
+    },
+    {
+      "id": "geography-q06",
+      "order": 6,
+      "text": "Is the low area a valley with an outlet or a closed hollow?",
+      "source_ids": [
+        "G2"
+      ]
+    },
+    {
+      "id": "geography-q07",
+      "order": 7,
+      "text": "How much lower did this ground become after the slope failed?",
+      "source_ids": [
+        "G3"
+      ]
+    },
+    {
+      "id": "geography-q08",
+      "order": 8,
+      "text": "Did the apparent shoreline move because land was lost or because the tide changed?",
+      "source_ids": [
+        "G3"
+      ]
+    },
+    {
+      "id": "geography-q09",
+      "order": 9,
+      "text": "Is this dune moving toward the road?",
+      "source_ids": [
+        "G3"
+      ]
+    },
+    {
+      "id": "geography-q10",
+      "order": 10,
+      "text": "Which mapped boundary is a jurisdiction and which is a natural feature?",
+      "source_ids": [
+        "G1"
+      ]
+    },
+    {
+      "id": "geography-q11",
+      "order": 11,
+      "text": "Can a roof height measurement tell us the height of the ground beneath it?",
+      "source_ids": [
+        "G1"
+      ]
+    },
+    {
+      "id": "geography-q12",
+      "order": 12,
+      "text": "Which neighboring slopes share the same ridge?",
+      "source_ids": [
+        "G2"
+      ]
+    },
+    {
+      "id": "geography-q13",
+      "order": 13,
+      "text": "Did deposited sediment raise the low ground after the storm?",
+      "source_ids": [
+        "G3"
+      ]
+    },
+    {
+      "id": "geography-q14",
+      "order": 14,
+      "text": "Can we infer an unchanged hillside because no new elevation survey exists?",
+      "source_ids": [
+        "G3"
+      ]
+    },
+    {
+      "id": "geography-q15",
+      "order": 15,
+      "text": "Does a map label saying mountain establish a universal minimum height?",
+      "source_ids": [
+        "G2"
+      ]
+    }
+  ]
+}

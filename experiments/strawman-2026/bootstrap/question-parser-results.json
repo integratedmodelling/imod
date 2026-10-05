@@ -1,0 +1,1618 @@
+{
+  "scope": "Actual ObservableSequence grammar only; no name resolution, type/category validation, adaptation, reasoner or model execution.",
+  "grammar_source": "klab-languages 8f5c29363f4362bddd13f9fdd4f43e7e2c9fb024; dependency hashes verified against candidate-parser.classpath.json",
+  "parser_source_sha256": "6ee8354a275111789787515300ff2628f68b7ef18c203da30a16a5e77299ea8f",
+  "expressions": [
+    {
+      "id": "agency/agency-q03",
+      "expression": "agency:ActionAuthorization",
+      "sha256": "20a43ca542246740626c1c0b9439821c1ce915feba2dbdb449b9a5a10767d81f",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "agency/agency-q04",
+      "expression": "agency:ConsentGrant",
+      "sha256": "978100bd1504c1b2b9a2290e61bb46818829af671f641bbaf0cf64f4df4329a9",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "agency/agency-q06",
+      "expression": "agency:ConsentWithdrawal",
+      "sha256": "58e662d62349764d3a71ad02cefdc911f4c30bf808ab1d4f838df6cf1a168fea",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "agency/agency-q08",
+      "expression": "agency:AvailableOptionCount of imod:Agent",
+      "sha256": "2a06b1f9b6bcc2c78f5a606248340358c572ba411c92b25426f4cfa6bfc6eedd",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "agency/agency-q09",
+      "expression": "agency:PerceivedControl of imod:Agent",
+      "sha256": "b275335943d762751065153ffec5a4755fb704d175725b14c8ad274539bd9575",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "agency/agency-q10",
+      "expression": "agency:Negotiation",
+      "sha256": "c72d2fa917ff5ca3680602683aa975e7785356063ea76a0c6f0539bb0f181439",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "agency/agency-q11",
+      "expression": "agency:Representation",
+      "sha256": "115a1cee7b703466454696fc9d650c92cd7c068f57f4013081112bda80f0330f",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "agency/agency-q12",
+      "expression": "agency:RepresentativeAppointment",
+      "sha256": "7a2ef00537a7ea76fa63675db15b06fbfe51238e264e0806b0d6182096e75306",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "atmosphere/atmosphere-q01",
+      "expression": "atmosphere:AirTemperature of atmosphere:AirBody",
+      "sha256": "0e5bacceede7de1d95305d891546e961f4c33b338eb72cac3b42bbc6a317e9e2",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "atmosphere/atmosphere-q02",
+      "expression": "atmosphere:SpecificHumidity of atmosphere:AirMass",
+      "sha256": "7b14581fc05f6a9686443e534897524ba748000a0053cbcaf5bfe37d4b871de4",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "atmosphere/atmosphere-q03",
+      "expression": "atmosphere:WindSpeed of atmosphere:AirBody",
+      "sha256": "18415464c04d53459d8a60447b211da98aa6dfa0429882d60de8987e567725e0",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "atmosphere/atmosphere-q04",
+      "expression": "atmosphere:FrontalZone",
+      "sha256": "383b9b66c6d5f5bdcc1d6c5a5c4f877052980db21bd31d5d151db7ea8352320e",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "atmosphere/atmosphere-q05",
+      "expression": "change in atmosphere:AirTemperature of atmosphere:AirBody",
+      "sha256": "74adb1390e5dd7d1003800fec72e31df0b38dfb459cf5ebceeec8045074809da",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "atmosphere/atmosphere-q06",
+      "expression": "atmosphere:CloudCondensation",
+      "sha256": "3b64ee9620aa32cb6ce60dde32af98a5cd2be2ccd475f4bd728eee4cc1415775",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "atmosphere/atmosphere-q07",
+      "expression": "atmosphere:FrontSeparatesAirMass",
+      "sha256": "beac284f21cbf13ee6200e0c29f230c0d7a73788a5c49db1946e51d7d91dc77d",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "atmosphere/atmosphere-q08",
+      "expression": "earth:RainfallVolume",
+      "sha256": "9dd371cb2f1275e5046ef99de10222cfd9f75c64a4b5429400883358f6ccbd75",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "atmosphere/atmosphere-q09",
+      "expression": "atmosphere:WindSpeed of atmosphere:AirBody",
+      "sha256": "18415464c04d53459d8a60447b211da98aa6dfa0429882d60de8987e567725e0",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "atmosphere/atmosphere-q10",
+      "expression": "atmosphere:TroposphericRegion",
+      "sha256": "f6b9017d886f8972dd8058be7d35682b8b7a8edb2905ca0ee27bca9150adf0c0",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "atmosphere/atmosphere-q11",
+      "expression": "atmosphere:SpecificHumidity of atmosphere:AirMass",
+      "sha256": "7b14581fc05f6a9686443e534897524ba748000a0053cbcaf5bfe37d4b871de4",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "atmosphere/atmosphere-q13",
+      "expression": "change in atmosphere:WindDirection of atmosphere:AirBody",
+      "sha256": "edee515b4cf95194670e75a87f0ed7f3525a775c916b6586bffd8492485ff1d7",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "biology/biology-q01",
+      "expression": "biology:Photosynthesis",
+      "sha256": "986a0f91835b16f4f342d541cd2d2d336a6cb2c83e295c69296ee433e5b03780",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "biology/biology-q02",
+      "expression": "biology:Respiration",
+      "sha256": "c77c5c2fdfe364cdc597d4e2dbfafdee0b722acb33049faccbe252153f855497",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "biology/biology-q03",
+      "expression": "biology:GrowthRate of life:Organism",
+      "sha256": "b1f9b383364e05ea29af857b42fd4e0e3b9aab53c9f0792f58a3ab36ae3078a1",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "biology/biology-q04",
+      "expression": "biology:MembraneTransport",
+      "sha256": "813606b89ecac9b51e0310ef325b4d13c188d6af6422845cdd303684e6f5d095",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "biology/biology-q05",
+      "expression": "biology:GasExchangeRate of life:Tissue",
+      "sha256": "4fd3bc46d2726c0898558df9f8a67ad4f6f01c5365aec13b2c0c43b4a2225365",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "biology/biology-q06",
+      "expression": "biology:CellDivision",
+      "sha256": "19520d684d7a442e842ee582faa87c14c702fa6b55c5117cbd56814beb43ced4",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "biology/biology-q07",
+      "expression": "biology:CellDeath",
+      "sha256": "173fb810b946053a2fcbbbc297ff672dad9dbdc9bd3be55c7b3e7fb83c5035e3",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "biology/biology-q08",
+      "expression": "biology:RootInitiation",
+      "sha256": "ab6742f14fca7fc120ef4de218b97584cd8e7a0c37a5ed857ec352986c97fc29",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "biology/biology-q09",
+      "expression": "biology:TransportsTo linking life:Organ to life:Tissue",
+      "sha256": "184b935631bbd65db6181f7a7c790e0bb3de3fe2b45ea6563fe3c507e7d841ab",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "biology/biology-q10",
+      "expression": "biology:SignalsTo linking life:Cell to life:Cell",
+      "sha256": "812a25245f046ec0d4f1456b53b0f933e467e3e1295c216d2488419b59b7dad6",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "biology/biology-q11",
+      "expression": "biology:Differentiation",
+      "sha256": "abed277b926ca9ca7572d6ec983488ecd23fef334b128f5b3293dc37128b1280",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "biology/biology-q13",
+      "expression": "biology:Leaf",
+      "sha256": "71c81e046117d42b36f89e1cfb7b14ca4c5ae50e7033828030771e698bc8585e",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "biology/biology-q14",
+      "expression": "biology:Resprouting",
+      "sha256": "37f09892e5b59d55c4b18abf84b9735d2098d0a6a16af9c7c1dde1885365ff92",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "chemistry/chemistry-q01",
+      "expression": "chemistry:MolecularEntity",
+      "sha256": "9f72072b0dd02dcd72439f51dddbc1aec52ed2655f13f1e1f4050f38630f824e",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "chemistry/chemistry-q02",
+      "expression": "chemistry:ChemicalReaction",
+      "sha256": "e1b063ccfcbc0f6a595011c5c6db8c6fc80f6efaa09acb7350c0b510725515b8",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "chemistry/chemistry-q03",
+      "expression": "chemistry:SolutionPortion",
+      "sha256": "d2ea9d4ae3b57154787ac573099692c23b14fac9d77c8dceeb8b85003fc6f14f",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "chemistry/chemistry-q04",
+      "expression": "chemistry:PhasePortion",
+      "sha256": "38d596a574b06d8cc69d77dc4f7270806cdeca990d38367ff5872bd5fc598d55",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "chemistry/chemistry-q05",
+      "expression": "chemistry:ChemicalPrecipitation",
+      "sha256": "db6e35c7e0742664f90fbc4dffb63e349b7950fb80e99c2c83b4eed0fdd8a84b",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "chemistry/chemistry-q06",
+      "expression": "chemistry:Oxidation",
+      "sha256": "69579905be29910179ef51ac0ec2da3252feaa948c638622c1c305f3c472e50d",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "chemistry/chemistry-q07",
+      "expression": "chemistry:SurfaceBoundTo linking chemistry:MolecularEntity to chemistry:AdsorbentBody",
+      "sha256": "c6a71750b3f2f91f0786e1a9646e61d6c23baf0f2f9cad2a597b596e67a9ced5",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "chemistry/chemistry-q11",
+      "expression": "chemistry:ReactionEpisode",
+      "sha256": "703a5c53c3e4c6e00106de930980164b040f60bb1daf842937e7c5b945e11ec8",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "chemistry/chemistry-q13",
+      "expression": "chemistry:DissociativeAdsorption",
+      "sha256": "fc0b9c0b5832c2302661345a3b373d86651bdd6dc941729c7c641f46ad3cb607",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "earth/earth-q01",
+      "expression": "earth:TerrestrialPlanetBody",
+      "sha256": "2c4ed901b226ec264bb80b625c61b6383632131f4282c6c1fe94f551f527894d",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "earth/earth-q02",
+      "expression": "earth:LithosphericPlate",
+      "sha256": "0ab0c6c6e1a4acef8d233931dc1e6def185892190372f804842742661c5c02f7",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "earth/earth-q07",
+      "expression": "earth:Weathering",
+      "sha256": "8eadbee7b8a7207b0529545a1eba7b0a879df1fd209d38528f99a574eb92be6c",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "earth/earth-q08",
+      "expression": "earth:DepositDerivedFrom linking earth:SedimentDeposit to earth:RockBody",
+      "sha256": "f968da5f613b6a1e45beed102d03484785d9279fae377cfd118e31326f4f8a62",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "earth/earth-q09",
+      "expression": "earth:TectonicUplift",
+      "sha256": "f1b181b702cdd64b75f479c70174f6d7a4c15294b4ac60b1d654bc388ccaee19",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "earth/earth-q10",
+      "expression": "earth:DebrisFlowEpisode",
+      "sha256": "7a8357370663cb8a57312befb35473d4a804ff31c92e42b4501b2097fa49400e",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "earth/earth-q11",
+      "expression": "earth:SedimentDeposition",
+      "sha256": "e7a7472b89176a888b5fb31e3b65a40368ca046650ea2616463fc5687b8599f9",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "ecology/ecology-q01",
+      "expression": "ecology:FeedsOn linking life:Organism to life:Organism",
+      "sha256": "a255b72f642f206f9ecb0daae47f47ef42b76458077b78affea939031b69483b",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "ecology/ecology-q02",
+      "expression": "ecology:PopulationAbundance of ecology:Population",
+      "sha256": "8de4cdb402120868e1bf3cdfab7744f4fa22b58d4415ef8bdfea509333214195",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "ecology/ecology-q04",
+      "expression": "ecology:Shelters linking life:BiologicalRemnant to life:Organism",
+      "sha256": "f5a5c47f3bc7d394eef9c4db45cab5350f78e7e7113ebded6ded76c7e9ff5449",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "ecology/ecology-q05",
+      "expression": "ecology:Parasitizes linking life:Organism to life:Organism",
+      "sha256": "2dee72e2133b2bb23379b5e5f5fd0061b08ae51b3ef03b9db8b292f26f278c83",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "ecology/ecology-q06",
+      "expression": "ecology:Mutualism linking life:Organism to life:Organism",
+      "sha256": "db553c6d49c0b59de7157720e54da35086c9d3b4750163b4cda2025c3f1eb101",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "ecology/ecology-q07",
+      "expression": "ecology:Colonization",
+      "sha256": "523569fc322dc21334c0b730cfbb9f4e11f840ca662e2b3efa2b41a6f307be85",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "ecology/ecology-q08",
+      "expression": "ecology:LocalExtirpation",
+      "sha256": "b6c259669a0b289ced7bc44d860abff8d901403e72ec5c59fa2f6345f040d94c",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "ecology/ecology-q09",
+      "expression": "ecology:CommunityBiomass of ecology:Community",
+      "sha256": "c7f0ff3854549ab065192b455a42788e92ab26a9af8361e2650d02ebf8154873",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "ecology/ecology-q10",
+      "expression": "ecology:FeedsOn linking life:Organism to life:Organism",
+      "sha256": "a255b72f642f206f9ecb0daae47f47ef42b76458077b78affea939031b69483b",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "ecology/ecology-q12",
+      "expression": "ecology:Succession",
+      "sha256": "1c17bc96aeffb481726c9a220b5cf9d3925a879ab8651283fbf4ff693ba7d968",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "ecology/ecology-q13",
+      "expression": "ecology:HabitatPatch",
+      "sha256": "c15898cf5d5d72b3def1aff0026819024bdeea0892253e2baed9b8fe053e0a0a",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "ecology/ecology-q14",
+      "expression": "ecology:CompetesWith linking life:Organism to life:Organism",
+      "sha256": "74cfad0a9cb04b276d682a396c5ab66c90eae7af799958e05a9b83c5e5631e80",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "economics/economics-q01",
+      "expression": "economics:DisposableIncome of economics:HouseholdUnit",
+      "sha256": "8a0ecb40c4e6dc66137d10fe08250fccd0858eabe167cba268f851bc2d5c9ed7",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "economics/economics-q03",
+      "expression": "economics:OutputValue of economics:EstablishmentUnit",
+      "sha256": "6672b9ec6ba0aedd7b2da01e89f1b44b3b9a691b4d79694331bdb269a1fc2863",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "economics/economics-q04",
+      "expression": "economics:IntermediateConsumption",
+      "sha256": "259158fd110556c2de231d17efcea9a88fe05309073b60f59035b07780e4fb3b",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "economics/economics-q07",
+      "expression": "economics:OwesPayment linking economics:EnterpriseUnit to economics:EnterpriseUnit",
+      "sha256": "a5e18467bf2596be6adb10a0cf8677d766a3e2c4ead4d92d3e683ba05b3c2a71",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "economics/economics-q11",
+      "expression": "economics:AssetSale",
+      "sha256": "f9a9547d8ff79562a8a2656c2574628c8dd40708e348e3e1c26ca29eb87c9a75",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "economics/economics-q12",
+      "expression": "economics:TransferReceipt",
+      "sha256": "36dc79582a622fc7f557ced95830ece972124226049b2db90a36d7424ff2ee8c",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "engineering/engineering-q03",
+      "expression": "engineering:Transformer",
+      "sha256": "286a6197179e979d46f9ef5cd71f6e67fb113c0b360cf6d6039fb2780c654f05",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "engineering/engineering-q05",
+      "expression": "engineering:TransfersLoad",
+      "sha256": "ca50e0467f77662a294ef6307bac5eb2abff768ba40fa4a823043fa60fa63963",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "engineering/engineering-q06",
+      "expression": "engineering:LoadCapacity of engineering:Bearing",
+      "sha256": "95c621033284f83ed9ec32136668d1d4aac98cee5620b7244c0d00dd6a4011ac",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "engineering/engineering-q08",
+      "expression": "engineering:JoinsComponent linking engineering:Bearing to imod:Subject",
+      "sha256": "b6ecb2a25ffd3c51bcec3d2d08ae1b1da4d1e776e4b8103c35185606567cb9ec",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "engineering/engineering-q09",
+      "expression": "change in engineering:OpeningFraction of engineering:Valve",
+      "sha256": "158223d03ddbe02e4eda45e6f004321aa000e654f88c05524bccbb5c05d58cb7",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "engineering/engineering-q11",
+      "expression": "engineering:ComponentReplacement",
+      "sha256": "380118bb94129123227b4b424f3ed2c78f9d3f08bfd52c451b45c74300462bbd",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "engineering/engineering-q12",
+      "expression": "engineering:OperatingTemperature of engineering:Pump",
+      "sha256": "056c01fd872d628b11332ff591263795ca6d21db57e5c57e3d833fab59b2cb15",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "engineering/engineering-q14",
+      "expression": "engineering:ProductAssembly",
+      "sha256": "3c02fb4252baa73e977c5e86e4c964fdfa473aaa64582ea1003326375ae03233",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "genetics/genetics-q01",
+      "expression": "genetics:DNASequence of genetics:DNAMolecule",
+      "sha256": "8e1cffbbc58d012b2b650aefbfce4a2c9390e12b84a117f129c0ebed78c61dcc",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "genetics/genetics-q03",
+      "expression": "count of genetics:Chromosome contained in life:Cell",
+      "sha256": "a1062b3f46dcfdd0832da8a997d85fac9b7409170e6d47a5ae11aee7ef0d852a",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "genetics/genetics-q04",
+      "expression": "genetics:Transcription",
+      "sha256": "e0a3b48472db12554701a453baf5e300c6a0ed88f8061e7f91f842209a850f2e",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "genetics/genetics-q05",
+      "expression": "genetics:TranscriptAbundance of life:Cell",
+      "sha256": "1ecd9fd0c260c1b834d193f8bbac0e779255274b281572667717a06f6d3c9db9",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "genetics/genetics-q06",
+      "expression": "genetics:Mutation",
+      "sha256": "74417ff40245b049b8e5d1b85a5871bf5c0f49d77b6ca17307112071040e7989",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "genetics/genetics-q08",
+      "expression": "genetics:Duplication",
+      "sha256": "e87eb860828cc66a8adba588869989034904de50aafbfeb820ce617de65aea5b",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "genetics/genetics-q09",
+      "expression": "genetics:Deletion",
+      "sha256": "6920c0e389ca157d860fb8d0f28be193c7314c08bbed7bc920068ceebc0476b4",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "genetics/genetics-q10",
+      "expression": "genetics:GenePart linking genetics:GeneSegment to genetics:DNAMolecule",
+      "sha256": "ac7d00129cb4eba2a3267b32d6ef6d080cf36407b7c43093ff14d270e8eb3c61",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "genetics/genetics-q11",
+      "expression": "genetics:MeioticSegregation",
+      "sha256": "3280d8dbdc83a50c5e79ab7e2f263e000c803063e9a2ecd22727105cace242bc",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "genetics/genetics-q13",
+      "expression": "genetics:Fertilization",
+      "sha256": "ab305f736ee2b6c1dd2701be2a8506c2e2fb68feae12ddbe31b910b2dd87dc88",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geography/geography-q01",
+      "expression": "geography:GroundElevation of earth:Location",
+      "sha256": "79875557164df368f3f1ebcd77d3fff0a33c5dab5ba20375dbb2c472b1e0fc51",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geography/geography-q02",
+      "expression": "geography:TerrainAspect of geography:Hillslope",
+      "sha256": "fd9d25cddcb1dc902d1c934812ae4290e2b13a06049bb6e622145f9deacfda60",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geography/geography-q03",
+      "expression": "geography:TerrainInclination of geography:Hillslope",
+      "sha256": "f537a7603e2f7312b806449e66a3bca0a9776a9450d5c20040094fa38f0d75c3",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geography/geography-q05",
+      "expression": "geography:RidgeLandform",
+      "sha256": "2c1cd37a32098bfbf3539d078c518e99727a8689840882af9605cf1799bc5c0b",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geography/geography-q06",
+      "expression": "geography:ClosedDepression",
+      "sha256": "c33e4a5a29ca842acc17f7da0f7c0a8879b536b64f6a8d967b24d8a426027559",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geography/geography-q07",
+      "expression": "change in geography:GroundElevation of earth:Location",
+      "sha256": "03c7e2b34c640afa76d45e2048abf4d35f3b5cb4e80af89f2186b321a959cb51",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geography/geography-q09",
+      "expression": "geography:CrestDisplacement of geography:CoastalDune",
+      "sha256": "c5d803672978b7db13e859c61ad091719e4577137b72abb7ac0b72dfe26d9c42",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geography/geography-q11",
+      "expression": "geography:GroundElevation of earth:Location",
+      "sha256": "79875557164df368f3f1ebcd77d3fff0a33c5dab5ba20375dbb2c472b1e0fc51",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geography/geography-q12",
+      "expression": "geography:OppositeFlanks",
+      "sha256": "b83f0a42ed54a78e09f92cb44f9c421e22cb9442752705baa9ffe3ce39a69640",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geography/geography-q13",
+      "expression": "change in geography:GroundElevation of earth:Location",
+      "sha256": "03c7e2b34c640afa76d45e2048abf4d35f3b5cb4e80af89f2186b321a959cb51",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geology/geology-q01",
+      "expression": "geology:RockBody",
+      "sha256": "4f07933d644bba1c53424238ac809be74adab0377c7dae8ee96a798bdf9c85fd",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geology/geology-q02",
+      "expression": "geology:GrainConstituentOf",
+      "sha256": "7c669702e3c637b8dc1c946178448b78c83dbd985f69cf604b04982060b0b91b",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geology/geology-q03",
+      "expression": "geology:SedimentBody",
+      "sha256": "5f0c80142ecb0082c46e4c15796e1b745bbb89fe3faa28354c1fe0f94df39853",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geology/geology-q04",
+      "expression": "geology:FaultCutsBody",
+      "sha256": "0955ce0a2a4d4b3e48213d8ed597aaf852fcf27aa91e9ce43c590efa35ee5782",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geology/geology-q05",
+      "expression": "geology:SlipDisplacement of geology:FaultZone",
+      "sha256": "2ab356a805f26b62afcff9f9de6382e3908751a971b9103e05d907d95b093c5e",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geology/geology-q06",
+      "expression": "geology:RockfallEpisode",
+      "sha256": "1e16ababb20682246d6d172adc6d46c7c3950773a552b45f179385415c9b1d99",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geology/geology-q08",
+      "expression": "geology:InPlaceWeathering",
+      "sha256": "a39d081717b361e3435f32babf7472e22c53c36e4bec7997cad92a03b3d21764",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geology/geology-q09",
+      "expression": "geology:Lithification",
+      "sha256": "eaa11083a661b6319d9c02209c9aabd12a148446b2a833f8a26b1e08ff686617",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geology/geology-q10",
+      "expression": "geology:MetamorphicAlteration",
+      "sha256": "a9a6983e98d8f1bb10f864cb7feaf6d486cc5be0d89394c0caa95f9ab6774bc1",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geology/geology-q11",
+      "expression": "geology:BodyVolume of geology:SedimentBody",
+      "sha256": "e10ed044153edd648716ca37a3c93bd0d4e88e4c70dc21fe5631cef6bd7a9446",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "geology/geology-q15",
+      "expression": "geology:LandslideEpisode",
+      "sha256": "e8ee8f1a23bc73870207b4e4f531b2c5f7903b1926f621f1d8450885fece0751",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "hydrology/hydrology-Q01",
+      "expression": "hydrology:SurfaceCatchment",
+      "sha256": "4ffb9534203c2a140814118f87af4ddbdafb55b600c71e833a13ebb7032d5a10",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "hydrology/hydrology-Q02",
+      "expression": "hydrology:StoredWaterVolume of hydrology:LakeWaterBody",
+      "sha256": "2b69e8dda487ceda00e6df4f669855901441f546faaff7c0dace930310e179e6",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "hydrology/hydrology-Q03",
+      "expression": "hydrology:Discharge of hydrology:ChannelFlow",
+      "sha256": "5332ed9f49423c4105bc81378f3d0243b95845c3bd56c0515017475325a1d39b",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "hydrology/hydrology-Q04",
+      "expression": "hydrology:InfiltrationFlux of hydrology:Infiltration",
+      "sha256": "072545ba405efc046059b40acd628ae8da223e3fc0beeaaf204500e37a2862c7",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "hydrology/hydrology-Q05",
+      "expression": "hydrology:GroundwaterFeeds linking hydrology:GroundwaterBody to hydrology:StreamReach",
+      "sha256": "d64851606a4a48bb37008f19f2201b38eeccf9873208e661248917538186547c",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "hydrology/hydrology-Q06",
+      "expression": "hydrology:GroundwaterFeeds linking hydrology:GroundwaterBody to hydrology:StreamReach",
+      "sha256": "d64851606a4a48bb37008f19f2201b38eeccf9873208e661248917538186547c",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "hydrology/hydrology-Q07",
+      "expression": "hydrology:GroundwaterDischarge",
+      "sha256": "7d34b011dfa0e6751fd3d8c519caba29271608ad13e002a566d9783101423aca",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "hydrology/hydrology-Q08",
+      "expression": "presence of hydrology:OverbankFloodEpisode",
+      "sha256": "4730cbbacf2f0cbea0a635edcd15790c149ff80afad03a9c8a8a28c3750a3cfa",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "hydrology/hydrology-Q09",
+      "expression": "change in hydrology:StoredWaterVolume of hydrology:LakeWaterBody",
+      "sha256": "498d08b70bd79fe28d7bf42e6df0368f3d81b89861e5fcb24c995b8dbc012edf",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "hydrology/hydrology-Q10",
+      "expression": "hydrology:TributaryOf linking hydrology:StreamReach to hydrology:StreamReach",
+      "sha256": "d90cfc2ff9d50533e4fd81e349f783d9ed2134a6c18220e8bf186c8d539a65cf",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "hydrology/hydrology-Q11",
+      "expression": "change in hydrology:StoredWaterVolume of hydrology:GroundwaterBody",
+      "sha256": "76eafbd9f2abc24b75609ec27ae530bea52cbe398b80f13cede7afbbb92d282f",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "hydrology/hydrology-Q14",
+      "expression": "presence of hydrology:ReachWettingEpisode",
+      "sha256": "833bd7fc674c64ac08afd8b4ebdaca51dc44817e210eaa0b1c4bd9930f7c6fc2",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "infrastructure/infrastructure-q04",
+      "expression": "infrastructure:StoredWaterVolume of infrastructure:WaterStorageTank",
+      "sha256": "0499bad24a3c60db970d70d13e147624184550e1cd1dbb4ac8092ac139eae5be",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "infrastructure/infrastructure-q06",
+      "expression": "infrastructure:WaterLeakage",
+      "sha256": "c6824b1b28a1fd0aada9207ff6af70e028210b8068b6c7427a6ec38b86445269",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "infrastructure/infrastructure-q09",
+      "expression": "change in infrastructure:StructuralCondition of infrastructure:Bridge",
+      "sha256": "0369300f2ba018a03106f205b3c8a7283cc0ade3fe866fab62b22d4eaefb56d0",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "infrastructure/infrastructure-q12",
+      "expression": "infrastructure:AssetReplacement",
+      "sha256": "4fd2565d679f18450af985e993914b741995353fdc8679e70a27f633e65a1c66",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "infrastructure/infrastructure-q13",
+      "expression": "infrastructure:SuppliesAsset linking infrastructure:WaterStorageTank to infrastructure:WaterStorageTank",
+      "sha256": "ba5dd6a9780509bd06fca7bbc701053c96873bafe3bd88b66f862ba150f3958a",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "infrastructure/infrastructure-q14",
+      "expression": "infrastructure:ConnectsAsset linking infrastructure:RoadSegment to infrastructure:Bridge",
+      "sha256": "a4d3231f08ddff0c1ec599ca101d638f47c08287383c878c2ce5890da5495880",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "land/land-q03",
+      "expression": "land:SurfaceCoverFraction of land:ManagedField",
+      "sha256": "80afa02c888833c235ddc4f5435053a353ac512be1550f6c802670feabace16b",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "land/land-q04",
+      "expression": "land:Irrigation",
+      "sha256": "98c6ebbb897d0a7e3b4aa868fb928c0b88644ac599ca489576c41b9be2aa70f0",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "land/land-q05",
+      "expression": "land:SowingEpisode",
+      "sha256": "2c03e44e5238150ee5cba72ac00d8146880f0f2cf18fa429b4f7b3a9ac40eb35",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "land/land-q06",
+      "expression": "land:DisturbedAreaFraction of land:ManagedField",
+      "sha256": "c9fd12b4385deb46f88e735a51d28b500102b3fac99570e4098ef1cc567b4242",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "land/land-q08",
+      "expression": "change in land:SurfaceCoverFraction of land:ManagedField",
+      "sha256": "d6203b7f0d6b467abdfa107b25dfa28bd14b3a50f92aa0770ce722f19d47ffef",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "land/land-q09",
+      "expression": "land:HarvestEpisode",
+      "sha256": "cc40c1e68c18bc998cdfb48a0f611448c3364c715814bbfb97f979c4a8bed7b4",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "land/land-q14",
+      "expression": "land:OccupiesField linking land:CropStand to land:ManagedField",
+      "sha256": "1cf21fa29be952c22d7c00d0019a3f549deae88dbf7e75b13c8f0c41b9a69068",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "life/life-q01",
+      "expression": "presence of life:Organism",
+      "sha256": "9fa229b909340c15f59497142bccc27dc6a1f25f6dc1f2faa1796a88d11b7ec4",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "life/life-q02",
+      "expression": "count of life:Organism",
+      "sha256": "de8ad936636b7bc92470ab140064351a85dd20da33dd62179e67b91f3ec246a7",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "life/life-q03",
+      "expression": "life:LivingMass of life:Organism",
+      "sha256": "86d85c96ce7c4558de7c478a712655f557bbe22c162b1859dffdfd777768e1e0",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "life/life-q04",
+      "expression": "presence of life:Cell",
+      "sha256": "b6a7e157c446b6d3e6785060c108d34d33d4b570f5029abca5fdc69e49f6d20f",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "life/life-q05",
+      "expression": "life:Tissue",
+      "sha256": "433c0fd30106d44479a0a245c1d3f8c4c6fb795c352605d82f33167542325763",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "life/life-q06",
+      "expression": "life:OrganPart linking life:Organ to life:Organism",
+      "sha256": "f39df964658c0826c6c8551de9b9be28bb95b4187d44da176497f576f7d766d1",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "life/life-q07",
+      "expression": "presence of life:Seed",
+      "sha256": "28ffbd3187b4773635009b6b6a21563b5a7ffcf74c8a5311b067f107e33e476f",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "life/life-q08",
+      "expression": "life:OrganismDeath",
+      "sha256": "a272bd0805e18a5da85d0409aa74c8f93aac3d366dbe762e965488f29d03f53c",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "life/life-q09",
+      "expression": "life:Reproduction",
+      "sha256": "57aa73cc07206a33faff70c0b8c2c4e617be24af88f913cf5e98bfd8a88eaba1",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "life/life-q10",
+      "expression": "change in life:LivingMass of life:Organism",
+      "sha256": "3505e0e1f160d90a4ca1f27f011aa7ad822dceb69253a8bdff0a0a7f5a60f805",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "life/life-q11",
+      "expression": "life:BiologicalRemnant",
+      "sha256": "61f2267fb4eef066279d94ec0e3453811db25a0fa9250f092ea75bac5da22c13",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "life/life-q12",
+      "expression": "life:ParentOf linking life:Organism to life:Organism",
+      "sha256": "48b5dcbd34e503bd5a7df999b774f7b20b94bcd191130e7dec1351f07ddbc2fc",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "life/life-q13",
+      "expression": "life:Germination",
+      "sha256": "19e1e13ea7cb0047cf02c4b0268dae25b639170d48812772b24e9323124f6418",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "life/life-q14",
+      "expression": "life:CellPart linking life:Cell to life:Organism",
+      "sha256": "1527341eb8638fd0bf48d99b0cdd4935566208dcb488be4cfc8fb055e6652139",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "oceanography/oceanography-q01",
+      "expression": "oceanography:Salinity of oceanography:MarineEstuary",
+      "sha256": "583135288a81a2c3497c50f09d974e3e0696decd1e654ac921307d21fd1743f7",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "oceanography/oceanography-q03",
+      "expression": "oceanography:CurrentSpeed of oceanography:MarineSurfaceLayer",
+      "sha256": "cabac2f7e6a8cd32244d34fdeb251e1325020d43d3862f17a76ca59820dafde2",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "oceanography/oceanography-q04",
+      "expression": "oceanography:Upwelling",
+      "sha256": "aa098c76b33b0ab1e533556130cc451928fe965332c0ef0cd9ee6df374bd4100",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "oceanography/oceanography-q05",
+      "expression": "oceanography:SeaSurfaceHeight of oceanography:MarineWaterBody",
+      "sha256": "c790d3199f78bc0dba153e1795182129a71b579e664af1c562c72664e9bfa807",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "oceanography/oceanography-q08",
+      "expression": "oceanography:RiverReceivesInto",
+      "sha256": "2ffb1ee2375a83bd2573a42eab0a36283c2e58f2d0c4152f0d3644f8c37a5b14",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "oceanography/oceanography-q09",
+      "expression": "change in oceanography:SeawaterPH of oceanography:MarineWaterBody",
+      "sha256": "84535f5974ce55816cc0c5d9fb7fc80a95eeebfb34edeb419f3d80b016d4c579",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "oceanography/oceanography-q10",
+      "expression": "oceanography:WaterTemperature of oceanography:MarineSurfaceLayer",
+      "sha256": "17eb8cfe1da25793da1f627bda35fe6414678f717b352f3717566296c5ca6496",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "oceanography/oceanography-q12",
+      "expression": "oceanography:Upwelling",
+      "sha256": "aa098c76b33b0ab1e533556130cc451928fe965332c0ef0cd9ee6df374bd4100",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "oceanography/oceanography-q13",
+      "expression": "change in oceanography:WaterTemperature of oceanography:MarineWaterBody",
+      "sha256": "cf57ba32744180aea9dbe0390c7da7130305f2528ee39dc1d2ac79744c6d6846",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physical/physical-q01",
+      "expression": "physical:BodyTemperature of physical:MaterialBody",
+      "sha256": "37a9e60f4c9b9cfd345d54d88f623bf143d13f8e9d74e0c9c8da9e940482bbb0",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physical/physical-q02",
+      "expression": "physical:BodyMass of physical:MaterialBody",
+      "sha256": "aa3c46d3f69dce1d6b01600cb1aae664b91115d9ec8d987b1e2b1246dbb46e27",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physical/physical-q03",
+      "expression": "physical:VoidHostedBy linking physical:HostBoundVoid to physical:MaterialBody",
+      "sha256": "6f56dfaa860bcc5ec33d91be798bfab9a443e4252fb7a28fbdb2d151026c3b9e",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physical/physical-q04",
+      "expression": "physical:FragmentationEpisode",
+      "sha256": "35ac72ff057546686303bac4de44325989a76aa8d2a0cfda5ec94f26e0fd7706",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physical/physical-q05",
+      "expression": "physical:PhysicalContact linking physical:MaterialBody to physical:MaterialBody",
+      "sha256": "db6932f3929b81c8ba672407493e110e5d77553e208f3918909548e98276ba66",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physical/physical-q06",
+      "expression": "imod:Volume of physical:MaterialBody",
+      "sha256": "652e12f827175d2ff7ecfb889ba5e7e25733fe1e231c2d9473a4f66941517697",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physical/physical-q07",
+      "expression": "change in physical:BodyMass",
+      "sha256": "dd054c95be2bd2eb16e06a838aa00e92d9210f2353f81bf6cb3a4d585dd54af5",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physical/physical-q10",
+      "expression": "physical:BodyMass of physical:MaterialBody",
+      "sha256": "aa3c46d3f69dce1d6b01600cb1aae664b91115d9ec8d987b1e2b1246dbb46e27",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physical/physical-q12",
+      "expression": "physical:IdentityLossEpisode",
+      "sha256": "86c5359e814c3c9907423ef93e8aad50ee7fd4dceef5c562213e7b2c9de417bd",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physical/physical-q13",
+      "expression": "change in physical:BodyTemperature",
+      "sha256": "f798b52bce93a58d631c80221a0c4abafd2f0f3817fb1da76d61930dc1851b12",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physics/physics-q01",
+      "expression": "physics:ThermalConduction",
+      "sha256": "af06e30bbcbe050f762efce08c2309d4fc430270b85b17433e82a49bec0ff85a",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physics/physics-q02",
+      "expression": "physics:TransferredThermalEnergy",
+      "sha256": "7c93b09033ba4f066ca9447f4f3bd88074b4b43cc0c82c8134bf347f8c58b807",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physics/physics-q03",
+      "expression": "physics:ConvectiveHeatTransport",
+      "sha256": "82871087ecb4a597c427f4ba50ff9ca5b143212d803f6b29245db2ce3ea0c61c",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physics/physics-q04",
+      "expression": "physics:RadiativeEnergyTransfer",
+      "sha256": "40a93d9a515ec0dea07974e423a7c8b8b19a312accffd2f8eb27fd9ca05606c1",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physics/physics-q05",
+      "expression": "physics:MechanicalAcceleration",
+      "sha256": "58a6bb5096b9b9ee8c883fba383b87a7300f8cf323e71a86c4e5c2adc32384ce",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physics/physics-q07",
+      "expression": "imod:Volume of physics:FluidParcel",
+      "sha256": "e9b805c730e0716439acbdd88290cdaf60c14d10717f6f92ecc0d745636d15cd",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physics/physics-q08",
+      "expression": "physics:ThermallyContacts linking physics:ThermalBody to physics:ThermalBody",
+      "sha256": "e429962d76a6674ddbfea8f9a1116f6ba32c4b97c9c3d4dd6eb51d57818999d5",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physics/physics-q09",
+      "expression": "imod:Mass of physics:MechanicalBody",
+      "sha256": "061d8ad9e978008b97fed98366d9d043dafe08eb7d6eca0c241d4df2857e835b",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physics/physics-q10",
+      "expression": "imod:Temperature of physics:ThermalBody",
+      "sha256": "905421320dbf6cc56093717d5a8d9b6f34e9f3559515e01e0a064b1539c2467e",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physics/physics-q11",
+      "expression": "physics:HeatingEpisode",
+      "sha256": "e434957a04f15b45f700440f33e230c8dabb037a84434eccaaf6f761eeef4c48",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physics/physics-q13",
+      "expression": "physics:ExertsForceOn linking physics:MechanicalBody to physics:MechanicalBody",
+      "sha256": "f3b2aef8b7926ca37f876a822b4abc931b37b968d17f418ea5555e4791102bf6",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "physics/physics-q14",
+      "expression": "physics:TransferredThermalEnergy",
+      "sha256": "7c93b09033ba4f066ca9447f4f3bd88074b4b43cc0c82c8134bf347f8c58b807",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "society/society-q01",
+      "expression": "society:ResidentCount of society:ResidentPopulation",
+      "sha256": "1b8826825839a1f9f3cbe06f337be80c15d25cb7bb1f9ab5807dbb44e391fb6b",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "society/society-q02",
+      "expression": "society:HousekeepingHousehold",
+      "sha256": "15dbe80c08c9be1d9402e64ac505b3f3efd79916859b0693adf8d09e93a1d0ca",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "society/society-q03",
+      "expression": "society:HouseholdSize of society:HousekeepingHousehold",
+      "sha256": "dc946f05d405146c25b9020bee3906bc603ca3a0e047629f6af6d6154b14946c",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "society/society-q04",
+      "expression": "society:HouseholdMembership",
+      "sha256": "da779d9d2103aebaae5c37ac2bfe26ccd4330ae19a2b2535591e32775a43b529",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "society/society-q06",
+      "expression": "society:LiveBirth",
+      "sha256": "234bbe7427489e2a48a5140d29f10213e92e4b0e9db1a3acb7a8903afe54fabc",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "society/society-q07",
+      "expression": "society:Death",
+      "sha256": "338f50ed2c46123f510e906a63397b98d6f3a8bb71e67be4a66c58c85f596c9a",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "society/society-q08",
+      "expression": "society:ParentOf",
+      "sha256": "cd8a514be6f5be669f7a7dee6ebc8d1e51e2460cf9f97ebb1c80e0f192b7b17f",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "society/society-q09",
+      "expression": "society:Organization",
+      "sha256": "0d9095c38571e6ddfd0890bb33c1d48a997a300e4df34ae5928c04afd0e90168",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "society/society-q11",
+      "expression": "society:HousekeepingHousehold",
+      "sha256": "15dbe80c08c9be1d9402e64ac505b3f3efd79916859b0693adf8d09e93a1d0ca",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "society/society-q14",
+      "expression": "society:ResidentPopulation",
+      "sha256": "ed087d0ad0551b2bbbf6303ff8ac1bd86bc303afe5f1f2c02d8575c6284cda2a",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "society/society-q15",
+      "expression": "society:HousekeepingHousehold",
+      "sha256": "15dbe80c08c9be1d9402e64ac505b3f3efd79916859b0693adf8d09e93a1d0ca",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "sociology/sociology-q01",
+      "expression": "sociology:ReportedTrust of society:HumanIndividual",
+      "sha256": "c899ac78bac5c4f35043c410cb9764aeb89dd6b4a510ed602dea49bc917cec9d",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "sociology/sociology-q02",
+      "expression": "sociology:AvailableSupportTie",
+      "sha256": "8b7b5256287b3dd91834f44b065fba4e3d623742006710b63b68b5bce70ce94d",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "sociology/sociology-q03",
+      "expression": "sociology:ParticipationShare of sociology:ParticipationMeeting",
+      "sha256": "c3f2dcc2152cc9c02426c31dedbfd16eb43d080626076af536030fec8bc35b90",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "sociology/sociology-q04",
+      "expression": "sociology:Cooperation",
+      "sha256": "26343894515a83079e7f557019ad46a78dc6162feebd7688c19b4d78e0f7db00",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "sociology/sociology-q07",
+      "expression": "sociology:CoordinationTie",
+      "sha256": "b9db19066fb96b5b85562322d65a0056f20fa40a33e63b0dfa9c8830f8ea0e66",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "sociology/sociology-q09",
+      "expression": "change in sociology:ReportedTrust of society:HumanIndividual",
+      "sha256": "e84c393cedf7ac38ecaef2b9e665c075e35b34f503df14f54c22d77096aa1f4c",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "sociology/sociology-q11",
+      "expression": "sociology:CollectiveFormation",
+      "sha256": "4e004036bb12b2b64b25ab39c2410fddbeb00b0f928be3cac90452c163378b6c",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "sociology/sociology-q12",
+      "expression": "sociology:DisputeSettlement",
+      "sha256": "d1b9931f404579fc997aa18f57084854a11256e8f8eab9f4bb06bbdd45f74f8d",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "sociology/sociology-q13",
+      "expression": "sociology:SupportDelivery",
+      "sha256": "b7a6f3a3da789fee6e53b5c99a3bfe2e917d012834c8848bbda5431dbe592af7",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "soil/soil-q01",
+      "expression": "soil:HorizonThickness of soil:SoilHorizon",
+      "sha256": "b4baf2de8737defb233d1b1acb3f359ace1ec31405e7966ac111e5207b72e837",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "soil/soil-q02",
+      "expression": "soil:ClayFraction of soil:SoilHorizon",
+      "sha256": "b5fb1df1d6f44062a3ceec5714d9d2ed1d6038b993a0dc3ee90a829a1fd583d8",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "soil/soil-q03",
+      "expression": "soil:BulkDensity of soil:SoilBody",
+      "sha256": "7576871c5da05ba381b00562c227e08b743479bf022953516e3177b72129bc06",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "soil/soil-q05",
+      "expression": "soil:OrganicMatterFraction of soil:SoilHorizon",
+      "sha256": "e11eb417a9979c8471e06d088e023c965f7b72783a44616c92064451b6049813",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "soil/soil-q06",
+      "expression": "soil:HorizonOverlies",
+      "sha256": "2c2379c2962acfa6064bc0cb86507bae3a0da40002b73c3c04b932d4c0ba5b6f",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "soil/soil-q07",
+      "expression": "soil:SoilLeaching",
+      "sha256": "7eef266edaa51ab2ab6d9271ce6442c100f7e68ff594ab862aaef032e17e216c",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "soil/soil-q08",
+      "expression": "change in soil:HorizonThickness of soil:SoilHorizon",
+      "sha256": "517bf940f7bface0e8c0b6c025af8be4f44ee2ca87c0aff0f1686cc04ad3a35e",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "soil/soil-q09",
+      "expression": "change in soil:BulkDensity of soil:SoilBody",
+      "sha256": "b2ca7cb7e7991c4fa5aed9de5aaa83d6049624202eb6be997d13a79ed1668168",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "soil/soil-q10",
+      "expression": "soil:SoilAggregate",
+      "sha256": "f81f9fd8a8f6a5ee1bee69ad0a61a19232e15b301f5f9ac7570180f5c93d3c47",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "valuation/valuation-q01",
+      "expression": "valuation:ValuesObject",
+      "sha256": "cb19ff345ef08842a67e102f964b0282ab841f044ef829c51e439b8ca829d51d",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "valuation/valuation-q03",
+      "expression": "valuation:ExchangeValue of imod:Subject",
+      "sha256": "45f2e0844bcf5cac3f651364507e5316e9ca812dc254f25573371145f2c0f1b4",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "valuation/valuation-q04",
+      "expression": "valuation:PotentialLoss of imod:Subject",
+      "sha256": "09b383f129b7dbe9ee375faa9a4974dcffc88890da15c31d99a7681db56debde",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "valuation/valuation-q06",
+      "expression": "valuation:RegardsAsNonSubstitutable",
+      "sha256": "d236ad55613e087368a100c891c5740e41b0d1dfed652a43560d6e75c58e6ef9",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "valuation/valuation-q07",
+      "expression": "valuation:ReportedPreference of imod:Agent",
+      "sha256": "498ef8c40c5bc4375fa9d8dea91fd59072d23ac2c68d023c4b2707f274529b45",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "valuation/valuation-q09",
+      "expression": "valuation:RiskTolerability of imod:Agent",
+      "sha256": "c579b3f8bcb86f8b779969bf708057751d9dbe771c0028307ffaae1208d4e5ad",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "valuation/valuation-q10",
+      "expression": "change in valuation:ReportedPreference of imod:Agent",
+      "sha256": "227cac1d1a3c65dd669d57ce78daf28bd3e66fb6f7e1b02fd780d75dd727a530",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "valuation/valuation-q13",
+      "expression": "valuation:RegardsAsNonSubstitutable",
+      "sha256": "d236ad55613e087368a100c891c5740e41b0d1dfed652a43560d6e75c58e6ef9",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "ecology/ecology-q03#richness-only",
+      "expression": "change in ecology:SpeciesRichness of ecology:Community",
+      "sha256": "acd64516b1429e013e654feff20ccda1094d1f92764781849b964abf5c0c3b13",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "review-HYD-P01-concentration",
+      "expression": "hydrology:SedimentConcentration of hydrology:StreamReach",
+      "sha256": "11a349d897ebea0cdbe264a1e9622c38709298f9e61e0b451d23b13cc4c91744",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "review-HYD-P01-throughput",
+      "expression": "hydrology:Discharge of hydrology:ChannelFlow",
+      "sha256": "5332ed9f49423c4105bc81378f3d0243b95845c3bd56c0515017475325a1d39b",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "review-HYD-P02",
+      "expression": "change in hydrology:Stage of hydrology:StreamReach",
+      "sha256": "40dec12cfdf67fd015ede0229752a8b459b3944c5fcd2afd09a8b19de843ecb2",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "review-HYD-P03-gain",
+      "expression": "hydrology:GroundwaterFeeds linking hydrology:GroundwaterBody to hydrology:StreamReach",
+      "sha256": "d64851606a4a48bb37008f19f2201b38eeccf9873208e661248917538186547c",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "review-HYD-P03-loss",
+      "expression": "hydrology:LosesWaterTo linking hydrology:StreamReach to hydrology:GroundwaterBody",
+      "sha256": "7ebdb2780abcf68a5e00c6ef45798307e7e8e924aab518934a3a0be93fe64723",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "review-HYD-P04-stage",
+      "expression": "hydrology:Stage of hydrology:StreamReach",
+      "sha256": "b15ac580b3b8d97402b6187224f0da7a226d687f1910418753df017ccedc10fe",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "review-HYD-P04-discharge",
+      "expression": "hydrology:Discharge of hydrology:ChannelFlow",
+      "sha256": "5332ed9f49423c4105bc81378f3d0243b95845c3bd56c0515017475325a1d39b",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "review-HYD-P05-process",
+      "expression": "hydrology:OpenWaterEvaporation",
+      "sha256": "d2a8a0b8b8c3df84deeb65a6fc077106434f9fc126bc95dd0322bd712ac70ab7",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "review-HYD-P05-change",
+      "expression": "change in hydrology:StoredWaterVolume of hydrology:LakeWaterBody",
+      "sha256": "498d08b70bd79fe28d7bf42e6df0368f3d81b89861e5fcb24c995b8dbc012edf",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "review-HYD-N01",
+      "expression": "hydrology:GroundwaterFeeds linking hydrology:Discharge to hydrology:StreamReach",
+      "sha256": "658604b04fd5a8e77798f9965384b3caf10c047cc7b6c3868cd6684174f3b2a2",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "review-HYD-N02",
+      "expression": "hydrology:StoredWaterVolume of hydrology:Discharge",
+      "sha256": "d9b1ac0a8663a00b42210ea04c4d49b1ad1fa21c610287aa93e95c832e73edee",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "review-HYD-N04",
+      "expression": "hydrology:GroundwaterFeeds linking hydrology:StreamReach to hydrology:GroundwaterBody",
+      "sha256": "ea33e89f48f170ef0d0967e09210f2834277f3a5e6c43b0f9250f2659550916d",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "control-valid",
+      "expression": "presence of earth:WaterBody",
+      "sha256": "5010172b96b8379aa4a555439e16720355756b0ea666e5784b24b00b16501f35",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "control-invalid-syntax",
+      "expression": "change in of ;",
+      "sha256": "127c95a8648ae47d00d0d16d835d9dcbb9502a66434c45eb53eb9b4b0da36ccd",
+      "status": "FAIL",
+      "diagnostics": "no viable alternative at input 'of' | "
+    },
+    {
+      "id": "control-invalid-category",
+      "expression": "count of imod:Temperature",
+      "sha256": "71b1dece6f42ae4f2a648b8e0985c993371d5d01862f6d871aa4a2a2db19964f",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "control-missing-reference",
+      "expression": "missing:Nonexistent",
+      "sha256": "aa362ccd99f2ccaab0a150ccf2d9ae534a792c9d822a34aa6434994aad849a4b",
+      "status": "PASS",
+      "diagnostics": ""
+    }
+  ],
+  "controls": "Invalid category and missing namespace intentionally parse: this proves parser acceptance is not semantic validity."
+}

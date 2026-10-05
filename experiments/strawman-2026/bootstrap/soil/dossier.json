@@ -1,0 +1,1559 @@
+{
+  "dossier_version": "0.1",
+  "domain": "soil",
+  "status": "research draft; no approval",
+  "scope": "Pedogenic material, horizons and bearer-specific qualities. Soil map units, classification entries and suitability ratings are authorities/model outputs.",
+  "imports": [
+    {
+      "namespace": "imod",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+    },
+    {
+      "namespace": "earth",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "424c0141849aac2b9ae762079ff31c8c14cff4f0d6506eb19971004e7f22d816"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "USDA Soil Survey Manual 2017 chapter 3",
+      "url": "https://www.nrcs.usda.gov/sites/default/files/2022-09/SSM-ch3.pdf",
+      "locator": "Pedon/profile/horizon/solum definitions; observing pedons",
+      "scope": "Indexed primary passages distinguish pedogenic horizon from inherited layer; fresh litter excluded from O horizon. Direct fetch failed.",
+      "status": "indexed primary passages reviewed; full PDF blocked",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    },
+    {
+      "id": "S2",
+      "title": "NRCS From the Surface Down, second edition",
+      "url": "https://www.nrcs.usda.gov/publications/Soil%20Health%20Training/Soil%20Health%20and%20Sustainability%20for%20Field%20Staff%20SHASFS%203.0/In-person%20Training/Supporting%20Documents/Intro%20to%20Soil%20Health%20Resources/From-the-Surface-Down.pdf",
+      "locator": "Horizons; section 4 soil properties",
+      "scope": "Indexed descriptions of leaching, soil properties and contextual suitability; direct PDF unavailable.",
+      "status": "indexed primary excerpts reviewed; full retrieval blocked",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    },
+    {
+      "id": "S3",
+      "title": "NRCS Soil Tech Note 16A: Compacted Zone in Soil",
+      "url": "https://www.nrcs.usda.gov/sites/default/files/2022-09/SoilTechNote16A.pdf",
+      "locator": "Two pages; compaction and possible solutions",
+      "scope": "Bulk density/pore-space and management context. Numeric examples not universal thresholds.",
+      "status": "primary selected text retrieved and reviewed",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    },
+    {
+      "id": "S4",
+      "title": "NRCS Field Book 4.0 November 2024",
+      "url": "https://www.nrcs.usda.gov/sites/default/files/2025-05/Field-Book-for-Describing-and-Sampling-Soils-Ver4.pdf",
+      "locator": "Chapter 2: horizon depth/boundary and profile/pedon description",
+      "scope": "Observational conventions; no automatic taxonomy or health inference.",
+      "status": "primary selected text retrieved and reviewed",
+      "retrieved": "2026-10-03",
+      "reviewer": "author research; no expert review"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "soil:SoilBody",
+      "name": "SoilBody",
+      "category": "subject",
+      "definition": "Individuated pedogenic material body.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "soil:BulkDensity"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "positive": "contiguous pedogenic body",
+      "negative": "taxonomic class",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation.",
+      "blocked_quality_uses": [
+        {
+          "quality": "soil:OrganicMatterFraction",
+          "proposed_user": "soil:SoilBody",
+          "declared_bearer": "soil:SoilHorizon",
+          "status": "blocked",
+          "required_scope_or_aggregation": "Whole-body summary would require identified constituent horizons, compatible organic-matter mass basis and an explicit aggregation model. No SoilBody-to-SoilHorizon specialization exists; a whole-body fraction is not automatically the horizon-borne quality.",
+          "inferred_inheritance": false,
+          "review_finding": "SOIL-R01"
+        }
+      ]
+    },
+    {
+      "id": "soil:SoilHorizon",
+      "name": "SoilHorizon",
+      "category": "subject",
+      "definition": "Pedogenic layer distinguished by its properties.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "soil:HorizonThickness",
+        "soil:ClayFraction"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "positive": "illuvial horizon",
+      "negative": "unmodified sedimentary layer",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "soil:SoilAggregate",
+      "name": "SoilAggregate",
+      "category": "subject",
+      "definition": "Soil particle assemblage with stronger internal binding.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "qualities": [
+        "soil:AggregateDiameter"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "positive": "coherent ped",
+      "negative": "loose sieve fraction",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "soil:SoilPedon",
+      "name": "SoilPedon",
+      "category": "subject",
+      "definition": "Bounded soil volume selected to characterize a soil individual.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "positive": "described 3D pedon",
+      "negative": "laboratory vial extrapolated to whole field",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation.",
+      "blocked_quality_uses": [
+        {
+          "quality": "soil:BulkDensity",
+          "proposed_user": "soil:SoilPedon",
+          "declared_bearer": "soil:SoilBody",
+          "status": "blocked",
+          "required_scope_or_aggregation": "A selected pedon may define measurement support for material soil, but no inheritance or material-body identity path is established here. Resolve the pedon/body relation and represented volume before applying the body-borne quality.",
+          "inferred_inheritance": false,
+          "review_finding": "SOIL-R01"
+        }
+      ]
+    },
+    {
+      "id": "soil:RestrictiveSoilLayer",
+      "name": "RestrictiveSoilLayer",
+      "category": "subject",
+      "definition": "Layer restricting specified root/water movement in stated conditions.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "positive": "cemented root-restricting layer",
+      "negative": "any dense horizon assumed impermeable",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 0,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation.",
+      "blocked_quality_uses": [
+        {
+          "quality": "soil:HorizonThickness",
+          "proposed_user": "soil:RestrictiveSoilLayer",
+          "declared_bearer": "soil:SoilHorizon",
+          "status": "blocked",
+          "required_scope_or_aggregation": "A restrictive layer can be nonpedogenic. HorizonThickness cannot be applied merely because the layer has thickness. Request a general layer-thickness distinction or prove a particular layer is a horizon; do not invent that inheritance.",
+          "inferred_inheritance": false,
+          "review_finding": "SOIL-R01"
+        },
+        {
+          "quality": "soil:BulkDensity",
+          "proposed_user": "soil:RestrictiveSoilLayer",
+          "declared_bearer": "soil:SoilBody",
+          "status": "blocked",
+          "required_scope_or_aggregation": "Restriction does not establish SoilBody specialization. A material-volume support and body relation must be supplied before this bearer use is valid.",
+          "inferred_inheritance": false,
+          "review_finding": "SOIL-R01"
+        }
+      ]
+    },
+    {
+      "id": "soil:BulkDensity",
+      "name": "BulkDensity",
+      "category": "quality",
+      "definition": "Dry soil mass per specified bulk volume including pores.",
+      "parent": "imod:Quantity",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "soil:SoilBody"
+      },
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "positive": "dry mass per intact-core volume",
+      "negative": "particle density",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "soil:HorizonThickness",
+      "name": "HorizonThickness",
+      "category": "quality",
+      "definition": "Vertical separation of identified horizon boundaries.",
+      "parent": "imod:Length",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "soil:SoilHorizon"
+      },
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "positive": "top to base thickness",
+      "negative": "depth to top",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "soil:ClayFraction",
+      "name": "ClayFraction",
+      "category": "quality",
+      "definition": "Clay-size particle share with declared size convention/basis.",
+      "parent": "imod:Proportion",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "soil:SoilHorizon"
+      },
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "positive": "fine-earth clay fraction",
+      "negative": "clay-mineral content",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "soil:OrganicMatterFraction",
+      "name": "OrganicMatterFraction",
+      "category": "quality",
+      "definition": "Organic matter share on declared mass basis.",
+      "parent": "imod:Proportion",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "soil:SoilHorizon"
+      },
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "positive": "organic matter mass fraction",
+      "negative": "organic carbon treated as identical",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "soil:AggregateDiameter",
+      "name": "AggregateDiameter",
+      "category": "quality",
+      "definition": "Aggregate size under stated geometric convention.",
+      "parent": "imod:Length",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "soil:SoilAggregate"
+      },
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "positive": "equivalent ped diameter",
+      "negative": "mineral grain diameter",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 1,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "soil:SoilCompaction",
+      "name": "SoilCompaction",
+      "category": "process",
+      "definition": "Compression reducing soil bulk pore space.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "soil:BulkDensity"
+      ],
+      "bindings": {
+        "participants": [
+          "soil:SoilBody"
+        ],
+        "affects": [
+          "soil:BulkDensity"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "S3 describes compaction in terms of pore-space reduction and dry bulk-density change. The proposed affects targets BulkDensity of the compressed SoilBody, not an unproved horizon/pedon bearer. It expresses potential change under loading; density differences alone do not establish an occurrence or its cause. Applied stress, initial water state and particle composition remain missing governing quantities; no fixed density threshold is licensed.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "S3"
+      ],
+      "positive": "wheel loading compresses soil",
+      "negative": "naturally dense mineral particles",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation.",
+      "claim_review": {
+        "finding": "SOIL-R02",
+        "status": "scoped author correction; no domain-expert approval",
+        "source_limit": "Sources support the stated limited topic; they do not validate the exact ontology binding. Recorded PDF retrieval limitations remain unchanged."
+      }
+    },
+    {
+      "id": "soil:SoilAggregation",
+      "name": "SoilAggregation",
+      "category": "process",
+      "definition": "Binding particles into soil aggregates.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "soil:OrganicMatterFraction"
+      ],
+      "bindings": {
+        "participants": [
+          "soil:SoilBody",
+          "soil:SoilAggregate"
+        ],
+        "affects": [
+          "soil:AggregateDiameter"
+        ],
+        "creates": [
+          "soil:SoilAggregate"
+        ],
+        "confers": [],
+        "rationale": "S3 discusses binding of particles and organic inputs in aggregate formation. OrganicMatterFraction is a contextual quality of an identified SoilHorizon, not inherent in the process or automatically in SoilBody. Creates SoilAggregate is conditional on individuation of a newly bound assemblage. Potential AggregateDiameter change concerns an existing identified aggregate only; the source does not establish a universal monotonic size effect. Formation versus growth, aggregate identity and claim-specific evidence remain blockers.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "S3"
+      ],
+      "positive": "stable ped develops",
+      "negative": "sieve label assigned",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation.",
+      "claim_review": {
+        "finding": "SOIL-R02",
+        "status": "scoped author correction; no domain-expert approval",
+        "source_limit": "Sources support the stated limited topic; they do not validate the exact ontology binding. Recorded PDF retrieval limitations remain unchanged."
+      }
+    },
+    {
+      "id": "soil:SoilLeaching",
+      "name": "SoilLeaching",
+      "category": "process",
+      "definition": "Soluble-constituent removal by moving water.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "participants": [
+          "soil:SoilHorizon"
+        ],
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "S2 indexed passages describe dissolved constituents moving out of an upper horizon with percolating water. The candidate needs solute-specific content of donor/receiver horizons and water-flow qualities from chemistry/hydrology before affects can be specified. Their absence is an upstream gap, not an inferred zero transfer. Full publication retrieval failed; retain source-review blocker.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "S2"
+      ],
+      "positive": "solute leaves upper horizon",
+      "negative": "horizon excavated",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation.",
+      "claim_review": {
+        "finding": "SOIL-R02",
+        "status": "scoped author correction; no domain-expert approval",
+        "source_limit": "Sources support the stated limited topic; they do not validate the exact ontology binding. Recorded PDF retrieval limitations remain unchanged."
+      }
+    },
+    {
+      "id": "soil:SoilMaterialErosion",
+      "name": "SoilMaterialErosion",
+      "category": "process",
+      "definition": "Detachment and transport of soil material.",
+      "parent": "earth:Erosion",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "soil:HorizonThickness"
+      ],
+      "bindings": {
+        "participants": [
+          "soil:SoilHorizon"
+        ],
+        "affects": [
+          "soil:HorizonThickness"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Removal can potentially alter HorizonThickness of the particular source SoilHorizon while it remains identifiable. Local detachment or lateral export does not guarantee a measured thickness decrease at every observation support. Complete removal is a cessation event, not continuing a nonexistent horizon with zero thickness. S4 supplies description conventions, not a causal erosion law; S2 is only indexed evidence. Event attribution and claim-level source review remain blocked.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "S2",
+        "S4"
+      ],
+      "positive": "surface horizon eroded",
+      "negative": "color fades without removal",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation.",
+      "claim_review": {
+        "finding": "SOIL-R02",
+        "status": "scoped author correction; no domain-expert approval",
+        "source_limit": "Sources support the stated limited topic; they do not validate the exact ontology binding. Recorded PDF retrieval limitations remain unchanged."
+      }
+    },
+    {
+      "id": "soil:HorizonDevelopment",
+      "name": "HorizonDevelopment",
+      "category": "process",
+      "definition": "Pedogenic differentiation forming a horizon.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "soil:ClayFraction",
+        "soil:OrganicMatterFraction"
+      ],
+      "bindings": {
+        "participants": [
+          "soil:SoilBody",
+          "soil:SoilHorizon"
+        ],
+        "affects": [
+          "soil:HorizonThickness"
+        ],
+        "creates": [
+          "soil:SoilHorizon"
+        ],
+        "confers": [],
+        "rationale": "S1 distinguishes a pedogenically differentiated horizon from an inherited layer. Creates SoilHorizon is a proposed individuation consequence when a distinct horizon becomes identifiable, not when an observer merely changes its designation. HorizonThickness may change for an existing horizon but is not guaranteed to increase. ClayFraction and OrganicMatterFraction are horizon-borne diagnostic/context qualities, not sufficient governing causes. S4 gives observation conventions; full S1 source retrieval and process-specific evidence are still missing.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "S1",
+        "S4"
+      ],
+      "positive": "illuvial layer develops",
+      "negative": "inherited strata relabeled",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 1,
+      "parameter_coverage": "Incomplete: listed qualities are relevant observable dependencies, sometimes responses; governing-force/transport/composition gaps listed in upstream_issues. Not a complete mechanism.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation.",
+      "claim_review": {
+        "finding": "SOIL-R02",
+        "status": "scoped author correction; no domain-expert approval",
+        "source_limit": "Sources support the stated limited topic; they do not validate the exact ontology binding. Recorded PDF retrieval limitations remain unchanged."
+      }
+    },
+    {
+      "id": "soil:HorizonOverlies",
+      "name": "HorizonOverlies",
+      "category": "relationship",
+      "definition": "One horizon immediately overlies another in same soil body.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "soil:SoilHorizon",
+        "target": "soil:SoilHorizon",
+        "rationale": "No intervening horizon; not chronological sequence."
+      },
+      "source_ids": [
+        "S1",
+        "S4"
+      ],
+      "positive": "A directly above B",
+      "negative": "labels from separate profiles",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 2,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "soil:AggregateConstituentOf",
+      "name": "AggregateConstituentOf",
+      "category": "relationship",
+      "definition": "Aggregate is physically part of soil body.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "soil:SoilAggregate",
+        "target": "soil:SoilBody",
+        "rationale": "Extraction can end membership through an occurrence; no automatic cascade."
+      },
+      "source_ids": [
+        "S1",
+        "S4"
+      ],
+      "positive": "ped in intact horizon",
+      "negative": "similar ped from another field",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 2,
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "soil:PedonCharacterizesBody",
+      "name": "PedonCharacterizesBody",
+      "category": "relationship",
+      "definition": "A selected pedon is representative evidence for a soil body.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "soil:SoilPedon",
+        "target": "soil:SoilBody",
+        "rationale": "Sampling/provenance relation belongs outside domain articulation; blocked boundary example, not proposed promotion."
+      },
+      "source_ids": [
+        "S1",
+        "S4"
+      ],
+      "positive": "documented sampling design",
+      "negative": "nearby sample assumed representative",
+      "status": "blocked",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "structural",
+      "arity": 2,
+      "promotion": "exclude from domain candidate; observation/provenance machinery counterexample only",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "soil:CompactionEpisode",
+      "name": "CompactionEpisode",
+      "category": "event",
+      "definition": "Bounded loading occurrence compressing soil.",
+      "parent": "earth:GeolocatedEvent",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "soil:BulkDensity"
+      ],
+      "bindings": {
+        "participants": [
+          "soil:SoilBody",
+          "soil:SoilHorizon",
+          "soil:SoilAggregate"
+        ],
+        "affects": [
+          "soil:BulkDensity"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Identity loss and dependent-relation cessation require occurrence; no implicit state retention or implemented cascade.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "S2",
+        "S3"
+      ],
+      "positive": "wet-soil vehicle pass with compression",
+      "negative": "vehicle pass with no demonstrated change",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "soil:HorizonRemovalEpisode",
+      "name": "HorizonRemovalEpisode",
+      "category": "event",
+      "definition": "Bounded removal of an identified horizon.",
+      "parent": "earth:GeolocatedEvent",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "soil:BulkDensity"
+      ],
+      "bindings": {
+        "participants": [
+          "soil:SoilBody",
+          "soil:SoilHorizon",
+          "soil:SoilAggregate"
+        ],
+        "affects": [
+          "soil:HorizonThickness"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Identity loss and dependent-relation cessation require occurrence; no implicit state retention or implemented cascade.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "S2",
+        "S3"
+      ],
+      "positive": "erosion removes former A horizon",
+      "negative": "horizon invisible in photograph",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "soil:AggregateDisruptionEpisode",
+      "name": "AggregateDisruptionEpisode",
+      "category": "event",
+      "definition": "Bounded disaggregation of an identified soil aggregate.",
+      "parent": "earth:GeolocatedEvent",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "soil:BulkDensity"
+      ],
+      "bindings": {
+        "participants": [
+          "soil:SoilBody",
+          "soil:SoilHorizon",
+          "soil:SoilAggregate"
+        ],
+        "affects": [
+          "soil:AggregateDiameter"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Identity loss and dependent-relation cessation require occurrence; no implicit state retention or implemented cascade.",
+        "implementation": "semantic proposal only; no runtime consequences"
+      },
+      "source_ids": [
+        "S2",
+        "S3"
+      ],
+      "positive": "ped breaks under disturbance",
+      "negative": "sieving convention differs",
+      "status": "provisional",
+      "ancestry_note": "Parent name verified in imported source; scientific specialization is unapproved. Broad root parent does not resolve narrower material/host distinctions.",
+      "evidence_interpretation": "Source motivates scientific topic; exact category, scope, ID and bindings are author proposals, not source-endorsed ontology.",
+      "perspective": "functional",
+      "arity": 0,
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    }
+  ],
+  "questions": [
+    {
+      "id": "soil-q01",
+      "order": 1,
+      "text": "How thick is the dark surface soil above the next horizon?",
+      "source_ids": [
+        "S1"
+      ],
+      "concept_ids": [
+        "soil:HorizonThickness",
+        "soil:SoilHorizon"
+      ],
+      "expression": "soil:HorizonThickness of soil:SoilHorizon",
+      "expected_type": "quality",
+      "dependencies": [
+        "Top-to-base separation; darkness does not define identity by itself.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Top-to-base separation; darkness does not define identity by itself.",
+      "negative": "depth to top treated as thickness",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Top-to-base separation; darkness does not define identity by itself.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 1,
+        "independent": false
+      },
+      "narrative_intent": "Top-to-base separation; darkness does not define identity by itself.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "soil-q02",
+      "order": 2,
+      "text": "Does this soil have more clay or sand?",
+      "source_ids": [
+        "S2"
+      ],
+      "concept_ids": [
+        "soil:ClayFraction",
+        "soil:SoilHorizon"
+      ],
+      "expression": "soil:ClayFraction of soil:SoilHorizon",
+      "expected_type": "quality",
+      "dependencies": [
+        "Clay component only; sand fraction is missing upstream/domain candidate and must be separately articulated.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Clay component only; sand fraction is missing upstream/domain candidate and must be separately articulated.",
+      "negative": "clay mineralogy confused with particle size",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Clay component only; sand fraction is missing upstream/domain candidate and must be separately articulated.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 2,
+        "independent": false
+      },
+      "narrative_intent": "Clay component only; sand fraction is missing upstream/domain candidate and must be separately articulated.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "soil-q03",
+      "order": 3,
+      "text": "How tightly packed is soil under the wheel track compared with nearby ground?",
+      "source_ids": [
+        "S3"
+      ],
+      "concept_ids": [
+        "soil:BulkDensity",
+        "soil:SoilCompaction"
+      ],
+      "expression": "soil:BulkDensity of soil:SoilBody",
+      "expected_type": "quality",
+      "dependencies": [
+        "Comparable dry bulk densities at track/reference; compaction attribution needs occurrence and particle context.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Comparable dry bulk densities at track/reference; compaction attribution needs occurrence and particle context.",
+      "negative": "high particle density proves compaction",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Comparable dry bulk densities at track/reference; compaction attribution needs occurrence and particle context.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 3,
+        "independent": false
+      },
+      "narrative_intent": "Comparable dry bulk densities at track/reference; compaction attribution needs occurrence and particle context.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "soil-q04",
+      "order": 4,
+      "text": "Is the wet layer storing water or passing it downward?",
+      "source_ids": [
+        "S2"
+      ],
+      "concept_ids": [
+        "soil:SoilLeaching"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Water content, retention and throughflow meanings absent; hydrology imports required, no local workaround.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Water content, retention and throughflow meanings absent; hydrology imports required, no local workaround.",
+      "negative": "wet appearance means no drainage",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Water content, retention and throughflow meanings absent; hydrology imports required, no local workaround.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 4,
+        "independent": false
+      },
+      "narrative_intent": "Water content, retention and throughflow meanings absent; hydrology imports required, no local workaround.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "soil-q05",
+      "order": 5,
+      "text": "How much organic matter is present in this horizon?",
+      "source_ids": [
+        "S2"
+      ],
+      "concept_ids": [
+        "soil:OrganicMatterFraction",
+        "soil:SoilHorizon"
+      ],
+      "expression": "soil:OrganicMatterFraction of soil:SoilHorizon",
+      "expected_type": "quality",
+      "dependencies": [
+        "Declared mass basis/method, organic carbon is distinct.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Declared mass basis/method, organic carbon is distinct.",
+      "negative": "fixed carbon-to-matter conversion assumed",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Declared mass basis/method, organic carbon is distinct.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 5,
+        "independent": false
+      },
+      "narrative_intent": "Declared mass basis/method, organic carbon is distinct.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "soil-q06",
+      "order": 6,
+      "text": "Which horizon lies immediately above the restrictive layer?",
+      "source_ids": [
+        "S1"
+      ],
+      "concept_ids": [
+        "soil:HorizonOverlies",
+        "soil:RestrictiveSoilLayer"
+      ],
+      "expression": "soil:HorizonOverlies",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Endpoint relation for horizons; restrictive nonpedogenic layer requires generalized Layer endpoint upstream.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Endpoint relation for horizons; restrictive nonpedogenic layer requires generalized Layer endpoint upstream.",
+      "negative": "all layers forced into pedogenic Horizon",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Endpoint relation for horizons; restrictive nonpedogenic layer requires generalized Layer endpoint upstream.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 6,
+        "independent": false
+      },
+      "narrative_intent": "Endpoint relation for horizons; restrictive nonpedogenic layer requires generalized Layer endpoint upstream.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "soil-q07",
+      "order": 7,
+      "text": "Is water washing material out of this horizon into the one below?",
+      "source_ids": [
+        "S2"
+      ],
+      "concept_ids": [
+        "soil:SoilLeaching"
+      ],
+      "expression": "soil:SoilLeaching",
+      "expected_type": "process",
+      "dependencies": [
+        "Solute removal with receiving-layer evidence; content/flux bindings missing.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Solute removal with receiving-layer evidence; content/flux bindings missing.",
+      "negative": "visible stain alone proves transfer",
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Solute removal with receiving-layer evidence; content/flux bindings missing.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 7,
+        "independent": false
+      },
+      "narrative_intent": "Solute removal with receiving-layer evidence; content/flux bindings missing.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "soil-q08",
+      "order": 8,
+      "text": "Has erosion removed the former surface horizon?",
+      "source_ids": [
+        "S2"
+      ],
+      "concept_ids": [
+        "soil:HorizonRemovalEpisode",
+        "soil:HorizonThickness"
+      ],
+      "expression": "change in soil:HorizonThickness of soil:SoilHorizon",
+      "expected_type": "process",
+      "dependencies": [
+        "Thinning while identity persists; complete removal needs cessation event and separate dependent handling.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Thinning while identity persists; complete removal needs cessation event and separate dependent handling.",
+      "negative": "vanished horizon assigned zero as retained subject",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Thinning while identity persists; complete removal needs cessation event and separate dependent handling.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 8,
+        "independent": false
+      },
+      "narrative_intent": "Thinning while identity persists; complete removal needs cessation event and separate dependent handling.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
+    },
+    {
+      "id": "soil-q09",
+      "order": 9,
+      "text": "Did machinery compress the soil during the wet harvest?",
+      "source_ids": [
+        "S3"
+      ],
+      "concept_ids": [
+        "soil:CompactionEpisode",
+        "soil:BulkDensity"
+      ],
+      "expression": "change in soil:BulkDensity of soil:SoilBody",
+      "expected_type": "process",
+      "dependencies": [
+        "Change plus machinery-loading evidence; no deterministic all-harvest compaction.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Change plus machinery-loading evidence; no deterministic all-harvest compaction.",
+      "negative": "different sample location looks like change",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Change plus machinery-loading evidence; no deterministic all-harvest compaction.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 9,
+        "independent": false
+      },
+      "narrative_intent": "Change plus machinery-loading evidence; no deterministic all-harvest compaction.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
+    },
+    {
+      "id": "soil-q10",
+      "order": 10,
+      "text": "Are these stable aggregates or loose mineral grains?",
+      "source_ids": [
+        "S3"
+      ],
+      "concept_ids": [
+        "soil:SoilAggregate",
+        "soil:AggregateDiameter"
+      ],
+      "expression": "soil:SoilAggregate",
+      "expected_type": "subject",
+      "dependencies": [
+        "Aggregate individuation plus stability test/model; stability quality missing.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Aggregate individuation plus stability test/model; stability quality missing.",
+      "negative": "any particle cluster assumed stable",
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Aggregate individuation plus stability test/model; stability quality missing.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 10,
+        "independent": false
+      },
+      "narrative_intent": "Aggregate individuation plus stability test/model; stability quality missing.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "soil-q11",
+      "order": 11,
+      "text": "Does a darker soil necessarily contain more organic carbon?",
+      "source_ids": [
+        "S1"
+      ],
+      "concept_ids": [
+        "soil:OrganicMatterFraction"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Color observation and carbon/organic matter relationship require qualified model; no universal implication.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Color observation and carbon/organic matter relationship require qualified model; no universal implication.",
+      "negative": "darker guarantees more carbon",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Color observation and carbon/organic matter relationship require qualified model; no universal implication.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 11,
+        "independent": false
+      },
+      "narrative_intent": "Color observation and carbon/organic matter relationship require qualified model; no universal implication.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "soil-q12",
+      "order": 12,
+      "text": "Does the soil have enough water available for these plants?",
+      "source_ids": [
+        "S2"
+      ],
+      "concept_ids": [
+        "soil:SoilBody"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Plant-available water requires species/root context, water-retention quantities and hydrology models.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Plant-available water requires species/root context, water-retention quantities and hydrology models.",
+      "negative": "total moisture equals plant-available water",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Plant-available water requires species/root context, water-retention quantities and hydrology models.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 12,
+        "independent": false
+      },
+      "narrative_intent": "Plant-available water requires species/root context, water-retention quantities and hydrology models.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "soil-q13",
+      "order": 13,
+      "text": "Can one sample stand for every soil horizon in the field?",
+      "source_ids": [
+        "S1"
+      ],
+      "concept_ids": [
+        "soil:SoilPedon",
+        "soil:SoilHorizon"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Sampling representativeness is evidence/provenance work, not universal domain relation.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Sampling representativeness is evidence/provenance work, not universal domain relation.",
+      "negative": "one sample represents every horizon",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Sampling representativeness is evidence/provenance work, not universal domain relation.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 13,
+        "independent": false
+      },
+      "narrative_intent": "Sampling representativeness is evidence/provenance work, not universal domain relation.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "soil-q14",
+      "order": 14,
+      "text": "Does a soil survey texture class by itself establish crop suitability?",
+      "source_ids": [
+        "S2"
+      ],
+      "concept_ids": [
+        "soil:ClayFraction"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Texture authority cannot imply crop suitability; additional plant/management/model dependencies.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Texture authority cannot imply crop suitability; additional plant/management/model dependencies.",
+      "negative": "texture class guarantees suitability",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Texture authority cannot imply crop suitability; additional plant/management/model dependencies.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 14,
+        "independent": false
+      },
+      "narrative_intent": "Texture authority cannot imply crop suitability; additional plant/management/model dependencies.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "soil-q15",
+      "order": 15,
+      "text": "If bulk density has not been measured can we call the soil uncompacted?",
+      "source_ids": [
+        "S3"
+      ],
+      "concept_ids": [
+        "soil:BulkDensity"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Unmeasured density leaves compaction status unresolved; no Uncompacted inference.",
+        "Observation/model availability is separate from vocabulary; unresolved values remain open-world unknown."
+      ],
+      "positive": "Unmeasured density leaves compaction status unresolved; no Uncompacted inference.",
+      "negative": "missing data establishes no compaction",
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "expected_interpretation": "Unmeasured density leaves compaction status unresolved; no Uncompacted inference.",
+      "checks": {
+        "source_link": "present; scoped review only",
+        "syntax": "not run by dossier author",
+        "scientific_semantics": "not expert reviewed",
+        "resolution": "not executed"
+      },
+      "provenance": {
+        "phase": "source-first ledger preceding candidate records",
+        "sequence": 15,
+        "independent": false
+      },
+      "narrative_intent": "Unmeasured density leaves compaction status unresolved; no Uncompacted inference.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    }
+  ],
+  "quality_summaries": [
+    {
+      "quality": "soil:ClayFraction",
+      "proposed_summary": "ClayRich",
+      "basis": "Ordered comparison to declared fine-earth reference; official texture classes require sand/silt/clay authority boundaries, not this single quality.",
+      "status": "blocked until comparison rule and evidence selected",
+      "kind": "ordering",
+      "nominal": false,
+      "ordered": true,
+      "overlap": "allowed across differently scoped comparisons; no exhaustive partition",
+      "context_scope": "explicit reference population and measurement convention",
+      "source_ids": [
+        "S2"
+      ],
+      "evidence_rule": "Requires resolved comparable quality observations; unknown/unmeasured is not this predicate.",
+      "measurement_state": "Missing measurement is unresolved evidence; not false and not an automatic nominal class."
+    }
+  ],
+  "ambiguities": [
+    "Soil body differs from selected pedon; a profile description is not another material subject.",
+    "Organic matter fraction differs from organic carbon; no universal conversion.",
+    "Plant-available water is conditioned by plant/root/retention conditions, not total water.",
+    "Compaction process differs from Compacted predicate, which needs comparative baseline and texture.",
+    "Material/porous-body parent is upstream issue; broad verified Subject does not settle specialization."
+  ],
+  "coverage": {
+    "counts": {
+      "subject": 5,
+      "quality": 5,
+      "process": 5,
+      "relationship": 3,
+      "event": 3
+    },
+    "target": {
+      "subject": 5,
+      "process": 5,
+      "relationship": 5,
+      "event": 5
+    },
+    "shortfalls": {
+      "relationship": "2 slots unfilled; generic proximity or unsupported causal links would pad coverage. Soil includes one blocked machinery relation, so at most two domain relationship candidates.",
+      "event": "2 slots unfilled; avoid inventing threshold episodes or relabeling every process as an event."
+    },
+    "source_limits": "Agency primary materials are bounded starting evidence, often educational/descriptive. Sources do not endorse ontological categories, exact inferred bindings or exhaustive coverage. Retrieval failures are recorded per source.",
+    "concept_question_incidence": {
+      "soil:SoilBody": [
+        "soil-q12"
+      ],
+      "soil:SoilHorizon": [
+        "soil-q01",
+        "soil-q02",
+        "soil-q05",
+        "soil-q13"
+      ],
+      "soil:SoilAggregate": [
+        "soil-q10"
+      ],
+      "soil:SoilPedon": [
+        "soil-q13"
+      ],
+      "soil:RestrictiveSoilLayer": [
+        "soil-q06"
+      ],
+      "soil:BulkDensity": [
+        "soil-q03",
+        "soil-q09",
+        "soil-q15"
+      ],
+      "soil:HorizonThickness": [
+        "soil-q01",
+        "soil-q08"
+      ],
+      "soil:ClayFraction": [
+        "soil-q02",
+        "soil-q14"
+      ],
+      "soil:OrganicMatterFraction": [
+        "soil-q05",
+        "soil-q11"
+      ],
+      "soil:AggregateDiameter": [
+        "soil-q10"
+      ],
+      "soil:SoilCompaction": [
+        "soil-q03"
+      ],
+      "soil:SoilAggregation": [],
+      "soil:SoilLeaching": [
+        "soil-q04",
+        "soil-q07"
+      ],
+      "soil:SoilMaterialErosion": [],
+      "soil:HorizonDevelopment": [],
+      "soil:HorizonOverlies": [
+        "soil-q06"
+      ],
+      "soil:AggregateConstituentOf": [],
+      "soil:PedonCharacterizesBody": [],
+      "soil:CompactionEpisode": [
+        "soil-q09"
+      ],
+      "soil:HorizonRemovalEpisode": [
+        "soil-q08"
+      ],
+      "soil:AggregateDisruptionEpisode": []
+    },
+    "unused_candidates": [
+      "soil:SoilAggregation",
+      "soil:SoilMaterialErosion",
+      "soil:HorizonDevelopment",
+      "soil:AggregateConstituentOf",
+      "soil:PedonCharacterizesBody",
+      "soil:AggregateDisruptionEpisode"
+    ],
+    "unused_policy": "Unused concepts are exposed for removal or fresh question testing, not silently declared needed.",
+    "held_out_status": "No independently authored held-out probes obtained. Questions were source-first but author knew legacy and is not independent; request fresh human/domain probes after freezing revision."
+  },
+  "validation": {
+    "source_review": "selected primary passages/indexed excerpts read; no expert discussion",
+    "grammar": "not run by author; parent batch parser planned",
+    "adaptation": "not run for these undeclared candidates",
+    "namespace_resolution": "existing parent names manually checked; candidates are prose, not installed concepts",
+    "scientific_semantics": "provisional/blocked per record; no human approval",
+    "models": "not run; no runtime answerability claim",
+    "consequence_execution": "not implemented; implication/detection syntax-only",
+    "negative_controls": [
+      {
+        "expression": "soil:DefinitelyMissing",
+        "expected": "qualified-name syntax may pass, namespace resolution must fail",
+        "status": "not_run"
+      },
+      {
+        "expression": "change in of soil:DefinitelyMissing",
+        "expected": "grammar reject",
+        "status": "not_run"
+      }
+    ],
+    "approval_gate": "Freeze dossier/import hashes, resolve blocking ambiguity/source gaps, human domain and ontology review, actual candidate parser/adaptation/reasoner checks, separate exact-revision approval; no self-approval.",
+    "local_structure": "PASS author check: 15 ordered unique questions, stable candidate/source references and exact ledger text; 21 candidate IDs; no executable source.",
+    "human_approval": "none; source/ontology review outstanding",
+    "type_context_warning": "Reference existence and grammar acceptance do not establish scientific specialization.",
+    "soil_revision_check": "PASS: SOIL-R01/R02 local correction preserves all question text/expressions/grammar statuses, existing alignment metadata, import hashes and source retrieval limitations."
+  },
+  "question_generation": {
+    "ledger_sha256": "8a04a503d3486a8fbca52fa1a5c07c436e177ba4fe5c67496eddc91abdaacb4a",
+    "order": "source review -> saved 15-question ledger -> candidate records -> expression mapping",
+    "independent": false
+  },
+  "upstream_issues": [
+    {
+      "id": "soil-fluid",
+      "missing_distinction": "Soil water content, retention and throughflow; solute content",
+      "required_action": "Hydrology/chemistry collaboration needed. Leaching bindings deliberately empty.",
+      "status": "blocking relevant concepts; no local workaround"
+    },
+    {
+      "id": "soil-load",
+      "missing_distinction": "Applied mechanical stress, soil water state, particle density",
+      "required_action": "Compaction governing conditions missing; bulk density is response quality, not sufficient causal parameter.",
+      "status": "blocking relevant concepts; no local workaround"
+    },
+    {
+      "id": "soil-layer",
+      "missing_distinction": "General material layer and root-restricting relation",
+      "required_action": "RestrictiveSoilLayer bundles a function; must compose against specified plant/water endpoint rather than universal impermeability.",
+      "status": "blocking relevant concepts; no local workaround"
+    }
+  ],
+  "import_evidence": [
+    {
+      "namespace": "imod",
+      "path": "src/imod.kwv",
+      "sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca",
+      "scope": "Exact imported bytes available at dossier authoring; reference existence only."
+    },
+    {
+      "namespace": "earth",
+      "path": "src/earth.kwv",
+      "sha256": "424c0141849aac2b9ae762079ff31c8c14cff4f0d6506eb19971004e7f22d816",
+      "scope": "Exact imported bytes available at dossier authoring; reference existence only."
+    }
+  ],
+  "review_corrections": [
+    {
+      "id": "SOIL-R01",
+      "status": "corrected as explicit blockers, not scientifically resolved",
+      "action": "Moved four unproved quality uses from direct qualities lists into blocked_quality_uses; no ancestry added."
+    },
+    {
+      "id": "SOIL-R02",
+      "status": "claim-specific rationale corrected; scientific/source blockers retained",
+      "action": "Scoped five process rationales, participants and source IDs; weak evidence does not become approval."
+    }
+  ]
+}

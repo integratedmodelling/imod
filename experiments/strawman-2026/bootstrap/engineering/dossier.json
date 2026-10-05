@@ -1,0 +1,1534 @@
+{
+  "dossier_version": "0.1",
+  "domain": "engineering",
+  "status": "draft_not_review_ready",
+  "scope": "Physical engineered products, their transformations and bounded realisation or failure episodes; design software, verification reports, equations and workflow machinery excluded.",
+  "imports": [
+    {
+      "namespace": "imod",
+      "revision": "46c695b8e360b4e2c1180c57c203844d53723258",
+      "scope": "Root parents verified by direct source reading; no direct ODO access.",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+    },
+    {
+      "namespace": "infrastructure",
+      "revision": "46c695b8e360b4e2c1180c57c203844d53723258",
+      "scope": "Artifact parent only; local dossier not executable ontology.",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "6b1311afdbd672f94549e6a69b5e35e30fd4774ed037ed5abd6e1fc40c3417ab"
+    }
+  ],
+  "sources": [
+    {
+      "id": "NASA",
+      "title": "Systems Engineering Handbook",
+      "url": "https://www.nasa.gov/reference/systems-engineering-handbook/",
+      "locator": "2024 web edition; section 5 Product Realization",
+      "scope": "Product integration, verification/validation distinctions and lifecycle; aerospace scope.",
+      "status": "primary_source_retrieved_limited_scope",
+      "retrieved": "2026-10-03",
+      "review": "LLM source screening only; no domain expert discussion"
+    },
+    {
+      "id": "FHWA",
+      "title": "Bridge Preservation Guide",
+      "url": "https://www.fhwa.dot.gov/bridge/preservation/guide/guide.pdf",
+      "locator": "Preservation, rehabilitation, replacement",
+      "scope": "Maintenance versus new-product identity; bridge scope.",
+      "status": "primary_source_retrieved_limited_scope",
+      "retrieved": "2026-10-03",
+      "review": "LLM source screening only; no domain expert discussion"
+    },
+    {
+      "id": "DOE",
+      "title": "Electric Transmission & Distribution and Protective Measures",
+      "url": "https://www.energy.gov/sites/default/files/2023-11/FINAL_CESER%20Electricity%20Grid%20Backgrounder_508.pdf",
+      "locator": "Substation equipment",
+      "scope": "Transformer, switch and protective equipment examples.",
+      "status": "primary_source_retrieved_limited_scope",
+      "retrieved": "2026-10-03",
+      "review": "LLM source screening only; no domain expert discussion"
+    },
+    {
+      "id": "EPA",
+      "title": "Drinking Water Distribution System Tools and Resources",
+      "url": "https://www.epa.gov/dwreginfo/drinking-water-distribution-system-tools-and-resources",
+      "locator": "Pumps, valves and corrosion",
+      "scope": "Water component examples and degradation concerns.",
+      "status": "primary_source_retrieved_limited_scope",
+      "retrieved": "2026-10-03",
+      "review": "LLM source screening only; no domain expert discussion"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "engineering-Pump",
+      "name": "engineering:Pump",
+      "category": "subject",
+      "definition": "A bounded manufactured device that transfers energy to move fluid.",
+      "parent": "infrastructure:Artifact",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "engineering:DeliveryCapacity",
+        "engineering:OperatingTemperature"
+      ],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "EPA"
+      ],
+      "positive": "identified water pump",
+      "negative": "a pumping schedule",
+      "status": "provisional",
+      "ancestry_evidence": "src/infrastructure.kwv:16; intention/purpose unresolved",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-Valve",
+      "name": "engineering:Valve",
+      "category": "subject",
+      "definition": "A bounded manufactured flow-control device.",
+      "parent": "infrastructure:Artifact",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "engineering:OpeningFraction"
+      ],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "EPA"
+      ],
+      "positive": "one installed isolation valve",
+      "negative": "administrative water allocation rule",
+      "status": "provisional",
+      "ancestry_evidence": "src/infrastructure.kwv:16; intention/purpose unresolved",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-Transformer",
+      "name": "engineering:Transformer",
+      "category": "subject",
+      "definition": "An individual electromagnetic electrical device used to alter alternating voltage.",
+      "parent": "infrastructure:Artifact",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "engineering:VoltageRatio",
+        "engineering:OperatingTemperature"
+      ],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "DOE"
+      ],
+      "positive": "identified substation transformer",
+      "negative": "a voltage conversion formula",
+      "status": "provisional",
+      "ancestry_evidence": "src/infrastructure.kwv:16; intention/purpose unresolved",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-CircuitBreaker",
+      "name": "engineering:CircuitBreaker",
+      "category": "subject",
+      "definition": "A bounded protective switching device capable of interrupting electrical current.",
+      "parent": "infrastructure:Artifact",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "engineering:BreakingCapacity"
+      ],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "DOE"
+      ],
+      "positive": "installed feeder breaker",
+      "negative": "a software alert alone",
+      "status": "provisional",
+      "ancestry_evidence": "src/infrastructure.kwv:16; intention/purpose unresolved",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-Bearing",
+      "name": "engineering:Bearing",
+      "category": "subject",
+      "definition": "A manufactured load-transmitting support component with identity in an assembly.",
+      "parent": "infrastructure:Artifact",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "engineering:LoadCapacity"
+      ],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "FHWA"
+      ],
+      "positive": "bridge support bearing",
+      "negative": "a compass bearing",
+      "status": "provisional",
+      "ancestry_evidence": "src/infrastructure.kwv:16; intention/purpose unresolved",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-ProductAssembly",
+      "name": "engineering:ProductAssembly",
+      "category": "process",
+      "definition": "Joining separately identified components into a physical product.",
+      "parent": "imod:Process",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "engineering:AlignmentDeviation"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [
+          "infrastructure:Artifact"
+        ],
+        "confers": [],
+        "rationale": "Assembly can produce a bounded artifact if unity/identity criteria are met; merely collecting parts or updating a document does not create a product."
+      },
+      "source_ids": [
+        "NASA"
+      ],
+      "positive": "physical assembly of pump components",
+      "negative": "editing a bill of materials",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-ValveActuation",
+      "name": "engineering:ValveActuation",
+      "category": "process",
+      "definition": "Movement of a valve closure element altering its opening.",
+      "parent": "imod:Process",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "engineering:OpeningFraction"
+      ],
+      "bindings": {
+        "affects": [
+          "engineering:OpeningFraction"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "EPA"
+      ],
+      "positive": "turning a valve toward closed",
+      "negative": "changing only the displayed command",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-ElectricalSwitching",
+      "name": "engineering:ElectricalSwitching",
+      "category": "process",
+      "definition": "Physical change of a conductive connection by switch operation.",
+      "parent": "imod:Process",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "engineering:ContactResistance"
+      ],
+      "bindings": {
+        "affects": [
+          "engineering:ContactResistance"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "DOE"
+      ],
+      "positive": "breaker contacts separating",
+      "negative": "a predicted switch operation",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-ComponentRepair",
+      "name": "engineering:ComponentRepair",
+      "category": "process",
+      "definition": "Material intervention on an existing component restoring a stated function.",
+      "parent": "imod:Process",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "engineering:LoadCapacity",
+        "engineering:AlignmentDeviation"
+      ],
+      "bindings": {
+        "affects": [
+          "engineering:LoadCapacity"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "FHWA"
+      ],
+      "positive": "repair retaining component identity",
+      "negative": "replacement with a new component",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-CorrosionDamage",
+      "name": "engineering:CorrosionDamage",
+      "category": "process",
+      "definition": "Material degradation through a corrosion process in an engineered component.",
+      "parent": "imod:Process",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "engineering:RemainingSection"
+      ],
+      "bindings": {
+        "affects": [
+          "engineering:RemainingSection"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "EPA"
+      ],
+      "positive": "measurable metal loss",
+      "negative": "surface staining without established loss",
+      "status": "blocked",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-JoinsComponent",
+      "name": "engineering:JoinsComponent",
+      "category": "relationship",
+      "definition": "Directed connection from one component to another at an identified physical interface.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "engineering:Bearing",
+        "target": "imod:Subject",
+        "kind": "structural",
+        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
+      },
+      "source_ids": [
+        "NASA"
+      ],
+      "positive": "bearing attached to support",
+      "negative": "two components listed together but unconnected",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-TransfersLoad",
+      "name": "engineering:TransfersLoad",
+      "category": "relationship",
+      "definition": "Directed mechanical transmission between source and receiving components.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "engineering:Bearing",
+        "target": "imod:Subject",
+        "kind": "functional",
+        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
+      },
+      "source_ids": [
+        "FHWA"
+      ],
+      "positive": "bearing transmitting load to pier",
+      "negative": "co-location without load path",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-ControlsFlow",
+      "name": "engineering:ControlsFlow",
+      "category": "relationship",
+      "definition": "Valve-to-conduit functional relationship under stated fluid service.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "engineering:Valve",
+        "target": "imod:Subject",
+        "kind": "functional",
+        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
+      },
+      "source_ids": [
+        "EPA"
+      ],
+      "positive": "valve regulating connected pipe flow",
+      "negative": "remote valve in unrelated pipe",
+      "status": "blocked",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-TransformsSupply",
+      "name": "engineering:TransformsSupply",
+      "category": "relationship",
+      "definition": "Transformer-to-receiving-installation functional connection.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "engineering:Transformer",
+        "target": "imod:Subject",
+        "kind": "functional",
+        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
+      },
+      "source_ids": [
+        "DOE"
+      ],
+      "positive": "transformer supplying downstream bus",
+      "negative": "unused spare transformer nearby",
+      "status": "blocked",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-ProtectsCircuit",
+      "name": "engineering:ProtectsCircuit",
+      "category": "relationship",
+      "definition": "Breaker-to-circuit protective arrangement within a specified duty envelope.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "engineering:CircuitBreaker",
+        "target": "imod:Subject",
+        "kind": "functional",
+        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
+      },
+      "source_ids": [
+        "DOE"
+      ],
+      "positive": "breaker protecting its assigned feeder",
+      "negative": "claim of protection against every hazard",
+      "status": "blocked",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-AcceptanceTestEpisode",
+      "name": "engineering:AcceptanceTestEpisode",
+      "category": "event",
+      "definition": "A bounded physical test of a product against stated criteria; record/report separate.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "engineering:LoadCapacity"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "NASA"
+      ],
+      "positive": "one controlled loading test",
+      "negative": "a generic testing method",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-ComponentReplacement",
+      "name": "engineering:ComponentReplacement",
+      "category": "event",
+      "definition": "Bounded substitution of a separately identified new component for an old one.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "engineering:AlignmentDeviation"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "FHWA"
+      ],
+      "positive": "replacement of a bearing",
+      "negative": "adjustment of existing bearing",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-BreakerTrip",
+      "name": "engineering:BreakerTrip",
+      "category": "event",
+      "definition": "Bounded opening episode of a protective circuit breaker.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "engineering:ContactResistance"
+      ],
+      "bindings": {
+        "affects": [
+          "engineering:ContactResistance"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "DOE"
+      ],
+      "positive": "recorded trip operation",
+      "negative": "permanently open contact with no episode",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-FunctionalFailureEpisode",
+      "name": "engineering:FunctionalFailureEpisode",
+      "category": "event",
+      "definition": "Bounded episode of failure to deliver a specified function under a stated demand.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "engineering:DeliveryCapacity"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "NASA"
+      ],
+      "positive": "pump stops delivering during a duty episode",
+      "negative": "product lacks a function never required",
+      "status": "blocked",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-RepairCompletionEpisode",
+      "name": "engineering:RepairCompletionEpisode",
+      "category": "event",
+      "definition": "Bounded final physical repair operation whose completion is observed, not only signed off.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "engineering:LoadCapacity"
+      ],
+      "bindings": {
+        "affects": [
+          "engineering:LoadCapacity"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "FHWA"
+      ],
+      "positive": "completion of structural bearing repair",
+      "negative": "certificate issuance without intervention",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-DeliveryCapacity",
+      "name": "engineering:DeliveryCapacity",
+      "category": "quality",
+      "definition": "Deliverable amount per stated service interval and operating conditions; actual and rated capacity separate.",
+      "parent": "imod:Quality",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [
+          "engineering:Pump"
+        ],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [
+          "engineering:FunctionalFailureEpisode"
+        ],
+        "affected_by": [],
+        "bearer_status": "provisional"
+      },
+      "source_ids": [
+        "EPA",
+        "NASA"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-OperatingTemperature",
+      "name": "engineering:OperatingTemperature",
+      "category": "quality",
+      "definition": "Temperature of a named device component during stated operating conditions.",
+      "parent": "imod:Temperature",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [
+          "engineering:Pump",
+          "engineering:Transformer"
+        ],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [],
+        "affected_by": [],
+        "bearer_status": "provisional"
+      },
+      "source_ids": [
+        "EPA",
+        "DOE"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-OpeningFraction",
+      "name": "engineering:OpeningFraction",
+      "category": "quality",
+      "definition": "Geometric fraction of valve opening under its declared design convention.",
+      "parent": "imod:Proportion",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [
+          "engineering:Valve"
+        ],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [
+          "engineering:ValveActuation"
+        ],
+        "affected_by": [
+          "engineering:ValveActuation"
+        ],
+        "bearer_status": "provisional"
+      },
+      "source_ids": [
+        "EPA"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-VoltageRatio",
+      "name": "engineering:VoltageRatio",
+      "category": "quality",
+      "definition": "Ratio of specified terminal voltages under stated operating conditions.",
+      "parent": "imod:Quality",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [
+          "engineering:Transformer"
+        ],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [],
+        "affected_by": [],
+        "bearer_status": "provisional"
+      },
+      "source_ids": [
+        "DOE"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-BreakingCapacity",
+      "name": "engineering:BreakingCapacity",
+      "category": "quality",
+      "definition": "Current-interruption capability at stated electrical duty; threshold/design conditions mandatory.",
+      "parent": "imod:Quality",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [
+          "engineering:CircuitBreaker"
+        ],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [],
+        "affected_by": [],
+        "bearer_status": "provisional"
+      },
+      "source_ids": [
+        "DOE"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-LoadCapacity",
+      "name": "engineering:LoadCapacity",
+      "category": "quality",
+      "definition": "Load a specified component can sustain within a declared limit state and loading mode.",
+      "parent": "imod:Quality",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [
+          "engineering:Bearing"
+        ],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [
+          "engineering:ComponentRepair",
+          "engineering:AcceptanceTestEpisode",
+          "engineering:RepairCompletionEpisode"
+        ],
+        "affected_by": [
+          "engineering:ComponentRepair",
+          "engineering:RepairCompletionEpisode"
+        ],
+        "bearer_status": "provisional"
+      },
+      "source_ids": [
+        "FHWA",
+        "NASA"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-AlignmentDeviation",
+      "name": "engineering:AlignmentDeviation",
+      "category": "quality",
+      "definition": "Deviation of an assembled interface from specified reference alignment.",
+      "parent": "imod:Quality",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [
+          "engineering:ProductAssembly",
+          "engineering:ComponentRepair",
+          "engineering:ComponentReplacement"
+        ],
+        "affected_by": [],
+        "bearer_status": "blocked_missing_bearer"
+      },
+      "source_ids": [
+        "NASA",
+        "FHWA"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-ContactResistance",
+      "name": "engineering:ContactResistance",
+      "category": "quality",
+      "definition": "Resistance across an identified electrical contact under stated measurement conditions.",
+      "parent": "imod:Quality",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [
+          "engineering:ElectricalSwitching",
+          "engineering:BreakerTrip"
+        ],
+        "affected_by": [
+          "engineering:ElectricalSwitching",
+          "engineering:BreakerTrip"
+        ],
+        "bearer_status": "blocked_missing_bearer"
+      },
+      "source_ids": [
+        "DOE"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "engineering-RemainingSection",
+      "name": "engineering:RemainingSection",
+      "category": "quality",
+      "definition": "Remaining load-bearing material section at an identified cross-section.",
+      "parent": "imod:Quality",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [
+          "engineering:CorrosionDamage"
+        ],
+        "affected_by": [
+          "engineering:CorrosionDamage"
+        ],
+        "bearer_status": "blocked_missing_bearer"
+      },
+      "source_ids": [
+        "EPA"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    }
+  ],
+  "questions": [
+    {
+      "id": "engineering-q01",
+      "text": "Which pump can deliver water against the pressure required at the fire ground?",
+      "concept_ids": [
+        "engineering-Pump"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "pump performance relation and specified duty; nominal capacity alone insufficient",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "identified water pump",
+      "negative": "a pumping schedule",
+      "source_ids": [
+        "EPA"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 1,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which pump can deliver water against the pressure required at the fire ground?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "engineering-q02",
+      "text": "Which valve isolates the damaged pipe without cutting off the clinic?",
+      "concept_ids": [
+        "engineering-Valve"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "topology and valve state intervention model",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "one installed isolation valve",
+      "negative": "administrative water allocation rule",
+      "source_ids": [
+        "EPA"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 2,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which valve isolates the damaged pipe without cutting off the clinic?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "engineering-q03",
+      "text": "Which transformer changed the supply voltage?",
+      "concept_ids": [
+        "engineering-Transformer"
+      ],
+      "expression": "engineering:Transformer",
+      "expected_type": "subject",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "identified substation transformer",
+      "negative": "a voltage conversion formula",
+      "source_ids": [
+        "DOE"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 3,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which transformer changed the supply voltage?",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "engineering-q04",
+      "text": "Which circuit breaker interrupted current during the fault?",
+      "concept_ids": [
+        "engineering-CircuitBreaker"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "device participation in a bounded switching episode",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "installed feeder breaker",
+      "negative": "a software alert alone",
+      "source_ids": [
+        "DOE"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 4,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which circuit breaker interrupted current during the fault?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "engineering-q05",
+      "text": "Which bridge bearing is transferring the deck's load?",
+      "concept_ids": [
+        "engineering-Bearing",
+        "engineering-TransfersLoad"
+      ],
+      "expression": "engineering:TransfersLoad",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "bridge support bearing",
+      "negative": "a compass bearing",
+      "source_ids": [
+        "FHWA"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 5,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which bridge bearing is transferring the deck's load?",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "engineering-q06",
+      "text": "Has the repaired component recovered its required load capacity?",
+      "concept_ids": [
+        "engineering-LoadCapacity",
+        "engineering-Bearing"
+      ],
+      "expression": "engineering:LoadCapacity of engineering:Bearing",
+      "expected_type": "quality",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "source_ids": [
+        "FHWA"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 6,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Has the repaired component recovered its required load capacity?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "engineering-q07",
+      "text": "Did the test demonstrate specified performance or suitability for the intended use?",
+      "concept_ids": [
+        "engineering-AcceptanceTestEpisode"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "verification versus validation evidence; not a new physical property",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "one controlled loading test",
+      "negative": "a generic testing method",
+      "source_ids": [
+        "NASA"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 7,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Did the test demonstrate specified performance or suitability for the intended use?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "engineering-q08",
+      "text": "Which connected parts are joined into this assembly?",
+      "concept_ids": [
+        "engineering-JoinsComponent",
+        "engineering-Bearing"
+      ],
+      "expression": "engineering:JoinsComponent linking engineering:Bearing to imod:Subject",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "bearing attached to support",
+      "negative": "two components listed together but unconnected",
+      "source_ids": [
+        "NASA"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 8,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which connected parts are joined into this assembly?",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "engineering-q09",
+      "text": "What changed when the valve was opened?",
+      "concept_ids": [
+        "engineering-ValveActuation",
+        "engineering-OpeningFraction",
+        "engineering-Valve"
+      ],
+      "expression": "change in engineering:OpeningFraction of engineering:Valve",
+      "expected_type": "process",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "turning a valve toward closed",
+      "negative": "changing only the displayed command",
+      "source_ids": [
+        "EPA"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 9,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "What changed when the valve was opened?",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
+    },
+    {
+      "id": "engineering-q10",
+      "text": "Did corrosion reduce the component's remaining section?",
+      "concept_ids": [
+        "engineering-CorrosionDamage"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "chemistry process plus material and geometry qualities",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "measurable metal loss",
+      "negative": "surface staining without established loss",
+      "source_ids": [
+        "EPA"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 10,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Did corrosion reduce the component's remaining section?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "engineering-q11",
+      "text": "Was the product replaced or only one component repaired?",
+      "concept_ids": [
+        "engineering-ComponentReplacement"
+      ],
+      "expression": "engineering:ComponentReplacement",
+      "expected_type": "event",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "replacement of a bearing",
+      "negative": "adjustment of existing bearing",
+      "source_ids": [
+        "FHWA"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 11,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Was the product replaced or only one component repaired?",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "engineering-q12",
+      "text": "Which pump overheated during operation?",
+      "concept_ids": [
+        "engineering-Pump",
+        "engineering-OperatingTemperature"
+      ],
+      "expression": "engineering:OperatingTemperature of engineering:Pump",
+      "expected_type": "quality",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "identified water pump",
+      "negative": "a pumping schedule",
+      "source_ids": [
+        "EPA"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 12,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which pump overheated during operation?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "engineering-q13",
+      "text": "Can the same intact component fail the intended service without breaking?",
+      "concept_ids": [
+        "engineering-FunctionalFailureEpisode"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "mismatch of requirement and delivered function, not fracture entailment",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "pump stops delivering during a duty episode",
+      "negative": "product lacks a function never required",
+      "source_ids": [
+        "NASA"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 13,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Can the same intact component fail the intended service without breaking?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "engineering-q14",
+      "text": "Which assembly operation produced this unit?",
+      "concept_ids": [
+        "engineering-ProductAssembly"
+      ],
+      "expression": "engineering:ProductAssembly",
+      "expected_type": "process",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "physical assembly of pump components",
+      "negative": "editing a bill of materials",
+      "source_ids": [
+        "NASA"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 14,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which assembly operation produced this unit?",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "engineering-q15",
+      "text": "Does a passed inspection guarantee safe operation under every wildfire exposure?",
+      "concept_ids": [
+        "engineering-AcceptanceTestEpisode"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "invalid generalisation beyond tested envelope",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "one controlled loading test",
+      "negative": "a generic testing method",
+      "source_ids": [
+        "NASA"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 15,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Does a passed inspection guarantee safe operation under every wildfire exposure?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    }
+  ],
+  "quality_summaries": [
+    {
+      "quality": "engineering:LoadCapacity",
+      "proposed_summary": "fit for specified duty",
+      "basis": "Comparison with declared demand, loading mode and environment; not intrinsic universal safe/unsafe.",
+      "status": "provisional_no_predicate_declaration",
+      "evidence": "Source scope and measurement convention require human review; unknown/unmeasured/disputed remain evidence states.",
+      "comparison_rule": "Comparison with declared demand, loading mode and environment; not intrinsic universal safe/unsafe.",
+      "classification_kind": "ordered_contextual",
+      "overlap": "Multiple limitation and performance summaries may coexist; no exclusive exhaustive partition asserted.",
+      "context_scope": "Physical engineered products, their transformations and bounded realisation or failure episodes; design software, verification reports, equations and workflow machinery excluded.",
+      "source_ids": [
+        "FHWA",
+        "NASA"
+      ],
+      "boundary_rule": "Use only the named authority/design/reference criterion in basis; absent criterion blocks classification."
+    },
+    {
+      "quality": "engineering:AlignmentDeviation",
+      "proposed_summary": "within assembly tolerance",
+      "basis": "Ordered deviation with criterion supplied by a named design; no tolerance invented.",
+      "status": "provisional_no_predicate_declaration",
+      "evidence": "Source scope and measurement convention require human review; unknown/unmeasured/disputed remain evidence states.",
+      "comparison_rule": "Ordered deviation with criterion supplied by a named design; no tolerance invented.",
+      "classification_kind": "ordered_contextual",
+      "overlap": "Multiple limitation and performance summaries may coexist; no exclusive exhaustive partition asserted.",
+      "context_scope": "Physical engineered products, their transformations and bounded realisation or failure episodes; design software, verification reports, equations and workflow machinery excluded.",
+      "source_ids": [
+        "NASA",
+        "FHWA"
+      ],
+      "boundary_rule": "Use only the named authority/design/reference criterion in basis; absent criterion blocks classification."
+    },
+    {
+      "quality": "engineering:OpeningFraction",
+      "proposed_summary": "open/partly open/closed",
+      "basis": "Named observation of closure geometry, not inferred leakage or hydraulic isolation; overlap rules depend on valve design.",
+      "status": "provisional_no_predicate_declaration",
+      "evidence": "Source scope and measurement convention require human review; unknown/unmeasured/disputed remain evidence states.",
+      "comparison_rule": "Named observation of closure geometry, not inferred leakage or hydraulic isolation; overlap rules depend on valve design.",
+      "classification_kind": "ordered_contextual",
+      "overlap": "Multiple limitation and performance summaries may coexist; no exclusive exhaustive partition asserted.",
+      "context_scope": "Physical engineered products, their transformations and bounded realisation or failure episodes; design software, verification reports, equations and workflow machinery excluded.",
+      "source_ids": [
+        "EPA"
+      ],
+      "boundary_rule": "Use only the named authority/design/reference criterion in basis; absent criterion blocks classification."
+    }
+  ],
+  "ambiguities": [
+    {
+      "id": "engineering-a1",
+      "issue": "All five device subjects propose infrastructure:Artifact, which is present but has unresolved goal/intentionality comments. They are illustrative specialisations, possibly Tier-2 rather than common engineering Tier-1; do not promote the list wholesale. Broad current root parents allow candidate categorisation but do not settle a coherent engineering gateway. CorrosionDamage requires chemistry/material articulation; mechanical deformation/fracture need physics sources before expansion. Requirements and test records are outside physical domain articulation. AcceptanceTestEpisode means physical episode, never epistemic evidence validity.",
+      "status": "unresolved",
+      "decision": "Keep blocked/provisional in research dossier, not executable src."
+    }
+  ],
+  "coverage": {
+    "target_per_category": 5,
+    "counts": {
+      "subject": 5,
+      "process": 5,
+      "relationship": 5,
+      "event": 5,
+      "quality": 9
+    },
+    "shortfalls": "NASA process terminology is management-heavy. Physical manufacturing, fatigue, fracture and thermal engineering are insufficiently researched. Five narrow device examples do not demonstrate disciplinary coverage.",
+    "concept_question_incidence": {
+      "engineering-Pump": [
+        "engineering-q01",
+        "engineering-q12"
+      ],
+      "engineering-Valve": [
+        "engineering-q02",
+        "engineering-q09"
+      ],
+      "engineering-Transformer": [
+        "engineering-q03"
+      ],
+      "engineering-CircuitBreaker": [
+        "engineering-q04"
+      ],
+      "engineering-Bearing": [
+        "engineering-q05",
+        "engineering-q06",
+        "engineering-q08"
+      ],
+      "engineering-ProductAssembly": [
+        "engineering-q14"
+      ],
+      "engineering-ValveActuation": [
+        "engineering-q09"
+      ],
+      "engineering-ElectricalSwitching": [],
+      "engineering-ComponentRepair": [],
+      "engineering-CorrosionDamage": [
+        "engineering-q10"
+      ],
+      "engineering-JoinsComponent": [
+        "engineering-q08"
+      ],
+      "engineering-TransfersLoad": [
+        "engineering-q05"
+      ],
+      "engineering-ControlsFlow": [],
+      "engineering-TransformsSupply": [],
+      "engineering-ProtectsCircuit": [],
+      "engineering-AcceptanceTestEpisode": [
+        "engineering-q07",
+        "engineering-q15"
+      ],
+      "engineering-ComponentReplacement": [
+        "engineering-q11"
+      ],
+      "engineering-BreakerTrip": [],
+      "engineering-FunctionalFailureEpisode": [
+        "engineering-q13"
+      ],
+      "engineering-RepairCompletionEpisode": [],
+      "engineering-DeliveryCapacity": [],
+      "engineering-OperatingTemperature": [
+        "engineering-q12"
+      ],
+      "engineering-OpeningFraction": [
+        "engineering-q09"
+      ],
+      "engineering-VoltageRatio": [],
+      "engineering-BreakingCapacity": [],
+      "engineering-LoadCapacity": [
+        "engineering-q06"
+      ],
+      "engineering-AlignmentDeviation": [],
+      "engineering-ContactResistance": [],
+      "engineering-RemainingSection": []
+    },
+    "unused_candidates": [
+      "engineering-ElectricalSwitching",
+      "engineering-ComponentRepair",
+      "engineering-ControlsFlow",
+      "engineering-TransformsSupply",
+      "engineering-ProtectsCircuit",
+      "engineering-BreakerTrip",
+      "engineering-RepairCompletionEpisode",
+      "engineering-DeliveryCapacity",
+      "engineering-VoltageRatio",
+      "engineering-BreakingCapacity",
+      "engineering-AlignmentDeviation",
+      "engineering-ContactResistance",
+      "engineering-RemainingSection"
+    ],
+    "warning": "Five recorded examples/category is not five semantically validated Tier-1 concepts. Blocked concepts do not satisfy acceptance coverage."
+  },
+  "validation": {
+    "source_review": "Primary web screening and local root source reading performed; expert review absent.",
+    "grammar": "untested; parent runner will record exact expression results",
+    "adaptation": "not run for candidate dossiers",
+    "semantic": "not run; no loaded worldview/reasoner approval",
+    "model_execution": "not run; no models or consequence engine implemented",
+    "invalid_probes": [
+      "engineering-q15"
+    ],
+    "approval": "No self-approval; exact artifact/import hashes and human decisions required before review-ready status.",
+    "human_approval": "none; source/ontology review outstanding",
+    "type_context_warning": "Reference existence and grammar acceptance do not establish scientific specialization."
+  }
+}

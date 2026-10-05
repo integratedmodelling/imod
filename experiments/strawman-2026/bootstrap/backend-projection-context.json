@@ -1,0 +1,11 @@
+{
+  "backend_commit": "d6e781daa0d440a11589fa550cdf69cdf765a04e",
+  "sample_sha256": "a90a2a80785a4570e705b12a685bd275a4ba9ec91e8fb391bf810cbacd38934e",
+  "classpath": [
+    "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-03\\task-7\\backend\\klab.core.api\\target\\classes",
+    "C:\\Users\\Ferd\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-annotations\\2.19.2\\jackson-annotations-2.19.2.jar",
+    "C:\\Users\\Ferd\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-core\\2.19.2\\jackson-core-2.19.2.jar",
+    "C:\\Users\\Ferd\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-databind\\2.19.2\\jackson-databind-2.19.2.jar"
+  ],
+  "validator_class_sha256": "8bedd4983ed3adb76366f43feee2680e551515068df4113f172174ae09149ce1"
+}

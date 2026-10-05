@@ -1,0 +1,3 @@
+C:\Users\Ferd\Documents\Codex\2026-10-03\task-4\imod-strawman\experiments\strawman-2026\bootstrap\controls\invalid-confers.kwv:3: no viable alternative at input 'confers'
+PARSE FAIL C:\Users\Ferd\Documents\Codex\2026-10-03\task-4\imod-strawman\experiments\strawman-2026\bootstrap\controls\invalid-confers.kwv errors=1
+SUMMARY files=1 failed=1 syntax-only

@@ -1,0 +1,126 @@
+{
+  "phase": "source-question ledger saved before candidate records",
+  "independence": "Author saw legacy namespaces; source-led questions are not blind or independent probes. Fresh human probes remain required.",
+  "questions": [
+    {
+      "id": "soil-q01",
+      "order": 1,
+      "text": "How thick is the dark surface soil above the next horizon?",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "id": "soil-q02",
+      "order": 2,
+      "text": "Does this soil have more clay or sand?",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "soil-q03",
+      "order": 3,
+      "text": "How tightly packed is soil under the wheel track compared with nearby ground?",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "id": "soil-q04",
+      "order": 4,
+      "text": "Is the wet layer storing water or passing it downward?",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "soil-q05",
+      "order": 5,
+      "text": "How much organic matter is present in this horizon?",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "soil-q06",
+      "order": 6,
+      "text": "Which horizon lies immediately above the restrictive layer?",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "id": "soil-q07",
+      "order": 7,
+      "text": "Is water washing material out of this horizon into the one below?",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "soil-q08",
+      "order": 8,
+      "text": "Has erosion removed the former surface horizon?",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "soil-q09",
+      "order": 9,
+      "text": "Did machinery compress the soil during the wet harvest?",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "id": "soil-q10",
+      "order": 10,
+      "text": "Are these stable aggregates or loose mineral grains?",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "id": "soil-q11",
+      "order": 11,
+      "text": "Does a darker soil necessarily contain more organic carbon?",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "id": "soil-q12",
+      "order": 12,
+      "text": "Does the soil have enough water available for these plants?",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "soil-q13",
+      "order": 13,
+      "text": "Can one sample stand for every soil horizon in the field?",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "id": "soil-q14",
+      "order": 14,
+      "text": "Does a soil survey texture class by itself establish crop suitability?",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "soil-q15",
+      "order": 15,
+      "text": "If bulk density has not been measured can we call the soil uncompacted?",
+      "source_ids": [
+        "S3"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1446 @@
+{
+  "dossier_version": "0.1",
+  "domain": "economics",
+  "status": "draft_not_review_ready",
+  "scope": "Observable economic units, production/use and transfers, with explicit accounting boundaries; welfare, legal title and market institutions must not be conflated with price.",
+  "imports": [
+    {
+      "namespace": "imod",
+      "revision": "46c695b8e360b4e2c1180c57c203844d53723258",
+      "scope": "Root parents verified by direct source reading; no direct ODO access.",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+    }
+  ],
+  "sources": [
+    {
+      "id": "SNA2025",
+      "title": "System of National Accounts 2025",
+      "url": "https://unstats.un.org/unsd/nationalaccount/sna2025.asp",
+      "locator": "Adoption and scope statement, accessed 2026-10-03",
+      "scope": "Current international framework; detailed changed definitions not yet audited.",
+      "status": "primary_source_retrieved_limited_scope",
+      "retrieved": "2026-10-03",
+      "review": "LLM source screening only; no domain expert discussion"
+    },
+    {
+      "id": "SNA2008",
+      "title": "System of National Accounts 2008",
+      "url": "https://unstats.un.org/unsd/nationalaccount/docs/SNA2008.pdf",
+      "locator": "Chapters 3–6, 10–13",
+      "scope": "Historical conceptual scaffold for units, flows and assets; current-edition comparison required.",
+      "status": "primary_source_retrieved_limited_scope",
+      "retrieved": "2026-10-03",
+      "review": "LLM source screening only; no domain expert discussion"
+    },
+    {
+      "id": "BEA",
+      "title": "BEA Glossary",
+      "url": "https://www.bea.gov/index.php/help/glossary",
+      "locator": "Consumption of fixed capital, capital expenditure and transfers entries",
+      "scope": "US operational accounting usage, not a universal ontology.",
+      "status": "primary_source_retrieved_limited_scope",
+      "retrieved": "2026-10-03",
+      "review": "LLM source screening only; no domain expert discussion"
+    },
+    {
+      "id": "GDP",
+      "title": "Gross domestic product",
+      "url": "https://www.bea.gov/help/glossary/gross-domestic-product-gdp",
+      "locator": "Definition, updated 2023-08-11",
+      "scope": "Aggregate production value; does not establish wellbeing or wildfire loss.",
+      "status": "primary_source_retrieved_limited_scope",
+      "retrieved": "2026-10-03",
+      "review": "LLM source screening only; no domain expert discussion"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "economics-HouseholdUnit",
+      "name": "economics:HouseholdUnit",
+      "category": "subject",
+      "definition": "A bounded group treated as a household economic unit under an explicit statistical convention.",
+      "parent": "imod:Subject",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "economics:DisposableIncome"
+      ],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "SNA2008"
+      ],
+      "positive": "identified household unit",
+      "negative": "everyone living within one wildfire perimeter",
+      "status": "blocked",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-EnterpriseUnit",
+      "name": "economics:EnterpriseUnit",
+      "category": "subject",
+      "definition": "An identified economic producer unit under a named accounting convention.",
+      "parent": "imod:Subject",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "economics:OutputValue"
+      ],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "SNA2008"
+      ],
+      "positive": "one enterprise unit",
+      "negative": "an industry aggregate",
+      "status": "blocked",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-EstablishmentUnit",
+      "name": "economics:EstablishmentUnit",
+      "category": "subject",
+      "definition": "A producer unit distinguished by location and activity within the chosen convention.",
+      "parent": "imod:Subject",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "economics:OutputValue"
+      ],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "SNA2008"
+      ],
+      "positive": "one plant establishment",
+      "negative": "all sites of an enterprise automatically",
+      "status": "blocked",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-ProducedAsset",
+      "name": "economics:ProducedAsset",
+      "category": "subject",
+      "definition": "An individually identified produced item within an explicit economic asset boundary.",
+      "parent": "imod:Subject",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "economics:AssetValue"
+      ],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "SNA2008"
+      ],
+      "positive": "machine controlled for economic benefits",
+      "negative": "every physical object irrespective of benefit/control",
+      "status": "blocked",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-InventoryLot",
+      "name": "economics:InventoryLot",
+      "category": "subject",
+      "definition": "An identifiable stock lot held within production or distribution.",
+      "parent": "imod:Subject",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "economics:InventoryValue"
+      ],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "BEA"
+      ],
+      "positive": "finished goods held for sale",
+      "negative": "the sales revenue itself",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-Production",
+      "name": "economics:Production",
+      "category": "process",
+      "definition": "Economic transformation or service provision within a stated production boundary.",
+      "parent": "imod:Process",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "economics:OutputValue"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "SNA2008"
+      ],
+      "positive": "observed factory production",
+      "negative": "asset price appreciation alone",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-IntermediateConsumption",
+      "name": "economics:IntermediateConsumption",
+      "category": "process",
+      "definition": "Use of goods or services as inputs in a production activity within an accounting boundary.",
+      "parent": "imod:Process",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "economics:InputValue"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "SNA2008"
+      ],
+      "positive": "fuel consumed by a plant",
+      "negative": "purchase of an enduring machine",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-FinalConsumption",
+      "name": "economics:FinalConsumption",
+      "category": "process",
+      "definition": "Use of goods or services to meet needs within a specified accounting scope.",
+      "parent": "imod:Process",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "economics:ConsumptionValue"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "SNA2008"
+      ],
+      "positive": "household consumption service",
+      "negative": "industrial intermediate input",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-CapitalFormation",
+      "name": "economics:CapitalFormation",
+      "category": "process",
+      "definition": "Acquisition or production adding to produced assets under a declared convention.",
+      "parent": "imod:Process",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "economics:AssetValue"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "BEA"
+      ],
+      "positive": "new productive installation",
+      "negative": "pure transfer of cash",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-ConsumptionOfFixedCapital",
+      "name": "economics:ConsumptionOfFixedCapital",
+      "category": "process",
+      "definition": "Decline of fixed asset value attributable to ordinary use/ageing within accounting scope.",
+      "parent": "imod:Process",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "economics:AssetValue"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "BEA"
+      ],
+      "positive": "normal use-related loss",
+      "negative": "catastrophic wildfire destruction",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-ControlsAsset",
+      "name": "economics:ControlsAsset",
+      "category": "relationship",
+      "definition": "Unit-to-asset economic control in a stated institutional regime.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "economics:EnterpriseUnit",
+        "target": "economics:ProducedAsset",
+        "kind": "functional",
+        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
+      },
+      "source_ids": [
+        "SNA2008"
+      ],
+      "positive": "unit exercising specified economic control",
+      "negative": "physical possession alone",
+      "status": "blocked",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-OwesPayment",
+      "name": "economics:OwesPayment",
+      "category": "relationship",
+      "definition": "Debtor-to-creditor obligation tied to an identified payable.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "economics:EnterpriseUnit",
+        "target": "economics:EnterpriseUnit",
+        "kind": "functional",
+        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
+      },
+      "source_ids": [
+        "SNA2008"
+      ],
+      "positive": "accepted contractor payable",
+      "negative": "unaccepted quotation",
+      "status": "blocked",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-SuppliesProducer",
+      "name": "economics:SuppliesProducer",
+      "category": "relationship",
+      "definition": "Directed actual supply from one producer unit to another.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "economics:EnterpriseUnit",
+        "target": "economics:EstablishmentUnit",
+        "kind": "functional",
+        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
+      },
+      "source_ids": [
+        "SNA2008"
+      ],
+      "positive": "supplier delivering inputs",
+      "negative": "firms in same sector without exchange",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-PaysCompensation",
+      "name": "economics:PaysCompensation",
+      "category": "relationship",
+      "definition": "Employer-unit to person compensation relationship over a specified engagement.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "economics:EnterpriseUnit",
+        "target": "imod:Agent",
+        "kind": "functional",
+        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
+      },
+      "source_ids": [
+        "SNA2008"
+      ],
+      "positive": "compensation for employment",
+      "negative": "gift unrelated to employment",
+      "status": "blocked",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-TransfersTo",
+      "name": "economics:TransfersTo",
+      "category": "relationship",
+      "definition": "Directed unrequited transfer between identified units under a stated convention.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "economics:EnterpriseUnit",
+        "target": "economics:HouseholdUnit",
+        "kind": "functional",
+        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
+      },
+      "source_ids": [
+        "BEA"
+      ],
+      "positive": "eligible emergency cash transfer",
+      "negative": "purchase of household labour",
+      "status": "blocked",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-AssetSale",
+      "name": "economics:AssetSale",
+      "category": "event",
+      "definition": "Bounded exchange episode transferring one identified asset under specified terms.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "economics:TransactionValue"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "SNA2008"
+      ],
+      "positive": "completed machine sale",
+      "negative": "offer not accepted",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-TransferReceipt",
+      "name": "economics:TransferReceipt",
+      "category": "event",
+      "definition": "Bounded receipt of an identified transfer by a unit.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "economics:TransactionValue"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "BEA"
+      ],
+      "positive": "household receives emergency transfer",
+      "negative": "announcement of future support",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-AssetDestruction",
+      "name": "economics:AssetDestruction",
+      "category": "event",
+      "definition": "Bounded catastrophic physical loss of an identified economic asset.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "economics:AssetValue"
+      ],
+      "bindings": {
+        "affects": [
+          "economics:AssetValue"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "SNA2008"
+      ],
+      "positive": "machine destroyed by wildfire",
+      "negative": "market repricing without physical destruction",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-ProductionInterruption",
+      "name": "economics:ProductionInterruption",
+      "category": "event",
+      "definition": "Bounded episode in which a specified production activity ceases and may resume.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "economics:OutputValue"
+      ],
+      "bindings": {
+        "affects": [
+          "economics:OutputValue"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "SNA2008"
+      ],
+      "positive": "plant stops through outage episode",
+      "negative": "planned non-production outside operating period",
+      "status": "blocked",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-PaymentSettlement",
+      "name": "economics:PaymentSettlement",
+      "category": "event",
+      "definition": "Bounded discharge of an identified payable through an actual settlement.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "economics:TransactionValue"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "SNA2008"
+      ],
+      "positive": "invoice settled by transfer",
+      "negative": "invoice issued but unpaid",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-DisposableIncome",
+      "name": "economics:DisposableIncome",
+      "category": "quality",
+      "definition": "Income available to the defined unit under a specified accounting boundary and period.",
+      "parent": "imod:MonetaryValue",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [
+          "economics:HouseholdUnit"
+        ],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [],
+        "affected_by": [],
+        "bearer_status": "provisional"
+      },
+      "source_ids": [
+        "SNA2008"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-OutputValue",
+      "name": "economics:OutputValue",
+      "category": "quality",
+      "definition": "Value of a producer's output under explicit prices and production boundary.",
+      "parent": "imod:MonetaryValue",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [
+          "economics:EnterpriseUnit",
+          "economics:EstablishmentUnit"
+        ],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [
+          "economics:Production",
+          "economics:ProductionInterruption"
+        ],
+        "affected_by": [
+          "economics:ProductionInterruption"
+        ],
+        "bearer_status": "provisional"
+      },
+      "source_ids": [
+        "SNA2008"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-AssetValue",
+      "name": "economics:AssetValue",
+      "category": "quality",
+      "definition": "Value of an identified asset under a declared valuation basis; not physical condition.",
+      "parent": "imod:MonetaryValue",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [
+          "economics:ProducedAsset"
+        ],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [
+          "economics:CapitalFormation",
+          "economics:ConsumptionOfFixedCapital",
+          "economics:AssetDestruction"
+        ],
+        "affected_by": [
+          "economics:AssetDestruction"
+        ],
+        "bearer_status": "provisional",
+        "bearer_alignment": {
+          "existing_role_qualified_expression": "economics:EconomicAsset imod:Subject",
+          "status": "blocked_pending_role_composition_and_asset_boundary_review",
+          "candidate_bearer": "economics:ProducedAsset",
+          "rationale": "Current economics:EconomicAsset is a role, not itself a substantial. ProducedAsset remains the narrower candidate bearer; preferred reuse is an asset-role-qualified subject after review, not a newly invented EconomicAsset thing."
+        }
+      },
+      "source_ids": [
+        "SNA2008",
+        "BEA"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-InventoryValue",
+      "name": "economics:InventoryValue",
+      "category": "quality",
+      "definition": "Value of a bounded inventory stock under stated accounting valuation.",
+      "parent": "imod:MonetaryValue",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [
+          "economics:InventoryLot"
+        ],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [],
+        "affected_by": [],
+        "bearer_status": "provisional"
+      },
+      "source_ids": [
+        "BEA"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-InputValue",
+      "name": "economics:InputValue",
+      "category": "quality",
+      "definition": "Value of inputs used within a stated production boundary.",
+      "parent": "imod:MonetaryValue",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [
+          "economics:IntermediateConsumption"
+        ],
+        "affected_by": [],
+        "bearer_status": "blocked_missing_bearer"
+      },
+      "source_ids": [
+        "SNA2008"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-ConsumptionValue",
+      "name": "economics:ConsumptionValue",
+      "category": "quality",
+      "definition": "Value attributed to consumption within a stated accounting scope.",
+      "parent": "imod:MonetaryValue",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [
+          "economics:FinalConsumption"
+        ],
+        "affected_by": [],
+        "bearer_status": "blocked_missing_bearer"
+      },
+      "source_ids": [
+        "SNA2008"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "economics-TransactionValue",
+      "name": "economics:TransactionValue",
+      "category": "quality",
+      "definition": "Value assigned to a specified exchange or transfer under stated valuation.",
+      "parent": "imod:MonetaryValue",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [
+          "economics:AssetSale",
+          "economics:TransferReceipt",
+          "economics:PaymentSettlement"
+        ],
+        "affected_by": [],
+        "bearer_status": "blocked_missing_bearer"
+      },
+      "source_ids": [
+        "SNA2008",
+        "BEA"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    }
+  ],
+  "questions": [
+    {
+      "id": "economics-q01",
+      "text": "Which households lost income while businesses were closed by wildfire?",
+      "concept_ids": [
+        "economics-HouseholdUnit",
+        "economics-DisposableIncome"
+      ],
+      "expression": "economics:DisposableIncome of economics:HouseholdUnit",
+      "expected_type": "quality",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "identified household unit",
+      "negative": "everyone living within one wildfire perimeter",
+      "source_ids": [
+        "SNA2008"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 1,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which households lost income while businesses were closed by wildfire?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "economics-q02",
+      "text": "Which businesses stopped producing because electricity was unavailable?",
+      "concept_ids": [
+        "economics-EnterpriseUnit"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "production interruption plus infrastructure dependency and causal attribution",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "one enterprise unit",
+      "negative": "an industry aggregate",
+      "source_ids": [
+        "SNA2008"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 2,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which businesses stopped producing because electricity was unavailable?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "economics-q03",
+      "text": "How much output did the affected plant produce before and after the fire?",
+      "concept_ids": [
+        "economics-Production",
+        "economics-OutputValue",
+        "economics-EstablishmentUnit"
+      ],
+      "expression": "economics:OutputValue of economics:EstablishmentUnit",
+      "expected_type": "quality",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "observed factory production",
+      "negative": "asset price appreciation alone",
+      "source_ids": [
+        "GDP"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 3,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "How much output did the affected plant produce before and after the fire?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "economics-q04",
+      "text": "How much of the plant's purchases was used up in production?",
+      "concept_ids": [
+        "economics-IntermediateConsumption"
+      ],
+      "expression": "economics:IntermediateConsumption",
+      "expected_type": "process",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "fuel consumed by a plant",
+      "negative": "purchase of an enduring machine",
+      "source_ids": [
+        "SNA2008"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 4,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "How much of the plant's purchases was used up in production?",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "economics-q05",
+      "text": "Which damaged machines remain economic assets rather than scrap?",
+      "concept_ids": [
+        "economics-ProducedAsset"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "benefit/control criteria plus physical condition; price alone insufficient",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "machine controlled for economic benefits",
+      "negative": "every physical object irrespective of benefit/control",
+      "source_ids": [
+        "SNA2008"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 5,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which damaged machines remain economic assets rather than scrap?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "economics-q06",
+      "text": "Did the insurance payment compensate damage or create new output?",
+      "concept_ids": [
+        "economics-TransfersTo"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "classify the transaction under applicable accounting treatment; payment is not automatically production",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "eligible emergency cash transfer",
+      "negative": "purchase of household labour",
+      "source_ids": [
+        "BEA"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 6,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Did the insurance payment compensate damage or create new output?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "economics-q07",
+      "text": "Who owes the repair contractor payment?",
+      "concept_ids": [
+        "economics-OwesPayment",
+        "economics-EnterpriseUnit"
+      ],
+      "expression": "economics:OwesPayment linking economics:EnterpriseUnit to economics:EnterpriseUnit",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "accepted contractor payable",
+      "negative": "unaccepted quotation",
+      "source_ids": [
+        "SNA2008"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 7,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Who owes the repair contractor payment?",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "economics-q08",
+      "text": "Which workers received wages while operations were suspended?",
+      "concept_ids": [
+        "economics-PaysCompensation"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "worker/employee distinction upstream and observed payment",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "compensation for employment",
+      "negative": "gift unrelated to employment",
+      "source_ids": [
+        "SNA2008"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 8,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which workers received wages while operations were suspended?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "economics-q09",
+      "text": "Did the reconstruction spending restore wealth or increase it?",
+      "concept_ids": [
+        "economics-CapitalFormation"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "opening stock, destruction and additions; spending is not net wealth change",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "new productive installation",
+      "negative": "pure transfer of cash",
+      "source_ids": [
+        "BEA"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 9,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Did the reconstruction spending restore wealth or increase it?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "economics-q10",
+      "text": "Did an increase in timber price mean more timber was produced?",
+      "concept_ids": [
+        "economics-OutputValue"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "invalid inference; separate price and physical output",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "source_ids": [
+        "GDP"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 10,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Did an increase in timber price mean more timber was produced?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "economics-q11",
+      "text": "Which asset changed hands in this sale?",
+      "concept_ids": [
+        "economics-AssetSale"
+      ],
+      "expression": "economics:AssetSale",
+      "expected_type": "event",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "completed machine sale",
+      "negative": "offer not accepted",
+      "source_ids": [
+        "SNA2008"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 11,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which asset changed hands in this sale?",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "economics-q12",
+      "text": "Which households received emergency cash transfers?",
+      "concept_ids": [
+        "economics-TransferReceipt"
+      ],
+      "expression": "economics:TransferReceipt",
+      "expected_type": "event",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "household receives emergency transfer",
+      "negative": "announcement of future support",
+      "source_ids": [
+        "BEA"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 12,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which households received emergency cash transfers?",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "economics-q13",
+      "text": "Was the loss due to wear during use or to sudden wildfire destruction?",
+      "concept_ids": [
+        "economics-AssetDestruction"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "separate consumption of fixed capital and catastrophic asset change",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "machine destroyed by wildfire",
+      "negative": "market repricing without physical destruction",
+      "source_ids": [
+        "SNA2008"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 13,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Was the loss due to wear during use or to sudden wildfire destruction?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "economics-q14",
+      "text": "Are unpaid household care and purchased care counted in the same production boundary?",
+      "concept_ids": [
+        "economics-HouseholdUnit"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "current accounting boundary must be specified; no equivalence inferred",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "identified household unit",
+      "negative": "everyone living within one wildfire perimeter",
+      "source_ids": [
+        "SNA2025"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 14,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Are unpaid household care and purchased care counted in the same production boundary?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "economics-q15",
+      "text": "Would higher local GDP prove that recovery improved everyone's wellbeing?",
+      "concept_ids": [
+        "economics-OutputValue"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "invalid welfare inference; distribution, environment and welfare concepts needed",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "source_ids": [
+        "GDP"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 15,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Would higher local GDP prove that recovery improved everyone's wellbeing?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    }
+  ],
+  "quality_summaries": [
+    {
+      "quality": "economics:DisposableIncome",
+      "proposed_summary": "low-income",
+      "basis": "Ordered relative to a declared household definition, equivalisation and reference population; no universal poverty line.",
+      "status": "provisional_no_predicate_declaration",
+      "evidence": "Source scope and measurement convention require human review; unknown/unmeasured/disputed remain evidence states.",
+      "comparison_rule": "Ordered relative to a declared household definition, equivalisation and reference population; no universal poverty line.",
+      "classification_kind": "ordered_contextual",
+      "overlap": "Multiple limitation and performance summaries may coexist; no exclusive exhaustive partition asserted.",
+      "context_scope": "Observable economic units, production/use and transfers, with explicit accounting boundaries; welfare, legal title and market institutions must not be conflated with price.",
+      "source_ids": [
+        "SNA2008"
+      ],
+      "boundary_rule": "Use only the named authority/design/reference criterion in basis; absent criterion blocks classification."
+    },
+    {
+      "quality": "economics:AssetValue",
+      "proposed_summary": "impaired",
+      "basis": "Comparison against named valuation basis; physical damage and expected benefits can diverge.",
+      "status": "provisional_no_predicate_declaration",
+      "evidence": "Source scope and measurement convention require human review; unknown/unmeasured/disputed remain evidence states.",
+      "comparison_rule": "Comparison against named valuation basis; physical damage and expected benefits can diverge.",
+      "classification_kind": "ordered_contextual",
+      "overlap": "Multiple limitation and performance summaries may coexist; no exclusive exhaustive partition asserted.",
+      "context_scope": "Observable economic units, production/use and transfers, with explicit accounting boundaries; welfare, legal title and market institutions must not be conflated with price.",
+      "source_ids": [
+        "SNA2008",
+        "BEA"
+      ],
+      "boundary_rule": "Use only the named authority/design/reference criterion in basis; absent criterion blocks classification."
+    },
+    {
+      "quality": "economics:OutputValue",
+      "proposed_summary": "growth/decline",
+      "basis": "Ordered comparison under same price/accounting basis; price inflation is not physical output growth.",
+      "status": "provisional_no_predicate_declaration",
+      "evidence": "Source scope and measurement convention require human review; unknown/unmeasured/disputed remain evidence states.",
+      "comparison_rule": "Ordered comparison under same price/accounting basis; price inflation is not physical output growth.",
+      "classification_kind": "ordered_contextual",
+      "overlap": "Multiple limitation and performance summaries may coexist; no exclusive exhaustive partition asserted.",
+      "context_scope": "Observable economic units, production/use and transfers, with explicit accounting boundaries; welfare, legal title and market institutions must not be conflated with price.",
+      "source_ids": [
+        "SNA2008"
+      ],
+      "boundary_rule": "Use only the named authority/design/reference criterion in basis; absent criterion blocks classification."
+    }
+  ],
+  "ambiguities": [
+    {
+      "id": "economics-a1",
+      "issue": "The source search found SNA2025 is now adopted: SNA2008 must not be labelled current. HouseholdUnit, EnterpriseUnit and EstablishmentUnit remain blocked on agency/identity review: root Subject is a candidate structural perspective, not denial of agency. ProducedAsset may be better a role composition over an infrastructure artifact; keep this alternative open rather than duplicate economics:EconomicAsset. ControlsAsset and OwesPayment are institution-dependent: normative scope, regime, party and instrument cannot be silently erased. Compensation needs a person/employee distinction upstream; imod:Agent is only a placeholder endpoint bound. Monetary qualities propose imod:MonetaryValue, not a claim that market price measures welfare. Accounting identities/equations and models stay outside ontology.",
+      "status": "unresolved",
+      "decision": "Keep blocked/provisional in research dossier, not executable src."
+    }
+  ],
+  "coverage": {
+    "target_per_category": 5,
+    "counts": {
+      "subject": 5,
+      "process": 5,
+      "relationship": 5,
+      "event": 5,
+      "quality": 7
+    },
+    "shortfalls": "Insufficient current SNA2025 chapter-level audit, informal/non-market activity, ecosystem accounting, finance and distribution. All institutional bindings blocked until governance/legal scope and unit identity resolved; source review is not economic consensus.",
+    "concept_question_incidence": {
+      "economics-HouseholdUnit": [
+        "economics-q01",
+        "economics-q14"
+      ],
+      "economics-EnterpriseUnit": [
+        "economics-q02",
+        "economics-q07"
+      ],
+      "economics-EstablishmentUnit": [
+        "economics-q03"
+      ],
+      "economics-ProducedAsset": [
+        "economics-q05"
+      ],
+      "economics-InventoryLot": [],
+      "economics-Production": [
+        "economics-q03"
+      ],
+      "economics-IntermediateConsumption": [
+        "economics-q04"
+      ],
+      "economics-FinalConsumption": [],
+      "economics-CapitalFormation": [
+        "economics-q09"
+      ],
+      "economics-ConsumptionOfFixedCapital": [],
+      "economics-ControlsAsset": [],
+      "economics-OwesPayment": [
+        "economics-q07"
+      ],
+      "economics-SuppliesProducer": [],
+      "economics-PaysCompensation": [
+        "economics-q08"
+      ],
+      "economics-TransfersTo": [
+        "economics-q06"
+      ],
+      "economics-AssetSale": [
+        "economics-q11"
+      ],
+      "economics-TransferReceipt": [
+        "economics-q12"
+      ],
+      "economics-AssetDestruction": [
+        "economics-q13"
+      ],
+      "economics-ProductionInterruption": [],
+      "economics-PaymentSettlement": [],
+      "economics-DisposableIncome": [
+        "economics-q01"
+      ],
+      "economics-OutputValue": [
+        "economics-q03",
+        "economics-q10",
+        "economics-q15"
+      ],
+      "economics-AssetValue": [],
+      "economics-InventoryValue": [],
+      "economics-InputValue": [],
+      "economics-ConsumptionValue": [],
+      "economics-TransactionValue": []
+    },
+    "unused_candidates": [
+      "economics-InventoryLot",
+      "economics-FinalConsumption",
+      "economics-ConsumptionOfFixedCapital",
+      "economics-ControlsAsset",
+      "economics-SuppliesProducer",
+      "economics-ProductionInterruption",
+      "economics-PaymentSettlement",
+      "economics-AssetValue",
+      "economics-InventoryValue",
+      "economics-InputValue",
+      "economics-ConsumptionValue",
+      "economics-TransactionValue"
+    ],
+    "warning": "Five recorded examples/category is not five semantically validated Tier-1 concepts. Blocked concepts do not satisfy acceptance coverage."
+  },
+  "validation": {
+    "source_review": "Primary web screening and local root source reading performed; expert review absent.",
+    "grammar": "untested; parent runner will record exact expression results",
+    "adaptation": "not run for candidate dossiers",
+    "semantic": "not run; no loaded worldview/reasoner approval",
+    "model_execution": "not run; no models or consequence engine implemented",
+    "invalid_probes": [
+      "economics-q10",
+      "economics-q15"
+    ],
+    "approval": "No self-approval; exact artifact/import hashes and human decisions required before review-ready status.",
+    "human_approval": "none; source/ontology review outstanding",
+    "type_context_warning": "Reference existence and grammar acceptance do not establish scientific specialization."
+  }
+}

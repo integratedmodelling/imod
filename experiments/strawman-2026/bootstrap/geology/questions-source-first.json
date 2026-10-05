@@ -1,0 +1,126 @@
+{
+  "phase": "source-question ledger saved before candidate records",
+  "independence": "Author saw legacy namespaces; source-led questions are not blind or independent probes. Fresh human probes remain required.",
+  "questions": [
+    {
+      "id": "geology-q01",
+      "order": 1,
+      "text": "What is the rock beneath the soil here?",
+      "source_ids": [
+        "L1"
+      ]
+    },
+    {
+      "id": "geology-q02",
+      "order": 2,
+      "text": "Which rock body contains the mineral grains seen in this sample?",
+      "source_ids": [
+        "L1"
+      ]
+    },
+    {
+      "id": "geology-q03",
+      "order": 3,
+      "text": "Are these loose fragments sediment or a coherent rock body?",
+      "source_ids": [
+        "L1"
+      ]
+    },
+    {
+      "id": "geology-q04",
+      "order": 4,
+      "text": "Has an older layer been cut by a fault?",
+      "source_ids": [
+        "L2"
+      ]
+    },
+    {
+      "id": "geology-q05",
+      "order": 5,
+      "text": "Which ground moved during the earthquake?",
+      "source_ids": [
+        "L2"
+      ]
+    },
+    {
+      "id": "geology-q06",
+      "order": 6,
+      "text": "Was this slope failure a falling block or a flowing mixture?",
+      "source_ids": [
+        "L3"
+      ]
+    },
+    {
+      "id": "geology-q07",
+      "order": 7,
+      "text": "Could the slide happen without an earthquake?",
+      "source_ids": [
+        "L3"
+      ]
+    },
+    {
+      "id": "geology-q08",
+      "order": 8,
+      "text": "Is the rock breaking apart in place or being carried away?",
+      "source_ids": [
+        "L1"
+      ]
+    },
+    {
+      "id": "geology-q09",
+      "order": 9,
+      "text": "Did deposited grains become a solid rock?",
+      "source_ids": [
+        "L1"
+      ]
+    },
+    {
+      "id": "geology-q10",
+      "order": 10,
+      "text": "Is this rock changing under heat and pressure without melting?",
+      "source_ids": [
+        "L1"
+      ]
+    },
+    {
+      "id": "geology-q11",
+      "order": 11,
+      "text": "How much material was displaced by the landslide?",
+      "source_ids": [
+        "L3"
+      ]
+    },
+    {
+      "id": "geology-q12",
+      "order": 12,
+      "text": "Does finding a mineral mean that it can profitably be mined?",
+      "source_ids": [
+        "L1"
+      ]
+    },
+    {
+      "id": "geology-q13",
+      "order": 13,
+      "text": "Did the cliff collapse remove the support for a neighboring block?",
+      "source_ids": [
+        "L3"
+      ]
+    },
+    {
+      "id": "geology-q14",
+      "order": 14,
+      "text": "Can a quiet fault be classified as having no future earthquake hazard?",
+      "source_ids": [
+        "L2"
+      ]
+    },
+    {
+      "id": "geology-q15",
+      "order": 15,
+      "text": "Are underwater slope failures excluded from landslides?",
+      "source_ids": [
+        "L3"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1443 @@
+{
+  "dossier_version": "0.1",
+  "domain": "infrastructure",
+  "status": "draft_not_review_ready",
+  "scope": "Built physical assets that support delivery, shelter and access; distinguish the asset, delivered service, operator and network configuration.",
+  "imports": [
+    {
+      "namespace": "imod",
+      "revision": "46c695b8e360b4e2c1180c57c203844d53723258",
+      "scope": "Root parents verified by direct source reading; no direct ODO access.",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+    }
+  ],
+  "sources": [
+    {
+      "id": "NIST",
+      "title": "Community Resilience Planning Guide",
+      "url": "https://www.nist.gov/community-resilience/planning-guide",
+      "locator": "Volume II description; buildings/infrastructure dependencies",
+      "scope": "Community function and infrastructure performance; not universal causal laws.",
+      "status": "primary_source_retrieved_limited_scope",
+      "retrieved": "2026-10-03",
+      "review": "LLM source screening only; no domain expert discussion"
+    },
+    {
+      "id": "DOE",
+      "title": "Electric Transmission & Distribution and Protective Measures",
+      "url": "https://www.energy.gov/sites/default/files/2023-11/FINAL_CESER%20Electricity%20Grid%20Backgrounder_508.pdf",
+      "locator": "2023; Substations and Distribution",
+      "scope": "Electric delivery equipment and connections; US context, not all infrastructure.",
+      "status": "primary_source_retrieved_limited_scope",
+      "retrieved": "2026-10-03",
+      "review": "LLM source screening only; no domain expert discussion"
+    },
+    {
+      "id": "EPA",
+      "title": "Drinking Water Distribution System Tools and Resources",
+      "url": "https://www.epa.gov/dwreginfo/drinking-water-distribution-system-tools-and-resources",
+      "locator": "Distribution, storage, pressure and main breaks",
+      "scope": "Water assets and operational concerns; not engineering thresholds.",
+      "status": "primary_source_retrieved_limited_scope",
+      "retrieved": "2026-10-03",
+      "review": "LLM source screening only; no domain expert discussion"
+    },
+    {
+      "id": "FHWA",
+      "title": "Bridge Preservation Guide",
+      "url": "https://www.fhwa.dot.gov/bridge/preservation/guide/guide.pdf",
+      "locator": "Maintenance, rehabilitation and replacement definitions",
+      "scope": "Bridge-specific lifecycle distinctions; not generic asset health scale.",
+      "status": "primary_source_retrieved_limited_scope",
+      "retrieved": "2026-10-03",
+      "review": "LLM source screening only; no domain expert discussion"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "infrastructure-Building",
+      "name": "infrastructure:Building",
+      "category": "subject",
+      "definition": "An individually bounded constructed enclosure; identity follows the physical structure, not its occupants.",
+      "parent": "imod:Subject",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "infrastructure:FloorArea"
+      ],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "NIST"
+      ],
+      "positive": "an identified school building",
+      "negative": "a school organisation",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-RoadSegment",
+      "name": "infrastructure:RoadSegment",
+      "category": "subject",
+      "definition": "A physical roadway section with stated junction boundaries.",
+      "parent": "imod:Subject",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "infrastructure:StructuralCondition"
+      ],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "NIST"
+      ],
+      "positive": "paved section between two junctions",
+      "negative": "an itinerary",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-Bridge",
+      "name": "infrastructure:Bridge",
+      "category": "subject",
+      "definition": "An individual constructed crossing carrying a specified route over an obstacle.",
+      "parent": "imod:Subject",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "infrastructure:StructuralCondition"
+      ],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "FHWA"
+      ],
+      "positive": "one identified river crossing",
+      "negative": "a statistical bridge inventory record",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-WaterStorageTank",
+      "name": "infrastructure:WaterStorageTank",
+      "category": "subject",
+      "definition": "A constructed bounded vessel storing water in a distribution system.",
+      "parent": "imod:Subject",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "infrastructure:StoredWaterVolume"
+      ],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "EPA"
+      ],
+      "positive": "finished-water tank",
+      "negative": "natural lake",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-ElectricalSubstation",
+      "name": "infrastructure:ElectricalSubstation",
+      "category": "subject",
+      "definition": "A bounded electrical installation with switching or voltage transformation functions.",
+      "parent": "imod:Subject",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "infrastructure:DeliveryCapacity"
+      ],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "DOE"
+      ],
+      "positive": "identified distribution substation",
+      "negative": "the entire electricity market",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-WaterLeakage",
+      "name": "infrastructure:WaterLeakage",
+      "category": "process",
+      "definition": "Water escaping a distribution asset through an unintended opening.",
+      "parent": "imod:Process",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "infrastructure:LeakageRate",
+        "infrastructure:InternalPressure"
+      ],
+      "bindings": {
+        "affects": [
+          "infrastructure:StoredWaterVolume"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "EPA"
+      ],
+      "positive": "escape through a cracked main",
+      "negative": "authorised delivery at a tap",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-WaterConveyance",
+      "name": "infrastructure:WaterConveyance",
+      "category": "process",
+      "definition": "Water movement through a specified delivery asset.",
+      "parent": "imod:Process",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "infrastructure:InternalPressure",
+        "infrastructure:DeliveryCapacity"
+      ],
+      "bindings": {
+        "affects": [
+          "infrastructure:StoredWaterVolume"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "EPA"
+      ],
+      "positive": "flow through an operating supply pipe",
+      "negative": "water merely standing in a tank",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-ElectricityDelivery",
+      "name": "infrastructure:ElectricityDelivery",
+      "category": "process",
+      "definition": "Electrical energy transfer through a specified operated installation.",
+      "parent": "imod:Process",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "infrastructure:DeliveryCapacity"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "DOE"
+      ],
+      "positive": "supply through an energised feeder",
+      "negative": "an installed but isolated feeder",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-AssetDeterioration",
+      "name": "infrastructure:AssetDeterioration",
+      "category": "process",
+      "definition": "Progressive loss of a specified physical performance property.",
+      "parent": "imod:Process",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "infrastructure:StructuralCondition"
+      ],
+      "bindings": {
+        "affects": [
+          "infrastructure:StructuralCondition"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "FHWA"
+      ],
+      "positive": "bridge element losing section",
+      "negative": "change in an inspector's label alone",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-AssetRepair",
+      "name": "infrastructure:AssetRepair",
+      "category": "process",
+      "definition": "Work altering a damaged asset to restore a stated physical function.",
+      "parent": "imod:Process",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "infrastructure:StructuralCondition",
+        "infrastructure:DeliveryCapacity"
+      ],
+      "bindings": {
+        "affects": [
+          "infrastructure:StructuralCondition"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "FHWA"
+      ],
+      "positive": "repair of damaged bridge bearing",
+      "negative": "administrative approval of future work",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-ConnectsAsset",
+      "name": "infrastructure:ConnectsAsset",
+      "category": "relationship",
+      "definition": "Physical connection between two distinct built assets; operability separate.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "infrastructure:RoadSegment",
+        "target": "infrastructure:Bridge",
+        "kind": "structural",
+        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
+      },
+      "source_ids": [
+        "NIST"
+      ],
+      "positive": "road meeting a bridge deck",
+      "negative": "two nearby roads with no junction",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-SuppliesAsset",
+      "name": "infrastructure:SuppliesAsset",
+      "category": "relationship",
+      "definition": "Directed actual delivery from one asset to another for a named service.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "infrastructure:WaterStorageTank",
+        "target": "infrastructure:WaterStorageTank",
+        "kind": "functional",
+        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
+      },
+      "source_ids": [
+        "EPA"
+      ],
+      "positive": "transfer from upper to lower tank",
+      "negative": "mere physical connection with valve shut",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-ContainsComponent",
+      "name": "infrastructure:ContainsComponent",
+      "category": "relationship",
+      "definition": "Physical whole-to-component membership at declared decomposition.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "infrastructure:ElectricalSubstation",
+        "target": "imod:Subject",
+        "kind": "structural",
+        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
+      },
+      "source_ids": [
+        "DOE"
+      ],
+      "positive": "substation containing a transformer",
+      "negative": "utility company owning the station",
+      "status": "blocked",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-ServesBuilding",
+      "name": "infrastructure:ServesBuilding",
+      "category": "relationship",
+      "definition": "Asset delivering a stated service to a building in context.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "infrastructure:WaterStorageTank",
+        "target": "infrastructure:Building",
+        "kind": "functional",
+        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
+      },
+      "source_ids": [
+        "EPA"
+      ],
+      "positive": "tank supplying a hospital building",
+      "negative": "tank closer to hospital but disconnected",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-DependsOnAsset",
+      "name": "infrastructure:DependsOnAsset",
+      "category": "relationship",
+      "definition": "Operational asset dependency for a named function under a stated contingency.",
+      "parent": "imod:Relationship",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "infrastructure:WaterStorageTank",
+        "target": "infrastructure:ElectricalSubstation",
+        "kind": "functional",
+        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
+      },
+      "source_ids": [
+        "NIST"
+      ],
+      "positive": "pumped delivery dependent on power",
+      "negative": "gravity-fed delivery assumed power-dependent",
+      "status": "blocked",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-ServiceInterruption",
+      "name": "infrastructure:ServiceInterruption",
+      "category": "event",
+      "definition": "Bounded episode from loss to restoration of one named delivery function.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "infrastructure:DeliveryCapacity"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "NIST"
+      ],
+      "positive": "recorded neighbourhood outage",
+      "negative": "permanent absence of a service never supplied",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-MainBreak",
+      "name": "infrastructure:MainBreak",
+      "category": "event",
+      "definition": "Bounded pipe rupture episode involving a specified distribution asset.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "infrastructure:LeakageRate",
+        "infrastructure:DeliveryCapacity"
+      ],
+      "bindings": {
+        "affects": [
+          "infrastructure:DeliveryCapacity"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "EPA"
+      ],
+      "positive": "identified water main rupture",
+      "negative": "routine valve opening",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-ServiceRestoration",
+      "name": "infrastructure:ServiceRestoration",
+      "category": "event",
+      "definition": "Bounded intervention episode ending when a stated function resumes.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "infrastructure:DeliveryCapacity"
+      ],
+      "bindings": {
+        "affects": [
+          "infrastructure:DeliveryCapacity"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "NIST"
+      ],
+      "positive": "power restored after feeder repair",
+      "negative": "forecast restoration date",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-AssetReplacement",
+      "name": "infrastructure:AssetReplacement",
+      "category": "event",
+      "definition": "Bounded removal-and-installation episode with separately identified old and new assets.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "infrastructure:StructuralCondition"
+      ],
+      "bindings": {
+        "affects": [],
+        "creates": [
+          "infrastructure:Bridge"
+        ],
+        "confers": [],
+        "rationale": "Bridge-specific replacement example: new bridge identity may be created; generic replacement requires the actual old/new types. End of old identity requires an explicit removal/destruction occurrent, not automatic forgetting."
+      },
+      "source_ids": [
+        "FHWA"
+      ],
+      "positive": "old bridge replaced with new structure",
+      "negative": "repainting the existing bridge",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-BridgeRepairEpisode",
+      "name": "infrastructure:BridgeRepairEpisode",
+      "category": "event",
+      "definition": "Bounded bridge repair operation with start/end work criteria.",
+      "parent": "imod:Event",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [
+        "infrastructure:StructuralCondition"
+      ],
+      "bindings": {
+        "affects": [
+          "infrastructure:StructuralCondition"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
+      },
+      "source_ids": [
+        "FHWA"
+      ],
+      "positive": "bearing repair work completed",
+      "negative": "ongoing generic repair capability",
+      "status": "provisional",
+      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-FloorArea",
+      "name": "infrastructure:FloorArea",
+      "category": "quality",
+      "definition": "Area of the declared building floor surfaces; gross/net convention must be supplied.",
+      "parent": "imod:Area",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [
+          "infrastructure:Building"
+        ],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [],
+        "affected_by": [],
+        "bearer_status": "provisional"
+      },
+      "source_ids": [
+        "NIST"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-StructuralCondition",
+      "name": "infrastructure:StructuralCondition",
+      "category": "quality",
+      "definition": "Observed physical condition of a specified asset element, with defects and assessment scheme explicit.",
+      "parent": "imod:Quality",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [
+          "infrastructure:RoadSegment",
+          "infrastructure:Bridge"
+        ],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [
+          "infrastructure:AssetDeterioration",
+          "infrastructure:AssetRepair",
+          "infrastructure:AssetReplacement",
+          "infrastructure:BridgeRepairEpisode"
+        ],
+        "affected_by": [
+          "infrastructure:AssetDeterioration",
+          "infrastructure:AssetRepair",
+          "infrastructure:BridgeRepairEpisode"
+        ],
+        "bearer_status": "provisional"
+      },
+      "source_ids": [
+        "NIST",
+        "FHWA"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-StoredWaterVolume",
+      "name": "infrastructure:StoredWaterVolume",
+      "category": "quality",
+      "definition": "Water volume within one identified tank, distinct from usable fire reserve.",
+      "parent": "imod:Volume",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [
+          "infrastructure:WaterStorageTank"
+        ],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [],
+        "affected_by": [
+          "infrastructure:WaterLeakage",
+          "infrastructure:WaterConveyance"
+        ],
+        "bearer_status": "provisional"
+      },
+      "source_ids": [
+        "EPA"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-DeliveryCapacity",
+      "name": "infrastructure:DeliveryCapacity",
+      "category": "quality",
+      "definition": "Deliverable amount per stated service interval and operating conditions; actual and rated capacity separate.",
+      "parent": "imod:Quality",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [
+          "infrastructure:ElectricalSubstation"
+        ],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [
+          "infrastructure:WaterConveyance",
+          "infrastructure:ElectricityDelivery",
+          "infrastructure:AssetRepair",
+          "infrastructure:ServiceInterruption",
+          "infrastructure:MainBreak",
+          "infrastructure:ServiceRestoration"
+        ],
+        "affected_by": [
+          "infrastructure:MainBreak",
+          "infrastructure:ServiceRestoration"
+        ],
+        "bearer_status": "provisional"
+      },
+      "source_ids": [
+        "DOE",
+        "EPA",
+        "FHWA",
+        "NIST"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-LeakageRate",
+      "name": "infrastructure:LeakageRate",
+      "category": "quality",
+      "definition": "Rate of unintended water escape at a specified opening or asset boundary.",
+      "parent": "imod:Quality",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [
+          "infrastructure:WaterLeakage",
+          "infrastructure:MainBreak"
+        ],
+        "affected_by": [],
+        "bearer_status": "blocked_missing_bearer"
+      },
+      "source_ids": [
+        "EPA"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "infrastructure-InternalPressure",
+      "name": "infrastructure:InternalPressure",
+      "category": "quality",
+      "definition": "Fluid pressure inside a specified asset and reference frame.",
+      "parent": "imod:Quality",
+      "parent_status": "proposed_parent",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearers": [],
+        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
+        "parameter_of": [
+          "infrastructure:WaterLeakage",
+          "infrastructure:WaterConveyance"
+        ],
+        "affected_by": [],
+        "bearer_status": "blocked_missing_bearer"
+      },
+      "source_ids": [
+        "EPA"
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "status": "provisional",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    }
+  ],
+  "questions": [
+    {
+      "id": "infrastructure-q01",
+      "text": "Which buildings could shelter people displaced by a wildfire?",
+      "concept_ids": [
+        "infrastructure-Building"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "shelter suitability needs occupancy purpose, access and capacity; a building count cannot answer",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "an identified school building",
+      "negative": "a school organisation",
+      "source_ids": [
+        "NIST"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 1,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which buildings could shelter people displaced by a wildfire?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "infrastructure-q02",
+      "text": "Which roads provide a usable route to the evacuation centre?",
+      "concept_ids": [
+        "infrastructure-RoadSegment"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "routing over physical connections plus operational restrictions; no generic route engine",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "paved section between two junctions",
+      "negative": "an itinerary",
+      "source_ids": [
+        "NIST"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 2,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which roads provide a usable route to the evacuation centre?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "infrastructure-q03",
+      "text": "Which bridge is restricting emergency vehicle access?",
+      "concept_ids": [
+        "infrastructure-Bridge"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "load and vehicle compatibility plus access relation",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "one identified river crossing",
+      "negative": "a statistical bridge inventory record",
+      "source_ids": [
+        "FHWA"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 3,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which bridge is restricting emergency vehicle access?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "infrastructure-q04",
+      "text": "Which water tanks still hold usable firefighting water?",
+      "concept_ids": [
+        "infrastructure-WaterStorageTank",
+        "infrastructure-StoredWaterVolume"
+      ],
+      "expression": "infrastructure:StoredWaterVolume of infrastructure:WaterStorageTank",
+      "expected_type": "quality",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "finished-water tank",
+      "negative": "natural lake",
+      "source_ids": [
+        "EPA"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 4,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which water tanks still hold usable firefighting water?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "infrastructure-q05",
+      "text": "Which substations feed the neighbourhood that lost power?",
+      "concept_ids": [
+        "infrastructure-ElectricalSubstation"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "directed electrical topology and actual operating configuration",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "identified distribution substation",
+      "negative": "the entire electricity market",
+      "source_ids": [
+        "DOE"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 5,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which substations feed the neighbourhood that lost power?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "infrastructure-q06",
+      "text": "Where is a water main losing water?",
+      "concept_ids": [
+        "infrastructure-WaterLeakage"
+      ],
+      "expression": "infrastructure:WaterLeakage",
+      "expected_type": "process",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "escape through a cracked main",
+      "negative": "authorised delivery at a tap",
+      "source_ids": [
+        "EPA"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 6,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Where is a water main losing water?",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "infrastructure-q07",
+      "text": "How much delivery capacity remains after a damaged pump is isolated?",
+      "concept_ids": [
+        "infrastructure-DeliveryCapacity"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "operating system calculation; asset name and nominal rating insufficient",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "source_ids": [
+        "EPA"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 7,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "How much delivery capacity remains after a damaged pump is isolated?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "infrastructure-q08",
+      "text": "Which customers depend on one upstream electricity supply?",
+      "concept_ids": [
+        "infrastructure-SuppliesAsset"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "dependency graph and redundancy; not proximity",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "transfer from upper to lower tank",
+      "negative": "mere physical connection with valve shut",
+      "source_ids": [
+        "DOE"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 8,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which customers depend on one upstream electricity supply?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "infrastructure-q09",
+      "text": "Has a bridge's load-bearing condition changed during the fire?",
+      "concept_ids": [
+        "infrastructure-StructuralCondition",
+        "infrastructure-Bridge"
+      ],
+      "expression": "change in infrastructure:StructuralCondition of infrastructure:Bridge",
+      "expected_type": "process",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "A value observed for the named bearer and stated convention.",
+      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
+      "source_ids": [
+        "FHWA"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 9,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Has a bridge's load-bearing condition changed during the fire?",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
+    },
+    {
+      "id": "infrastructure-q10",
+      "text": "Was the interruption caused by damage or by a deliberate shutdown?",
+      "concept_ids": [
+        "infrastructure-ServiceInterruption"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "event attribution needs operational records; interruption alone does not identify cause",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "recorded neighbourhood outage",
+      "negative": "permanent absence of a service never supplied",
+      "source_ids": [
+        "NIST"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 10,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Was the interruption caused by damage or by a deliberate shutdown?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "infrastructure-q11",
+      "text": "Which repairs restored the water connection to the clinic?",
+      "concept_ids": [
+        "infrastructure-ServiceRestoration"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "physical connection plus clinic functional dependency and intervention records",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "power restored after feeder repair",
+      "negative": "forecast restoration date",
+      "source_ids": [
+        "EPA"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 11,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Which repairs restored the water connection to the clinic?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "infrastructure-q12",
+      "text": "Did replacement create a new bridge or repair the existing one?",
+      "concept_ids": [
+        "infrastructure-AssetReplacement"
+      ],
+      "expression": "infrastructure:AssetReplacement",
+      "expected_type": "event",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "old bridge replaced with new structure",
+      "negative": "repainting the existing bridge",
+      "source_ids": [
+        "FHWA"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 12,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Did replacement create a new bridge or repair the existing one?",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "infrastructure-q13",
+      "text": "Which asset supplies this water tank?",
+      "concept_ids": [
+        "infrastructure-SuppliesAsset",
+        "infrastructure-WaterStorageTank"
+      ],
+      "expression": "infrastructure:SuppliesAsset linking infrastructure:WaterStorageTank to infrastructure:WaterStorageTank",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "transfer from upper to lower tank",
+      "negative": "mere physical connection with valve shut",
+      "source_ids": [
+        "EPA"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 13,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which asset supplies this water tank?",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "infrastructure-q14",
+      "text": "Which road section physically connects to this bridge?",
+      "concept_ids": [
+        "infrastructure-ConnectsAsset",
+        "infrastructure-RoadSegment",
+        "infrastructure-Bridge"
+      ],
+      "expression": "infrastructure:ConnectsAsset linking infrastructure:RoadSegment to infrastructure:Bridge",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "road meeting a bridge deck",
+      "negative": "two nearby roads with no junction",
+      "source_ids": [
+        "NIST"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "question_provenance": {
+        "order": 14,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
+      "narrative_intent": "Which road section physically connects to this bridge?",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "infrastructure-q15",
+      "text": "Would a working substation alone ensure recovery of the community?",
+      "concept_ids": [
+        "infrastructure-ElectricalSubstation"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "invalid sufficiency inference; other lifelines/social needs required",
+        "No observation/resolution means open-world unknown, not zero or absence."
+      ],
+      "positive": "identified distribution substation",
+      "negative": "the entire electricity market",
+      "source_ids": [
+        "NIST"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "question_provenance": {
+        "order": 15,
+        "phase": "source-informed question list saved before dossier candidate records",
+        "independence": "not blinded; existing worldview and author analysis visible",
+        "register": "QUESTIONS_FIRST.md"
+      },
+      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
+      "narrative_intent": "Would a working substation alone ensure recovery of the community?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    }
+  ],
+  "quality_summaries": [
+    {
+      "quality": "infrastructure:StructuralCondition",
+      "proposed_summary": "condition grade",
+      "basis": "Ordered only within a named inspection scheme and asset component; evidence of defects is the basis, no universal good/fair thresholds.",
+      "status": "provisional_no_predicate_declaration",
+      "evidence": "Source scope and measurement convention require human review; unknown/unmeasured/disputed remain evidence states.",
+      "comparison_rule": "Ordered only within a named inspection scheme and asset component; evidence of defects is the basis, no universal good/fair thresholds.",
+      "classification_kind": "ordered_contextual",
+      "overlap": "Multiple limitation and performance summaries may coexist; no exclusive exhaustive partition asserted.",
+      "context_scope": "Built physical assets that support delivery, shelter and access; distinguish the asset, delivered service, operator and network configuration.",
+      "source_ids": [
+        "NIST",
+        "FHWA"
+      ],
+      "boundary_rule": "Use only the named authority/design/reference criterion in basis; absent criterion blocks classification."
+    },
+    {
+      "quality": "infrastructure:DeliveryCapacity",
+      "proposed_summary": "operational / restricted",
+      "basis": "Nominal service-specific comparison against stated demand or permitted operation; a restriction is not necessarily physical damage.",
+      "status": "provisional_no_predicate_declaration",
+      "evidence": "Source scope and measurement convention require human review; unknown/unmeasured/disputed remain evidence states.",
+      "comparison_rule": "Nominal service-specific comparison against stated demand or permitted operation; a restriction is not necessarily physical damage.",
+      "classification_kind": "nominal",
+      "overlap": "Multiple limitation and performance summaries may coexist; no exclusive exhaustive partition asserted.",
+      "context_scope": "Built physical assets that support delivery, shelter and access; distinguish the asset, delivered service, operator and network configuration.",
+      "source_ids": [
+        "DOE",
+        "EPA",
+        "FHWA",
+        "NIST"
+      ],
+      "boundary_rule": "Use only the named authority/design/reference criterion in basis; absent criterion blocks classification."
+    },
+    {
+      "quality": "infrastructure:StoredWaterVolume",
+      "proposed_summary": "adequate fire reserve",
+      "basis": "Contextual range against an explicitly supplied fire-service requirement; no threshold invented.",
+      "status": "provisional_no_predicate_declaration",
+      "evidence": "Source scope and measurement convention require human review; unknown/unmeasured/disputed remain evidence states.",
+      "comparison_rule": "Contextual range against an explicitly supplied fire-service requirement; no threshold invented.",
+      "classification_kind": "ordered_contextual",
+      "overlap": "Multiple limitation and performance summaries may coexist; no exclusive exhaustive partition asserted.",
+      "context_scope": "Built physical assets that support delivery, shelter and access; distinguish the asset, delivered service, operator and network configuration.",
+      "source_ids": [
+        "EPA"
+      ],
+      "boundary_rule": "Use only the named authority/design/reference criterion in basis; absent criterion blocks classification."
+    }
+  ],
+  "ambiguities": [
+    {
+      "id": "infrastructure-a1",
+      "issue": "Infrastructure:Artifact is a real imported candidate parent for engineering, but infrastructure's own subjects derive from imod:Subject rather than self-import. Asset identity and service continuity are orthogonal. ContainsComponent needs a reviewed component parent upstream; using imod:Subject gives only a broad endpoint constraint. SuppliesAsset's tank-to-tank probe is deliberately narrow and does not pretend to cover all delivery endpoints. A network is a configuration, not a fifth asset invented for quota. Functional dependency is contingent, unlike physical connection. Do not retain decision import merely because the historical infrastructure header has it.",
+      "status": "unresolved",
+      "decision": "Keep blocked/provisional in research dossier, not executable src."
+    }
+  ],
+  "coverage": {
+    "target_per_category": 5,
+    "counts": {
+      "subject": 5,
+      "process": 5,
+      "relationship": 5,
+      "event": 5,
+      "quality": 6
+    },
+    "shortfalls": "Telecommunications, sanitation, transport modes other than roads, and housing occupancy rights lack source depth. NIST supports dependencies but does not itself validate the proposed five relation intensions.",
+    "concept_question_incidence": {
+      "infrastructure-Building": [
+        "infrastructure-q01"
+      ],
+      "infrastructure-RoadSegment": [
+        "infrastructure-q02",
+        "infrastructure-q14"
+      ],
+      "infrastructure-Bridge": [
+        "infrastructure-q03",
+        "infrastructure-q09",
+        "infrastructure-q14"
+      ],
+      "infrastructure-WaterStorageTank": [
+        "infrastructure-q04",
+        "infrastructure-q13"
+      ],
+      "infrastructure-ElectricalSubstation": [
+        "infrastructure-q05",
+        "infrastructure-q15"
+      ],
+      "infrastructure-WaterLeakage": [
+        "infrastructure-q06"
+      ],
+      "infrastructure-WaterConveyance": [],
+      "infrastructure-ElectricityDelivery": [],
+      "infrastructure-AssetDeterioration": [],
+      "infrastructure-AssetRepair": [],
+      "infrastructure-ConnectsAsset": [
+        "infrastructure-q14"
+      ],
+      "infrastructure-SuppliesAsset": [
+        "infrastructure-q08",
+        "infrastructure-q13"
+      ],
+      "infrastructure-ContainsComponent": [],
+      "infrastructure-ServesBuilding": [],
+      "infrastructure-DependsOnAsset": [],
+      "infrastructure-ServiceInterruption": [
+        "infrastructure-q10"
+      ],
+      "infrastructure-MainBreak": [],
+      "infrastructure-ServiceRestoration": [
+        "infrastructure-q11"
+      ],
+      "infrastructure-AssetReplacement": [
+        "infrastructure-q12"
+      ],
+      "infrastructure-BridgeRepairEpisode": [],
+      "infrastructure-FloorArea": [],
+      "infrastructure-StructuralCondition": [
+        "infrastructure-q09"
+      ],
+      "infrastructure-StoredWaterVolume": [
+        "infrastructure-q04"
+      ],
+      "infrastructure-DeliveryCapacity": [
+        "infrastructure-q07"
+      ],
+      "infrastructure-LeakageRate": [],
+      "infrastructure-InternalPressure": []
+    },
+    "unused_candidates": [
+      "infrastructure-WaterConveyance",
+      "infrastructure-ElectricityDelivery",
+      "infrastructure-AssetDeterioration",
+      "infrastructure-AssetRepair",
+      "infrastructure-ContainsComponent",
+      "infrastructure-ServesBuilding",
+      "infrastructure-DependsOnAsset",
+      "infrastructure-MainBreak",
+      "infrastructure-BridgeRepairEpisode",
+      "infrastructure-FloorArea",
+      "infrastructure-LeakageRate",
+      "infrastructure-InternalPressure"
+    ],
+    "warning": "Five recorded examples/category is not five semantically validated Tier-1 concepts. Blocked concepts do not satisfy acceptance coverage."
+  },
+  "validation": {
+    "source_review": "Primary web screening and local root source reading performed; expert review absent.",
+    "grammar": "untested; parent runner will record exact expression results",
+    "adaptation": "not run for candidate dossiers",
+    "semantic": "not run; no loaded worldview/reasoner approval",
+    "model_execution": "not run; no models or consequence engine implemented",
+    "invalid_probes": [
+      "infrastructure-q15"
+    ],
+    "approval": "No self-approval; exact artifact/import hashes and human decisions required before review-ready status.",
+    "human_approval": "none; source/ontology review outstanding",
+    "type_context_warning": "Reference existence and grammar acceptance do not establish scientific specialization."
+  }
+}

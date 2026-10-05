@@ -1,0 +1,126 @@
+{
+  "phase": "source-question ledger saved before candidate records",
+  "independence": "Author saw legacy namespaces; source-led questions are not blind or independent probes. Fresh human probes remain required.",
+  "questions": [
+    {
+      "id": "oceanography-q01",
+      "order": 1,
+      "text": "How salty is the water in this inlet compared with the offshore sea?",
+      "source_ids": [
+        "O1"
+      ]
+    },
+    {
+      "id": "oceanography-q02",
+      "order": 2,
+      "text": "Is this estuary always salty?",
+      "source_ids": [
+        "O1"
+      ]
+    },
+    {
+      "id": "oceanography-q03",
+      "order": 3,
+      "text": "Where is the surface water moving and how fast?",
+      "source_ids": [
+        "O2"
+      ]
+    },
+    {
+      "id": "oceanography-q04",
+      "order": 4,
+      "text": "Is deeper water rising toward the coast today?",
+      "source_ids": [
+        "O3"
+      ]
+    },
+    {
+      "id": "oceanography-q05",
+      "order": 5,
+      "text": "How much does water level rise between low and high tide here?",
+      "source_ids": [
+        "O4"
+      ]
+    },
+    {
+      "id": "oceanography-q06",
+      "order": 6,
+      "text": "Did the high water result from the tide alone?",
+      "source_ids": [
+        "O4"
+      ]
+    },
+    {
+      "id": "oceanography-q07",
+      "order": 7,
+      "text": "Is the colder water also denser after accounting for its salt content?",
+      "source_ids": [
+        "O2"
+      ]
+    },
+    {
+      "id": "oceanography-q08",
+      "order": 8,
+      "text": "Which coastal water receives water from this river mouth?",
+      "source_ids": [
+        "O1"
+      ]
+    },
+    {
+      "id": "oceanography-q09",
+      "order": 9,
+      "text": "Does a decrease in ocean pH mean the water has become acidic below neutral?",
+      "source_ids": [
+        "O5"
+      ]
+    },
+    {
+      "id": "oceanography-q10",
+      "order": 10,
+      "text": "How does the surface temperature differ from deeper water?",
+      "source_ids": [
+        "O2"
+      ]
+    },
+    {
+      "id": "oceanography-q11",
+      "order": 11,
+      "text": "Which way does water cross the inlet during this tidal exchange?",
+      "source_ids": [
+        "O4"
+      ]
+    },
+    {
+      "id": "oceanography-q12",
+      "order": 12,
+      "text": "Is nutrient-rich deep water reaching the surface without assuming fish production increased?",
+      "source_ids": [
+        "O3"
+      ]
+    },
+    {
+      "id": "oceanography-q13",
+      "order": 13,
+      "text": "Did a particular upwelling episode change coastal surface temperature?",
+      "source_ids": [
+        "O3"
+      ]
+    },
+    {
+      "id": "oceanography-q14",
+      "order": 14,
+      "text": "Does the mapped boundary of a current form an impermeable barrier?",
+      "source_ids": [
+        "O2"
+      ]
+    },
+    {
+      "id": "oceanography-q15",
+      "order": 15,
+      "text": "If no current observation is available can we assume the sea is motionless?",
+      "source_ids": [
+        "O2"
+      ]
+    }
+  ]
+}

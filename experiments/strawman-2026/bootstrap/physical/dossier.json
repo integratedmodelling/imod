@@ -1,0 +1,967 @@
+{
+  "dossier_version": "0.1",
+  "domain": "physical",
+  "status": "draft_for_human_review_with_blockers",
+  "scope": "Minimal shared articulation of material bearers, host-dependent features and physical identity-changing occurrences. This is upper scaffolding, not a disciplinary replacement for physics and not generic time/space infrastructure.",
+  "imports": [
+    {
+      "namespace": "imod",
+      "source": "src/imod.kwv",
+      "revision": "46c695b8e360b4e2c1180c57c203844d53723258",
+      "role": "imported upper context",
+      "status": "source_exists; proposed concepts separately blocked",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+    }
+  ],
+  "sources": [
+    {
+      "id": "BIPM",
+      "title": "BIPM SI Brochure ninth edition",
+      "url": "https://www.bipm.org/documents/d/guest/si-brochure-9-en-pdf",
+      "locator": "2026 online edition; section2.3.1 Table2 and derived quantities",
+      "scope": "Distinguishes mass, temperature, amount; unit tables do not dictate observable ancestry.",
+      "status": "primary_source_content_reviewed",
+      "retrieved": "2026-10-03",
+      "access_note": "Web tool search-index/full content read; Gold Book HTML403 avoided by returned primary PDF/plain/JSON. No expert discussion."
+    },
+    {
+      "id": "IUPAC-HOM",
+      "title": "IUPAC Homogeneity H02845",
+      "url": "https://goldbook.iupac.org/terms/view/H02845/plain",
+      "locator": "5th ed2025; definition;1990 recommendations p1201",
+      "scope": "Uniformity depends on named property/analyte; no global homogeneous identity.",
+      "status": "primary_source_content_reviewed",
+      "retrieved": "2026-10-03",
+      "access_note": "Web tool search-index/full content read; Gold Book HTML403 avoided by returned primary PDF/plain/JSON. No expert discussion."
+    },
+    {
+      "id": "LOCAL",
+      "title": "Pinned ontology/context pack and user change commitments",
+      "url": "../METHOD.md",
+      "locator": "METHOD change boundary; src/imod.kwv:289-447; src/physical.kwv; src/earth.kwv",
+      "scope": "Local design evidence, not external science; current comments not automatically accepted.",
+      "status": "local_source_read",
+      "retrieved": "2026-10-03",
+      "access_note": "Web tool search-index/full content read; Gold Book HTML403 avoided by returned primary PDF/plain/JSON. No expert discussion."
+    },
+    {
+      "id": "NASA-HEAT",
+      "title": "NASA Glenn Heat Transfer",
+      "url": "https://www.grc.nasa.gov/www/k-12/airplane/heat.html",
+      "locator": "Updated2021-05-13; thermodynamic equilibrium and gas state paragraphs",
+      "scope": "Macroscopic thermodynamics; simplified constant heat capacity example is not universal.",
+      "status": "primary_source_content_reviewed",
+      "retrieved": "2026-10-03",
+      "access_note": "Web tool search-index/full content read; Gold Book HTML403 avoided by returned primary PDF/plain/JSON. No expert discussion."
+    },
+    {
+      "id": "NASA-MOTION",
+      "title": "NASA Glenn Newton second law",
+      "url": "https://www.grc.nasa.gov/WWW/K-12/BGP/newton2.html",
+      "locator": "Momentum and vector-quantity paragraphs",
+      "scope": "Classical mechanical scope; momentum, force and velocity directional; no relativistic extension.",
+      "status": "primary_source_content_reviewed",
+      "retrieved": "2026-10-03",
+      "access_note": "Web tool search-index/full content read; Gold Book HTML403 avoided by returned primary PDF/plain/JSON. No expert discussion."
+    },
+    {
+      "id": "USGS-DESERT",
+      "title": "USGS Our Dynamic Desert",
+      "url": "https://pubs.usgs.gov/of/2004/1007/erosion.html",
+      "locator": "2004 report; page updated2009-12-18; Weathering and Erosion",
+      "scope": "Mojave observations distinguish weathering, erosion, debris transport; regional evidence not universal rates.",
+      "status": "primary_source_content_reviewed",
+      "retrieved": "2026-10-03",
+      "access_note": "Web tool search-index/full content read; Gold Book HTML403 avoided by returned primary PDF/plain/JSON. No expert discussion."
+    }
+  ],
+  "concepts": [
+    {
+      "id": "physical-MaterialBody",
+      "name": "MaterialBody",
+      "category": "subject",
+      "definition": "A bounded portion of matter followed under an explicit physical continuity criterion.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [
+        "imod:Mass",
+        "imod:Volume",
+        "imod:Temperature"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "BIPM"
+      ],
+      "positive": "one identified rock specimen",
+      "negative": "a temperature reading",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physical-HostBoundVoid",
+      "name": "HostBoundVoid",
+      "category": "subject",
+      "definition": "A cavity individuated by the enclosing material body; dependence is constitutive, not merely location.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [
+        "imod:Volume",
+        "physical:Depth"
+      ],
+      "parameters": [],
+      "bindings": {
+        "host": "physical:MaterialBody; proposed host dependence, not an extra endpoint"
+      },
+      "source_ids": [
+        "LOCAL"
+      ],
+      "positive": "pore within a specified rock",
+      "negative": "arbitrary region of open air",
+      "status": "blocked",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "local design only",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physical-DetachedFragment",
+      "name": "DetachedFragment",
+      "category": "subject",
+      "definition": "A separately bounded piece after separation from a specified material whole.",
+      "parent": "imod:Subject",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [
+        "imod:Mass",
+        "imod:Volume"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "positive": "detached chip after breakage",
+      "negative": "crack whose sides remain attached",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physical-MaterialSeparation",
+      "name": "MaterialSeparation",
+      "category": "process",
+      "definition": "Progressive physical separation of parts of a material body.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "cohesion quality missing",
+        "imod:Mass",
+        "imod:Volume"
+      ],
+      "bindings": {
+        "affects": "body continuity; upstream identity criterion unresolved",
+        "creates": "detached fragments only after actual detachment; not every crack"
+      },
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "positive": "splitting rock through an extending crack",
+      "negative": "sensor losing sight of intact rock",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physical-MaterialAggregation",
+      "name": "MaterialAggregation",
+      "category": "process",
+      "definition": "Joining previously separate material portions into one physically individuated body.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "contact quality missing",
+        "cohesion quality missing"
+      ],
+      "bindings": {
+        "creates": "one body only if an accepted continuity criterion is met; unsupported for loose proximity"
+      },
+      "source_ids": [
+        "LOCAL"
+      ],
+      "positive": "consolidation into a connected body",
+      "negative": "stones merely sharing a map cell",
+      "status": "blocked",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "local design only",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physical-PhysicalContact",
+      "name": "PhysicalContact",
+      "category": "relationship",
+      "definition": "Contact between two specified material bodies at the observational resolution.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "contact-area quality missing"
+      ],
+      "bindings": {
+        "source": "physical:MaterialBody",
+        "target": "physical:MaterialBody",
+        "rationale": "Symmetric scientific relation; bond versus structural relationship is an upstream category issue."
+      },
+      "source_ids": [
+        "NASA-HEAT"
+      ],
+      "positive": "stone touching vessel wall",
+      "negative": "two separated warm stones",
+      "status": "blocked",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "blocked",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "blocking_reason": "Symmetric scientific contact has unresolved bond-versus-structural-relationship category; endpoint notation is illustrative only.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physical-VoidHostedBy",
+      "name": "VoidHostedBy",
+      "category": "relationship",
+      "definition": "Directed constitutive dependence of a host-bound cavity on an enclosing body.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "physical:HostBoundVoid",
+        "target": "physical:MaterialBody",
+        "rationale": "Host identity required; no generic location or spatial-containment machinery."
+      },
+      "source_ids": [
+        "LOCAL"
+      ],
+      "positive": "pore hosted by rock specimen",
+      "negative": "a coordinate point near the specimen",
+      "status": "blocked",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "local design only",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physical-FragmentationEpisode",
+      "name": "FragmentationEpisode",
+      "category": "event",
+      "definition": "A bounded occurrence in which a body separates into detached pieces.",
+      "parent": "imod:Event",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "imod:Mass",
+        "imod:Volume"
+      ],
+      "bindings": {
+        "affects": "identity/continuity of original body",
+        "creates": "physical:DetachedFragment when detached; material is not created ex nihilo"
+      },
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "positive": "one observed breakage episode",
+      "negative": "two image files of one intact stone",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physical-IdentityLossEpisode",
+      "name": "IdentityLossEpisode",
+      "category": "event",
+      "definition": "A bounded physical occurrence ending the supplied substantial identity criterion.",
+      "parent": "imod:Event",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "identity-continuity criterion unresolved"
+      ],
+      "bindings": {
+        "affects": "specified substantial identity; dependent configuration consequences not implemented",
+        "creates": [],
+        "confers": []
+      },
+      "source_ids": [
+        "LOCAL"
+      ],
+      "positive": "destruction that defeats an agreed body identity criterion",
+      "negative": "unknown present location",
+      "status": "blocked",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "local design only",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physical-BodyTemperature",
+      "name": "BodyTemperature",
+      "category": "quality",
+      "definition": "Thermodynamic temperature of an identified material body in an applicable regime.",
+      "parent": "imod:Temperature",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "bearer physical:MaterialBody"
+      ],
+      "bindings": {},
+      "source_ids": [
+        "BIPM"
+      ],
+      "positive": "temperature of a equilibrated specimen",
+      "negative": "heat transferred during a process",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "physical-BodyMass",
+      "name": "BodyMass",
+      "category": "quality",
+      "definition": "Mass of an identified material body, distinct from amount of substance.",
+      "parent": "imod:Mass",
+      "parent_status": "verified_reference",
+      "ancestry_note": "Reference exists in imported root. For root generalized aliases this records upper context only, NOT an instruction to emit redundant is; declaration keyword supplies implicit ODO-IM ancestry. Scientific specialization still provisional.",
+      "qualities": [],
+      "parameters": [
+        "bearer physical:MaterialBody"
+      ],
+      "bindings": {},
+      "source_ids": [
+        "BIPM"
+      ],
+      "positive": "mass of the specimen",
+      "negative": "moles of its constituent species",
+      "status": "provisional",
+      "source_claim_vs_inference": "Source supports stated phenomenon/distinction; k.LAB category, naming, boundaries, ancestry and clause bindings are author proposals, not source claims.",
+      "source_confidence": "bounded primary-source support; not expert review",
+      "semantic_validity": "provisional",
+      "grammar_validity": "untested",
+      "implementation_boundary": "No executable declaration. Occurrent effects are scoped semantic proposals; implication/detection are syntax-only and no consequence engine exists.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    }
+  ],
+  "questions": [
+    {
+      "id": "physical-q01",
+      "text": "Which material object are we following when it heats without breaking?",
+      "concept_ids": [
+        "physical-MaterialBody",
+        "physical-BodyTemperature"
+      ],
+      "expression": "physical:BodyTemperature of physical:MaterialBody",
+      "expected_type": "quality",
+      "dependencies": [
+        "Identity continuity vs thermal change; boundary/identity policy is an upstream issue.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "one identified rock specimen; temperature of a equilibrated specimen",
+      "negative": "a temperature reading; heat transferred during a process",
+      "source_ids": [
+        "NASA-HEAT"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "sequence": 1,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Identity continuity vs thermal change; boundary/identity policy is an upstream issue.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Identity continuity vs thermal change; boundary/identity policy is an upstream issue.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physical-q02",
+      "text": "How much matter does the same bounded object contain?",
+      "concept_ids": [
+        "physical-MaterialBody",
+        "physical-BodyMass"
+      ],
+      "expression": "physical:BodyMass of physical:MaterialBody",
+      "expected_type": "quality",
+      "dependencies": [
+        "Mass must not mean amount of substance.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "one identified rock specimen; mass of the specimen",
+      "negative": "a temperature reading; moles of its constituent species",
+      "source_ids": [
+        "BIPM"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "sequence": 2,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Mass must not mean amount of substance.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Mass must not mean amount of substance.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physical-q03",
+      "text": "Can a hole be observed separately from the solid hosting it?",
+      "concept_ids": [
+        "physical-HostBoundVoid",
+        "physical-VoidHostedBy"
+      ],
+      "expression": "physical:VoidHostedBy linking physical:HostBoundVoid to physical:MaterialBody",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Dependent feature vs independent substantial.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "pore within a specified rock; pore hosted by rock specimen",
+      "negative": "arbitrary region of open air; a coordinate point near the specimen",
+      "source_ids": [
+        "LOCAL"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "sequence": 3,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Dependent feature vs independent substantial.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "blocking_dependencies": [
+        "physical-HostBoundVoid",
+        "physical-VoidHostedBy"
+      ],
+      "narrative_intent": "Dependent feature vs independent substantial.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physical-q04",
+      "text": "Did the boulder remain one object after it cracked into detached pieces?",
+      "concept_ids": [
+        "physical-FragmentationEpisode",
+        "physical-DetachedFragment"
+      ],
+      "expression": "physical:FragmentationEpisode",
+      "expected_type": "event",
+      "dependencies": [
+        "Cessation requires bounded fragmentation occurrence and new identities.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "one observed breakage episode; detached chip after breakage",
+      "negative": "two image files of one intact stone; crack whose sides remain attached",
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "sequence": 4,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Cessation requires bounded fragmentation occurrence and new identities.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Cessation requires bounded fragmentation occurrence and new identities.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physical-q05",
+      "text": "Which parts of this rock are in physical contact?",
+      "concept_ids": [
+        "physical-PhysicalContact"
+      ],
+      "expression": "physical:PhysicalContact linking physical:MaterialBody to physical:MaterialBody",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Contact does not entail attachment or common identity.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "stone touching vessel wall",
+      "negative": "two separated warm stones",
+      "source_ids": [
+        "NASA-HEAT"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "sequence": 5,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Contact does not entail attachment or common identity.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "blocking_dependencies": [
+        "physical-PhysicalContact"
+      ],
+      "narrative_intent": "Contact does not entail attachment or common identity.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physical-q06",
+      "text": "Is the hot stone bigger after warming?",
+      "concept_ids": [
+        "physical-MaterialBody",
+        "physical-BodyTemperature"
+      ],
+      "expression": "imod:Volume of physical:MaterialBody",
+      "expected_type": "quality",
+      "dependencies": [
+        "Volume and temperature are distinct dependent observables; thermal expansion is a mechanism.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "one identified rock specimen; temperature of a equilibrated specimen",
+      "negative": "a temperature reading; heat transferred during a process",
+      "source_ids": [
+        "NASA-HEAT"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "sequence": 6,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Volume and temperature are distinct dependent observables; thermal expansion is a mechanism.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Volume and temperature are distinct dependent observables; thermal expansion is a mechanism.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physical-q07",
+      "text": "Did the quantity of material change when fragments moved away?",
+      "concept_ids": [
+        "physical-MaterialSeparation",
+        "physical-BodyMass"
+      ],
+      "expression": "change in physical:BodyMass",
+      "expected_type": "process",
+      "dependencies": [
+        "Open boundary material accounting vs identity loss.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "splitting rock through an extending crack; mass of the specimen",
+      "negative": "sensor losing sight of intact rock; moles of its constituent species",
+      "source_ids": [
+        "USGS-DESERT"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "sequence": 7,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Open boundary material accounting vs identity loss.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Open boundary material accounting vs identity loss.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
+    },
+    {
+      "id": "physical-q08",
+      "text": "Does an unmoving stone have no physical processes?",
+      "concept_ids": [
+        "physical-MaterialBody"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Stillness in a chosen frame cannot establish absence of thermal change.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
+        "gap: frame-dependent speed and process inventory cannot be inferred from stillness"
+      ],
+      "positive": "one identified rock specimen",
+      "negative": "a temperature reading",
+      "source_ids": [
+        "NASA-MOTION"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "sequence": 8,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Stillness in a chosen frame cannot establish absence of thermal change.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Stillness in a chosen frame cannot establish absence of thermal change.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "physical-q09",
+      "text": "Is the same specimen uniform for both temperature and composition?",
+      "concept_ids": [
+        "physical-MaterialBody"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Homogeneity must name a property and support scale.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
+        "gap: property-specific distribution/summary quality"
+      ],
+      "positive": "one identified rock specimen",
+      "negative": "a temperature reading",
+      "source_ids": [
+        "IUPAC-HOM"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "sequence": 9,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Homogeneity must name a property and support scale.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Homogeneity must name a property and support scale.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "physical-q10",
+      "text": "Can two objects have equal mass but different volumes?",
+      "concept_ids": [
+        "physical-BodyMass",
+        "physical-MaterialBody"
+      ],
+      "expression": "physical:BodyMass of physical:MaterialBody",
+      "expected_type": "quality",
+      "dependencies": [
+        "Independent qualities, not one size category.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "mass of the specimen; one identified rock specimen",
+      "negative": "moles of its constituent species; a temperature reading",
+      "source_ids": [
+        "BIPM"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "sequence": 10,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Independent qualities, not one size category.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Independent qualities, not one size category.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physical-q11",
+      "text": "When does a crack become a separate void rather than a surface mark?",
+      "concept_ids": [
+        "physical-HostBoundVoid"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Identity and host dependence need explicit criteria.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
+        "gap: host/void individuation"
+      ],
+      "positive": "pore within a specified rock",
+      "negative": "arbitrary region of open air",
+      "source_ids": [
+        "LOCAL"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "sequence": 11,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Identity and host dependence need explicit criteria.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "blocking_dependencies": [
+        "physical-HostBoundVoid"
+      ],
+      "narrative_intent": "Identity and host dependence need explicit criteria.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "physical-q12",
+      "text": "What evidence would show that the object ceased to exist as that object?",
+      "concept_ids": [
+        "physical-IdentityLossEpisode"
+      ],
+      "expression": "physical:IdentityLossEpisode",
+      "expected_type": "event",
+      "dependencies": [
+        "Collapse is identity loss, not missing sensor data.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "destruction that defeats an agreed body identity criterion",
+      "negative": "unknown present location",
+      "source_ids": [
+        "LOCAL"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "sequence": 12,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Collapse is identity loss, not missing sensor data.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "blocking_dependencies": [
+        "physical-IdentityLossEpisode"
+      ],
+      "narrative_intent": "Collapse is identity loss, not missing sensor data.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "physical-q13",
+      "text": "Does a warmer classification mean a larger change in temperature?",
+      "concept_ids": [
+        "physical-BodyTemperature"
+      ],
+      "expression": "change in physical:BodyTemperature",
+      "expected_type": "process",
+      "dependencies": [
+        "Relative level vs temporal difference.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed."
+      ],
+      "positive": "temperature of a equilibrated specimen",
+      "negative": "heat transferred during a process",
+      "source_ids": [
+        "NASA-HEAT"
+      ],
+      "semantic_status": "provisional",
+      "grammar_status": "parse_pass",
+      "sequence": 13,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Relative level vs temporal difference.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Relative level vs temporal difference.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
+    },
+    {
+      "id": "physical-q14",
+      "text": "Can the mass of an absent observation be treated as zero?",
+      "concept_ids": [
+        "physical-BodyMass"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Evidence absence cannot resolve a quality or create cessation.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
+        "gap: epistemic evidence policy is not a domain predicate"
+      ],
+      "positive": "mass of the specimen",
+      "negative": "moles of its constituent species",
+      "source_ids": [
+        "LOCAL"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "sequence": 14,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Evidence absence cannot resolve a quality or create cessation.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Evidence absence cannot resolve a quality or create cessation.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "physical-q15",
+      "text": "Which physical distinctions must every specialized domain import rather than redefine?",
+      "concept_ids": [
+        "physical-MaterialBody"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Root vs physical scope gate, not an extra domain taxonomy.",
+        "Imported ancestry and all proposed names must resolve; no model or data availability assumed.",
+        "gap: upstream context review"
+      ],
+      "positive": "one identified rock specimen",
+      "negative": "a temperature reading",
+      "source_ids": [
+        "LOCAL"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "sequence": 15,
+      "provenance": "QUESTIONS_FIRST.json authored after source reading and before local candidate table; legacy visible; not independent.",
+      "expected_interpretation": "Root vs physical scope gate, not an extra domain taxonomy.",
+      "current_checks": "No individual parser/adaptation/type/reasoner execution yet; parent validation may update grammar only.",
+      "answerability": "An expression requests one component of the narrative question; explanation may require additional observables/models. Unresolved means unknown, never no-change.",
+      "narrative_intent": "Root vs physical scope gate, not an extra domain taxonomy.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    }
+  ],
+  "quality_summaries": [
+    {
+      "quality": "body temperature relative to a reference body",
+      "proposed_summary": "WarmerThanReference",
+      "basis": "Ordered comparison of temperatures in compatible contexts; no universal hot/cold cutoff. Reference identity required; uncertainty can leave comparison unresolved.",
+      "status": "blocked: relational comparison vs unary attribute scope unresolved"
+    },
+    {
+      "quality": "specified composition or temperature distribution",
+      "proposed_summary": "HomogeneousForNamedProperty",
+      "basis": "Nominal summary over named property and declared observational support; tolerance must be supplied by domain convention. Different-property homogeneity may disagree; not exhaustive.",
+      "status": "blocked: no thresholds or distribution quality yet"
+    }
+  ],
+  "ambiguities": [
+    "ROOT-MASS: imod:Mass says amount of substance, conflicting with the BIPM distinction; block scientific use of this wording pending root correction.",
+    "ROOT-TEMP: imod:Temperature kinetic-energy gloss is not a general thermodynamic definition.",
+    "PHYS-HOST: source of host dependence and void identity is local design only; expert/source evidence missing.",
+    "PHYS-CONTINUITY: identity loss and fragment creation cannot be applied until material continuity criteria are chosen.",
+    "PHYS-CONTACT: choose symmetric bond or structural relationship; do not encode source/target asymmetry as science."
+  ],
+  "coverage": {
+    "counts": {
+      "subject": 3,
+      "process": 2,
+      "relationship": 2,
+      "event": 2,
+      "quality": 2
+    },
+    "question_count": 15,
+    "shortfalls": {
+      "subject": 2,
+      "process": 3,
+      "relationship": 3,
+      "event": 3
+    },
+    "rationale": "Retain physical only if reviewers need a material-body layer between root subjects and disciplines. Three subject candidates, two processes, two relationships and two events are enough to expose the principal decisions. Five of each would manufacture distinctions or import machinery. MaterialBody is not a synonym for every Subject: institutions and information content are counterexamples. HostBoundVoid tests whether a host-dependent subject is supported; it is blocked until dependence and identity can be expressed without treating every geometric hole as a material body. DetachedFragment is a process-relative composition that may belong as a role instead of a new subject. Existing Collapse is useful as an identity-loss question, but legacy participation, input/output, periodicity, spatial arrangements and time-position trees are not conserved by default.",
+    "concept_question_incidence": {
+      "physical-MaterialBody": [
+        "physical-q01",
+        "physical-q02",
+        "physical-q06",
+        "physical-q08",
+        "physical-q09",
+        "physical-q10",
+        "physical-q15"
+      ],
+      "physical-HostBoundVoid": [
+        "physical-q03",
+        "physical-q11"
+      ],
+      "physical-DetachedFragment": [
+        "physical-q04"
+      ],
+      "physical-MaterialSeparation": [
+        "physical-q07"
+      ],
+      "physical-MaterialAggregation": [],
+      "physical-PhysicalContact": [
+        "physical-q05"
+      ],
+      "physical-VoidHostedBy": [
+        "physical-q03"
+      ],
+      "physical-FragmentationEpisode": [
+        "physical-q04"
+      ],
+      "physical-IdentityLossEpisode": [
+        "physical-q12"
+      ],
+      "physical-BodyTemperature": [
+        "physical-q01",
+        "physical-q06",
+        "physical-q13"
+      ],
+      "physical-BodyMass": [
+        "physical-q02",
+        "physical-q07",
+        "physical-q10",
+        "physical-q14"
+      ]
+    },
+    "unused_candidates": [
+      "physical-MaterialAggregation"
+    ],
+    "missing_vocabulary": "See null-expression questions and named upstream gaps. Missing models and unavailable consequence execution are separate.",
+    "question_first_sha256": "0a63f48b52395d51b038d3eb29ff7b2ff9e3408423f964f23c3a7a464a85dc0e",
+    "held_out": "No independence claimed; independent domain-expert probes are pending. Q14/Q15 are not labelled held-out merely because late in sequence."
+  },
+  "validation": {
+    "source_review": "Author bounded reading only; no expert approval",
+    "local_structure": "assembled with all60 source-first questions; parent may run schema/incidence checks",
+    "grammar": "untested",
+    "adaptation": "not_run",
+    "semantic_type": "provisional/blocked per record",
+    "reasoner": "not_run",
+    "model_execution": "not_run",
+    "approval": "none",
+    "semantic_negative_control": "physical:BodyTemperature linking physical:MaterialBody to physical:MaterialBody is a deliberately invalid semantic use of a quality as a binary relationship, even if a parser accepts its token structure.",
+    "human_approval": "none; source/ontology review outstanding",
+    "type_context_warning": "Reference existence and grammar acceptance do not establish scientific specialization."
+  }
+}

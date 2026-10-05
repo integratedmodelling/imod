@@ -1,0 +1,1295 @@
+{
+  "dossier_version": "0.1",
+  "domain": "hydrology",
+  "status": "draft_for_human_review_not_approved",
+  "scope": "Water bodies, storage, transfers and bounded episodes; no water-balance equations, infrastructures or automatic consequences.",
+  "imports": [
+    {
+      "namespace": "imod",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+    },
+    {
+      "namespace": "earth",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "424c0141849aac2b9ae762079ff31c8c14cff4f0d6506eb19971004e7f22d816"
+    }
+  ],
+  "sources": [
+    {
+      "id": "watersheds",
+      "title": "USGS Watersheds and Drainage Basins",
+      "url": "https://www.usgs.gov/water-science-school/science/watersheds-and-drainage-basins",
+      "locator": "Definition; Not all precipitation flows out",
+      "scope": "Common outlet and water budget; broad groundwater wording is not equality of subsurface and surface catchments",
+      "status": "primary agency introduction read; not expert reviewed",
+      "accessed": "2026-10-03"
+    },
+    {
+      "id": "streamflow",
+      "title": "USGS Streamflow and the Water Cycle",
+      "url": "https://www.usgs.gov/water-science-school/science/streamflow-and-water-cycle",
+      "locator": "Streamflow; hydrographs; mechanisms",
+      "scope": "Discharge, stage, movement and changing storage; introductory prose does not distinguish every ontology category",
+      "status": "primary agency introduction read; not expert reviewed",
+      "accessed": "2026-10-03"
+    },
+    {
+      "id": "infiltration",
+      "title": "USGS Infiltration and the Water Cycle",
+      "url": "https://www.usgs.gov/water-science-school/science/infiltration-and-water-cycle",
+      "locator": "Factors affecting infiltration; recharge",
+      "scope": "Entry into ground distinguished from eventual aquifer replenishment",
+      "status": "primary agency introduction read; not expert reviewed",
+      "accessed": "2026-10-03"
+    },
+    {
+      "id": "runoff",
+      "title": "USGS Runoff: Surface and Overland Water Runoff",
+      "url": "https://www.usgs.gov/water-science-school/science/runoff-surface-and-overland-water-runoff",
+      "locator": "Factors affecting runoff; water quality",
+      "scope": "Overland movement and erosion factors; not universal fire response",
+      "status": "primary agency introduction read; not expert reviewed",
+      "accessed": "2026-10-03"
+    },
+    {
+      "id": "groundwater",
+      "title": "USGS Groundwater: What is Groundwater?",
+      "url": "https://www.usgs.gov/water-science-school/science/groundwater-what-groundwater",
+      "locator": "Groundwater storage and flow overview",
+      "scope": "Subsurface water; aquifer material must not be equated with water",
+      "status": "primary agency introduction read; not expert reviewed",
+      "accessed": "2026-10-03"
+    },
+    {
+      "id": "floods",
+      "title": "USGS Floods and Recurrence Intervals",
+      "url": "https://www.usgs.gov/water-science-school/science/floods-and-recurrence-intervals",
+      "locator": "Floods and recurrence discussion",
+      "scope": "Flood occurrence and probability distinct; no deterministic recurrence schedule",
+      "status": "primary agency introduction read; not expert reviewed",
+      "accessed": "2026-10-03"
+    },
+    {
+      "id": "wmo",
+      "title": "WMO/UNESCO International Glossary of Hydrology",
+      "url": "https://unesdoc.unesco.org/ark%3A/48223/pf0000221862",
+      "locator": "2012 edition metadata",
+      "scope": "Discovery only; drought entry not read, cannot support adopted boundary",
+      "status": "metadata_only"
+    },
+    {
+      "id": "user",
+      "title": "User change/open-world constraints",
+      "url": null,
+      "locator": "delegated instructions 2026-10-03",
+      "scope": "Intended system semantics, not empirical hydrology",
+      "status": "design_authority"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "hydrology-SurfaceCatchment",
+      "name": "hydrology:SurfaceCatchment",
+      "category": "subject",
+      "definition": "Surface-drainage region delineated towards one specified outlet; not an assertion that all rain reaches it.",
+      "parent": "earth:Region",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "hydrology:CatchmentArea"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "watersheds"
+      ],
+      "positive": "Delineated hillslopes above a bridge outlet",
+      "negative": "Administrative water district crossing divides",
+      "status": "blocked",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-StreamReach",
+      "name": "hydrology:StreamReach",
+      "category": "subject",
+      "definition": "A bounded segment of a channel-associated water body, with endpoints fixed for the observation; water presence can vary.",
+      "parent": "earth:Waterway",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "hydrology:Stage",
+        "hydrology:StoredWaterVolume"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "streamflow"
+      ],
+      "positive": "Reach between two confluences",
+      "negative": "The discharge value at a gauge",
+      "status": "blocked",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-LakeWaterBody",
+      "name": "hydrology:LakeWaterBody",
+      "category": "subject",
+      "definition": "A bounded body of standing inland surface water, distinguished from its basin and water volume.",
+      "parent": "earth:WaterBody",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "hydrology:StoredWaterVolume",
+        "hydrology:WaterTemperature"
+      ],
+      "parameters": [],
+      "bindings": {
+        "upstream_issue": "earth:WaterBody is Aquatic Region; material water body versus geographic region needs root/earth review."
+      },
+      "source_ids": [
+        "streamflow"
+      ],
+      "positive": "Water occupying a specified lake basin",
+      "negative": "Empty excavated basin",
+      "status": "blocked",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-GroundwaterBody",
+      "name": "hydrology:GroundwaterBody",
+      "category": "subject",
+      "definition": "Contextually delineated subsurface water body in connected saturated pore or fracture space; distinct from aquifer solid material.",
+      "parent": "earth:WaterBody",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "hydrology:StoredWaterVolume",
+        "hydrology:HydraulicHead"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "groundwater"
+      ],
+      "positive": "Water in a specified connected saturated unit",
+      "negative": "Dry permeable sandstone",
+      "status": "blocked",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-SpringWaterBody",
+      "name": "hydrology:SpringWaterBody",
+      "category": "subject",
+      "definition": "A locally bounded water body at a groundwater emergence site, distinguished from the discharge process and the site.",
+      "parent": "earth:WaterBody",
+      "parent_status": "proposed_parent",
+      "qualities": [
+        "hydrology:StoredWaterVolume",
+        "hydrology:WaterTemperature"
+      ],
+      "parameters": [],
+      "bindings": {
+        "upstream_issue": "earth:WaterBody is Aquatic Region; material water body versus geographic region needs root/earth review."
+      },
+      "source_ids": [
+        "groundwater",
+        "infiltration"
+      ],
+      "positive": "Water pool supplied at a spring outlet",
+      "negative": "Groundwater discharge rate without a bounded body",
+      "status": "blocked",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-StoredWaterVolume",
+      "name": "hydrology:StoredWaterVolume",
+      "category": "quality",
+      "definition": "Volume occupied by water in the specified body at contextual time.",
+      "parent": "imod:Volume",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "earth:WaterBody"
+      },
+      "source_ids": [
+        "groundwater",
+        "streamflow"
+      ],
+      "positive": "Water volume of one lake",
+      "negative": "Cumulative flow through its outlet",
+      "status": "provisional",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-CatchmentArea",
+      "name": "hydrology:CatchmentArea",
+      "category": "quality",
+      "definition": "Area of the delineated surface catchment footprint.",
+      "parent": "imod:Area",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "hydrology:SurfaceCatchment"
+      },
+      "source_ids": [
+        "watersheds"
+      ],
+      "positive": "Footprint area above selected outlet",
+      "negative": "Total aquifer storage",
+      "status": "provisional",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-Stage",
+      "name": "hydrology:Stage",
+      "category": "quality",
+      "definition": "Water-surface height relative to a specified local reference.",
+      "parent": "imod:Length",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "hydrology:StreamReach"
+      },
+      "source_ids": [
+        "streamflow"
+      ],
+      "positive": "Gauge-relative water height",
+      "negative": "Discharge or absolute terrain elevation",
+      "status": "provisional",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-Discharge",
+      "name": "hydrology:Discharge",
+      "category": "quality",
+      "definition": "Water volume crossing a specified section per contextual time interval.",
+      "parent": "imod:Quantity",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "hydrology:ChannelFlow"
+      },
+      "source_ids": [
+        "streamflow"
+      ],
+      "positive": "Section water throughput",
+      "negative": "Mean water velocity alone",
+      "status": "provisional",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-WaterTemperature",
+      "name": "hydrology:WaterTemperature",
+      "category": "quality",
+      "definition": "Thermal state of a specified water body under an identified measurement interpretation.",
+      "parent": "imod:Temperature",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "earth:WaterBody"
+      },
+      "source_ids": [
+        "streamflow"
+      ],
+      "positive": "Lake water temperature",
+      "negative": "Air temperature above the lake",
+      "status": "provisional",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-HydraulicHead",
+      "name": "hydrology:HydraulicHead",
+      "category": "quality",
+      "definition": "Hydraulic energy per weight represented as a reference-relative head for water.",
+      "parent": "imod:Length",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "hydrology:GroundwaterBody"
+      },
+      "source_ids": [
+        "groundwater"
+      ],
+      "positive": "Head at a specified groundwater location",
+      "negative": "Depth to water without reference information",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-InfiltrationFlux",
+      "name": "hydrology:InfiltrationFlux",
+      "category": "quality",
+      "definition": "Water entry through a specified ground surface per area and contextual time.",
+      "parent": "imod:Quantity",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "hydrology:Infiltration"
+      },
+      "source_ids": [
+        "infiltration"
+      ],
+      "positive": "Entry rate through one soil surface",
+      "negative": "Aquifer recharge rate inferred without vadose-zone travel",
+      "status": "provisional",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-FlowVelocity",
+      "name": "hydrology:FlowVelocity",
+      "category": "quality",
+      "definition": "Magnitude of water movement velocity under specified section/point interpretation.",
+      "parent": "imod:Velocity",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "hydrology:ChannelFlow"
+      },
+      "source_ids": [
+        "streamflow"
+      ],
+      "positive": "Water speed through section",
+      "negative": "Volume throughput",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-SedimentConcentration",
+      "name": "hydrology:SedimentConcentration",
+      "category": "quality",
+      "definition": "Mass concentration of suspended sediment in water; sampling convention unresolved.",
+      "parent": "imod:Quantity",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "bearer": "earth:WaterBody"
+      },
+      "source_ids": [
+        "runoff"
+      ],
+      "positive": "Suspended material in sampled stream water",
+      "negative": "Turbidity treated as identical mass concentration",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-ChannelFlow",
+      "name": "hydrology:ChannelFlow",
+      "category": "process",
+      "definition": "Water transport along a channel; course of movement, not discharge number.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "hydrology:Discharge",
+        "hydrology:FlowVelocity",
+        "hydrology:Stage"
+      ],
+      "bindings": {
+        "participants": "water body; receiving body/ground/air as scoped by definition",
+        "affects": [
+          "hydrology:StoredWaterVolume"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Transfer can contribute to change in participating source/recipient storage; steady throughflow and compensating transfers may give no net change. Bearer-specific source and recipient bindings are not encoded and remain a blocking review issue. No net sign or runtime inference asserted."
+      },
+      "source_ids": [
+        "streamflow"
+      ],
+      "positive": "Water moving through a river reach",
+      "negative": "Gauge reading considered as a process",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-OverlandFlow",
+      "name": "hydrology:OverlandFlow",
+      "category": "process",
+      "definition": "Water movement over the land surface before or outside channel transport.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "hydrology:InfiltrationFlux",
+        "geography:Slope"
+      ],
+      "bindings": {
+        "participants": "water body; receiving body/ground/air as scoped by definition",
+        "affects": [
+          "hydrology:StoredWaterVolume"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Transfer can contribute to change in participating source/recipient storage; steady throughflow and compensating transfers may give no net change. Bearer-specific source and recipient bindings are not encoded and remain a blocking review issue. No net sign or runtime inference asserted."
+      },
+      "source_ids": [
+        "runoff"
+      ],
+      "positive": "Sheet flow down a wet hillslope",
+      "negative": "Infiltration into pore space",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-Infiltration",
+      "name": "hydrology:Infiltration",
+      "category": "process",
+      "definition": "Entry of surface water into the ground; not synonymous with arrival at saturated groundwater.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "hydrology:InfiltrationFlux"
+      ],
+      "bindings": {
+        "participants": "water body; receiving body/ground/air as scoped by definition",
+        "affects": [
+          "hydrology:StoredWaterVolume"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Transfer can contribute to change in participating source/recipient storage; steady throughflow and compensating transfers may give no net change. Bearer-specific source and recipient bindings are not encoded and remain a blocking review issue. No net sign or runtime inference asserted."
+      },
+      "source_ids": [
+        "infiltration"
+      ],
+      "positive": "Water crosses the ground surface",
+      "negative": "Groundwater recharge inferred solely from surface entry",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-GroundwaterDischarge",
+      "name": "hydrology:GroundwaterDischarge",
+      "category": "process",
+      "definition": "Groundwater transfer into a receiving surface water body.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "hydrology:HydraulicHead",
+        "hydrology:Discharge"
+      ],
+      "bindings": {
+        "participants": "water body; receiving body/ground/air as scoped by definition",
+        "affects": [
+          "hydrology:StoredWaterVolume"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Transfer can contribute to change in participating source/recipient storage; steady throughflow and compensating transfers may give no net change. Bearer-specific source and recipient bindings are not encoded and remain a blocking review issue. No net sign or runtime inference asserted."
+      },
+      "source_ids": [
+        "groundwater",
+        "streamflow"
+      ],
+      "positive": "Groundwater contribution at a gaining reach",
+      "negative": "Losing-reach transfer in the opposite direction",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-OpenWaterEvaporation",
+      "name": "hydrology:OpenWaterEvaporation",
+      "category": "process",
+      "definition": "Liquid water transfer from an exposed body into atmospheric vapour.",
+      "parent": "imod:Process",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "hydrology:WaterTemperature",
+        "atmosphere:VaporPressure"
+      ],
+      "bindings": {
+        "participants": "water body; receiving body/ground/air as scoped by definition",
+        "affects": [
+          "hydrology:StoredWaterVolume"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Transfer can contribute to change in participating source/recipient storage; steady throughflow and compensating transfers may give no net change. Bearer-specific source and recipient bindings are not encoded and remain a blocking review issue. No net sign or runtime inference asserted."
+      },
+      "source_ids": [
+        "streamflow"
+      ],
+      "positive": "Vapour transfer at a lake surface",
+      "negative": "Leaf transpiration",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-SurfaceDrainsTo",
+      "name": "hydrology:SurfaceDrainsTo",
+      "category": "relationship",
+      "definition": "Potential surface-drainage routing relative to the selected outlet; not observed water transfer.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "hydrology:SurfaceCatchment",
+        "target": "hydrology:StreamReach",
+        "rationale": "Subject endpoints are scoped; transfer relations are observation-dependent and not inferred from adjacency. Structural-versus-functional root split remains unresolved."
+      },
+      "source_ids": [
+        "watersheds"
+      ],
+      "positive": "Catchment routed to reach outlet",
+      "negative": "Administrative district assigned to water company",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-TributaryOf",
+      "name": "hydrology:TributaryOf",
+      "category": "relationship",
+      "definition": "Directed channel-network connection from a tributary reach to its receiving reach.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "hydrology:StreamReach",
+        "target": "hydrology:StreamReach",
+        "rationale": "Subject endpoints are scoped; transfer relations are observation-dependent and not inferred from adjacency. Structural-versus-functional root split remains unresolved."
+      },
+      "source_ids": [
+        "watersheds"
+      ],
+      "positive": "Joining tributary at a confluence",
+      "negative": "Nearby unconnected channel",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-GroundwaterFeeds",
+      "name": "hydrology:GroundwaterFeeds",
+      "category": "relationship",
+      "definition": "Observed transfer from groundwater to a surface-water recipient in the observation context.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "hydrology:GroundwaterBody",
+        "target": "earth:WaterBody",
+        "rationale": "Subject endpoints are scoped; transfer relations are observation-dependent and not inferred from adjacency. Structural-versus-functional root split remains unresolved."
+      },
+      "source_ids": [
+        "groundwater",
+        "streamflow"
+      ],
+      "positive": "Gaining reach supported by transfer evidence",
+      "negative": "Hydraulic proximity alone",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-LosesWaterTo",
+      "name": "hydrology:LosesWaterTo",
+      "category": "relationship",
+      "definition": "Observed transfer from a surface-water source into a groundwater recipient.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "earth:WaterBody",
+        "target": "hydrology:GroundwaterBody",
+        "rationale": "Subject endpoints are scoped; transfer relations are observation-dependent and not inferred from adjacency. Structural-versus-functional root split remains unresolved."
+      },
+      "source_ids": [
+        "streamflow",
+        "infiltration"
+      ],
+      "positive": "Losing reach with supported exchange",
+      "negative": "Dry channel above deep groundwater without demonstrated connection",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-NestedCatchmentIn",
+      "name": "hydrology:NestedCatchmentIn",
+      "category": "relationship",
+      "definition": "Containment of one surface catchment within another under compatible routing and outlet definitions.",
+      "parent": "imod:Relationship",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "hydrology:SurfaceCatchment",
+        "target": "hydrology:SurfaceCatchment",
+        "rationale": "Subject endpoints are scoped; transfer relations are observation-dependent and not inferred from adjacency. Structural-versus-functional root split remains unresolved."
+      },
+      "source_ids": [
+        "watersheds"
+      ],
+      "positive": "Upstream tributary basin inside full basin",
+      "negative": "Overlapping management areas",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-OverbankFloodEpisode",
+      "name": "hydrology:OverbankFloodEpisode",
+      "category": "event",
+      "definition": "Bounded episode of channel water inundating normally unsubmerged adjacent land; onset/end rule supplied in context.",
+      "parent": "imod:Event",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "hydrology:Stage",
+        "hydrology:Discharge"
+      ],
+      "bindings": {
+        "participants": "stream reach and inundated region",
+        "affects": [
+          "hydrology:StoredWaterVolume"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Event delimitation is author interpretation, not source-defined universal threshold. No role conferral or downstream configuration instantiation is implemented."
+      },
+      "source_ids": [
+        "floods",
+        "streamflow"
+      ],
+      "positive": "Observed overbank inundation within bounded storm response",
+      "negative": "High stage confined within channel",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-RechargeEpisode",
+      "name": "hydrology:RechargeEpisode",
+      "category": "event",
+      "definition": "Bounded interval of water arrival replenishing a specified groundwater body; bounding rule explicit.",
+      "parent": "imod:Event",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "hydrology:StoredWaterVolume",
+        "hydrology:HydraulicHead"
+      ],
+      "bindings": {
+        "participants": "groundwater body and arriving water",
+        "affects": [
+          "hydrology:StoredWaterVolume"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Event delimitation is author interpretation, not source-defined universal threshold. No role conferral or downstream configuration instantiation is implemented."
+      },
+      "source_ids": [
+        "infiltration"
+      ],
+      "positive": "Observed recharge episode after vadose travel",
+      "negative": "Rainfall alone",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-LakeDrawdownEpisode",
+      "name": "hydrology:LakeDrawdownEpisode",
+      "category": "event",
+      "definition": "Bounded reduction of lake water storage; water-level decline is separate evidence and needs a basin relation to estimate volume. The occurrence does not identify its cause.",
+      "parent": "imod:Event",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "hydrology:StoredWaterVolume"
+      ],
+      "bindings": {
+        "participants": "lake water body",
+        "affects": [
+          "hydrology:StoredWaterVolume"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Event delimitation is author interpretation, not source-defined universal threshold. No role conferral or downstream configuration instantiation is implemented."
+      },
+      "source_ids": [
+        "streamflow"
+      ],
+      "positive": "Lake drawdown bracketed by agreed endpoints",
+      "negative": "One low reading without change evidence",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-ReachWettingEpisode",
+      "name": "hydrology:ReachWettingEpisode",
+      "category": "event",
+      "definition": "Bounded transition to observable connected water along a specified previously dry reach.",
+      "parent": "imod:Event",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "hydrology:StoredWaterVolume"
+      ],
+      "bindings": {
+        "participants": "stream reach and water",
+        "affects": [
+          "hydrology:StoredWaterVolume"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Event delimitation is author interpretation, not source-defined universal threshold. No role conferral or downstream configuration instantiation is implemented."
+      },
+      "source_ids": [
+        "streamflow"
+      ],
+      "positive": "Documented wetting-front passage reconnects the reach",
+      "negative": "Missing sensor becomes available",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "hydrology-GroundwaterDepletionEpisode",
+      "name": "hydrology:GroundwaterDepletionEpisode",
+      "category": "event",
+      "definition": "Bounded reduction of groundwater storage under specified start/end and body boundary.",
+      "parent": "imod:Event",
+      "parent_status": "verified_reference",
+      "qualities": [],
+      "parameters": [
+        "hydrology:StoredWaterVolume",
+        "hydrology:HydraulicHead"
+      ],
+      "bindings": {
+        "participants": "groundwater body",
+        "affects": [
+          "hydrology:StoredWaterVolume"
+        ],
+        "creates": [],
+        "confers": [],
+        "rationale": "Event delimitation is author interpretation, not source-defined universal threshold. No role conferral or downstream configuration instantiation is implemented."
+      },
+      "source_ids": [
+        "groundwater"
+      ],
+      "positive": "Observed storage reduction with a bounded assessment episode",
+      "negative": "Head decline treated as identical storage change without storage properties",
+      "status": "blocked",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    }
+  ],
+  "questions": [
+    {
+      "id": "hydrology-Q01",
+      "text": "Which land drains to the bridge outlet, and is it the same area feeding the well?",
+      "concept_ids": [
+        "hydrology-SurfaceCatchment",
+        "hydrology-SurfaceDrainsTo"
+      ],
+      "expression": "hydrology:SurfaceCatchment",
+      "expected_type": "subject",
+      "dependencies": [
+        "Subsurface contributing-area distinction absent; two resolutions required"
+      ],
+      "positive": "Surface-drainage delineation",
+      "negative": "Groundwater contributing area asserted identical",
+      "source_ids": [
+        "watersheds"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "source_order": 1,
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Which land drains to the bridge outlet, and is it the same area feeding the well?",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "hydrology-Q02",
+      "text": "How much water is stored in this lake now?",
+      "concept_ids": [
+        "hydrology-StoredWaterVolume",
+        "hydrology-LakeWaterBody"
+      ],
+      "expression": "hydrology:StoredWaterVolume of hydrology:LakeWaterBody",
+      "expected_type": "quality",
+      "dependencies": [
+        "Lake identity and storage observation"
+      ],
+      "positive": "Body-borne storage",
+      "negative": "Throughput accumulated without lake balance",
+      "source_ids": [
+        "streamflow"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "source_order": 2,
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "How much water is stored in this lake now?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "hydrology-Q03",
+      "text": "Is river water moving faster after the storm, or is more water passing the section?",
+      "concept_ids": [
+        "hydrology-Discharge",
+        "hydrology-ChannelFlow",
+        "hydrology-FlowVelocity"
+      ],
+      "expression": "hydrology:Discharge of hydrology:ChannelFlow",
+      "expected_type": "quality",
+      "dependencies": [
+        "Second expression FlowVelocity of ChannelFlow; section/time basis required"
+      ],
+      "positive": "Compare discharge separately from speed",
+      "negative": "Treat speed as volume throughput",
+      "source_ids": [
+        "streamflow"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "source_order": 3,
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Is river water moving faster after the storm, or is more water passing the section?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "hydrology-Q04",
+      "text": "How much rain enters the ground instead of running over it?",
+      "concept_ids": [
+        "hydrology-InfiltrationFlux",
+        "hydrology-Infiltration",
+        "hydrology-OverlandFlow"
+      ],
+      "expression": "hydrology:InfiltrationFlux of hydrology:Infiltration",
+      "expected_type": "quality",
+      "dependencies": [
+        "Rain partition needs water-balance model; expression is one component"
+      ],
+      "positive": "Surface-entry flux",
+      "negative": "Assume all infiltration recharges aquifer",
+      "source_ids": [
+        "infiltration",
+        "runoff"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "source_order": 4,
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "How much rain enters the ground instead of running over it?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "hydrology-Q05",
+      "text": "Does this reach gain groundwater or lose water into the ground?",
+      "concept_ids": [
+        "hydrology-GroundwaterFeeds",
+        "hydrology-LosesWaterTo",
+        "hydrology-GroundwaterBody",
+        "hydrology-StreamReach"
+      ],
+      "expression": "hydrology:GroundwaterFeeds linking hydrology:GroundwaterBody to hydrology:StreamReach",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Compare reverse relationship separately; direction can vary by context"
+      ],
+      "positive": "Supported groundwater-to-reach transfer",
+      "negative": "Infer gain from adjacent aquifer",
+      "source_ids": [
+        "streamflow",
+        "groundwater"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "source_order": 5,
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Does this reach gain groundwater or lose water into the ground?",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "hydrology-Q06",
+      "text": "Can groundwater beneath one catchment feed a stream in another?",
+      "concept_ids": [
+        "hydrology-GroundwaterFeeds",
+        "hydrology-SurfaceCatchment",
+        "hydrology-GroundwaterBody"
+      ],
+      "expression": "hydrology:GroundwaterFeeds linking hydrology:GroundwaterBody to hydrology:StreamReach",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Subsurface geometry and transfer model; geographical overlay outside expression"
+      ],
+      "positive": "Transfer evidence crosses surface divide",
+      "negative": "Surface divide assumed groundwater barrier",
+      "source_ids": [
+        "groundwater",
+        "watersheds"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "source_order": 6,
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Can groundwater beneath one catchment feed a stream in another?",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "hydrology-Q07",
+      "text": "Why does this river flow after weeks without rain?",
+      "concept_ids": [
+        "hydrology-GroundwaterDischarge",
+        "hydrology-ChannelFlow"
+      ],
+      "expression": "hydrology:GroundwaterDischarge",
+      "expected_type": "process",
+      "dependencies": [
+        "Causal explanation also considers releases and diversions; model needed"
+      ],
+      "positive": "Supported groundwater contribution",
+      "negative": "All dry-weather flow declared groundwater by definition",
+      "source_ids": [
+        "infiltration",
+        "streamflow"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "source_order": 7,
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Why does this river flow after weeks without rain?",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "hydrology-Q08",
+      "text": "Did the storm cause actual overbank flooding or just a high reading?",
+      "concept_ids": [
+        "hydrology-OverbankFloodEpisode",
+        "hydrology-Stage"
+      ],
+      "expression": "presence of hydrology:OverbankFloodEpisode",
+      "expected_type": "quality",
+      "dependencies": [
+        "Event boundaries/inundated-region link and attribution separate"
+      ],
+      "positive": "Bounded observed overbank inundation",
+      "negative": "High in-channel stage",
+      "source_ids": [
+        "floods"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "source_order": 8,
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Did the storm cause actual overbank flooding or just a high reading?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
+    },
+    {
+      "id": "hydrology-Q09",
+      "text": "Did lake water decline by evaporation during the hot spell?",
+      "concept_ids": [
+        "hydrology-StoredWaterVolume",
+        "hydrology-LakeWaterBody",
+        "hydrology-OpenWaterEvaporation"
+      ],
+      "expression": "change in hydrology:StoredWaterVolume of hydrology:LakeWaterBody",
+      "expected_type": "process",
+      "dependencies": [
+        "Time transition and evaporation model; competing transfers"
+      ],
+      "positive": "Separate storage change and evaporation contribution",
+      "negative": "Assume heat means net volume loss",
+      "source_ids": [
+        "streamflow"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "source_order": 9,
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Did lake water decline by evaporation during the hot spell?",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
+    },
+    {
+      "id": "hydrology-Q10",
+      "text": "Are two tributaries joined even when one is dry?",
+      "concept_ids": [
+        "hydrology-TributaryOf",
+        "hydrology-StreamReach"
+      ],
+      "expression": "hydrology:TributaryOf linking hydrology:StreamReach to hydrology:StreamReach",
+      "expected_type": "relationship",
+      "dependencies": [
+        "Channel material identity versus water body must be split upstream"
+      ],
+      "positive": "Mapped channel connection persists under selected channel identity",
+      "negative": "Actual transfer inferred in dry reach",
+      "source_ids": [
+        "watersheds"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "source_order": 10,
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Are two tributaries joined even when one is dry?",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "hydrology-Q11",
+      "text": "Has pumping reduced stored groundwater, and can we separate other losses?",
+      "concept_ids": [
+        "hydrology-StoredWaterVolume",
+        "hydrology-GroundwaterBody",
+        "hydrology-GroundwaterDepletionEpisode"
+      ],
+      "expression": "change in hydrology:StoredWaterVolume of hydrology:GroundwaterBody",
+      "expected_type": "process",
+      "dependencies": [
+        "Pumping belongs agency/engineering bridge; storage properties needed"
+      ],
+      "positive": "Observed storage change with attribution model",
+      "negative": "Head drop alone equals removed volume",
+      "source_ids": [
+        "groundwater"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "source_order": 11,
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Has pumping reduced stored groundwater, and can we separate other losses?",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
+    },
+    {
+      "id": "hydrology-Q12",
+      "text": "After wildfire, does the next storm carry more sediment to the river?",
+      "concept_ids": [
+        "hydrology-SedimentConcentration",
+        "hydrology-StreamReach",
+        "hydrology-OverlandFlow"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Question asks transported sediment amount, not concentration. Requires sediment mass flux from concentration plus water discharge and contextual integration, compatible sampling basis, and attribution model. No single supported expression currently supplied."
+      ],
+      "positive": "Greater transported sediment mass during the bounded storm under comparable observation support",
+      "negative": "Lower concentration interpreted as lower transported mass despite much higher discharge",
+      "source_ids": [
+        "runoff"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "source_order": 12,
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "After wildfire, does the next storm carry more sediment to the river?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "hydrology-Q13",
+      "text": "Is this river seasonally low, or has an agreed drought episode begun?",
+      "concept_ids": [],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Upstream drought definition and baseline source review outstanding"
+      ],
+      "positive": "Contextual low-flow evidence distinguished from episode criterion",
+      "negative": "Universal drought threshold invented",
+      "source_ids": [
+        "wmo"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "source_order": 13,
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Is this river seasonally low, or has an agreed drought episode begun?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "hydrology-Q14",
+      "text": "Can a dry reach reconnect during a wetting episode?",
+      "concept_ids": [
+        "hydrology-ReachWettingEpisode",
+        "hydrology-TributaryOf"
+      ],
+      "expression": "presence of hydrology:ReachWettingEpisode",
+      "expected_type": "quality",
+      "dependencies": [
+        "Wetting-process distinction, channel identity and emergence machinery unresolved"
+      ],
+      "positive": "Bounded observed reconnection",
+      "negative": "Sensor availability mistaken for water arrival",
+      "source_ids": [
+        "streamflow"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "source_order": 14,
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Can a dry reach reconnect during a wetting episode?",
+      "expression_result_category": "quality",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
+    },
+    {
+      "id": "hydrology-Q15",
+      "text": "Without a resolved change estimate, what remains known about lake storage?",
+      "concept_ids": [
+        "hydrology-StoredWaterVolume",
+        "hydrology-LakeWaterBody"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Open-world resolution policy is core; no invented retention semantics"
+      ],
+      "positive": "Twin continues with explicitly available evidence",
+      "negative": "Unresolved change treated as zero",
+      "source_ids": [
+        "user"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "source_order": 15,
+      "provenance": "QUESTIONS_SOURCE_FIRST.md; same agent, prior catchment exposure disclosed",
+      "narrative_intent": "Without a resolved change estimate, what remains known about lake storage?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    }
+  ],
+  "quality_summaries": [
+    {
+      "quality": "hydrology:Discharge",
+      "proposed_summary": "LowFlow",
+      "basis": "Ordered relative to a specified seasonal reference distribution; no cutoff selected.",
+      "comparison_rule": "requires reviewer-approved reference population and boundary",
+      "value_structure": "ordered",
+      "overlap": "may overlap normal for another season/reference",
+      "context": "reach, season, baseline",
+      "status": "blocked; drought is not identical"
+    },
+    {
+      "quality": "direction of groundwater/surface exchange",
+      "proposed_summary": "Gaining / Losing",
+      "basis": "Sign relative to explicit groundwater-to-surface orientation; simultaneous subreach gains/losses possible.",
+      "comparison_rule": "direction at stated spatial support and interval",
+      "value_structure": "nominal",
+      "overlap": "possible at aggregated reach support",
+      "context": "exchange observation support",
+      "status": "provisional; relations preferred to timeless predicates"
+    },
+    {
+      "quality": "hydrology:StoredWaterVolume",
+      "proposed_summary": "DryReach",
+      "basis": "Water presence and connectivity interpretation; zero volume, no connected flow and unmeasured volume differ.",
+      "comparison_rule": "no universal threshold or exhaustive dry/wet partition selected",
+      "value_structure": "nominal",
+      "overlap": "isolated pools may coexist with disconnected reach",
+      "context": "channel/flow support",
+      "status": "blocked; unknown is evidence state"
+    }
+  ],
+  "ambiguities": [
+    "SurfaceCatchment parent earth:Region is volumetric; choose footprint versus volume before promotion; current executable earlier candidate retained as test artifact, not approval.",
+    "USGS broad watershed includes underlying groundwater; our scoped alias cannot assert equivalence to every use.",
+    "StreamReach mixes enduring channel and occupied water: split requires earth-level body/channel articulation, not hydrology workaround.",
+    "Root Velocity aliases Speed; retain scalar speed scope or raise vector distinction upstream.",
+    "Hydraulic head evidence is introductory and insufficient for full energy-reference conventions; specialist source needed.",
+    "Event boundaries are observational modeling choices; no source says these five comprise a universal event taxonomy.",
+    "Review R-H03: earth:WaterBody regional reading blocks all material water-body descendants pending upstream review; concentration bearer cannot silently inherit from Waterway.",
+    "Review R-H01: Q12 concentration was an insufficient formulation of transported amount; retained original narrative and replaced expression by explicit load/flux/model gap."
+  ],
+  "coverage": {
+    "target_per_category": 5,
+    "shortfalls": {
+      "subject": 0,
+      "process": 0,
+      "relationship": 0,
+      "event": 0
+    },
+    "weaknesses": [
+      "Five proposed events are not five accepted declarations; four episode names are author interpretations needing specialist review.",
+      "Hydraulic connectivity, aquifer material, sediment basis and drought need deeper sources.",
+      "No actual expert discussion or independent held-out questions."
+    ]
+  },
+  "validation": {
+    "source_review": "primary introductory review only",
+    "grammar": "per-question pending parser report",
+    "adaptation": "new dossier concepts untested/unencoded; earlier SurfaceCatchment overlay tested separately",
+    "semantic": "not run; scientific blockers explicit",
+    "models": "not run",
+    "approval": "none",
+    "review_iteration": "Visible-candidate independent reviewer found Q12 load/concentration mismatch, unscoped transfer effects and material/region parent gap; corrections applied without approval.",
+    "human_approval": "none; source/ontology review outstanding",
+    "type_context_warning": "Reference existence and grammar acceptance do not establish scientific specialization."
+  }
+}

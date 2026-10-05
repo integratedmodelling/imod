@@ -1,0 +1,1213 @@
+{
+  "dossier_version": "0.1",
+  "domain": "life",
+  "status": "draft-requires-human-review",
+  "scope": "Physical biological bearers and life-history occurrences, provisionally distinct from explanatory biology. Old agent Individual and SocialGroup are not conserved by default. Consolidation remains open.",
+  "imports": [
+    {
+      "namespace": "imod",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+    }
+  ],
+  "sources": [
+    {
+      "id": "CELL",
+      "title": "Cooper, The Cell: A Molecular Approach, 2nd edition",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK9839/",
+      "locator": "2000; contents and cellular organization",
+      "scope": "Authored textbook hosted by NCBI; chapter headings support research leads, not all operational boundaries",
+      "status": "retrieved 2026-10-03; author synthesis, no expert endorsement"
+    },
+    {
+      "id": "DENALI",
+      "title": "NPS Denali: Ecosystems After Fire",
+      "url": "https://www.nps.gov/dena/learn/nature/ecosystems-after-fire.htm",
+      "locator": "Deep Dive; Changes to Patterns of Fire",
+      "scope": "Boreal/tundra recovery and ecological variation",
+      "status": "retrieved 2026-10-03; author synthesis, no expert endorsement"
+    },
+    {
+      "id": "NPS",
+      "title": "NPS Bryce Canyon: Fire Ecology",
+      "url": "https://www.nps.gov/brca/learn/nature/fire-ecology.htm",
+      "locator": "Forest Succession; adaptations; wildlife",
+      "scope": "Ponderosa-pine examples; not universal fire benefits",
+      "status": "retrieved 2026-10-03; author synthesis, no expert endorsement"
+    },
+    {
+      "id": "ORIGIN",
+      "title": "Cooper, origin and evolution of cells summary",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK9943/",
+      "locator": "2000; multicellularity",
+      "scope": "Cell specialization and cellular organization; no universal individuation criterion",
+      "status": "retrieved 2026-10-03; author synthesis, no expert endorsement"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "life-c01",
+      "name": "Organism",
+      "category": "subject",
+      "definition": "Living individual under an explicitly selected biological individuation criterion.",
+      "parent": "imod:Subject",
+      "parent_status": "blocked",
+      "qualities": [
+        "LivingMass",
+        "structural integrity"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "ORIGIN"
+      ],
+      "positive": "Separately individuated plant",
+      "negative": "Population treated as organism",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Subject",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "life-c02",
+      "name": "Cell",
+      "category": "subject",
+      "definition": "Individuated cellular unit with enclosing boundary and internal organization.",
+      "parent": "imod:Subject",
+      "parent_status": "blocked",
+      "qualities": [
+        "Volume",
+        "membrane integrity"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "ORIGIN"
+      ],
+      "positive": "Intact cell",
+      "negative": "Extracted DNA",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Subject",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "life-c03",
+      "name": "Tissue",
+      "category": "subject",
+      "definition": "Bodily assembly of cells organized under a specified biological function.",
+      "parent": "imod:Subject",
+      "parent_status": "blocked",
+      "qualities": [
+        "LivingMass",
+        "viable cell fraction"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "ORIGIN"
+      ],
+      "positive": "Identified leaf tissue",
+      "negative": "Any co-located microbes",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Subject",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "life-c04",
+      "name": "Organ",
+      "category": "subject",
+      "definition": "Individuated bodily structure integrated in an organism.",
+      "parent": "imod:Subject",
+      "parent_status": "blocked",
+      "qualities": [
+        "LivingMass",
+        "structural dimensions"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "CELL"
+      ],
+      "positive": "Root organ",
+      "negative": "All roots in a map pixel",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Subject",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "life-c05",
+      "name": "Seed",
+      "category": "subject",
+      "definition": "Seed-plant reproductive structure bearing an embryo under a botanical delimitation.",
+      "parent": "imod:Subject",
+      "parent_status": "blocked",
+      "qualities": [
+        "LivingMass",
+        "water content"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "NPS"
+      ],
+      "positive": "Seed from cone",
+      "negative": "Spore treated as seed",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Subject",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "life-c06",
+      "name": "BiologicalRemnant",
+      "category": "subject",
+      "definition": "Material persisting after cessation of a living individual or part.",
+      "parent": "imod:Subject",
+      "parent_status": "blocked",
+      "qualities": [
+        "Residual mass",
+        "structural dimensions"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "NPS"
+      ],
+      "positive": "Dead snag",
+      "negative": "Undetected living plant",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Subject",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "life-c07",
+      "name": "Growth",
+      "category": "process",
+      "definition": "Increase of living individual or part through production and integration of material.",
+      "parent": "imod:Process",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "LivingMass",
+        "resource availability"
+      ],
+      "bindings": {
+        "affects": [
+          "life:LivingMass"
+        ],
+        "rationale": "Growth-related mass change only, not hydration swelling."
+      },
+      "source_ids": [
+        "NPS"
+      ],
+      "positive": "Regrowth of survivor",
+      "negative": "Hydration alone",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Process",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "life-c08",
+      "name": "Reproduction",
+      "category": "process",
+      "definition": "Production of newly individuated biological offspring.",
+      "parent": "imod:Process",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "Physiological condition",
+        "reproductive output"
+      ],
+      "bindings": {
+        "creates": [
+          "life:Organism"
+        ],
+        "rationale": "Successful production under explicit individuation; attempts do not guarantee offspring."
+      },
+      "source_ids": [
+        "ORIGIN"
+      ],
+      "positive": "New cellular individuals",
+      "negative": "Enlargement only",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Process",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "life-c09",
+      "name": "Maintenance",
+      "category": "process",
+      "definition": "Biological activity sustaining an individual's organization.",
+      "parent": "imod:Process",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "Energy reserve",
+        "material turnover"
+      ],
+      "bindings": {
+        "affects": [
+          "life:LivingMass"
+        ],
+        "rationale": "Material turnover can alter pools; never automatic state retention."
+      },
+      "source_ids": [
+        "CELL"
+      ],
+      "positive": "Supported metabolic turnover",
+      "negative": "Assumed persistence rule",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Process",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "life-c10",
+      "name": "Regeneration",
+      "category": "process",
+      "definition": "Restoration of biological structure through surviving material.",
+      "parent": "imod:Process",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "Tissue integrity",
+        "growth rate"
+      ],
+      "bindings": {
+        "creates": [
+          "life:Tissue"
+        ],
+        "rationale": "Demonstrated tissue formation only; no guarantee of complete restoration."
+      },
+      "source_ids": [
+        "DENALI"
+      ],
+      "positive": "Tissue formation on survivor",
+      "negative": "Immigrant replacing dead plant",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Process",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "life-c11",
+      "name": "Decomposition",
+      "category": "process",
+      "definition": "Biological breakdown of dead material; placement shared with ecology/chemistry.",
+      "parent": "imod:Process",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "Residual mass",
+        "substrate moisture"
+      ],
+      "bindings": {
+        "affects": [
+          "life:BiologicalRemnant"
+        ],
+        "rationale": "Research candidate; detailed primary source needed, no mineralization guarantee."
+      },
+      "source_ids": [
+        "CELL"
+      ],
+      "positive": "Biological transformation of remains",
+      "negative": "Combustion called decomposition",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "blocked",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Process",
+      "evidence_scope": "Insufficient direct source support for this precise proposed boundary or binding in inspected source; research lead only, blocked pending targeted primary evidence.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "life-c12",
+      "name": "CellPart",
+      "category": "relationship",
+      "definition": "Cellular part-to-organism association under the chosen boundary.",
+      "parent": "imod:Relationship",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "life:Cell",
+        "target": "life:Organism",
+        "rationale": "Constitutive membership, not incidental host association."
+      },
+      "source_ids": [
+        "ORIGIN"
+      ],
+      "positive": "Plant cell in plant",
+      "negative": "Surface bacterium automatically host part",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Relationship",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "life-c13",
+      "name": "OrganPart",
+      "category": "relationship",
+      "definition": "Organ-to-organism bodily membership.",
+      "parent": "imod:Relationship",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "life:Organ",
+        "target": "life:Organism",
+        "rationale": "Body part, not ownership."
+      },
+      "source_ids": [
+        "CELL"
+      ],
+      "positive": "Root belonging to plant",
+      "negative": "Root merely adjacent",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Relationship",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "life-c14",
+      "name": "ParentOf",
+      "category": "relationship",
+      "definition": "Biological progenitor-to-offspring relation under specified reproductive mode.",
+      "parent": "imod:Relationship",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "life:Organism",
+        "target": "life:Organism",
+        "rationale": "Biological generation; social parentage excluded."
+      },
+      "source_ids": [
+        "ORIGIN"
+      ],
+      "positive": "Identified progenitor",
+      "negative": "Caretaker",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Relationship",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "life-c15",
+      "name": "OrganismDeath",
+      "category": "event",
+      "definition": "Bounded cessation as a living individual under reviewed viability criteria.",
+      "parent": "imod:Event",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "Viability evidence",
+        "structural integrity"
+      ],
+      "bindings": {
+        "affects": [
+          "life:Organism"
+        ],
+        "rationale": "Living reading ends; material may persist; no implemented cascade to dependent relations."
+      },
+      "source_ids": [
+        "NPS"
+      ],
+      "positive": "Supported organism death",
+      "negative": "Missed survey",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Event",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "life-c16",
+      "name": "Germination",
+      "category": "event",
+      "definition": "Bounded onset of seed growth under a botanical recognition criterion.",
+      "parent": "imod:Event",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "Seed water content",
+        "embryo viability"
+      ],
+      "bindings": {
+        "affects": [
+          "life:Seed"
+        ],
+        "rationale": "Individual identity continuity unresolved; no automatic creates organism."
+      },
+      "source_ids": [
+        "NPS"
+      ],
+      "positive": "Observed emergence by criterion",
+      "negative": "Dormant seed present",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Event",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "life-c17",
+      "name": "BodilySeparation",
+      "category": "event",
+      "definition": "Bounded detachment of a bodily part.",
+      "parent": "imod:Event",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "Attachment integrity"
+      ],
+      "bindings": {
+        "affects": [
+          "life:OrganPart"
+        ],
+        "rationale": "Ends specific attachment; does not necessarily produce a new organism."
+      },
+      "source_ids": [
+        "CELL"
+      ],
+      "positive": "Documented detachment",
+      "negative": "Attached branch moves",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "blocked",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Event",
+      "evidence_scope": "Insufficient direct source support for this precise proposed boundary or binding in inspected source; research lead only, blocked pending targeted primary evidence.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "life-c18",
+      "name": "LivingMass",
+      "category": "quality",
+      "definition": "Mass attributed to a delimited living individual or part.",
+      "parent": "imod:Mass",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "target": "life:Organism,life:Tissue,life:Organ",
+        "rationale": "Dead material excluded; wet/dry conventions in model."
+      },
+      "source_ids": [
+        "CELL"
+      ],
+      "positive": "Defined living pool",
+      "negative": "Undifferentiated soil mass",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Mass",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    }
+  ],
+  "questions": [
+    {
+      "id": "life-q01",
+      "text": "Which living individuals survived in the burned patch, rather than merely leaving detectable remains?",
+      "source_ids": [
+        "NPS"
+      ],
+      "expression": "presence of life:Organism",
+      "expected_type": "quality",
+      "positive": "Living shoot inspected after fire",
+      "negative": "DNA from a dead stem",
+      "draft_order": 1,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "life-c01"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Living shoot inspected after fire; excludes DNA from a dead stem. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Living shoot inspected after fire; excludes DNA from a dead stem. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
+    },
+    {
+      "id": "life-q02",
+      "text": "Is the green patch one organism or several independently rooted individuals?",
+      "source_ids": [
+        "CELL"
+      ],
+      "expression": "count of life:Organism",
+      "expected_type": "quality",
+      "positive": "Separately bounded individuals",
+      "negative": "Count of green pixels",
+      "draft_order": 2,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "life-c01"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Separately bounded individuals; excludes Count of green pixels. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Separately bounded individuals; excludes Count of green pixels. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
+    },
+    {
+      "id": "life-q03",
+      "text": "How much living material belongs to this organism?",
+      "source_ids": [
+        "CELL"
+      ],
+      "expression": "life:LivingMass of life:Organism",
+      "expected_type": "quality",
+      "positive": "Mass assigned to a bounded organism",
+      "negative": "Dry soil mass",
+      "draft_order": 3,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "life-c18"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Mass assigned to a bounded organism; excludes Dry soil mass. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Mass assigned to a bounded organism; excludes Dry soil mass. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "life-q04",
+      "text": "Does the sample contain intact cells or only fragments?",
+      "source_ids": [
+        "CELL"
+      ],
+      "expression": "presence of life:Cell",
+      "expected_type": "quality",
+      "positive": "Membrane-bounded cell",
+      "negative": "Free DNA fragment",
+      "draft_order": 4,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "life-c02"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Membrane-bounded cell; excludes Free DNA fragment. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Membrane-bounded cell; excludes Free DNA fragment. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
+    },
+    {
+      "id": "life-q05",
+      "text": "Which tissue in the plant was damaged by heat?",
+      "source_ids": [
+        "NPS"
+      ],
+      "expression": "life:Tissue",
+      "expected_type": "subject",
+      "positive": "Bark tissue with assessed damage",
+      "negative": "Fire perimeter",
+      "draft_order": 5,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "life-c03"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Bark tissue with assessed damage; excludes Fire perimeter. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Bark tissue with assessed damage; excludes Fire perimeter. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "life-q06",
+      "text": "Which organ is still part of the same surviving individual?",
+      "source_ids": [
+        "CELL"
+      ],
+      "expression": "life:OrganPart linking life:Organ to life:Organism",
+      "expected_type": "relationship",
+      "positive": "Root belonging to this plant",
+      "negative": "Nearby unrelated root",
+      "draft_order": 6,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "life-c13"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Root belonging to this plant; excludes Nearby unrelated root. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Root belonging to this plant; excludes Nearby unrelated root. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "life-q07",
+      "text": "Are seeds present after the fire, and does presence establish that they can germinate?",
+      "source_ids": [
+        "NPS"
+      ],
+      "expression": "presence of life:Seed",
+      "expected_type": "quality",
+      "positive": "Identified seed; viability separate",
+      "negative": "Assuming every seed viable",
+      "draft_order": 7,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "life-c05"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Identified seed; viability separate; excludes Assuming every seed viable. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Identified seed; viability separate; excludes Assuming every seed viable. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
+    },
+    {
+      "id": "life-q08",
+      "text": "Did an organism die during the fire, or has it simply not been detected?",
+      "source_ids": [
+        "NPS"
+      ],
+      "expression": "life:OrganismDeath",
+      "expected_type": "event",
+      "positive": "Bounded loss of viable organism",
+      "negative": "Missed survey",
+      "draft_order": 8,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "life-c15"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Bounded loss of viable organism; excludes Missed survey. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Bounded loss of viable organism; excludes Missed survey. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "life-q09",
+      "text": "Was a new individual produced by division or was existing biomass merely enlarged?",
+      "source_ids": [
+        "CELL"
+      ],
+      "expression": "life:Reproduction",
+      "expected_type": "process",
+      "positive": "Production of separately individuated offspring",
+      "negative": "Growth of one pre-existing cell",
+      "draft_order": 9,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "life-c08"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Production of separately individuated offspring; excludes Growth of one pre-existing cell. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Production of separately individuated offspring; excludes Growth of one pre-existing cell. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "life-q10",
+      "text": "How did the size of the surviving plant change while it regrew?",
+      "source_ids": [
+        "NPS"
+      ],
+      "expression": "change in life:LivingMass of life:Organism",
+      "expected_type": "process",
+      "positive": "Mass change attributed to growth occurrent",
+      "negative": "Missing resurvey interpreted as zero",
+      "draft_order": 10,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "life-c07"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Mass change attributed to growth occurrent; excludes Missing resurvey interpreted as zero. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Mass change attributed to growth occurrent; excludes Missing resurvey interpreted as zero. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "process",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
+    },
+    {
+      "id": "life-q11",
+      "text": "Is a charred standing trunk still a living tree or now a biological remnant?",
+      "source_ids": [
+        "NPS"
+      ],
+      "expression": "life:BiologicalRemnant",
+      "expected_type": "subject",
+      "positive": "Dead snag retains material continuity",
+      "negative": "Unburned live tree",
+      "draft_order": 11,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "life-c06"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Dead snag retains material continuity; excludes Unburned live tree. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Dead snag retains material continuity; excludes Unburned live tree. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "subject",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "life-q12",
+      "text": "Which individual is the biological parent of this seedling?",
+      "source_ids": [
+        "CELL"
+      ],
+      "expression": "life:ParentOf linking life:Organism to life:Organism",
+      "expected_type": "relationship",
+      "positive": "Reproductive lineage evidence",
+      "negative": "Nearest adult assumed parent",
+      "draft_order": 12,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "life-c14"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Reproductive lineage evidence; excludes Nearest adult assumed parent. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Reproductive lineage evidence; excludes Nearest adult assumed parent. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "life-q13",
+      "text": "Did a seed germinate, rather than arrive as an already growing seedling?",
+      "source_ids": [
+        "NPS"
+      ],
+      "expression": "life:Germination",
+      "expected_type": "event",
+      "positive": "Bounded seed-to-seedling transition",
+      "negative": "Transplanted seedling",
+      "draft_order": 13,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "life-c16"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Bounded seed-to-seedling transition; excludes Transplanted seedling. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Bounded seed-to-seedling transition; excludes Transplanted seedling. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "life-q14",
+      "text": "Which organisms contain these cells without assuming the cells share one genome?",
+      "source_ids": [
+        "CELL"
+      ],
+      "expression": "life:CellPart linking life:Cell to life:Organism",
+      "expected_type": "relationship",
+      "positive": "Cellular part of organism",
+      "negative": "Surface-associated bacterium automatically called host part",
+      "draft_order": 14,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "life-c12"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Cellular part of organism; excludes Surface-associated bacterium automatically called host part. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Cellular part of organism; excludes Surface-associated bacterium automatically called host part. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "life-q15",
+      "text": "Can the evidence distinguish dormancy from death?",
+      "source_ids": [
+        "CELL"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "positive": "Repeated viability evidence under specified protocol",
+      "negative": "No activity detected once",
+      "draft_order": 15,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "life-c15"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate.",
+        "Explicit gap: explicit evidence gap; unavailable evidence does not imply false/zero/unchanged."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "expected_interpretation": "Repeated viability evidence under specified protocol; excludes No activity detected once. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Repeated viability evidence under specified protocol; excludes No activity detected once. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    }
+  ],
+  "quality_summaries": [
+    {
+      "quality": "Viability-related physiological evidence",
+      "proposed_summary": "Dormant versus nonviable",
+      "basis": "Nominal, assay/species/time dependent; no universal threshold. Nondetection is evidence state, not Dead predicate.",
+      "status": "provisional; no declaration"
+    },
+    {
+      "quality": "LivingMass",
+      "proposed_summary": "Small/large",
+      "basis": "Ordered relative to kind and comparison group; overlapping uncertainty, no cutpoint proposed.",
+      "status": "provisional; no declaration"
+    }
+  ],
+  "ambiguities": [
+    {
+      "id": "life-a01",
+      "issue": "Physical biological bearers and life-history occurrences, provisionally distinct from explanatory biology. Old agent Individual and SocialGroup are not conserved by default. Consolidation remains open.",
+      "decision": "Human category/namespace consolidation required; legacy compatibility is not sufficient reason to retain meanings.",
+      "blocking": true
+    },
+    {
+      "id": "life-a02",
+      "issue": "Many relevant parameter qualities and participant kinds lack current declarations.",
+      "decision": "Open upstream issues. Parameters here describe relevant qualities, not ontology model inputs or equations.",
+      "blocking": true
+    },
+    {
+      "id": "life-a03",
+      "issue": "Bounded event versus ongoing process reading and object continuity.",
+      "decision": "Review delimitation and identity; separate change resolution requires occurrent, never no-change inference.",
+      "blocking": true
+    },
+    {
+      "id": "life-a05",
+      "issue": "Generic root inheritance is not an additional scientific specialization.",
+      "decision": "Keep foundational type reference separate from selected parent; seek meaningful imported context or explicit user-reviewed relaxation upstream. No redundant is declaration.",
+      "blocking": true
+    }
+  ],
+  "coverage": {
+    "category_counts": {
+      "subject": 6,
+      "process": 5,
+      "relationship": 3,
+      "event": 3,
+      "quality": 1
+    },
+    "category_shortfalls": {
+      "relationship": 2,
+      "event": 2
+    },
+    "question_count": 15,
+    "weak_source_areas": "No expert interviews, systematic synthesis or assay-standard review. Introductory sources motivate vocabulary but do not establish all operational boundaries.",
+    "incidence": {
+      "life-c01": [
+        "life-q01",
+        "life-q02"
+      ],
+      "life-c02": [
+        "life-q04"
+      ],
+      "life-c03": [
+        "life-q05"
+      ],
+      "life-c04": [],
+      "life-c05": [
+        "life-q07"
+      ],
+      "life-c06": [
+        "life-q11"
+      ],
+      "life-c07": [
+        "life-q10"
+      ],
+      "life-c08": [
+        "life-q09"
+      ],
+      "life-c09": [],
+      "life-c10": [],
+      "life-c11": [],
+      "life-c12": [
+        "life-q14"
+      ],
+      "life-c13": [
+        "life-q06"
+      ],
+      "life-c14": [
+        "life-q12"
+      ],
+      "life-c15": [
+        "life-q08",
+        "life-q15"
+      ],
+      "life-c16": [
+        "life-q13"
+      ],
+      "life-c17": [],
+      "life-c18": [
+        "life-q03"
+      ]
+    },
+    "unused_candidates": [
+      "life-c04",
+      "life-c09",
+      "life-c10",
+      "life-c11",
+      "life-c17"
+    ],
+    "independent_holdout": "None. Source-first order is retained; author had prior domain knowledge. Fresh expert probes required.",
+    "explored_candidates": 18,
+    "blocked_candidates": 18,
+    "scientifically_reviewed_candidates": 0,
+    "semantically_ready_candidates": 0,
+    "count_interpretation": "Category counts are explored records, not validated coverage. The current imported-derivation gate blocks all records; conceptual scientific plausibility is separately recorded."
+  },
+  "validation": {
+    "source_review": "Retrieved agency explanations and authored textbook references; not human domain review.",
+    "grammar": "untested by dossier author",
+    "adaptation": "not run on draft inventory",
+    "semantic": "unapproved; root reference existence is not valid scientific specialization",
+    "model_execution": "not run; unresolved is open-world unknown",
+    "consequence_runtime": "not implemented; syntax-only implication/detection",
+    "approval": "none",
+    "import_baseline": "imod master 608bef150ced0a109db98a5aad64ba4461beaa54; src files inspected in sandbox; current dossier does not change those imports",
+    "alignment_rule": "Generic root parent values record foundational type context only. Never serialize them as redundant explicit is aliases. User-specific imported-domain derivation remains blocked; context pack permits keyword inheritance but this task asks for stronger context.",
+    "human_approval": "none; source/ontology review outstanding",
+    "type_context_warning": "Reference existence and grammar acceptance do not establish scientific specialization."
+  },
+  "invalid_probes": [
+    {
+      "id": "life-negative01",
+      "expression": "presence of life:Organism",
+      "mutation": "Treat absence of model/evidence as false, zero or unchanged.",
+      "expected": "Reject semantic interpretation; open-world unknown. Grammar may accept unchanged expression.",
+      "execution": "not run"
+    },
+    {
+      "id": "life-negative02",
+      "expression": "life:CellPart linking imod:Mass to imod:Mass",
+      "expected": "Reject quality endpoints for substantial relationship. Syntax may still pass.",
+      "execution": "not run"
+    }
+  ]
+}

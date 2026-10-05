@@ -1,0 +1,1397 @@
+{
+  "dossier_version": "0.1",
+  "domain": "genetics",
+  "status": "draft-requires-human-review",
+  "scope": "Physical genomic bearers, inheritance and molecular occurrences. Physical segment, information identity and function are distinct readings. Clinical classification and sequence databases are outside this gateway.",
+  "imports": [
+    {
+      "namespace": "imod",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+    },
+    {
+      "namespace": "life",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "2e54cea39b2e65ed927da5bc371c2bca3de297009b9d77943dfc00a127fd45e0"
+    },
+    {
+      "namespace": "biology",
+      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
+      "review_context_sha256": "35da924d96576350dcfacc3e2c0fceb4aeac817cdd44a091068e415ebbccc018"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ALLELE",
+      "title": "NHGRI: Allele",
+      "url": "https://www.genome.gov/genetics-glossary/Allele",
+      "locator": "Definition and narration",
+      "scope": "Agency explanation; exact ontological specialization is proposed here, not endorsed",
+      "status": "retrieved 2026-10-03; author synthesis, no expert endorsement"
+    },
+    {
+      "id": "CHROMOSOME",
+      "title": "NHGRI: Chromosome",
+      "url": "https://www.genome.gov/genetics-glossary/Chromosome",
+      "locator": "Definition and narration",
+      "scope": "Agency explanation; exact ontological specialization is proposed here, not endorsed",
+      "status": "retrieved 2026-10-03; author synthesis, no expert endorsement"
+    },
+    {
+      "id": "DNA",
+      "title": "NHGRI: Deoxyribonucleic-Acid-DNA",
+      "url": "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid-DNA",
+      "locator": "Definition and narration",
+      "scope": "Agency explanation; exact ontological specialization is proposed here, not endorsed",
+      "status": "retrieved 2026-10-03; author synthesis, no expert endorsement"
+    },
+    {
+      "id": "EXPRESSION",
+      "title": "NHGRI: Gene-Expression",
+      "url": "https://www.genome.gov/genetics-glossary/Gene-Expression",
+      "locator": "Definition and narration",
+      "scope": "Agency explanation; exact ontological specialization is proposed here, not endorsed",
+      "status": "retrieved 2026-10-03; author synthesis, no expert endorsement"
+    },
+    {
+      "id": "GENE",
+      "title": "NHGRI: Gene",
+      "url": "https://www.genome.gov/genetics-glossary/Gene",
+      "locator": "Definition and narration",
+      "scope": "Agency explanation; exact ontological specialization is proposed here, not endorsed",
+      "status": "retrieved 2026-10-03; author synthesis, no expert endorsement"
+    },
+    {
+      "id": "GLOSSARY",
+      "title": "NHGRI: Talking Glossary",
+      "url": "https://www.genome.gov/genetics-glossary",
+      "locator": "Deletion; Duplication; Genome; gene-environment interaction",
+      "scope": "Introductory scope; human diploidy not universal",
+      "status": "retrieved 2026-10-03; author synthesis, no expert endorsement"
+    },
+    {
+      "id": "MEIOSIS",
+      "title": "NHGRI: Meiosis",
+      "url": "https://www.genome.gov/genetics-glossary/Meiosis",
+      "locator": "Definition and narration",
+      "scope": "Agency explanation; exact ontological specialization is proposed here, not endorsed",
+      "status": "retrieved 2026-10-03; author synthesis, no expert endorsement"
+    },
+    {
+      "id": "MUTATION",
+      "title": "NHGRI: Mutation",
+      "url": "https://www.genome.gov/genetics-glossary/Mutation",
+      "locator": "Definition and narration",
+      "scope": "Agency explanation; exact ontological specialization is proposed here, not endorsed",
+      "status": "retrieved 2026-10-03; author synthesis, no expert endorsement"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "genetics-c01",
+      "name": "DNAMolecule",
+      "category": "subject",
+      "definition": "Physically individuated DNA molecule; its record is a different entity.",
+      "parent": "imod:Subject",
+      "parent_status": "blocked",
+      "qualities": [
+        "DNASequence",
+        "molecular length"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "DNA"
+      ],
+      "positive": "Physical DNA molecule",
+      "negative": "Sequence file",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Subject",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c02",
+      "name": "GeneSegment",
+      "category": "subject",
+      "definition": "Physical genomic segment under an explicitly selected functional gene delimitation.",
+      "parent": "imod:Subject",
+      "parent_status": "blocked",
+      "qualities": [
+        "DNASequence",
+        "segment length"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "GENE"
+      ],
+      "positive": "Segment encoding functional RNA",
+      "negative": "Only protein-coding segments admitted",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Subject",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c03",
+      "name": "Chromosome",
+      "category": "subject",
+      "definition": "Physically delimited chromosome in an organism/cell context.",
+      "parent": "imod:Subject",
+      "parent_status": "blocked",
+      "qualities": [
+        "DNASequence",
+        "copy number"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "CHROMOSOME"
+      ],
+      "positive": "Identified chromosome",
+      "negative": "46 assumed universal",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Subject",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c04",
+      "name": "RNAMolecule",
+      "category": "subject",
+      "definition": "Physical RNA product distinguishable from sequence or functional identity.",
+      "parent": "imod:Subject",
+      "parent_status": "blocked",
+      "qualities": [
+        "Sequence",
+        "pool abundance"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "EXPRESSION"
+      ],
+      "positive": "Transcript molecule",
+      "negative": "RNA identifier",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Subject",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c05",
+      "name": "Gamete",
+      "category": "subject",
+      "definition": "Reproductive cell participating in a specified sexual life cycle.",
+      "parent": "life:Cell",
+      "parent_status": "blocked",
+      "qualities": [
+        "Chromosome count",
+        "viability"
+      ],
+      "parameters": [],
+      "bindings": {},
+      "source_ids": [
+        "MEIOSIS"
+      ],
+      "positive": "Egg in appropriate life cycle",
+      "negative": "All reproduction forced into human pattern",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "UPSTREAM GAP: missing imported life parent or unresolved category",
+      "scientific_meaning_status": "blocked",
+      "parent_role": "proposed meaningful domain specialization, not yet available/validated",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c06",
+      "name": "DNAReplication",
+      "category": "process",
+      "definition": "Production of DNA molecules using DNA templates.",
+      "parent": "imod:Process",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "Template availability",
+        "substrate availability"
+      ],
+      "bindings": {
+        "creates": [
+          "genetics:DNAMolecule"
+        ],
+        "rationale": "No guarantee of error-free copying."
+      },
+      "source_ids": [
+        "GLOSSARY"
+      ],
+      "positive": "Template copying",
+      "negative": "File duplication",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Process",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c07",
+      "name": "Transcription",
+      "category": "process",
+      "definition": "Production of RNA using DNA template in a scoped cellular setting.",
+      "parent": "imod:Process",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "Template activity",
+        "transcript abundance"
+      ],
+      "bindings": {
+        "creates": [
+          "genetics:RNAMolecule"
+        ],
+        "rationale": "Includes noncoding transcripts; not universal protein output."
+      },
+      "source_ids": [
+        "EXPRESSION"
+      ],
+      "positive": "RNA transcription",
+      "negative": "DNA replication",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Process",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c08",
+      "name": "GeneExpression",
+      "category": "process",
+      "definition": "Use of gene-associated information in producing functional biological output.",
+      "parent": "imod:Process",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "TranscriptAbundance",
+        "product activity"
+      ],
+      "bindings": {
+        "affects": [
+          "genetics:TranscriptAbundance"
+        ],
+        "rationale": "Transcript assay is one observation route, not equivalence with function."
+      },
+      "source_ids": [
+        "EXPRESSION"
+      ],
+      "positive": "Observed output",
+      "negative": "Gene presence alone",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Process",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c09",
+      "name": "MeioticSegregation",
+      "category": "process",
+      "definition": "Chromosome allocation during meiotic reproductive sequence.",
+      "parent": "imod:Process",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "Chromosome copy number",
+        "segregation state"
+      ],
+      "bindings": {
+        "affects": [
+          "genetics:Chromosome"
+        ],
+        "rationale": "Life-cycle scoped; gamete numerical output not universalized."
+      },
+      "source_ids": [
+        "MEIOSIS"
+      ],
+      "positive": "Reductional segregation",
+      "negative": "Somatic copying",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Process",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c10",
+      "name": "DNARepair",
+      "category": "process",
+      "definition": "Biological processing or restoration of damaged DNA in a specified pathway.",
+      "parent": "imod:Process",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "Damage extent",
+        "template integrity"
+      ],
+      "bindings": {
+        "affects": [
+          "genetics:DNASequence"
+        ],
+        "rationale": "Potential changes; no guarantee of exact original restoration."
+      },
+      "source_ids": [
+        "MUTATION"
+      ],
+      "positive": "Repair processing",
+      "negative": "Computational missing-sequence fill",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Process",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c11",
+      "name": "GenePart",
+      "category": "relationship",
+      "definition": "Physical gene-segment membership in a DNA molecule.",
+      "parent": "imod:Relationship",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "genetics:GeneSegment",
+        "target": "genetics:DNAMolecule",
+        "rationale": "Physical parthood, not database containment."
+      },
+      "source_ids": [
+        "GENE"
+      ],
+      "positive": "Segment on molecule",
+      "negative": "Record in database",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Relationship",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c12",
+      "name": "TemplateFor",
+      "category": "relationship",
+      "definition": "DNA molecule serving as template for a particular RNA product.",
+      "parent": "imod:Relationship",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "genetics:DNAMolecule",
+        "target": "genetics:RNAMolecule",
+        "rationale": "Transcriptional provenance required; similarity insufficient."
+      },
+      "source_ids": [
+        "EXPRESSION"
+      ],
+      "positive": "Supported template product",
+      "negative": "Matching strings",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Relationship",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c13",
+      "name": "ChromosomeInCell",
+      "category": "relationship",
+      "definition": "Physical chromosome membership in a cell.",
+      "parent": "imod:Relationship",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "genetics:Chromosome",
+        "target": "life:Cell",
+        "rationale": "No universal nuclear containment assumption."
+      },
+      "source_ids": [
+        "CHROMOSOME"
+      ],
+      "positive": "Bacterial chromosome",
+      "negative": "Sample accession",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Relationship",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c14",
+      "name": "InheritedFrom",
+      "category": "relationship",
+      "definition": "Descendant-to-progenitor genetic contribution relation.",
+      "parent": "imod:Relationship",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "life:Organism",
+        "target": "life:Organism",
+        "rationale": "Transmission evidence, germline scope explicit; not social descent."
+      },
+      "source_ids": [
+        "MUTATION"
+      ],
+      "positive": "Supported transmission",
+      "negative": "Somatic variant assumed inherited",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Relationship",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c15",
+      "name": "HomologousSegment",
+      "category": "relationship",
+      "definition": "Sequence-segment historical common-descent relation.",
+      "parent": null,
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": "genetics:GeneSegment",
+        "target": "genetics:GeneSegment",
+        "rationale": "Historical hypothesis; source detail inadequate, not similarity-as-descent."
+      },
+      "source_ids": [
+        "GLOSSARY"
+      ],
+      "positive": "Supported ancestry",
+      "negative": "Sequence similarity alone",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "UPSTREAM GAP: missing imported life parent or unresolved category",
+      "scientific_meaning_status": "blocked",
+      "parent_role": "proposed meaningful domain specialization, not yet available/validated",
+      "category_issue": "Scientifically symmetric reading; bond versus directed relationship unresolved. Endpoint labels do not establish direction.",
+      "evidence_scope": "Insufficient direct source support for this precise proposed boundary or binding in inspected source; research lead only, blocked pending targeted primary evidence.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c16",
+      "name": "Mutation",
+      "category": "event",
+      "definition": "Bounded DNA sequence alteration in a specified molecular lineage.",
+      "parent": "imod:Event",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "DNASequence"
+      ],
+      "bindings": {
+        "affects": [
+          "genetics:DNASequence"
+        ],
+        "rationale": "Occurrence distinguished from variant identity and health effect."
+      },
+      "source_ids": [
+        "MUTATION"
+      ],
+      "positive": "Lineage sequence alteration",
+      "negative": "Different samples alone",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Event",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c17",
+      "name": "Deletion",
+      "category": "event",
+      "definition": "Loss of DNA segment in documented lineage relative to baseline.",
+      "parent": "imod:Event",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "DNASequence",
+        "segment copy number"
+      ],
+      "bindings": {
+        "affects": [
+          "genetics:DNASequence"
+        ],
+        "rationale": "Occurrence distinguished from missing assay coverage."
+      },
+      "source_ids": [
+        "GLOSSARY"
+      ],
+      "positive": "Supported segment loss",
+      "negative": "Unsequenced interval",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Event",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c18",
+      "name": "Duplication",
+      "category": "event",
+      "definition": "Additional segment copy arising in documented lineage.",
+      "parent": "imod:Event",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "Copy number",
+        "DNASequence"
+      ],
+      "bindings": {
+        "affects": [
+          "genetics:DNASequence"
+        ],
+        "rationale": "Copy change does not entail expression change."
+      },
+      "source_ids": [
+        "GLOSSARY"
+      ],
+      "positive": "Supported extra segment",
+      "negative": "PCR artifact",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Event",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c19",
+      "name": "Fertilization",
+      "category": "event",
+      "definition": "Bounded union of gametic contributions in a declared reproductive system.",
+      "parent": "imod:Event",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "Gamete viability",
+        "chromosome complement"
+      ],
+      "bindings": {
+        "affects": [
+          "genetics:Gamete"
+        ],
+        "creates": [
+          "life:Cell"
+        ],
+        "rationale": "Zygotic-cell formation; organism identity boundary unresolved."
+      },
+      "source_ids": [
+        "MEIOSIS"
+      ],
+      "positive": "Gametic fusion",
+      "negative": "Gamete contact",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Event",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c20",
+      "name": "ChromosomeNondisjunction",
+      "category": "event",
+      "definition": "Failure of expected chromosome separation in a bounded division.",
+      "parent": "imod:Event",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [
+        "Chromosome allocation"
+      ],
+      "bindings": {
+        "affects": [
+          "genetics:Chromosome"
+        ],
+        "rationale": "Not automatically a syndrome; detailed source review pending."
+      },
+      "source_ids": [
+        "GLOSSARY"
+      ],
+      "positive": "Documented failed segregation",
+      "negative": "Any chromosome-number difference",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "blocked",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Event",
+      "evidence_scope": "Insufficient direct source support for this precise proposed boundary or binding in inspected source; research lead only, blocked pending targeted primary evidence.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c21",
+      "name": "DNASequence",
+      "category": "quality",
+      "definition": "Ordered nucleotide composition of specified physical DNA bearer.",
+      "parent": "imod:Quality",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "target": "genetics:DNAMolecule,genetics:GeneSegment",
+        "rationale": "Structured value representation belongs to core/model discussion."
+      },
+      "source_ids": [
+        "DNA"
+      ],
+      "positive": "Bearer-linked sequence",
+      "negative": "Unattached string",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Quality",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "implicit_type_context_not_explicit_is",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    },
+    {
+      "id": "genetics-c22",
+      "name": "TranscriptAbundance",
+      "category": "quality",
+      "definition": "Transcript number for a specified gene and cellular bearer.",
+      "parent": "imod:Numerosity",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "target": "life:Cell",
+        "rationale": "Normalization and gene identity required; not identical to protein function."
+      },
+      "source_ids": [
+        "EXPRESSION"
+      ],
+      "positive": "Gene-specific transcript count",
+      "negative": "Generic RNA quantity",
+      "status": "blocked",
+      "source_confidence": "general setting supported; precise operational boundary proposed and unapproved",
+      "declaration_status": "not declared; no executable file",
+      "parent_reference_evidence": "src/imod.kwv category exists; scientific specialization unapproved; generic root alias must not merely restate keyword inheritance. User-required meaningful imported derivation remains an upstream design issue.",
+      "scientific_meaning_status": "provisional",
+      "parent_role": "foundational_type_context_only; not a selected explicit is axiom",
+      "implicit_type_inheritance": "imod:Numerosity",
+      "evidence_scope": "Source supports broad disciplinary meaning or research lead; our individuation, category and binding choices are explicit synthesis requiring claim-level expert review.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+    }
+  ],
+  "questions": [
+    {
+      "id": "genetics-q01",
+      "text": "What DNA sequence is present in this sampled molecule?",
+      "source_ids": [
+        "DNA"
+      ],
+      "expression": "genetics:DNASequence of genetics:DNAMolecule",
+      "expected_type": "quality",
+      "positive": "Sequence of an identified molecular bearer",
+      "negative": "Database identifier itself",
+      "draft_order": 1,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "genetics-c21"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Sequence of an identified molecular bearer; excludes Database identifier itself. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Sequence of an identified molecular bearer; excludes Database identifier itself. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "genetics-q02",
+      "text": "Are two versions found at the same genomic location?",
+      "source_ids": [
+        "ALLELE"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "positive": "Alleles aligned to one declared locus",
+      "negative": "Variants at unrelated loci",
+      "draft_order": 2,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate.",
+        "Explicit gap: identity/reference gap; unavailable evidence does not imply false/zero/unchanged.",
+        "UPSTREAM GAP: AllelicIdentity identity/reference distinction not established; no local workaround."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "expected_interpretation": "Alleles aligned to one declared locus; excludes Variants at unrelated loci. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Alleles aligned to one declared locus; excludes Variants at unrelated loci. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "genetics-q03",
+      "text": "How many chromosomes are present in this cell?",
+      "source_ids": [
+        "CHROMOSOME"
+      ],
+      "expression": "count of genetics:Chromosome contained in life:Cell",
+      "expected_type": "quality",
+      "positive": "Chromosome count in specified cell",
+      "negative": "Human count assumed for all species",
+      "draft_order": 3,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "genetics-c03"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Chromosome count in specified cell; excludes Human count assumed for all species. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Chromosome count in specified cell; excludes Human count assumed for all species. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
+    },
+    {
+      "id": "genetics-q04",
+      "text": "Does this gene produce a functional RNA rather than a protein?",
+      "source_ids": [
+        "GENE"
+      ],
+      "expression": "genetics:Transcription",
+      "expected_type": "process",
+      "positive": "Noncoding functional RNA transcript",
+      "negative": "All genes forced protein coding",
+      "draft_order": 4,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "genetics-c07"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Noncoding functional RNA transcript; excludes All genes forced protein coding. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Noncoding functional RNA transcript; excludes All genes forced protein coding. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "genetics-q05",
+      "text": "Which cells are expressing a particular gene after heat exposure?",
+      "source_ids": [
+        "EXPRESSION"
+      ],
+      "expression": "genetics:TranscriptAbundance of life:Cell",
+      "expected_type": "quality",
+      "positive": "Gene-specific transcripts and cell context",
+      "negative": "Expression inferred solely from DNA presence",
+      "draft_order": 5,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "genetics-c22"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Gene-specific transcripts and cell context; excludes Expression inferred solely from DNA presence. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Gene-specific transcripts and cell context; excludes Expression inferred solely from DNA presence. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "genetics-q06",
+      "text": "Did a DNA sequence change in this lineage?",
+      "source_ids": [
+        "MUTATION"
+      ],
+      "expression": "genetics:Mutation",
+      "expected_type": "event",
+      "positive": "Bounded sequence alteration in lineage",
+      "negative": "Different samples with no lineage evidence",
+      "draft_order": 6,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "genetics-c16"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Bounded sequence alteration in lineage; excludes Different samples with no lineage evidence. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Bounded sequence alteration in lineage; excludes Different samples with no lineage evidence. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "genetics-q07",
+      "text": "Can the detected variant be inherited by offspring?",
+      "source_ids": [
+        "MUTATION"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "positive": "Specified reproductive lineage with germline evidence",
+      "negative": "Somatic variant assumed inherited",
+      "draft_order": 7,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate.",
+        "Explicit gap: germline/lineage gap; unavailable evidence does not imply false/zero/unchanged.",
+        "UPSTREAM GAP: Inheritance identity/reference distinction not established; no local workaround."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "expected_interpretation": "Specified reproductive lineage with germline evidence; excludes Somatic variant assumed inherited. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Specified reproductive lineage with germline evidence; excludes Somatic variant assumed inherited. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "genetics-q08",
+      "text": "Has a chromosome segment been copied again?",
+      "source_ids": [
+        "GLOSSARY"
+      ],
+      "expression": "genetics:Duplication",
+      "expected_type": "event",
+      "positive": "Extra segment copy relative to baseline",
+      "negative": "Higher sequencing coverage alone",
+      "draft_order": 8,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "genetics-c18"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Extra segment copy relative to baseline; excludes Higher sequencing coverage alone. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Extra segment copy relative to baseline; excludes Higher sequencing coverage alone. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "genetics-q09",
+      "text": "Has a segment been lost from a chromosome?",
+      "source_ids": [
+        "GLOSSARY"
+      ],
+      "expression": "genetics:Deletion",
+      "expected_type": "event",
+      "positive": "Documented segment loss",
+      "negative": "Unsequenced interval",
+      "draft_order": 9,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "genetics-c17"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Documented segment loss; excludes Unsequenced interval. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Documented segment loss; excludes Unsequenced interval. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "genetics-q10",
+      "text": "Which DNA molecule contains this gene segment?",
+      "source_ids": [
+        "GENE"
+      ],
+      "expression": "genetics:GenePart linking genetics:GeneSegment to genetics:DNAMolecule",
+      "expected_type": "relationship",
+      "positive": "Physical segment on identified molecule",
+      "negative": "Information record contained in database",
+      "draft_order": 10,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "genetics-c11"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Physical segment on identified molecule; excludes Information record contained in database. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Physical segment on identified molecule; excludes Information record contained in database. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "relationship",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "genetics-q11",
+      "text": "Are chromosomes being segregated into gametes?",
+      "source_ids": [
+        "MEIOSIS"
+      ],
+      "expression": "genetics:MeioticSegregation",
+      "expected_type": "process",
+      "positive": "Reductional division in appropriate organism",
+      "negative": "Ordinary tissue growth",
+      "draft_order": 11,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "genetics-c09"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Reductional division in appropriate organism; excludes Ordinary tissue growth. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Reductional division in appropriate organism; excludes Ordinary tissue growth. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "process",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "genetics-q12",
+      "text": "Does a sequence similarity establish shared descent?",
+      "source_ids": [
+        "GLOSSARY"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "positive": "Independent ancestry evidence",
+      "negative": "Similarity automatically asserted homology",
+      "draft_order": 12,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate.",
+        "Explicit gap: historical hypothesis gap; unavailable evidence does not imply false/zero/unchanged.",
+        "UPSTREAM GAP: Homology identity/reference distinction not established; no local workaround."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "expected_interpretation": "Independent ancestry evidence; excludes Similarity automatically asserted homology. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Independent ancestry evidence; excludes Similarity automatically asserted homology. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "genetics-q13",
+      "text": "Did fertilization combine genetic contributions from the observed gametes?",
+      "source_ids": [
+        "MEIOSIS"
+      ],
+      "expression": "genetics:Fertilization",
+      "expected_type": "event",
+      "positive": "Fusion with lineage evidence",
+      "negative": "Two gametes merely adjacent",
+      "draft_order": 13,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "genetics-c19"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "expected_interpretation": "Fusion with lineage evidence; excludes Two gametes merely adjacent. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Fusion with lineage evidence; excludes Two gametes merely adjacent. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": "event",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "genetics-q14",
+      "text": "Would a gene expression difference alone explain survival after wildfire?",
+      "source_ids": [
+        "EXPRESSION"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "positive": "Expression comparison plus mechanism evidence",
+      "negative": "Association treated as sufficient explanation",
+      "draft_order": 14,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "genetics-c08"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate.",
+        "Explicit gap: causal model gap; unavailable evidence does not imply false/zero/unchanged."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "expected_interpretation": "Expression comparison plus mechanism evidence; excludes Association treated as sufficient explanation. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Expression comparison plus mechanism evidence; excludes Association treated as sufficient explanation. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "genetics-q15",
+      "text": "Is missing sequence information evidence that the gene is absent?",
+      "source_ids": [
+        "GENE"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "positive": "Adequate coverage and detection model needed",
+      "negative": "Missing record equated with gene deletion",
+      "draft_order": 15,
+      "provenance": "Source-led question pass, persisted before candidate inventory. Author has prior domain/context knowledge; not independent held-out validation.",
+      "concept_ids": [
+        "genetics-c02"
+      ],
+      "dependencies": [
+        "New names are dossier proposals, not installed declarations.",
+        "Imported participant and quality meanings; human category review; observations and models separate.",
+        "Explicit gap: negative evidence probe; unavailable evidence does not imply false/zero/unchanged."
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "untested",
+      "expected_interpretation": "Adequate coverage and detection model needed; excludes Missing record equated with gene deletion. Expression is a component observable where full question needs multiple resolutions.",
+      "current_checks": [
+        "Source/question/candidate incidence indexed; parser and adapter not yet run by dossier author."
+      ],
+      "narrative_intent": "Adequate coverage and detection model needed; excludes Missing record equated with gene deletion. Expression is a component observable where full question needs multiple resolutions.",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    }
+  ],
+  "quality_summaries": [
+    {
+      "quality": "Allelic composition at specified locus",
+      "proposed_summary": "Homozygous/heterozygous",
+      "basis": "Nominal sequence-comparison rule conditional on ploidy, locus and reliable calls. Missing calls are not a third biological genotype.",
+      "status": "provisional; no declaration"
+    },
+    {
+      "quality": "TranscriptAbundance",
+      "proposed_summary": "High/low expression",
+      "basis": "Ordered relative to cell type and reference; no universal cutpoint or beneficial/pathogenic inference.",
+      "status": "provisional; no declaration"
+    }
+  ],
+  "ambiguities": [
+    {
+      "id": "genetics-a01",
+      "issue": "Physical genomic bearers, inheritance and molecular occurrences. Physical segment, information identity and function are distinct readings. Clinical classification and sequence databases are outside this gateway.",
+      "decision": "Human category/namespace consolidation required; legacy compatibility is not sufficient reason to retain meanings.",
+      "blocking": true
+    },
+    {
+      "id": "genetics-a02",
+      "issue": "Many relevant parameter qualities and participant kinds lack current declarations.",
+      "decision": "Open upstream issues. Parameters here describe relevant qualities, not ontology model inputs or equations.",
+      "blocking": true
+    },
+    {
+      "id": "genetics-a03",
+      "issue": "Bounded event versus ongoing process reading and object continuity.",
+      "decision": "Review delimitation and identity; separate change resolution requires occurrent, never no-change inference.",
+      "blocking": true
+    },
+    {
+      "id": "genetics-a04",
+      "issue": "NHGRI explicitly notes debated gene definition and functional noncoding RNA genes.",
+      "decision": "Keep physical segment separate from information identity and function; no one-gene-one-protein axiom.",
+      "blocking": true
+    },
+    {
+      "id": "genetics-a05",
+      "issue": "Generic root inheritance is not an additional scientific specialization.",
+      "decision": "Keep foundational type reference separate from selected parent; seek meaningful imported context or explicit user-reviewed relaxation upstream. No redundant is declaration.",
+      "blocking": true
+    }
+  ],
+  "coverage": {
+    "category_counts": {
+      "subject": 5,
+      "process": 5,
+      "relationship": 5,
+      "event": 5,
+      "quality": 2
+    },
+    "category_shortfalls": {},
+    "question_count": 15,
+    "weak_source_areas": "No expert interviews, systematic synthesis or assay-standard review. Introductory sources motivate vocabulary but do not establish all operational boundaries.",
+    "incidence": {
+      "genetics-c01": [],
+      "genetics-c02": [
+        "genetics-q15"
+      ],
+      "genetics-c03": [
+        "genetics-q03"
+      ],
+      "genetics-c04": [],
+      "genetics-c05": [],
+      "genetics-c06": [],
+      "genetics-c07": [
+        "genetics-q04"
+      ],
+      "genetics-c08": [
+        "genetics-q14"
+      ],
+      "genetics-c09": [
+        "genetics-q11"
+      ],
+      "genetics-c10": [],
+      "genetics-c11": [
+        "genetics-q10"
+      ],
+      "genetics-c12": [],
+      "genetics-c13": [],
+      "genetics-c14": [],
+      "genetics-c15": [],
+      "genetics-c16": [
+        "genetics-q06"
+      ],
+      "genetics-c17": [
+        "genetics-q09"
+      ],
+      "genetics-c18": [
+        "genetics-q08"
+      ],
+      "genetics-c19": [
+        "genetics-q13"
+      ],
+      "genetics-c20": [],
+      "genetics-c21": [
+        "genetics-q01"
+      ],
+      "genetics-c22": [
+        "genetics-q05"
+      ]
+    },
+    "unused_candidates": [
+      "genetics-c01",
+      "genetics-c04",
+      "genetics-c05",
+      "genetics-c06",
+      "genetics-c10",
+      "genetics-c12",
+      "genetics-c13",
+      "genetics-c14",
+      "genetics-c15",
+      "genetics-c20"
+    ],
+    "independent_holdout": "None. Source-first order is retained; author had prior domain knowledge. Fresh expert probes required.",
+    "explored_candidates": 22,
+    "blocked_candidates": 22,
+    "scientifically_reviewed_candidates": 0,
+    "semantically_ready_candidates": 0,
+    "count_interpretation": "Category counts are explored records, not validated coverage. The current imported-derivation gate blocks all records; conceptual scientific plausibility is separately recorded."
+  },
+  "validation": {
+    "source_review": "Retrieved agency explanations and authored textbook references; not human domain review.",
+    "grammar": "untested by dossier author",
+    "adaptation": "not run on draft inventory",
+    "semantic": "unapproved; root reference existence is not valid scientific specialization",
+    "model_execution": "not run; unresolved is open-world unknown",
+    "consequence_runtime": "not implemented; syntax-only implication/detection",
+    "approval": "none",
+    "import_baseline": "imod master 608bef150ced0a109db98a5aad64ba4461beaa54; src files inspected in sandbox; current dossier does not change those imports",
+    "alignment_rule": "Generic root parent values record foundational type context only. Never serialize them as redundant explicit is aliases. User-specific imported-domain derivation remains blocked; context pack permits keyword inheritance but this task asks for stronger context.",
+    "human_approval": "none; source/ontology review outstanding",
+    "type_context_warning": "Reference existence and grammar acceptance do not establish scientific specialization."
+  },
+  "invalid_probes": [
+    {
+      "id": "genetics-negative01",
+      "expression": "genetics:DNASequence of genetics:DNAMolecule",
+      "mutation": "Treat absence of model/evidence as false, zero or unchanged.",
+      "expected": "Reject semantic interpretation; open-world unknown. Grammar may accept unchanged expression.",
+      "execution": "not run"
+    },
+    {
+      "id": "genetics-negative02",
+      "expression": "genetics:GenePart linking imod:Mass to imod:Mass",
+      "expected": "Reject quality endpoints for substantial relationship. Syntax may still pass.",
+      "execution": "not run"
+    }
+  ]
+}
