@@ -14,8 +14,13 @@ ontology chemistry
 	using imod, physical
 	in domain imod:Knowledge of imod:PhysicalSystem;
 
-abstract identity ChemicalSpecies
-	"Any chemical, elements or compounds, but not mixtures."
+abstract identity ChemicalIdentity
+	"Any chemical, element, compounds, or compound family, but not mixtures."
+	requires authority CHEM {
+        urn: "klab.authority.pubchem",
+        searchLimit: 10,
+        gifDepictions: true
+    }
 ;
 
 abstract identity Mixture
