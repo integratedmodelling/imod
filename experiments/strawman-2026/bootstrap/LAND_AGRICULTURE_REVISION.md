@@ -54,3 +54,23 @@ Observe a fire/cover-change occurrence separately from intended use, rights and 
 ## Current validation
 
 32 bounded tests pass, including eight boundary regression checks. All 213 supplied question expressions, five explicitly insufficient components and 12 reviewer-probe components pass the actual ObservableSequence parser; four controls behave as expected. Invalid category and missing namespace still parse, demonstrating that this is not semantic validation. The corpus has 135 full-formulation gaps. Local schema/reference/import-DAG and documentation checks pass. See land-agriculture-validation.json for exact scope.
+
+### Reproducing the checks
+
+Run the commands below from the repository root in an isolated copy or detached worktree. The parser rewrites dossier grammar statuses and its report; the dossier and documentation checks rewrite coverage/dashboard and documentation reports. Do not run these report-writing scripts in a checkout containing unrelated edits. Run the parser before the dossier checks so coverage hashes describe the final dossier bytes.
+
+Dependencies: Python 3 with `jsonschema` (Draft 2020-12 support) and `PyYAML`; Git for preservation checks; a JDK with `java` on PATH for the actual parser. The parser uses the Windows classpath separator and verifies every JAR against `experiments/strawman-2026/evidence/candidate-parser.classpath.json`. Those dependencies are external to this repository, including the pinned k.LAB language artifacts and supporting Maven JARs. Reproduction requires the exact hashed bytes at the listed paths, or an explicitly documented path-only relocation in the isolated copy. Do not substitute newer parser binaries and describe that as the recorded run. Preservation additionally requires the original repositories and staged index recorded in `land-agriculture-preservation.json`; it is an environment-specific check, not a portable semantic test.
+
+The recorded environment uses Python 3.13.3, jsonschema 4.26.0, PyYAML 6.0.3 and OpenJDK 21.0.1. The tested PowerShell environment loads the locally installed Python dependencies as follows; use an equivalent environment with those packages elsewhere:
+
+```powershell
+$env:PYTHONPATH='C:\Users\Ferd\Documents\Codex\2026-10-03\task-4\.python-deps'
+python -B experiments/strawman-2026/tools/parse_dossier_questions.py
+python -B experiments/strawman-2026/tools/check_land_agriculture.py
+python -B experiments/strawman-2026/tools/check_dossiers.py
+python -B -m unittest discover -s experiments/strawman-2026/tools -p test_*.py -v
+python -B experiments/strawman-2026/tools/check_review_docs.py
+python -B experiments/strawman-2026/tools/check_land_agriculture_preservation.py
+```
+
+Each command must exit successfully; do not treat the final shell exit code as proof that earlier commands passed. The checks establish the bounded results above, not ontology loading, Reasoner validity, scientific acceptance or model execution.
