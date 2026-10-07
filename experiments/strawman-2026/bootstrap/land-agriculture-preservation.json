@@ -1,0 +1,310 @@
+{
+  "files": [
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\agency.kwv",
+      "sha256": "d78b3a5e23d4dd89332caefdd2ece331ef08c2040297e4e5d267d958fe713866"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\atmosphere.kwv",
+      "sha256": "56e099b9c86d75fb43af15e3494aac476b3d95f24ed4d977045cde0117052c59"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\biology.kwv",
+      "sha256": "cb964a828d161f3e1f0e45704e8d40d2b86061cc44d61e482710b48f610aa749"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\calendar.kwv",
+      "sha256": "11acb1a4a090630306e9dd1ac0ac11ff06b71cf3e55fe089318538ee5e5c1a75"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\chemistry.kwv",
+      "sha256": "0ed9d1f8c854c9a19681a32cf6101e8898b359422e32bec86096157f03cedf69"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\data.kwv",
+      "sha256": "9ff8d38d7c7642548a20a32b7355b87edc213a24e884f1b8ce501c562c8a06c9"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\decision.kwv",
+      "sha256": "c89665bb22ff60062d52563eabbd4c3b845fc366eee6ad68dbe45644e34702b7"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\earth.kwv",
+      "sha256": "ee3ad402dfbcd688655272d18172c84c1e6abb556493a11f6e6e246b2278ab02"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\ecology.kwv",
+      "sha256": "a593560f4beeec306f893ede8869b1e01492dc43d26adf0fdb01d6efeb2c62d9"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\economics.kwv",
+      "sha256": "bebf02c909571993955b1e06d85c27cefdd01be75162107da133c8322dc7195b"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\engineering.kwv",
+      "sha256": "7c7f3ce24ee9104eb56df64942f0583298b8a7bc63b06d05112a16ce78f30fba"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\genetics.kwv",
+      "sha256": "18cc2ec3d75212e88477e63e8b2cb47d689d4f0e008a97332b4ab3fd69b46fb1"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\geography.kwv",
+      "sha256": "cb260adce02d8c170a92b5ce70134546efcef5b2a6523415d5345e3131dd8f1f"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\geology.kwv",
+      "sha256": "45eec1bccbc501aacfe7cc2261a45c31101e51704f197cef66926a8156915312"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\hydrology.kwv",
+      "sha256": "1f96cc9f79d91835a31ee81eb8005148a3d1372fa444d8aa73f0d469cd25d1c2"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\imod.kwv",
+      "sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\infrastructure.kwv",
+      "sha256": "6b1311afdbd672f94549e6a69b5e35e30fd4774ed037ed5abd6e1fc40c3417ab"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\land.kwv",
+      "sha256": "06c14d5184997eeee9bb2096678c63b9d657814eb70bb31fcb82386c1534e09e"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\life.kwv",
+      "sha256": "2c4ff77c15ef62ae95355e8fca291f87d4a1bb42df3a50c4a3ded4c583ee06cb"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\oceanography.kwv",
+      "sha256": "1b96a82c2b316d16e82d25f5387365d1bca94990ebae32033035b47aea89109d"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\physical.kwv",
+      "sha256": "f908ad757d03a355d52c0596f592abde19877fd7dd900c4a3bb7dcc4b106a093"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\physics.kwv",
+      "sha256": "580b0c50ead6b651eaf90dbc4660e93e803b41ddd6c05abf6bd3d31e1ab888c0"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\society.kwv",
+      "sha256": "015b60a5d60fc8c217aba9e664600983970ae191fe0c322c9d29e783ab101007"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\sociology.kwv",
+      "sha256": "998271ceafcdecaa50e82b1729e20a94660e24cc3d967916ec4448f27133e77a"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\soil.kwv",
+      "sha256": "c72b14c706e4b9ae5adb8e65520d284e975e65004860a970eb23f032e3342459"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\valuation.kwv",
+      "sha256": "3aa777544ee190a1db0af739d4bf02c51e7c37507e653e7b706bf80db4d1372c"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\agriculture\\incubation.kim",
+      "sha256": "92cb38adeea5a7da60aa5c4b6bff7e1d1f1e166ba0a7a20b92f5b261d0ca5d4b"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\agriculture.kim",
+      "sha256": "e3cfc728c44a1c296c088202ddcfb23f3557b39030f3fd17361bd01ebe3a3a60"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\behavior\\incubation.kim",
+      "sha256": "b737751be64c7db3a914a5d3abaf71c8dadd2ea884e3a019517f3f65a7ec9781"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\behavior.kim",
+      "sha256": "a05dfbc561d08e579bc8e18135fbea3a8d467b750c8c1ae66b5359592328bbe3"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\biology\\incubation.kim",
+      "sha256": "d3c9096ad236c36718b109663ce98eca784b600c94c9cf0d93b42091f4a64f42"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\biology\\nomenclature.kim",
+      "sha256": "44cb55df7d9e3135bd4178b418be320ec592abc561bffaed162057b99c47a4ec"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\biology.kim",
+      "sha256": "d3fee902c39f1089587b3252fed9a840f0348a86052b45d7a885cf376286dc9d"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\chemistry\\incubation.kim",
+      "sha256": "97fdb9e141841c5166cb41301abad53cbd4603fbec3d841ceffc899ed21f1dea"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\chemistry.kim",
+      "sha256": "36cd9767ed85c847ac70b33dac8978e0ee9b131434a9174f327a8d929977b533"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\conservation.kim",
+      "sha256": "032b9343e2507fcdbd7caa4b54d95a4fd099cfa417a1471f54209101d774951f"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\demography.kim",
+      "sha256": "23019643a2da373840596af3083a01d15303005d2e93d30f4aa2551945c1b9b2"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\earth\\incubation.kim",
+      "sha256": "76b0829be218ce6bf2b7b5db65c0d4da292cb13d3f235ab6975589c8e60434db"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\earth.kim",
+      "sha256": "312ae28a41c4443840cc0d09a5b41cf3eeffa9efe080f4675e6478487630020b"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\ecology\\incubation.kim",
+      "sha256": "85535a10e3231a805f06d71f5e51b297350d4b74f2295f546ade9a148fb44c3e"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\ecology.kim",
+      "sha256": "60f7af5ca7b9d39f949290edc3289adb4a9758d9dcbc74246a66c0b8ff0e158f"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\economics.kim",
+      "sha256": "2a4391850545b611b306b4a7b430c438c28ca103854569604eb75ca0fc34044c"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\engineering.kim",
+      "sha256": "dc62c0691fccacb9fd1a559874137d3dc1e84f6d1093b54d8ce2a7edd73c3b34"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\geography.kim",
+      "sha256": "228d67b1e678cc71bf43c6044216604b9e9bda9273b550292b10b910beb6c560"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\geology.kim",
+      "sha256": "cd931aade975da5f17c72dac71431735dbd4ea961841c11f6fb7548abe2faa98"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\hydrology\\incubation.kim",
+      "sha256": "a1abc61e7822b7ff7b6abef0e27ea28cdc551370afa3baa89b937862d69c427a"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\hydrology.kim",
+      "sha256": "3dae4a4370dbad88e6e0b50ebfce4a486444934f5d0ab2bcf12cd470470cf8a5"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\im.kim",
+      "sha256": "303c03894e8d3fdf73ce23001d4b5221e0f7b2508125f454423e50e684c3a6ee"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\imincubation.kim",
+      "sha256": "8dbfe9c17e4bab3f042dca362a18963d004723d939467968bcac9d7b8a77d4c5"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\infrastructure\\incubation.kim",
+      "sha256": "768cc708de11698f13164dba9a0c69e9d77003ee7c51726b5a34d60af1385372"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\infrastructure.kim",
+      "sha256": "fc8ebd7b634dbae8afb8de8dfa1244669a128428cd13ba9010c3883757f86f8e"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\landcover\\incubation.kim",
+      "sha256": "6d3f24cb665aeb03c19ee940265020d1a42ad698f4d610ccfcdf7393b8216bae"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\landcover.kim",
+      "sha256": "322144ade9bf1997db4b735d182489e2f78adb4b45ee4c83aa44c1e48d3ffc67"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\materials.kim",
+      "sha256": "a15fc347a51f14cf7958dfa5c937b6dde40adfa85943d2076e127ef70ee00ca5"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\physical\\incubation.kim",
+      "sha256": "6acf95b3a3b0219a1663a3b1ac3027391c4d622f31e5adf27306bfb98ca9aadd"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\physical.kim",
+      "sha256": "bc04a998cde10983a0316f6e98cd4b2167258491ff1adbe2da1042f107933bb3"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\policy.kim",
+      "sha256": "05ffdddf0a99f6f4b3b5914d47f3e448098d5486cce0e2ecbd736c63fe21f2cb"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\risk.kim",
+      "sha256": "aca535bae564b6da50e0dc4747398083dc716ac7ecb1bf74f3a8766066a1efcb"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\ses.kim",
+      "sha256": "90ce6c6de736aada5b8054432b7083fdece713a382a5667e7098e15c00c53490"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\soil\\incubation.kim",
+      "sha256": "48054be490eb091036631f2102f5589c85ef4bc3c50b47fb197d0e1f480186db"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im\\src\\soil.kim",
+      "sha256": "65cf726ca7c212f3ebc1ed8735a2e0ae43bcddfc221eae888aac230d26f58d7d"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im.aries\\src\\es\\aesthetics.kim",
+      "sha256": "811948531e6eae3addc67bd2e1da28b008b37f8d637cd153c634675e47ffb856"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im.aries\\src\\es\\carbon.kim",
+      "sha256": "44d4e358a95f500869f4feccce5414e18ce5880b434b716435a9f267b7b9e151"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im.aries\\src\\es\\floodregulation.kim",
+      "sha256": "adaf10f8a8a309a4ea52abcd8e204e46b1ce607951bb0ac1300a5190039f8360"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im.aries\\src\\es\\nca.kim",
+      "sha256": "2a889df71ae35b930857054c7599d2dfa4961e734a99cd768e57cb3b0d015e6f"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im.aries\\src\\es\\pollination.kim",
+      "sha256": "42b5421a7ff4e2393b15761dfb0fd9e4affabf38f076aa03fa4fe63e0ea3137d"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im.aries\\src\\es\\risk.kim",
+      "sha256": "6cba7c7065e9553d6cb3b2f73b62d4034189d532dfa6fea939d119df4220efe7"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im.aries\\src\\es\\taxonomy.kim",
+      "sha256": "de2c33eafa9c53f021fe51914116a99bbce41238b4e01bfd0a70c6ffaf4b0b60"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im.aries\\src\\es\\water.kim",
+      "sha256": "f2ed2bbbdf659fd6f1a25600cd5a6a6280651346b0ff8c4ca285cf25d4b6d451"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im.aries\\src\\es.kim",
+      "sha256": "7c8304d90c9f977ba65402e0da7b6890111a476aa89ced314e401b656830fc1a"
+    }
+  ],
+  "repositories": {
+    "imod": {
+      "path": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod",
+      "head": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "status": ""
+    },
+    "im": {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im",
+      "head": "60906d81521550238b21dbd64513c36e0f184f00",
+      "status": ""
+    },
+    "im.aries": {
+      "path": "C:\\Users\\Ferd\\.klab\\worldview\\im.aries",
+      "head": "287112999ad8745098e31d772143e4fc91136059",
+      "status": "M src/es/risk.kim"
+    }
+  },
+  "master": "f8cba48615276c5852b72b9d88854353708f3d6d",
+  "protected_staging": {
+    "worktree": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-03\\task-4\\imod-strawman",
+    "files": {
+      "experiments/strawman-2026/tools/ParseWorldview.java": "1bfb95373737042b1f4aa85dc882cb3bb98dce2f977ff0b586b04c671ea142d5",
+      "experiments/strawman-2026/tools/WorldviewStrawmanAssessmentTest.java": "afeff98d3f803f6c0398ea8230d0b112f950c035196484674472390d94c5ab3d"
+    }
+  },
+  "scope": "Current observed 2026-10-07 state; old baseline retained unchanged. New isolated worktree only."
+}

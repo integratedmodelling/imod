@@ -1,0 +1,20 @@
+{
+  "base_commit": "28ee04c25829684aa0e78127d694564bbc94194d",
+  "boundary_note_commit": "64754ea2b4d7207d51db454506f51b4b18741817",
+  "sources": [
+    {
+      "path": "C:/Users/Ferd/git/klab-services/llm/DOMAIN_CONTEXT_PACK.md",
+      "sha256": "f6076fbb06d5440eae29302f9ed105e9cdb7a59eea129046fefe60877e4cbadc"
+    },
+    {
+      "path": "C:/Users/Ferd/git/klab-services/docs/AUTHORITIES.md",
+      "sha256": "396d732d0a5a7d174fc153077e614d8a6592b67a664b62c9102f75587d519468"
+    },
+    {
+      "path": "C:/Users/Ferd/Documents/Codex/2026-10-04/task/klab-services-behavior-docs/docs/ONTOLOGY_REVIEW_LAND_AGRICULTURE.md",
+      "sha256": "eaf936bb805117fbf85c0352213478eee82bc4cf186a5531e59c101f800f3c77"
+    }
+  ],
+  "authority": "Organizational split authorized; individual concepts and parent/role choices remain blocked.",
+  "backend_projection": "Unchanged historical hydrology example; no land/agriculture DTO or production proposal submitted."
+}

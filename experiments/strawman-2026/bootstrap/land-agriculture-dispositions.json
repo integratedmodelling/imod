@@ -1,0 +1,409 @@
+{
+  "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+  "boundary_note_commit": "64754ea2b4d7207d51db454506f51b4b18741817",
+  "boundary_note_sha256": "eaf936bb805117fbf85c0352213478eee82bc4cf186a5531e59c101f800f3c77",
+  "source_note": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-04\\task\\klab-services-behavior-docs\\docs\\ONTOLOGY_REVIEW_LAND_AGRICULTURE.md",
+  "dispositions": [
+    {
+      "original_id": "land-ManagedField",
+      "original_name": "land:ManagedField",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "blocked",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "agriculture",
+      "target_name": "agriculture:ManagedField",
+      "action": "move_preserve_id",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    },
+    {
+      "original_id": "land-LandEvaluationUnit",
+      "original_name": "land:LandEvaluationUnit",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "blocked",
+      "original_parent_status": "proposed_parent",
+      "target_domain": null,
+      "target_name": null,
+      "action": "defer_upstream_or_composition",
+      "reason": "Use the actual bounded surface and, where needed, an evaluation role. Assessment units are not domain primitives.",
+      "counted_in_active_coverage": false
+    },
+    {
+      "original_id": "land-CropStand",
+      "original_name": "land:CropStand",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "blocked",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "agriculture",
+      "target_name": "agriculture:CropStand",
+      "action": "move_preserve_id",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    },
+    {
+      "original_id": "land-VegetationPatch",
+      "original_name": "land:VegetationPatch",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "blocked",
+      "original_parent_status": "proposed_parent",
+      "target_domain": null,
+      "target_name": null,
+      "action": "defer_upstream_or_composition",
+      "reason": "Reuse an agreed ecology/biology assemblage; delineation alone does not establish subject unity.",
+      "counted_in_active_coverage": false
+    },
+    {
+      "original_id": "land-AgriculturalHolding",
+      "original_name": "land:AgriculturalHolding",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "blocked",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "agriculture",
+      "target_name": "agriculture:AgriculturalHolding",
+      "action": "move_preserve_id",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    },
+    {
+      "original_id": "land-Irrigation",
+      "original_name": "land:Irrigation",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "provisional",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "agriculture",
+      "target_name": "agriculture:Irrigation",
+      "action": "move_preserve_id",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    },
+    {
+      "original_id": "land-Tillage",
+      "original_name": "land:Tillage",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "provisional",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "agriculture",
+      "target_name": "agriculture:Tillage",
+      "action": "move_preserve_id",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    },
+    {
+      "original_id": "land-Sowing",
+      "original_name": "land:Sowing",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "provisional",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "agriculture",
+      "target_name": "agriculture:Sowing",
+      "action": "move_preserve_id",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    },
+    {
+      "original_id": "land-Harvesting",
+      "original_name": "land:Harvesting",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "provisional",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "agriculture",
+      "target_name": "agriculture:Harvesting",
+      "action": "move_preserve_id",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    },
+    {
+      "original_id": "land-ResidueRetention",
+      "original_name": "land:ResidueRetention",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "blocked",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "agriculture",
+      "target_name": "agriculture:ResidueRetention",
+      "action": "move_preserve_id",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    },
+    {
+      "original_id": "land-OccupiesField",
+      "original_name": "land:OccupiesField",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "provisional",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "agriculture",
+      "target_name": "agriculture:OccupiesField",
+      "action": "move_preserve_id",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    },
+    {
+      "original_id": "land-ManagesField",
+      "original_name": "land:ManagesField",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "provisional",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "agriculture",
+      "target_name": "agriculture:ManagesField",
+      "action": "move_preserve_id",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    },
+    {
+      "original_id": "land-OverlapsEvaluationUnit",
+      "original_name": "land:OverlapsEvaluationUnit",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "provisional",
+      "original_parent_status": "proposed_parent",
+      "target_domain": null,
+      "target_name": null,
+      "action": "defer_upstream_or_composition",
+      "reason": "Compose upstream topology with actual bearers; assessment workflow does not justify a land relation.",
+      "counted_in_active_coverage": false
+    },
+    {
+      "original_id": "land-AdjacentField",
+      "original_name": "land:AdjacentField",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "blocked",
+      "original_parent_status": "proposed_parent",
+      "target_domain": null,
+      "target_name": null,
+      "action": "defer_upstream_or_composition",
+      "reason": "Reuse upstream symmetric adjacency with agricultural endpoints; relationship/bond choice remains blocked.",
+      "counted_in_active_coverage": false
+    },
+    {
+      "original_id": "land-SupportsCropStand",
+      "original_name": "land:SupportsCropStand",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "blocked",
+      "original_parent_status": "proposed_parent",
+      "target_domain": null,
+      "target_name": null,
+      "action": "defer_upstream_or_composition",
+      "reason": "Resolve rooting/location in soil/ecology; ambiguous support must not imply yield.",
+      "counted_in_active_coverage": false
+    },
+    {
+      "original_id": "land-SowingEpisode",
+      "original_name": "land:SowingEpisode",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "provisional",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "agriculture",
+      "target_name": "agriculture:SowingEpisode",
+      "action": "move_preserve_id",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    },
+    {
+      "original_id": "land-HarvestEpisode",
+      "original_name": "land:HarvestEpisode",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "provisional",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "agriculture",
+      "target_name": "agriculture:HarvestEpisode",
+      "action": "move_preserve_id",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    },
+    {
+      "original_id": "land-IrrigationEpisode",
+      "original_name": "land:IrrigationEpisode",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "provisional",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "agriculture",
+      "target_name": "agriculture:IrrigationEpisode",
+      "action": "move_preserve_id",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    },
+    {
+      "original_id": "land-LandUseConversion",
+      "original_name": "land:LandUseConversion",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "blocked",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "land",
+      "target_name": "land:LandUseConversion",
+      "action": "retain_generalize",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    },
+    {
+      "original_id": "land-CoverChangeEpisode",
+      "original_name": "land:CoverChangeEpisode",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "blocked",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "land",
+      "target_name": "land:CoverChangeEpisode",
+      "action": "retain_generalize",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    },
+    {
+      "original_id": "land-SurfaceCoverFraction",
+      "original_name": "land:SurfaceCoverFraction",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "provisional",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "land",
+      "target_name": "land:SurfaceCoverFraction",
+      "action": "retain_generalize",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    },
+    {
+      "original_id": "land-DisturbedAreaFraction",
+      "original_name": "land:DisturbedAreaFraction",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "provisional",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "land",
+      "target_name": "land:DisturbedAreaFraction",
+      "action": "retain_generalize",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    },
+    {
+      "original_id": "land-PlantAvailableWater",
+      "original_name": "land:PlantAvailableWater",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "blocked",
+      "original_parent_status": "proposed_parent",
+      "target_domain": null,
+      "target_name": null,
+      "action": "defer_upstream_or_composition",
+      "reason": "Request soil/hydrology water availability with plant and root-zone context, not total stock.",
+      "counted_in_active_coverage": false
+    },
+    {
+      "original_id": "land-HarvestableBiomass",
+      "original_name": "land:HarvestableBiomass",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "provisional",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "agriculture",
+      "target_name": "agriculture:HarvestableBiomass",
+      "action": "move_preserve_id",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    },
+    {
+      "original_id": "land-ManagedArea",
+      "original_name": "land:ManagedArea",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "provisional",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "land",
+      "target_name": "land:ManagedArea",
+      "action": "retain_generalize",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    },
+    {
+      "original_id": "land-AppliedWaterAmount",
+      "original_name": "land:AppliedWaterAmount",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "provisional",
+      "original_parent_status": "proposed_parent",
+      "target_domain": null,
+      "target_name": null,
+      "action": "defer_upstream_or_composition",
+      "reason": "Reuse a dimensional water quantity with identified water bearer/application context; process parameters are not bearers.",
+      "counted_in_active_coverage": false
+    },
+    {
+      "original_id": "land-SeedPlacementDepth",
+      "original_name": "land:SeedPlacementDepth",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "original_status": "provisional",
+      "original_parent_status": "proposed_parent",
+      "target_domain": "agriculture",
+      "target_name": "agriculture:SeedPlacementDepth",
+      "action": "move_preserve_id",
+      "reason": "Preserve original ID and blockers; revise scope as approved boundary proposal.",
+      "counted_in_active_coverage": true
+    }
+  ],
+  "question_dispositions": [
+    {
+      "id": "land-q01",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "target_domain": "agriculture"
+    },
+    {
+      "id": "land-q02",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "target_domain": "agriculture"
+    },
+    {
+      "id": "land-q03",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "target_domain": "agriculture"
+    },
+    {
+      "id": "land-q04",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "target_domain": "agriculture"
+    },
+    {
+      "id": "land-q05",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "target_domain": "agriculture"
+    },
+    {
+      "id": "land-q06",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "target_domain": "agriculture"
+    },
+    {
+      "id": "land-q07",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "target_domain": "agriculture"
+    },
+    {
+      "id": "land-q08",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "target_domain": "agriculture"
+    },
+    {
+      "id": "land-q09",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "target_domain": "agriculture"
+    },
+    {
+      "id": "land-q10",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "target_domain": "land"
+    },
+    {
+      "id": "land-q11",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "target_domain": "land"
+    },
+    {
+      "id": "land-q12",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "target_domain": "agriculture"
+    },
+    {
+      "id": "land-q13",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "target_domain": "agriculture"
+    },
+    {
+      "id": "land-q14",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "target_domain": "agriculture"
+    },
+    {
+      "id": "land-q15",
+      "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "target_domain": "land"
+    }
+  ]
+}

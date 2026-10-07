@@ -155,8 +155,15 @@ Types use the context pack's implicit upper-derived meanings: `thing` = structur
 
 | Tentative meaning and status | Upper-derived category; bearer/participants/applicability | Evidence and scope | Discriminating counterexample / unresolved choice |
 |---|---|---|---|
-| **Cropfield — P:** land region organized for cultivation under a stated management scope. | thing specializing region, or composition with cultivation role; review required. | legacy:agriculture.kim Cropfield/Farming. | Vegetation matching a crop species without cultivation is not necessarily a cropfield. Management, cover and tenure separate. |
-| **CanopyCoverFraction — P:** proportion of a specified region covered by canopy under a stated projection/cover meaning. | proportional quality; region and canopy scope. | legacy:ecology.kim CanopyCover; landcover bundles motivate orthogonal separation. | A scheme's “forest” class with thresholds is not this quantity. Measurement strategy outside; thresholds remain authority commitments. |
+| **LandSurfaceUnit - B:** actual bounded surface, independent of its map. | subject; upstream surface parent unresolved. | FAO cover/use and EEA land. | Volumetric earth:Region is not silently substituted. |
+| **LandUseConversion - B:** bounded actual transition between uses. | event; source/target uses and surface participants. | EEA cross-sector land use; revised land dossier. | Plan or authority relabeling alone is not physical conversion. |
+
+## agriculture
+
+| Tentative meaning and status | Upper-derived category; bearer/participants/applicability | Evidence and scope | Discriminating counterexample / unresolved choice |
+|---|---|---|---|
+| **ManagedField - B:** cultivated surface with an explicit boundary. | subject; surface parent unresolved. | legacy agriculture.kim Cropfield; stable land-ManagedField moved into agriculture research. | Vegetation alone does not prove cultivation. |
+| **ManagedHerd - B:** livestock group with explicit membership and management unity. | subject versus configuration; population specialization unresolved. | Historical FAO WCA livestock evidence. | A polygon's animals are not automatically one herd; raising differs from owning. |
 
 ## decision
 

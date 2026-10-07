@@ -1,3 +1,5 @@
+Current boundary revision: see [land/agriculture revision](LAND_AGRICULTURE_REVISION.md), [coverage dashboard](COVERAGE_DASHBOARD.md) and land-agriculture-validation.json. Counts and backend/reactor results below describe their explicitly earlier review snapshot unless refreshed in that revision.
+
 # Early instrumentation handoff — 2026-10-03
 
 The repository sandbox starts this iteration at user commit `98c68ba58b206c077add6fbdeb2c6d6e06fe3782`; remote and local matched (0/0 divergence) after fetch. Two pre-existing staged Java formatting edits are preserved and excluded from our commits. The unchanged context-pack 1.3 proposal schema is the interchange authority. See [method](METHOD.md) for local dossier fields; this is not an API contract.

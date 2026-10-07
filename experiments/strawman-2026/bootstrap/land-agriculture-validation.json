@@ -1,0 +1,41 @@
+{
+  "base_commit": "28ee04c25829684aa0e78127d694564bbc94194d",
+  "status": "PASS",
+  "bounded_tests": 32,
+  "new_boundary_tests": 8,
+  "actual_parser": {
+    "question_expressions": 213,
+    "insufficient_components": 5,
+    "review_probe_components": 12,
+    "controls": 4,
+    "failures": 0,
+    "scope": "ObservableSequence syntax only; missing namespace and invalid category controls intentionally parse"
+  },
+  "research": {
+    "domains": 23,
+    "candidates": 467,
+    "questions": 348,
+    "full_formulation_gaps": 135,
+    "all_four_targets_met": 5,
+    "domains_with_shortfalls": 18
+  },
+  "checks": [
+    "23 local research schemas",
+    "IDs and local/external question references",
+    "proposed import DAG",
+    "27 original candidate dispositions",
+    "15 original question IDs retained once",
+    "documentation links",
+    "70 source files, three repositories, master and two pre-staged Java blobs preserved"
+  ],
+  "unchanged_protected_files": 35,
+  "backend": "Existing hydrology sample and artifact byte binding unchanged; prior DTO structural result remains historical, not rerun.",
+  "not_run": [
+    "new ontology adaptation/loading",
+    "Reasoner/type validation",
+    "model execution",
+    "human scientific approval",
+    "backend/service workflows"
+  ],
+  "note": "No executable source or candidate-overlay changes. Historical context and validation records remain scoped to their earlier commits."
+}

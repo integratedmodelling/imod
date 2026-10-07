@@ -1,3 +1,5 @@
+Current boundary revision: see [land/agriculture revision](LAND_AGRICULTURE_REVISION.md), [coverage dashboard](COVERAGE_DASHBOARD.md) and land-agriculture-validation.json. Counts and backend/reactor results below describe their explicitly earlier review snapshot unless refreshed in that revision.
+
 # Research dossier to proposal-review transport mapping
 
 Read against task-7/backend/PROPOSAL_REVIEW_CONTRACT.md, DOSSIER_MAPPING.md and ProposalReview.java at backend commit d6e781daa0d440a11589fa550cdf69cdf765a04e. The BootstrapDossier record shape remains compatible with the prior sample; added limits and validation checks are backend-owned. This packet never edits or replaces that implementation. Use its shared ProposalCandidateBinding inspector for proposal/action/import-manifest binding, not a parallel client serialization.

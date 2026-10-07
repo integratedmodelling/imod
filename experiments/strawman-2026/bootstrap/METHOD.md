@@ -1,3 +1,5 @@
+Current boundary revision: see [land/agriculture revision](LAND_AGRICULTURE_REVISION.md), [coverage dashboard](COVERAGE_DASHBOARD.md) and land-agriculture-validation.json. Counts and backend/reactor results below describe their explicitly earlier review snapshot unless refreshed in that revision.
+
 # Domain bootstrap method — draft 0.1
 
 This packet is a research and review workbench, not an extension to the production proposal API. The unchanged context-pack 1.3 JSON schema remains authoritative for actual proposal envelopes. Dossier JSON is a local research index; no self-review constitutes approval. Decision is retired from the retained address set by user direction; root, data and calendar are prerequisites/machinery, not disciplinary domains.

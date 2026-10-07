@@ -1,6 +1,6 @@
 # Domain bootstrap workbench
 
-This iteration rethinks the initial packet from source-led questions. It contains 22 provisional domain addresses, 457 research records and 330 research question slots, including methodological probes and counterexamples. Only six domains meet all four five-record targets; sixteen have principled shortfalls, detailed in [the coverage dashboard](COVERAGE_DASHBOARD.md). Counts describe explored records, not accepted ontology coverage or answerable scientific questions. Decision is excluded; root/data/calendar remain separate. No new executable declarations are installed.
+The active research packet contains 23 provisional domain addresses, 467 candidate records and 348 research question slots, including methods and counterexamples. Five domains meet all four five-record targets; eighteen have shortfalls. Counts are not accepted coverage or answerability. See [land/agriculture revision](LAND_AGRICULTURE_REVISION.md) and [current dashboard](COVERAGE_DASHBOARD.md). Decision is excluded; root/data/calendar remain separate. Agriculture has no executable namespace. No new executable declarations are installed.
 
 Start with [the method](METHOD.md), [root prerequisites](ROOT_PREREQUISITES.md), [the worked hydrology dossier](hydrology/BOOTSTRAP.md), [review findings](REVIEW_FINDINGS.md), [responses](REVIEW_RESPONSES.md) and [wildfire review path](WILDFIRE_REVIEW_PATH.md). For instrumentation use [the handoff](INSTRUMENTATION_HANDOFF.md), [backend mapping](BACKEND_MAPPING.md), dossier.schema.json and dossier.template.json. The template is an intentionally incomplete skeleton, not a valid full dossier. Each domain has a source-first question ledger, dossier.json and substantial BOOTSTRAP.md. JSON records current status; narrative documents retain exploratory context.
 
@@ -14,7 +14,7 @@ Start with [the method](METHOD.md), [root prerequisites](ROOT_PREREQUISITES.md),
 | | [atmosphere](atmosphere/BOOTSTRAP.md) | [ecology](ecology/BOOTSTRAP.md) | | [land](land/BOOTSTRAP.md) |
 | | [hydrology](hydrology/BOOTSTRAP.md) | | | [valuation](valuation/BOOTSTRAP.md) |
 | | [oceanography](oceanography/BOOTSTRAP.md) | | | |
-| | [soil](soil/BOOTSTRAP.md) | | | |
+| | [soil](soil/BOOTSTRAP.md) | | | [agriculture](agriculture/BOOTSTRAP.md) |
 
 Grouping is editorial, not an asserted ontology hierarchy. Consolidation remains open. Every candidate must survive mandatory imported context, scientific scope, category/bearer/endpoint and counterexample review. Legacy meaning is not conserved merely because it already exists.
 

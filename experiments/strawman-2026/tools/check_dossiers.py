@@ -6,7 +6,7 @@ from dossier_consistency import category_errors,predicate_evidence_errors
 root=Path(__file__).resolve().parents[1]/'bootstrap'
 schema=json.loads((root/'dossier.schema.json').read_text())
 ap=argparse.ArgumentParser();ap.add_argument('--partial',action='store_true');args=ap.parse_args()
-expected=set('physical physics chemistry earth geography geology atmosphere hydrology oceanography soil life biology genetics ecology agency society sociology infrastructure engineering economics land valuation'.split())
+expected={x['namespace'] for x in json.loads((root/'domain-index.json').read_text(encoding='utf8'))['domains']}
 paths=sorted(root.glob('*/dossier.json')); errors=[]; reports=[];graph={}; all_names=set(); all_ids=set()
 all_dossiers=[json.loads(p.read_text(encoding='utf8')) for p in paths]
 errors.extend(category_errors(all_dossiers))
@@ -28,6 +28,10 @@ for p in paths:
    if cid not in concepts:errors.append(ns+': missing question concept '+cid)
    else:incidence[cid].append(q['id'])
   if not q.get('expression') and not q.get('dependencies'):errors.append(ns+': unexplained expression gap '+q['id'])
+ for q in d['questions']:
+  for ref in q.get('external_concept_refs',[]):
+   target=next((other for other in all_dossiers if other['domain']==ref['domain']),None)
+   if target is None or ref['id'] not in {c['id'] for c in target['concepts']}:errors.append(ns+': missing external question reference '+ref['id'])
  imports=[x if isinstance(x,str) else x['namespace'] for x in d['imports']]
  graph[ns]=[x for x in imports if x in expected and x!=ns]
  if ns in imports:errors.append(ns+': self-import')
@@ -47,11 +51,11 @@ if not args.partial and set(graph)!=expected:errors.append('Retained domain set 
 report=dict(scope='Local research schema/reference/incidence/DAG checks only. Ready count zero: no human semantic approval or full validation.',domains=len(reports),concepts=sum(sum(r['counts'].values()) for r in reports),questions=sum(r['questions'] for r in reports),expressions=sum(r['expressions'] for r in reports),errors=errors,dependency_graph=graph,dossiers=reports)
 report['domains_meeting_all_four_targets']=[r['domain'] for r in reports if r['all_four_category_targets_met']]
 report['domains_with_shortfalls']=[r['domain'] for r in reports if not r['all_four_category_targets_met']]
-report['question_count_limit']='330 initial research slots include scientific questions, methodological probes and counterexamples; not 330 answerable scientific questions. Non-null expression does not imply sufficient formulation.'
+report['question_count_limit']=f"{report['questions']} research slots include scientific questions, methodological probes and counterexamples; not {report['questions']} answerable scientific questions. Non-null expression does not imply sufficient formulation."
 (root/'coverage-validation.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf8',newline='\n')
 lines=['# Initial research coverage dashboard','',f"{len(report['domains_meeting_all_four_targets'])} of {len(reports)} domains meet all four five-record targets; {len(report['domains_with_shortfalls'])} have principled shortfalls. These are explored records, not accepted concepts. No padding is used.",'',report['question_count_limit'],'','| Domain | Subjects | Processes | Relationships | Events | Targets |','|---|---:|---:|---:|---:|---|']
 for r in reports:lines.append('| '+r['domain']+' | '+' | '.join(str(r['counts'][c]) for c in ['subject','process','relationship','event'])+' | '+('counts met' if r['all_four_category_targets_met'] else 'shortfall: '+', '.join(k+' '+str(v) for k,v in r['category_target_shortfalls'].items() if v))+' |')
-lines+=['',f"{report['expressions']} question slots retain draft expressions; {report['questions']-report['expressions']} have full-formulation gaps. One additional richness-change component is explicitly insufficient for ecology composition. Zero concepts are approved. See per-domain evidence and blockers; quantities above do not measure scientific breadth or readiness."]
+lines+=['',f"{report['expressions']} question slots retain draft expressions; {report['questions']-report['expressions']} have full-formulation gaps. Additional component expressions are explicitly insufficient for their full narratives; see the parser report. Zero concepts are approved. See per-domain evidence and blockers; quantities above do not measure scientific breadth or readiness."]
 (root/'COVERAGE_DASHBOARD.md').write_text('\n'.join(lines)+'\n',encoding='utf8',newline='\n')
 print(json.dumps({k:v for k,v in report.items() if k not in ['dossiers','dependency_graph']}))
 raise SystemExit(bool(errors))

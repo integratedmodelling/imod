@@ -1,19 +1,19 @@
-# Source-led question register: land
+# Source-informed question register: land
 
-Captured before candidate records for this dossier. Questions are source-informed author probes, not blinded holdouts or expert endorsements. Existing worldview context was visible. Order below is preserved; final dossier will link candidates afterwards.
+Revised 7 October 2026 against 28ee04c. Existing land question IDs retain identity and text; new questions were authored with candidates and the boundary review visible. This is not a blind holdout. Original source-first timing applies only to inherited questions and is retained in their JSON provenance.
 
-1. **land-q01** Which fields are being used for food crops rather than merely covered by green vegetation? Source: FAO-LCCS.
-2. **land-q02** Which land units can support the specified crop without irrigation? Source: FAO-EVAL.
-3. **land-q03** How much soil surface remains covered after sowing? Source: FAO-CA.
-4. **land-q04** Where did irrigation add water during this dry spell? Source: FAO-WATER.
-5. **land-q05** Which field was planted in this sowing episode? Source: FAO-SEED.
-6. **land-q06** How much of the field was mechanically disturbed? Source: FAO-CA.
-7. **land-q07** Which land is managed as part of the same agricultural holding? Source: FAO-EVAL.
-8. **land-q08** Did residue retention change surface cover without changing crop species? Source: FAO-SEED.
-9. **land-q09** Which harvest removed products from this crop stand? Source: FAO-SEED.
-10. **land-q10** Do two maps calling an area forest use the same definition? Source: FAO-LCCS.
-11. **land-q11** Did fire change land cover while the intended farming use remained unchanged? Source: FAO-LCCS.
-12. **land-q12** Is poor crop performance due to water shortage or an unsuitable soil condition? Source: FAO-EVAL.
-13. **land-q13** Does no-till automatically make this farm sustainable? Source: FAO-CA.
-14. **land-q14** Which crop stand occupies this field now? Source: FAO-SEED.
-15. **land-q15** Which land-use change is observed, and which is only planned? Source: FAO-EVAL.
+- **land-q10** Do two maps calling an area forest use the same definition? Sources: FAO-LCCS.
+- **land-q11** Did fire change land cover while the intended farming use remained unchanged? Sources: FAO-LCCS.
+- **land-q15** Which land-use change is observed, and which is only planned? Sources: FAO-EVAL.
+- **land-q16** Which parts of a site support grazing and solar generation concurrently? Sources: EEA-LAND.
+- **land-q17** Did housing replace an actual use, increase sealing, both or neither? Sources: EEA-LAND.
+- **land-q18** Was pavement removed, and which soil properties changed afterwards? Sources: EEA-SOIL.
+- **land-q19** Who manages, occupies or holds a specified use right over this site? Sources: FAO-TENURE.
+- **land-q20** Which claimants actually dispute which rights or uses? Sources: FAO-TENURE.
+- **land-q21** Which planned uses cannot coexist under stated constraints? Sources: EEA-LAND.
+- **land-q22** Did a road split continuous surface, and does it obstruct the specified organism? Sources: EEA-FRAGMENT.
+- **land-q23** Which land qualities declined relative to which baseline and interval? Sources: UNCCD-SO1.
+- **land-q24** Did an actual use cease while tenure persisted and vegetation changed later? Sources: EEA-LAND.
+- **land-q25** What fraction of this surface is sealed by impermeable material? Sources: EEA-SOIL.
+- **land-q26** What is the extent actually managed for forestry, recreation or extraction here? Sources: FAO-TENURE.
+- **land-q27** Did conservation management achieve recovery under the stated reference? Sources: UNCCD-SO1.

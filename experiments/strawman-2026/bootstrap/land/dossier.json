@@ -2,30 +2,110 @@
   "dossier_version": "0.1",
   "domain": "land",
   "status": "draft_not_review_ready",
-  "scope": "Land management and agricultural use as observable practices on specified land units; biophysical cover, intended use, tenure and suitability are different axes.",
+  "scope": "Cross-sector actual land use, management, occupation, conversion, specified rights/disputes and condition. Cover, use, plan, permission, tenure and condition remain distinct.",
   "imports": [
     {
       "namespace": "imod",
-      "revision": "46c695b8e360b4e2c1180c57c203844d53723258",
-      "scope": "Root parents verified by direct source reading; no direct ODO access.",
-      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
-      "review_context_sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca"
+      "revision": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "review_context_commit": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "review_context_sha256": "315e0d55fe77e1ceca185fd2a926a1e6d77d18d22b40d573ece3a6ee21d76cca",
+      "scope": "Keyword type context only",
+      "status": "source_snapshot_not_accepted_semantic_import"
     },
     {
       "namespace": "earth",
-      "revision": "46c695b8e360b4e2c1180c57c203844d53723258",
-      "scope": "Region proposed but surface versus volume unresolved.",
-      "review_context_commit": "98c68ba58b206c077add6fbdeb2c6d6e06fe3782",
-      "review_context_sha256": "424c0141849aac2b9ae762079ff31c8c14cff4f0d6506eb19971004e7f22d816"
+      "revision": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "review_context_commit": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "review_context_sha256": "424c0141849aac2b9ae762079ff31c8c14cff4f0d6506eb19971004e7f22d816",
+      "scope": "Surface versus volumetric region remains unresolved",
+      "status": "source_snapshot_not_accepted_semantic_import"
+    },
+    {
+      "namespace": "geography",
+      "revision": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "review_context_commit": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "review_context_sha256": "4733a83507079c8b7e16c8fc0116d9593f178df856791a6652c0e85d12401966",
+      "scope": "Spatial position/topology, not duplicate land primitives",
+      "status": "source_snapshot_not_accepted_semantic_import"
+    },
+    {
+      "namespace": "society",
+      "revision": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "review_context_commit": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "review_context_sha256": "015b60a5d60fc8c217aba9e664600983970ae191fe0c322c9d29e783ab101007",
+      "scope": "Actors and institutional rights; detailed rights meaning still missing",
+      "status": "source_snapshot_not_accepted_semantic_import"
+    },
+    {
+      "namespace": "agency",
+      "revision": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "review_context_commit": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "review_context_sha256": "d78b3a5e23d4dd89332caefdd2ece331ef08c2040297e4e5d267d958fe713866",
+      "scope": "Action and authorization context",
+      "status": "source_snapshot_not_accepted_semantic_import"
+    },
+    {
+      "namespace": "ecology",
+      "revision": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "review_context_commit": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "review_context_sha256": "a593560f4beeec306f893ede8869b1e01492dc43d26adf0fdb01d6efeb2c62d9",
+      "scope": "Organism-relative connectivity and vegetation",
+      "status": "source_snapshot_not_accepted_semantic_import"
+    },
+    {
+      "namespace": "soil",
+      "revision": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "review_context_commit": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "review_context_sha256": "c72b14c706e4b9ae5adb8e65520d284e975e65004860a970eb23f032e3342459",
+      "scope": "Physical soil condition",
+      "status": "source_snapshot_not_accepted_semantic_import"
+    },
+    {
+      "namespace": "hydrology",
+      "revision": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "review_context_commit": "28ee04c25829684aa0e78127d694564bbc94194d",
+      "review_context_sha256": "1f96cc9f79d91835a31ee81eb8005148a3d1372fa444d8aa73f0d469cd25d1c2",
+      "scope": "Water conditions",
+      "status": "source_snapshot_not_accepted_semantic_import"
     }
   ],
   "sources": [
     {
-      "id": "FAO-LCCS",
-      "title": "Land Cover Classification System",
-      "url": "https://www.fao.org/4/x0596e/x0596e00.htm",
-      "locator": "2000; Part A definitions and mixed mapping units",
-      "scope": "Land cover classification structure; a specific authority version, not universal equivalence.",
+      "id": "EEA-FRAGMENT",
+      "title": "Landscape fragmentation pressure in Europe",
+      "url": "https://www.eea.europa.eu/en/analysis/indicators/landscape-fragmentation-pressure-in-europe",
+      "locator": "Indicator definition and methodology",
+      "scope": "Barrier geometry supports structural fragmentation; organism-specific permeability needs separate evidence.",
+      "status": "primary_source_retrieved_limited_scope",
+      "retrieved": "2026-10-07",
+      "review": "Author screening; organizational boundary authorized, scientific/category approval outstanding"
+    },
+    {
+      "id": "EEA-LAND",
+      "title": "Land use and land take",
+      "url": "https://www.eea.europa.eu/en/europe-environment-2025/thematic-briefings/biodiversity-and-ecosystems/land-use-and-land-take",
+      "locator": "2025 briefing: introduction, multifunctional land use and changing demand",
+      "scope": "Cross-sector uses and conversion; settlement reporting is a proxy, not universal land-take identity.",
+      "status": "primary_source_retrieved_limited_scope",
+      "retrieved": "2026-10-07",
+      "review": "Author screening; organizational boundary authorized, scientific/category approval outstanding"
+    },
+    {
+      "id": "EEA-SOIL",
+      "title": "Soil resources",
+      "url": "https://www.eea.europa.eu/en/europe-environment-2025/thematic-briefings/biodiversity-and-ecosystems/soil-resources",
+      "locator": "2025 briefing: key messages and soil sealing",
+      "scope": "Soil condition spans sectors. Intervention does not prove recovery.",
+      "status": "primary_source_retrieved_limited_scope",
+      "retrieved": "2026-10-07",
+      "review": "Author screening; organizational boundary authorized, scientific/category approval outstanding"
+    },
+    {
+      "id": "FAO-CA",
+      "title": "Conservation Agriculture principles",
+      "url": "https://www.fao.org/conservation-agriculture/overview/conservation-agriculture-principles/en/",
+      "locator": "Three principles and scheme thresholds",
+      "scope": "Specific conservation agriculture criteria; no universal good/bad land predicate.",
       "status": "primary_source_retrieved_limited_scope",
       "retrieved": "2026-10-03",
       "review": "LLM source screening only; no domain expert discussion"
@@ -34,18 +114,18 @@
       "id": "FAO-EVAL",
       "title": "A Framework for Land Evaluation: Basic concepts",
       "url": "https://www.fao.org/4/X5310E/x5310e03.htm",
-      "locator": "Sections 2.1–2.5",
+      "locator": "Sections 2.1ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“2.5",
       "scope": "Land use-specific suitability, qualities and characteristics; older framework retained with scope.",
       "status": "primary_source_retrieved_limited_scope",
       "retrieved": "2026-10-03",
       "review": "LLM source screening only; no domain expert discussion"
     },
     {
-      "id": "FAO-CA",
-      "title": "Conservation Agriculture principles",
-      "url": "https://www.fao.org/conservation-agriculture/overview/conservation-agriculture-principles/en/",
-      "locator": "Three principles and scheme thresholds",
-      "scope": "Specific conservation agriculture criteria; no universal good/bad land predicate.",
+      "id": "FAO-LCCS",
+      "title": "Land Cover Classification System",
+      "url": "https://www.fao.org/4/x0596e/x0596e00.htm",
+      "locator": "2000; Part A definitions and mixed mapping units",
+      "scope": "Land cover classification structure; a specific authority version, not universal equivalence.",
       "status": "primary_source_retrieved_limited_scope",
       "retrieved": "2026-10-03",
       "review": "LLM source screening only; no domain expert discussion"
@@ -61,537 +141,44 @@
       "review": "LLM source screening only; no domain expert discussion"
     },
     {
-      "id": "FAO-WATER",
-      "title": "Crop evapotranspiration guidelines",
-      "url": "https://www.fao.org/4/s8376e/s8376e.pdf",
-      "locator": "Crop water requirements; historical edition",
-      "scope": "Water requirement distinction; models excluded, updated 2025 revision needs full audit.",
+      "id": "FAO-TENURE",
+      "title": "Voluntary Guidelines on Tenure",
+      "url": "https://www.fao.org/tenure/resources/publication/vggt/en",
+      "locator": "Guidelines overview: tenure of land, fisheries and forests",
+      "scope": "Distinguish rights, management, occupation and claims; jurisdiction and evidence required, no legal determination.",
       "status": "primary_source_retrieved_limited_scope",
-      "retrieved": "2026-10-03",
-      "review": "LLM source screening only; no domain expert discussion"
+      "retrieved": "2026-10-07",
+      "review": "Author screening; organizational boundary authorized, scientific/category approval outstanding"
+    },
+    {
+      "id": "FAO-WCA",
+      "title": "World Programme for the Census of Agriculture 2010: definitions",
+      "url": "https://www.fao.org/4/a0135e/A0135E07.htm",
+      "locator": "11.151-11.153: animals raised, responsibility and pastoral systems; 11.44 communal grazing",
+      "scope": "Historical statistical evidence: animals raised need not be owned or on holding land. Reporting conventions are not ontology axioms.",
+      "status": "primary_source_retrieved_limited_scope",
+      "retrieved": "2026-10-07",
+      "review": "Author screening; organizational boundary authorized, scientific/category approval outstanding"
+    },
+    {
+      "id": "UNCCD-SO1",
+      "title": "PRAIS4 2026 strategic objective 1",
+      "url": "https://prais4-reporting-manual.unccd.int/en/2026/SO1.html",
+      "locator": "SO1 baseline and degradation interpretation",
+      "scope": "Reference-relative condition; stable degraded state and productivity/condition disagreement are possible. Reporting algorithms stay outside vocabulary.",
+      "status": "primary_source_retrieved_limited_scope",
+      "retrieved": "2026-10-07",
+      "review": "Author screening; organizational boundary authorized, scientific/category approval outstanding"
     }
   ],
   "concepts": [
     {
-      "id": "land-ManagedField",
-      "name": "land:ManagedField",
-      "category": "subject",
-      "definition": "A land management unit delimited by an explicit cultivation boundary.",
-      "parent": "earth:Region",
-      "parent_status": "proposed_parent",
-      "qualities": [
-        "land:SurfaceCoverFraction",
-        "land:DisturbedAreaFraction"
-      ],
-      "parameters": [],
-      "bindings": {
-        "affects": [],
-        "creates": [],
-        "confers": [],
-        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
-      },
-      "source_ids": [
-        "FAO-EVAL"
-      ],
-      "positive": "one delineated field",
-      "negative": "every polygon from a satellite classification",
-      "status": "blocked",
-      "ancestry_evidence": "src/earth.kwv:35; volumetric/surface conflict unresolved",
-      "alignment_role": "proposed_scientific_specialization_requires_review",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-LandEvaluationUnit",
-      "name": "land:LandEvaluationUnit",
-      "category": "subject",
-      "definition": "A bounded land unit selected for evaluating a stated use.",
-      "parent": "earth:Region",
-      "parent_status": "proposed_parent",
-      "qualities": [
-        "land:PlantAvailableWater"
-      ],
-      "parameters": [],
-      "bindings": {
-        "affects": [],
-        "creates": [],
-        "confers": [],
-        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
-      },
-      "source_ids": [
-        "FAO-EVAL"
-      ],
-      "positive": "one declared evaluation unit",
-      "negative": "an abstract suitability class",
-      "status": "blocked",
-      "ancestry_evidence": "src/earth.kwv:35; volumetric/surface conflict unresolved",
-      "alignment_role": "proposed_scientific_specialization_requires_review",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-CropStand",
-      "name": "land:CropStand",
-      "category": "subject",
-      "definition": "A bounded cultivated plant population treated as an observational whole.",
-      "parent": "imod:Subject",
-      "parent_status": "proposed_parent",
-      "qualities": [
-        "land:HarvestableBiomass"
-      ],
-      "parameters": [],
-      "bindings": {
-        "affects": [],
-        "creates": [],
-        "confers": [],
-        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
-      },
-      "source_ids": [
-        "FAO-SEED"
-      ],
-      "positive": "standing cereal crop in one field",
-      "negative": "stored grain after harvest",
-      "status": "blocked",
-      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
-      "alignment_role": "implicit_type_context_not_explicit_is",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-VegetationPatch",
-      "name": "land:VegetationPatch",
-      "category": "subject",
-      "definition": "A bounded observed vegetation assemblage with declared delineation criteria.",
-      "parent": "imod:Subject",
-      "parent_status": "proposed_parent",
-      "qualities": [
-        "land:SurfaceCoverFraction"
-      ],
-      "parameters": [],
-      "bindings": {
-        "affects": [],
-        "creates": [],
-        "confers": [],
-        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
-      },
-      "source_ids": [
-        "FAO-LCCS"
-      ],
-      "positive": "one mapped vegetation patch",
-      "negative": "land legally zoned forest without vegetation",
-      "status": "blocked",
-      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
-      "alignment_role": "implicit_type_context_not_explicit_is",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-AgriculturalHolding",
-      "name": "land:AgriculturalHolding",
-      "category": "subject",
-      "definition": "An operational land-management unit under a specified management convention.",
-      "parent": "imod:Subject",
-      "parent_status": "proposed_parent",
-      "qualities": [
-        "land:ManagedArea"
-      ],
-      "parameters": [],
-      "bindings": {
-        "affects": [],
-        "creates": [],
-        "confers": [],
-        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
-      },
-      "source_ids": [
-        "FAO-EVAL"
-      ],
-      "positive": "holding with documented management boundary",
-      "negative": "any contiguous agricultural cover polygon",
-      "status": "blocked",
-      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
-      "alignment_role": "implicit_type_context_not_explicit_is",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-Irrigation",
-      "name": "land:Irrigation",
-      "category": "process",
-      "definition": "Deliberate water application to a managed growing area.",
-      "parent": "imod:Process",
-      "parent_status": "proposed_parent",
-      "qualities": [],
-      "parameters": [
-        "land:PlantAvailableWater",
-        "land:AppliedWaterAmount"
-      ],
-      "bindings": {
-        "affects": [
-          "land:PlantAvailableWater"
-        ],
-        "creates": [],
-        "confers": [],
-        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
-      },
-      "source_ids": [
-        "FAO-WATER"
-      ],
-      "positive": "water applied to field",
-      "negative": "natural rainfall",
-      "status": "provisional",
-      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
-      "alignment_role": "implicit_type_context_not_explicit_is",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-Tillage",
-      "name": "land:Tillage",
-      "category": "process",
-      "definition": "Mechanical disturbance of soil during land management.",
-      "parent": "imod:Process",
-      "parent_status": "proposed_parent",
-      "qualities": [],
-      "parameters": [
-        "land:DisturbedAreaFraction"
-      ],
-      "bindings": {
-        "affects": [
-          "land:DisturbedAreaFraction"
-        ],
-        "creates": [],
-        "confers": [],
-        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
-      },
-      "source_ids": [
-        "FAO-CA"
-      ],
-      "positive": "cultivation disturbing soil",
-      "negative": "undisturbed land merely classified cropland",
-      "status": "provisional",
-      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
-      "alignment_role": "implicit_type_context_not_explicit_is",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-Sowing",
-      "name": "land:Sowing",
-      "category": "process",
-      "definition": "Placement of seed into the growing substrate as a management activity.",
-      "parent": "imod:Process",
-      "parent_status": "proposed_parent",
-      "qualities": [],
-      "parameters": [
-        "land:SeedPlacementDepth",
-        "land:DisturbedAreaFraction"
-      ],
-      "bindings": {
-        "affects": [
-          "land:DisturbedAreaFraction"
-        ],
-        "creates": [],
-        "confers": [],
-        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
-      },
-      "source_ids": [
-        "FAO-SEED"
-      ],
-      "positive": "direct drill placing seed",
-      "negative": "spontaneous seed dispersal",
-      "status": "provisional",
-      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
-      "alignment_role": "implicit_type_context_not_explicit_is",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-Harvesting",
-      "name": "land:Harvesting",
-      "category": "process",
-      "definition": "Removal of cultivated biological production in a management operation.",
-      "parent": "imod:Process",
-      "parent_status": "proposed_parent",
-      "qualities": [],
-      "parameters": [
-        "land:HarvestableBiomass"
-      ],
-      "bindings": {
-        "affects": [
-          "land:HarvestableBiomass"
-        ],
-        "creates": [],
-        "confers": [],
-        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
-      },
-      "source_ids": [
-        "FAO-SEED"
-      ],
-      "positive": "cutting mature crop",
-      "negative": "uncollected wildfire consumption",
-      "status": "provisional",
-      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
-      "alignment_role": "implicit_type_context_not_explicit_is",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-ResidueRetention",
-      "name": "land:ResidueRetention",
-      "category": "process",
-      "definition": "Management leaving specified crop residue at the soil surface.",
-      "parent": "imod:Process",
-      "parent_status": "proposed_parent",
-      "qualities": [],
-      "parameters": [
-        "land:SurfaceCoverFraction"
-      ],
-      "bindings": {
-        "affects": [
-          "land:SurfaceCoverFraction"
-        ],
-        "creates": [],
-        "confers": [],
-        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
-      },
-      "source_ids": [
-        "FAO-SEED"
-      ],
-      "positive": "residue deliberately left after harvest",
-      "negative": "claim all residue is retained without evidence",
-      "status": "blocked",
-      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
-      "alignment_role": "implicit_type_context_not_explicit_is",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-OccupiesField",
-      "name": "land:OccupiesField",
-      "category": "relationship",
-      "definition": "Spatial occupancy of a managed field by a stated crop stand.",
-      "parent": "imod:Relationship",
-      "parent_status": "proposed_parent",
-      "qualities": [],
-      "parameters": [],
-      "bindings": {
-        "source": "land:CropStand",
-        "target": "land:ManagedField",
-        "kind": "structural",
-        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
-      },
-      "source_ids": [
-        "FAO-SEED"
-      ],
-      "positive": "crop stand located in field",
-      "negative": "crop name listed in a future plan",
-      "status": "provisional",
-      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
-      "alignment_role": "implicit_type_context_not_explicit_is",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-ManagesField",
-      "name": "land:ManagesField",
-      "category": "relationship",
-      "definition": "Holding-level management assignment of a field within declared operational scope.",
-      "parent": "imod:Relationship",
-      "parent_status": "proposed_parent",
-      "qualities": [],
-      "parameters": [],
-      "bindings": {
-        "source": "land:AgriculturalHolding",
-        "target": "land:ManagedField",
-        "kind": "structural",
-        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
-      },
-      "source_ids": [
-        "FAO-EVAL"
-      ],
-      "positive": "field managed in the holding",
-      "negative": "field nearby but managed elsewhere",
-      "status": "provisional",
-      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
-      "alignment_role": "implicit_type_context_not_explicit_is",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-OverlapsEvaluationUnit",
-      "name": "land:OverlapsEvaluationUnit",
-      "category": "relationship",
-      "definition": "Declared spatial overlap between a field and an evaluation unit.",
-      "parent": "imod:Relationship",
-      "parent_status": "proposed_parent",
-      "qualities": [],
-      "parameters": [],
-      "bindings": {
-        "source": "land:ManagedField",
-        "target": "land:LandEvaluationUnit",
-        "kind": "structural",
-        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
-      },
-      "source_ids": [
-        "FAO-EVAL"
-      ],
-      "positive": "field intersects evaluation unit",
-      "negative": "same suitability label without overlap",
-      "status": "provisional",
-      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
-      "alignment_role": "implicit_type_context_not_explicit_is",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-AdjacentField",
-      "name": "land:AdjacentField",
-      "category": "relationship",
-      "definition": "Field-to-field boundary adjacency under stated topology.",
-      "parent": "imod:Relationship",
-      "parent_status": "proposed_parent",
-      "qualities": [],
-      "parameters": [],
-      "bindings": {
-        "source": "land:ManagedField",
-        "target": "land:ManagedField",
-        "kind": "undecided_relationship_or_bond",
-        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
-      },
-      "source_ids": [
-        "FAO-LCCS"
-      ],
-      "positive": "fields sharing a declared boundary",
-      "negative": "fields separated by an intervening road",
-      "status": "blocked",
-      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
-      "alignment_role": "implicit_type_context_not_explicit_is",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-SupportsCropStand",
-      "name": "land:SupportsCropStand",
-      "category": "relationship",
-      "definition": "Land evaluation unit providing the rooting setting of a crop stand; no productivity guarantee.",
-      "parent": "imod:Relationship",
-      "parent_status": "proposed_parent",
-      "qualities": [],
-      "parameters": [],
-      "bindings": {
-        "source": "land:LandEvaluationUnit",
-        "target": "land:CropStand",
-        "kind": "functional",
-        "rationale": "Typed endpoints are draft candidate references; no observed instance, universal causal dependency or executable propagation implied."
-      },
-      "source_ids": [
-        "FAO-EVAL"
-      ],
-      "positive": "stand rooted in unit",
-      "negative": "suitability predicted without any crop present",
-      "status": "blocked",
-      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
-      "alignment_role": "implicit_type_context_not_explicit_is",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-SowingEpisode",
-      "name": "land:SowingEpisode",
-      "category": "event",
-      "definition": "A bounded planting operation on a specified field.",
-      "parent": "imod:Event",
-      "parent_status": "proposed_parent",
-      "qualities": [],
-      "parameters": [
-        "land:SeedPlacementDepth"
-      ],
-      "bindings": {
-        "affects": [
-          "land:DisturbedAreaFraction"
-        ],
-        "creates": [],
-        "confers": [],
-        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
-      },
-      "source_ids": [
-        "FAO-SEED"
-      ],
-      "positive": "one completed field sowing",
-      "negative": "unbounded sowing practice",
-      "status": "provisional",
-      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
-      "alignment_role": "implicit_type_context_not_explicit_is",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-HarvestEpisode",
-      "name": "land:HarvestEpisode",
-      "category": "event",
-      "definition": "A bounded product-removal operation on an identified crop stand.",
-      "parent": "imod:Event",
-      "parent_status": "proposed_parent",
-      "qualities": [],
-      "parameters": [
-        "land:HarvestableBiomass"
-      ],
-      "bindings": {
-        "affects": [
-          "land:HarvestableBiomass"
-        ],
-        "creates": [],
-        "confers": [],
-        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
-      },
-      "source_ids": [
-        "FAO-SEED"
-      ],
-      "positive": "one harvest operation",
-      "negative": "annual harvest statistic",
-      "status": "provisional",
-      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
-      "alignment_role": "implicit_type_context_not_explicit_is",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-IrrigationEpisode",
-      "name": "land:IrrigationEpisode",
-      "category": "event",
-      "definition": "A bounded water-application operation with identified area and start/end.",
-      "parent": "imod:Event",
-      "parent_status": "proposed_parent",
-      "qualities": [],
-      "parameters": [
-        "land:AppliedWaterAmount"
-      ],
-      "bindings": {
-        "affects": [
-          "land:PlantAvailableWater"
-        ],
-        "creates": [],
-        "confers": [],
-        "rationale": "Author-proposed binding; only a potential at explicitly participating bearers, no runtime consequence or invariant effect claimed. Empty lists mean no justified binding asserted."
-      },
-      "source_ids": [
-        "FAO-WATER"
-      ],
-      "positive": "one irrigation application",
-      "negative": "irrigation capability only",
-      "status": "provisional",
-      "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
-      "alignment_role": "implicit_type_context_not_explicit_is",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
       "id": "land-LandUseConversion",
       "name": "land:LandUseConversion",
       "category": "event",
-      "definition": "A bounded implemented transition between specified land management uses.",
+      "definition": "Bounded actual transition between specified uses of a surface; a plan, permission change or relabeling alone is not this event.",
       "parent": "imod:Event",
-      "parent_status": "proposed_parent",
+      "parent_status": "blocked",
       "qualities": [],
       "parameters": [
         "land:ManagedArea"
@@ -611,15 +198,22 @@
       "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
       "alignment_role": "implicit_type_context_not_explicit_is",
       "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation.",
+      "provenance": {
+        "original_id": "land-LandUseConversion",
+        "original_name": "land:LandUseConversion",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "disposition": "retained_generalized_land"
+      },
+      "prior_blockers": "ManagedField and LandEvaluationUnit cannot quietly specialise earth:Region's volumetric meaning if their identity is a surface polygon: parent remains proposed with an explicit upstream footprint distinction. CropStand and VegetationPatch may be configurations rather than things; unity criteria need biology/ecology review. AgriculturalHolding has an operational/institutional boundary and may belong under society. Do not retain land:LandCover as a universal identity merely because the old file declares it. FAO classifications are versioned authorities; LCCS categories, use labels and conservation agriculture rules are not mutually equivalent or automatically exhaustive. AdjacentField is symmetric and may be better a bond rather than a directed relationship; keep it blocked pending relationship/bond decision. ResidueRetention may be a practice/state description rather than homogeneous process: intervention bounds and evidence are required."
     },
     {
       "id": "land-CoverChangeEpisode",
       "name": "land:CoverChangeEpisode",
       "category": "event",
-      "definition": "A bounded occurrence producing a stated change in biophysical cover.",
+      "definition": "Bounded physical change in specified surface covering; two different maps alone do not establish an event.",
       "parent": "imod:Event",
-      "parent_status": "proposed_parent",
+      "parent_status": "blocked",
       "qualities": [],
       "parameters": [
         "land:SurfaceCoverFraction"
@@ -641,32 +235,32 @@
       "ancestry_evidence": "src/imod.kwv; exact root keyword declaration verified, scientific specialisation unapproved",
       "alignment_role": "implicit_type_context_not_explicit_is",
       "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation.",
+      "provenance": {
+        "original_id": "land-CoverChangeEpisode",
+        "original_name": "land:CoverChangeEpisode",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "disposition": "retained_generalized_land"
+      },
+      "prior_blockers": "ManagedField and LandEvaluationUnit cannot quietly specialise earth:Region's volumetric meaning if their identity is a surface polygon: parent remains proposed with an explicit upstream footprint distinction. CropStand and VegetationPatch may be configurations rather than things; unity criteria need biology/ecology review. AgriculturalHolding has an operational/institutional boundary and may belong under society. Do not retain land:LandCover as a universal identity merely because the old file declares it. FAO classifications are versioned authorities; LCCS categories, use labels and conservation agriculture rules are not mutually equivalent or automatically exhaustive. AdjacentField is symmetric and may be better a bond rather than a directed relationship; keep it blocked pending relationship/bond decision. ResidueRetention may be a practice/state description rather than homogeneous process: intervention bounds and evidence are required."
     },
     {
       "id": "land-SurfaceCoverFraction",
       "name": "land:SurfaceCoverFraction",
       "category": "quality",
-      "definition": "Fraction of declared land surface covered by the identified material/vegetation at an observation stage.",
+      "definition": "Fraction of an explicitly bounded surface covered by a specified material, with denominator, overlap and observation support stated.",
       "parent": "imod:Proportion",
-      "parent_status": "proposed_parent",
+      "parent_status": "blocked",
       "qualities": [],
       "parameters": [],
       "bindings": {
         "bearers": [
-          "land:ManagedField",
-          "land:VegetationPatch"
+          "land:LandSurfaceUnit"
         ],
-        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
-        "parameter_of": [
-          "land:ResidueRetention",
-          "land:CoverChangeEpisode"
-        ],
-        "affected_by": [
-          "land:ResidueRetention",
-          "land:CoverChangeEpisode"
-        ],
-        "bearer_status": "provisional"
+        "bearer_status": "blocked_pending_surface_parent",
+        "parameter_of": [],
+        "affected_by": [],
+        "rationale": "Actual surface bearer required; no reverse dependency on agriculture and no automatic causal link."
       },
       "source_ids": [
         "FAO-EVAL",
@@ -675,35 +269,35 @@
       ],
       "positive": "A value observed for the named bearer and stated convention.",
       "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
-      "status": "provisional",
+      "status": "blocked",
       "alignment_role": "proposed_scientific_specialization_requires_review",
       "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation.",
+      "provenance": {
+        "original_id": "land-SurfaceCoverFraction",
+        "original_name": "land:SurfaceCoverFraction",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "disposition": "retained_generalized_land"
+      },
+      "prior_blockers": "ManagedField and LandEvaluationUnit cannot quietly specialise earth:Region's volumetric meaning if their identity is a surface polygon: parent remains proposed with an explicit upstream footprint distinction. CropStand and VegetationPatch may be configurations rather than things; unity criteria need biology/ecology review. AgriculturalHolding has an operational/institutional boundary and may belong under society. Do not retain land:LandCover as a universal identity merely because the old file declares it. FAO classifications are versioned authorities; LCCS categories, use labels and conservation agriculture rules are not mutually equivalent or automatically exhaustive. AdjacentField is symmetric and may be better a bond rather than a directed relationship; keep it blocked pending relationship/bond decision. ResidueRetention may be a practice/state description rather than homogeneous process: intervention bounds and evidence are required."
     },
     {
       "id": "land-DisturbedAreaFraction",
       "name": "land:DisturbedAreaFraction",
       "category": "quality",
-      "definition": "Fraction of the specified managed surface mechanically disturbed by a declared operation.",
+      "definition": "Fraction of a stated reference surface physically disturbed under a specified operation and interval; not restricted to tillage.",
       "parent": "imod:Proportion",
-      "parent_status": "proposed_parent",
+      "parent_status": "blocked",
       "qualities": [],
       "parameters": [],
       "bindings": {
         "bearers": [
-          "land:ManagedField"
+          "land:LandSurfaceUnit"
         ],
-        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
-        "parameter_of": [
-          "land:Tillage",
-          "land:Sowing"
-        ],
-        "affected_by": [
-          "land:Tillage",
-          "land:Sowing",
-          "land:SowingEpisode"
-        ],
-        "bearer_status": "provisional"
+        "bearer_status": "blocked_pending_surface_parent",
+        "parameter_of": [],
+        "affected_by": [],
+        "rationale": "Actual surface bearer required; no reverse dependency on agriculture and no automatic causal link."
       },
       "source_ids": [
         "FAO-EVAL",
@@ -712,454 +306,329 @@
       ],
       "positive": "A value observed for the named bearer and stated convention.",
       "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
-      "status": "provisional",
+      "status": "blocked",
       "alignment_role": "proposed_scientific_specialization_requires_review",
       "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation.",
+      "provenance": {
+        "original_id": "land-DisturbedAreaFraction",
+        "original_name": "land:DisturbedAreaFraction",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "disposition": "retained_generalized_land"
+      },
+      "prior_blockers": "ManagedField and LandEvaluationUnit cannot quietly specialise earth:Region's volumetric meaning if their identity is a surface polygon: parent remains proposed with an explicit upstream footprint distinction. CropStand and VegetationPatch may be configurations rather than things; unity criteria need biology/ecology review. AgriculturalHolding has an operational/institutional boundary and may belong under society. Do not retain land:LandCover as a universal identity merely because the old file declares it. FAO classifications are versioned authorities; LCCS categories, use labels and conservation agriculture rules are not mutually equivalent or automatically exhaustive. AdjacentField is symmetric and may be better a bond rather than a directed relationship; keep it blocked pending relationship/bond decision. ResidueRetention may be a practice/state description rather than homogeneous process: intervention bounds and evidence are required."
     },
     {
-      "id": "land-PlantAvailableWater",
-      "name": "land:PlantAvailableWater",
+      "id": "land-ManagedArea",
+      "name": "land:ManagedArea",
       "category": "quality",
-      "definition": "Water available to a specified rooted crop in a stated soil profile; requires soil and crop conventions.",
-      "parent": "imod:Quality",
-      "parent_status": "proposed_parent",
+      "definition": "Extent of surface under a specified actual management relation; neither owned nor occupied area by implication.",
+      "parent": "imod:Area",
+      "parent_status": "blocked",
       "qualities": [],
       "parameters": [],
       "bindings": {
         "bearers": [
-          "land:LandEvaluationUnit"
+          "land:LandSurfaceUnit"
         ],
-        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
-        "parameter_of": [
-          "land:Irrigation"
-        ],
-        "affected_by": [
-          "land:Irrigation",
-          "land:IrrigationEpisode"
-        ],
-        "bearer_status": "provisional"
+        "bearer_status": "blocked_pending_surface_parent",
+        "parameter_of": [],
+        "affected_by": [],
+        "rationale": "Actual surface bearer required; no reverse dependency on agriculture and no automatic causal link."
       },
       "source_ids": [
-        "FAO-EVAL",
-        "FAO-WATER"
+        "FAO-EVAL"
       ],
       "positive": "A value observed for the named bearer and stated convention.",
       "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
       "status": "blocked",
       "alignment_role": "implicit_type_context_not_explicit_is",
       "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation.",
+      "provenance": {
+        "original_id": "land-ManagedArea",
+        "original_name": "land:ManagedArea",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "disposition": "retained_generalized_land"
+      },
+      "prior_blockers": "ManagedField and LandEvaluationUnit cannot quietly specialise earth:Region's volumetric meaning if their identity is a surface polygon: parent remains proposed with an explicit upstream footprint distinction. CropStand and VegetationPatch may be configurations rather than things; unity criteria need biology/ecology review. AgriculturalHolding has an operational/institutional boundary and may belong under society. Do not retain land:LandCover as a universal identity merely because the old file declares it. FAO classifications are versioned authorities; LCCS categories, use labels and conservation agriculture rules are not mutually equivalent or automatically exhaustive. AdjacentField is symmetric and may be better a bond rather than a directed relationship; keep it blocked pending relationship/bond decision. ResidueRetention may be a practice/state description rather than homogeneous process: intervention bounds and evidence are required."
     },
     {
-      "id": "land-HarvestableBiomass",
-      "name": "land:HarvestableBiomass",
+      "id": "land-LandSurfaceUnit",
+      "name": "land:LandSurfaceUnit",
+      "category": "subject",
+      "definition": "An actual bounded terrestrial surface considered as a physical bearer, independent of map or assessment identity.",
+      "parent": null,
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "No universal effect or runtime consequence asserted."
+      },
+      "source_ids": [
+        "FAO-LCCS",
+        "EEA-LAND"
+      ],
+      "positive": "specified site surface",
+      "negative": "arbitrary evaluation record",
+      "status": "blocked",
+      "ancestry_evidence": "Upstream surface identity missing; earth:Region is volumetric. No fabricated parent.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Upstream surface identity missing; earth:Region is volumetric. No fabricated parent."
+    },
+    {
+      "id": "land-SurfaceSealing",
+      "name": "land:SurfaceSealing",
+      "category": "process",
+      "definition": "Placing impermeable covering on a specified soil surface.",
+      "parent": "imod:Process",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "No universal effect or runtime consequence asserted."
+      },
+      "source_ids": [
+        "EEA-SOIL"
+      ],
+      "positive": "paving an exposed surface",
+      "negative": "new housing permission",
+      "status": "blocked",
+      "ancestry_evidence": "Root process is keyword type context; soil/physical intervention specialization pending.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Root process is keyword type context; soil/physical intervention specialization pending."
+    },
+    {
+      "id": "land-SurfaceUnsealing",
+      "name": "land:SurfaceUnsealing",
+      "category": "process",
+      "definition": "Physically removing impermeable covering from a specified surface.",
+      "parent": "imod:Process",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "No universal effect or runtime consequence asserted."
+      },
+      "source_ids": [
+        "EEA-SOIL"
+      ],
+      "positive": "removing pavement",
+      "negative": "assumed recovery from a restoration plan",
+      "status": "blocked",
+      "ancestry_evidence": "Root process is keyword type context; soil/physical intervention specialization pending.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Root process is keyword type context; soil/physical intervention specialization pending."
+    },
+    {
+      "id": "land-ActualLandUse",
+      "name": "land:ActualLandUse",
+      "category": "relationship",
+      "definition": "An actual activity uses a specified surface during a stated interval.",
+      "parent": null,
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": null,
+        "target": "land:LandSurfaceUnit",
+        "kind": "unresolved_relationship_or_configuration",
+        "rationale": "N-ary roles, actor/activity/claim endpoints and rights context unresolved. No binary declaration generated."
+      },
+      "source_ids": [
+        "EEA-LAND"
+      ],
+      "positive": "concurrent grazing and solar production",
+      "negative": "one exclusive identity inferred from cover",
+      "status": "blocked",
+      "ancestry_evidence": "Imported actor/activity/claim/rights parents require review; a binary name does not resolve n-ary structure.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Imported actor/activity/claim/rights parents require review; a binary name does not resolve n-ary structure."
+    },
+    {
+      "id": "land-ManagesLand",
+      "name": "land:ManagesLand",
+      "category": "relationship",
+      "definition": "An identified actor actually directs management of a specified surface.",
+      "parent": null,
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": null,
+        "target": "land:LandSurfaceUnit",
+        "kind": "unresolved_relationship_or_configuration",
+        "rationale": "N-ary roles, actor/activity/claim endpoints and rights context unresolved. No binary declaration generated."
+      },
+      "source_ids": [
+        "FAO-TENURE"
+      ],
+      "positive": "management responsibility with evidence",
+      "negative": "ownership inferred from management",
+      "status": "blocked",
+      "ancestry_evidence": "Imported actor/activity/claim/rights parents require review; a binary name does not resolve n-ary structure.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Imported actor/activity/claim/rights parents require review; a binary name does not resolve n-ary structure."
+    },
+    {
+      "id": "land-OccupiesLand",
+      "name": "land:OccupiesLand",
+      "category": "relationship",
+      "definition": "An identified occupant uses physical space on a specified surface.",
+      "parent": null,
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": null,
+        "target": "land:LandSurfaceUnit",
+        "kind": "unresolved_relationship_or_configuration",
+        "rationale": "N-ary roles, actor/activity/claim endpoints and rights context unresolved. No binary declaration generated."
+      },
+      "source_ids": [
+        "FAO-TENURE"
+      ],
+      "positive": "observed occupation",
+      "negative": "automatic ownership",
+      "status": "blocked",
+      "ancestry_evidence": "Imported actor/activity/claim/rights parents require review; a binary name does not resolve n-ary structure.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Imported actor/activity/claim/rights parents require review; a binary name does not resolve n-ary structure."
+    },
+    {
+      "id": "land-HoldsLandUseRight",
+      "name": "land:HoldsLandUseRight",
+      "category": "relationship",
+      "definition": "An identified holder has a specified use right concerning a surface in a stated institutional context.",
+      "parent": null,
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": null,
+        "target": "land:LandSurfaceUnit",
+        "kind": "unresolved_relationship_or_configuration",
+        "rationale": "N-ary roles, actor/activity/claim endpoints and rights context unresolved. No binary declaration generated."
+      },
+      "source_ids": [
+        "FAO-TENURE"
+      ],
+      "positive": "documented time-scoped right",
+      "negative": "right inferred from occupancy",
+      "status": "blocked",
+      "ancestry_evidence": "Imported actor/activity/claim/rights parents require review; a binary name does not resolve n-ary structure.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Imported actor/activity/claim/rights parents require review; a binary name does not resolve n-ary structure."
+    },
+    {
+      "id": "land-DisputesLandUseRight",
+      "name": "land:DisputesLandUseRight",
+      "category": "relationship",
+      "definition": "Identified claimants actually dispute a specified use or right over land.",
+      "parent": null,
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "source": null,
+        "target": null,
+        "kind": "unresolved_relationship_or_configuration",
+        "rationale": "N-ary roles, actor/activity/claim endpoints and rights context unresolved. No binary declaration generated."
+      },
+      "source_ids": [
+        "FAO-TENURE"
+      ],
+      "positive": "evidenced dispute with claimants and contested right",
+      "negative": "overlapping polygons alone",
+      "status": "blocked",
+      "ancestry_evidence": "Imported actor/activity/claim/rights parents require review; a binary name does not resolve n-ary structure.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Imported actor/activity/claim/rights parents require review; a binary name does not resolve n-ary structure."
+    },
+    {
+      "id": "land-LandUseCessation",
+      "name": "land:LandUseCessation",
+      "category": "event",
+      "definition": "Bounded cessation of a specified actual use, with termination evidence.",
+      "parent": "imod:Event",
+      "parent_status": "blocked",
+      "qualities": [],
+      "parameters": [],
+      "bindings": {
+        "affects": [],
+        "creates": [],
+        "confers": [],
+        "rationale": "No universal effect or runtime consequence asserted."
+      },
+      "source_ids": [
+        "EEA-LAND",
+        "FAO-WCA"
+      ],
+      "positive": "use ends while title remains unchanged",
+      "negative": "fallow automatically treated as abandonment",
+      "status": "blocked",
+      "ancestry_evidence": "Event keyword context only; actual use relation and occurrence bounds pending.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
+      "explicit_is_generation_allowed": false,
+      "alignment_gate": "Event keyword context only; actual use relation and occurrence bounds pending."
+    },
+    {
+      "id": "land-SealedSurfaceFraction",
+      "name": "land:SealedSurfaceFraction",
       "category": "quality",
-      "definition": "Biological material of a stated crop and product that meets a specified harvest criterion.",
-      "parent": "imod:Quality",
-      "parent_status": "proposed_parent",
+      "definition": "Fraction of a specified surface covered by impermeable material.",
+      "parent": "imod:Proportion",
+      "parent_status": "blocked",
       "qualities": [],
       "parameters": [],
       "bindings": {
         "bearers": [
-          "land:CropStand"
+          "land:LandSurfaceUnit"
         ],
-        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
-        "parameter_of": [
-          "land:Harvesting",
-          "land:HarvestEpisode"
-        ],
-        "affected_by": [
-          "land:Harvesting",
-          "land:HarvestEpisode"
-        ],
-        "bearer_status": "provisional"
+        "bearer_status": "blocked",
+        "parameter_of": [],
+        "affected_by": []
       },
       "source_ids": [
-        "FAO-SEED"
+        "EEA-SOIL"
       ],
-      "positive": "A value observed for the named bearer and stated convention.",
-      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
-      "status": "provisional",
-      "alignment_role": "implicit_type_context_not_explicit_is",
+      "positive": "measured sealed fraction",
+      "negative": "settlement class equals fully sealed",
+      "status": "blocked",
+      "ancestry_evidence": "Proportion root verified as type context; impermeability criterion and surface bearer pending.",
+      "alignment_role": "proposed_scientific_specialization_requires_review",
       "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-ManagedArea",
-      "name": "land:ManagedArea",
-      "category": "quality",
-      "definition": "Area within a declared operational land-management boundary, distinct from ownership.",
-      "parent": "imod:Area",
-      "parent_status": "proposed_parent",
-      "qualities": [],
-      "parameters": [],
-      "bindings": {
-        "bearers": [
-          "land:AgriculturalHolding"
-        ],
-        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
-        "parameter_of": [
-          "land:LandUseConversion"
-        ],
-        "affected_by": [],
-        "bearer_status": "provisional"
-      },
-      "source_ids": [
-        "FAO-EVAL"
-      ],
-      "positive": "A value observed for the named bearer and stated convention.",
-      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
-      "status": "provisional",
-      "alignment_role": "implicit_type_context_not_explicit_is",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-AppliedWaterAmount",
-      "name": "land:AppliedWaterAmount",
-      "category": "quality",
-      "definition": "Amount of water applied in a named irrigation operation.",
-      "parent": "imod:Quality",
-      "parent_status": "proposed_parent",
-      "qualities": [],
-      "parameters": [],
-      "bindings": {
-        "bearers": [],
-        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
-        "parameter_of": [
-          "land:Irrigation",
-          "land:IrrigationEpisode"
-        ],
-        "affected_by": [],
-        "bearer_status": "blocked_missing_bearer"
-      },
-      "source_ids": [
-        "FAO-WATER"
-      ],
-      "positive": "A value observed for the named bearer and stated convention.",
-      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
-      "status": "provisional",
-      "alignment_role": "implicit_type_context_not_explicit_is",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
-    },
-    {
-      "id": "land-SeedPlacementDepth",
-      "name": "land:SeedPlacementDepth",
-      "category": "quality",
-      "definition": "Depth of placed seed relative to the specified soil surface.",
-      "parent": "imod:Quality",
-      "parent_status": "proposed_parent",
-      "qualities": [],
-      "parameters": [],
-      "bindings": {
-        "bearers": [],
-        "rationale": "bearers lists proposed substantial inherency only; parameter_of and affected_by are separate reciprocal occurrence references. A process parameter is not thereby a quality bearer. An empty bearer list is an unresolved bearer gap, not an inference of inherency to the listed processes/events.",
-        "parameter_of": [
-          "land:Sowing",
-          "land:SowingEpisode"
-        ],
-        "affected_by": [],
-        "bearer_status": "blocked_missing_bearer"
-      },
-      "source_ids": [
-        "FAO-SEED"
-      ],
-      "positive": "A value observed for the named bearer and stated convention.",
-      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
-      "status": "provisional",
-      "alignment_role": "implicit_type_context_not_explicit_is",
-      "explicit_is_generation_allowed": false,
-      "alignment_gate": "Generic root aliases report keyword type context (context pack7.4), not redundant is. A meaningful narrower parent must be justified; absent distinctions are upstream issues. No automatic code generation."
+      "alignment_gate": "Proportion root verified as type context; impermeability criterion and surface bearer pending."
     }
   ],
   "questions": [
     {
-      "id": "land-q01",
-      "text": "Which fields are being used for food crops rather than merely covered by green vegetation?",
-      "concept_ids": [
-        "land-ManagedField"
-      ],
-      "expression": null,
-      "expected_type": "unresolved",
-      "dependencies": [
-        "observed cover plus management purpose; greenness does not establish use",
-        "No observation/resolution means open-world unknown, not zero or absence."
-      ],
-      "positive": "one delineated field",
-      "negative": "every polygon from a satellite classification",
-      "source_ids": [
-        "FAO-LCCS"
-      ],
-      "semantic_status": "blocked",
-      "grammar_status": "untested",
-      "question_provenance": {
-        "order": 1,
-        "phase": "source-informed question list saved before dossier candidate records",
-        "independence": "not blinded; existing worldview and author analysis visible",
-        "register": "QUESTIONS_FIRST.md"
-      },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
-      "narrative_intent": "Which fields are being used for food crops rather than merely covered by green vegetation?",
-      "expression_result_category": null,
-      "expression_result_basis": "no formulation"
-    },
-    {
-      "id": "land-q02",
-      "text": "Which land units can support the specified crop without irrigation?",
-      "concept_ids": [
-        "land-LandEvaluationUnit"
-      ],
-      "expression": null,
-      "expected_type": "unresolved",
-      "dependencies": [
-        "crop-specific requirements and land qualities; generic suitable is ambiguous",
-        "No observation/resolution means open-world unknown, not zero or absence."
-      ],
-      "positive": "one declared evaluation unit",
-      "negative": "an abstract suitability class",
-      "source_ids": [
-        "FAO-EVAL"
-      ],
-      "semantic_status": "blocked",
-      "grammar_status": "untested",
-      "question_provenance": {
-        "order": 2,
-        "phase": "source-informed question list saved before dossier candidate records",
-        "independence": "not blinded; existing worldview and author analysis visible",
-        "register": "QUESTIONS_FIRST.md"
-      },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
-      "narrative_intent": "Which land units can support the specified crop without irrigation?",
-      "expression_result_category": null,
-      "expression_result_basis": "no formulation"
-    },
-    {
-      "id": "land-q03",
-      "text": "How much soil surface remains covered after sowing?",
-      "concept_ids": [
-        "land-SurfaceCoverFraction",
-        "land-ManagedField"
-      ],
-      "expression": "land:SurfaceCoverFraction of land:ManagedField",
-      "expected_type": "quality",
-      "dependencies": [
-        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
-        "No observation/resolution means open-world unknown, not zero or absence."
-      ],
-      "positive": "A value observed for the named bearer and stated convention.",
-      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
-      "source_ids": [
-        "FAO-CA"
-      ],
-      "semantic_status": "provisional",
-      "grammar_status": "parse_pass",
-      "question_provenance": {
-        "order": 3,
-        "phase": "source-informed question list saved before dossier candidate records",
-        "independence": "not blinded; existing worldview and author analysis visible",
-        "register": "QUESTIONS_FIRST.md"
-      },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
-      "narrative_intent": "How much soil surface remains covered after sowing?",
-      "expression_result_category": "quality",
-      "expression_result_basis": "proposed named-head category only; no semantic validation"
-    },
-    {
-      "id": "land-q04",
-      "text": "Where did irrigation add water during this dry spell?",
-      "concept_ids": [
-        "land-Irrigation"
-      ],
-      "expression": "land:Irrigation",
-      "expected_type": "process",
-      "dependencies": [
-        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
-        "No observation/resolution means open-world unknown, not zero or absence."
-      ],
-      "positive": "water applied to field",
-      "negative": "natural rainfall",
-      "source_ids": [
-        "FAO-WATER"
-      ],
-      "semantic_status": "provisional",
-      "grammar_status": "parse_pass",
-      "question_provenance": {
-        "order": 4,
-        "phase": "source-informed question list saved before dossier candidate records",
-        "independence": "not blinded; existing worldview and author analysis visible",
-        "register": "QUESTIONS_FIRST.md"
-      },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
-      "narrative_intent": "Where did irrigation add water during this dry spell?",
-      "expression_result_category": "process",
-      "expression_result_basis": "proposed named-head category only; no semantic validation"
-    },
-    {
-      "id": "land-q05",
-      "text": "Which field was planted in this sowing episode?",
-      "concept_ids": [
-        "land-SowingEpisode"
-      ],
-      "expression": "land:SowingEpisode",
-      "expected_type": "event",
-      "dependencies": [
-        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
-        "No observation/resolution means open-world unknown, not zero or absence."
-      ],
-      "positive": "one completed field sowing",
-      "negative": "unbounded sowing practice",
-      "source_ids": [
-        "FAO-SEED"
-      ],
-      "semantic_status": "provisional",
-      "grammar_status": "parse_pass",
-      "question_provenance": {
-        "order": 5,
-        "phase": "source-informed question list saved before dossier candidate records",
-        "independence": "not blinded; existing worldview and author analysis visible",
-        "register": "QUESTIONS_FIRST.md"
-      },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
-      "narrative_intent": "Which field was planted in this sowing episode?",
-      "expression_result_category": "event",
-      "expression_result_basis": "proposed named-head category only; no semantic validation"
-    },
-    {
-      "id": "land-q06",
-      "text": "How much of the field was mechanically disturbed?",
-      "concept_ids": [
-        "land-DisturbedAreaFraction",
-        "land-ManagedField"
-      ],
-      "expression": "land:DisturbedAreaFraction of land:ManagedField",
-      "expected_type": "quality",
-      "dependencies": [
-        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
-        "No observation/resolution means open-world unknown, not zero or absence."
-      ],
-      "positive": "A value observed for the named bearer and stated convention.",
-      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
-      "source_ids": [
-        "FAO-CA"
-      ],
-      "semantic_status": "provisional",
-      "grammar_status": "parse_pass",
-      "question_provenance": {
-        "order": 6,
-        "phase": "source-informed question list saved before dossier candidate records",
-        "independence": "not blinded; existing worldview and author analysis visible",
-        "register": "QUESTIONS_FIRST.md"
-      },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
-      "narrative_intent": "How much of the field was mechanically disturbed?",
-      "expression_result_category": "quality",
-      "expression_result_basis": "proposed named-head category only; no semantic validation"
-    },
-    {
-      "id": "land-q07",
-      "text": "Which land is managed as part of the same agricultural holding?",
-      "concept_ids": [
-        "land-ManagesField"
-      ],
-      "expression": null,
-      "expected_type": "unresolved",
-      "dependencies": [
-        "holding/operator identity and management records; adjacency insufficient",
-        "No observation/resolution means open-world unknown, not zero or absence."
-      ],
-      "positive": "field managed in the holding",
-      "negative": "field nearby but managed elsewhere",
-      "source_ids": [
-        "FAO-EVAL"
-      ],
-      "semantic_status": "blocked",
-      "grammar_status": "untested",
-      "question_provenance": {
-        "order": 7,
-        "phase": "source-informed question list saved before dossier candidate records",
-        "independence": "not blinded; existing worldview and author analysis visible",
-        "register": "QUESTIONS_FIRST.md"
-      },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
-      "narrative_intent": "Which land is managed as part of the same agricultural holding?",
-      "expression_result_category": null,
-      "expression_result_basis": "no formulation"
-    },
-    {
-      "id": "land-q08",
-      "text": "Did residue retention change surface cover without changing crop species?",
-      "concept_ids": [
-        "land-ResidueRetention",
-        "land-SurfaceCoverFraction",
-        "land-ManagedField"
-      ],
-      "expression": "change in land:SurfaceCoverFraction of land:ManagedField",
-      "expected_type": "process",
-      "dependencies": [
-        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
-        "No observation/resolution means open-world unknown, not zero or absence."
-      ],
-      "positive": "residue deliberately left after harvest",
-      "negative": "claim all residue is retained without evidence",
-      "source_ids": [
-        "FAO-SEED"
-      ],
-      "semantic_status": "blocked",
-      "grammar_status": "parse_pass",
-      "question_provenance": {
-        "order": 8,
-        "phase": "source-informed question list saved before dossier candidate records",
-        "independence": "not blinded; existing worldview and author analysis visible",
-        "register": "QUESTIONS_FIRST.md"
-      },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
-      "narrative_intent": "Did residue retention change surface cover without changing crop species?",
-      "expression_result_category": "process",
-      "expression_result_basis": "context-pack section6; conditional on valid operand, operand not validated"
-    },
-    {
-      "id": "land-q09",
-      "text": "Which harvest removed products from this crop stand?",
-      "concept_ids": [
-        "land-HarvestEpisode"
-      ],
-      "expression": "land:HarvestEpisode",
-      "expected_type": "event",
-      "dependencies": [
-        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
-        "No observation/resolution means open-world unknown, not zero or absence."
-      ],
-      "positive": "one harvest operation",
-      "negative": "annual harvest statistic",
-      "source_ids": [
-        "FAO-SEED"
-      ],
-      "semantic_status": "provisional",
-      "grammar_status": "parse_pass",
-      "question_provenance": {
-        "order": 9,
-        "phase": "source-informed question list saved before dossier candidate records",
-        "independence": "not blinded; existing worldview and author analysis visible",
-        "register": "QUESTIONS_FIRST.md"
-      },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
-      "narrative_intent": "Which harvest removed products from this crop stand?",
-      "expression_result_category": "event",
-      "expression_result_basis": "proposed named-head category only; no semantic validation"
-    },
-    {
       "id": "land-q10",
       "text": "Do two maps calling an area forest use the same definition?",
-      "concept_ids": [
-        "land-VegetationPatch"
-      ],
+      "concept_ids": [],
       "expression": null,
       "expected_type": "unresolved",
       "dependencies": [
         "authority/version criteria; reject automatic equivalence",
-        "No observation/resolution means open-world unknown, not zero or absence."
+        "No observation/resolution means open-world unknown, not zero or absence.",
+        "Deferred old candidate land-VegetationPatch: Reuse an agreed ecology/biology assemblage; delineation alone does not establish subject unity."
       ],
       "positive": "one mapped vegetation patch",
       "negative": "land legally zoned forest without vegetation",
@@ -1167,17 +636,20 @@
         "FAO-LCCS"
       ],
       "semantic_status": "blocked",
-      "grammar_status": "untested",
+      "grammar_status": "not_applicable",
       "question_provenance": {
         "order": 10,
         "phase": "source-informed question list saved before dossier candidate records",
         "independence": "not blinded; existing worldview and author analysis visible",
-        "register": "QUESTIONS_FIRST.md"
+        "register": "QUESTIONS_FIRST.md",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "original_domain": "land"
       },
       "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
       "narrative_intent": "Do two maps calling an area forest use the same definition?",
       "expression_result_category": null,
-      "expression_result_basis": "no formulation"
+      "expression_result_basis": "no formulation",
+      "external_concept_refs": []
     },
     {
       "id": "land-q11",
@@ -1197,109 +669,20 @@
         "FAO-LCCS"
       ],
       "semantic_status": "blocked",
-      "grammar_status": "untested",
+      "grammar_status": "not_applicable",
       "question_provenance": {
         "order": 11,
         "phase": "source-informed question list saved before dossier candidate records",
         "independence": "not blinded; existing worldview and author analysis visible",
-        "register": "QUESTIONS_FIRST.md"
+        "register": "QUESTIONS_FIRST.md",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "original_domain": "land"
       },
       "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
       "narrative_intent": "Did fire change land cover while the intended farming use remained unchanged?",
       "expression_result_category": null,
-      "expression_result_basis": "no formulation"
-    },
-    {
-      "id": "land-q12",
-      "text": "Is poor crop performance due to water shortage or an unsuitable soil condition?",
-      "concept_ids": [
-        "land-PlantAvailableWater"
-      ],
-      "expression": null,
-      "expected_type": "unresolved",
-      "dependencies": [
-        "distinct soil/root-zone qualities and causal models",
-        "No observation/resolution means open-world unknown, not zero or absence."
-      ],
-      "positive": "A value observed for the named bearer and stated convention.",
-      "negative": "An unqualified score, missing observation or value from another bearer treated as equivalent.",
-      "source_ids": [
-        "FAO-EVAL"
-      ],
-      "semantic_status": "blocked",
-      "grammar_status": "untested",
-      "question_provenance": {
-        "order": 12,
-        "phase": "source-informed question list saved before dossier candidate records",
-        "independence": "not blinded; existing worldview and author analysis visible",
-        "register": "QUESTIONS_FIRST.md"
-      },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
-      "narrative_intent": "Is poor crop performance due to water shortage or an unsuitable soil condition?",
-      "expression_result_category": null,
-      "expression_result_basis": "no formulation"
-    },
-    {
-      "id": "land-q13",
-      "text": "Does no-till automatically make this farm sustainable?",
-      "concept_ids": [
-        "land-Tillage"
-      ],
-      "expression": null,
-      "expected_type": "unresolved",
-      "dependencies": [
-        "invalid implication; one practice is not comprehensive sustainability",
-        "No observation/resolution means open-world unknown, not zero or absence."
-      ],
-      "positive": "cultivation disturbing soil",
-      "negative": "undisturbed land merely classified cropland",
-      "source_ids": [
-        "FAO-CA"
-      ],
-      "semantic_status": "blocked",
-      "grammar_status": "untested",
-      "question_provenance": {
-        "order": 13,
-        "phase": "source-informed question list saved before dossier candidate records",
-        "independence": "not blinded; existing worldview and author analysis visible",
-        "register": "QUESTIONS_FIRST.md"
-      },
-      "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
-      "narrative_intent": "Does no-till automatically make this farm sustainable?",
-      "expression_result_category": null,
-      "expression_result_basis": "no formulation"
-    },
-    {
-      "id": "land-q14",
-      "text": "Which crop stand occupies this field now?",
-      "concept_ids": [
-        "land-OccupiesField",
-        "land-CropStand",
-        "land-ManagedField"
-      ],
-      "expression": "land:OccupiesField linking land:CropStand to land:ManagedField",
-      "expected_type": "relationship",
-      "dependencies": [
-        "Resolve candidate namespace, imported ancestry, bearer/endpoints and an observation strategy; expression alone does not answer the full question.",
-        "No observation/resolution means open-world unknown, not zero or absence."
-      ],
-      "positive": "crop stand located in field",
-      "negative": "crop name listed in a future plan",
-      "source_ids": [
-        "FAO-SEED"
-      ],
-      "semantic_status": "provisional",
-      "grammar_status": "parse_pass",
-      "question_provenance": {
-        "order": 14,
-        "phase": "source-informed question list saved before dossier candidate records",
-        "independence": "not blinded; existing worldview and author analysis visible",
-        "register": "QUESTIONS_FIRST.md"
-      },
-      "interpretation": "This expression is one hidden observable, not a complete query or sufficient answer to the narrative question.",
-      "narrative_intent": "Which crop stand occupies this field now?",
-      "expression_result_category": "relationship",
-      "expression_result_basis": "proposed named-head category only; no semantic validation"
+      "expression_result_basis": "no formulation",
+      "external_concept_refs": []
     },
     {
       "id": "land-q15",
@@ -1319,208 +702,558 @@
         "FAO-EVAL"
       ],
       "semantic_status": "blocked",
-      "grammar_status": "untested",
+      "grammar_status": "not_applicable",
       "question_provenance": {
         "order": 15,
         "phase": "source-informed question list saved before dossier candidate records",
         "independence": "not blinded; existing worldview and author analysis visible",
-        "register": "QUESTIONS_FIRST.md"
+        "register": "QUESTIONS_FIRST.md",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "original_domain": "land"
       },
       "interpretation": "Explicit gap; do not substitute a narrative paraphrase and call it grammar-valid.",
       "narrative_intent": "Which land-use change is observed, and which is only planned?",
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation",
+      "external_concept_refs": []
+    },
+    {
+      "id": "land-q16",
+      "text": "Which parts of a site support grazing and solar generation concurrently?",
+      "concept_ids": [
+        "land-ActualLandUse",
+        "land-LandSurfaceUnit"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Time-scoped activity participants and common support required.",
+        "Unresolved is unknown, not absence. No implicit persistence or runtime consequence engine."
+      ],
+      "positive": "two evidenced uses",
+      "negative": "one exclusive cover label",
+      "source_ids": [
+        "EEA-LAND"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "narrative_intent": "Which parts of a site support grazing and solar generation concurrently?",
+      "question_provenance": {
+        "phase": "source-informed boundary revision; existing candidates visible",
+        "register": "QUESTIONS_FIRST.md",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "independence": "not blinded or expert-approved"
+      },
+      "external_concept_refs": [],
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "land-q17",
+      "text": "Did housing replace an actual use, increase sealing, both or neither?",
+      "concept_ids": [
+        "land-LandUseConversion",
+        "land-SealedSurfaceFraction"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Two changes and comparable support; no universal conversion-to-sealing implication.",
+        "Unresolved is unknown, not absence. No implicit persistence or runtime consequence engine."
+      ],
+      "positive": "independent use and cover changes",
+      "negative": "settlement reporting as universal land take",
+      "source_ids": [
+        "EEA-LAND"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "narrative_intent": "Did housing replace an actual use, increase sealing, both or neither?",
+      "question_provenance": {
+        "phase": "source-informed boundary revision; existing candidates visible",
+        "register": "QUESTIONS_FIRST.md",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "independence": "not blinded or expert-approved"
+      },
+      "external_concept_refs": [],
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "land-q18",
+      "text": "Was pavement removed, and which soil properties changed afterwards?",
+      "concept_ids": [
+        "land-SurfaceUnsealing"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Reuse soil observables; temporal sequence does not establish causal success.",
+        "Unresolved is unknown, not absence. No implicit persistence or runtime consequence engine."
+      ],
+      "positive": "removal followed by separately observed conditions",
+      "negative": "restoration intent proves recovery",
+      "source_ids": [
+        "EEA-SOIL"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "narrative_intent": "Was pavement removed, and which soil properties changed afterwards?",
+      "question_provenance": {
+        "phase": "source-informed boundary revision; existing candidates visible",
+        "register": "QUESTIONS_FIRST.md",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "independence": "not blinded or expert-approved"
+      },
+      "external_concept_refs": [],
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "land-q19",
+      "text": "Who manages, occupies or holds a specified use right over this site?",
+      "concept_ids": [
+        "land-ManagesLand",
+        "land-OccupiesLand",
+        "land-HoldsLandUseRight"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Actor endpoints, right scope, jurisdiction and interval remain unresolved.",
+        "Unresolved is unknown, not absence. No implicit persistence or runtime consequence engine."
+      ],
+      "positive": "different actors and extents",
+      "negative": "ownership equated with management",
+      "source_ids": [
+        "FAO-TENURE"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "narrative_intent": "Who manages, occupies or holds a specified use right over this site?",
+      "question_provenance": {
+        "phase": "source-informed boundary revision; existing candidates visible",
+        "register": "QUESTIONS_FIRST.md",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "independence": "not blinded or expert-approved"
+      },
+      "external_concept_refs": [],
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "land-q20",
+      "text": "Which claimants actually dispute which rights or uses?",
+      "concept_ids": [
+        "land-DisputesLandUseRight"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "N-ary social configuration and evidence of dispute required.",
+        "Unresolved is unknown, not absence. No implicit persistence or runtime consequence engine."
+      ],
+      "positive": "evidenced competing claims",
+      "negative": "polygon overlap proves dispute",
+      "source_ids": [
+        "FAO-TENURE"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "narrative_intent": "Which claimants actually dispute which rights or uses?",
+      "question_provenance": {
+        "phase": "source-informed boundary revision; existing candidates visible",
+        "register": "QUESTIONS_FIRST.md",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "independence": "not blinded or expert-approved"
+      },
+      "external_concept_refs": [],
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "land-q21",
+      "text": "Which planned uses cannot coexist under stated constraints?",
+      "concept_ids": [
+        "land-ActualLandUse"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Methods, scenarios and constraints belong outside worldview; planned use is not actual use.",
+        "Unresolved is unknown, not absence. No implicit persistence or runtime consequence engine."
+      ],
+      "positive": "external compatibility assessment",
+      "negative": "analytical incompatibility treated as actual conflict",
+      "source_ids": [
+        "EEA-LAND"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "narrative_intent": "Which planned uses cannot coexist under stated constraints?",
+      "question_provenance": {
+        "phase": "source-informed boundary revision; existing candidates visible",
+        "register": "QUESTIONS_FIRST.md",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "independence": "not blinded or expert-approved"
+      },
+      "external_concept_refs": [],
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "land-q22",
+      "text": "Did a road split continuous surface, and does it obstruct the specified organism?",
+      "concept_ids": [
+        "land-LandSurfaceUnit"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Reuse topology and ecology; specify barriers, organism and support.",
+        "Unresolved is unknown, not absence. No implicit persistence or runtime consequence engine."
+      ],
+      "positive": "geometry plus organism evidence",
+      "negative": "structural and functional connectivity equated",
+      "source_ids": [
+        "EEA-FRAGMENT"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "narrative_intent": "Did a road split continuous surface, and does it obstruct the specified organism?",
+      "question_provenance": {
+        "phase": "source-informed boundary revision; existing candidates visible",
+        "register": "QUESTIONS_FIRST.md",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "independence": "not blinded or expert-approved"
+      },
+      "external_concept_refs": [],
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "land-q23",
+      "text": "Which land qualities declined relative to which baseline and interval?",
+      "concept_ids": [
+        "land-LandSurfaceUnit"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Resolve soil/ecology qualities individually; reporting rule not an axiom.",
+        "Unresolved is unknown, not absence. No implicit persistence or runtime consequence engine."
+      ],
+      "positive": "quality-specific change with reference",
+      "negative": "stable degraded land called healthy",
+      "source_ids": [
+        "UNCCD-SO1"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "narrative_intent": "Which land qualities declined relative to which baseline and interval?",
+      "question_provenance": {
+        "phase": "source-informed boundary revision; existing candidates visible",
+        "register": "QUESTIONS_FIRST.md",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "independence": "not blinded or expert-approved"
+      },
+      "external_concept_refs": [],
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "land-q24",
+      "text": "Did an actual use cease while tenure persisted and vegetation changed later?",
+      "concept_ids": [
+        "land-LandUseCessation"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Cessation, rights and succession need independent evidence, no inferred retention.",
+        "Unresolved is unknown, not absence. No implicit persistence or runtime consequence engine."
+      ],
+      "positive": "separate occurrence and observations",
+      "negative": "fallow automatically abandoned",
+      "source_ids": [
+        "EEA-LAND"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "narrative_intent": "Did an actual use cease while tenure persisted and vegetation changed later?",
+      "question_provenance": {
+        "phase": "source-informed boundary revision; existing candidates visible",
+        "register": "QUESTIONS_FIRST.md",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "independence": "not blinded or expert-approved"
+      },
+      "external_concept_refs": [],
+      "expression_result_category": null,
+      "expression_result_basis": "no formulation"
+    },
+    {
+      "id": "land-q25",
+      "text": "What fraction of this surface is sealed by impermeable material?",
+      "concept_ids": [
+        "land-SealedSurfaceFraction",
+        "land-LandSurfaceUnit"
+      ],
+      "expression": "land:SealedSurfaceFraction of land:LandSurfaceUnit",
+      "expected_type": "quality",
+      "dependencies": [
+        "Surface parent and impermeability criterion remain blocked.",
+        "Unresolved is unknown, not absence. No implicit persistence or runtime consequence engine."
+      ],
+      "positive": "specified denominator",
+      "negative": "all urban area assumed sealed",
+      "source_ids": [
+        "EEA-SOIL"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "narrative_intent": "What fraction of this surface is sealed by impermeable material?",
+      "question_provenance": {
+        "phase": "source-informed boundary revision; existing candidates visible",
+        "register": "QUESTIONS_FIRST.md",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "independence": "not blinded or expert-approved"
+      },
+      "external_concept_refs": [],
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "land-q26",
+      "text": "What is the extent actually managed for forestry, recreation or extraction here?",
+      "concept_ids": [
+        "land-ManagedArea",
+        "land-ManagesLand",
+        "land-LandSurfaceUnit"
+      ],
+      "expression": "land:ManagedArea of land:LandSurfaceUnit",
+      "expected_type": "quality",
+      "dependencies": [
+        "Sector activities remain external; manager, surface and relation scope required.",
+        "Unresolved is unknown, not absence. No implicit persistence or runtime consequence engine."
+      ],
+      "positive": "management-specific extent",
+      "negative": "owned area substituted",
+      "source_ids": [
+        "FAO-TENURE"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "parse_pass",
+      "narrative_intent": "What is the extent actually managed for forestry, recreation or extraction here?",
+      "question_provenance": {
+        "phase": "source-informed boundary revision; existing candidates visible",
+        "register": "QUESTIONS_FIRST.md",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "independence": "not blinded or expert-approved"
+      },
+      "external_concept_refs": [],
+      "expression_result_category": "quality",
+      "expression_result_basis": "proposed named-head category only; no semantic validation"
+    },
+    {
+      "id": "land-q27",
+      "text": "Did conservation management achieve recovery under the stated reference?",
+      "concept_ids": [
+        "land-LandSurfaceUnit"
+      ],
+      "expression": null,
+      "expected_type": "unresolved",
+      "dependencies": [
+        "Compare appropriate qualities; authority scope, baseline and lag require models/evidence.",
+        "Unresolved is unknown, not absence. No implicit persistence or runtime consequence engine."
+      ],
+      "positive": "observed reference-relative recovery",
+      "negative": "intervention intention as achieved state",
+      "source_ids": [
+        "UNCCD-SO1"
+      ],
+      "semantic_status": "blocked",
+      "grammar_status": "not_applicable",
+      "narrative_intent": "Did conservation management achieve recovery under the stated reference?",
+      "question_provenance": {
+        "phase": "source-informed boundary revision; existing candidates visible",
+        "register": "QUESTIONS_FIRST.md",
+        "source_base": "28ee04c25829684aa0e78127d694564bbc94194d",
+        "independence": "not blinded or expert-approved"
+      },
+      "external_concept_refs": [],
       "expression_result_category": null,
       "expression_result_basis": "no formulation"
     }
   ],
   "quality_summaries": [
     {
-      "quality": "land:SurfaceCoverFraction",
-      "proposed_summary": "conservation agriculture cover class",
-      "basis": "Ordered FAO-CA scheme-specific ranges at its prescribed observation stage; authority attachment, no universal ecosystem-health ordering.",
-      "status": "provisional_no_predicate_declaration",
-      "evidence": "FAO-CA directly supports the scheme-specific cover categorization and observation timing. Other source IDs are background context, not substitutes for that claim.",
-      "comparison_rule": "Ordered FAO-CA scheme-specific ranges at its prescribed observation stage; authority attachment, no universal ecosystem-health ordering.",
-      "classification_kind": "ordered_contextual",
-      "overlap": "Multiple limitation and performance summaries may coexist; no exclusive exhaustive partition asserted.",
-      "context_scope": "Land management and agricultural use as observable practices on specified land units; biophysical cover, intended use, tenure and suitability are different axes.",
+      "quality": null,
+      "proposed_summary": "degraded",
+      "basis": "State relative to specified reference and qualities; stability does not imply undegraded. Reporting rules are external.",
+      "comparison_rule": "State relative to specified reference and qualities; stability does not imply undegraded. Reporting rules are external.",
+      "boundary_rule": "No classification without explicit reference and evidence; unknown is not a category.",
+      "status": "blocked_no_predicate_declaration",
       "source_ids": [
-        "FAO-CA",
-        "FAO-EVAL",
-        "FAO-LCCS",
-        "FAO-SEED"
+        "UNCCD-SO1"
       ],
-      "boundary_rule": "Use only the named authority/design/reference criterion in basis; absent criterion blocks classification.",
       "claim_evidence": [
         {
-          "source_id": "FAO-CA",
-          "url": "https://www.fao.org/conservation-agriculture/overview/conservation-agriculture-principles/en/",
-          "locator": "Permanent soil organic cover paragraph",
-          "scope": "FAO conservation-agriculture cover classes and timing immediately after direct seeding; does not establish an ecosystem-health ordering.",
-          "retrieved": "2026-10-03",
-          "status": "primary source reread; predicate remains unapproved"
+          "source_id": "UNCCD-SO1",
+          "locator": "SO1 baseline and degradation interpretation",
+          "scope": "Reference-relative condition; stable degraded state and productivity/condition disagreement are possible. Reporting algorithms stay outside vocabulary."
         }
-      ]
+      ],
+      "context_scope": "Cross-sector actual land use, management, occupation, conversion, specified rights/disputes and condition. Cover, use, plan, permission, tenure and condition remain distinct."
     },
     {
-      "quality": "land:PlantAvailableWater",
-      "proposed_summary": "water-limited for a specified crop",
-      "basis": "Comparison with crop/rooting and environmental context; multiple limitations may coexist, no exhaustive partition.",
-      "status": "provisional_no_predicate_declaration",
-      "evidence": "Source scope and measurement convention require human review; unknown/unmeasured/disputed remain evidence states.",
-      "comparison_rule": "Comparison with crop/rooting and environmental context; multiple limitations may coexist, no exhaustive partition.",
-      "classification_kind": "ordered_contextual",
-      "overlap": "Multiple limitation and performance summaries may coexist; no exclusive exhaustive partition asserted.",
-      "context_scope": "Land management and agricultural use as observable practices on specified land units; biophysical cover, intended use, tenure and suitability are different axes.",
+      "quality": null,
+      "proposed_summary": "restored",
+      "basis": "Achieved recovery against stated reference, not merely restoration activity.",
+      "comparison_rule": "Achieved recovery against stated reference, not merely restoration activity.",
+      "boundary_rule": "No classification without explicit reference and evidence; unknown is not a category.",
+      "status": "blocked_no_predicate_declaration",
       "source_ids": [
-        "FAO-EVAL",
-        "FAO-WATER"
+        "UNCCD-SO1"
       ],
-      "boundary_rule": "Use only the named authority/design/reference criterion in basis; absent criterion blocks classification."
+      "claim_evidence": [
+        {
+          "source_id": "UNCCD-SO1",
+          "locator": "SO1 baseline and degradation interpretation",
+          "scope": "Reference-relative condition; stable degraded state and productivity/condition disagreement are possible. Reporting algorithms stay outside vocabulary."
+        }
+      ],
+      "context_scope": "Cross-sector actual land use, management, occupation, conversion, specified rights/disputes and condition. Cover, use, plan, permission, tenure and condition remain distinct."
     },
     {
-      "quality": "land:DisturbedAreaFraction",
-      "proposed_summary": "minimum disturbance",
-      "basis": "Scheme-relative combination of disturbance width/area and timing; not synonym for zero disturbance.",
-      "status": "provisional_no_predicate_declaration",
-      "evidence": "Source scope and measurement convention require human review; unknown/unmeasured/disputed remain evidence states.",
-      "comparison_rule": "Scheme-relative combination of disturbance width/area and timing; not synonym for zero disturbance.",
-      "classification_kind": "ordered_contextual",
-      "overlap": "Multiple limitation and performance summaries may coexist; no exclusive exhaustive partition asserted.",
-      "context_scope": "Land management and agricultural use as observable practices on specified land units; biophysical cover, intended use, tenure and suitability are different axes.",
+      "quality": null,
+      "proposed_summary": "fragmented",
+      "basis": "Structural barrier geometry and support must be specified; functional connectivity is organism-relative.",
+      "comparison_rule": "Structural barrier geometry and support must be specified; functional connectivity is organism-relative.",
+      "boundary_rule": "No classification without explicit reference and evidence; unknown is not a category.",
+      "status": "blocked_no_predicate_declaration",
       "source_ids": [
-        "FAO-EVAL",
-        "FAO-CA",
-        "FAO-SEED"
+        "EEA-FRAGMENT"
       ],
-      "boundary_rule": "Use only the named authority/design/reference criterion in basis; absent criterion blocks classification."
+      "claim_evidence": [
+        {
+          "source_id": "EEA-FRAGMENT",
+          "locator": "Indicator definition and methodology",
+          "scope": "Barrier geometry supports structural fragmentation; organism-specific permeability needs separate evidence."
+        }
+      ],
+      "context_scope": "Cross-sector actual land use, management, occupation, conversion, specified rights/disputes and condition. Cover, use, plan, permission, tenure and condition remain distinct."
     },
     {
-      "quality": "land:HarvestableBiomass",
-      "proposed_summary": "high-yielding",
-      "basis": "Comparison to specified crop, area and reference conditions; cannot infer sustainable from high output.",
-      "status": "provisional_no_predicate_declaration",
-      "evidence": "Source scope and measurement convention require human review; unknown/unmeasured/disputed remain evidence states.",
-      "comparison_rule": "Comparison to specified crop, area and reference conditions; cannot infer sustainable from high output.",
-      "classification_kind": "ordered_contextual",
-      "overlap": "Multiple limitation and performance summaries may coexist; no exclusive exhaustive partition asserted.",
-      "context_scope": "Land management and agricultural use as observable practices on specified land units; biophysical cover, intended use, tenure and suitability are different axes.",
+      "quality": null,
+      "proposed_summary": "suitable",
+      "basis": "Suitability for a specified use and evaluation criteria, not intrinsic universal goodness.",
+      "comparison_rule": "Suitability for a specified use and evaluation criteria, not intrinsic universal goodness.",
+      "boundary_rule": "No classification without explicit reference and evidence; unknown is not a category.",
+      "status": "blocked_no_predicate_declaration",
       "source_ids": [
-        "FAO-SEED"
+        "FAO-EVAL"
       ],
-      "boundary_rule": "Use only the named authority/design/reference criterion in basis; absent criterion blocks classification."
+      "claim_evidence": [
+        {
+          "source_id": "FAO-EVAL",
+          "locator": "Sections 2.1ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“2.5",
+          "scope": "Land use-specific suitability, qualities and characteristics; older framework retained with scope."
+        }
+      ],
+      "context_scope": "Cross-sector actual land use, management, occupation, conversion, specified rights/disputes and condition. Cover, use, plan, permission, tenure and condition remain distinct."
     }
   ],
   "ambiguities": [
     {
-      "id": "land-a1",
+      "id": "land-boundary-review",
       "issue": "ManagedField and LandEvaluationUnit cannot quietly specialise earth:Region's volumetric meaning if their identity is a surface polygon: parent remains proposed with an explicit upstream footprint distinction. CropStand and VegetationPatch may be configurations rather than things; unity criteria need biology/ecology review. AgriculturalHolding has an operational/institutional boundary and may belong under society. Do not retain land:LandCover as a universal identity merely because the old file declares it. FAO classifications are versioned authorities; LCCS categories, use labels and conservation agriculture rules are not mutually equivalent or automatically exhaustive. AdjacentField is symmetric and may be better a bond rather than a directed relationship; keep it blocked pending relationship/bond decision. ResidueRetention may be a practice/state description rather than homogeneous process: intervention bounds and evidence are required.",
       "status": "unresolved",
-      "decision": "Keep blocked/provisional in research dossier, not executable src."
+      "decision": "Prior blockers retained as historical provenance; dispositions below replace ownership of old names."
+    },
+    {
+      "id": "land-upstream-gates",
+      "issue": "Surface parent, population/configuration unity, operational holding parent, common actor and n-ary rights semantics remain blocked. Implication/detection are syntax only; change requires occurrents; unresolved change does not imply no real change.",
+      "status": "unresolved"
     }
   ],
   "coverage": {
     "target_per_category": 5,
     "counts": {
-      "subject": 5,
-      "process": 5,
+      "subject": 1,
+      "process": 2,
       "relationship": 5,
-      "event": 5,
-      "quality": 7
+      "event": 3,
+      "quality": 4
     },
-    "shortfalls": "FAO focus gives useful agricultural examples but weak urban land use, pastoral tenure, forestry management and land rights. Five relationships include cross-domain topology placeholders rather than five demonstrated domain-essential intensions.",
+    "shortfalls": "No quota padding. Only one blocked surface bearer; few processes/events. Rights/claims and cross-sector specialized activities need upstream work; forestry, extraction and recreation appear as use contexts, not fully articulated sectors.",
+    "warning": "Explored blocked candidates, not accepted coverage. External references and dispositions are not counted as local concepts.",
     "concept_question_incidence": {
-      "land-ManagedField": [
-        "land-q01",
-        "land-q03",
-        "land-q06",
-        "land-q08",
-        "land-q14"
-      ],
-      "land-LandEvaluationUnit": [
-        "land-q02"
-      ],
-      "land-CropStand": [
-        "land-q14"
-      ],
-      "land-VegetationPatch": [
-        "land-q10"
-      ],
-      "land-AgriculturalHolding": [],
-      "land-Irrigation": [
-        "land-q04"
-      ],
-      "land-Tillage": [
-        "land-q13"
-      ],
-      "land-Sowing": [],
-      "land-Harvesting": [],
-      "land-ResidueRetention": [
-        "land-q08"
-      ],
-      "land-OccupiesField": [
-        "land-q14"
-      ],
-      "land-ManagesField": [
-        "land-q07"
-      ],
-      "land-OverlapsEvaluationUnit": [],
-      "land-AdjacentField": [],
-      "land-SupportsCropStand": [],
-      "land-SowingEpisode": [
-        "land-q05"
-      ],
-      "land-HarvestEpisode": [
-        "land-q09"
-      ],
-      "land-IrrigationEpisode": [],
       "land-LandUseConversion": [
-        "land-q15"
+        "land-q15",
+        "land-q17"
       ],
       "land-CoverChangeEpisode": [
         "land-q11"
       ],
-      "land-SurfaceCoverFraction": [
-        "land-q03",
-        "land-q08"
+      "land-SurfaceCoverFraction": [],
+      "land-DisturbedAreaFraction": [],
+      "land-ManagedArea": [
+        "land-q26"
       ],
-      "land-DisturbedAreaFraction": [
-        "land-q06"
+      "land-LandSurfaceUnit": [
+        "land-q16",
+        "land-q22",
+        "land-q23",
+        "land-q25",
+        "land-q27",
+        "land-q26"
       ],
-      "land-PlantAvailableWater": [
-        "land-q12"
+      "land-SurfaceSealing": [],
+      "land-SurfaceUnsealing": [
+        "land-q18"
       ],
-      "land-HarvestableBiomass": [],
-      "land-ManagedArea": [],
-      "land-AppliedWaterAmount": [],
-      "land-SeedPlacementDepth": []
+      "land-ActualLandUse": [
+        "land-q16",
+        "land-q21"
+      ],
+      "land-ManagesLand": [
+        "land-q19",
+        "land-q26"
+      ],
+      "land-OccupiesLand": [
+        "land-q19"
+      ],
+      "land-HoldsLandUseRight": [
+        "land-q19"
+      ],
+      "land-DisputesLandUseRight": [
+        "land-q20"
+      ],
+      "land-LandUseCessation": [
+        "land-q24"
+      ],
+      "land-SealedSurfaceFraction": [
+        "land-q17",
+        "land-q25"
+      ]
     },
     "unused_candidates": [
-      "land-AgriculturalHolding",
-      "land-Sowing",
-      "land-Harvesting",
-      "land-OverlapsEvaluationUnit",
-      "land-AdjacentField",
-      "land-SupportsCropStand",
-      "land-IrrigationEpisode",
-      "land-HarvestableBiomass",
-      "land-ManagedArea",
-      "land-AppliedWaterAmount",
-      "land-SeedPlacementDepth"
-    ],
-    "warning": "Five recorded examples/category is not five semantically validated Tier-1 concepts. Blocked concepts do not satisfy acceptance coverage."
+      "land-SurfaceCoverFraction",
+      "land-DisturbedAreaFraction",
+      "land-SurfaceSealing"
+    ]
   },
   "validation": {
     "source_review": "Primary web screening and local root source reading performed; expert review absent.",
-    "grammar": "untested; parent runner will record exact expression results",
+    "grammar": "See current question-parser-results.json; parser does not resolve names or semantics.",
     "adaptation": "not run for candidate dossiers",
     "semantic": "not run; no loaded worldview/reasoner approval",
     "model_execution": "not run; no models or consequence engine implemented",
     "invalid_probes": [
-      "land-q10",
-      "land-q13"
+      "land-q10"
     ],
     "approval": "No self-approval; exact artifact/import hashes and human decisions required before review-ready status.",
-    "human_approval": "none; source/ontology review outstanding",
+    "human_approval": "Boundary organization authorized; candidate scientific/type approval absent.",
     "type_context_warning": "Reference existence and grammar acceptance do not establish scientific specialization."
   }
 }

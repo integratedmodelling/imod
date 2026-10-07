@@ -30,3 +30,8 @@ Start with [the domain bootstrap workbench](experiments/strawman-2026/bootstrap/
 | D22 | Continue on the user-published sandbox without advancing protected master or disturbing the original checkout. | User authorizes sandbox use; no master merge or public review launch. Shared-branch worktree collision is isolated before commits. Exact branch/ref observations and preservation differences are recorded in bootstrap validation. |
 
 The earlier no-push restriction is superseded only for the user's sandbox branch. No decision authorizes a master merge, deployment, external review launch, or modification of original source files. Alternatives and disagreements remain reviewable.
+
+
+## 2026-10-07: separate agriculture research from cross-sector land
+
+User authorized the organizational boundary revision and direct edits on the sandbox branch. [Disposition register and rationale](experiments/strawman-2026/bootstrap/LAND_AGRICULTURE_REVISION.md) accounts for all 27 earlier candidates. Existing IDs and blockers persist; seven deferred primitives are not counted as new coverage. Livestock/grazing evidence supplements cultivated meanings. No executable agriculture namespace, semantic approval, backend change or runtime consequence behavior is introduced.

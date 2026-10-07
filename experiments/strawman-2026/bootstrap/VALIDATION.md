@@ -1,3 +1,5 @@
+Current boundary revision: see [land/agriculture revision](LAND_AGRICULTURE_REVISION.md), [coverage dashboard](COVERAGE_DASHBOARD.md) and land-agriculture-validation.json. Counts and backend/reactor results below describe their explicitly earlier review snapshot unless refreshed in that revision.
+
 # Bootstrap validation and limitations
 
 ## Actual checks

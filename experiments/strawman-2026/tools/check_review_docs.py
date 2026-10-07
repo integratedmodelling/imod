@@ -5,7 +5,7 @@ import re
 
 packet = Path(__file__).resolve().parents[1]
 repo = packet.parents[1]
-domains = {p.stem for p in (repo/'src').glob('*.kwv')} - {'imod','calendar','data'}
+domains = ({p.stem for p in (repo/'src').glob('*.kwv')} - {'imod','calendar','data'}) | {x['namespace'] for x in json.loads((packet/'bootstrap/domain-index.json').read_text(encoding='utf8'))['domains']}
 parts = re.split(r'^## ([a-z]+)\s*$', (packet/'DOMAIN_CANDIDATES.md').read_text(encoding='utf8'), flags=re.M)
 sections = dict(zip(parts[1::2], parts[2::2]))
 if set(sections) != domains:
@@ -19,7 +19,7 @@ for domain, section in sections.items():
         cells = row.strip('|').split('|')
         if len(cells) != 4 or not all(cell.strip() for cell in cells):
             raise ValueError('Incomplete candidate record: '+domain)
-        if not re.search(r'— [PB]:\*\*', row):
+        if not re.search(r'[\-—] [PB]:\*\*', row):
             raise ValueError('Missing provisional/blocked status: '+domain)
     counts[domain] = len(rows)
 

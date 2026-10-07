@@ -167,7 +167,6 @@
     "questions": {
       "type": "array",
       "minItems": 15,
-      "maxItems": 15,
       "items": {
         "type": "object",
         "required": [
@@ -251,7 +250,8 @@
           }
         },
         "additionalProperties": true
-      }
+      },
+      "description": "At least fifteen research slots; additions may preserve inherited IDs and broaden evidence. Count is diagnostic, not answerability or scientific coverage."
     },
     "quality_summaries": {
       "type": "array"

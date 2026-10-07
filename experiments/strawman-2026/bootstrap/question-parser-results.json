@@ -1,7 +1,7 @@
 {
   "scope": "Actual ObservableSequence grammar only; no name resolution, type/category validation, adaptation, reasoner or model execution.",
   "grammar_source": "klab-languages 8f5c29363f4362bddd13f9fdd4f43e7e2c9fb024; dependency hashes verified against candidate-parser.classpath.json",
-  "parser_source_sha256": "6ee8354a275111789787515300ff2628f68b7ef18c203da30a16a5e77299ea8f",
+  "parser_source_sha256": "6964908a096ae4cf4f977c6f62b108d225db78b5ac1202877df5a1596378049d",
   "expressions": [
     {
       "id": "agency/agency-q03",
@@ -56,6 +56,41 @@
       "id": "agency/agency-q12",
       "expression": "agency:RepresentativeAppointment",
       "sha256": "7a2ef00537a7ea76fa63675db15b06fbfe51238e264e0806b0d6182096e75306",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "agriculture/land-q03",
+      "expression": "land:SurfaceCoverFraction of agriculture:ManagedField",
+      "sha256": "fd10a201aa10d8324c2bf64e5d715735a4d8280454075e38c544123c16bee6ed",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "agriculture/land-q06",
+      "expression": "land:DisturbedAreaFraction of agriculture:ManagedField",
+      "sha256": "3f3387a88b7706a63a9491b2a35825d85c370ea84a01a2999c140381b081ee93",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "agriculture/land-q14",
+      "expression": "agriculture:OccupiesField linking agriculture:CropStand to agriculture:ManagedField",
+      "sha256": "a5ddd65fb2c1887a22fe8941d1911481117f6ae6a915facb02074548527d6b29",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "agriculture/agriculture-q02",
+      "expression": "agriculture:LivestockCount of agriculture:ManagedHerd",
+      "sha256": "9678b7ab5aa381b6e8c49aa416fc3974da2e8de19d40da115747e39dad0786b5",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "agriculture/agriculture-q03",
+      "expression": "agriculture:LivestockGrazing",
+      "sha256": "d07c01a147eb954800e88de3d0a00b69f83064bcf7a06af872d0e100a5b31c9b",
       "status": "PASS",
       "diagnostics": ""
     },
@@ -872,51 +907,16 @@
       "diagnostics": ""
     },
     {
-      "id": "land/land-q03",
-      "expression": "land:SurfaceCoverFraction of land:ManagedField",
-      "sha256": "80afa02c888833c235ddc4f5435053a353ac512be1550f6c802670feabace16b",
+      "id": "land/land-q25",
+      "expression": "land:SealedSurfaceFraction of land:LandSurfaceUnit",
+      "sha256": "64da177112accf6afc2c6ce6df25a9acd550f81a316a8d23c61828b6354647fa",
       "status": "PASS",
       "diagnostics": ""
     },
     {
-      "id": "land/land-q04",
-      "expression": "land:Irrigation",
-      "sha256": "98c6ebbb897d0a7e3b4aa868fb928c0b88644ac599ca489576c41b9be2aa70f0",
-      "status": "PASS",
-      "diagnostics": ""
-    },
-    {
-      "id": "land/land-q05",
-      "expression": "land:SowingEpisode",
-      "sha256": "2c03e44e5238150ee5cba72ac00d8146880f0f2cf18fa429b4f7b3a9ac40eb35",
-      "status": "PASS",
-      "diagnostics": ""
-    },
-    {
-      "id": "land/land-q06",
-      "expression": "land:DisturbedAreaFraction of land:ManagedField",
-      "sha256": "c9fd12b4385deb46f88e735a51d28b500102b3fac99570e4098ef1cc567b4242",
-      "status": "PASS",
-      "diagnostics": ""
-    },
-    {
-      "id": "land/land-q08",
-      "expression": "change in land:SurfaceCoverFraction of land:ManagedField",
-      "sha256": "d6203b7f0d6b467abdfa107b25dfa28bd14b3a50f92aa0770ce722f19d47ffef",
-      "status": "PASS",
-      "diagnostics": ""
-    },
-    {
-      "id": "land/land-q09",
-      "expression": "land:HarvestEpisode",
-      "sha256": "cc40c1e68c18bc998cdfb48a0f611448c3364c715814bbfb97f979c4a8bed7b4",
-      "status": "PASS",
-      "diagnostics": ""
-    },
-    {
-      "id": "land/land-q14",
-      "expression": "land:OccupiesField linking land:CropStand to land:ManagedField",
-      "sha256": "1cf21fa29be952c22d7c00d0019a3f549deae88dbf7e75b13c8f0c41b9a69068",
+      "id": "land/land-q26",
+      "expression": "land:ManagedArea of land:LandSurfaceUnit",
+      "sha256": "765e42995135cb9d25b0c48ee49a0bce22e50b87d5e397736e7407c91f2a3aeb",
       "status": "PASS",
       "diagnostics": ""
     },
@@ -1491,6 +1491,34 @@
       "id": "valuation/valuation-q13",
       "expression": "valuation:RegardsAsNonSubstitutable",
       "sha256": "d236ad55613e087368a100c891c5740e41b0d1dfed652a43560d6e75c58e6ef9",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "agriculture/land-q04#partial-observable",
+      "expression": "agriculture:Irrigation",
+      "sha256": "07f3993c209ea1d35857f91bf63f5b71cd9f28cc38f47a63d303ed2596f61365",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "agriculture/land-q05#partial-observable",
+      "expression": "agriculture:SowingEpisode",
+      "sha256": "94d2f8d0bdb1417bb28d28497f7fe4ccac2e295e23b7203ec4606754a7096198",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "agriculture/land-q08#partial-observable",
+      "expression": "change in land:SurfaceCoverFraction of agriculture:ManagedField",
+      "sha256": "061fc4de07033c4fdc4bc6291e5e0687591cd19daa4dcb12e22d873479058c24",
+      "status": "PASS",
+      "diagnostics": ""
+    },
+    {
+      "id": "agriculture/land-q09#partial-observable",
+      "expression": "agriculture:HarvestEpisode",
+      "sha256": "365ba96906dd934b1b4c1682571bf3224e3de74bdcb8c85eb8618826d98449e1",
       "status": "PASS",
       "diagnostics": ""
     },

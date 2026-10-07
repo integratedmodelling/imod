@@ -1,13 +1,22 @@
 {
   "scope": "Local research schema/reference/incidence/DAG checks only. Ready count zero: no human semantic approval or full validation.",
-  "domains": 22,
-  "concepts": 457,
-  "questions": 330,
+  "domains": 23,
+  "concepts": 467,
+  "questions": 348,
   "expressions": 213,
   "errors": [],
   "dependency_graph": {
     "agency": [
       "physical"
+    ],
+    "agriculture": [
+      "land",
+      "life",
+      "ecology",
+      "society",
+      "economics",
+      "soil",
+      "hydrology"
     ],
     "atmosphere": [
       "earth"
@@ -45,7 +54,13 @@
     ],
     "infrastructure": [],
     "land": [
-      "earth"
+      "earth",
+      "geography",
+      "society",
+      "agency",
+      "ecology",
+      "soil",
+      "hydrology"
     ],
     "life": [],
     "oceanography": [
@@ -153,6 +168,100 @@
         "agency-c10"
       ],
       "sha256": "1dd273fe027d630780d8f70932203c2c7baf11bdfa8903cbe339ebcc6c23f798"
+    },
+    {
+      "domain": "agriculture",
+      "counts": {
+        "subject": 5,
+        "quality": 3,
+        "process": 7,
+        "relationship": 3,
+        "event": 4,
+        "predicate": 0
+      },
+      "category_target_shortfalls": {
+        "subject": 0,
+        "process": 0,
+        "relationship": 2,
+        "event": 1
+      },
+      "all_four_category_targets_met": false,
+      "questions": 18,
+      "expressions": 5,
+      "insufficient_components": 4,
+      "blocked_candidates": 22,
+      "review_ready_candidates": 0,
+      "incidence": {
+        "land-ManagedField": [
+          "land-q01",
+          "land-q03",
+          "land-q06",
+          "land-q08",
+          "land-q14"
+        ],
+        "land-CropStand": [
+          "land-q14"
+        ],
+        "land-AgriculturalHolding": [
+          "agriculture-q05"
+        ],
+        "land-Irrigation": [
+          "land-q04"
+        ],
+        "land-Tillage": [
+          "land-q13"
+        ],
+        "land-Sowing": [],
+        "land-Harvesting": [],
+        "land-ResidueRetention": [
+          "land-q08"
+        ],
+        "land-OccupiesField": [
+          "land-q14"
+        ],
+        "land-ManagesField": [
+          "land-q07"
+        ],
+        "land-SowingEpisode": [
+          "land-q05"
+        ],
+        "land-HarvestEpisode": [
+          "land-q09"
+        ],
+        "land-IrrigationEpisode": [],
+        "land-HarvestableBiomass": [],
+        "land-SeedPlacementDepth": [],
+        "agriculture-ManagedLivestock": [
+          "agriculture-q01"
+        ],
+        "agriculture-ManagedHerd": [
+          "agriculture-q02"
+        ],
+        "agriculture-AnimalHusbandry": [
+          "agriculture-q05"
+        ],
+        "agriculture-LivestockGrazing": [
+          "agriculture-q03",
+          "agriculture-q06"
+        ],
+        "agriculture-RaisesLivestock": [
+          "agriculture-q01"
+        ],
+        "agriculture-GrazingEpisode": [
+          "agriculture-q04"
+        ],
+        "agriculture-LivestockCount": [
+          "agriculture-q02"
+        ]
+      },
+      "unused_candidates": [
+        "land-Sowing",
+        "land-Harvesting",
+        "land-IrrigationEpisode",
+        "land-HarvestableBiomass",
+        "land-SeedPlacementDepth"
+      ],
+      "sha256": "2cf593c79910205b9ab6c398c4ece0522e766205ec810bdabf7b7617252cf14c"
     },
     {
       "domain": "atmosphere",
@@ -1286,105 +1395,81 @@
     {
       "domain": "land",
       "counts": {
-        "subject": 5,
-        "quality": 7,
-        "process": 5,
+        "subject": 1,
+        "quality": 4,
+        "process": 2,
         "relationship": 5,
-        "event": 5,
+        "event": 3,
         "predicate": 0
       },
       "category_target_shortfalls": {
-        "subject": 0,
-        "process": 0,
+        "subject": 4,
+        "process": 3,
         "relationship": 0,
-        "event": 0
+        "event": 2
       },
-      "all_four_category_targets_met": true,
+      "all_four_category_targets_met": false,
       "questions": 15,
-      "expressions": 7,
+      "expressions": 2,
       "insufficient_components": 0,
-      "blocked_candidates": 11,
+      "blocked_candidates": 15,
       "review_ready_candidates": 0,
       "incidence": {
-        "land-ManagedField": [
-          "land-q01",
-          "land-q03",
-          "land-q06",
-          "land-q08",
-          "land-q14"
-        ],
-        "land-LandEvaluationUnit": [
-          "land-q02"
-        ],
-        "land-CropStand": [
-          "land-q14"
-        ],
-        "land-VegetationPatch": [
-          "land-q10"
-        ],
-        "land-AgriculturalHolding": [],
-        "land-Irrigation": [
-          "land-q04"
-        ],
-        "land-Tillage": [
-          "land-q13"
-        ],
-        "land-Sowing": [],
-        "land-Harvesting": [],
-        "land-ResidueRetention": [
-          "land-q08"
-        ],
-        "land-OccupiesField": [
-          "land-q14"
-        ],
-        "land-ManagesField": [
-          "land-q07"
-        ],
-        "land-OverlapsEvaluationUnit": [],
-        "land-AdjacentField": [],
-        "land-SupportsCropStand": [],
-        "land-SowingEpisode": [
-          "land-q05"
-        ],
-        "land-HarvestEpisode": [
-          "land-q09"
-        ],
-        "land-IrrigationEpisode": [],
         "land-LandUseConversion": [
-          "land-q15"
+          "land-q15",
+          "land-q17"
         ],
         "land-CoverChangeEpisode": [
           "land-q11"
         ],
-        "land-SurfaceCoverFraction": [
-          "land-q03",
-          "land-q08"
+        "land-SurfaceCoverFraction": [],
+        "land-DisturbedAreaFraction": [],
+        "land-ManagedArea": [
+          "land-q26"
         ],
-        "land-DisturbedAreaFraction": [
-          "land-q06"
+        "land-LandSurfaceUnit": [
+          "land-q16",
+          "land-q22",
+          "land-q23",
+          "land-q25",
+          "land-q26",
+          "land-q27"
         ],
-        "land-PlantAvailableWater": [
-          "land-q12"
+        "land-SurfaceSealing": [],
+        "land-SurfaceUnsealing": [
+          "land-q18"
         ],
-        "land-HarvestableBiomass": [],
-        "land-ManagedArea": [],
-        "land-AppliedWaterAmount": [],
-        "land-SeedPlacementDepth": []
+        "land-ActualLandUse": [
+          "land-q16",
+          "land-q21"
+        ],
+        "land-ManagesLand": [
+          "land-q19",
+          "land-q26"
+        ],
+        "land-OccupiesLand": [
+          "land-q19"
+        ],
+        "land-HoldsLandUseRight": [
+          "land-q19"
+        ],
+        "land-DisputesLandUseRight": [
+          "land-q20"
+        ],
+        "land-LandUseCessation": [
+          "land-q24"
+        ],
+        "land-SealedSurfaceFraction": [
+          "land-q17",
+          "land-q25"
+        ]
       },
       "unused_candidates": [
-        "land-AgriculturalHolding",
-        "land-Sowing",
-        "land-Harvesting",
-        "land-OverlapsEvaluationUnit",
-        "land-AdjacentField",
-        "land-SupportsCropStand",
-        "land-IrrigationEpisode",
-        "land-HarvestableBiomass",
-        "land-ManagedArea",
-        "land-AppliedWaterAmount",
-        "land-SeedPlacementDepth"
+        "land-SurfaceCoverFraction",
+        "land-DisturbedAreaFraction",
+        "land-SurfaceSealing"
       ],
-      "sha256": "a4fd7e6ad890b732bccf0a31bb0c735d9d37a211f3e0b21183e0edca410a7909"
+      "sha256": "a56077b971538f35e4d30c3d1ae20cc69cfe2407c0c5a2125e9460562acc3de8"
     },
     {
       "domain": "life",
@@ -2094,11 +2179,11 @@
     "engineering",
     "genetics",
     "hydrology",
-    "infrastructure",
-    "land"
+    "infrastructure"
   ],
   "domains_with_shortfalls": [
     "agency",
+    "agriculture",
     "atmosphere",
     "biology",
     "chemistry",
@@ -2106,6 +2191,7 @@
     "ecology",
     "geography",
     "geology",
+    "land",
     "life",
     "oceanography",
     "physical",
@@ -2115,5 +2201,5 @@
     "soil",
     "valuation"
   ],
-  "question_count_limit": "330 initial research slots include scientific questions, methodological probes and counterexamples; not 330 answerable scientific questions. Non-null expression does not imply sufficient formulation."
+  "question_count_limit": "348 research slots include scientific questions, methodological probes and counterexamples; not 348 answerable scientific questions. Non-null expression does not imply sufficient formulation."
 }

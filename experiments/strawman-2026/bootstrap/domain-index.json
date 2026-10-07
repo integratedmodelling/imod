@@ -1,0 +1,146 @@
+{
+  "domains": [
+    {
+      "namespace": "agency",
+      "dossier": "agency/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "agriculture",
+      "dossier": "agriculture/dossier.json",
+      "executable_namespace": false,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "atmosphere",
+      "dossier": "atmosphere/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "biology",
+      "dossier": "biology/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "chemistry",
+      "dossier": "chemistry/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "earth",
+      "dossier": "earth/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "ecology",
+      "dossier": "ecology/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "economics",
+      "dossier": "economics/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "engineering",
+      "dossier": "engineering/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "genetics",
+      "dossier": "genetics/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "geography",
+      "dossier": "geography/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "geology",
+      "dossier": "geology/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "hydrology",
+      "dossier": "hydrology/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "infrastructure",
+      "dossier": "infrastructure/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "land",
+      "dossier": "land/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "life",
+      "dossier": "life/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "oceanography",
+      "dossier": "oceanography/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "physical",
+      "dossier": "physical/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "physics",
+      "dossier": "physics/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "society",
+      "dossier": "society/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "sociology",
+      "dossier": "sociology/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "soil",
+      "dossier": "soil/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    },
+    {
+      "namespace": "valuation",
+      "dossier": "valuation/dossier.json",
+      "executable_namespace": true,
+      "status": "research_only_no_semantic_approval"
+    }
+  ],
+  "excluded": [
+    "decision"
+  ],
+  "note": "Agriculture has no installed namespace. Domain addresses are not inheritance."
+}

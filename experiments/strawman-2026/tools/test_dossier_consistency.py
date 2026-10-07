@@ -50,18 +50,18 @@ class ReviewCorrections(unittest.TestCase):
   d=read('hydrology');projection=json.loads((ROOT/'hydrology/backend-dossier.sample.json').read_text())
   self.assertTrue(quality_roundtrip_errors(projection,d['quality_summaries'],(ROOT/'hydrology/dossier.json').read_bytes()+b' '))
  def test_fao_predicate_has_direct_scoped_evidence(self):
-  d=read('land');self.assertEqual([],predicate_evidence_errors(d))
+  d=read('agriculture');self.assertEqual([],predicate_evidence_errors(d))
   a=next(a for a in d['quality_summaries'] if a['proposed_summary']=='conservation agriculture cover class')
   self.assertIn('FAO-CA',a['source_ids']);self.assertEqual('Permanent soil organic cover paragraph',a['claim_evidence'][0]['locator'])
  def test_missing_fao_predicate_source_is_rejected(self):
-  d=copy.deepcopy(read('land'));a=d['quality_summaries'][0];a['source_ids'].remove('FAO-CA')
+  d=copy.deepcopy(read('agriculture'));a=d['quality_summaries'][0];a['source_ids'].remove('FAO-CA')
   self.assertTrue(predicate_evidence_errors(d))
- def test_six_explored_category_targets_not_twenty_two(self):
+ def test_partial_explored_category_targets(self):
   met=[]
   for d in self.ds:
    if all(sum(c['category']==kind for c in d['concepts'])>=5 for kind in ['subject','process','relationship','event']):met.append(d['domain'])
-  self.assertEqual(sorted(['economics','engineering','genetics','hydrology','infrastructure','land']),sorted(met))
-  self.assertEqual(16,len(self.ds)-len(met))
+  self.assertEqual(sorted(['economics','engineering','genetics','hydrology','infrastructure']),sorted(met))
+  self.assertEqual(18,len(self.ds)-len(met))
  def test_narrative_intent_separate_from_expression_category(self):
   for d in self.ds:
    for q in d['questions']:

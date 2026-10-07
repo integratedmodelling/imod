@@ -1,6 +1,6 @@
 {
-  "domain_addresses": 23,
-  "candidate_records": 52,
+  "domain_addresses": 24,
+  "candidate_records": 54,
   "records_per_domain": {
     "physical": 2,
     "physics": 3,
@@ -23,10 +23,11 @@
     "engineering": 2,
     "economics": 3,
     "land": 2,
+    "agriculture": 2,
     "decision": 2,
     "valuation": 3
   },
-  "local_links_checked": 104,
+  "local_links_checked": 118,
   "status": "PASS",
   "scope": "Structural checks only; no scientific completeness or acceptance inferred"
 }
