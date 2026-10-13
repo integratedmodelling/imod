@@ -10,15 +10,17 @@
 ontology life
 	version 1.0
 	using imod
-	in domain imod:Physical of imod:Biosphere;
+	in domain imod:Physical;
 
 abstract identity TaxonomicIdentity
 	requires authority TAXA {
         urn: "klab.authority.taxa",
         datasetKey: 312578
+		codelists: {
+        	species: "taxonomy.species",
+        	genera:  "taxonomy.genera"
+    	}
 	};
-
- // equals GBIF.SPECIES:2436436;
 
 abstract agent Individual;
 

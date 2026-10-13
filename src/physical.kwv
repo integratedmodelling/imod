@@ -1,7 +1,7 @@
 ontology physical
    version 1.0
    using imod
-   in domain imod:Physical of imod:PhysicalSystem;
+   in domain imod:Physical;
  
 /**
  * TODO if all those decision:-based predicates are needed, they should be moved into something like an

@@ -157,8 +157,8 @@ configuration PhysicalSystem
 abstract domain Physical
 	"The basic ontology domain for things that are conceptualized as existent. Namespaces in this domain have to do
      with the world, not with its epistemological explanation or interpretation."
-   //   applies to imod:PhysicalSystem
-     ;
+      describes imod:PhysicalSystem
+   ;
 
 /***
  * @@ Knowledge domains are epistemological takes on a system. Different disciplines may coexist in the attempt to

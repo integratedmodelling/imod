@@ -6,7 +6,7 @@ ontology land
 	""
 	version 1.0
 	using imod, society, earth, life
-	in domain imod:Knowledge of (imod:Geosphere or imod:Biosphere);
+	in domain imod:Knowledge;
 
 /**
  * @temporary Example of how the link to the generic pattern authority could be made
