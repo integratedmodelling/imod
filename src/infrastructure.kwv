@@ -9,7 +9,7 @@
  */
 ontology infrastructure
 	version 1.0
-	using imod, decision, physical, earth
+	using imod, physical, earth
 	in domain imod:Physical of imod:Technosphere;
 	
 @fixme("Same problems as most other things with 'requires identity Goal'")

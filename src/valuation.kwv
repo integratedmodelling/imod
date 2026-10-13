@@ -7,7 +7,7 @@
 ontology valuation
 	in domain imod:Physical of imod:Anthroposphere
 	version 1.0
-	using imod, physical, decision;
+	using imod, physical;
 
 /**
  * The @Asset role is, for now, limited to substantials (individuals, organizations, systems, agents) but could be

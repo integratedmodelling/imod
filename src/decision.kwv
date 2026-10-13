@@ -1,9 +1,0 @@
-/**
- * 
- * @deprecated merge into @agency
- */
-ontology decision
-      version 1.0
-      using imod, physical, agency
-      in domain imod:Physical;
-
