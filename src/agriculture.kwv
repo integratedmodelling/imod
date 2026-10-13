@@ -1,0 +1,4 @@
+ontology agriculture
+    version 1.0
+    in domain im:Domain;
+
