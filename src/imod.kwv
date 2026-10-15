@@ -474,21 +474,6 @@ abstract quality Heterogeneity
 //extent Multiplicity 
 //    is core odo:Multiplicity;
 
-@fixme("definitely needs better derivation. For these dichotomic articulations we could use 'sealed' but we could also have a 
-        deniable attribute for the positive case and add an alias for the negative: e.g.
-        deniable attribute Net; attribute Gross equals not imod:Net;")   
-abstract attribute MeasurementRelated
-      has children
-      (@colormap(colors=(red white green), midpoint=0)
-      Net
-      ), 
-      Gross;
-      
-//@colormap(colors=(red white green), midpoint=0)      
-//attribute Net
-//	"" 
-//	deniable as Gross;
-     
 //Temporal extent
             
 abstract extent Time 
