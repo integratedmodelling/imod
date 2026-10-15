@@ -1,0 +1,7 @@
+{
+  "review_patch_sha256": "d7dbc582220c4554fcc15ee8c0e21cb61bfc1a21449518ff8679b49db3c4fc7e",
+  "canonical_application_patch": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-15\\task\\v21-local-integration\\canonical-v21-source.diff",
+  "canonical_application_patch_sha256": "4b3901aa7bbac0cfafbc0571f2fcc19ac1997227b5dce9a4e73b48187b71a9cb",
+  "reason": "Canonical Git diff regenerated from the same frozen26source files; original concatenated unified diff rejected before any source edits. Candidate source hashes unchanged.",
+  "apply_check": "passed"
+}

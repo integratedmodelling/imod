@@ -1,40 +1,51 @@
 /**
  * # Integrated Modelling worldview
  *
- * This root exports the shared observation vocabulary and introduces system
- * configurations used to organize the worldview. Declarations are universals;
- * models and digital twins supply particulars and instance bindings.
+ * The root introduces the shared vocabulary of observation, the configurations
+ * through which systems are recognized, and the domains that organize the
+ * worldview. Its declarations are universals. Models and digital twins supply
+ * particular entities, observations and bindings between instances.
  *
- * Systems express recognized organization and patterns. A subject, event or
- * quality does not become a Configuration merely because a domain includes it.
- * EarthSystem is Earth-specific; other systems can specialize System directly.
+ * Read the opening sections in order: system configurations establish a common
+ * organizational vocabulary; physical anchors identify subject matter; named
+ * Knowledge domains introduce descriptive perspectives on that subject matter.
+ * The observation kinds and general predicates that follow are shared by the
+ * disciplinary namespaces. The strawman supplies a coherent starting vocabulary,
+ * while leaving detailed scientific articulation to subsequent community work.
  *
- * Domain subject matter (about), configuration description (describes), and
- * bearer inherency (of) are distinct. Physical, Knowledge and Normative domain
- * kinds are non-exhaustive; physical domains need not partition all phenomena.
- * The legacy domain declarations and preambles below await coordinated migration
- * to the ODO kind interface and explicitly authored physical subject matter.
+ * ## Three distinct semantic relations
  *
- * Quoted docstrings state concept meanings. Plain Markdown commentary records
- * scope and rationale; no @-based documentation preprocessing is assumed.
+ * `about` identifies a Knowledge domain's physical subject matter. `describes`
+ * relates a description to its subject, including a Domain describing a
+ * Configuration. `of` specifies bearer inherency. Selecting a domain does not
+ * make every owned quality inhere in that domain's subject matter, and it does
+ * not turn subjects, events or qualities into Configurations.
+ *
+ * ## Reading and writing this worldview
+ *
+ * A quoted declaration docstring gives the concept's meaning. Literate Markdown
+ * comments explain the scope, sequence and rationale of related declarations;
+ * they should read as a connected account rather than repeat every docstring.
+ * Use qualified names in backticks when referring to concepts, and ordinary
+ * Markdown links for sources that support a specific claim or design decision.
+ * Explain conceptual distinctions where they help the reader interpret a
+ * declaration, and keep each namespace's account within its stated scope.
+ *
+ * The numbered ODO 0.1.1 foundation supplies the imported kinds. The root's
+ * aliases expose those kinds in the worldview vocabulary; the named domains and
+ * system configurations organize their use in the namespaces that follow.
  */
 ontology imod
-   "The imod (Integrated Modelling) ontology includes abstract concepts related to scientific observations.
-    It specifies semantics used everywhere in the IM worldview and links im-based concepts to the 
-    fundamental ontology for use in derived products."
+   "Shared observation concepts, system configurations and domain interfaces for the Integrated Modelling worldview."
    version 1.0
    in domain root 
       with core 
-          // TODO switch to this import after deciding how to link derived observables created by operators 
-          // TODO add the klab: namespace to ground the geometries and other characteristics. Probably the
-          //      object properties should also go there, although I still don't know how to tie them here.
          "https://raw.githubusercontent.com/integratedmodelling/odo-im/master/releases/0.1.1/odo.owl" as odo
    metadata {
       dc.creator: (
          "Ferdinando Villa (ferdinando.villa@bc3research.org)"
          "Greta Adamo (greta.adamo@bc3research.org)"
       )
-      // TODO add refs and links
    };
 
 
@@ -90,48 +101,156 @@ configuration EarthSystem
             "Earth-system organization of human-made artifacts and built networks.";
 
 /**
- * # Domain migration boundary
+ * # Domain kinds and physical subject matter
  *
- * These legacy Physical and Knowledge declarations remain unchanged in type and
- * clauses. Their current consumers are preserved. The ODO kind aliases and ABOUT
- * grounding must be migrated together with namespace preambles; changing only
- * these two declarations would leave existing Knowledge selections ungrounded.
- * Generic living, social and built subject matter must remain expressible without
- * an intrinsic Earth restriction. No unique physical domain, covering taxonomy,
- * reverse definition or shared instance witness is asserted here.
+ * The four core aliases expose imported kinds; they have no additional clauses.
+ * Physical, Knowledge and Normative are pairwise disjoint and non-exhaustive.
+ * Only ordinary physical-domain specializations carry system qualification here.
+ * Knowledge domains use `about` to identify physical subject matter, independently
+ * of configuration description and the bearers of their owned qualities.
+ *
+ * An ontology may select the exact generic Knowledge category when its vocabulary
+ * spans physical subjects, as in data's observation-scaling predicates. A named
+ * specialization must instead identify explicit or inherited physical subject
+ * matter, even when abstract. Concrete Knowledge-owned qualities still need an
+ * effective description; generic category ownership does not waive that contract.
  */
+abstract domain Domain
+    "The field or perspective within which owned concepts are articulated."
+    is core odo:Domain;
+
 abstract domain Physical
-    "A domain articulating physical phenomena within a stated observational scope."
+    "A domain articulating physical phenomena."
+    is core odo:PhysicalDomain;
+
+abstract domain Knowledge
+    "A descriptive or explanatory domain whose specializations identify physical subject matter."
+    is core odo:KnowledgeDomain;
+
+abstract domain Normative
+    "A domain articulating prescriptions, requirements or permissions within an identifiable framework."
+    is core odo:NormativeDomain;
+
+/**
+ * # Shared physical anchors
+ *
+ * These anchors provide subject matter, not full disciplinary taxonomies.
+ * PhysicalPhenomena, Life, Society and BuiltEnvironment are universal in scope;
+ * Earth alone introduces Earth-system scope. Their system qualification does not
+ * bind every owned quality to one bearer or assert a shared particular witness.
+ * About and describes remain independent relations.
+ */
+domain PhysicalPhenomena
+    "Physical phenomena considered through physical-system organization, without an intrinsic restriction to Earth."
+    is imod:Physical of imod:PhysicalSystem
     describes imod:PhysicalSystem;
 
-domain Knowledge
-    "A domain articulating descriptive and explanatory understanding of phenomena;
-     its specializations identify the physical subject matter being interpreted."
-    ;
+domain Earth
+    "Physical Earth phenomena considered within Earth-system organization."
+    is imod:PhysicalPhenomena of imod:EarthSystem
+    describes imod:EarthSystem;
 
-/*
- * TODO there should be a mechanism to link all fundamental types to the core ontology and validate
- * coverage and consistency. For now the mechanism lacks completeness and validation.
- * 
- * For this to work, we also need to link the output of unary operators. This could be as simple as
- * 
- * abstract quality Numerosity is core count of imod:Quality;
- * abstract event Change is change in imod:Quality
- * 
- * TODO we should either have all core derivation use 'equals' or 'is' mandatorily. Given that we will
- * likely supplement the core namespace with properties, probably 'is' is better so that all derivations
- * are in the same place. Equalities should be reserved for in-worldview statements.
- */ 
+domain Life
+    "Living phenomena and their physical settings, without an intrinsic restriction to Earth."
+    is imod:PhysicalPhenomena;
 
-// TODO link the output of operators. Could be as simple as
+domain Society
+    "Observed social phenomena and collective organization, without an intrinsic restriction to Earth."
+    is imod:PhysicalPhenomena;
 
-// abstract quality Numerosity is core count of imod:Quality;
-// abstract event Changed is changed imod:Quality
+domain BuiltEnvironment
+    "Built artifacts and networks in their settings, uses and functioning, without an intrinsic restriction to Earth."
+    is imod:PhysicalPhenomena;
 
-// would need a check that everything is included and store those in CoreOntology for reference. 
-// Not sure what we should do for restrictions but probably just adding the properties based on the operators would be enough.           
-// Also all needed annotation properties would be just added to the core namespace and that would be it. 
- 
+/**
+ * # Named descriptive domains
+ *
+ * Each ordinary specialization names a descriptive perspective and explicitly
+ * identifies physical subject matter. Repeated `about` modifiers retain separate
+ * links: Ecology concerns both Life and PhysicalPhenomena, while Land connects
+ * Earth, Society and Life. `about (A and B)` would instead name one composite
+ * target. These declarations add necessary constraints, not reverse definitions,
+ * a shared instance witness, or a computation.
+ *
+ * Geography describes Earth locations, terrain and regional distinctions.
+ * Valuation describes societal preferences across many contexts, including
+ * economic, ethical, aesthetic and health concerns. Describing a preference is
+ * different from prescribing what ought to be valued. A Normative domain
+ * identifies the framework within which prescriptions are articulated.
+ *
+ * `AtmosphereKnowledge` distinguishes the descriptive domain from the existing
+ * `Atmosphere` Configuration. Both names are deliberate: one identifies a
+ * perspective on Earth phenomena, the other their recognized system organization.
+ */
+domain Agency
+    "Observed agency and deliberate activity in their social setting."
+    is imod:Knowledge about imod:Society;
+
+domain AtmosphereKnowledge
+    "Descriptive and explanatory knowledge of Earth atmospheric phenomena."
+    is imod:Knowledge about imod:Earth;
+
+domain Biology
+    "Descriptive and explanatory knowledge of living structure, function and occurrences."
+    is imod:Knowledge about imod:Life;
+
+domain Chemistry
+    "Descriptive and explanatory knowledge of composition and chemical transformations, without an intrinsic restriction to Earth."
+    is imod:Knowledge about imod:PhysicalPhenomena;
+
+domain Ecology
+    "Descriptive and explanatory knowledge of living interactions and their physical settings."
+    is imod:Knowledge about imod:Life about imod:PhysicalPhenomena;
+
+domain Economics
+    "Descriptive and explanatory knowledge of observed production, exchange and accounting."
+    is imod:Knowledge about imod:Society;
+
+domain Engineering
+    "Descriptive and explanatory knowledge of built artifacts and their observed operation."
+    is imod:Knowledge about imod:BuiltEnvironment;
+
+domain Genetics
+    "Descriptive and explanatory knowledge of genomic bearers, inheritance and molecular occurrences."
+    is imod:Knowledge about imod:Life;
+
+domain Geography
+    "Descriptive and explanatory knowledge of Earth locations, terrain and spatial organization, including geographical and regional identities."
+    is imod:Knowledge about imod:Earth;
+
+domain Geology
+    "Descriptive and explanatory knowledge of Earth geological bodies, materials and occurrences."
+    is imod:Knowledge about imod:Earth;
+
+domain Hydrology
+    "Descriptive and explanatory knowledge of Earth water bodies, flow and storage."
+    is imod:Knowledge about imod:Earth;
+
+domain Land
+    "Descriptive knowledge of Earth land cover, use and management; physical, social and living subject matter remain distinct."
+    is imod:Knowledge about imod:Earth about imod:Society about imod:Life;
+
+domain Oceanography
+    "Descriptive and explanatory knowledge of Earth marine bodies and their conditions."
+    is imod:Knowledge about imod:Earth;
+
+domain Physics
+    "Descriptive and explanatory knowledge of physical quantities and processes, without an intrinsic restriction to Earth."
+    is imod:Knowledge about imod:PhysicalPhenomena;
+
+domain Sociology
+    "Descriptive and explanatory knowledge of observed social relations and processes."
+    is imod:Knowledge about imod:Society;
+
+domain Soil
+    "Descriptive and explanatory knowledge of Earth soils, horizons and their physical settings."
+    is imod:Knowledge about imod:Earth;
+
+domain Valuation
+    "Descriptive knowledge of societal preferences and value attribution across economic, ethical, aesthetic, health and other contexts, including valued assets and their associated hazards and risks."
+    is imod:Knowledge about imod:Society;
+
+
 //Identity
 abstract identity Identity
     "Identity specifies the assignment of a concept to a certain class of concepts based on 
@@ -141,34 +260,13 @@ abstract identity Identity
 
 //Identities capturing discrete space for the worldview
 
-abstract identity Puntal; // is core observation:Puntal;
-abstract identity Lineal; // is core observation:Lineal;
-abstract identity Areal; // is core observation:Areal;
-abstract identity Volumetric;//  is core observation:Volumetric;
-//@fixme("Mah. A final output would be Outcome, Goal is definitely not an identity, probably both are configurations") 
+abstract identity Puntal; 
+abstract identity Lineal; 
+abstract identity Areal; 
+abstract identity Volumetric;
 abstract identity Outcome
      "Final output of a Process";
 
-//The notion of Boundary should be better documented
-
-/**
- * Revise the whole issue of boundaries in the observational key. Linked to scale. Re: concepts, the entire
- * worldview is an exercise in conceptual boundary attribution and I'm not sure we need to
- * model it within itself.
- */
-
-// @fixme("The 'requires identity' clause needs revision, here and elsewhere. Implication (to be understood) is a likely candidate.")
-// abstract identity ConceptualBoundary 
-//      //metadata { plato.stanford.edu/entries/boundary/ }
-//     "A conceptual boundary is the conceptual delimitation that allows the identification of entities"
-//      requires identity imod:Goal;
-     
-// State of affair: https://plato.stanford.edu/entries/states-of-affairs/#:~:text=States%20of%20affairs%20are%20similar,explained%20further)%20objects%20and%20properties.
-//abstract identity StateOfAffairs
-//     "State of affairs is a complex situation that obtain or not"
-//     has children
- //    Obtainable,
-  //   Unobtainable;
 
 //Attribute
 
@@ -239,25 +337,12 @@ abstract event Event
 @todo("see note above for the 'requires identity' clause")
 deniable attribute Positive
     "Describes the positive or negative outcome of an event or a subject."
-   //  requires identity imod:Outcome
     ;
 
 @todo("Must articulate relationship vs. bond and functional vs. structural, as these are fundamental and disjoint.")   
 abstract relationship Relationship
       "A relationship directionally connects two subjects or agents."
     is core odo:Relationship
-   //  has disjoint children
-   //      (StructuralRelationship
-   //      	"Structural relationships between two substantials (relata) allow another substantial (relator) to emerge."
-   //      	is core odo:StructuralRelationship
-   //      	),
-   //      (FunctionalRelationship
-   //      	"Functional relationships between two substantials (relata) allow an event (relator) to emerge."
-   //      	is core odo:FunctionalRelationship
-   //      	),
-   //      (Bond
-   //      "Bi-directional relationship between substantials"	
-   //      )
     ;
 
 abstract configuration Network 
@@ -265,7 +350,6 @@ abstract configuration Network
    is imod:Configuration of imod:Relationship
    has children 
       (abstract SpatialNetwork  
-        //inherits Areal
       ),
       (
       abstract IntentionalNetwork
@@ -305,27 +389,16 @@ abstract duration Duration
         they should refer to klab: namespace as they're needed in the software.")
 abstract area Area 
    is core odo:Area 
-   // requires identity (imod:Areal or imod:Volumetric)
    ;
 
 abstract length Length
    is core odo:Length 
-   // requires identity (imod:Lineal or imod:Areal or imod:Volumetric)
    ;       
 
 //Artifact capability inspired by: Borgo, S., Vieu, L.: Artefacts in formal ontology. In: Philosophy of technology and engineering sciences
 abstract attribute Capability
      "Capability is the described quality of certain artifacts and natural agents."
-   //   requires identity imod:Goal
-   //   describes imod:Quality
-   //   has disjoint children
-   //      ArtifactCapability,
-   //      NaturalCapability
 ;
-        
-//abstract attribute AttributedCapability
-//     "Attributed capability refers to capabilities of artifacts and natural agents assigned by other agent."
-//     applies to physical:Artifact, physical:HumanMadeResource, Agent;
 
 
 //Numerosity
@@ -336,7 +409,6 @@ abstract quantity Numerosity
 
 /**
  * Intensive physical properties 
- * TODO will make definitions mandatory at some point :)
  */
  
 
@@ -368,28 +440,24 @@ abstract mass Mass
    "Property of matter that quantifies the amount of substance in an object. 
     Typically measured in units such as kilograms (kg) or grams (g)."
    is core odo:Mass 
-   // requires identity imod:Volumetric
    ;
 
 abstract amount Amount
    "Refers to a quantitative measure or quantity of something. 
     It represents the magnitude or volume of a substance, object, or phenomenon, and can be expressed numerically or qualitatively."
    is core odo:Amount
-   // requires identity imod:Volumetric
    ;
 
 abstract volume Volume
    "Measure of the three-dimensional space occupied by an object or substance. It quantifies the amount of space enclosed by the boundaries 
    of the object or substance and is typically measured in cubic units such as cubic meters or cubic centimeters." 
    is core odo:Volume
-   // requires identity imod:Volumetric
    ;
    
 abstract weight Weight
    "The force exerted on an object due to gravity. 
    Typically expressed in units of force such as newtons (N) or pounds-force (lbf)."  
    is core odo:Weight  
-   // requires identity imod:Volumetric
    ;
    
 abstract quantity Proportion
@@ -427,14 +495,11 @@ attribute Comparable
 role Reference
     "Applied to an observation used as reference to compute the primary observation by comparison. 
      Can be linked to a rescaling filters to shift the context of observation made in different space and time."
-//    implies imod:Comparable
     ;
 
-//@todo("check extraction of attributes")
 role Indicator 
    applies to imod:Quantity
    has children   
-     // NAH capture this in attributes
      (AbsoluteIndicator
      "An absolute indicator has values that range between a known minimum and maximum. Its value corresponds 
       to a state that is fully understood in terms of the indicator."  
@@ -471,22 +536,11 @@ abstract quality Heterogeneity
          
 //Extent
 
-//extent Multiplicity 
-//    is core odo:Multiplicity;
 
 //Temporal extent
             
 abstract extent Time 
      is core odo:Time 
-   //   has disjoint children 
-   //   (RegularTime 
-   //       "Regular time is observed as a grid of equal contiguous durations." 
-   //        inherits imod:Regular
-   //   ),
-   //   (IrregularTime 
-   //    "Irregular time is observed as contiguous sequence of intervals of possibly different duration."
-   //   inherits imod:Irregular
-   //   )
      ;
     
 //Spatial extent
@@ -494,31 +548,4 @@ abstract extent Time
  abstract extent Space 
     "Space in the IM worldview is 0, 1,2 or 3-dimensional, with implied traits that describe human perception and modalities of description proper of an Euclidean view of the world."
     is core odo:Space
-   //  has disjoint children ( 
-   //     PuntalSpace 
-   //     inherits imod:Puntal
-   //     ),
-   //     (LinealSpace
-   //       inherits imod:Lineal
-   //     ),
-   //     (abstract ArealSpace 
-   //         inherits imod:Areal 
-   //         has children 
-   //             (GridSpace  
-   //                inherits imod:Regular 
-   //              ),
-   //              (VectorSpace
-   //              inherits imod:Irregular  
-   //              )
-   //     ),
-   //     (abstract VolumetricSpace
-   //       inherits imod:Volumetric
-   //           has children
-   //                (VoxelSpace
-   //                inherits imod:Regular  
-   //                ),
-   //                (PolyedricSpace
-   //                inherits imod:Irregular   
-   //                )
-   //          )
             ;

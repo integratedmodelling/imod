@@ -4,7 +4,7 @@ ontology earth
      as climate."
     version 1.0
 	using imod, physical, chemistry
-	in domain imod:Physical;
+	in domain imod:Earth;
 
 abstract attribute Georeferenced
 	"A subject that can be referred to a location on Earth. Use the applicable concrete child."
@@ -15,8 +15,6 @@ abstract attribute Georeferenced
 	 	(Geostationary
 	 		"A subject that can be projected on the same spot of the surface of the earth throughout its observation."
 	 	)
-	// any spatial extent is fine but there must be one.
-//	requires extent imod:Space
 	;
 
 thing Location
@@ -25,10 +23,8 @@ thing Location
 abstract event GeolocatedEvent
 	is earth:Geostationary imod:Event;
 
-// ARTICULATE - maybe move
 thing Planet;
 
-// THE PLANET - articulate
 identity Earth
 	applies to earth:Planet;
 
@@ -40,7 +36,7 @@ thing Region
 	 is imod:Areal earth:Location;
 
 thing Site
-	""
+	"An Earth location represented as a point."
 	is imod:Puntal earth:Location;
 
 /*
@@ -80,8 +76,6 @@ The Earth's cover configurations are determined by a combination of climatic con
  */
 configuration EarthCover
 	"The configuration of physical materials at the surface of the earth."
-	// is physical:SpatialArrangement of ((earth:Geolocated imod:Subject) or (earth:Geolocated imod:Agent))
-	// within earth:Location
 	;
 
 /**
@@ -181,11 +175,11 @@ abstract realm PhysicalEnvironment
 						@todo("flesh out; ensure that the ubiquitous Wetland knows where to put itself")
 						@todo("CHECK https://www.fws.gov/wetlands/Documents/classwet/lacustri.htm")
 						Lacustrine
-							""
+							"A freshwater physical environment associated with lakes."
 							has disjoint children
 								(Limnetic),
 								(Littoral
-									"A Littoral Region is a wetland."
+									"The near-shore zone of a lake environment."
 								)
 					),
 					(Riverine
@@ -194,9 +188,7 @@ abstract realm PhysicalEnvironment
 				)				
 		);
 
-// FIXME see above
 abstract realm MarineStratum
-//   implies Marine
    has children
       SeaSurface,
       DeepSea;
@@ -211,17 +203,20 @@ abstract realm LatitudinalRegion
 		Subtropical,
 		Tropical;
 		
+/**
+ * Geological layer descriptions follow the [USGS account of Earth's interior](https://pubs.usgs.gov/gip/dynamic/inside.html).
+ */
 @todo("Finish, align, document; use SWEET")
 abstract realm GeosphereStratum
 	has children
 		(Bedrock
-			""
+			"Consolidated rock in place, whether beneath unconsolidated surface deposits or exposed at the surface."
 		),
 		(Crust
-			""
+			"Earth's outermost solid-rock layer."
 		),
 		(Lithosphere
-			""
+			"Earth's rigid outer shell, comprising the crust and the uppermost mantle."
 		),
 		(Pedosphere
 			"The outermost layer of the Earth that is composed of soil and subject to soil formation processes."
@@ -229,11 +224,10 @@ abstract realm GeosphereStratum
 		(	
 			@todo("unsure of the mereological relationships here")
 			Mantle
-			""
+			"The rocky interior layer between Earth's crust and core."
 		);
 
 /*
- * TODO revise all below
  * 
  * Water bodies are natural or artificial accumulations of water that vary in size, shape, and characteristics. They play a crucial role in the Earth's hydrological cycle and support diverse ecosystems. Here are the main types of water bodies:
 
@@ -302,27 +296,37 @@ abstract realm GeosphereStratum
 The main types of water bodies include rivers and streams, lakes, ponds, wetlands, oceans, seas, bays, gulfs, estuaries, lagoons, glacial lakes, and reservoirs. These water bodies differ in size, depth, salinity, and ecological function, playing critical roles in the hydrological cycle and supporting diverse ecosystems.
  */
 thing WaterBody
-	""
+	"A geographically identifiable region associated with an accumulation of surface water."
 	is earth:Aquatic earth:Region;
 
-thing Wetland 
-	""
-	is earth:Littoral earth:Region;
+/**
+ * ## Wetlands and lake-shore environments
+ *
+ * Wetland identifies a region through the influence of its water regime on
+ * substrates and ecological communities. Littoral identifies the near-shore
+ * setting of a lake. Inland and coastal settings can support wetlands, and
+ * seasonal dry periods are compatible with a recurrent wetland water regime.
+ *
+ * This ecological description follows the [EPA account of wetland hydrology, soils and communities](https://www.epa.gov/wetlands/what-wetland).
+ */
+thing Wetland
+    "An Earth region where persistent or recurrent inundation or near-surface saturation shapes the substrate and ecological communities."
+    is earth:Region;
 
 thing Lake 
-	""
+	"A freshwater lake region occupying an inland basin."
 	is earth:Lacustrine earth:Region;
 
 thing Ocean 
-	""
+	"A major connected region of Earth's marine waters."
 	is earth:Marine earth:Region;
 
 thing Sea 
-	""
+	"A named marine-water region, commonly a marginal or partly enclosed part of an ocean."
 	is earth:Marine earth:Region;
 	
 thing Waterway
-	""
+	"A riverine region defining a channel or course for flowing water."
 	is earth:Riverine earth:Region
 	has children
 		Reach,
@@ -378,7 +382,7 @@ attribute WaterFlowDirection
 		Downstream;
 		
 functional relationship StreamConnection
-	""
+	"A connection between two stream junctions in a stream network."
 	links earth:StreamJunction to earth:StreamJunction;
 		
 @fixme("not sure of the connection as relationship")
@@ -387,30 +391,29 @@ configuration StreamNetwork
 	applies to earth:Region
 	is imod:Network of earth:StreamConnection;
 
+/**
+ * Precipitation forms are described using [National Weather Service terminology](https://www.weather.gov/source/zhu/ZHU_Training_Page/winter_stuff/winter_wx/winter_glossary.html).
+ */
 abstract identity PrecipitationType
-//	inherits IUPAC:Water 
 	has children
 		(Rain 
-			""
-			// inherits physical:Liquid
+			"A precipitation type consisting of falling liquid-water drops."
 		),
 		(Snow 
-			""
-			// inherits physical:Solid
+			"A precipitation type consisting of ice crystals or aggregates of ice crystals."
 		),
 		(Hail 
-			""
-			// inherits physical:Solid
+			"A precipitation type consisting of hailstones grown by accretion in convective clouds."
 		);
 temperature AtmosphericTemperature
-	""
+	"The temperature of the atmosphere at an Earth location."
 	is /* earth:AtmosphericBottomLayer */ imod:Temperature of earth:Location;
 
 /*
  * EVENTS
  */
 abstract event MeteorologicalEvent
-	""
+	"A spatially located occurrence involving atmospheric conditions or weather."
 	is earth:GeolocatedEvent
 	has children
 		(Storm),
@@ -421,32 +424,49 @@ abstract event MeteorologicalEvent
 		),
 		Flood;
 
-/*
- * QUALITIES. All should be linked to the processes that affect them in the
- * process definitions.
+/**
+ * ## Physical qualities
+ */
+/**
+ * ## Water-equivalent precipitation volume
+ *
+ * PrecipitationVolume records the liquid-water-equivalent volume delivered over
+ * a specified horizontal area and interval. RainfallVolume, SnowfallVolume and
+ * HailVolume retain that convention while identifying the precipitation form.
+ * The area is the horizontal projection of the observation region.
+ *
+ * These quantities use cubic units. Water-equivalent depth expresses volume per
+ * horizontal area; precipitation rate additionally refers to time. Fresh-snow
+ * depth and bulk snow or ice volume describe different amounts. The observation
+ * specifies the spatial extent, interval and water-equivalent reference.
+ *
+ * The convention follows [WMO guidance on precipitation measurement, chapter 6, sections 6.1.1-6.1.2 and 6.7.3](https://www.weather.gov/media/epz/mesonet/CWOP-WMO8.pdf).
  */
 volume PrecipitationVolume 
-	""
+    "Liquid-water-equivalent volume of precipitation delivered over a specified horizontal area and interval."
 	is /* IUPAC:Water */ imod:Volume 
 	caused by earth:MeteorologicalEvent;
 
 @todo("improve, complete, align")
 abstract event GeologicalEvent 
-	""
+	"An occurrence involving changes in Earth's geological materials or landforms."
 	has children
 		Landslide,
 		Earthquake;
 
 volume RainfallVolume 
+    "Liquid-water-equivalent volume of rainfall delivered over a specified horizontal area and interval."
 	is earth:PrecipitationVolume
 	inherits earth:Rain
 	;
 
 volume SnowfallVolume 
+    "Liquid-water-equivalent volume of snowfall delivered over a specified horizontal area and interval."
 	is earth:PrecipitationVolume
 	inherits earth:Snow;
 
 volume HailVolume 
+    "Liquid-water-equivalent volume of hail delivered over a specified horizontal area and interval."
 	is earth:PrecipitationVolume
 	inherits earth:Hail;
 
@@ -454,7 +474,7 @@ volume HailVolume
  * PROCESSES
  */
  abstract process MeteorologicalProcess
-	""
+	"A physical process involving atmospheric conditions or weather."
  	has children
 		(Wind
 //			creates Storm
@@ -462,46 +482,38 @@ volume HailVolume
 ;
 
 process Precipitation 
- 			""
+ 			"The descent of liquid or solid atmospheric water particles toward the ground."
  			is /* IUPAC:Water */ earth:MeteorologicalProcess
 			creates earth:PrecipitationVolume
  			has children
  				(Rainfall
- 					""
+ 					"Precipitation occurring as falling liquid-water drops."
  					creates earth:RainfallVolume
  				),
  				(Snowfall
- 					""
+ 					"Precipitation occurring as falling ice crystals or aggregates of ice crystals."
  					creates earth:SnowfallVolume
  				),
  				(Hailing
- 					""
+ 					"Precipitation occurring as falling hailstones."
  					creates earth:HailVolume
  				) 				
 ;
 
-/*
- * TODO energy sources
- */
+
 energy SolarRadiation
 	"Total solar radiation. Specify with realms to define stratum of measurement." 
-	// TODO specify solar source
-	// TODO check for realm-specific children to be added
 	is imod:Energy 
-	// within earth:Location
 ;
 
 @deprecated
 process Weather
-	"Catch-all for the set of processes that determine the perceived weather. Weather should more
-	 properly be defined as a configuration."
-	is earth:MeteorologicalProcess // within earth:Location
+	"The set of meteorological processes that determine perceived weather."
+	is earth:MeteorologicalProcess 
 	creates earth:PrecipitationVolume, earth:AtmosphericTemperature, earth:SolarRadiation, earth:Storm;
 
 thing GeoFormation
-	"Geomorphon classification as is. If possible should be kept as a fully
-	 contained hierarchy as it is possible to classify a DEM based on these
-     exact categories."
+	"A terrestrial region identified through the geomorphon classification of landform geometry."
     is earth:Terrestrial earth:Region
 	has children
 		Flat,
@@ -541,37 +553,64 @@ abstract attribute WeatherDominance
 		Snowy,
 		Dry;
 
-/*
- * Configurations - inherent types for geographical qualities.
- * TODO FIXME the all-important 'describes' so that the configuration can be
- * recognized, created and resolved. 
- * TODO the inherency! It's built "of" its inherent derived from successive explanations - slope and elevation. The of 
- * should be a within.
+/**
+ * ## Spatial configurations and Earth cover
+ *
+ * Bathymetry recognizes underwater spatial form, while LandCover concerns
+ * terrestrial cover. Runoff-route profiles distinguish the spatial extents
+ * used in erosion assessments.
  */
-// should be:
-// configuration Terrain 
-//	is physical:PhysicalConfiguration of (ecology:Landscape im:Height and ecology:Landscape im:Angle) 
-//	within Terrestrial Region; 	
 	
+/**
+ * ## Runoff routes and erosion profiles
+ *
+ * An OverlandFlowRoute is a delineated linear feature of the land surface,
+ * following the course of overland runoff over the extent specified for an
+ * erosion assessment. It can be recognized without water currently flowing
+ * along it. Its delineation identifies both the course and the represented
+ * extent, distinguishing it from other routes crossing the same location.
+ *
+ * ErosionalSlopeProfile recognizes the land-surface arrangement from the origin
+ * of overland runoff to the first onset of deposition caused by flattening or
+ * entry into a defined concentrated-flow channel, whichever comes first.
+ * OverlandFlowProfile recognizes the arrangement from runoff origin through
+ * any depositional portions to concentrated channel flow. Each profile specifies
+ * the extent required by its endpoint convention. A delineation ending at
+ * deposition onset is sufficient for the classic erosional-slope assessment.
+ * A full-path assessment includes the continuation to channel entry.
+ *
+ * These distinctions follow the [USDA-ARS RUSLE2 definitions](https://www.ars.usda.gov/southeast-area/oxford-ms/national-sedimentation-laboratory/watershed-physical-processes-research/research/rusle2/revised-universal-soil-loss-equation-2-rusle2-definitions/).
+ * Route selection and the criteria for recognizing deposition and channel
+ * entry belong to the particular erosion assessment.
+ */
+thing OverlandFlowRoute
+    "A delineated linear course of overland runoff on land, over the extent specified for an erosion assessment."
+    is imod:Lineal earth:Terrestrial earth:Location;
+
+configuration ErosionalSlopeProfile
+    "The land-surface arrangement from overland-runoff origin to first deposition caused by flattening or entry into a defined concentrated-flow channel."
+    is physical:SpatialArrangement of earth:OverlandFlowRoute;
+
+configuration OverlandFlowProfile
+    "The land-surface arrangement from overland-runoff origin to concentrated channel flow, including intervening depositional portions."
+    is physical:SpatialArrangement of earth:OverlandFlowRoute;
+
 configuration Bathymetry
 	"The vertical and horizontal dimensions of underwater Earth surfaces"
-	// is physical:SpatialArrangement of (earth:Aquatic earth:Region)
-	//applies to earth:Aquatic earth:Location
 	;	
 
 configuration LandCover
-	""
+	"The spatial arrangement of physical cover over the terrestrial Earth surface."
 	is earth:Terrestrial earth:EarthCover
 	applies to earth:Location;
 
 @todo
 abstract process LandformingProcess
-	""
+	"A physical process that forms or modifies Earth’s surface morphology."
 	// creates LandFormation
 	has children 
-		Erosion, // TODO affects Elevation, but that's downstream
+		Erosion, 
 		Sedimentation,
 		Weathering,
 		PlateTectonics;
 	
-// configuration Gravity is physical:Gravity caused by imod:Mass of earth:Earth earth:Planet;

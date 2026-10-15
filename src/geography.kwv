@@ -1,40 +1,58 @@
+/**
+ * # Geography: Earth locations and spatial descriptions
+ *
+ * Geography provides descriptive knowledge of Earth locations, terrain and spatial
+ * organization. Its domain is Knowledge about Earth. This establishes subject
+ * matter; individual qualities retain their own bearers and description targets.
+ * The first section distinguishes directional and terrain measurements. Terrain
+ * then names a spatial pattern, followed by regional identities
+ * used to qualify locations and observations.
+ *
+ * ## Measurements and recognized terrain
+ *
+ * Aspect concerns direction; Elevation and BathymetricDepth concern
+ * vertical position relative to a reference; slopes express inclination. A digital
+ * model is evidence for a measurement, not the definition of its physical bearer.
+ * A quality's bearer identifies what bears it; a description target identifies
+ * what is described. Those relations remain distinct when the namespace is
+ * understood as Knowledge about Earth.
+ */
 ontology geography
     version 1.0
 	using imod, physical, earth
-	in domain imod:Physical;
+	in domain imod:Geography;
 
 @colormap("terrain", center=0, min=-10935, max=8849)
 length Elevation 
-	"Geographical elevation above sea level, as described by a digital
-	 elevation model."
-	is physical:Height of earth:Location
+    "Elevation of an Earth surface above sea level."
+    is physical:Height of earth:Location
+    describes geography:Terrain
    affected by earth:Erosion;
 
-angle Aspect 
-   "The compass direction that a slope faces. For example, a slope on the
-    eastern edge of the Rockies toward the Great Plains is described as having 
-   an easterly aspect."
-   // TODO expand orientations
-   // describes physical:MagneticPlanetaryOrientation of earth:Location
-;
+angle Aspect
+    "The compass direction faced by a terrain slope."
+    describes geography:Terrain;
 		 
 length BathymetricDepth
 	"Depth of earth's crust below sea level, as described by a digital bathymetry model."
-   // TODO should be of terrain - maybe 'within' could do it as a shortcut
 	describes physical:Height of earth:Location
 ;
 
 angle Slope
    "Inclination of the above-water terrain in a geographical region."
-   // TODO should be of terrain - maybe 'within' could do it as a shortcut
    describes imod:Angle of earth:Location;
 
-/*
- * FIXME there are excellent arguments to expect that any configuration is
- * defined in a knowledge domain
+/**
+ * ## Terrain as a configuration
+ *
+ * Terrain is a three-dimensional pattern of terrestrial surface relief,
+ * characterized through elevation, slope and aspect. Its Knowledge ownership expresses this descriptive viewpoint;
+ * it does not establish that every Configuration belongs to a Knowledge domain.
+ * The emergence expression relates this configuration to the elevation, slope
+ * and aspect through which terrain is recognized.
  */
 configuration Terrain 
-   "The perceived three-dimensional configuration of land surfaces"
+   "The three-dimensional pattern of terrestrial surface relief."
    is physical:SpatialArrangement of (earth:Crust earth:Terrestrial earth:Region)
    emerges from (geography:Elevation or geography:Slope or geography:Aspect);
 
@@ -71,27 +89,63 @@ quantity WaterSurfaceGradient
     is imod:Ratio of earth:Stream
     describes earth:WaterSurfaceProfile;
 
+/**
+ * ## Inclination of submerged ground
+ *
+ * BathymetricSlope is the angular inclination of a submerged ground surface
+ * relative to the local horizontal plane. It characterizes the underwater
+ * spatial pattern recognized as Bathymetry at an Earth location. The reference
+ * surface is the ground beneath the water, distinct from the water surface.
+ */
 angle BathymetricSlope
-	"Inclination of the below-water terrain in a geographical region."
-	is imod:Angle of earth:Location;
+    "The angular inclination of a submerged ground surface relative to the local horizontal plane at an Earth location."
+    is imod:Angle of earth:Location
+    describes earth:Bathymetry of earth:Location;
 	
-length SlopeLength 
-	""
-	is imod:Length of earth:Location
-;
+/**
+ * ## Lengths used in erosion assessment
+ *
+ * ErosionSlopeLength measures the horizontal projection along a runoff route
+ * from its origin to the first onset of deposition caused by flattening or
+ * entry into a defined concentrated-flow channel, whichever occurs first.
+ * This is the classic USLE/RUSLE slope length. OverlandFlowPathLength measures
+ * the full route to concentrated channel flow, continuing through depositional
+ * portions under the RUSLE2 convention.
+ *
+ * Each measurement follows the route's horizontal projection through its bends,
+ * rather than the straight chord between its endpoints or the three-dimensional
+ * distance over the ground surface. Both are lengths, expressed in units such
+ * as metres. The associated profile identifies the extent being measured on
+ * the delineated route. The erosion slope-length factor L and combined LS
+ * factor are dimensionless quantities distinct from these physical lengths.
+ *
+ * The traditional slope length is defined in [USDA Agriculture Handbook 703, chapter 4, page 104](https://directives.nrcs.usda.gov/sites/default/files2/1712932574/28651.pdf).
+ * The full-path convention is explained in the [USDA-ARS RUSLE2 definitions](https://www.ars.usda.gov/southeast-area/oxford-ms/national-sedimentation-laboratory/watershed-physical-processes-research/research/rusle2/revised-universal-soil-loss-equation-2-rusle2-definitions/).
+ * Horizontal measurement and profile segmentation are described in the
+ * [RUSLE2 User's Reference Guide, section 8.1](https://www.ars.usda.gov/ARSUserFiles/60600505/RUSLE/RUSLE2_User_Ref_Guide.pdf).
+ */
+length ErosionSlopeLength
+    "Horizontal projected distance along a runoff route to first deposition caused by flattening or channel entry: the classic erosion slope length."
+    is imod:Length of earth:OverlandFlowRoute
+    describes earth:ErosionalSlopeProfile;
+
+length OverlandFlowPathLength
+    "Horizontal projected distance along the full runoff route to concentrated channel flow, including depositional portions."
+    is imod:Length of earth:OverlandFlowRoute
+    describes earth:OverlandFlowProfile;
 
 /**
- * Political/Regional geography. Knowledge below was in policy which is obviously
- * inappropriate. Not sure it should have its own namespace.
- * KB: The question is whether we want to combine human and physical geography into one namespace.
-  If so, keep it here, if not make a human geography namespace (my vote would be to keep them combined, 
-  as we don't split other ontologies into subdisciplines).
- */	
- 
- /** 
-  * TODO traits of identities should propagate - so a China Individual hasTrait Asian and Eastern (CHECK!)
-  * */
- 
+ * ## Regional and geopolitical identities
+ *
+ * Physical and human geography share this namespace in the strawman. Their common
+ * purpose here is to qualify places and observations through geographical,
+ * regional and geopolitical distinctions.
+ *
+ * The two hemispheric axes are separate: north/south and east/west can overlap
+ * across axes. Continental predicates qualify observations by continental
+ * affiliation; ContinentalRegion identifies regional locations.
+ */
+
 abstract identity GeographicalIdentity
  	"Any abstract identity we can use to divide the world up into disjoint entities."
  	has children
@@ -102,8 +156,10 @@ abstract identity GeographicalIdentity
  			""
  		);
 
-//Potentially useful e.g., to distinguish that the cold season is in the winter in the Northern Hemisphere and summer in the Southern Hemisphere.
-//Northern is of course not actually disjoint with eastern/western - so may need to be split differently.
+/**
+ * Hemispheric identities support distinctions such as opposite seasonal timing
+ * north and south of the equator. Disjointness is stated within each axis only.
+ */
 abstract identity Hemisphere is geography:RegionalIdentity
 	has children
 	(abstract LatitudinalHemisphere
@@ -129,7 +185,10 @@ abstract identity Continental is geography:RegionalIdentity
 		(SouthAmerican inherits geography:WesternHemisphere); 
  
  
-// TODO harmonize with the above, which must be fixed.
+/**
+ * ContinentalRegion groups identities applicable to Earth locations, including
+ * continental, polar and oceanic regions.
+ */
 abstract identity ContinentalRegion
 	applies to earth:Location
 	has disjoint children
@@ -147,8 +206,15 @@ abstract identity ContinentalRegion
 		IndianRegion; 
  
 
+/**
+ * ## Variation within terrain
+ *
+ * TopographicHeterogeneity describes heterogeneity of a recognized Terrain.
+ * It distinguishes variation within the configuration from the elevation or
+ * inclination measured at an individual location.
+ */
 @experimental
 quality TopographicHeterogeneity
+   "Heterogeneity of a recognized terrain configuration."
    describes imod:Heterogeneity of geography:Terrain
-//   within earth:Location
    ;

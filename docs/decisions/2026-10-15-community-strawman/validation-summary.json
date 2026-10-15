@@ -1,0 +1,341 @@
+{
+  "status": "PASS",
+  "checks": {
+    "v21_no_harness_failure": true,
+    "v21_all26_loaded": true,
+    "v21_beans_valid": true,
+    "v21_consistent": true,
+    "v21_all_named_satisfiable": true,
+    "baseline_no_harness_failure": true,
+    "baseline_all26_loaded": true,
+    "baseline_beans_valid": true,
+    "baseline_consistent": true,
+    "baseline_all_named_satisfiable": true,
+    "v21_logical_valid": true,
+    "v21_no_grounding_errors": true,
+    "route_subject_lineal_terrestrial_location": true,
+    "ErosionSlopeLength_correct": true,
+    "OverlandFlowPathLength_correct": true,
+    "erosion_distinct_profiles": true,
+    "bathymetric_angle": true,
+    "bathymetric_qualified_compatible_target": true,
+    "bare_bathymetry_no_semantic_bearer": true,
+    "Streambed_ratio_ancestry_profiles": true,
+    "WaterSurface_ratio_ancestry_profiles": true,
+    "wetland_region_without_littoral": true,
+    "temporal_attribute_not_ordering": true,
+    "Sporadic_attribute": true,
+    "Intermittent_attribute": true,
+    "Continuous_attribute": true,
+    "PrecipitationVolume_volume": true,
+    "RainfallVolume_volume": true,
+    "SnowfallVolume_volume": true,
+    "HailVolume_volume": true,
+    "only_obsolete_temporal_todo_annotation_removed": true,
+    "all_shared_deprecation_flags_preserved": true,
+    "all37_review_slots_have_parsed_docstrings": true,
+    "PrecipitationVolume_water_equivalent_doc": true,
+    "RainfallVolume_water_equivalent_doc": true,
+    "SnowfallVolume_water_equivalent_doc": true,
+    "HailVolume_water_equivalent_doc": true,
+    "bedrock_exposed_doc": true,
+    "landforming_unrestricted_doc": true,
+    "intransitive_doc": true,
+    "baseline_copied_source_pins_preserved": true,
+    "v21_copied_source_pins_preserved": true,
+    "active_all26_preserved": true,
+    "packaged_core_preserved": true,
+    "user_plugin_xml_gen_preserved": true,
+    "integrated_sources_preserved": true,
+    "integrated_compiled_classes_preserved": true,
+    "all489_dependency_pins_preserved": true,
+    "frozen_language_classes_preserved": true,
+    "numbered_core_pins_preserved": true,
+    "captured_provider_pins_preserved": true,
+    "parser_and_scope_notifications_warning_only": true,
+    "klab-services_head_preserved": true,
+    "klab-languages_head_preserved": true,
+    "imod_head_preserved": true
+  },
+  "failedChecks": [],
+  "v21": {
+    "beanStatus": "VALID",
+    "logicalStatus": "VALID",
+    "diagnosticCount": 35,
+    "consistent": true,
+    "unsatisfiableNamedClasses": []
+  },
+  "baseline": {
+    "beanStatus": "VALID",
+    "logicalStatus": "VALID",
+    "diagnosticCount": 33
+  },
+  "addedDiagnostics": [
+    "Inconsistent worldview: fundamental type DOMAIN, assigned to core concept imod:Domain, is being reassigned to imod:Physical",
+    "Inconsistent worldview: fundamental type DOMAIN, assigned to core concept imod:Domain, is being reassigned to imod:Knowledge",
+    "Inconsistent worldview: fundamental type DOMAIN, assigned to core concept imod:Domain, is being reassigned to imod:Normative",
+    "DESCRIPTION_BEARER_UNRESOLVED: imod:PhysicalPhenomena describes imod:PhysicalSystem [CONFIGURATION] : INDEPENDENT_TARGET_UNRESOLVED",
+    "DESCRIPTION_BEARER_UNRESOLVED: imod:Earth describes imod:EarthSystem [CONFIGURATION] : INDEPENDENT_TARGET_UNRESOLVED"
+  ],
+  "removedDiagnostics": [
+    "Inconsistent worldview: fundamental type DOMAIN is not assigned to a worldview concept",
+    "DESCRIPTION_BEARER_UNRESOLVED: imod:Physical describes imod:PhysicalSystem [CONFIGURATION] : INDEPENDENT_TARGET_UNRESOLVED",
+    "DESCRIPTION_BEARER_UNRESOLVED: physical:Periodicity describes physical:Period [OBSERVABLE, QUALITY, EXTENSIVE, ABSTRACT, DURATION, QUANTIFIABLE] : UNRESOLVED: no established universal bearer contribution"
+  ],
+  "annotationDeltas": [
+    {
+      "concept": "physical:Periodicity",
+      "before": [
+        {
+          "@CLASS": "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate": {
+            "#name": "todo",
+            "_p1": "Not sure, but consider adding sealed (giving errors at the moment)"
+          },
+          "unnamedKeys": [
+            "_p1"
+          ]
+        }
+      ],
+      "after": []
+    }
+  ],
+  "deprecationDeltas": [],
+  "reviewedDocstrings": [
+    {
+      "concept": "chemistry:Solution",
+      "resolvedConcept": "chemistry:Solution",
+      "nonblank": true,
+      "parsed_docstring": "A single liquid or solid phase containing multiple substances distinguished as solvent and solutes."
+    },
+    {
+      "concept": "chemistry:Suspension",
+      "resolvedConcept": "chemistry:Suspension",
+      "nonblank": true,
+      "parsed_docstring": "A mixture with solid particles dispersed throughout a liquid medium."
+    },
+    {
+      "concept": "chemistry:Colloid",
+      "resolvedConcept": "chemistry:Colloid",
+      "nonblank": true,
+      "parsed_docstring": "A mixture whose colloidal-sized dispersed particles or domains differ in composition or state from the continuous medium."
+    },
+    {
+      "concept": "earth:Site",
+      "resolvedConcept": "earth:Site",
+      "nonblank": true,
+      "parsed_docstring": "An Earth location represented as a point."
+    },
+    {
+      "concept": "earth:Lacustrine",
+      "resolvedConcept": "earth:Lacustrine",
+      "nonblank": true,
+      "parsed_docstring": "A freshwater physical environment associated with lakes."
+    },
+    {
+      "concept": "earth:Bedrock",
+      "resolvedConcept": "earth:Bedrock",
+      "nonblank": true,
+      "parsed_docstring": "Consolidated rock in place, whether beneath unconsolidated surface deposits or exposed at the surface."
+    },
+    {
+      "concept": "earth:Crust",
+      "resolvedConcept": "earth:Crust",
+      "nonblank": true,
+      "parsed_docstring": "Earth's outermost solid-rock layer."
+    },
+    {
+      "concept": "earth:Lithosphere",
+      "resolvedConcept": "earth:Lithosphere",
+      "nonblank": true,
+      "parsed_docstring": "Earth's rigid outer shell, comprising the crust and the uppermost mantle."
+    },
+    {
+      "concept": "earth:Mantle",
+      "resolvedConcept": "earth:Mantle",
+      "nonblank": true,
+      "parsed_docstring": "The rocky interior layer between Earth's crust and core."
+    },
+    {
+      "concept": "earth:WaterBody",
+      "resolvedConcept": "earth:WaterBody",
+      "nonblank": true,
+      "parsed_docstring": "A geographically identifiable region associated with an accumulation of surface water."
+    },
+    {
+      "concept": "earth:Wetland",
+      "resolvedConcept": "earth:Wetland",
+      "nonblank": true,
+      "parsed_docstring": "An Earth region where persistent or recurrent inundation or near-surface saturation shapes the substrate and ecological communities."
+    },
+    {
+      "concept": "earth:Lake",
+      "resolvedConcept": "earth:Lake",
+      "nonblank": true,
+      "parsed_docstring": "A freshwater lake region occupying an inland basin."
+    },
+    {
+      "concept": "earth:Ocean",
+      "resolvedConcept": "earth:Ocean",
+      "nonblank": true,
+      "parsed_docstring": "A major connected region of Earth's marine waters."
+    },
+    {
+      "concept": "earth:Sea",
+      "resolvedConcept": "earth:Sea",
+      "nonblank": true,
+      "parsed_docstring": "A named marine-water region, commonly a marginal or partly enclosed part of an ocean."
+    },
+    {
+      "concept": "earth:Waterway",
+      "resolvedConcept": "earth:Waterway",
+      "nonblank": true,
+      "parsed_docstring": "A riverine region defining a channel or course for flowing water."
+    },
+    {
+      "concept": "earth:StreamConnection",
+      "resolvedConcept": "earth:StreamConnection",
+      "nonblank": true,
+      "parsed_docstring": "A connection between two stream junctions in a stream network."
+    },
+    {
+      "concept": "earth:Rain",
+      "resolvedConcept": "earth:Rain",
+      "nonblank": true,
+      "parsed_docstring": "A precipitation type consisting of falling liquid-water drops."
+    },
+    {
+      "concept": "earth:Snow",
+      "resolvedConcept": "earth:Snow",
+      "nonblank": true,
+      "parsed_docstring": "A precipitation type consisting of ice crystals or aggregates of ice crystals."
+    },
+    {
+      "concept": "earth:Hail",
+      "resolvedConcept": "earth:Hail",
+      "nonblank": true,
+      "parsed_docstring": "A precipitation type consisting of hailstones grown by accretion in convective clouds."
+    },
+    {
+      "concept": "earth:AtmosphericTemperature",
+      "resolvedConcept": "earth:AtmosphericTemperature",
+      "nonblank": true,
+      "parsed_docstring": "The temperature of the atmosphere at an Earth location."
+    },
+    {
+      "concept": "earth:MeteorologicalEvent",
+      "resolvedConcept": "earth:MeteorologicalEvent",
+      "nonblank": true,
+      "parsed_docstring": "A spatially located occurrence involving atmospheric conditions or weather."
+    },
+    {
+      "concept": "earth:PrecipitationVolume",
+      "resolvedConcept": "earth:PrecipitationVolume",
+      "nonblank": true,
+      "parsed_docstring": "Liquid-water-equivalent volume of precipitation delivered over a specified horizontal area and interval."
+    },
+    {
+      "concept": "earth:GeologicalEvent",
+      "resolvedConcept": "earth:GeologicalEvent",
+      "nonblank": true,
+      "parsed_docstring": "An occurrence involving changes in Earth's geological materials or landforms."
+    },
+    {
+      "concept": "earth:MeteorologicalProcess",
+      "resolvedConcept": "earth:MeteorologicalProcess",
+      "nonblank": true,
+      "parsed_docstring": "A physical process involving atmospheric conditions or weather."
+    },
+    {
+      "concept": "earth:Precipitation",
+      "resolvedConcept": "earth:Precipitation",
+      "nonblank": true,
+      "parsed_docstring": "The descent of liquid or solid atmospheric water particles toward the ground."
+    },
+    {
+      "concept": "earth:Rainfall",
+      "resolvedConcept": "earth:Rainfall",
+      "nonblank": true,
+      "parsed_docstring": "Precipitation occurring as falling liquid-water drops."
+    },
+    {
+      "concept": "earth:Snowfall",
+      "resolvedConcept": "earth:Snowfall",
+      "nonblank": true,
+      "parsed_docstring": "Precipitation occurring as falling ice crystals or aggregates of ice crystals."
+    },
+    {
+      "concept": "earth:Hailing",
+      "resolvedConcept": "earth:Hailing",
+      "nonblank": true,
+      "parsed_docstring": "Precipitation occurring as falling hailstones."
+    },
+    {
+      "concept": "earth:LandCover",
+      "resolvedConcept": "earth:LandCover",
+      "nonblank": true,
+      "parsed_docstring": "The spatial arrangement of physical cover over the terrestrial Earth surface."
+    },
+    {
+      "concept": "earth:LandformingProcess",
+      "resolvedConcept": "earth:LandformingProcess",
+      "nonblank": true,
+      "parsed_docstring": "A physical process that forms or modifies Earth\u00e2\u20ac\u2122s surface morphology."
+    },
+    {
+      "concept": "land:ontology land",
+      "resolvedConcept": "land:ontology land",
+      "nonblank": true,
+      "parsed_docstring": "Descriptive identities for land cover within its physical, living and social context."
+    },
+    {
+      "concept": "land:LandCover",
+      "resolvedConcept": "land:LandCover",
+      "nonblank": true,
+      "parsed_docstring": "An identity used to classify the physical cover of a land surface."
+    },
+    {
+      "concept": "physical:Movement",
+      "resolvedConcept": "physical:Movement",
+      "nonblank": true,
+      "parsed_docstring": "An identity for a spatial intransitive process in which its own subject changes position."
+    },
+    {
+      "concept": "physical:Periodicity",
+      "resolvedConcept": "physical:TemporalOccurrencePattern",
+      "nonblank": true,
+      "parsed_docstring": "A temporal attribute describing how a phenomenon occurs over an observation interval."
+    },
+    {
+      "concept": "physical:Sporadic",
+      "resolvedConcept": "physical:Sporadic",
+      "nonblank": true,
+      "parsed_docstring": "Occurring irregularly or occasionally over the observation interval."
+    },
+    {
+      "concept": "physical:Intermittent",
+      "resolvedConcept": "physical:Intermittent",
+      "nonblank": true,
+      "parsed_docstring": "Occurring with intervening intervals of non-occurrence during the observation interval."
+    },
+    {
+      "concept": "physical:Continuous",
+      "resolvedConcept": "physical:Continuous",
+      "nonblank": true,
+      "parsed_docstring": "Occurring without interruption over the observation interval."
+    }
+  ],
+  "limitations": [
+    "Private ontology validation uses captured real provider documents and authoritative core; no live service, IDE, unit-inference or strategy-document acceptance.",
+    "Retained warnings are preserved explicitly; logical VALID does not mean warning-free.",
+    "Stream gradients retain Ratio ancestry and generic Quantity flags under the agreed incomplete-component contract; no artificial numerator/denominator or inferred units."
+  ],
+  "provenanceFile": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-15\\task-2\\staged-ingestion-candidate\\worldview-v21\\provenance.json",
+  "evidence": [
+    "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-15\\task-2\\staged-ingestion-candidate\\worldview-v21\\v21-semantic.json",
+    "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-15\\task-2\\staged-ingestion-candidate\\worldview-v21\\baseline-semantic.json",
+    "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-15\\task-2\\staged-ingestion-candidate\\worldview-v21\\v21-source.json",
+    "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-15\\task-2\\staged-ingestion-candidate\\worldview-v21\\baseline-source.json"
+  ],
+  "activeIntegration": false
+}

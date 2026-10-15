@@ -1,18 +1,14 @@
 /**
- * 
- * Mapping on the domains:
- * 
-Atmospheric System: Chemistry explains the composition of the atmosphere, chemical reactions that result in phenomena like ozone formation and depletion, and the greenhouse effect.
-Hydrosphere: Chemical processes are central to understanding water quality, the acid-base balance in oceans, and the cycles of nutrients and pollutants.
-Geosphere: Geochemistry explores the chemical composition of Earth's crust, including the processes of mineral formation, soil chemistry, and the interactions between Earth's crust and water (hydrogeology).
-Biosphere: Biochemistry and molecular biology are essential for understanding the chemical processes that support life, including photosynthesis, respiration, and nutrient cycling.
-Cryosphere: Chemistry helps explain the interactions between ice and the rest of the climate system, such as the solubility of gases in melting ice and the impact of pollutants trapped in ice cores.
-Anthroposphere: Chemistry is fundamental in developing materials, pharmaceuticals, and energy sources, and in assessing and mitigating the impact of human activities on the environment through pollution and waste management.
+ * # Chemical knowledge
+ *
+ * Chemistry addresses universal physical composition and transformations through
+ * the PhysicalPhenomena subject-matter domain. Earth sphere applications are
+ * specializations, not an intrinsic boundary of chemical knowledge.
  */
 ontology chemistry
 	version 1.0
 	using imod, physical
-	in domain imod:Knowledge of imod:PhysicalSystem;
+	in domain imod:Chemistry;
 
 abstract identity ChemicalIdentity
 	"Any chemical, element, compounds, or compound family, but not mixtures."
@@ -23,6 +19,16 @@ abstract identity ChemicalIdentity
     }
 ;
 
+/**
+ * ## Mixture forms
+ *
+ * Mixture groups Solution, Suspension and Colloid as chemical mixture identities,
+ * distinct from the substance and compound identities selected through CHEM.
+ * The descriptions follow IUPAC terminology for
+ * [solution](https://doi.org/10.1351/goldbook.S05746),
+ * [suspension](https://doi.org/10.1351/goldbook.S06198), and
+ * [colloidal dispersion](https://doi.org/10.1351/goldbook.C01174).
+ */
 abstract identity Mixture
 	"Any material system made up of two or more different substances 
 	 which are mixed but are not combined chemically. A mixture refers 
@@ -31,12 +37,11 @@ abstract identity Mixture
 	 suspensions, and colloids."
 	 has children 
 	 	(Solution 
-	 		"TODO"
+	 		"A single liquid or solid phase containing multiple substances distinguished as solvent and solutes."
 	 	),
 	 	(Suspension
-	 		"TODO"
+	 		"A mixture with solid particles dispersed throughout a liquid medium."
 	 	),
 	 	(Colloid 
-	 		"TODO"
+	 		"A mixture whose colloidal-sized dispersed particles or domains differ in composition or state from the continuous medium."
 	 	);
-//	 contains at least 1 ChemicalSpecies /* inheriting Soluble */;

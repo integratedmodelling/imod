@@ -1,0 +1,317 @@
+ontology physical
+   version 1.0
+   using imod
+   in domain imod:PhysicalPhenomena;
+ 
+/**
+ * TODO if all those decision:-based predicates are needed, they should be moved into something like an
+ * agency namespace, inherited by decision + physical so that no circular dependencies remain
+ */ 
+
+//Physical entities, e.g. subjects, events, processes, qualities
+//in ODO
+@check("Made it abstract as it needs inherency. Inherency is what makes it possible for events to be independents")
+abstract event Collapse
+   "The loss of identity for the system, after which it ceases to exist as such. In  living systems, it's synonymous with death."
+    // applies to imod:PhysicalSystem
+;
+
+@fixme("This seems wrong rather than unconventional. But this is important and we should articulate it properly.")
+abstract thing Feature
+   "Feature is (cognitive) relevant subject that are dependent upon their host, such as holes and bumps."
+   has children
+       Hole,
+       Slot,
+       Bump;
+
+//Specialized physical qualities
+abstract length Depth
+    // is imod:Length // unnecessary as it's a length
+    requires identity imod:Volumetric
+;
+
+abstract attribute SpatialOrientation 
+			has children
+				(abstract ObserverRelativeOrientation 
+					has disjoint children
+						Right,
+						Left,
+						Front,
+						Back,
+						Up,
+						Down	
+				),
+				(abstract EuclidianRelativeOrientation2D 
+					"These concepts are purely 2d - nothing in English to denote the 'applicate'
+					 third dimension of a 3D space."
+					has disjoint children
+						Vertical,
+						Horizontal
+				)
+		;
+
+abstract length Height
+   //     is imod:Length
+     inherits physical:Vertical
+     requires identity (imod:Areal or imod:Volumetric);
+
+abstract length Width
+//    is imod:Length
+    inherits physical:Horizontal
+    requires identity (imod:Areal or imod:Volumetric);
+
+abstract area SpatialCoverage is imod:Area;
+
+abstract quality Acceleration
+	is change rate of imod:Velocity;
+	
+quantity Impedance
+	"The most general quality that describes resistance to a physical force, flow or 
+     other phenomenon. Usually given the symbol Z in technical literature."
+	// TODO children - electrical has a core representation
+	;
+	
+quantity Conductance
+	"The opposite of impedance, describing the effectiveness of transport of an observable through a medium or a region.."
+	// TODO children - fluid conductance, electrical conductance, thermal conductivity
+;
+
+abstract duration Age
+      is imod:Duration;
+      
+abstract quality Frequency
+	"Frequency is the numerosity of events in a time period. Used in continuous time representations to 
+    describe a wave."
+	is count of imod:Event;
+
+abstract duration Period
+	"The time between two repetitions of an event. If the events are described by a quality in continuous time, it 
+     describes the distance between high points on a wave function. Inversely proportional to frequency."
+	decreases with physical:Frequency;
+
+/**
+ * 
+ */
+abstract volume Capacity;
+
+abstract angle Direction;
+
+//Definition of diversity: Xu, S., Bottcher, L., and Chou, T. (2020). Diversity in biology: definitions, quantification and models. Physical Biology, 17(3), 031001.
+abstract quantity Diversity
+   "Diversity is the quantity of the range of characteristics found in subjects and agents."; 
+
+abstract quantity Heterogeneity equals physical:Diversity;
+
+//Specialized processes
+abstract identity TransitiveProcess 
+	"Transitive processes happen in a subject directly affecting other observables (their objects)"
+	has children
+		(
+			@example("Transportation: you transport 'something' - the object - modifying its spatial extent.")
+			abstract SpatialTransitiveProcess
+				"A spatial transitive process affects the spatial extent of the object."
+				has children
+			        (abstract Transport	
+			          )
+			);
+	
+abstract identity IntransitiveProcess 
+	"Intransitive processes happen in subjects only affecting the context itself"
+	has children
+		(abstract SpatialIntransitiveProcess
+			"A spatial transitive process affects the spatial extent of the context - e.g. movement."
+			has children
+				(Movement
+					""
+				)
+		);
+	
+abstract process Transformation
+    "Any endogenous transformation happening in a system and affecting its internal structure."
+    inherits physical:IntransitiveProcess
+    // applies to imod:PhysicalSystem
+    has children 
+		(Coupling
+			"Building of interactions. Can affect the mereological identity of the system by creating groups."
+		),
+		(Decoupling
+			"Destruction of interactions. Can affect the mereological identity of the system by destroying groups."
+			has children 
+				(Dissipation
+					"Proceeds through the collapse of parts of the system."
+				)
+		),
+		(Displacement 
+			"Akin to movement but causing the system to change because of that"
+		),
+		(Growth
+			 "Positive or negative growth makes a system acquire a larger size or functional throughput."
+		),
+		(Homeostasis
+			"The active maintenance of the current status and/or behavior of the system"
+		)
+;
+       
+abstract process Activity
+    "An activity is a process performed by an agent"
+    is /* decision:Intentional */ imod:Process;
+    
+abstract role ValueActivity
+     applies to physical:Activity;
+     
+//Participation: specified in ODO or operators
+abstract event Participation
+      applies to imod:Subject, imod:Agent
+      has children
+       Active,
+       Passive;
+       
+//Comment: Change as event
+ //from GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classesfeature&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Change	
+// subclasses from Case file items of CMMN: http://cmmn.byethost4.com/case_file_item_standard_events.html?i=1
+// TO BE RE-CONSIDERED (CONFLICT WITH THE OPERATOR)   
+abstract event Change 
+      "Event that specifies qualitative modifications over time. They are important  in dynamic models."       
+      has children
+         Changed,
+         Replaced,
+         Updated,
+         @fixme("Not sure about this being an event that directly affects the inherent - probably more of a role?") Deleted;
+         
+//Input and output to be redefined ("caused by" and "causing" as operators)
+//Input - output should be renamed in a more abstract way
+abstract event Input
+    "Input is an event that triggers another event or process."
+    is physical:Change;
+
+abstract event Output
+    "Output is an event generated from another event or process."
+    is physical:Change;
+  
+//in ODO. it should  an "event"    
+// process Creation
+//     "Creation is the intentional activity of developing something for a purpose"
+//     is /* decision:Intentional */ physical:Activity
+//     requires identity imod:Goal
+// 	;
+
+    
+//Tahko, Tuomas E. and E. Jonathan Lowe, "Ontological Dependence", The Stanford Encyclopedia of Philosophy (Fall 2020 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/fall2020/entries/dependence-ontological/>.
+//Adamo, G., Borgo, S., Di Francescomarino, C., Ghidini, C., Guarino, N., & Sanfilippo, E. M. (2018). Business process activity relationships: is there anything beyond arrows?. In Business Process Management Forum: BPM Forum 2018, Sydney, NSW, Australia, September 9-14, 2018, Proceedings 16 (pp. 53-70). Springer International Publishing.
+abstract relationship Dependence
+    "A dependence (ontological dependence) is a relationship that holds when an entity is dependent upon another for their existence"
+     has children 
+		(abstract HistoricalDependence
+			"X is historically dependent from Y, iff the existence of X at time t is tied to the existence of Y at t' and t'< t"
+		),
+		(abstract CausalDependence
+			"X is causally dependent on Y, iff the existence of X at t is explained by the existence of Y at t' and t'< t"
+		),
+		(abstract CooccurrenceDependence
+			"X and Y are both necessary for the satisfaction of a goal"
+		// requires identity imod:Goal	
+		); 
+
+//Specialized physical predicates
+
+@fixme("Ehm")		
+abstract subjective ordering HeightLenghtLevel
+     applies to /*(Areal or */ imod:Volumetric /*) */ imod:Subject 
+     has children   
+     (abstract VerticalHeightLevel  
+     	has children
+     	   TallHeight,
+     	   SmallHeight
+     	),
+    (abstract HorizontalLenghtLevel
+    	has children
+    	    Long,
+    	    Short  	
+    );
+
+
+
+@fixme("Argh")
+abstract subjective ordering VolumeLevel
+      describes imod:Volume 
+      applies to imod:Volumetric imod:Subject
+      has children  
+         SmallVolume, 
+         LargeVolume;
+
+@todo("Not sure, but consider adding sealed (giving errors at the moment)")
+abstract ordering Periodicity
+	""
+	describes physical:Period
+	has children
+		(Sporadic 
+			""
+		),
+		(Intermittent 
+			""
+		),
+		(Continuous 
+			""
+		);
+		
+abstract attribute TemporalOrientation
+			has disjoint children
+				Previous,
+				Successive;
+
+deniable attribute Perceivable
+    "Describes a perceivable observable phenomenon"
+    has children
+        Visible,
+        Audible,
+        Smellable,
+        Palpable;
+
+@fixme("Not sure about this, but assuming it's useful it's normally intended as a quality or a role for it rather than for events")
+abstract role Throughput 
+   "The quantifiable amount of matter, energy or information transferred through a flow connection."
+   applies to physical:Output;
+
+@fixme("Does this really imply participation in events?")
+abstract role Participant
+     "Participants are entities, Subjects or Agents, that participates in Events."
+     applies to imod:Event;
+
+//From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Processual_role	
+@fixme("Academic? Don't see the utility, each individual role could be categorized more usefully by making the inherency explicit")
+abstract role ProcessualRole
+      "ProcessualRole refers to the role played by participants in a process."
+      applies to imod:Process;
+
+//From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Relational_role
+@fixme("Academic? Don't see the utility, each individual role could be categorized more usefully by making the inherency explicit")
+abstract role RelationalRole
+      "RelationalRole refers to the role played by participants in a functional or structural relationship."
+      ;
+
+//Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
+abstract thing SpatialBoundary 
+    "A spatial boundary is the spatial delimitation between entities"
+    inherits imod:Areal;
+    
+ //Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
+abstract attribute TimePosition
+    "Time position is a perspective to measure time"
+    describes imod:Duration
+    has children
+    TimeInterval,
+    TimePoint;
+
+abstract extent TemporalBoundary 
+    "A temporal boundary is the temporal delimitation between entities."
+     inherits physical:TimePosition;
+     
+// time concepts
+
+//Revisitation as attribute and not duration from SUMO v 1.75: https://www.ontologyportal.org/images/SUMOclasses.gif	
+
+    
+configuration SpatialArrangement
+	has children
+		VerticalArrangement,
+		HorizontalArrangement;

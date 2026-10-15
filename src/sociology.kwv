@@ -1,7 +1,6 @@
 /**
  * @ Sociology and Environmental Sociology
  * 
- * @todo the namespace ID should probably reflect our merging of the two above; "sociology" is not the best name.
  * 
  * Environmental Sociology. This discipline examines how social processes, structures, and inequalities influence 
  * human interactions with the environment, as well as how environmental changes impact societies. It integrates 
@@ -22,4 +21,4 @@
 ontology sociology
 	version 1.0
 	using imod, society
-	in domain imod:Knowledge of imod:Anthroposphere;
+	in domain imod:Sociology;

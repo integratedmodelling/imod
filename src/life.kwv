@@ -1,16 +1,14 @@
 /**
- * @ The Life namespace 
- * 
- * In @im, the @life namespace is an ontological articulation of the @imod:Biosphere @imod:EarthSystem.
- * 
- * Life is the ontology namespace representing the "physical" components of the @imod:Biosphere for all disciplines that explain 
- * life-related phenomena, such as @biology, @ecology and @genetics. These epistemological domains will use the concepts articulated
- * here as their physical domain, explained under the correspondent perspectives. 
+ * # Living phenomena
+ *
+ * This physical namespace articulates living phenomena without an intrinsic
+ * Earth restriction. Biology, ecology and genetics identify Life as physical
+ * subject matter through about; this does not settle organism agency or taxonomy.
  */
 ontology life
 	version 1.0
 	using imod
-	in domain imod:Physical;
+	in domain imod:Life;
 
 abstract identity TaxonomicIdentity
 	requires authority TAXA {

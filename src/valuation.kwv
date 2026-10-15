@@ -1,42 +1,58 @@
 /**
- * Valuation (a better name would be "value" but it conflicts with the `value of` k.IM operator) articulates notions
- * relative to value, its attribution, and the related notions of asset and stake, risk, safety, vulnerability. It 
- * sits in the philosophical realm of _axiology_, the branch of philosophy that studies the nature of value, including 
- * ethical and aesthetic value as well as economic, health and others.
+ * # Valuation and societal preferences
+ *
+ * Valuation describes how people, communities and institutions attribute value
+ * and express preferences across economic, ethical, aesthetic, health and other
+ * contexts. Its vocabulary covers valued assets, stakeholders and their associated
+ * hazards, vulnerability, exposure and risk; it is not restricted to economic value.
+ *
+ * This descriptive scope records attributions and preferences. It does not prescribe
+ * what ought to be valued or establish a normative framework. Physical subject matter
+ * is identified through the Society domain; it is not an inherency constraint on
+ * every asset or hazard.
  */
 ontology valuation
-	in domain imod:Physical of imod:Anthroposphere
+	in domain imod:Valuation
 	version 1.0
 	using imod, physical;
 
 /**
- * The @Asset role is, for now, limited to substantials (individuals, organizations, systems, agents) but could be
- * extended to configurations and maybe processes. A @Stakeholder implies the role @Asset for
- * something, so that when the observer is a @Stakeholder all observable @Assets will be
- * resolved. Specific stakeholders may specialize the assets they imply.
- */	
+ * ## Assets and the attribution of value
+ *
+ * Asset marks the role of being valued in an observational context. Stakeholders
+ * provide the perspective from which that value and the associated stakes are
+ * understood. The positive-value qualification distinguishes assets from
+ * substantials to which no positive value is attributed in that context.
+ * Individuals, organizations, systems and agents can be considered as assets.
+ */
 role Asset 
-	"The asset role is conferred to substantials that are valued more than zero."
-	// marks value of (imod:Subject or imod:Agent)
+	"The role of a substantial attributed positive value in an observational context."
 	;
 
 /**
- * The following are roles for quantities that are created by the correspondent emerging 
- * configurations. The individual hazard and other subclasses must confer the specialized
- * roles so that they can be resolved automatically when the configuration emerges.
+ * ## Metrics of vulnerability, exposure and risk
+ *
+ * These roles distinguish quantities used as indicators of vulnerability,
+ * exposure and risk. A metric role identifies what a quantity expresses within
+ * this vocabulary; its numerical value belongs to an observation of that quantity.
  */
 abstract role ValueMetric
+    "The role of a quantity expressing vulnerability, exposure or risk of valued assets."
 	is imod:Indicator
-	// increases with probability of physical:Collapse of valuation:Asset
 	has children
-		VulnerabilityMetric,
-		ExposureMetric,
-		RiskMetric;
+        VulnerabilityMetric "The role of a quantity expressing vulnerability of valued assets.",
+        ExposureMetric "The role of a quantity expressing exposure of valued assets to hazards.",
+        RiskMetric "The role of a quantity expressing risk to valued assets.";
 
 /**
- * An observer or context that incarnates @Stakeholder will cause the resolution of @Asset for any 
- * compatible observation made. In turn, any assets found will engender the relative configurations.
- * Only @{imod:Agent}s can be @{Stakeholder}s.
+ * ## Stakeholders and hazards
+ *
+ * A stakeholder has a stake in an asset within an observational scope. Its
+ * implication connects that perspective to the presence of valued assets.
+ * Hazard applies to a Process or Event affecting an asset; its implication
+ * associates that hazard with the probability of collapse of a valued asset.
+ * These relations describe stakes and threats, while acceptable risk belongs to
+ * the preferences or prescriptions of a particular societal context.
  */
 abstract role Stakeholder
 	"An agent with a stake in something recognized as an asset within its observational scope."
@@ -47,24 +63,25 @@ role Hazard
 	applies to (imod:Process or imod:Event)
 	implies probability of physical:Collapse of valuation:Asset;
 	
+/**
+ * ## Vulnerability, exposure and risk as configurations
+ *
+ * Vulnerability recognizes assets susceptible to hazards. Exposure recognizes
+ * their compresence with hazards that affect them; Risk combines exposure with
+ * vulnerability. Together they organize descriptions of valued assets under
+ * threat, across the economic and other societal contexts introduced above.
+ * Their descriptive meanings leave a judgment of acceptable risk to the
+ * preferences or prescriptions expressed within a societal context.
+ */
 abstract configuration Vulnerability
 	"The existence of assets that can be affected by hazards."
-	// emerges from valuation:Asset within imod:Subject
-	// implies valuation:VulnerabilityMetric
 	;
 
-/**
- * Exposure is engendered when an @Asset coexists with a compatible @Hazard (the compatibility is implied by the 
- * `with` operator). 
- */
+
 abstract configuration Exposure
 	"The compresence of assets with hazards that affect them."
-	// emerges from (valuation:Asset with valuation:Hazard) within imod:Subject
-	// creates valuation:ExposureMetric
 	;
 	
 abstract configuration Risk
 	"The compresence of exposure, implying assets threatened by hazards, with the vulnerability of the same assets."
-	// emerges from (valuation:Exposure with valuation:Vulnerability) within imod:Subject
-	// creates valuation:RiskMetric
 	;

@@ -1,0 +1,41 @@
+src/chemistry.kwv:40: space before tab in indent.
++	 		"A single liquid or solid phase containing multiple substances distinguished as solvent and solutes."
+src/chemistry.kwv:43: space before tab in indent.
++	 		"A mixture with solid particles dispersed throughout a liquid medium."
+src/chemistry.kwv:46: space before tab in indent.
++	 		"A mixture whose colloidal-sized dispersed particles or domains differ in composition or state from the continuous medium."
+src/data.kwv:8: trailing whitespace.
++	"A type of reinterpretation applied to a numeric observation, distinguished by how its value scale is transformed." 
+src/data.kwv:11: trailing whitespace.
++   		
+src/data.kwv:15: trailing whitespace.
++        
+src/data.kwv:19: trailing whitespace.
++        
+src/data.kwv:30: trailing whitespace.
++     
+src/earth.kwv:485: space before tab in indent.
++ 			"The descent of liquid or solid atmospheric water particles toward the ground."
+src/earth.kwv:490: space before tab in indent.
++ 					"Precipitation occurring as falling liquid-water drops."
+src/earth.kwv:494: space before tab in indent.
++ 					"Precipitation occurring as falling ice crystals or aggregates of ice crystals."
+src/earth.kwv:498: space before tab in indent.
++ 					"Precipitation occurring as falling hailstones."
+src/earth.kwv:512: trailing whitespace.
++	is earth:MeteorologicalProcess 
+src/earth.kwv:612: trailing whitespace.
++		Erosion, 
+src/earth.kwv:616: new blank line at EOF.
+src/imod.kwv:263: trailing whitespace.
++abstract identity Puntal; 
+src/imod.kwv:264: trailing whitespace.
++abstract identity Lineal; 
+src/imod.kwv:265: trailing whitespace.
++abstract identity Areal; 
+src/land.kwv:14: trailing whitespace.
++	
+src/land.kwv:17: trailing whitespace.
++	
+src/oceanography.kwv:5: new blank line at EOF.
+warning: in the working copy of 'src/calendar.kwv', LF will be replaced by CRLF the next time Git touches it

@@ -1,6 +1,6 @@
 ontology calendar
    version 1.0
-   in domain imod:Knowledge
+   in domain imod:Physical
    using imod,physical;
 
 // Identities capturing discrete time recurrence

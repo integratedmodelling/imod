@@ -3,43 +3,31 @@ ontology data
    using imod
    in domain imod:Knowledge;
 
-/***
- * 
- */
+
 abstract rescaling attribute Transformed 
-	"A type of reinterpretation applied to a numeric observation. These attributes trigger data transformations on 
-     the quantities that adopt them." 
+	"A type of reinterpretation applied to a numeric observation, distinguished by how its value scale is transformed." 
     applies to imod:Quantity
     has children 
-   		/**
-   		 * 
-   		 */
+   		
         @colormap("heat", override=true)
         Normalized 
             "Normalization transforms all the values in a numeric state so that they all fit within a 0-1 range, independent of the original magnitude.",
-        /**
-         * 
-         */
+        
         @colormap("heat", override=true)
         Standardized 
             "Standardization transforms all the values in a numeric state by subtracting the mean of all values and dividing by their standard deviation.",
-        /**
-         * 
-         */
+        
         @colormap("heat", override=true)
         Ranked
             "Modifies a quantity into another that only guarantees (linear or nonlinear) proportionality with the original. Can be used to 
              substitute the use of 'magnitude of' as long as the result is numerically consistent for all uses of the resulting semantics. 
-             Should be qualified with a range in the 'is' clause whenever possible."
+             The specified range provides a consistent scale for interpretation."
           metadata {
-             // this would print this warning unless @check(consistent.usage) is added to the observable
              klab.warning: (consistent.usage, "Ensure that the range of values for the ranked quality is consistent across all usages.")
            }
     ;
      
-/***
- * 
- */     
+     
 abstract attribute DataReduction
      "A type of data reduction or aggregation applied to numeric observations. These do not change the numeric value scale." 
      applies to imod:Quantity

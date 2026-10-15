@@ -1,0 +1,611 @@
+ontology earth
+	"Defines fundamental natural concepts pertaining to planet Earth. Also contains
+	 knowledge regarding the physical processes that act at the planetary level, such
+     as climate."
+    version 1.0
+	using imod, physical, chemistry
+	in domain imod:Earth;
+
+abstract attribute Georeferenced
+	"A subject that can be referred to a location on Earth. Use the applicable concrete child."
+	has children
+		(Geolocated
+			"A subject that can be located somewhere on the surface of the Earth, either directly on it or projected
+	 		 on it, limited to things that are in the bottom layer, in 'reach' of humans."),
+	 	(Geostationary
+	 		"A subject that can be projected on the same spot of the surface of the earth throughout its observation."
+	 	)
+	// any spatial extent is fine but there must be one.
+//	requires extent imod:Space
+	;
+
+thing Location
+	is earth:Geostationary physical:Feature;
+
+abstract event GeolocatedEvent
+	is earth:Geostationary imod:Event;
+
+// ARTICULATE - maybe move
+thing Planet;
+
+// THE PLANET - articulate
+identity Earth
+	applies to earth:Planet;
+
+thing Region 
+	"An Earth Region is a section of the Earth realm delimited in volumetric space, 
+	 including the surface, the soil and the atmospheric bottom layer. It applies to both
+	 land and sea - anywhere on Earth - and should be qualified as necessary when
+	 used."
+	 is imod:Areal earth:Location;
+
+thing Site
+	""
+	is imod:Puntal earth:Location;
+
+/*
+ * The Earth's cover configurations are determined by a complex interplay of various physical, climatic, and geological factors. These factors shape the distribution of different landforms, vegetation types, and water bodies across the planet. Here are the key determinants:
+
+### 1. **Climate**
+- **Temperature**: Influences the types of vegetation and the rate of soil formation. For example, tropical regions support dense forests, while polar regions are covered with ice and tundra.
+- **Precipitation**: Dictates the availability of water, influencing plant growth and soil moisture. Deserts receive minimal rainfall, resulting in sparse vegetation, while rainforests receive abundant rainfall, supporting lush vegetation.
+- **Seasonality**: Affects growing seasons and the types of vegetation that can thrive. Temperate regions have distinct seasons, influencing deciduous forests, whereas tropical regions have less seasonal variation.
+
+### 2. **Geography**
+- **Latitude**: Determines the amount of solar energy received, influencing climate and vegetation types. Equatorial regions receive more direct sunlight, promoting tropical rainforests, while higher latitudes receive less, supporting tundra and boreal forests.
+- **Altitude**: Affects temperature and oxygen levels, with higher elevations experiencing cooler temperatures and thinner air. This results in different vegetation zones, such as alpine tundra above the tree line.
+- **Proximity to Water Bodies**: Influences local climate (maritime vs. continental climates) and vegetation. Coastal areas tend to have milder climates and diverse ecosystems compared to inland areas.
+
+### 3. **Geological Factors**
+- **Soil Type and Fertility**: Determines the types of vegetation that can grow. Rich, fertile soils support dense forests and grasslands, while poor, rocky soils limit plant growth to hardy species.
+- **Topography**: Influences drainage, soil formation, and microclimates. Mountains, valleys, and plains each create unique conditions for different types of vegetation and land use.
+- **Tectonic Activity**: Shapes landforms and influences soil types through processes like volcanic activity, which can create fertile soils, and mountain building, which influences drainage patterns and microclimates.
+
+### 4. **Hydrology**
+- **Water Availability**: Determines the types of ecosystems that can exist. Areas with abundant freshwater sources support lush vegetation and diverse ecosystems, while arid regions have limited plant and animal life.
+- **Water Bodies**: Lakes, rivers, and wetlands create unique habitats and influence local climate and soil conditions.
+
+### 5. **Natural Disturbances**
+- **Fire**: Shapes ecosystems by periodically clearing vegetation, which can promote certain fire-adapted species and maintain open habitats like grasslands.
+- **Flooding**: Influences soil fertility and the distribution of plant species in floodplains and wetlands.
+- **Storms**: Can alter landscapes and ecosystems through events like hurricanes, which can cause significant changes in coastal and forested areas.
+
+### 6. **Human Activities**
+- **Land Use Changes**: Agriculture, urbanization, deforestation, and reforestation significantly alter natural cover configurations.
+- **Pollution**: Can degrade environments, affecting soil and water quality, and influencing the types of vegetation and ecosystems that can survive.
+- **Climate Change**: Alters temperature and precipitation patterns, leading to shifts in vegetation zones and the distribution of ecosystems.
+
+### Conclusion
+The Earth's cover configurations are determined by a combination of climatic conditions, geographical features, geological processes, hydrological patterns, natural disturbances, and human activities. These factors interact in complex ways to shape the distribution and characteristics of the planet's diverse landscapes and ecosystems.
+ */
+configuration EarthCover
+	"The configuration of physical materials at the surface of the earth."
+	// is physical:SpatialArrangement of ((earth:Geolocated imod:Subject) or (earth:Geolocated imod:Agent))
+	// within earth:Location
+	;
+
+/**
+  To organize the different categories of terrestrial and aquatic environments based solely
+  on their physical factors, we can focus on key attributes such as climate, geography, water
+   availability, temperature, and soil type for terrestrial environments, and salinity, 
+   depth, flow, and temperature for aquatic environments. Here is a structured organization 
+   based on these physical factors:
+
+### Terrestrial Environments
+
+#### Climate-Based Categories:
+1. **Tropical**
+   - **Tropical Rainforest**: High rainfall, high temperature, humid.
+   - **Savanna**: Seasonal rainfall, warm temperature, dry seasons.
+2. **Temperate**
+   - **Temperate Forest**: Moderate temperature, moderate rainfall, distinct seasons.
+   - **Grassland**: Moderate to low rainfall, hot summers, cold winters.
+3. **Arid**
+   - **Desert**: Extremely low rainfall, high temperature variability (hot days, cold nights).
+4. **Cold**
+   - **Taiga (Boreal Forest)**: Cold winters, short mild summers, moderate precipitation (mostly snow).
+   - **Tundra**: Very cold, low precipitation, permafrost.
+
+#### Soil and Geography-Based Categories:
+1. **Mountain**
+   - **Alpine**: High elevation, cold temperature, varied precipitation.
+2. **Coastal**
+   - **Coastal Zones**: Influence of ocean, moderate temperature, high humidity.
+
+### Aquatic Environments
+
+#### Salinity-Based Categories:
+1. **Marine (Saltwater)**
+   - **Ocean**: High salinity, vast depth ranges, varying temperature.
+   - **Coral Reefs**: Shallow, warm, clear water, high salinity.
+   - **Estuaries**: Mix of salt and freshwater, varying salinity.
+2. **Freshwater**
+   - **Lakes and Ponds**: Low salinity, standing water, varying depths and temperatures.
+   - **Rivers and Streams**: Low salinity, flowing water, varying speeds and temperatures.
+   - **Wetlands**: Low salinity, standing or slow-moving water, saturated soil.
+
+#### Depth and Flow-Based Categories:
+1. **Marine**
+   - **Epipelagic Zone**: Surface layer, well-lit, warm.
+   - **Mesopelagic Zone**: Mid-depth, dimly lit, cooler.
+   - **Bathypelagic Zone**: Deep, dark, cold.
+   - **Abyssopelagic Zone**: Very deep, very cold, no light.
+   - **Hadal Zone**: Deepest parts, such as ocean trenches, extremely cold, high pressure.
+2. **Freshwater**
+   - **Lotic Systems**: Flowing water (rivers, streams), varied flow rates.
+   - **Lentic Systems**: Standing water (lakes, ponds), varied depths.
+
+#### Temperature-Based Categories:
+1. **Marine and Freshwater**
+   - **Polar**: Near freezing temperatures, found in Arctic and Antarctic regions.
+   - **Temperate**: Moderate temperatures, seasonal variation.
+   - **Tropical**: Warm temperatures, little seasonal variation.
+
+### Summary
+
+By focusing solely on physical factors, terrestrial environments are primarily organized based
+ on climate, geography, and soil types, while aquatic environments are categorized by salinity,
+  depth, flow, and temperature. This approach highlights the physical attributes that define 
+  and differentiate each environment, setting the stage for further exploration of their 
+  biotic components.
+*/
+abstract realm PhysicalEnvironment
+	"Physical environments are uniform with respect to their earth cover pattern. Although some 
+	 are commonly classified as ecology:Biome, these are purely physical in their definition; 
+     biotic factors can be added to obtain ecology:Habitat, and ecological communities make the
+     latter into ecology:Biome."
+	classifies imod:Type of earth:EarthCover
+	has disjoint children
+		(Terrestrial
+			"Refers here to anything found on land ecoregions, as distinct from freshwater 
+             ecoregions and marine ecoregions."
+		),
+		(Aquatic
+			"Refers here to anything found on freshwater ecoregions and marine ecoregions,
+			 as distinct from land ecoregions."
+			has children
+				(Marine
+					"Marine applies to both seas and oceans, as the distinction does not have
+					 scientific interest."
+				),
+				(Brackish
+					"Refers to aquatic ecoregions where water has more salinity than fresh water, 
+                     but not as much as seawater"
+					has children
+						Estuarine,
+						SaltMarsh
+				),
+				(Freshwater
+					has children
+					(
+						@todo("flesh out; ensure that the ubiquitous Wetland knows where to put itself")
+						@todo("CHECK https://www.fws.gov/wetlands/Documents/classwet/lacustri.htm")
+						Lacustrine
+							""
+							has disjoint children
+								(Limnetic),
+								(Littoral
+									"A Littoral Region is a wetland."
+								)
+					),
+					(Riverine
+					
+					)
+				)				
+		);
+
+// FIXME see above
+abstract realm MarineStratum
+//   implies Marine
+   has children
+      SeaSurface,
+      DeepSea;
+
+abstract realm LatitudinalRegion
+// No - it describes the position of a region and applies to region
+//	describes EarthCover
+	has children
+		Polar,
+		Boreal,
+		Temperate,
+		Subtropical,
+		Tropical;
+		
+@todo("Finish, align, document; use SWEET")
+abstract realm GeosphereStratum
+	has children
+		(Bedrock
+			""
+		),
+		(Crust
+			""
+		),
+		(Lithosphere
+			""
+		),
+		(Pedosphere
+			"The outermost layer of the Earth that is composed of soil and subject to soil formation processes."
+		),
+		(	
+			@todo("unsure of the mereological relationships here")
+			Mantle
+			""
+		);
+
+/*
+ * TODO revise all below
+ * 
+ * Water bodies are natural or artificial accumulations of water that vary in size, shape, and characteristics. They play a crucial role in the Earth's hydrological cycle and support diverse ecosystems. Here are the main types of water bodies:
+
+### Freshwater Bodies
+
+#### 1. **Rivers and Streams**
+- **Description**: Flowing watercourses that move continuously in one direction.
+- **Characteristics**: They vary in size from small creeks to large rivers, and their flow can be perennial (year-round) or seasonal.
+- **Examples**: Amazon River, Mississippi River, Nile River.
+
+#### 2. **Lakes**
+- **Description**: Large, inland bodies of standing water.
+- **Characteristics**: Can be freshwater or saline, natural or artificial. Lakes are typically deeper and larger than ponds.
+- **Examples**: Lake Superior, Lake Victoria, Caspian Sea (saltwater).
+
+#### 3. **Ponds**
+- **Description**: Smaller bodies of standing water.
+- **Characteristics**: Usually shallow enough for sunlight to reach the bottom, allowing aquatic plants to grow throughout.
+- **Examples**: Vernal ponds, garden ponds.
+
+#### 4. **Wetlands**
+- **Description**: Areas where water covers the soil or is present at or near the surface for part of the year.
+- **Characteristics**: Include marshes, swamps, bogs, and fens. Wetlands are rich in biodiversity and act as natural water filters.
+- **Examples**: Everglades, Okavango Delta, Pantanal.
+
+### Marine (Saltwater) Bodies
+
+#### 1. **Oceans**
+- **Description**: Vast, continuous bodies of saltwater that cover about 71% of the Earth's surface.
+- **Characteristics**: Divided into major basins (Pacific, Atlantic, Indian, Southern, and Arctic). They have varied depths and support a wide range of marine life.
+- **Examples**: Pacific Ocean, Atlantic Ocean, Indian Ocean.
+
+#### 2. **Seas**
+- **Description**: Smaller than oceans and partially enclosed by land.
+- **Characteristics**: Often connected to an ocean. Seas can be entirely or partially enclosed.
+- **Examples**: Mediterranean Sea, Caribbean Sea, Red Sea.
+
+#### 3. **Bays and Gulfs**
+- **Description**: Coastal water bodies that are partially enclosed by land, typically with a wider opening to the sea.
+- **Characteristics**: Bays are usually smaller than gulfs and have calmer waters.
+- **Examples**: San Francisco Bay, Gulf of Mexico, Chesapeake Bay.
+
+#### 4. **Estuaries**
+- **Description**: Transitional areas where freshwater from rivers meets and mixes with saltwater from the ocean.
+- **Characteristics**: Highly productive ecosystems with brackish water (a mix of fresh and saltwater).
+- **Examples**: Chesapeake Bay, San Francisco Bay, Thames Estuary.
+
+### Specialized Water Bodies
+
+#### 1. **Lagoons**
+- **Description**: Shallow coastal water bodies separated from the ocean by a barrier such as a sandbar or coral reef.
+- **Characteristics**: Can be saltwater, brackish, or freshwater. Often found in tropical regions.
+- **Examples**: Blue Lagoon in Iceland, Venice Lagoon in Italy.
+
+#### 2. **Glacial and Ice-Covered Water Bodies**
+- **Description**: Bodies of water formed by glacial activity or existing in glacial environments.
+- **Characteristics**: Include glacial lakes and rivers, often with cold, clear water.
+- **Examples**: Lake Louise in Canada, Jökulsárlón in Iceland.
+
+#### 3. **Reservoirs**
+- **Description**: Artificial lakes created by damming rivers.
+- **Characteristics**: Used for water storage, hydroelectric power, irrigation, and recreation.
+- **Examples**: Hoover Dam (Lake Mead), Three Gorges Dam (Yangtze River).
+
+### Conclusion
+The main types of water bodies include rivers and streams, lakes, ponds, wetlands, oceans, seas, bays, gulfs, estuaries, lagoons, glacial lakes, and reservoirs. These water bodies differ in size, depth, salinity, and ecological function, playing critical roles in the hydrological cycle and supporting diverse ecosystems.
+ */
+thing WaterBody
+	""
+	is earth:Aquatic earth:Region;
+
+thing Wetland 
+	""
+	is earth:Littoral earth:Region;
+
+thing Lake 
+	""
+	is earth:Lacustrine earth:Region;
+
+thing Ocean 
+	""
+	is earth:Marine earth:Region;
+
+thing Sea 
+	""
+	is earth:Marine earth:Region;
+	
+thing Waterway
+	""
+	is earth:Riverine earth:Region
+	has children
+		Reach,
+		Stream,
+		River;
+	
+/**
+ * ## Longitudinal stream profiles
+ *
+ * A stream has a bed whose elevations form a longitudinal pattern along its
+ * channel course. StreambedProfile recognizes this arrangement whether the bed
+ * is wet or dry. WaterSurfaceProfile recognizes the corresponding arrangement
+ * of a continuous water surface at the time being observed. The two profiles
+ * describe distinct surfaces and can have different shapes and gradients.
+ *
+ * Both profiles concern a stream. Their longitudinal extent is specified by
+ * the reach being observed, rather than by the full drainage network. Bed and
+ * water-surface elevations can be compared over the same reach, with the
+ * reference surface and observation time identified in each observation.
+ *
+ * Longitudinal bed profiles are discussed in [Hack's stream-profile analysis](https://pubs.usgs.gov/publication/70161653).
+ * The distinction between bed geometry and water-surface gradient also appears
+ * in the [USGS stream-habitat data standard](https://pubs.usgs.gov/publication/tm16B2/full).
+ */
+configuration StreambedProfile
+    "The longitudinal pattern of bed elevation along a stream's channel course, whether the bed is wet or dry."
+    is physical:VerticalArrangement of earth:Stream;
+
+configuration WaterSurfaceProfile
+    "The longitudinal pattern of elevation of a continuous water surface along a stream's channel course at the time observed."
+    is physical:VerticalArrangement of earth:Stream;
+
+thing StreamJunction
+	"Either the point of junction of two streams or rivers, or the point of junction of a stream/river into
+     a waterbody."
+	is earth:Aquatic earth:Location;
+	
+thing Coast
+	"A portion of land adjacent to a major marine or lacustrine water body."
+	is earth:Terrestrial earth:Region 
+		adjacent to earth:Aquatic /* (earth:Marine or earth:Lacustrine) */ earth:Region;
+		
+thing Coastline
+	"The boundary between land and an adjacent @Coast."
+	is physical:SpatialBoundary 
+		// of (earth:Region adjacent to earth:Aquatic /* (earth:Marine or earth:Lacustrine) */ earth:Region)
+		// adjacent to earth:Aquatic /* (earth:Marine or earth:Lacustrine) */  earth:Region
+		;
+
+attribute WaterFlowDirection
+	has children
+		Upstream,
+		Downstream;
+		
+functional relationship StreamConnection
+	""
+	links earth:StreamJunction to earth:StreamJunction;
+		
+@fixme("not sure of the connection as relationship")
+configuration StreamNetwork
+	"The network built by streams joined by stream connections"
+	applies to earth:Region
+	is imod:Network of earth:StreamConnection;
+
+abstract identity PrecipitationType
+//	inherits IUPAC:Water 
+	has children
+		(Rain 
+			""
+			// inherits physical:Liquid
+		),
+		(Snow 
+			""
+			// inherits physical:Solid
+		),
+		(Hail 
+			""
+			// inherits physical:Solid
+		);
+temperature AtmosphericTemperature
+	""
+	is /* earth:AtmosphericBottomLayer */ imod:Temperature of earth:Location;
+
+/*
+ * EVENTS
+ */
+abstract event MeteorologicalEvent
+	""
+	is earth:GeolocatedEvent
+	has children
+		(Storm),
+		(Lightning),
+		(RainOnSnow
+			"The event of rain falling on snow; relevant for modeling of 
+			 peculiar hydrological behaviors."
+		),
+		Flood;
+
+/*
+ * QUALITIES. All should be linked to the processes that affect them in the
+ * process definitions.
+ */
+volume PrecipitationVolume 
+	""
+	is /* IUPAC:Water */ imod:Volume 
+	caused by earth:MeteorologicalEvent;
+
+@todo("improve, complete, align")
+abstract event GeologicalEvent 
+	""
+	has children
+		Landslide,
+		Earthquake;
+
+volume RainfallVolume 
+	is earth:PrecipitationVolume
+	inherits earth:Rain
+	;
+
+volume SnowfallVolume 
+	is earth:PrecipitationVolume
+	inherits earth:Snow;
+
+volume HailVolume 
+	is earth:PrecipitationVolume
+	inherits earth:Hail;
+
+/*
+ * PROCESSES
+ */
+ abstract process MeteorologicalProcess
+	""
+ 	has children
+		(Wind
+//			creates Storm
+		)
+;
+
+process Precipitation 
+ 			""
+ 			is /* IUPAC:Water */ earth:MeteorologicalProcess
+			creates earth:PrecipitationVolume
+ 			has children
+ 				(Rainfall
+ 					""
+ 					creates earth:RainfallVolume
+ 				),
+ 				(Snowfall
+ 					""
+ 					creates earth:SnowfallVolume
+ 				),
+ 				(Hailing
+ 					""
+ 					creates earth:HailVolume
+ 				) 				
+;
+
+/*
+ * TODO energy sources
+ */
+energy SolarRadiation
+	"Total solar radiation. Specify with realms to define stratum of measurement." 
+	// TODO specify solar source
+	// TODO check for realm-specific children to be added
+	is imod:Energy 
+	// within earth:Location
+;
+
+@deprecated
+process Weather
+	"Catch-all for the set of processes that determine the perceived weather. Weather should more
+	 properly be defined as a configuration."
+	is earth:MeteorologicalProcess // within earth:Location
+	creates earth:PrecipitationVolume, earth:AtmosphericTemperature, earth:SolarRadiation, earth:Storm;
+
+thing GeoFormation
+	"Geomorphon classification as is. If possible should be kept as a fully
+	 contained hierarchy as it is possible to classify a DEM based on these
+     exact categories."
+    is earth:Terrestrial earth:Region
+	has children
+		Flat,
+		Peak,
+		Ridge,
+		Shoulder,
+		Spur,
+		Slope,
+		Hollow,
+		Footslope,
+		Valley,
+		Pit
+;
+	
+thing LandFormation is earth:Terrestrial earth:Region
+	has children
+		Escarpment,
+		Hill,
+		BreakFoothill,
+		(Mountain),
+		Dune,
+		Cliff,
+		MountainPeak
+;
+
+abstract event Season
+	has children
+			Winter,
+			Spring,
+			Summer,
+			Fall;
+
+abstract attribute WeatherDominance
+	has children
+		Cloudy,
+		Wet,
+		Snowy,
+		Dry;
+
+/*
+ * Configurations - inherent types for geographical qualities.
+ * TODO FIXME the all-important 'describes' so that the configuration can be
+ * recognized, created and resolved. 
+ * TODO the inherency! It's built "of" its inherent derived from successive explanations - slope and elevation. The of 
+ * should be a within.
+ */
+// should be:
+// configuration Terrain 
+//	is physical:PhysicalConfiguration of (ecology:Landscape im:Height and ecology:Landscape im:Angle) 
+//	within Terrestrial Region; 	
+	
+/**
+ * ## Runoff routes and erosion profiles
+ *
+ * An OverlandFlowRoute is a delineated linear feature of the land surface,
+ * following the course of overland runoff over the extent specified for an
+ * erosion assessment. It can be recognized without water currently flowing
+ * along it. Its delineation identifies both the course and the represented
+ * extent, distinguishing it from other routes crossing the same location.
+ *
+ * ErosionalSlopeProfile recognizes the land-surface arrangement from the origin
+ * of overland runoff to the first onset of deposition caused by flattening or
+ * entry into a defined concentrated-flow channel, whichever comes first.
+ * OverlandFlowProfile recognizes the arrangement from runoff origin through
+ * any depositional portions to concentrated channel flow. Each profile specifies
+ * the extent required by its endpoint convention. A delineation ending at
+ * deposition onset is sufficient for the classic erosional-slope assessment.
+ * A full-path assessment includes the continuation to channel entry.
+ *
+ * These distinctions follow the [USDA-ARS RUSLE2 definitions](https://www.ars.usda.gov/southeast-area/oxford-ms/national-sedimentation-laboratory/watershed-physical-processes-research/research/rusle2/revised-universal-soil-loss-equation-2-rusle2-definitions/).
+ * Route selection and the criteria for recognizing deposition and channel
+ * entry belong to the particular erosion assessment.
+ */
+thing OverlandFlowRoute
+    "A delineated linear course of overland runoff on land, over the extent specified for an erosion assessment."
+    is imod:Lineal earth:Terrestrial earth:Location;
+
+configuration ErosionalSlopeProfile
+    "The land-surface arrangement from overland-runoff origin to first deposition caused by flattening or entry into a defined concentrated-flow channel."
+    is physical:SpatialArrangement of earth:OverlandFlowRoute;
+
+configuration OverlandFlowProfile
+    "The land-surface arrangement from overland-runoff origin to concentrated channel flow, including intervening depositional portions."
+    is physical:SpatialArrangement of earth:OverlandFlowRoute;
+
+configuration Bathymetry
+	"The vertical and horizontal dimensions of underwater Earth surfaces"
+	// is physical:SpatialArrangement of (earth:Aquatic earth:Region)
+	//applies to earth:Aquatic earth:Location
+	;	
+
+configuration LandCover
+	""
+	is earth:Terrestrial earth:EarthCover
+	applies to earth:Location;
+
+@todo
+abstract process LandformingProcess
+	""
+	// creates LandFormation
+	has children 
+		Erosion, // TODO affects Elevation, but that's downstream
+		Sedimentation,
+		Weathering,
+		PlateTectonics;
+	
+// configuration Gravity is physical:Gravity caused by imod:Mass of earth:Earth earth:Planet;

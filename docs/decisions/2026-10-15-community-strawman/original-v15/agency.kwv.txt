@@ -1,0 +1,468 @@
+/***
+ * Agency refers to the capacity of individuals or groups to act independently and make their own free choices. 
+ * It is the power to exert influence over one's environment, make decisions, and initiate actions based on one's 
+ * intentions and desires. Agency is a fundamental concept in various disciplines, including sociology, psychology, 
+ * and philosophy, highlighting the role of personal or collective autonomy in shaping behaviors, social structures, 
+ * and outcomes.
+ * 
+ * @todo merge with "decision" in here, straighten up all the physical concepts that actually belong 
+ * in infrastructure.
+ */
+ontology agency
+	version 1.0
+    using imod
+    in domain imod:Agency;
+     
+attribute Intentional
+	"Intention is a mental state (e.g. goal, belief, desire)"
+	deniable as Unintentional
+	// implies imod:Goal
+    ;
+	
+/***
+ A clean taxonomy would separate **what the agent is**, **what the agent is in a context**, and
+ **what is the agent disposition to do**. I would not make all of these direct subtypes of identity 
+ unless the ontology requires it. I would distinguish **identity proper** from **identity-forming
+ conditions**.
+
+## Proposed taxonomy of identities
+
+```text
+Identity
+├── Intrinsic identity
+├── Assigned identity
+├── Relational identity
+├── Role-based identity
+├── Process-relative identity
+└── Intention-based identity
+```
+
+## 1. Intrinsic identity
+
+**Definition:** An identity that classifies an entity by what it is, independently of a particular process or interaction.
+
+Examples:
+
+* human
+* organization
+* animal
+* river
+* machine
+* household
+* farm
+
+This is the most stable form of identity. It answers:
+
+> What kind of entity is this?
+
+In an agency model, this identifies the **bearer of agency**, not the way agency is exercised.
+
+Example:
+
+```text
+Agent identity: Human
+Agent identity: Organization
+Agent identity: Wolf
+```
+
+## 2. Assigned identity
+
+**Definition:** An identity given to an agent by a social, legal, institutional, or classificatory system.
+
+Examples:
+
+* citizen
+* landowner
+* protected-area manager
+* public authority
+* company
+* stakeholder
+* rights holder
+
+This is not simply intrinsic. It depends on recognition by some rule system or observer.
+
+It answers:
+
+> What is this agent recognized as?
+
+Example:
+
+```text
+A person has the assigned identity of landowner.
+A ministry has the assigned identity of competent authority.
+```
+
+This is useful when agency depends on legal capacity, authorization, ownership, or membership.
+
+## 3. Relational identity
+
+**Definition:** An identity defined by a relation to another entity.
+
+Examples:
+
+* buyer
+* seller
+* employer
+* employee
+* predator
+* prey
+* parent
+* tenant
+* supplier
+* beneficiary
+
+This identity exists only through a relation. A buyer is a buyer relative to a seller or transaction. A predator is a predator relative to prey.
+
+It answers:
+
+> What is this agent in relation to another entity?
+
+Example:
+
+```text
+Agent A has relational identity buyer with respect to Agent B.
+Wolf has relational identity predator with respect to deer.
+```
+
+This category is useful for interaction models.
+
+## 4. Role-based identity
+
+**Definition:** An identity derived from the function an agent performs in a process.
+
+Examples:
+
+* producer
+* consumer
+* regulator
+* pollinator
+* decomposer
+* investor
+* decision-maker
+* data provider
+* emissions reducer
+
+It answers:
+
+> What function does this agent perform in the process?
+
+Example:
+
+```text
+A bee has role-based identity pollinator in a pollination process.
+A government agency has role-based identity regulator in a permitting process.
+```
+
+This is close to **role**, but not identical. The role is the function; the role-based identity is the way the agent is classified because it performs that function.
+
+## 5. Process-relative identity
+
+**Definition:** An identity an agent has only with respect to a specific process.
+
+Examples:
+
+* participant in negotiation
+* actor in land-use change
+* source of emissions
+* affected stakeholder
+* resource user
+* restoration actor
+* disturbance agent
+
+It answers:
+
+> What is this agent in this specific process?
+
+Example:
+
+```text
+A farmer is a food producer in an agricultural production process.
+The same farmer is a water user in an irrigation process.
+The same farmer is an affected stakeholder in a drought-risk process.
+```
+
+This category is important because the same agent can have different identities across different processes.
+
+Process-relative identity is probably the main category you need for agency modeling.
+
+## 6. Intention-based identity
+
+**Definition:** A process-relative identity determined by the agent’s intention, goal, or purposive orientation.
+
+Examples:
+
+* conservation actor
+* extractor
+* restorer
+* protector
+* exploiter
+* profit-seeker
+* risk-avoider
+* knowledge-seeker
+* emissions-reducer
+
+It answers:
+
+> What is this agent, in this process, given what it intends?
+
+Example:
+
+```text
+An organization intending to restore wetlands has the intention-based identity wetland restorer.
+A company intending to extract timber has the intention-based identity resource extractor.
+A household intending to reduce energy consumption has the intention-based identity energy saver.
+```
+
+This is where your use case fits best.
+
+The important distinction is:
+
+```text
+Intention = attribute of the agent
+Intention-based identity = identity induced by that attribute in a process
+Role = function enacted in the process
+```
+
+So:
+
+```text
+Agent: Company
+Intrinsic identity: Organization
+Assigned identity: Licensed operator
+Intention: Extract timber
+Intention-based identity: Resource extractor
+Role in process: Harvester
+Process: Timber extraction
+```
+
+## Recommended simplified version
+
+For practical semantic modeling, I would reduce the taxonomy to four categories:
+
+```text
+Identity
+├── IntrinsicIdentity
+├── InstitutionalIdentity
+├── RelationalIdentity
+└── ProcessRelativeIdentity
+    ├── RoleBasedIdentity
+    └── IntentionBasedIdentity
+```
+
+This is cleaner because **role-based** and **intention-based** identities are both special cases of process-relative identity.
+
+## How this separates the use cases
+
+| Use case                                                  | Best identity type        | Example                                      |
+| --------------------------------------------------------- | ------------------------- | -------------------------------------------- |
+| What kind of entity is the agent?                         | Intrinsic identity        | human, organization, animal                  |
+| What is the agent recognized as by rules or institutions? | Institutional identity    | citizen, landowner, regulator                |
+| What is the agent relative to another entity?             | Relational identity       | buyer, seller, predator, beneficiary         |
+| What is the agent in a process?                           | Process-relative identity | participant, resource user, emissions source |
+| What function does the agent perform?                     | Role-based identity       | producer, consumer, pollinator               |
+| What does the agent intend in the process?                | Intention-based identity  | restorer, extractor, protector               |
+
+## Best treatment of intention
+
+I would model intention as an **attribute**, but map its semantic consequence to **IntentionBasedIdentity**.
+
+A compact formulation:
+
+```text
+An intention is an agent attribute that determines an intention-based identity
+for that agent within a process.
+```
+
+Or, more formally:
+
+```text
+Agent
+  hasAttribute Intention
+  hasIdentity IntentionBasedIdentity
+  participatesIn Process
+```
+
+Example:
+
+```text
+Agent: Municipality
+Attribute: intention to reduce flood risk
+Identity: flood-risk reducer
+Process: urban adaptation process
+Role: planner / regulator / infrastructure provider
+```
+
+This preserves the clean separation:
+
+* **attribute** captures the mental or purposive state;
+* **identity** captures the agent’s semantic classification;
+* **role** captures enacted function;
+* **process** provides the context in which the classification is meaningful.
+*/
+abstract role Participant
+	has disjoint children
+		Volitional
+			"An agent is the participant who consciously initiates or controls an action, 
+			 distinguished from entities moved by external forces or natural laws",
+		Patient
+			"A patient is an entity that is acted upon, has no participation in the acting context, and
+			 does not perceive it",
+		Experiencer
+			"A participant that feels or perceives without volitional control, such as in 
+			'I understand'";
+
+/*
+ * Mapping agency to @imod:Technosphere and @imod:Antroposphere:
+ * 
+ * 
+ * The concepts of the "Anthroposphere" and the "Technosphere" offer intriguing frameworks to explore the notion of agency 
+ * in contemporary society, each highlighting different aspects of human interaction with our environment and technology.
+ *
+ * Anthroposphere
+ * 
+ * The Anthroposphere refers to the part of the environment that has been modified by humans for use in human activities 
+ * and habitation, including cities, farms, and all the spaces we've altered or created. In this context, agency 
+ * manifests in the human capacity to shape, manage, and transform the natural environment to meet societal needs and 
+ * desires. It encompasses:
+ *
+ * Environmental Modification and Management: The deliberate alteration of the environment through agriculture, 
+ * urban development, and infrastructure projects, reflecting human agency in reshaping the Earth to support human life.
+ *
+ * Sustainability and Conservation Efforts: Human agency is also evident in efforts to mitigate environmental 
+ * degradation, manage natural resources sustainably, and conserve biodiversity, reflecting an awareness of the 
+ * environmental impacts of human actions and a responsibility to future generations.
+ * 
+ * Cultural and Social Practices: The ways societies organize themselves, their cultural practices, and their social
+ * norms and values, which are all human-created aspects that significantly impact the Anthroposphere.
+ * 
+ * Technosphere
+ * 
+ * The Technosphere refers to the global, interlinked system of technology and artifacts that humans have created, 
+ * including all of the machines, structures, and information networks developed to sustain human life and activity. 
+ * Agency in the Technosphere can be seen in:
+ * 
+ * Technological Innovation and Design: Human agency is central to the creation and development of technology. This 
+ * includes not just the physical tools and machines but also the software, algorithms, and systems that underpin 
+ * the digital world.
+ * 
+ * Interaction with Technology: How individuals and societies interact with technology—adopting it, adapting it, 
+ * resisting it, or modifying it—reflects human agency. People are not just passive consumers of technology but 
+ * active participants in shaping the Technosphere.
+ * 
+ * Socio-Technical Systems: The Technosphere is not purely technical; it's deeply intertwined with social systems, 
+ * norms, and practices. Human agency influences how technology is integrated into society, including decisions about 
+ * its use, ethical considerations, and how technology shapes human relationships and social structures.
+ * 
+ * Agency Interplay Between Anthroposphere and Technosphere
+ * 
+ * The interplay between the Anthroposphere and the Technosphere underlines the complex nature of human agency in 
+ * the modern world. This interplay showcases:
+ * 
+ * Mutual Shaping: Humans shape the Technosphere through innovation, design, and usage patterns, while the Technosphere 
+ * influences human behavior, social structures, and even the Anthroposphere itself (e.g., through technology-driven 
+ * environmental changes).
+ * 
+ * Challenges and Responsibilities: The power of human agency in both spheres comes with significant responsibilities. 
+ * Decisions made today about how we interact with our environment and technology have long-term implications for
+ * sustainability, ethics, and societal well-being.
+ * 
+ * Adaptive and Reflexive Agency: In facing global challenges like climate change, resource depletion, and the social 
+ * impacts of technology, human agency becomes adaptive and reflexive. People are increasingly aware of the consequences 
+ * of their actions and are seeking innovative ways to live sustainably within both the Anthroposphere and the 
+ * Technosphere.
+ * 
+ * Understanding agency within these spheres involves recognizing the capacities for creativity, adaptation, and 
+ * responsibility that define the human condition in the Anthropocene era. It highlights the need for thoughtful 
+ * engagement with technology and the environment, aiming for a future that harmonizes human needs with the 
+ * planet's ecological boundaries and the ethical use of technology.
+*/
+
+
+//G: this concept should be reconsidered
+//F: yeah, right
+/** 
+ * Decisions are events that induce (cause) intentional transformation processes. There's no decision w/o intention, and no 
+ * intentional transformation w/o decision. Deeply intertwined.
+ * 
+ * Transformation moves from configuration A to configuration B. When decisions are involved, they may be classified according to
+ * the type of transformation they induce and the context of their existence. Specifically the type of agency needed by their
+ * context.
+ * 
+ * Group vs. Individual decision is a major dichotomy re: its consequences. These will end up in sociology/society. Also probably
+ * related to purpose which is the structuring criterion for the infrastructure domain.
+ */
+abstract process Decision
+     "Decision is a goal-oriented intentional (mental) activity"
+     is agency:Intentional physical:Activity within imod:Agent
+    //  implies imod:Goal
+     ;
+
+process Assessment
+    "The activity that represents observations made by the 'implicit' observer of the root context: the k.LAB user. Do not use without thinking hard first."
+    is agency:Decision 
+    // creates physical:InformationRealization
+    ;
+
+deniable attribute Compliant 
+    "Compliance is forced adherence to a law, regulation, rule, process or practice"
+    applies to agency:Decision;
+
+deniable attribute Conformant 
+    "Conformance is voluntary adherence to a standard, rule, specification, requirement, design, process or practice."
+     applies to agency:Decision;
+   
+attribute Feasible
+     "Describes the level of feasibility of an activity"
+     applies to physical:Activity
+     deniable as Unfeasible;
+
+//DOLCE and UFO
+// can we redesign "socialAgent" using the Agent keywords?
+@fixme("definitely belongs elsewhere and needs a real definition")
+abstract agent SocialAgent
+    "Social agent is an Agent created, managed and recognized by other agents, such as organization."
+ //   applies to imod:Network
+    // nah - this should be a Social identity conferred by some SocialRelationship to the agents it links
+//    contains at least 2 Agent
+    ;
+ 
+ //DOLCE and UFO    
+@fixme("see above")
+abstract thing SocialObject
+     "Social agent is an Subject and recognized by other agents, such as law and money.";
+   
+deniable attribute Predicted
+//	is core observation:Predicted
+;
+
+//Comment: Remove as ordering, Severity as attribute
+deniable attribute Severity;
+
+deniable attribute Relevance 
+     "Describes the relevance of observables";
+     
+deniable attribute Planned
+    "Describes planned or unplanned events"
+    // requires identity imod:Goal
+    applies to agency:Intentional imod:Event;
+    
+//From DOLCE ontology
+abstract event Achievement
+      "Atomic culminating event"
+      is agency:Intentional imod:Event
+    //   requires identity imod:Goal
+      ;
+
+//Comment: agreement on the superclass convention
+abstract attribute AchievementType 
+        "The type of achievement or non-achievement related to an outcome."
+            applies to agency:Achievement
+            has children 
+            Realized, 
+            Potential,
+            Theoretical;
+            
+abstract attribute Appropriateness  
+     has children 
+     Appropriate, 
+     Inappropriate;

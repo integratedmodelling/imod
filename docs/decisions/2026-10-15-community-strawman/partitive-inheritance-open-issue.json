@@ -1,0 +1,15 @@
+{
+  "status": "Open design issue; no solution proposed or implemented",
+  "user_sentinel": "Sentinel_72725a49bf188191a7c9412f835a30d3",
+  "user_exact": "Yes. There is a separate open issue about representing the partitive nature of some inheritances, like in chemical or physical mixtures, that hasn\u2019t been solved so far. This would be a similar case here, but I have no proposals for now.",
+  "scope": "How partitive relationships associated with some inheritance patterns in chemical/physical mixtures and analogous precipitation-form quantities should be represented.",
+  "current_boundary": "The approved water-equivalent convention aligns meanings/units. Existing inheritance alone is not upgraded to a whole/component partition, coverage claim, disjointness statement or additive equation.",
+  "no_solution_proposed": true,
+  "not_in_worldview_implementation_notes": true,
+  "future_work": "Await explicit conceptual proposal and review; do not silently choose a mereological representation while authoring documentation.",
+  "additional_user_evidence": {
+    "sentinel": "Sentinel_9cdfd2edd55c8191b3d2e9094b2c679a",
+    "exact": "Exactly. And some mixtures can actually fully specify their children, but it\u2019s for later. Re: temporal patterns, I\u2019m sure that is not an ordering - and there are certainly better characterizations, although those are useful."
+  },
+  "scope_clarification": "Future design must allow discussion of mixtures whose children are fully specified. No mechanism, blanket closed-world policy, partition or inheritance rule is selected here."
+}

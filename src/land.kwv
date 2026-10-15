@@ -1,23 +1,18 @@
-/** 
- * The @land namespace encompasses agriculture, land use and food systems. It is a knowledge domain depending on the
- * @society ontology.
+/**
+ * # Land cover and use
+ *
+ * LandCover identifies cover distinctions within a descriptive perspective
+ * concerning Earth, Society and Life. Physical cover and its social uses provide
+ * related perspectives on the same land without equating their meanings.
  */
 ontology land
-	""
+	"Descriptive identities for land cover within its physical, living and social context."
 	version 1.0
 	using imod, society, earth, life
-	in domain imod:Knowledge;
+	in domain imod:Land;
 
-/**
- * @temporary Example of how the link to the generic pattern authority could be made
- */	
+	
 identity LandCover 
-	""
-	/**
-	 * Based on type, this may CREATE the authority as a configured instance of type
-	 */
-	// requires authority LANDCOVER {
-	// 	type: org.integratedmodelling.authorities.pattern
-	// 	// TODO all parameters that specify configurations linked to each level
-	// }
+	"An identity used to classify the physical cover of a land surface."
+	
 	;

@@ -1,0 +1,7 @@
+{
+  "exact_annotation": "@todo(\"Not sure, but consider adding sealed (giving errors at the moment)\")",
+  "original_context": "@todo(\"Not sure, but consider adding sealed (giving errors at the moment)\")\nabstract ordering Periodicity\n\t\"\"\n\tdescribes physical:Period\n\thas children\n\t\t(Sporadic \n\t\t\t\"\"\n\t\t),\n\t\t(Intermittent \n\t\t\t\"\"\n\t\t),\n\t\t(Continuous \n\t\t\t\"\"\n\t\t);\n\t\t\n",
+  "source": "C:\\Users\\Ferd\\.klab\\services\\resources\\workspaces\\imod\\src\\physical.kwv",
+  "reason": "User explicitly approved unordered family; annotation concerned sealing an Ordering and is no longer applicable. Other unresolved concept markers preserved.",
+  "approval_sentinel": "Sentinel_9cdfd2edd55c8191b3d2e9094b2c679a"
+}

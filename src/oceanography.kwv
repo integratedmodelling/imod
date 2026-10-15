@@ -1,6 +1,5 @@
 ontology oceanography
 	version 1.0
 	using imod, earth
-	in domain imod:Knowledge;
+	in domain imod:Oceanography;
 	
-// TODO check out butti-crap on https://zenodo.org/records/7682399

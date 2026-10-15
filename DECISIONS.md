@@ -35,3 +35,13 @@ The earlier no-push restriction is superseded only for the user's sandbox branch
 ## 2026-10-07: separate agriculture research from cross-sector land
 
 User authorized the organizational boundary revision and direct edits on the sandbox branch. [Disposition register and rationale](experiments/strawman-2026/bootstrap/LAND_AGRICULTURE_REVISION.md) accounts for all 27 earlier candidates. Existing IDs and blockers persist; seven deferred primitives are not counted as new coverage. Livestock/grazing evidence supplements cultivated meanings. No executable agriculture namespace, semantic approval, backend change or runtime consequence behavior is introduced.
+
+
+## 2026-10-15 reviewed local community strawman
+
+The [dated decision record](docs/decisions/2026-10-15-community-strawman.md) records
+the approved root/domain alignment, geography repairs, documentation and validation
+boundary now integrated on `worldview/strawman-2026`. It supersedes earlier provisional
+root/domain proposals only where explicitly stated; other open questions and prior
+review history remain preserved. This local source integration is not a master merge
+or remote publication.

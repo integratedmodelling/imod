@@ -1,13 +1,20 @@
 ontology economics
    version 1.0
    using imod, data, valuation
-   in domain imod:Knowledge of imod:Anthroposphere;
+   in domain imod:Economics;
 
 
-// TODO Look at SCOR model for process articulation in economics/enterprise
 
 role EconomicAsset 
 	is valuation:Asset;
 
-money MarketValue
-	applies to economics:EconomicAsset imod:Subject or economics:EconomicAsset imod:Agent;
+/**
+ * ## Market value
+ *
+ * MarketValue names the abstract monetary valuation of an economic asset.
+ * Its applicability includes assets borne by subjects and agents, connecting
+ * this economic perspective to the broader asset vocabulary of valuation.
+ */
+abstract money MarketValue
+    "Market value attributed to an economic asset."
+    applies to economics:EconomicAsset imod:Subject or economics:EconomicAsset imod:Agent;
