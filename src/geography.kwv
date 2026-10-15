@@ -41,8 +41,38 @@ configuration Terrain
    is physical:SpatialArrangement of (earth:Crust earth:Terrestrial earth:Region)
    emerges from (geography:Elevation or geography:Slope or geography:Aspect);
 
-angle StreamGradient
-	is imod:Angle of earth:Stream;
+/**
+ * ## Longitudinal stream gradients
+ *
+ * StreambedGradient characterizes the bed's longitudinal profile; practitioners
+ * also use the term StreamGradient. WaterSurfaceGradient characterizes the
+ * profile of the water surface at the time observed. Bed geometry persists
+ * through dry periods, while a water-surface profile is recognized where a
+ * continuous water surface exists over the observed reach.
+ *
+ * Each gradient is the elevation fall of its own reference surface divided by
+ * the horizontal length of the channel course over a specified reach, following
+ * its bends. The elevation fall is measured from the upstream endpoint to the
+ * downstream endpoint. Both distances use compatible length units, giving a
+ * dimensionless ratio such as metres per metre; a percentage is one hundred
+ * times that ratio. The reference surface and reach distinguish the two
+ * measurements even when their values happen to coincide.
+ *
+ * The length-ratio convention follows [USGS StreamStats basin characteristics](https://streamstats.usgs.gov/information-portal/characteristics.html).
+ * Channel-course distance and bed profiles are discussed in
+ * [Hack's stream-profile analysis](https://pubs.usgs.gov/journal/1973/vol1issue4/report.pdf).
+ * Water-surface gradient is distinguished in the
+ * [USGS stream-habitat data standard](https://pubs.usgs.gov/publication/tm16B2/full).
+ */
+quantity StreambedGradient
+    "Streambed elevation fall per unit horizontal channel-course length over a specified reach; commonly called StreamGradient."
+    is imod:Ratio of earth:Stream
+    describes earth:StreambedProfile;
+
+quantity WaterSurfaceGradient
+    "Water-surface elevation fall per unit horizontal channel-course length over a specified stream reach at the time observed."
+    is imod:Ratio of earth:Stream
+    describes earth:WaterSurfaceProfile;
 
 angle BathymetricSlope
 	"Inclination of the below-water terrain in a geographical region."

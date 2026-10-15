@@ -329,6 +329,32 @@ thing Waterway
 		Stream,
 		River;
 	
+/**
+ * ## Longitudinal stream profiles
+ *
+ * A stream has a bed whose elevations form a longitudinal pattern along its
+ * channel course. StreambedProfile recognizes this arrangement whether the bed
+ * is wet or dry. WaterSurfaceProfile recognizes the corresponding arrangement
+ * of a continuous water surface at the time being observed. The two profiles
+ * describe distinct surfaces and can have different shapes and gradients.
+ *
+ * Both profiles concern a stream. Their longitudinal extent is specified by
+ * the reach being observed, rather than by the full drainage network. Bed and
+ * water-surface elevations can be compared over the same reach, with the
+ * reference surface and observation time identified in each observation.
+ *
+ * Longitudinal bed profiles are discussed in [Hack's stream-profile analysis](https://pubs.usgs.gov/publication/70161653).
+ * The distinction between bed geometry and water-surface gradient also appears
+ * in the [USGS stream-habitat data standard](https://pubs.usgs.gov/publication/tm16B2/full).
+ */
+configuration StreambedProfile
+    "The longitudinal pattern of bed elevation along a stream's channel course, whether the bed is wet or dry."
+    is physical:VerticalArrangement of earth:Stream;
+
+configuration WaterSurfaceProfile
+    "The longitudinal pattern of elevation of a continuous water surface along a stream's channel course at the time observed."
+    is physical:VerticalArrangement of earth:Stream;
+
 thing StreamJunction
 	"Either the point of junction of two streams or rivers, or the point of junction of a stream/river into
      a waterbody."
