@@ -213,13 +213,6 @@ abstract relationship Dependence
 		); 
 
 //Specialized physical predicates
-@fixme("See note for other dichotomies")
-abstract attribute MovementRelated
-	"MovementRelated describe the type of velocity of a process"
-	describes imod:Velocity // of imod:Process
-	has disjoint children
-		Moving,
-		Still;
 
 @fixme("Ehm")		
 abstract subjective ordering HeightLenghtLevel
