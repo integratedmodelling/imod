@@ -3,9 +3,6 @@ ontology geography
 	using imod, physical, earth
 	in domain imod:Physical;
 
-angle Heading
-	"A direction relative to the geographical North of the earth.";
-
 @colormap("terrain", center=0, min=-10935, max=8849)
 length Elevation 
 	"Geographical elevation above sea level, as described by a digital
