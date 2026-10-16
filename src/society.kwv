@@ -3,7 +3,7 @@
  *
  * Human individuals and organizations provide participants for descriptions of
  * social organization. HumanIndividual connects the Human taxonomic identity
- * with the individual vocabulary of Life; Organization groups collective agents.
+ * with the individual vocabulary of Life; Organization groups organized units with agency.
  */
 ontology society
 	version 1.0
@@ -18,7 +18,7 @@ agent HumanIndividual
 	is society:Human life:Individual;
 
 /**
- * ## Organizations as collective agents
+ * ## Organizations as agents
  *
  * An organization is recognizable as a unit capable of acting on itself or
  * others. Depending on its specialization, this may include determining its
@@ -27,13 +27,26 @@ agent HumanIndividual
  * exhibit every such action.
  *
  * Merely undergoing change or sharing an opinion does not alone establish
- * collective agency. Deliberation, intentionality, human likeness, legal status
+ * agency. Deliberation, intentionality, human likeness, legal status
  * and formal constitution are not required by this general category.
  *
- * Organization is abstract and organizes suitable concrete collective-agent
+ * Organization is abstract and organizes suitable concrete agent
  * specializations. Formal constitution is a separate distinction rather than
  * the criterion for agency.
  */
 abstract agent Organization
-    "A collective agent capable of acting as a unit, including determining aspects of its own observable evolution."
+    "An organized unit capable of acting as an agent, including determining aspects of its own observable evolution."
     ;
+
+/**
+ * ## Formal constitution
+ *
+ * `FormallyConstituted` composes with `society:Organization` when an explicit
+ * constituting arrangement establishes its governance and continuity. This
+ * distinction concerns how an organization is constituted; it does not establish
+ * legal recognition or supply the capacity for action that identifies an agent.
+ * Absence of evidence for formal constitution does not establish informality.
+ */
+attribute FormallyConstituted
+    "Having governance and continuity established by an explicit constituting arrangement."
+    applies to society:Organization;
