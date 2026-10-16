@@ -222,7 +222,6 @@ abstract realm GeosphereStratum
 			"The outermost layer of the Earth that is composed of soil and subject to soil formation processes."
 		),
 		(	
-			@todo("unsure of the mereological relationships here")
 			Mantle
 			"The rocky interior layer between Earth's crust and core."
 		);

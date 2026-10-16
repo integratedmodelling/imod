@@ -1,9 +1,9 @@
 /**
  * # Social participants
  *
- * Human individuals and institutions provide participants for descriptions of
+ * Human individuals and organizations provide participants for descriptions of
  * social organization. HumanIndividual connects the Human taxonomic identity
- * with the individual vocabulary of Life; Institution names a collective agent.
+ * with the individual vocabulary of Life; Organization groups collective agents.
  */
 ontology society
 	version 1.0
@@ -17,4 +17,23 @@ identity Human
 agent HumanIndividual
 	is society:Human life:Individual;
 
-agent Institution;
+/**
+ * ## Organizations as collective agents
+ *
+ * An organization is recognizable as a unit capable of acting on itself or
+ * others. Depending on its specialization, this may include determining its
+ * own continuity or collapse, or aspects of its spatial and temporal reach.
+ * These are examples of agency, not requirements that every organization
+ * exhibit every such action.
+ *
+ * Merely undergoing change or sharing an opinion does not alone establish
+ * collective agency. Deliberation, intentionality, human likeness, legal status
+ * and formal constitution are not required by this general category.
+ *
+ * Organization is abstract and organizes suitable concrete collective-agent
+ * specializations. Formal constitution is a separate distinction rather than
+ * the criterion for agency.
+ */
+abstract agent Organization
+    "A collective agent capable of acting as a unit, including determining aspects of its own observable evolution."
+    ;

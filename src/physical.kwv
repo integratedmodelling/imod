@@ -157,10 +157,10 @@ abstract process Transformation
     inherits physical:IntransitiveProcess
     has children 
 		(Coupling
-			"Building of interactions. Can affect the mereological identity of the system by creating groups."
+			"Building of interactions."
 		),
 		(Decoupling
-			"Destruction of interactions. Can affect the mereological identity of the system by destroying groups."
+			"Destruction of interactions."
 			has children 
 				(Dissipation
 					"Proceeds through the collapse of parts of the system."

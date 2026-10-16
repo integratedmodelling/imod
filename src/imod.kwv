@@ -183,7 +183,7 @@ domain BuiltEnvironment
  * perspective on Earth phenomena, the other their recognized system organization.
  */
 domain Agency
-    "Observed agency and deliberate activity in their social setting."
+    "Observed agency, action and interaction in their social setting."
     is imod:Knowledge about imod:Society;
 
 domain AtmosphereKnowledge
@@ -364,8 +364,15 @@ abstract thing Subject
       	"Subject is a Substantial without agentive characteristics"
       	is core odo:Subject;
 
+/**
+ * Agent nature concerns capacity for action, rather than merely undergoing
+ * change. An agent is recognizable as a unit for interaction; its specialization
+ * establishes which actions and aspects of its own evolution it can determine.
+ * Deliberative, interactive and reactive are optional characterizations, not
+ * prerequisites of Agent nature.
+ */
 abstract agent Agent
-      	"Agent is a Substantial with intentionality" 
+      	"A substantial capable of acting on other entities or itself, including determining aspects of its own observable evolution." 
       	is core odo:Agent;
      
 /**
@@ -395,10 +402,7 @@ abstract length Length
    is core odo:Length 
    ;       
 
-//Artifact capability inspired by: Borgo, S., Vieu, L.: Artefacts in formal ontology. In: Philosophy of technology and engineering sciences
-abstract attribute Capability
-     "Capability is the described quality of certain artifacts and natural agents."
-;
+
 
 
 //Numerosity

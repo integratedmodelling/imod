@@ -1,10 +1,10 @@
 /**
- * # Agency and intentional activity
+ * # Agency and action
  *
- * Agency articulates intentional activity, decisions and the social recognition
- * of agents and objects. Its descriptive perspective concerns Society. The
- * declarations distinguish intentions and dispositions from activities and from
- * the identities or contextual roles attributed to participants.
+ * Agency articulates agent activity, interaction, decisions and the social
+ * recognition of agents and objects. Its descriptive perspective concerns Society.
+ * Intentions remain distinct from activities and from the
+ * identities or contextual roles attributed to participants.
  */
 ontology agency
 	version 1.0
@@ -63,10 +63,6 @@ attribute Feasible
      applies to physical:Activity
      deniable as Unfeasible;
 
-@fixme("definitely belongs elsewhere and needs a real definition")
-abstract agent SocialAgent
-    "Social agent is an Agent created, managed and recognized by other agents, such as organization."
-    ;
  
  //DOLCE and UFO    
 @fixme("see above")
