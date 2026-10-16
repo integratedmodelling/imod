@@ -1,13 +1,14 @@
 /**
  * # Living phenomena
  *
- * This physical namespace articulates living phenomena without an intrinsic
- * Earth restriction. Biology, ecology and genetics identify Life as physical
- * subject matter through about; this does not settle organism agency or taxonomy.
+ * Living individuals and biological material provide distinct descriptions of
+ * living phenomena, without an intrinsic Earth restriction. Biology, ecology and
+ * genetics identify Life as physical subject matter through about. An individual,
+ * a material portion and a taxonomic classification retain their own meanings.
  */
 ontology life
 	version 1.0
-	using imod
+	using imod, physical
 	in domain imod:Life;
 
 abstract identity TaxonomicIdentity
@@ -20,7 +21,48 @@ abstract identity TaxonomicIdentity
     	}
 	};
 
-abstract agent Individual;
+/**
+ * ## Living individuals
+ *
+ * A living individual is an Agent, recognizable as a unit capable of action on
+ * itself or others. Agency here does not require deliberation, human likeness
+ * or conscious intention. Its biological kind supplies criteria for unity and
+ * continuity; observations and models establish particular individuals under
+ * those criteria. A population or a shared classification does not by itself
+ * establish one living individual.
+ *
+ * Individual remains an abstract organizing concept. Taxonomic identities
+ * classify individuals without supplying their particular boundaries, proving
+ * living presence or defining an exhaustive test for life.
+ */
+abstract agent Individual
+    "An individual living organism, whose unity and continuity are established by the biological criteria applicable to its kind."
+    ;
+
+/**
+ * ## Material of biological origin
+ *
+ * OfBiologicalOrigin characterizes the origin of an identified material body.
+ * The material portion is a Subject; it is not thereby the same observational
+ * entity as a living individual. Describing biological material does not assign
+ * Agent nature, and describing a living individual does not retype it as a
+ * material Subject. These descriptions establish no formal bodily relationship
+ * between their referents.
+ *
+ * Biological origin does not establish current viability, death, cultivation,
+ * harvest or intended use. Mixtures and transformed materials require their own
+ * scope and provenance; a later product does not inherit every characterization
+ * of its inputs automatically.
+ *
+ * A material portion is distinct from its measured mass. Biomass measurements
+ * identify the biological material pool, its boundary and inclusion criteria,
+ * together with units and a wet, dry or other stated measurement basis. Origin
+ * alone does not define that pool or supply a mass value.
+ */
+attribute OfBiologicalOrigin
+    "Having material origin in living organisms."
+    applies to physical:MaterialBody;
+
 
 structural relationship SocialConnection;
 
