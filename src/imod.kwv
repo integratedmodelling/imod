@@ -21,6 +21,35 @@
  * make every owned quality inhere in that domain's subject matter, and it does
  * not turn subjects, events or qualities into Configurations.
  *
+ * ## Observational scope
+ *
+ * The root worldview seeks broad adoption through minimal explicit commitments
+ * that support shared observations and leave room for differing scientific
+ * approaches. Models establish which components matter in an observational
+ * context. In k.LAB, a system's relevant parts depend on the question, scale and
+ * way it is observed. Specific observational relations can express their meanings
+ * and intended inferences without descending from a generic "part-of" relation.
+ *
+ * The literature helps distinguish meanings that broad part-of language can
+ * obscure. Components of objects, members of collections and portions of masses
+ * differ from spatial inclusion; mixing these relations can produce apparently
+ * invalid inference chains without showing that parthood is generally
+ * nontransitive. [Winston, Chaffin and Herrmann (1987)](https://onlinelibrary.wiley.com/doi/10.1207/s15516709cog1104_2)
+ * Formal accounts also distinguish object parthood over time, temporal parts of
+ * events, constitution and persistence. [Borgo et al. (2022)](https://www.loa.istc.cnr.it/wp-content/uploads/2021/11/DOLCE_FOUST_2022.pdf)
+ * These distinctions inform our design; they do not dictate one architecture.
+ *
+ * The initial vocabulary also omits a formal disposition taxonomy. Dispositions
+ * differ from their manifestations and may never be realized; formal
+ * representation requires explicit commitments about bearers, realizations and
+ * relevant conditions. [Röhl and Jansen (2011)](https://link.springer.com/article/10.1186/2041-1480-2-S4-S4)
+ * Unobserved capacities need not be unreal. The scope choice serves a coherent
+ * observational vocabulary, without rejecting dispositions as explanatory
+ * concepts.
+ *
+ * Ordinary component, constituent and capability descriptions remain available,
+ * with specific observational relationships expressed on their own terms.
+ *
  * ## Reading and writing this worldview
  *
  * A quoted declaration docstring gives the concept's meaning. Literate Markdown
@@ -372,7 +401,7 @@ abstract thing Subject
  * prerequisites of Agent nature.
  */
 abstract agent Agent
-      	"A substantial capable of acting on other entities or itself, including determining aspects of its own observable evolution." 
+      	"A substantial capable of acting on other entities or itself, including determining aspects of its own observable evolution."
       	is core odo:Agent;
      
 /**
