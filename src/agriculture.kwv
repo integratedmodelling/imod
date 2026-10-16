@@ -1,4 +1,23 @@
+/**
+ * # Agricultural operations
+ *
+ * Sowing deliberately places seed into or onto a growing substrate. Germination
+ * may follow, but seed placement does not guarantee it. Where germination is
+ * observed as an event engendered by sowing, its instantiator model determines
+ * whether it occurs in the particular conditions. Sowing can take place wherever
+ * agricultural production is undertaken, with different means of placement and
+ * at different scales.
+ *
+ * Spontaneous seed dispersal and seed storage are distinct from sowing, as is
+ * transplanting an already growing plant. The crop being sown and any material
+ * later harvested have their own identities. The act of sowing alone establishes
+ * neither a cultivated individual nor a successful crop or harvest.
+ */
 ontology agriculture
     version 1.0
+    using imod, physical
     in domain imod:Physical;
 
+process Sowing
+    "An agricultural activity deliberately placing seed into or onto a growing substrate."
+    is physical:Activity;
