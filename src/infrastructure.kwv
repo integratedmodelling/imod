@@ -1,7 +1,7 @@
 /**
  * # Built artifacts and resources
  *
- * Artifacts are intentionally created in relation to purposes. Resource names
+ * Artifacts are intentionally produced or modified material bodies. Resource names
  * their role in activities or plans directed toward goals. This namespace
  * distinguishes the artifact from its use as a resource and places both within
  * the universal BuiltEnvironment domain.
@@ -11,9 +11,25 @@ ontology infrastructure
 	using imod, physical, earth
 	in domain imod:BuiltEnvironment;
 	
+/**
+ * ## Artifacts as material bodies
+ *
+ * Artifact records intentional production or modification of a material body.
+ * The distinction is useful in ordinary descriptions of built things, while
+ * leaving the body's unity and boundaries to its more specific kinds.
+ * Artifact is an abstract organizing category; models target suitable concrete
+ * specializations.
+ *
+ * Being an artifact does not establish current usefulness, successful
+ * functioning or a Resource role. The producer need not be human, and the
+ * meaning is not restricted to Earth. Informational artifacts and constructed
+ * cavities are outside this material-body class; a cavity remains distinct
+ * from the material structure that bounds it.
+ */
 @fixme("Same problems as most other things with 'requires identity Goal'")
 abstract thing Artifact
-    "Artifact is intentionally created by an agent for a goal"
+    "An intentionally produced or modified material body."
+    is physical:MaterialBody
     ;
 
 @fixme("Really not sure of the 'role for goal' thing which seems to be an abuse of the 'for' operator.")
@@ -21,10 +37,4 @@ abstract role Resource
      "A resource is the role that objects plays in the context of activities or plans to achieve goals"
      has children
      	@fixme("Do we need these or just the attributes for the nature/provenance of any subject?")
-        NaturalResource,
-        (
-        	@fixme("If these are equivalents we need something very different than 'applies to'")
-        	HumanMadeResource
-        		"HumanMade resources are the equivalent of artifacts."
-        		applies to infrastructure:Artifact
-        );
+        NaturalResource;

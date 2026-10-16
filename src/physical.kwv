@@ -4,6 +4,30 @@ ontology physical
    in domain imod:PhysicalPhenomena;
 
 
+/**
+ * ## Material bodies
+ *
+ * A material body's specialization gives the universal criteria for its unity
+ * and boundaries. Models establish particular bodies and their boundaries
+ * under those criteria. Solids, liquids and gases are admissible; fixed shape
+ * and permanent membership of the same material constituents are not required.
+ *
+ * Boundaries may follow physical discontinuities or qualitative differences,
+ * explicit delineation conventions, or a mixture of these. Conventional
+ * demarcations can be materially constrained. Manufactured objects can also have
+ * physically grounded boundaries. These distinctions do not require separate
+ * body kinds or, by themselves, the language's subjective modifier.
+ *
+ * This discussion follows Smith and Varzi (2000), section 1.1:
+ * [Fiat and Bona Fide Boundaries](https://www.columbia.edu/~av72/papers/Ppr_2000.pdf).
+ *
+ * MaterialBody is on the Subject side of the core Agent-Subject distinction.
+ * Physical embodiment alone does not establish Agent nature.
+ */
+abstract thing MaterialBody
+    "An individuated portion of matter, whose unity and boundaries are established by its specialization."
+    ;
+
 //Physical entities, e.g. subjects, events, processes, qualities
 //in ODO
 @check("Made it abstract as it needs inherency. Inherency is what makes it possible for events to be independents")
@@ -11,6 +35,20 @@ abstract event Collapse
    "The loss of identity for the system, after which it ceases to exist as such. In  living systems, it's synonymous with death."
 ;
 
+/**
+ * ## Host-dependent features
+ *
+ * Cavities illustrate why an observable Subject need not be a portion of
+ * matter. A cavity is identified relative to a host that supplies its boundaries.
+ * It represents absence of host material, rather than necessarily empty space:
+ * air, water or another material may occupy it.
+ *
+ * The host, the cavity and its contents are distinct observational subjects.
+ * A hole can identify such a cavity; the material occupying it is not its host
+ * merely because it fills the space. Hole, Slot and Bump remain the examples
+ * articulated below. Host dependence alone does not determine whether a feature
+ * is a material portion, as the positive feature Bump makes clear.
+ */
 @fixme("This seems wrong rather than unconventional. But this is important and we should articulate it properly.")
 abstract thing Feature
    "Feature is (cognitive) relevant subject that are dependent upon their host, such as holes and bumps."
