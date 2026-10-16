@@ -32,6 +32,35 @@ abstract thing Artifact
     is physical:MaterialBody
     ;
 
+/**
+ * ## Artifact production and modification
+ *
+ * These activities describe the provenance of observed artifacts.
+ * `infrastructure:ArtifactProduction` brings a new artifact entity into
+ * existence; `infrastructure:ArtifactModification` changes a continuing material
+ * body. Modification may turn a natural body into an artifact without creating
+ * a new body. A repair may modify an existing artifact while producing a new
+ * component; the distinction is relative to each identified entity.
+ *
+ * Models establish actual histories and identity continuity under the relevant
+ * individuation criteria. They identify participating agents, material inputs,
+ * tools and outcomes where those are known and relevant. Participation alone
+ * does not establish material incorporation or derivation. Observing an artifact
+ * does not require a complete production history; unknown history remains unknown.
+ * Reuse need not involve either production or physical modification.
+ *
+ * An artifact's kind, its product classification and the classification of an
+ * economic activity are separate descriptions. Appropriate authorities may
+ * supply established classifications within their respective scopes.
+ */
+abstract process ArtifactProduction
+    "An activity bringing a new artifact entity into existence, according to the model's individuation criteria."
+    is physical:Activity;
+
+abstract process ArtifactModification
+    "An activity intentionally changing an existing material body while its identity continues, yielding or altering an artifact."
+    is physical:Activity;
+
 @fixme("Really not sure of the 'role for goal' thing which seems to be an abuse of the 'for' operator.")
 abstract role Resource
      "A resource is the role that objects plays in the context of activities or plans to achieve goals"
