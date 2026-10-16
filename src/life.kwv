@@ -64,6 +64,48 @@ attribute OfBiologicalOrigin
     applies to physical:MaterialBody;
 
 
+/**
+ * ## Grouped living entities
+ *
+ * A grouping can be articulated as an observable entity with its own qualities,
+ * relationships and evolution. Its kind supplies the criteria by which it is
+ * recognized as one group and continues through changes. A list selected by a
+ * query does not alone establish that unity. Group descriptions and their
+ * qualities remain distinct from descriptions of the individual members.
+ *
+ * Assemblage names the Subject reading: an identifiable grouped entity without
+ * an attribution of agency to the group. CollectiveAgent names the Agent reading:
+ * the worldview articulates the group as a unit capable of action on itself or
+ * others. Neither kind specializes the other. Membership of individual Agents
+ * does not by itself confer agency on their grouping, and a collective Agent
+ * does not thereby become one organism.
+ *
+ * For example, a grouping of plants delimited for composition monitoring can
+ * be articulated as an Assemblage. A vegetation association can be articulated
+ * as a CollectiveAgent whose dynamics are described at group level. These are
+ * explicit choices about the entity being described, rather than an automatic
+ * inference from co-location or an absence of detailed observations. The same
+ * grouped entity is not assigned both Agent and Subject nature.
+ *
+ * Collective agency does not require human-like intentions, planning or a model
+ * of the internal interactions before the entity can be annotated. The worldview
+ * states the unit-level meaning and scope; models describe its dynamics. Patterns
+ * of qualities and relationships may help recognize or describe either grouped
+ * entity without replacing it with a Configuration.
+ *
+ * Group quantities need not be simple aggregates of member quantities. Changes
+ * in composition, relationships or extent are interpreted under the group's
+ * criteria for unity and continuity. Membership change alone does not determine
+ * whether the group persists or a different group has been established.
+ */
+abstract thing Assemblage
+    "An identifiable grouping of living individuals, with stated criteria for its unity and continuity."
+    ;
+
+abstract agent CollectiveAgent
+    "An identifiable grouping of living individuals capable of acting as a unit."
+    ;
+
 structural relationship SocialConnection;
 
 abstract agent SocialGroup 
