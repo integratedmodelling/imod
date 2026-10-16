@@ -65,6 +65,43 @@ attribute OfBiologicalOrigin
 
 
 /**
+ * ## Cultivation and harvest
+ *
+ * Cultivated records deliberate establishment or management of a living
+ * individual through cultivation. It characterizes the individual beyond its
+ * momentary participation in an activity. A cultivated plant remains distinct
+ * from a field, an assemblage and any material later obtained from it.
+ *
+ * Harvested refines biological origin for an identified material portion
+ * obtained through harvesting. Harvested grain, fruit and timber share this
+ * provenance without requiring their source organisms to have been cultivated.
+ * Wild-picked fruit can be harvested; naturally fallen litter has biological
+ * origin without thereby being harvested. Viable material is not excluded, and
+ * harvesting alone does not establish biological death or retype an individual
+ * Agent as a material Subject.
+ *
+ * Origin and intended destination can characterize why an entity is established
+ * or maintained, beyond its current participation in a process. An intended
+ * destination is distinct from actual use and a successful outcome: timber
+ * intended for construction may later be used as fuel. Neither attribute alone
+ * assigns a food, feed, fuel or economic role.
+ *
+ * Harvest history belongs to the identified portion. Changes in ownership or use
+ * do not erase that history, and later products do not acquire it automatically.
+ * The material is distinct from its measured mass; units and a wet, dry or other
+ * stated basis belong to that measurement. Biological origin, crop identity,
+ * product classification and taxonomic identity retain their separate meanings.
+ */
+attribute Cultivated
+    "Having been deliberately established or managed through cultivation."
+    applies to life:Individual;
+
+attribute Harvested
+    "Having been obtained as a portion of biological material through harvesting."
+    is life:OfBiologicalOrigin
+    applies to physical:MaterialBody;
+
+/**
  * ## Grouped living entities
  *
  * A grouping can be articulated as an observable entity with its own qualities,
