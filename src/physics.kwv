@@ -12,3 +12,25 @@ ontology physics
 	version 1.0
 	using imod, physical
 	in domain imod:Physics;
+
+/**
+ * ## Energy transfer
+ *
+ * Conduction, convective transport and radiation distinguish mechanisms of
+ * energy transfer. They can operate together in one observation. Conduction
+ * involves interactions in matter; convection carries thermal energy with
+ * moving fluid; radiation can transfer energy across a vacuum.
+ *
+ * A body's temperature is distinct from energy transferred. Energy exchange
+ * need not raise temperature, as during a phase transition, and contact alone
+ * does not establish a nonzero transfer. Observations identify the participating
+ * bodies and the interval; models describe transfer rates and thermal responses.
+ */
+process ThermalConduction
+    "Transfer of thermal energy through microscopic interactions within or between contacting materials.";
+
+process ConvectiveHeatTransport
+    "Transport of thermal energy accompanying bulk motion of a fluid.";
+
+process RadiativeEnergyTransfer
+    "Transfer of energy by electromagnetic radiation.";
