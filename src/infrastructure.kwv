@@ -26,7 +26,6 @@ ontology infrastructure
  * cavities are outside this material-body class; a cavity remains distinct
  * from the material structure that bounds it.
  */
-@fixme("Same problems as most other things with 'requires identity Goal'")
 abstract thing Artifact
     "An intentionally produced or modified material body."
     is physical:MaterialBody
@@ -61,9 +60,5 @@ abstract process ArtifactModification
     "An activity intentionally changing an existing material body while its identity continues, yielding or altering an artifact."
     is physical:Activity;
 
-@fixme("Really not sure of the 'role for goal' thing which seems to be an abuse of the 'for' operator.")
 abstract role Resource
-     "A resource is the role that objects plays in the context of activities or plans to achieve goals"
-     has children
-     	@fixme("Do we need these or just the attributes for the nature/provenance of any subject?")
-        NaturalResource;
+     "A resource is the role that objects plays in the context of activities or plans to achieve goals";

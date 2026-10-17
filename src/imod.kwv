@@ -73,7 +73,6 @@ ontology imod
    metadata {
       dc.creator: (
          "Ferdinando Villa (ferdinando.villa@bc3research.org)"
-         "Greta Adamo (greta.adamo@bc3research.org)"
       )
    };
 
