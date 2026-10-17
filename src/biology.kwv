@@ -3,3 +3,23 @@ ontology biology
 	using imod, life
 	in domain imod:Biology;
 
+/**
+ * ## Biological synthesis and membrane transfer
+ *
+ * Photosynthesis uses light in biological synthesis of energy-rich compounds.
+ * Its meaning is not restricted to plants, oxygen production or one biochemical
+ * pathway. MembraneTransport moves material across a biological membrane; the
+ * transported substance, direction and mode of transfer distinguish particular
+ * observations.
+ *
+ * A living individual and a portion of biological material have distinct
+ * identities. Describing either process does not determine whether a cell or
+ * organ is observed as an individual, a material structure or another kind of
+ * entity. Models describe the participants, rates and conditions. Process names
+ * alone do not establish a growth outcome or a newly instantiated organism.
+ */
+process Photosynthesis
+    "Biological synthesis of energy-rich compounds using light energy.";
+
+process MembraneTransport
+    "Transfer of material across a biological membrane.";

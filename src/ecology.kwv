@@ -7,3 +7,20 @@ abstract agent Population;
 
 abstract agent Community
 	emerges from ecology:Population;
+
+/**
+ * ## Consumption of plant material
+ *
+ * Herbivory describes an organism consuming plant material. The consumer, the
+ * source organism and an ingested material portion are distinct participants;
+ * observing consumption does not make them a single entity or assign agency to
+ * a grouping. Herbivory includes feeding on portions of a living plant without
+ * requiring the death of that plant.
+ *
+ * The process is distinct from a persistent feeding relationship, a bounded
+ * feeding episode and a measured consumption rate. Observations establish what
+ * was consumed and by whom; models describe effects on growth, survival and
+ * ecological dynamics under the particular conditions.
+ */
+process Herbivory
+    "Consumption of plant material by an organism.";

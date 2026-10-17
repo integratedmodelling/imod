@@ -2,3 +2,22 @@ ontology genetics
 	version 1.0
 	using imod, life, biology
 	in domain imod:Genetics;
+
+/**
+ * ## Template-directed synthesis
+ *
+ * DNAReplication produces DNA using DNA templates. Transcription produces RNA
+ * from a DNA template in the cellular setting considered here. The processes,
+ * their physical molecular participants and the information used to describe
+ * sequences are distinct observational targets.
+ *
+ * Transcription does not by itself establish translation into protein, and not
+ * every functional gene product is a protein. Replication does not alone prove
+ * cell division or faithful copying at every position. Observations establish
+ * the molecular context and interval; models describe synthesis and its outcomes.
+ */
+process DNAReplication
+    "Production of DNA molecules using DNA templates.";
+
+process Transcription
+    "Production of RNA from a DNA template in a cellular setting.";
