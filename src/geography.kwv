@@ -156,6 +156,17 @@ abstract identity GeographicalIdentity
  			""
  		);
 
+// abstract identity Country 
+// 	is geography:GeopoliticalIdentity
+// 	 requires authority UN.M49 {
+//         urn: "klab.authority.un",
+//         catalog: "M49",
+//         language: "en",
+//         semanticBoundaries: {
+//             m49_country: "geography:Country"
+//         }
+//     };
+
 /**
  * Hemispheric identities support distinctions such as opposite seasonal timing
  * north and south of the equator. Disjointness is stated within each axis only.

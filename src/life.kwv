@@ -20,6 +20,7 @@ abstract identity TaxonomicIdentity
         	genera:  "taxonomy.genera"
     	}
 	};
+    
 
 /**
  * ## Living individuals
@@ -62,7 +63,6 @@ abstract agent Individual
 attribute OfBiologicalOrigin
     "Having material origin in living organisms."
     applies to physical:MaterialBody;
-
 
 /**
  * ## Cultivation and harvest

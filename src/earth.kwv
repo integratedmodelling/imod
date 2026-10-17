@@ -149,6 +149,7 @@ abstract realm PhysicalEnvironment
      biotic factors can be added to obtain ecology:Habitat, and ecological communities make the
      latter into ecology:Biome."
 	classifies imod:Type of earth:EarthCover
+	applies to earth:Location
 	has disjoint children
 		(Terrestrial
 			"Refers here to anything found on land ecoregions, as distinct from freshwater 

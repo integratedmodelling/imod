@@ -3,7 +3,6 @@ ontology physical
    using imod
    in domain imod:PhysicalPhenomena;
 
-
 /**
  * ## Material bodies
  *
@@ -28,8 +27,6 @@ abstract thing MaterialBody
     "An individuated portion of matter, whose unity and boundaries are established by its specialization."
     ;
 
-//Physical entities, e.g. subjects, events, processes, qualities
-//in ODO
 @check("Made it abstract as it needs inherency. Inherency is what makes it possible for events to be independents")
 abstract event Collapse
    "The loss of identity for the system, after which it ceases to exist as such. In  living systems, it's synonymous with death."
@@ -101,7 +98,8 @@ quantity Impedance
 	;
 	
 quantity Conductance
-	"The opposite of impedance, describing the effectiveness of transport of an observable through a medium or a region.."
+	"The opposite of impedance, describing the effectiveness of transport of an observable through a 
+	 medium or a region.."
 ;
 
 abstract duration Age
@@ -116,7 +114,6 @@ abstract duration Period
 	"The time between two repetitions of an event. If the events are described by a quality in continuous time, it 
      describes the distance between high points on a wave function. Inversely proportional to frequency."
 	decreases with physical:Frequency;
-
 
 abstract volume Capacity;
 
@@ -138,9 +135,9 @@ abstract identity TransitiveProcess
 				"A spatial transitive process affects the spatial extent of the object."
 				has children
 			        (abstract Transport	
-			          )
+			        )
 			);
-	
+
 abstract identity IntransitiveProcess 
 	"Intransitive processes happen in subjects only affecting the context itself"
 	has children
@@ -179,34 +176,19 @@ abstract process Transformation
        
 abstract process Activity
     "An activity is a process performed by an agent"
-    is /* decision:Intentional */ imod:Process;
+    is imod:Process;
     
 abstract role ValueActivity
      applies to physical:Activity;
-     
-//Participation: specified in ODO or operators
-abstract event Participation
-      applies to imod:Subject, imod:Agent
-      has children
-       Active,
-       Passive;
        
-abstract event Change 
+abstract event Change
       "Event that specifies qualitative modifications over time. They are important  in dynamic models."       
       has children
          Changed,
          Replaced,
          Updated,
-         @fixme("Not sure about this being an event that directly affects the inherent - probably more of a role?") Deleted;
-         
-abstract event Input
-    "Input is an event that triggers another event or process."
-    is physical:Change;
-
-abstract event Output
-    "Output is an event generated from another event or process."
-    is physical:Change;
-
+         @fixme("Not sure about this being an event that directly affects the inherent - probably more of a role?") 
+		 Deleted;
 
 //Tahko, Tuomas E. and E. Jonathan Lowe, "Ontological Dependence", The Stanford Encyclopedia of Philosophy (Fall 2020 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/fall2020/entries/dependence-ontological/>.
 //Adamo, G., Borgo, S., Di Francescomarino, C., Ghidini, C., Guarino, N., & Sanfilippo, E. M. (2018). Business process activity relationships: is there anything beyond arrows?. In Business Process Management Forum: BPM Forum 2018, Sydney, NSW, Australia, September 9-14, 2018, Proceedings 16 (pp. 53-70). Springer International Publishing.
@@ -222,32 +204,6 @@ abstract relationship Dependence
 		(abstract CooccurrenceDependence
 			"X and Y are both necessary for the satisfaction of a goal"
 		); 
-
-//Specialized physical predicates
-
-@fixme("Ehm")		
-abstract subjective ordering HeightLenghtLevel
-     applies to /*(Areal or */ imod:Volumetric /*) */ imod:Subject 
-     has children   
-     (abstract VerticalHeightLevel  
-     	has children
-     	   TallHeight,
-     	   SmallHeight
-     	),
-    (abstract HorizontalLenghtLevel
-    	has children
-    	    Long,
-    	    Short  	
-    );
-
-
-@fixme("Argh")
-abstract subjective ordering VolumeLevel
-      describes imod:Volume 
-      applies to imod:Volumetric imod:Subject
-      has children  
-         SmallVolume, 
-         LargeVolume;
 
 /**
  * ## Temporal modes of occurrence
@@ -279,58 +235,14 @@ abstract attribute TemporalOrientation
 				Previous,
 				Successive;
 
-deniable attribute Perceivable
-    "Describes a perceivable observable phenomenon"
-    has children
-        Visible,
-        Audible,
-        Smellable,
-        Palpable;
-
 @fixme("Not sure about this, but assuming it's useful it's normally intended as a quality or a role for it rather than for events")
 abstract role Throughput 
-   "The quantifiable amount of matter, energy or information transferred through a flow connection."
-   applies to physical:Output;
+   "The quantifiable amount of matter, energy or information transferred through a flow connection.";
 
-@fixme("Does this really imply participation in events?")
-abstract role Participant
-     "Participants are entities, Subjects or Agents, that participates in Events."
-     applies to imod:Event;
-
-//From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Processual_role	
-@fixme("Academic? Don't see the utility, each individual role could be categorized more usefully by making the inherency explicit")
-abstract role ProcessualRole
-      "ProcessualRole refers to the role played by participants in a process."
-      applies to imod:Process;
-
-//From GFO: https://bioportal.bioontology.org/ontologies/GFO/?p=classes&conceptid=http%3A%2F%2Fwww.onto-med.de%2Fontologies%2Fgfo.owl%23Relational_role
-@fixme("Academic? Don't see the utility, each individual role could be categorized more usefully by making the inherency explicit")
-abstract role RelationalRole
-      "RelationalRole refers to the role played by participants in a functional or structural relationship."
-      ;
-
-//Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
 abstract thing SpatialBoundary 
     "A spatial boundary is the spatial delimitation between entities"
     inherits imod:Areal;
-    
- //Boundary literature: Varzi, Achille, "Boundary", The Stanford Encyclopedia of Philosophy (Winter 2015 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/win2015/entries/boundary/>.
-abstract attribute TimePosition
-    "Time position is a perspective to measure time"
-    describes imod:Duration
-    has children
-    TimeInterval,
-    TimePoint;
-
-abstract extent TemporalBoundary 
-    "A temporal boundary is the temporal delimitation between entities."
-     inherits physical:TimePosition;
-     
-// time concepts
-
-//Revisitation as attribute and not duration from SUMO v 1.75: https://www.ontologyportal.org/images/SUMOclasses.gif	
-
-    
+             
 configuration SpatialArrangement
 	has children
 		VerticalArrangement,

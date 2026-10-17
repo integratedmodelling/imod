@@ -29,7 +29,6 @@ abstract role Participant
 			"A participant that feels or perceives without volitional control, such as in 
 			'I understand'";
 
-
 /** 
  * Decisions are events that induce (cause) intentional transformation processes. There's no decision w/o intention, and no 
  * intentional transformation w/o decision. Deeply intertwined.
@@ -41,13 +40,12 @@ abstract role Participant
  */
 abstract process Decision
      "Decision is a goal-oriented intentional (mental) activity"
-     is agency:Intentional physical:Activity within imod:Agent
+     is agency:Intentional physical:Activity /* within imod:Agent*/
      ;
 
 process Assessment
     "The activity representing observations attributed to the observer of a root context."
     is agency:Decision 
-    // creates physical:InformationRealization
     ;
 
 deniable attribute Compliant 
