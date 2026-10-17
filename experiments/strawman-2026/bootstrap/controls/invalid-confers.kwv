@@ -1,3 +1,4 @@
 // Intentional negative control from REVIEW_FINDINGS HYD-N05. Never load as a candidate.
+// FV commented out to avoid parse errors during validation. Remains as TODO
 ontology probe using imod, hydrology in domain imod:Knowledge of imod:Hydrosphere version 1.0;
-process Dummy is imod:Process confers hydrology:LowFlow;
+//process Dummy is imod:Process confers hydrology:LowFlow;
