@@ -2,3 +2,23 @@ ontology soil
 	version 1.0
 	using imod, earth
 	in domain imod:Soil;
+
+/**
+ * ## Soil compression and leaching
+ *
+ * SoilCompaction compresses a soil material volume and reduces its bulk pore
+ * space. SoilLeaching carries dissolved constituents out of an identified soil
+ * volume with moving water. A soil profile, the material it describes and a soil
+ * classification are different observational targets.
+ *
+ * Compaction is a process, while calling soil compacted requires a stated
+ * comparison. Neither a measured density alone nor a missing measurement proves
+ * an episode of compaction. Leaching does not imply that all solute has left the
+ * soil or establish its eventual destination. Models describe loading, water
+ * movement and constituent transfer at the support of the observation.
+ */
+process SoilCompaction
+    "Mechanical compression of soil that reduces its bulk pore space.";
+
+process SoilLeaching
+    "Transport of dissolved constituents out of an identified soil volume by water moving through it.";

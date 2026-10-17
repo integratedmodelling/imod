@@ -3,3 +3,27 @@ ontology oceanography
 	using imod, earth
 	in domain imod:Oceanography;
 	
+
+/**
+ * ## Marine-water transport
+ *
+ * OceanWaterAdvection describes transport of marine water. Upwelling and
+ * downwelling distinguish upward and downward transport within that process
+ * family; their direction refers to the local water column.
+ *
+ * A moving water parcel is distinct from the region through which it passes.
+ * Transport need not change the temperature or composition of the parcel even
+ * when it changes conditions at a fixed site. Upwelling does not alone establish
+ * nutrient supply or biological production. Observations delimit the water,
+ * reference frame and interval; models describe circulation and its consequences.
+ */
+process OceanWaterAdvection
+    "Directed transport of marine water.";
+
+process Upwelling
+    "Transport of deeper marine water toward the surface."
+    is oceanography:OceanWaterAdvection;
+
+process Downwelling
+    "Downward transport of near-surface marine water."
+    is oceanography:OceanWaterAdvection;

@@ -2,3 +2,25 @@ ontology hydrology
 	version 1.0
 	using imod, earth
 	in domain imod:Hydrology;
+
+/**
+ * ## Liquid-water movement
+ *
+ * Channel flow follows a channel; overland flow moves across the ground surface
+ * outside channel transport. A channel and the water moving through it have
+ * different continuity: a channel can persist when no water is flowing.
+ *
+ * Infiltration crosses the ground surface into the underlying ground. It does
+ * not by itself establish arrival at groundwater, replenishment of a particular
+ * store, or any fixed partition of precipitation. Flow, stored volume and
+ * discharge at a section describe different aspects of the water. Observations
+ * identify the spatial support and interval; models describe the water balance.
+ */
+process ChannelFlow
+    "Transport of liquid water along a channel.";
+
+process OverlandFlow
+    "Movement of liquid water across the ground surface outside channel transport.";
+
+process Infiltration
+    "Entry of liquid water from the ground surface into the underlying ground.";

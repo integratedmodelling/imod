@@ -10,3 +10,23 @@ ontology geology
 	version 1.0
 	using imod, earth
 	in domain imod:Geology;
+
+/**
+ * ## Sediment movement and consolidation
+ *
+ * SedimentTransport moves geological particles; Lithification consolidates
+ * sediment into coherent rock. Movement, deposition and consolidation describe
+ * different processes. Transport can occur without deposition at the observed
+ * site, and deposited sediment need not already be lithified.
+ *
+ * Geological material is distinct from its classification and any economic
+ * resource role. Observations establish the material and its continuity through
+ * movement or consolidation; recognizing a new rock body is a separate identity
+ * judgment. Models describe transport, compaction and cementation in the
+ * conditions of the particular occurrence.
+ */
+process SedimentTransport
+    "Movement of unconsolidated geological particles.";
+
+process Lithification
+    "Consolidation of sediment into coherent rock.";
