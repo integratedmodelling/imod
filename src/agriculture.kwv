@@ -21,3 +21,25 @@ ontology agriculture
 process Sowing
     "An agricultural activity deliberately placing seed into or onto a growing substrate."
     is physical:Activity;
+
+/**
+ * ## Water application and soil management
+ *
+ * Irrigation applies water for crop cultivation. Tillage mechanically disturbs
+ * soil as an agricultural management activity. They describe deliberate
+ * operations without selecting equipment, a spatial scale or a successful crop
+ * outcome. Tillage involves soil; irrigation need not use soil as its substrate.
+ *
+ * Applying water is distinct from infiltration, uptake by an organism and
+ * consumptive use. Tillage does not alone establish improved condition, a
+ * particular disturbed-area fraction or a later yield. Observations identify
+ * the operation and its participants; models describe the resulting water,
+ * soil and biological changes.
+ */
+process Irrigation
+    "Deliberate application of water for crop cultivation."
+    is physical:Activity;
+
+process Tillage
+    "Mechanical disturbance of soil as an agricultural management activity."
+    is physical:Activity;

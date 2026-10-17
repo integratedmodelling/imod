@@ -1,4 +1,21 @@
 ontology engineering
-	""
+	"Physical production and modification of engineered artifacts."
 	version 1.0
+	using imod, infrastructure
 	in domain imod:Engineering;
+
+/**
+ * ## Producing an assembled artifact
+ *
+ * ProductAssembly joins components to produce an artifact recognized as a new
+ * entity. The product is distinct from the activity and from descriptions of its
+ * design or acceptance. An intended function does not establish actual delivery.
+ *
+ * Joining or rejoining parts of a continuing artifact does not alone establish
+ * production of a new one. Assembly that produces a new artifact is distinguished
+ * here from modification of a continuing artifact. Observations and models
+ * identify the participants and the criteria for the product's continuity.
+ */
+process ProductAssembly
+    "Intentional joining of components to produce a new artifact entity."
+    is infrastructure:ArtifactProduction;
