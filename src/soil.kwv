@@ -1,7 +1,51 @@
 ontology soil
 	version 1.0
-	using imod, earth
+	using imod, physical, earth
 	in domain imod:Soil;
+
+/**
+ * # Soil material and its observations
+ *
+ * SoilBody identifies a bounded material body of mineral or organic soil.
+ * Soil properties and the stated delineation convention establish its extent.
+ * The material may include water and air in its pores. A soil profile describes
+ * vertical variation through that material; a map unit or classification names
+ * a descriptive grouping rather than the particular body being observed.
+ *
+ * This is a material description, distinct from descriptions of organisms and
+ * communities living in soil. It does not attribute agency to the soil body or
+ * retype living individuals as material Subjects. A portion selected for sampling
+ * represents the larger body only under an appropriate observation model.
+ *
+ * This reading follows the [NRCS account of soil as a natural body](https://www.nrcs.usda.gov/resources/education-and-teaching-materials/soil-facts).
+ */
+thing SoilBody
+    "An individuated body of mineral or organic soil material."
+    is physical:MaterialBody;
+
+/**
+ * ## Soil bulk density
+ *
+ * BulkDensity compares dry soil mass with the bulk volume occupied by the same
+ * soil body, including pore space. Particle density instead uses the volume of
+ * the solid particles. The two measurements describe different quantities even
+ * when derived from material taken at the same site.
+ *
+ * The observation states the moisture condition used for the bulk volume, the
+ * soil fraction included, and the drying basis for the mass. Wet-mass bulk
+ * density is a different measurement convention from this dry-mass quantity.
+ * The mass and volume represent the same soil fraction and sampling support.
+ * A representative core can supply evidence for that observation; it is not
+ * the definition of the whole soil body. Heterogeneous bodies require an explicit
+ * sampling support.
+ * Bulk density alone does not establish a compaction history or soil suitability.
+ *
+ * The measurement meaning follows [NRCS bulk-density guidance](https://www.nrcs.usda.gov/sites/default/files/2022-10/Soil%20Bulk%20Density%20Moisture%20Aeration.pdf).
+ */
+quality BulkDensity
+    "Dry soil mass per bulk volume of a soil body, including pore space, at a stated moisture condition."
+    is imod:Ratio of soil:SoilBody
+    describes soil:SoilBody;
 
 /**
  * ## Soil compression and leaching

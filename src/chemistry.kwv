@@ -45,3 +45,48 @@ abstract identity Mixture
 	 	(Colloid 
 	 		"A mixture whose colloidal-sized dispersed particles or domains differ in composition or state from the continuous medium."
 	 	);
+
+/**
+ * ## Chemical conversion and solution formation
+ *
+ * ChemicalReaction describes the conversion of chemical species. Oxidation
+ * and Reduction distinguish participants undergoing net electron loss or gain,
+ * expressed as an increase or decrease in oxidation number. Electron accounting
+ * need not imply a separately observed transfer of free electrons, and oxidation
+ * need not involve oxygen. Both descriptions can apply to a redox occurrence
+ * from the perspectives of its different participants.
+ *
+ * The material involved, its chemical classification and the reaction occurrence
+ * are distinct observational targets. Observations establish the participant
+ * and material context at the stated scope.
+ *
+ * Dissolution describes material entering a homogeneous solution phase.
+ * Dispersed particles in a suspension remain distinct from dissolved material.
+ * Solution formation and species conversion may accompany one another, but
+ * observing dissolution alone does not establish a chemical reaction. Observing
+ * mixing alone does not establish that a solution has formed.
+ *
+ * Observations identify the participating material, composition and interval.
+ * Models describe reaction paths, rates and transfers at that observational
+ * scope. A named process does not prescribe a complete reaction mechanism or
+ * require the whole observed sample to have reacted or dissolved.
+ *
+ * The distinctions follow IUPAC terminology for
+ * [chemical reaction](https://doi.org/10.1351/goldbook.C01033),
+ * [oxidation](https://doi.org/10.1351/goldbook.O04362),
+ * [reduction](https://doi.org/10.1351/goldbook.R05222), and
+ * [dissolution](https://doi.org/10.1351/goldbook.D01806).
+ */
+process ChemicalReaction
+    "Interconversion of chemical species.";
+
+process Oxidation
+    "A chemical reaction involving net electron loss by a participant, expressed as an increase in oxidation number."
+    is chemistry:ChemicalReaction;
+
+process Reduction
+    "A chemical reaction involving net electron gain by a participant, expressed as a decrease in oxidation number."
+    is chemistry:ChemicalReaction;
+
+process Dissolution
+    "Formation of a homogeneous solution phase through the mixing of initially distinct phases.";

@@ -8,8 +8,37 @@
  */
 ontology geology
 	version 1.0
-	using imod, earth
+	using imod, physical, earth
 	in domain imod:Geology;
+
+/**
+ * ## Geological material bodies
+ *
+ * RockBody identifies consolidated geological material as a bounded body.
+ * SedimentBody identifies an accumulation of unconsolidated particles. A rock
+ * specimen and a sand deposit can be observed through these material descriptions;
+ * their rock types and grain-size classes describe different aspects.
+ *
+ * Boundaries follow stated material distinctions and delineation conventions.
+ * A mapped outline alone does not identify the material body's depth or establish
+ * that every disconnected occurrence is one body. Partial consolidation and
+ * changing material call for observations of the particular body; the distinction
+ * does not prescribe an exhaustive or disjoint classification.
+ *
+ * Material bodies can bear mass and volume observations without duplicating
+ * those general qualities here. Economic use is a separate role, and a geological
+ * body is distinct from the living communities associated with it.
+ *
+ * The material distinction follows the [USGS lithologic vocabulary](https://apps.usgs.gov/thesaurus/thesaurus-full.php?thcode=4).
+ * Individuation and boundary conventions follow `physical:MaterialBody`.
+ */
+thing RockBody
+    "An individuated body of consolidated geological material."
+    is physical:MaterialBody;
+
+thing SedimentBody
+    "An individuated accumulation of unconsolidated geological particles."
+    is physical:MaterialBody;
 
 /**
  * ## Sediment movement and consolidation
