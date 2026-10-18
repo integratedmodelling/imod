@@ -41,6 +41,37 @@ thing SedimentBody
     is physical:MaterialBody;
 
 /**
+ * ## Individual grains and particle size
+ *
+ * Grain identifies a discrete particle of mineral or rock material. It can be
+ * described in soil or sediment without becoming a new material kind when its
+ * observational setting changes. A grain can contain several minerals; it is
+ * distinct from a mineral classification and from an accumulation of grains.
+ *
+ * GrainDiameter assigns a length to that individual under a stated convention.
+ * An irregular particle has no unique diameter: an observed axis, a sieve-based
+ * size and an equivalent diameter derived from settling need not agree. The
+ * convention and preparation identify what is being measured.
+ * Equal units do not make different diameter conventions interchangeable.
+ * Observations state the geometric or equivalence criterion and preparation;
+ * models must establish any conversion.
+ *
+ * A soil-body size distribution summarizes many particles on a common basis.
+ * Its class fractions and median sizes are different observations from the
+ * diameter of one grain. Their definitions state the included population and
+ * weighting. The distinction follows [NRCS sediment properties](https://directives.nrcs.usda.gov/sites/default/files2/1720626005/Chapter%202%20-%20Sediment%20Properties.pdf),
+ * sections on particle characteristics and size distributions.
+ */
+thing Grain
+    "An individuated particle of mineral or rock material."
+    is physical:MaterialBody;
+
+quality GrainDiameter
+    "Diameter assigned to an individual grain under a stated geometric or equivalent-size convention."
+    is imod:Length of geology:Grain
+    describes geology:Grain;
+
+/**
  * ## Sediment movement and consolidation
  *
  * SedimentTransport moves geological particles; Lithification consolidates

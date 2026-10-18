@@ -48,6 +48,36 @@ quality BulkDensity
     describes soil:SoilBody;
 
 /**
+ * ## Soil aggregates and their size
+ *
+ * SoilAggregate identifies a cluster whose particles are held together as a
+ * recognizable material unit. An aggregate and an individual mineral or rock
+ * grain have different criteria for unity. A loose collection selected by a
+ * particle-size interval does not by itself establish an aggregate.
+ *
+ * AggregateDiameter describes the aggregate at its observed preparation and
+ * moisture state. Measuring intact aggregates and measuring grains after
+ * dispersion answer different questions. An aggregate-size distribution must
+ * therefore be distinguished from a primary-particle size distribution.
+ *
+ * Texture describes the relative sizes of the selected soil particles under a
+ * stated convention. Aggregation describes their organization. Neither one
+ * alone determines erosion, infiltration or soil retention; observations and
+ * models establish their contributions in the particular setting.
+ *
+ * This distinction follows [NRCS soil structure](https://www.nrcs.usda.gov/sites/default/files/2022-10/Soil%20Structure%20and%20Macropores.pdf)
+ * and [aggregate stability](https://www.nrcs.usda.gov/sites/default/files/2022-10/nrcs142p2_051276.pdf).
+ */
+thing SoilAggregate
+    "An individuated cluster of soil particles with stronger internal cohesion than its contacts with neighboring particles."
+    is physical:MaterialBody;
+
+quality AggregateDiameter
+    "Diameter assigned to a soil aggregate under a stated geometric or equivalent-size convention and preparation state."
+    is imod:Length of soil:SoilAggregate
+    describes soil:SoilAggregate;
+
+/**
  * ## Soil compression and leaching
  *
  * SoilCompaction compresses a soil material volume and reduces its bulk pore
