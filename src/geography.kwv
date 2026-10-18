@@ -147,7 +147,7 @@ length OverlandFlowPathLength
  */
 
 abstract identity GeographicalIdentity
- 	"Any abstract identity we can use to divide the world up into disjoint entities."
+ 	"An identity qualifying places or observations by geographical affiliation."
  	has children
  		(abstract GeopoliticalIdentity
  			""
@@ -156,16 +156,40 @@ abstract identity GeographicalIdentity
  			""
  		);
 
-// abstract identity Country 
-// 	is geography:GeopoliticalIdentity
-// 	 requires authority UN.M49 {
-//         urn: "klab.authority.un",
-//         catalog: "M49",
-//         language: "en",
-//         semanticBoundaries: {
-//             m49_country: "geography:Country"
-//         }
-//     };
+/**
+ * ## Identities from M49
+ *
+ * M49GeographicalIdentity keeps identities from the configured
+ * [UNSD M49 classification](https://unstats.un.org/unsd/methodology/m49/overview/)
+ * on their own branch. The scheme contains statistical regions and countries
+ * or areas. Its classifications and canonical source identities remain distinct
+ * from other geographical classifications and from the places they describe.
+ *
+ * M49SelfGoverningIdentity records a narrower source attestation: the configured
+ * provider matches an M49 code to a geopolitical record explicitly classified
+ * as self-governing. This does not classify every M49 country-or-area entry in
+ * that subset, define a general Country category, or establish sovereignty or
+ * the current status of a particular government.
+ *
+ * Other geographical authorities can use separate branches of
+ * GeographicalIdentity. Shared names, numerical codes or geographical coverage
+ * do not alone establish equivalent identities across their classifications.
+ */
+abstract identity M49GeographicalIdentity
+    "A geographical identity drawn from the configured UNSD M49 classification."
+    is geography:GeographicalIdentity
+    requires authority UN.M49 {
+        urn: "klab.authority.un",
+        catalog: "M49",
+        language: "en",
+        semanticBoundaries: {
+            "M49_COUNTRY": "geography:M49SelfGoverningIdentity"
+        }
+    };
+
+abstract identity M49SelfGoverningIdentity
+    "An M49 geographical identity matched by the configured source to an explicitly self-governing geopolitical record."
+    is geography:M49GeographicalIdentity;
 
 /**
  * Hemispheric identities support distinctions such as opposite seasonal timing
