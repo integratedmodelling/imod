@@ -14,6 +14,30 @@ ontology physics
 	in domain imod:Physics;
 
 /**
+ * ## Material-following fluid parcels
+ *
+ * A fluid parcel is a material body whose boundary follows material motion.
+ * A portion of water carried through an inlet can be observed as a parcel.
+ * A fixed sampling region occupies a place through which successive water
+ * portions pass. The material portion and the region have different continuity.
+ *
+ * Observations state which material defines the parcel and the boundary
+ * convention used to follow it. Models describe transport, mixing and exchange,
+ * and establish continuity when material membership or the ability to track it
+ * changes. Mixing alone does not settle whether a particular parcel continues.
+ *
+ * A parcel may already have observable mass, volume or temperature before a
+ * particular transfer begins. An amount moved in that transfer describes the
+ * occurrence. Quantities understood as created by an occurrence are not initial
+ * states of the material body: they arise during the process or functional
+ * relationship that gives them meaning. Observations and models distinguish
+ * these from existing body quantities affected during the occurrence.
+ */
+thing FluidParcel
+    "An individuated portion of fluid delimited by a material-following boundary."
+    is physical:MaterialBody;
+
+/**
  * ## Energy transfer
  *
  * Conduction, convective transport and radiation distinguish mechanisms of
