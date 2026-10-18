@@ -601,7 +601,7 @@ configuration Bathymetry
 
 configuration LandCover
 	"The spatial arrangement of physical cover over the terrestrial Earth surface."
-	is earth:Terrestrial earth:EarthCover
+	// is earth:Terrestrial earth:EarthCover
 	applies to earth:Location;
 
 @todo
