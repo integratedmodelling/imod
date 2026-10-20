@@ -16,6 +16,9 @@
  * A quality's bearer identifies what bears it; a description target identifies
  * what is described. Those relations remain distinct when the namespace is
  * understood as Knowledge about Earth.
+ * Elevation describes a terrestrial spatial arrangement without asserting that
+ * its Region bearer is within the Crust realm. A crustal source of measurements
+ * does not establish that containment. Terrain retains its own narrower bearer.
  */
 ontology geography
     version 1.0
@@ -26,7 +29,7 @@ ontology geography
 length Elevation 
     "Elevation of an Earth surface above sea level."
     is physical:Height of earth:Location
-    describes geography:Terrain
+    describes physical:SpatialArrangement of (earth:Terrestrial earth:Region)
    affected by earth:Erosion;
 
 angle Aspect
