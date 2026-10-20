@@ -22,8 +22,8 @@ classes = a.output / 'classes'
 classes.mkdir()
 source = a.output / 'source'
 source.mkdir()
-for pattern in ('*.kwv', '*.obs'):
-    for item in a.worldview.rglob(pattern):
+for folder, pattern in (('src', '*.kwv'), ('strategies', '*.obs')):
+    for item in (a.worldview / folder).rglob(pattern):
         target = source / item.name
         if target.exists():
             raise RuntimeError('Duplicate source basename: ' + item.name)

@@ -9,9 +9,10 @@ inputs. They do not install dependencies or invoke a deployed service.
 The pinned receipt names the services revision intentionally; this is a dated
 acceptance harness, not a claim that arbitrary later services revisions were tested.
 Run `python run.py --help` for explicit paths. Use a new output directory for each
-run. The launcher copies all worldview `.kwv` and `.obs` files into a flat private
+run. The launcher copies `src/*.kwv` and `strategies/*.obs` into a flat private
 source directory, matching the real WorkspaceManager loader. It leaves the
 worldview, capture and supplied cotechino source untouched.
+Archived experiments are excluded, just as in the production project loader.
 
 Assertions cover all 26 ontologies and two observation strategy documents,
 consistent OWL/no unsatisfiable named classes, original cotechino dependency
