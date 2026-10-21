@@ -353,11 +353,13 @@ thing Waterway
  */
 configuration StreambedProfile
     "The longitudinal pattern of bed elevation along a stream's channel course, whether the bed is wet or dry."
-    is physical:VerticalArrangement of earth:Stream;
+    is physical:VerticalArrangement
+    applies to earth:Stream;
 
 configuration WaterSurfaceProfile
     "The longitudinal pattern of elevation of a continuous water surface along a stream's channel course at the time observed."
-    is physical:VerticalArrangement of earth:Stream;
+    is physical:VerticalArrangement
+    applies to earth:Stream;
 
 thing StreamJunction
 	"Either the point of junction of two streams or rivers, or the point of junction of a stream/river into
@@ -388,8 +390,9 @@ functional relationship StreamConnection
 @fixme("not sure of the connection as relationship")
 configuration StreamNetwork
 	"The network built by streams joined by stream connections"
-	applies to earth:Region
-	is imod:Network of earth:StreamConnection;
+	is imod:Network
+	emerges from earth:StreamConnection
+	applies to earth:Region;
 
 /**
  * Precipitation forms are described using [National Weather Service terminology](https://www.weather.gov/source/zhu/ZHU_Training_Page/winter_stuff/winter_wx/winter_glossary.html).
@@ -589,11 +592,13 @@ thing OverlandFlowRoute
 
 configuration ErosionalSlopeProfile
     "The land-surface arrangement from overland-runoff origin to first deposition caused by flattening or entry into a defined concentrated-flow channel."
-    is physical:SpatialArrangement of earth:OverlandFlowRoute;
+    is physical:SpatialArrangement
+    applies to earth:OverlandFlowRoute;
 
 configuration OverlandFlowProfile
     "The land-surface arrangement from overland-runoff origin to concentrated channel flow, including intervening depositional portions."
-    is physical:SpatialArrangement of earth:OverlandFlowRoute;
+    is physical:SpatialArrangement
+    applies to earth:OverlandFlowRoute;
 
 configuration Bathymetry
 	"The vertical and horizontal dimensions of underwater Earth surfaces"

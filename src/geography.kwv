@@ -18,18 +18,23 @@
  * understood as Knowledge about Earth.
  * Elevation describes a terrestrial spatial arrangement without asserting that
  * its Region bearer is within the Crust realm. A crustal source of measurements
- * does not establish that containment. Terrain retains its own narrower bearer.
+ * does not establish that containment. Terrain retains its own narrower application target.
  */
 ontology geography
     version 1.0
 	using imod, physical, earth
 	in domain imod:Geography;
 
+configuration TerrestrialSurfaceArrangement
+    "Spatial arrangement as applied to a terrestrial Region; no Crust restriction or emergence ingredients are added."
+    is physical:SpatialArrangement
+    applies to (earth:Terrestrial earth:Region);
+
 @colormap("terrain", center=0, min=-10935, max=8849)
 length Elevation 
     "Elevation of an Earth surface above sea level."
     is physical:Height of earth:Location
-    describes physical:SpatialArrangement of (earth:Terrestrial earth:Region)
+    describes geography:TerrestrialSurfaceArrangement
    affected by earth:Erosion;
 
 angle Aspect
@@ -56,7 +61,8 @@ angle Slope
  */
 configuration Terrain 
    "The three-dimensional pattern of terrestrial surface relief."
-   is physical:SpatialArrangement of (earth:Crust earth:Terrestrial earth:Region)
+   is physical:SpatialArrangement
+   applies to (earth:Crust earth:Terrestrial earth:Region)
    emerges from (geography:Elevation or geography:Slope or geography:Aspect);
 
 /**
@@ -100,10 +106,15 @@ quantity WaterSurfaceGradient
  * spatial pattern recognized as Bathymetry at an Earth location. The reference
  * surface is the ground beneath the water, distinct from the water surface.
  */
+configuration LocatedBathymetry
+    "Bathymetry as applied to an Earth Location; the application target is not an emergence ingredient."
+    is earth:Bathymetry
+    applies to earth:Location;
+
 angle BathymetricSlope
     "The angular inclination of a submerged ground surface relative to the local horizontal plane at an Earth location."
     is imod:Angle of earth:Location
-    describes earth:Bathymetry of earth:Location;
+    describes geography:LocatedBathymetry;
 	
 /**
  * ## Lengths used in erosion assessment

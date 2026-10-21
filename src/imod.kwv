@@ -17,7 +17,8 @@
  *
  * `about` identifies a Knowledge domain's physical subject matter. `describes`
  * relates a description to its subject, including a Domain describing a
- * Configuration. `of` specifies bearer inherency. Selecting a domain does not
+ * Configuration. `of` means native bearer inherency for qualities/processes,
+ * applicability for predicates, and emergence for configurations. Selecting a domain does not
  * make every owned quality inhere in that domain's subject matter, and it does
  * not turn subjects, events or qualities into Configurations.
  *
@@ -60,7 +61,7 @@
  * Explain conceptual distinctions where they help the reader interpret a
  * declaration, and keep each namespace's account within its stated scope.
  *
- * The numbered ODO 0.1.1 foundation supplies the imported kinds. The root's
+ * The numbered ODO 0.2.0 foundation supplies the imported kinds. The root's
  * aliases expose those kinds in the worldview vocabulary; the named domains and
  * system configurations organize their use in the namespaces that follow.
  */
@@ -69,7 +70,7 @@ ontology imod
    version 1.0
    in domain root 
       with core 
-         "https://raw.githubusercontent.com/integratedmodelling/odo-im/9cfe20e306e39747a0474bf6754c24e49d99df71/releases/0.1.1/odo.owl" as odo
+         "https://raw.githubusercontent.com/integratedmodelling/odo-im/08e5a29abbbd32ca8c1b933fc157a1762ba3ee5c/releases/0.2.0/odo.owl" as odo
    metadata {
       dc.creator: (
          "Ferdinando Villa (ferdinando.villa@bc3research.org)"
@@ -375,7 +376,8 @@ abstract relationship Relationship
 
 abstract configuration Network 
    "A network is a configuration of subjects connected by relationships."
-   is imod:Configuration of imod:Relationship
+   is imod:Configuration
+   emerges from imod:Relationship
    has children 
       (abstract SpatialNetwork  
       ),
