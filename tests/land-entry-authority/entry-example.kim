@@ -1,0 +1,9 @@
+namespace examples.land.entry version 1.0;
+
+// Synthetic code input only. This is not a model of actual cover at every Location.
+// Replace the literal with a resource supplying the declared source codes for real use.
+model type of land:LandCover of earth:Location
+    set to [111]
+    classified into
+        land.corine:ContinuousUrbanFabric if 111,
+        land.corine:BroadLeavedForest if 311;

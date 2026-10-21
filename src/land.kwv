@@ -14,5 +14,10 @@ ontology land
 	
 identity LandCover 
 	"An identity used to classify the physical cover of a land surface."
-	
-	;
+	requires authority LAND {
+        urn: "klab.authority.land",
+        mode: "ENTRY_ONLY",
+        domain: "LULC",
+        catalogs: ("corine_entry_hierarchy_example"),
+        codelists: { corine_entry_hierarchy_example: "land.corine" }
+    };
