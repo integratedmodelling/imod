@@ -370,7 +370,7 @@ deniable attribute Positive
 
 @todo("Must articulate relationship vs. bond and functional vs. structural, as these are fundamental and disjoint.")   
 abstract relationship Relationship
-      "A relationship directionally connects two subjects or agents."
+      "A relationship connects two subjects or agents; orientation and structural or functional nature may be specialized independently."
     is core odo:Relationship
     ;
 

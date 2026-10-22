@@ -143,7 +143,7 @@ abstract agent CollectiveAgent
     "An identifiable grouping of living individuals capable of acting as a unit."
     ;
 
-structural relationship SocialConnection;
+structural directed relationship SocialConnection;
 
 abstract agent SocialGroup 
 	emerges from life:SocialConnection;

@@ -383,7 +383,7 @@ attribute WaterFlowDirection
 		Upstream,
 		Downstream;
 		
-functional relationship StreamConnection
+functional directed relationship StreamConnection
 	"A connection between two stream junctions in a stream network."
 	links earth:StreamJunction to earth:StreamJunction;
 		
