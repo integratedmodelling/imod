@@ -1,5 +1,8 @@
 # November worldview review packet
 
+Read the [settled ecology/economics discussion decisions](OWNER_DECISIONS_2026-10-21.md)
+before interpreting historical domain alternatives. This record promotes no experimental vocabulary.
+
 This is an initial articulation proposal, not a replacement worldview or a declaration of domain completeness. It addresses Climate–Nature–Economy with wildfire as a cross-domain test. The deliverable is a reviewable foundation for community extension; a source count is not a coverage score.
 
 Read in this order:
