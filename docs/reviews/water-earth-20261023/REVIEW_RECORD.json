@@ -1,0 +1,175 @@
+{
+  "revision": "water-earth-r3",
+  "base_commit": "a5436b15799439b8792a9389b297fddb21a86cb1",
+  "placement": "Owner confirmed all5 environmental material-water kinds in earth, with generic physical/chemical material foundations preserved.",
+  "status": "Validated candidate; owner confirmed Earth placement and generic-foundation boundary; eligible for conditional local integration/publication, not community acceptance",
+  "community_acceptance": "not_recorded",
+  "new_declarations": [
+    {
+      "proposal": "wv-review-20261023-0064",
+      "canonical_name": "earth:Water",
+      "declaration": "thing Water\n    \"An individuated body of water-dominated environmental material under a stated observational boundary convention; the main-constituent criterion remains to be articulated.\"\n    is physical:MaterialBody;",
+      "prior_canonical_draft_name": "hydrology:WaterBody",
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-review-20261023-0064",
+        "revision": "water-earth-r3",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../docs/reviews/water-earth-20261023/REVIEW_RECORD.json"
+      }
+    },
+    {
+      "proposal": "wv-water-20261023-0002",
+      "canonical_name": "earth:SubsurfaceWater",
+      "declaration": "thing SubsurfaceWater\n    \"Water material below the ground surface, without restricting it to the saturated zone.\"\n    is earth:Water;",
+      "prior_canonical_draft_name": null,
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-water-20261023-0002",
+        "revision": "water-earth-r2",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../docs/reviews/water-earth-20261023/REVIEW_RECORD.json"
+      }
+    },
+    {
+      "proposal": "wv-review-20261023-0065",
+      "canonical_name": "earth:Groundwater",
+      "declaration": "thing Groundwater\n    \"Subsurface water occupying the saturated zone, individuated under a stated hydrogeological convention.\"\n    is earth:SubsurfaceWater;",
+      "prior_canonical_draft_name": "hydrology:GroundwaterBody",
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-review-20261023-0065",
+        "revision": "water-earth-r2",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../docs/reviews/water-earth-20261023/REVIEW_RECORD.json"
+      }
+    },
+    {
+      "proposal": "wv-water-20261023-0001",
+      "canonical_name": "earth:SurfaceWater",
+      "declaration": "thing SurfaceWater\n    \"Water material present in surface-water settings such as rivers and lakes, individuated under a stated hydrological convention.\"\n    is earth:Water;",
+      "prior_canonical_draft_name": null,
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-water-20261023-0001",
+        "revision": "water-earth-r2",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../docs/reviews/water-earth-20261023/REVIEW_RECORD.json"
+      }
+    },
+    {
+      "proposal": "wv-review-20261023-0080",
+      "canonical_name": "earth:Seawater",
+      "declaration": "thing Seawater\n    \"Marine water material, individuated under a stated oceanographic convention.\"\n    is earth:Water;",
+      "prior_canonical_draft_name": "oceanography:MarineWaterBody",
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-review-20261023-0080",
+        "revision": "water-earth-r2",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../docs/reviews/water-earth-20261023/REVIEW_RECORD.json"
+      }
+    },
+    {
+      "proposal": "wv-review-20261023-0067",
+      "canonical_name": "hydrology:TransfersWaterTo",
+      "declaration": "functional directed relationship TransfersWaterTo\n    \"Observed water transfer from an identified donor material water body to an identified recipient material water body.\"\n    links earth:Water to earth:Water;",
+      "prior_canonical_draft_name": "hydrology:TransfersWaterTo",
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-review-20261023-0067",
+        "revision": "water-earth-r2",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../docs/reviews/water-earth-20261023/REVIEW_RECORD.json"
+      }
+    }
+  ],
+  "previous_active": 128,
+  "candidate_new_declarations": 6,
+  "source_hashes": {
+    "earth.kwv": "c963432e07794cc952e57884286d3aa233dc45c6afd64c2e0b9745a34cd5e75d",
+    "hydrology.kwv": "b87edcde76b573825e9f9cbfb83dbbee016e204ec75d2b1a794caebd98f574cb"
+  },
+  "before_hashes": {
+    "earth": "afb0dda44acd97830ae7ec89839cc843ce092179cfee0f693583fb956ccb36d8",
+    "hydrology": "c138b7ef2f345b16a362963f5b2c168a805841004603e1ac07fd96572d56b9cf"
+  },
+  "remaining_boundaries": [
+    "Models establish material unity and boundaries, not geometric overlap alone",
+    "No salinity threshold or universal phase/continuity rule selected",
+    "No new realms; definition scope does not fabricate within-realm inference",
+    "No constituent or mixture partitive-inherency rules",
+    "Groundwater/Seawater overlap remains possible; neither mutual disjointness nor mandatory overlap asserted"
+  ],
+  "validation": {
+    "grammar": "All26 pass on final bytes",
+    "production_documents": "26 baseline and26 candidate documents;zero notifications",
+    "storage_review_exclusion": true,
+    "offline_reasoner": {
+      "logical_status": "VALID",
+      "owl_consistent": true,
+      "unsatisfiable": [],
+      "passed_checks": 40,
+      "unchanged_baseline_diagnostics": [
+        "Inconsistent worldview: can't establish the fundamental type for core concept imod:Quality (odo:Quality)",
+        "Inconsistent worldview: can't establish the fundamental type for core concept imod:Time (odo:Time)",
+        "Inconsistent worldview: can't establish the fundamental type for core concept imod:Space (odo:Space)",
+        "DESCRIPTION_BEARER_UNRESOLVED: imod:PhysicalPhenomena describes imod:PhysicalSystem [CONFIGURATION] : INDEPENDENT_TARGET_UNRESOLVED",
+        "DESCRIPTION_BEARER_UNRESOLVED: imod:Earth describes imod:EarthSystem [CONFIGURATION] : INDEPENDENT_TARGET_UNRESOLVED",
+        "DESCRIPTION_BEARER_UNRESOLVED: physical:Period describes physical:Frequency [OBSERVABLE, QUALITY, ABSTRACT, NUMEROSITY, QUANTIFIABLE] : UNRESOLVED: no established universal bearer contribution"
+      ]
+    },
+    "independent_review": "No category/import/preservation blocker; existing128 declarations unchanged; final raw-prefix checks recorded separately",
+    "baseline_reuse": "Prior Region candidate result; all26 ontology and2 strategy decoded texts verified identical to current live baseline before run; line-ending-only differences listed explicitly",
+    "baseline_eol_differences": [
+      {
+        "file": "calendar.kwv",
+        "current_sha256": "4d8d939c6f68bd19cf441fd3e77b1bd9e9fe384446e3f230d0c58b39f4dd535e",
+        "prior_sha256": "a05a56ef06913b673a3daa47c7852ac5e37873789fb7af393dca96e6f2457a27",
+        "difference": "CRLF/LF only; decoded text identical"
+      }
+    ],
+    "limits": "Frozen compiled services/captured authorities. Negative assertions are non-entailment, not disjointness. No universal boundary/purity/constituent/realm inference or twin runtime transport implementation tested."
+  },
+  "counts_note": "After integration:134 active proposal IDs,75 original held proposals,209 total IDs. Four original held IDs revised plus2 new IDs. Chemical alias follow-on excluded from active proposal counts.",
+  "existing_prefixes": "Exact immutable a5436b1 blob bytes preserved before appended new sections; includes original line endings.",
+  "generic_foundations": {
+    "actual_parcel": "physics:FluidParcel is physical:MaterialBody;",
+    "chemistry_portions": [
+      "chemistry:PhasePortion is physical:MaterialBody;",
+      "chemistry:SolutionPortion is chemistry:Solution chemistry:PhasePortion;"
+    ],
+    "boundary": "Existing physical/chemical foundations are untouched. FluidParcel is physically foundational but its actual namespace is physics; no silent migration or duplicate in physical/chemistry/earth."
+  },
+  "chemical_alias": "Separate follow-on. CID962 is chemical H2O identity, not environmental water material. No active alias or new authority dependency added.",
+  "main_constituent_requirement": {
+    "status": "explicitly unresolved steering requirement",
+    "intended_meaning": "Water-dominated environmental material; future chemical-water main-constituent articulation should justify mixture classification",
+    "not_added": [
+      "chemical identity equivalence",
+      "arbitrary majority threshold",
+      "solvent status as universal surrogate",
+      "automatic mixture->Water inference",
+      "constituent/partitive-inherency axioms"
+    ],
+    "entailment_boundary": "The asserted environmental kind hierarchy supports common-parent matching for correctly identified kinds. Presence of H2O, solvent status or arbitrary mixture proportion is not a sufficient encoded classification rule."
+  }
+}

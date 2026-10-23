@@ -1,0 +1,232 @@
+/**
+ * # Chemical knowledge
+ *
+ * Chemistry addresses universal physical composition and transformations through
+ * the PhysicalPhenomena subject-matter domain. Earth sphere applications are
+ * specializations, not an intrinsic boundary of chemical knowledge.
+ */
+ontology chemistry
+	version 1.0
+	using imod, physical
+	in domain imod:Chemistry;
+
+abstract identity ChemicalIdentity
+	"Any chemical, element, compounds, or compound family, but not mixtures."
+	requires authority CHEM {
+        urn: "klab.authority.pubchem",
+        searchLimit: 10,
+        gifDepictions: true
+    }
+;
+
+/**
+ * ## Mixture forms
+ *
+ * Mixture groups Solution, Suspension and Colloid as chemical mixture identities,
+ * distinct from the substance and compound identities selected through CHEM.
+ * The descriptions follow IUPAC terminology for
+ * [solution](https://doi.org/10.1351/goldbook.S05746),
+ * [suspension](https://doi.org/10.1351/goldbook.S06198), and
+ * [colloidal dispersion](https://doi.org/10.1351/goldbook.C01174).
+ */
+abstract identity Mixture
+	"Any material system made up of two or more different substances 
+	 which are mixed but are not combined chemically. A mixture refers 
+	 to the physical combination of two or more substances in which the 
+	 identities are retained and are mixed in the form of solutions, 
+	 suspensions, and colloids."
+	 has children 
+	 	(Solution 
+	 		"A single liquid or solid phase containing multiple substances distinguished as solvent and solutes."
+	 	),
+	 	(Suspension
+	 		"A mixture with solid particles dispersed throughout a liquid medium."
+	 	),
+	 	(Colloid 
+	 		"A mixture whose colloidal-sized dispersed particles or domains differ in composition or state from the continuous medium."
+	 	);
+
+/**
+ * ## Chemical conversion and solution formation
+ *
+ * ChemicalReaction describes the conversion of chemical species. Oxidation
+ * and Reduction distinguish participants undergoing net electron loss or gain,
+ * expressed as an increase or decrease in oxidation number. Electron accounting
+ * need not imply a separately observed transfer of free electrons, and oxidation
+ * need not involve oxygen. Both descriptions can apply to a redox occurrence
+ * from the perspectives of its different participants.
+ *
+ * The material involved, its chemical classification and the reaction occurrence
+ * are distinct observational targets. Observations establish the participant
+ * and material context at the stated scope.
+ *
+ * Dissolution describes material entering a homogeneous solution phase.
+ * Dispersed particles in a suspension remain distinct from dissolved material.
+ * Solution formation and species conversion may accompany one another, but
+ * observing dissolution alone does not establish a chemical reaction. Observing
+ * mixing alone does not establish that a solution has formed.
+ *
+ * Observations identify the participating material, composition and interval.
+ * Models describe reaction paths, rates and transfers at that observational
+ * scope. A named process does not prescribe a complete reaction mechanism or
+ * require the whole observed sample to have reacted or dissolved.
+ *
+ * The distinctions follow IUPAC terminology for
+ * [chemical reaction](https://doi.org/10.1351/goldbook.C01033),
+ * [oxidation](https://doi.org/10.1351/goldbook.O04362),
+ * [reduction](https://doi.org/10.1351/goldbook.R05222), and
+ * [dissolution](https://doi.org/10.1351/goldbook.D01806).
+ */
+process ChemicalReaction
+    "Interconversion of chemical species.";
+
+process Oxidation
+    "A chemical reaction involving net electron loss by a participant, expressed as an increase in oxidation number."
+    is chemistry:ChemicalReaction;
+
+process Reduction
+    "A chemical reaction involving net electron gain by a participant, expressed as a decrease in oxidation number."
+    is chemistry:ChemicalReaction;
+
+process Dissolution
+    "Formation of a homogeneous solution phase through the mixing of initially distinct phases.";
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0003",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+)
+thing PhasePortion
+    "An individuated material portion uniform in composition and physical state at the stated observational scale."
+    is physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0004",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+)
+thing SolutionPortion
+    "An individuated material phase portion bearing the existing solution identity."
+    is chemistry:Solution chemistry:PhasePortion;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0005",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+)
+abstract quantity AmountConcentration
+    "Amount of a specified constituent per volume of its identified mixture support.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0006",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+)
+abstract quantity MassFraction
+    "Mass of a specified constituent divided by total mass of the same mixture support."
+    is imod:Proportion;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0007",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+)
+abstract quantity PHValue
+    "A solution's hydrogen-ion activity expressed through a stated pH scale and measurement convention.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0008",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+)
+process ChemicalPrecipitation
+    "Chemical separation of solid material from an identified solution."
+    is imod:Process of chemistry:SolutionPortion;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0009",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+)
+process Adsorption
+    "Enrichment of material at an identified interface through surface interactions."
+    is imod:Process of physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0011",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+)
+event ReactionEpisode
+    "A bounded occurrence of chemical-species conversion with identified participants and segmentation criteria.";
+
+
+/**
+ * ## Chemical identity alias follow-on, not integrated
+ *
+ * This draft is excluded from active ingestion. A chemical H2O identity is
+ * distinct from environmental material earth:Water and natural water mixtures.
+ * End-to-end authority resolution/reasoning requires separate verification.
+ */
+@review(
+    schema="klab.review/1",
+    proposal="wv-water-20261023-0003",
+    revision="chemical-alias-review-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../../../docs/reviews/water-earth-20261023/CHEMICAL_ALIAS_AUDIT.md"
+)
+identity Water
+    "The chemical identity of H2O, not a natural environmental water mixture or material body."
+    equals CHEM:CID_962;

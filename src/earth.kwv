@@ -630,3 +630,92 @@ abstract process LandformingProcess
 		Weathering,
 		PlateTectonics;
 	
+
+
+/**
+ * ## Material water across environmental settings
+ *
+ * Water material and its geographic region or host are distinct observations.
+ * Environmental water has an intended water-dominated meaning. A general
+ * main-constituent articulation is unresolved; no majority threshold or solvent
+ * rule is substituted. Chemical-identity membership alone cannot classify an
+ * environmental mixture as Water.
+ * Natural water can contain dissolved or suspended constituents; this vocabulary
+ * does not assert pure-H2O identity, constituent rules or partitive inherency.
+ * Groundwater uses the saturated-zone meaning. Unsaturated soil/vadose water
+ * remains within the broader subsurface meaning without becoming groundwater.
+ * No universal moving parcel boundary, disjoint partition, marine/surface
+ * hierarchy or new realm is asserted. Boundary and occurrence evidence remain
+ * observational requirements. The linked record states placement review status.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0064",
+    revision="water-earth-r3",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/water-earth-20261023/REVIEW_RECORD.json"
+)
+thing Water
+    "An individuated body of water-dominated environmental material under a stated observational boundary convention; the main-constituent criterion remains to be articulated."
+    is physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-water-20261023-0002",
+    revision="water-earth-r2",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/water-earth-20261023/REVIEW_RECORD.json"
+)
+thing SubsurfaceWater
+    "Water material below the ground surface, without restricting it to the saturated zone."
+    is earth:Water;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0065",
+    revision="water-earth-r2",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/water-earth-20261023/REVIEW_RECORD.json"
+)
+thing Groundwater
+    "Subsurface water occupying the saturated zone, individuated under a stated hydrogeological convention."
+    is earth:SubsurfaceWater;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-water-20261023-0001",
+    revision="water-earth-r2",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/water-earth-20261023/REVIEW_RECORD.json"
+)
+thing SurfaceWater
+    "Water material present in surface-water settings such as rivers and lakes, individuated under a stated hydrological convention."
+    is earth:Water;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0080",
+    revision="water-earth-r2",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/water-earth-20261023/REVIEW_RECORD.json"
+)
+thing Seawater
+    "Marine water material, individuated under a stated oceanographic convention."
+    is earth:Water;
+

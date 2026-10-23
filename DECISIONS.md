@@ -50,3 +50,8 @@ or remote publication.
 ## 2026-10-23 Region Areal clarification
 
 The [steering clarification](docs/decisions/2026-10-23-region-areal.md) corrects volumetric prose while retaining Areal semantics; surface is a realm choice and 2.5D belongs to representation documentation. It does not assert community-wide acceptance.
+
+
+## 2026-10-23 Environmental material water
+
+[Steering clarification](docs/decisions/2026-10-23-environmental-water.md) places five environmental material-water kinds in Earth while preserving generic physical/chemical foundations, geographic WaterBody and a distinct prospective chemical identity alias. Main-constituent and mixture partitive-inherency articulation remain unresolved; no community acceptance is inferred.

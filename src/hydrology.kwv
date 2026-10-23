@@ -71,3 +71,32 @@ area CatchmentArea
     "Horizontal area of the delineated surface catchment."
     is imod:Area of hydrology:SurfaceCatchment
     describes hydrology:SurfaceCatchment;
+
+
+/**
+ * ## Material water across environmental settings
+ *
+ * Water material and its geographic region or host are distinct observations.
+ * Natural water can contain dissolved or suspended constituents; this vocabulary
+ * does not assert pure-H2O identity, constituent rules or partitive inherency.
+ * Groundwater uses the saturated-zone meaning. Unsaturated soil/vadose water
+ * remains within the broader subsurface meaning without becoming groundwater.
+ * No universal moving parcel boundary, disjoint partition, marine/surface
+ * hierarchy or new realm is asserted. Boundary and occurrence evidence remain
+ * observational requirements. The linked record states placement review status.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0067",
+    revision="water-earth-r2",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/water-earth-20261023/REVIEW_RECORD.json"
+)
+functional directed relationship TransfersWaterTo
+    "Observed water transfer from an identified donor material water body to an identified recipient material water body."
+    links earth:Water to earth:Water;
+

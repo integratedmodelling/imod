@@ -1,0 +1,2 @@
+PARSE PASS C:\Users\Ferd\Documents\Codex\2026-10-23\task-2\water-earth-candidate\experiments\strawman-2026\review\water-chemical-alias-20261023\chemistry.kwv errors=0
+SUMMARY files=1 failed=0 syntax-only
