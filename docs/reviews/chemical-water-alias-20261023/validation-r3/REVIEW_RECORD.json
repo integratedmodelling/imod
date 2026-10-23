@@ -1,0 +1,65 @@
+{
+  "revision": "chemical-alias-validation-r3",
+  "base": "a3c73da88737d60331ace462e7bfbeb4df079ac2",
+  "proposal": "wv-water-20261023-0003",
+  "declaration": "identity Water equals CHEM:CID_962;",
+  "source_file": "../../../src/chemistry.kwv",
+  "source_sha256": "97e07b7de8ffee773b3cdc394361eb83dcad156ffc0415b4fb57559d9dcbacae",
+  "community_acceptance": "not_recorded",
+  "validation": {
+    "syntax": "26 passed",
+    "document_notifications": 0,
+    "source_interface_roundtrip": {
+      "isAlias": true,
+      "type": [
+        "PREDICATE",
+        "IDENTITY"
+      ],
+      "parent": "CHEM:CID_962",
+      "roundTripAlias": true,
+      "roundTripType": [
+        "IDENTITY",
+        "PREDICATE"
+      ],
+      "roundTripParent": "CHEM:CID_962",
+      "roundTripPreserved": true
+    },
+    "reasoner_checks": 59,
+    "logical_status": "VALID",
+    "owl_consistent": true,
+    "unsatisfiable": [],
+    "unchanged_baseline_diagnostics": [
+      "Inconsistent worldview: can't establish the fundamental type for core concept imod:Quality (odo:Quality)",
+      "Inconsistent worldview: can't establish the fundamental type for core concept imod:Time (odo:Time)",
+      "Inconsistent worldview: can't establish the fundamental type for core concept imod:Space (odo:Space)",
+      "DESCRIPTION_BEARER_UNRESOLVED: imod:PhysicalPhenomena describes imod:PhysicalSystem [CONFIGURATION] : INDEPENDENT_TARGET_UNRESOLVED",
+      "DESCRIPTION_BEARER_UNRESOLVED: imod:Earth describes imod:EarthSystem [CONFIGURATION] : INDEPENDENT_TARGET_UNRESOLVED",
+      "DESCRIPTION_BEARER_UNRESOLVED: physical:Period describes physical:Frequency [OBSERVABLE, QUALITY, ABSTRACT, NUMEROSITY, QUANTIFIABLE] : UNRESOLVED: no established universal bearer contribution"
+    ],
+    "runtime_alias": {
+      "canonical": "CHEM:[CID:962]",
+      "semantics": "Runtime alias delegates to canonical class; source document preserves alias spelling. No separate alias subclass is fabricated.",
+      "canonicalOWL": "http://integratedmodelling.org/ks/internal/auth_c1fa589decdd3815ab40e93e3adbabb7#CID_962",
+      "sourceAlias": "chemistry:Water",
+      "environmentalOWL": "http://integratedmodelling.org/ks/earth#Water"
+    },
+    "real_storage_excludes_review_area": true
+  },
+  "semantic_scope": "Chemical H2O identity alias only; no relation/equivalence to environmental material earth:Water and no constituent/main-constituent axioms",
+  "status": "Validated isolated candidate; publication window held for cellular increment; rebase/revalidate against released SHA required",
+  "recorded_utc": "2026-10-23T09:36:00.691210+00:00",
+  "live_vs_replay": {
+    "live_current_provider": "Success CID962,COMPOUND,COMPLETE,no notifications; ordinary current provider JAR, separate private bridge released",
+    "fresh_cache": "38 requested code forms through real CachedAuthority and matching captured artifact;17provider classfiles match current JAR exactly, whole archive hashes differ due packaging",
+    "offline": "Network denied. Successful actual compiler/reasoner; all59 assertions pass",
+    "provenance": "Original proof/source/component artifacts unchanged; only new real response cache entries and owned documentation/manifest added to private copy; no fixture identities or TTL modifications"
+  },
+  "representation_scope": "Source/interface preserves authored alias spelling and equality flag. Runtime chemistry:Water delegates to canonical chemical class, URN CHEM:[CID:962]; no separate alias OWL subclass. Concept interface and fresh OWL export/reload preserve Identity/inheritance/satisfiability and non-equivalence to earth:Water. Rehydrating authored alias spelling requires retained worldview source, not fabrication of an OWL class.",
+  "unresolved": "Main-constituent/mixture partitive-inherency rules remain unresolved and unchanged",
+  "local_full_capture": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-23\\task-2\\chemical-capture-r2\\capture",
+  "limitations": "Existing frozen Services/languages toolchain with provenance-matched live provider capture; not a deployment or remote refresh. Revalidate after cellular publication; captured responses retain provider expiry policy.",
+  "independent_review": "Conditional approval on a3c73da; no alias-specific blocker. All17 classes, real bounded/released cache capture, original proofs/artifacts, source prefix/hashes/metadata,59checks/OWLroundtrip and physical-vs-chemical separation independently checked. Merge/push remain held for cellular publication and revalidation.",
+  "this_increment_additions": 1,
+  "base_active_on_a3c73da": 134,
+  "publication_total": "Recompute after cellular rebase; no active total change while held"
+}
