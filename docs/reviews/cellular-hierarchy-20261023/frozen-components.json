@@ -1,0 +1,87 @@
+{
+  "note": "Component/fixture bytecode and language artifacts from the reused ordered frozen classpath. Not a rebuild or assertion of deployed Services revision. Complete classpath is in PROVENANCE.json.",
+  "entries": [
+    {
+      "class": "org/integratedmodelling/klab/api/lang/kim/KimNamespace.class",
+      "first_directory_match": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-20\\task-2\\relationship-axis-implementation\\services\\klab.core.api\\target\\classes\\org\\integratedmodelling\\klab\\api\\lang\\kim\\KimNamespace.class",
+      "sha256": "3146d90b8b26e3f4d712e2a4e282d246784143ba2d9ee7c3ef8751b812176c43"
+    },
+    {
+      "class": "org/integratedmodelling/klab/services/reasoner/internal/SemanticEnvironmentFactory.class",
+      "first_directory_match": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-20\\task-2\\relationship-axis-implementation\\services\\klab.services.reasoner\\target\\classes\\org\\integratedmodelling\\klab\\services\\reasoner\\internal\\SemanticEnvironmentFactory.class",
+      "sha256": "03f1a321934a7460d0d852274a1fa63e08b5497ee42913e39661ea00076600b2"
+    },
+    {
+      "class": "org/integratedmodelling/klab/services/reasoner/internal/DocumentSemanticValidator.class",
+      "first_directory_match": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-20\\task-2\\relationship-axis-implementation\\services\\klab.services.reasoner\\target\\classes\\org\\integratedmodelling\\klab\\services\\reasoner\\internal\\DocumentSemanticValidator.class",
+      "sha256": "c316178ccc2b593d94eade2da71313b845f58f0b9921122f5a51253d10ce3507"
+    },
+    {
+      "class": "org/integratedmodelling/klab/services/reasoner/internal/CapturedAuthorityCatalog.class",
+      "first_directory_match": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-20\\task-2\\relationship-axis-implementation\\services\\klab.services.reasoner\\target\\classes\\org\\integratedmodelling\\klab\\services\\reasoner\\internal\\CapturedAuthorityCatalog.class",
+      "sha256": "31ac24fb96455b2579928b3f0e248721e354d268c807410e3df8cb5edf3d4090"
+    },
+    {
+      "class": "org/integratedmodelling/klab/services/reasoner/internal/M49FixtureAudit.class",
+      "first_directory_match": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-20\\task-2\\land-entry-example\\integrated-source-classes\\org\\integratedmodelling\\klab\\services\\reasoner\\internal\\M49FixtureAudit.class",
+      "sha256": "d1d2faf8b07ee20c52a67be64f38c2b978d1eb73cefa964f168e96bd31724783"
+    },
+    {
+      "class": "org/integratedmodelling/klab/services/reasoner/ReasonerService.class",
+      "first_directory_match": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-20\\task-2\\relationship-axis-implementation\\services\\klab.services.reasoner\\target\\classes\\org\\integratedmodelling\\klab\\services\\reasoner\\ReasonerService.class",
+      "sha256": "2e5c3f35adc93e803e56b2a8d4e17294bfc32f2711552338ebbcd41a883ee755"
+    },
+    {
+      "class": "org/integratedmodelling/klab/services/reasoner/owl/OWL.class",
+      "first_directory_match": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-20\\task-2\\relationship-axis-implementation\\services\\klab.services.reasoner\\target\\classes\\org\\integratedmodelling\\klab\\services\\reasoner\\owl\\OWL.class",
+      "sha256": "21b41d02f3da3735bc360099673dbae5824a5b0aab461d446e86d03d0b8647a6"
+    },
+    {
+      "class": "org/integratedmodelling/klab/services/reasoner/owl/ObservationalContainmentSupport.class",
+      "first_directory_match": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-20\\task-2\\relationship-axis-implementation\\services\\klab.services.reasoner\\target\\classes\\org\\integratedmodelling\\klab\\services\\reasoner\\owl\\ObservationalContainmentSupport.class",
+      "sha256": "223c536c4aba83f04a25bfae63ead2f6a010b8c6b108bea4c680976a3f29622f"
+    },
+    {
+      "class": "org/integratedmodelling/klab/services/resources/storage/M49CompositionSourceLoader.class",
+      "first_directory_match": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-20\\task-2\\land-entry-example\\integrated-source-classes\\org\\integratedmodelling\\klab\\services\\resources\\storage\\M49CompositionSourceLoader.class",
+      "sha256": "68507405f4e6c6513bf130c9547b2d6511d0b878a1b22b2aa508dcc7e84b9029"
+    },
+    {
+      "class": "org/integratedmodelling/klab/services/resources/storage/WorkspaceManager.class",
+      "first_directory_match": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-20\\task-2\\relationship-axis-implementation\\services\\klab.services.resources\\target\\classes\\org\\integratedmodelling\\klab\\services\\resources\\storage\\WorkspaceManager.class",
+      "sha256": "2865fc8e8cf7023f8e05141c21b16e9836ffb5c80ad2623019c57ebb9ae009d6"
+    },
+    {
+      "artifact": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-20\\task-2\\relationship-axis-implementation\\languages\\org.integratedmodelling.languages.observable\\target\\org.integratedmodelling.languages.observable-1.0.0-SNAPSHOT.jar",
+      "sha256": "954f991957df2240b3c2993788e4b18158194f25f61a09569492adeee3331dda"
+    },
+    {
+      "artifact": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-20\\task-2\\relationship-axis-implementation\\languages\\org.integratedmodelling.languages.worldview\\target\\org.integratedmodelling.languages.worldview-1.0.0-SNAPSHOT.jar",
+      "sha256": "f860895484afc896d87d8fe6c6831482c3a7a26bb3287feb0f7934892d0b7105"
+    },
+    {
+      "artifact": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-20\\task-2\\land-entry-example\\publication\\land-published-component.jar",
+      "sha256": "8db72d917eb46a1f3518b55b09209203703b9dc5c8b9a5bdfe9070abb7a4bbc8"
+    },
+    {
+      "artifact": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-20\\task-2\\m2\\org\\integratedmodelling\\org.integratedmodelling.languages.observable\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.observable-1.0.0-SNAPSHOT.jar",
+      "sha256": "954f991957df2240b3c2993788e4b18158194f25f61a09569492adeee3331dda"
+    },
+    {
+      "artifact": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-20\\task-2\\m2\\org\\integratedmodelling\\org.integratedmodelling.languages.worldview\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.worldview-1.0.0-SNAPSHOT.jar",
+      "sha256": "f860895484afc896d87d8fe6c6831482c3a7a26bb3287feb0f7934892d0b7105"
+    },
+    {
+      "artifact": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-20\\task-2\\m2\\org\\integratedmodelling\\org.integratedmodelling.languages.kim\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.kim-1.0.0-SNAPSHOT.jar",
+      "sha256": "2f886bceaac338179f8c37552d697dc2066f5c1013a950cecc04908b21851938"
+    },
+    {
+      "artifact": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-20\\task-2\\m2\\org\\integratedmodelling\\org.integratedmodelling.languages.observation\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.observation-1.0.0-SNAPSHOT.jar",
+      "sha256": "457a10e531bbeeab14ea72eeab8b67b3207cf4645c2ac3cc72e10207d756b831"
+    },
+    {
+      "artifact": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-20\\task-2\\m2\\org\\integratedmodelling\\org.integratedmodelling.languages.kactors\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.kactors-1.0.0-SNAPSHOT.jar",
+      "sha256": "f465af463ff242bc48475931da7ceb50f275f296914f3908e910d6c2f4af9b4a"
+    }
+  ]
+}

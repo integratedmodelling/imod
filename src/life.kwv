@@ -135,8 +135,32 @@ attribute Harvested
  * criteria for unity and continuity. Membership change alone does not determine
  * whether the group persists or a different group has been established.
  */
+/**
+ * In Assemblage, "living individuals" is not an all-members restriction to the
+ * class life:Individual. It includes living cells considered through a structural
+ * reading within a multicellular organism. The member reading does not assign
+ * Agent nature to the grouping. Anatomical and organism/ecological grouping
+ * scopes can therefore share this Subject contract without being equated.
+ * Structural units can be observed as specimens without an assertion that they
+ * are currently viable. Biological origin and current living activity remain
+ * separate claims. This does not make an arbitrary material sample an assemblage.
+ * This clarification introduces no universal membership, number, partition,
+ * persistence or identity-transition axiom. Those criteria belong to the kind
+ * of assemblage and its observational description.
+ */
+@review(
+    schema="klab.review/1",
+    proposal="wv-cellorganization-20261023-assemblage-scope",
+    revision="cellular-hierarchy-integration-r3",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/cellular-hierarchy-20261023/review.json"
+)
+
 abstract thing Assemblage
-    "An identifiable grouping of living individuals, with stated criteria for its unity and continuity."
+    "An identifiable grouping of biological units, observed as living individuals or anatomical structures, with stated criteria for its unity and continuity."
     ;
 
 abstract agent CollectiveAgent
@@ -209,3 +233,77 @@ event Germination
 structural directed relationship BiologicalParentOf
     "An identified organism is a biological progenitor of another identified organism."
     links life:Individual to life:Individual;
+
+/**
+ * ## Structural cellular and anatomical readings
+ *
+ * CellularBody is the material Subject reading of a cell. It does not retype an
+ * organism Agent or require a second observation for every material measurement.
+ * The grouping branch reuses Assemblage: AnatomicalAssemblage distinguishes
+ * grouping by anatomical structure from grouping organisms by ecological scope.
+ * CellAssemblage then specifies the cellular level. A tracked living bacterium
+ * can retain its organism Agent reading for a mass measurement; a separately
+ * selected microscopy target can use CellularBody. No paired observation is
+ * required. Cell bodies grouped by an epithelial anatomical criterion differ
+ * from whole organisms grouped for ecological composition monitoring. A prepared
+ * structural specimen does not establish a currently living organism.
+ * Neither grouping level is a Population, Community, CollectiveAgent, organism
+ * or recognized Configuration.
+ */
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0152",
+    revision="cellular-hierarchy-integration-r3",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/cellular-hierarchy-20261023/review.json"
+)
+thing CellularBody
+    "A structurally observed cellular material body individuated by its identified cell boundary and stated continuity criterion."
+    is physical:MaterialBody;
+
+/**
+ * AnatomicalAssemblage adds a grouping criterion, not an empty classification
+ * level: the units are considered through anatomical location, arrangement or
+ * structural continuity, and the grouping has an independently stated biological
+ * unity. It can support later tissue/organ-level groupings without imposing their
+ * taxonomy now. Anatomical framing alone asserts no physical part-of relation,
+ * spatial enclosure, observational containment, viability test or fixed membership.
+ */
+@review(
+    schema="klab.review/1",
+    proposal="wv-cellorganization-20261023-06",
+    revision="cellular-hierarchy-integration-r3",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/cellular-hierarchy-20261023/review.json"
+)
+abstract thing AnatomicalAssemblage
+    "An identifiable assemblage of biological structural units whose unity is specified through an anatomical location, arrangement or structural continuity criterion."
+    is life:Assemblage;
+
+/**
+ * CellAssemblage specializes the anatomical grouping by the cellular reading of
+ * its units. It inherits the general observational group contract. No universal
+ * minimum number, closed member list, persistence rule or transition rule is
+ * asserted. A singleton query result does not by itself establish or refute an
+ * identified assemblage; the biological unity criterion must decide the target.
+ * An organism is not turned into a group just to use these names.
+ */
+@review(
+    schema="klab.review/1",
+    proposal="wv-cellorganization-20261023-01",
+    revision="cellular-hierarchy-integration-r3",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/cellular-hierarchy-20261023/review.json"
+)
+thing CellAssemblage
+    "An anatomical assemblage articulated at the level of structural cell-body readings under stated biological unity, membership and continuity criteria."
+    is life:AnatomicalAssemblage;

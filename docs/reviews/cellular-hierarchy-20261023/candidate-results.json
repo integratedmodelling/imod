@@ -1,0 +1,114 @@
+{
+  "baseline" : "a3c73da88737d60331ace462e7bfbeb4df079ac2",
+  "mode" : "candidate",
+  "sourceNotifications" : [ ],
+  "beanStatus" : "VALID",
+  "logicalStatus" : "VALID",
+  "diagnostics" : [ "Inconsistent worldview: can't establish the fundamental type for core concept imod:Quality (odo:Quality)", "Inconsistent worldview: can't establish the fundamental type for core concept imod:Time (odo:Time)", "Inconsistent worldview: can't establish the fundamental type for core concept imod:Space (odo:Space)", "DESCRIPTION_BEARER_UNRESOLVED: imod:PhysicalPhenomena describes imod:PhysicalSystem [CONFIGURATION] : INDEPENDENT_TARGET_UNRESOLVED", "DESCRIPTION_BEARER_UNRESOLVED: imod:Earth describes imod:EarthSystem [CONFIGURATION] : INDEPENDENT_TARGET_UNRESOLVED", "DESCRIPTION_BEARER_UNRESOLVED: physical:Period describes physical:Frequency [OBSERVABLE, QUALITY, ABSTRACT, NUMEROSITY, QUANTIFIABLE] : UNRESOLVED: no established universal bearer contribution" ],
+  "unsatisfiable" : [ ],
+  "modelDocuments" : {
+    "organism" : {
+      "source" : "namespace examples.cellhierarchy.organism using review.cellhierarchy.checks, life version 1.0;\nmodel review.cellhierarchy.checks:OrganismMass in kg set to [1];",
+      "sourceNotifications" : [ ],
+      "semanticDiagnostics" : [ ]
+    },
+    "structural" : {
+      "source" : "namespace examples.cellhierarchy.structural using review.cellhierarchy.checks, life version 1.0;\nmodel review.cellhierarchy.checks:StructuralMass in kg set to [1];",
+      "sourceNotifications" : [ ],
+      "semanticDiagnostics" : [ ]
+    },
+    "wrongbearer" : {
+      "source" : "namespace examples.cellhierarchy.wrongbearer using review.cellhierarchy.checks, life version 1.0;\nmodel review.cellhierarchy.checks:OrganismMass of review.cellhierarchy.checks:TestCellBody in kg set to [1];",
+      "sourceNotifications" : [ ],
+      "semanticDiagnostics" : [ {
+        "@CLASS" : "org.integratedmodelling.klab.api.services.runtime.impl.NotificationImpl",
+        "message" : "MODEL_DEPENDENCY_UNRESOLVED: The inherited inherent is outside the dependent's applies to domain",
+        "level" : "Error",
+        "timestamp" : 1792748659742,
+        "lexicalContext" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.services.runtime.impl.NotificationImpl$LexicalContextImpl",
+          "documentUrn" : "examples.cellhierarchy.wrongbearer",
+          "projectUrn" : "imod",
+          "offsetInDocument" : 98,
+          "length" : 107,
+          "documentType" : "NAMESPACE"
+        },
+        "mode" : "Normal",
+        "interactivity" : "BATCH"
+      }, {
+        "@CLASS" : "org.integratedmodelling.klab.api.services.runtime.impl.NotificationImpl",
+        "message" : "Clause INHERENT operand review.cellhierarchy.checks:TestCellBody is provably incompatible with the inherited restrictions or applies to domain of review.cellhierarchy.checks:OrganismMass",
+        "level" : "Error",
+        "timestamp" : 1792748660026,
+        "lexicalContext" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.services.runtime.impl.NotificationImpl$LexicalContextImpl",
+          "documentUrn" : "examples.cellhierarchy.wrongbearer",
+          "projectUrn" : "imod",
+          "offsetInDocument" : 148,
+          "length" : 40,
+          "documentType" : "NAMESPACE"
+        },
+        "mode" : "Normal",
+        "interactivity" : "BATCH"
+      } ]
+    },
+    "bodyoforganism" : {
+      "source" : "namespace examples.cellhierarchy.bodyoforganism using review.cellhierarchy.checks, life version 1.0;\nmodel each review.cellhierarchy.checks:TestCellBody of review.cellhierarchy.checks:TestOrganism;",
+      "sourceNotifications" : [ {
+        "@CLASS" : "org.integratedmodelling.klab.api.services.runtime.impl.NotificationImpl",
+        "message" : "INHERENCY_HEAD_INDEPENDENT: 'of' cannot qualify an independent subject/agent/event; use a dependent quality or process head: each review.cellhierarchy.checks:TestCellBody of review.cellhierarchy.checks:TestOrganism",
+        "level" : "Error",
+        "timestamp" : 1792748660034,
+        "lexicalContext" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.services.runtime.impl.NotificationImpl$LexicalContextImpl",
+          "documentUrn" : "examples.cellhierarchy.bodyoforganism",
+          "projectUrn" : "imod",
+          "offsetInDocument" : 107,
+          "length" : 89,
+          "documentType" : "NAMESPACE",
+          "type" : "CONCEPT"
+        },
+        "mode" : "Normal",
+        "interactivity" : "BATCH"
+      } ],
+      "semanticDiagnostics" : [ ]
+    }
+  },
+  "checks" : {
+    "all ontology and strategy documents adapted" : true,
+    "bean VALID" : true,
+    "logical VALID" : true,
+    "OWL consistent" : true,
+    "zero unsatisfiable named classes" : true,
+    "existing Assemblage remains abstract Subject" : true,
+    "existing organism and ecological Agents retained" : true,
+    "cell concrete MaterialBody Subject" : true,
+    "anatomical intermediate abstract Subject under Assemblage" : true,
+    "cell grouping concrete under anatomical intermediate" : true,
+    "cell grouping inherits shared Assemblage" : true,
+    "no reverse broad-to-narrow inference" : true,
+    "no new group retyped organism or collective Agent" : true,
+    "no ecological Agent ancestry introduced" : true,
+    "group and ecological Agent intersection unsatisfiable" : true,
+    "life:Assemblage has no native bearer" : true,
+    "life:Assemblage has no observational containment contract" : true,
+    "life:Assemblage has no created observables" : true,
+    "life:AnatomicalAssemblage has no native bearer" : true,
+    "life:AnatomicalAssemblage has no observational containment contract" : true,
+    "life:AnatomicalAssemblage has no created observables" : true,
+    "life:CellAssemblage has no native bearer" : true,
+    "life:CellAssemblage has no observational containment contract" : true,
+    "life:CellAssemblage has no created observables" : true,
+    "life:CellularBody has no native bearer" : true,
+    "life:CellularBody has no observational containment contract" : true,
+    "life:CellularBody has no created observables" : true,
+    "model organism expected admission" : true,
+    "model organism single authored output" : true,
+    "model structural expected admission" : true,
+    "model structural single authored output" : true,
+    "model wrongbearer expected rejection" : true,
+    "model bodyoforganism expected rejection" : true,
+    "zero network attempts" : true
+  },
+  "networkAttempts" : [ ]
+}

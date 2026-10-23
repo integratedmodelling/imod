@@ -1,0 +1,25 @@
+{
+  "baseline": "a3c73da88737d60331ace462e7bfbeb4df079ac2",
+  "source_sha256": "d11bf24e4a429233e93fb2395566bd5ba881ef3acd88e20f11d18089349d1835",
+  "syntax": {
+    "documents": 27,
+    "failed": 0,
+    "scope": "syntax-only"
+  },
+  "baseline_checks": 8,
+  "candidate_checks": 34,
+  "checks_passed": true,
+  "baseline_diagnostics_unchanged": true,
+  "diagnostics_count": 6,
+  "logical_status": "VALID",
+  "unsatisfiable": [],
+  "network_attempts": [],
+  "limitations": [
+    "Existing frozen compiled Services artifacts and captured providers; no current Services rebuild",
+    "Document/OWL validation, not runtime execution or detection",
+    "No viability/member-cardinality axiom or organism/body identity bridge",
+    "Experimental steering increment; no recorded community acceptance"
+  ],
+  "evidence": "baseline-results.json; candidate-results.json; grammar.txt; frozen-components.json; INDEPENDENT-REVIEW.md",
+  "local_full_provenance": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-23\\task\\cellular-integration-r3-validation"
+}
