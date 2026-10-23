@@ -1,0 +1,116 @@
+/**
+ * Suggested research I1-I5; sources I1/I2. No community acceptance recorded.
+ * Production Artifact/Resource and engineering ProductAssembly are reused.
+ */
+ontology reviewinfrastructure
+    "Candidate physical assets and distinct connection and supply meanings."
+    version 1.0
+    using imod, physical, infrastructure, engineering
+    in domain imod:BuiltEnvironment;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0068",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/infrastructure.json"
+)
+thing Building
+    "An individually bounded constructed building material body, distinct from its occupants or organization."
+    is infrastructure:Artifact;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0069",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/infrastructure.json"
+)
+thing WaterStorageTank
+    "An individually bounded constructed vessel body intended for water storage."
+    is infrastructure:Artifact;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0070",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/infrastructure.json"
+)
+thing WaterPipe
+    "An individually bounded constructed material conduit body for water conveyance."
+    is infrastructure:Artifact;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0071",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/infrastructure.json"
+)
+area FloorArea
+    "Area of the identified building's floor surfaces under a stated gross or net convention."
+    is imod:Area of reviewinfrastructure:Building
+    describes reviewinfrastructure:Building;
+
+// The same structural bond holds under endpoint exchange; direction not defaulted.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0072",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/infrastructure.json"
+)
+structural bond PhysicalAssetConnection
+    "An observed physical connection between two artifact bodies through specified compatible interfaces."
+    links infrastructure:Artifact to infrastructure:Artifact;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0073",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/infrastructure.json"
+)
+functional directed relationship SuppliesWaterTo
+    "Actual delivery of water from an identified storage tank to an identified recipient tank."
+    links reviewinfrastructure:WaterStorageTank to reviewinfrastructure:WaterStorageTank;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0074",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/infrastructure.json"
+)
+configuration WaterDeliveryNetwork
+    "A recognized network of tank-to-tank actual water delivery connections."
+    is imod:Network
+    emerges from reviewinfrastructure:SuppliesWaterTo
+    applies to imod:Subject;
+
+// Positive connected-but-shut valve, negative connection proves supply.
+// Tank material, contents and region remain separate. Rated capacity is not
+// delivered throughput; their quantitative heads remain in the packet backlog.
+// No automatic network detection, placement or computational graph is claimed.

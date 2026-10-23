@@ -1,0 +1,100 @@
+/**
+ * Suggested research: H1-H5; H1/H2/H3/H4 sources in ../SOURCES.md.
+ * Prior catchment r1-r3 and bootstrap concepts are re-articulated, not novel.
+ * No recorded community acceptance; E1 surface/volume issue remains blocking.
+ */
+ontology reviewhydrology
+    "Candidate catchment and material-water observations distinct from flow models."
+    version 1.0
+    using imod, physical, physics, earth, hydrology
+    in domain imod:Hydrology;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0062",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/hydrology.json"
+)
+thing SurfaceCatchment
+    "A surface region delineated by drainage toward one specified outlet under a stated convention."
+    is earth:Region;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0063",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/hydrology.json"
+)
+area CatchmentArea
+    "Horizontal area of the delineated surface catchment."
+    is imod:Area of reviewhydrology:SurfaceCatchment
+    describes reviewhydrology:SurfaceCatchment;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0064",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/hydrology.json"
+)
+thing WaterBody
+    "An individuated material body of water, distinct from its geographic host or region."
+    is physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0065",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/hydrology.json"
+)
+thing GroundwaterBody
+    "An individuated body of subsurface water under a stated material and hydrogeological convention."
+    is reviewhydrology:WaterBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0066",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/hydrology.json"
+)
+volume StoredWaterVolume
+    "Water volume present in the identified material water body at the time observed."
+    is imod:Volume of reviewhydrology:WaterBody
+    describes reviewhydrology:WaterBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0067",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/hydrology.json"
+)
+functional directed relationship TransfersWaterTo
+    "Actual water transfer from an identified donor water body to an identified recipient water body."
+    links reviewhydrology:WaterBody to reviewhydrology:WaterBody;
+
+// No inference of exchange from geometry. Surface basin is not recharge zone.
+// Discharge at section, hydraulic head, phase processes and frozen-water stock
+// remain explicitly unencoded pending their native support/dimensional contracts.

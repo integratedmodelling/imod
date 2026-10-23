@@ -35,3 +35,41 @@ abstract attribute DataReduction
         (Mean),
         (Minimum),
         (Maximum);
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0012",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.data.json"
+)
+rescaling attribute OrdinalRanked
+    "An order-based transformation retaining ordinal position within a specified reference set and tie convention."
+    is data:Transformed
+    applies to imod:Quantity;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0013",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.data.json"
+)
+attribute Median
+    "Reduction to a median under an explicitly specified support and ordering convention."
+    is data:DataReduction;

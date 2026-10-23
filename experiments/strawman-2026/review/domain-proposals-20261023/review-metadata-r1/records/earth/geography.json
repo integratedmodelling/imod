@@ -1,0 +1,62 @@
+{
+  "record_kind": "local declaration review evidence, not a production proposal API or lifecycle policy",
+  "revision": "review-metadata-r1",
+  "source_file": "../../../earth/kwv/geography.kwv",
+  "before_sha256": "9a855cccfa0d17c8517a5ae8e2f907f11c025a7aa2ea4c4a6940f03037290512",
+  "current_sha256": "478ef16aa2a02bc03c81aa5f01712152141fe58153395f5d91b954689039daa2",
+  "base_import_context": "../../CONTEXT.json",
+  "semantic_preservation": "Removing only the exact generated @review blocks reproduces the pre-metadata file byte-for-byte, including retained baseline declarations/comments.",
+  "technical_evidence": "../../VALIDATION.json",
+  "community_acceptance": "not_recorded",
+  "declarations": [
+    {
+      "proposal": "wv-review-20261023-0054",
+      "revision": "review-metadata-r1",
+      "qualified_name": "reviewgeography:LocalRelief",
+      "declaration_kind": "length",
+      "original_source_line": 13,
+      "original_declaration": "length LocalRelief\n    \"Difference between maximum and minimum ground elevations over a stated terrestrial region.\"\n    is imod:Length of earth:Region\n    describes geography:TerrestrialSurfaceArrangement;",
+      "original_declaration_sha256": "df3494c82b665757d6db13e7ab0893eb68b264d4d083a29d8114d236da266efe",
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-review-20261023-0054",
+        "revision": "review-metadata-r1",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../../review-metadata-r1/records/earth/geography.json"
+      },
+      "prior_family_context": "Q2",
+      "prior_family_row": "| Q2 F/U | **Landform recognition and local relief**: use a small landform gateway and orthogonal shape/position Q/A/C, with neighborhood/grain specified. Physical landform S identity requires bounded feature criteria; algorithmic geomorphon class is a classification perspective. | Hillslope/RidgeLandform/ValleyLandform/ClosedDepression/LocalRelief already dossier proposals, several overlapping `earth:LandFormation` children. Reconcile before naming. No geometry-only classification becomes the exhaustive Earth landform taxonomy. | Q1; + same physical feature has classifications at different neighborhood scales; \u2212 an algorithm class fixes universal natural-kind identity at every scale. |",
+      "rationale_and_sources": "../../../earth/PROPOSALS.md",
+      "status_rationale": "Experimental research with recorded open issues; no new semantic/expert review or formal controversy assessment. Exact syntax evidence is separate from conservative annotation technical_validation.",
+      "current_declaration_line": 23
+    },
+    {
+      "proposal": "wv-review-20261023-0055",
+      "revision": "review-metadata-r1",
+      "qualified_name": "reviewgeography:CoverMosaic",
+      "declaration_kind": "configuration",
+      "original_source_line": 19,
+      "original_declaration": "configuration CoverMosaic\n    \"A recognized spatial mosaic of physical cover over a terrestrial region.\"\n    is physical:SpatialArrangement\n    applies to (earth:Terrestrial earth:Region);",
+      "original_declaration_sha256": "e49510104b0b6ad8b6b897d70b5f56bf810ad687fb2f4916c80ea7795d658f25",
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-review-20261023-0055",
+        "revision": "review-metadata-r1",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../../review-metadata-r1/records/earth/geography.json"
+      },
+      "prior_family_context": "Q5",
+      "prior_family_row": "| Q5 U/D | **Ecological landscape interface**, through spatial pattern/heterogeneity and identifiable places, not an ecosystem equivalence. Fragmentation measures Q/C with defined habitat/organism support; geomorphic retreat/mass movement remain Earth/geology processes. | Existing geography process/episode proposals duplicate geology/Earth. LAND_AGRICULTURE_REVISION already defers VegetationPatch to ecological unity and topology upstream. Exact landscape S/C head and organism-specific connectivity remain owner questions. | L3/I1; + landscape mosaic includes multiple cover and ecosystem classes; \u2212 same cover proves same ecosystem or map adjacency proves dispersal. D: full human-geography subdisciplines and a new GIS topology taxonomy. |",
+      "rationale_and_sources": "../../../earth/PROPOSALS.md",
+      "status_rationale": "Experimental research with recorded open issues; no new semantic/expert review or formal controversy assessment. Exact syntax evidence is separate from conservative annotation technical_validation.",
+      "current_declaration_line": 39
+    }
+  ],
+  "technical_evidence_scope": "Exact current source hashes pass Xtext IParser syntax only; no linking, adapter, reasoner or live acceptance claimed."
+}

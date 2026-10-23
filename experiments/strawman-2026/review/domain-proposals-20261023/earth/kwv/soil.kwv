@@ -1,0 +1,88 @@
+/**
+ * Suggested research: S1-S5, sources S1-S5; no recorded community acceptance.
+ * Existing SoilBody/Aggregate/Density/Diameter/Compaction/Leaching reused.
+ */
+ontology reviewsoil
+    "Candidate horizon, profile and soil-composition observations."
+    version 1.0
+    using imod, physical, earth, soil
+    in domain imod:Soil;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0085",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/soil.json"
+)
+thing SoilHorizon
+    "An individuated soil layer distinguished by stated observable material properties."
+    is soil:SoilBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0086",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/soil.json"
+)
+length HorizonThickness
+    "Thickness of an identified soil horizon under a stated direction and boundary convention."
+    is imod:Length of reviewsoil:SoilHorizon
+    describes reviewsoil:SoilHorizon;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0087",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/soil.json"
+)
+quantity ClayFraction
+    "Dry-mass fraction of a specified soil particle population assigned to clay under a stated size convention."
+    is imod:Proportion of soil:SoilBody
+    describes soil:SoilBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0088",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/soil.json"
+)
+quantity OrganicMatterFraction
+    "Organic-matter fraction of the identified soil body under a stated material and mass basis."
+    is imod:Proportion of soil:SoilBody
+    describes soil:SoilBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0089",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/soil.json"
+)
+configuration SoilProfile
+    "A recognized vertical arrangement of soil horizons at a stated observational support."
+    is physical:VerticalArrangement
+    emerges from reviewsoil:SoilHorizon
+    applies to soil:SoilBody;
+
+// No material part-of is encoded by applies to or emergence.
+// S3 chemistry and S5 WRB hook remain proposals: no WRB provider installed,
+// no authority availability or diagnostic classification success is asserted.

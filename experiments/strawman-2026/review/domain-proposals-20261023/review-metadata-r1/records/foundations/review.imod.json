@@ -1,0 +1,110 @@
+{
+  "record_kind": "local declaration review evidence, not a production proposal API or lifecycle policy",
+  "revision": "review-metadata-r1",
+  "source_file": "../../../foundations/proposals/review.imod.kwv",
+  "before_sha256": "a94d023519f7c4669309c9bb101e64e516ed3e49dfe2d6d35ccfedc31694f1d2",
+  "current_sha256": "b7ab9b83aff0fc87481b265ed064a9d67ac6ca673f4b6d6220ee8c2588389e63",
+  "base_import_context": "../../CONTEXT.json",
+  "semantic_preservation": "Removing only the exact generated @review blocks reproduces the pre-metadata file byte-for-byte, including retained baseline declarations/comments.",
+  "technical_evidence": "../../VALIDATION.json",
+  "community_acceptance": "not_recorded",
+  "declarations": [
+    {
+      "proposal": "wv-review-20261023-0023",
+      "revision": "review-metadata-r1",
+      "qualified_name": "review.imod:StructuralConnection",
+      "declaration_kind": "abstract structural relationship",
+      "original_source_line": 14,
+      "original_declaration": "abstract structural relationship StructuralConnection\n    \"A relationship observed through its structural nature, with orientation left to specializations.\"\n    is imod:Relationship;",
+      "original_declaration_sha256": "5e59b51d2e0fa224769961a07356d3a4ec30f3dc2126096dda715ebaa2f33f46",
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-review-20261023-0023",
+        "revision": "review-metadata-r1",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../../review-metadata-r1/records/foundations/review.imod.json"
+      },
+      "prior_family_context": null,
+      "prior_family_row": null,
+      "rationale_and_sources": "../../../foundations/PROPOSALS.md",
+      "status_rationale": "Experimental research with recorded open issues; no new semantic/expert review or formal controversy assessment. Exact syntax evidence is separate from conservative annotation technical_validation.",
+      "current_declaration_line": 24
+    },
+    {
+      "proposal": "wv-review-20261023-0024",
+      "revision": "review-metadata-r1",
+      "qualified_name": "review.imod:FunctionalConnection",
+      "declaration_kind": "abstract functional relationship",
+      "original_source_line": 18,
+      "original_declaration": "abstract functional relationship FunctionalConnection\n    \"A relationship observed through interaction, with orientation left to specializations.\"\n    is imod:Relationship;",
+      "original_declaration_sha256": "8abfb739cd7a5605bcfefe69a7e8ca121e10ec0ba460b327ab86077c7f76b5d7",
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-review-20261023-0024",
+        "revision": "review-metadata-r1",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../../review-metadata-r1/records/foundations/review.imod.json"
+      },
+      "prior_family_context": null,
+      "prior_family_row": null,
+      "rationale_and_sources": "../../../foundations/PROPOSALS.md",
+      "status_rationale": "Experimental research with recorded open issues; no new semantic/expert review or formal controversy assessment. Exact syntax evidence is separate from conservative annotation technical_validation.",
+      "current_declaration_line": 38
+    },
+    {
+      "proposal": "wv-review-20261023-0025",
+      "revision": "review-metadata-r1",
+      "qualified_name": "review.imod:DirectedConnection",
+      "declaration_kind": "abstract directed relationship",
+      "original_source_line": 22,
+      "original_declaration": "abstract directed relationship DirectedConnection\n    \"A relationship whose source and target are ordered, with nature left to specializations.\"\n    is imod:Relationship;",
+      "original_declaration_sha256": "4dd0ddaf4cdaedd9f4570242d0162028ee70df4bfac500c652e1fcfd6393a1ba",
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-review-20261023-0025",
+        "revision": "review-metadata-r1",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../../review-metadata-r1/records/foundations/review.imod.json"
+      },
+      "prior_family_context": null,
+      "prior_family_row": null,
+      "rationale_and_sources": "../../../foundations/PROPOSALS.md",
+      "status_rationale": "Experimental research with recorded open issues; no new semantic/expert review or formal controversy assessment. Exact syntax evidence is separate from conservative annotation technical_validation.",
+      "current_declaration_line": 52
+    },
+    {
+      "proposal": "wv-review-20261023-0026",
+      "revision": "review-metadata-r1",
+      "qualified_name": "review.imod:BondConnection",
+      "declaration_kind": "abstract bond",
+      "original_source_line": 26,
+      "original_declaration": "abstract bond BondConnection\n    \"A relationship with unordered participants, with nature left to specializations.\"\n    is imod:Relationship;",
+      "original_declaration_sha256": "2ec408106aacbdf3149be65e8e98444fb7e88fa796748cf5bb99695286114b31",
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-review-20261023-0026",
+        "revision": "review-metadata-r1",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../../review-metadata-r1/records/foundations/review.imod.json"
+      },
+      "prior_family_context": null,
+      "prior_family_row": null,
+      "rationale_and_sources": "../../../foundations/PROPOSALS.md",
+      "status_rationale": "Experimental research with recorded open issues; no new semantic/expert review or formal controversy assessment. Exact syntax evidence is separate from conservative annotation technical_validation.",
+      "current_declaration_line": 66
+    }
+  ],
+  "technical_evidence_scope": "Exact current source hashes pass Xtext IParser syntax only; no linking, adapter, reasoner or live acceptance claimed."
+}

@@ -583,3 +583,68 @@ abstract extent Time
     "Space in the IM worldview is 0, 1,2 or 3-dimensional, with implied traits that describe human perception and modalities of description proper of an Euclidean view of the world."
     is core odo:Space
             ;
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0023",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.imod.json"
+)
+abstract structural relationship StructuralConnection
+    "A relationship observed through its structural nature, with orientation left to specializations."
+    is imod:Relationship;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0024",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.imod.json"
+)
+abstract functional relationship FunctionalConnection
+    "A relationship observed through interaction, with orientation left to specializations."
+    is imod:Relationship;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0025",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.imod.json"
+)
+abstract directed relationship DirectedConnection
+    "A relationship whose source and target are ordered, with nature left to specializations."
+    is imod:Relationship;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0026",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.imod.json"
+)
+abstract bond BondConnection
+    "A relationship with unordered participants, with nature left to specializations."
+    is imod:Relationship;

@@ -1,0 +1,114 @@
+/**
+ * SUGGESTED, NOT COMMUNITY-ACCEPTED. Xtext syntax pass; semantics NOT RUN.
+ * PH1-PH4, PROPOSALS.md. Dependencies are active physical/imod, not copied heads.
+ * These names are review addresses; no claim of formal existential hosting,
+ * quantity availability, new fragment creation or universal identity loss.
+ * Scientific trail: Smith/Varzi boundaries; BIPM quantities; parcel decision.
+ */
+ontology review.physical
+    "Shared body, feature and contact proposals."
+    version 1.0
+    using imod, physical, review.imod
+    in domain imod:PhysicalPhenomena;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0027",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.physical.json"
+)
+structural bond PhysicalContact
+    "Material contact between two individuated bodies at a stated boundary resolution."
+    is (review.imod:StructuralConnection and review.imod:BondConnection)
+    links physical:MaterialBody to physical:MaterialBody;
+
+// PH2: scope/continuity and host obligations await review; filling is separate.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0028",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.physical.json"
+)
+thing HostBoundCavity
+    "A cavity identified by boundaries supplied by a material host, independently of its occupant."
+    is physical:Feature;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0029",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.physical.json"
+)
+structural directed relationship CavityHostedBy
+    "The host-defining structural connection of a cavity to the body supplying its boundaries."
+    links review.physical:HostBoundCavity to physical:MaterialBody;
+
+// PH3: native material-body context; event participants remain separate.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0030",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.physical.json"
+)
+process MaterialSeparation
+    "Progressive separation of previously united material within an identified body."
+    is imod:Process of physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0031",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.physical.json"
+)
+event FragmentationEpisode
+    "A bounded occurrence in which an identified material body separates into pieces under stated continuity criteria.";
+
+// PH4: illustrative concrete compositions, not mandatory canonical extra heads.
+// Unit evidence: kg and K respectively, not executable unit declarations.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0032",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.physical.json"
+)
+mass BodyMass
+    "Mass of an identified material body under the stated measurement support."
+    is imod:Mass of physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0033",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.physical.json"
+)
+temperature BodyTemperature
+    "Thermodynamic temperature of an identified material body at the stated observational support."
+    is imod:Temperature of physical:MaterialBody;

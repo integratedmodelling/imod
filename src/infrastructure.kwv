@@ -62,3 +62,99 @@ abstract process ArtifactModification
 
 abstract role Resource
      "A resource is the role that objects plays in the context of activities or plans to achieve goals";
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0068",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/earth/infrastructure.json"
+)
+thing Building
+    "An individually bounded constructed building material body, distinct from its occupants or organization."
+    is infrastructure:Artifact;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0069",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/earth/infrastructure.json"
+)
+thing WaterStorageTank
+    "An individually bounded constructed vessel body intended for water storage."
+    is infrastructure:Artifact;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0070",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/earth/infrastructure.json"
+)
+thing WaterPipe
+    "An individually bounded constructed material conduit body for water conveyance."
+    is infrastructure:Artifact;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0071",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/earth/infrastructure.json"
+)
+area FloorArea
+    "Area of the identified building's floor surfaces under a stated gross or net convention."
+    is imod:Area of infrastructure:Building
+    describes infrastructure:Building;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0073",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/earth/infrastructure.json"
+)
+functional directed relationship SuppliesWaterTo
+    "Actual delivery of water from an identified storage tank to an identified recipient tank."
+    links infrastructure:WaterStorageTank to infrastructure:WaterStorageTank;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0074",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/earth/infrastructure.json"
+)
+configuration WaterDeliveryNetwork
+    "A recognized network of tank-to-tank actual water delivery connections."
+    is imod:Network
+    emerges from infrastructure:SuppliesWaterTo
+    applies to imod:Subject;

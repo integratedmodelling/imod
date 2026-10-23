@@ -247,3 +247,82 @@ configuration SpatialArrangement
 	has children
 		VerticalArrangement,
 		HorizontalArrangement;
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0027",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.physical.json"
+)
+structural bond PhysicalContact
+    "Material contact between two individuated bodies at a stated boundary resolution."
+    is (imod:StructuralConnection and imod:BondConnection)
+    links physical:MaterialBody to physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0030",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.physical.json"
+)
+process MaterialSeparation
+    "Progressive separation of previously united material within an identified body."
+    is imod:Process of physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0031",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.physical.json"
+)
+event FragmentationEpisode
+    "A bounded occurrence in which an identified material body separates into pieces under stated continuity criteria.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0032",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.physical.json"
+)
+mass BodyMass
+    "Mass of an identified material body under the stated measurement support."
+    is imod:Mass of physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0033",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.physical.json"
+)
+temperature BodyTemperature
+    "Thermodynamic temperature of an identified material body at the stated observational support."
+    is imod:Temperature of physical:MaterialBody;

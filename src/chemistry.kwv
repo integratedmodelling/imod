@@ -90,3 +90,121 @@ process Reduction
 
 process Dissolution
     "Formation of a homogeneous solution phase through the mixing of initially distinct phases.";
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0003",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+)
+thing PhasePortion
+    "An individuated material portion uniform in composition and physical state at the stated observational scale."
+    is physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0004",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+)
+thing SolutionPortion
+    "An individuated material phase portion bearing the existing solution identity."
+    is chemistry:Solution chemistry:PhasePortion;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0005",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+)
+abstract quantity AmountConcentration
+    "Amount of a specified constituent per volume of its identified mixture support.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0006",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+)
+abstract quantity MassFraction
+    "Mass of a specified constituent divided by total mass of the same mixture support."
+    is imod:Proportion;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0007",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+)
+abstract quantity PHValue
+    "A solution's hydrogen-ion activity expressed through a stated pH scale and measurement convention.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0008",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+)
+process ChemicalPrecipitation
+    "Chemical separation of solid material from an identified solution."
+    is imod:Process of chemistry:SolutionPortion;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0009",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+)
+process Adsorption
+    "Enrichment of material at an identified interface through surface interactions."
+    is imod:Process of physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0011",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+)
+event ReactionEpisode
+    "A bounded occurrence of chemical-species conversion with identified participants and segmentation criteria.";

@@ -1,0 +1,223 @@
+/**
+ * @ Sociology and Environmental Sociology
+ * 
+ * 
+ * Environmental Sociology. This discipline examines how social processes, structures, and inequalities influence 
+ * human interactions with the environment, as well as how environmental changes impact societies. It integrates 
+ * insights from sociology, ecology, economics, and political science, among others, to explore a wide range of 
+ * topics, including:
+ * 
+ * * Environmental degradation and conservation
+ * * Ecosystem services and their conservation
+ * * The social dimensions of climate change
+ * * Environmental policy and governance
+ * * The sociology of natural resources management
+ * * Environmental justice and inequalities
+ * * The cultural and social meanings of nature
+ * 
+ * Environmental sociology aims to understand the complex and reciprocal relationships between human societies and 
+ * their environments, seeking sustainable solutions to environmental challenges through a sociological lens.
+ */
+ontology sociology
+	version 1.0
+	using imod, society, physical
+	in domain imod:Sociology;
+
+/**
+ * REVIEW DRAFT 2026-10-23. Proposed; no recorded community acceptance. Not parser/semantic tested.
+ * Existing namespace above is retained. L1-L8 are semantic proposal families.
+ * An abstract root can leave relationship axes open; every concrete relation below
+ * states both. Abstractness here marks broad organizing heads, not review status.
+ */
+
+// L1 foundational. No bookkeeping, causality or group creation inferred.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0188",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/sociology.json"
+)
+abstract relationship SocialRelation
+    "An observable social connection between identified participants."
+    links imod:Agent to imod:Agent;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0189",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/sociology.json"
+)
+abstract structural relationship WorkRelation
+    "An enduring social arrangement connecting agents in the organization of work."
+    is sociology:SocialRelation;
+
+// L2 foundational; ILO19. Work is broader than paid employment.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0190",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/sociology.json"
+)
+process Work
+    "Activity performed by a person to produce goods or provide services for others or for own use."
+    is physical:Activity of society:HumanIndividual;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0191",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/sociology.json"
+)
+role Worker
+    "The contextual role of a person performing work."
+    applies to society:HumanIndividual;
+
+// L3 foundational; OSTROM. Repeated rules are distinct from an organization.
+// Owner must choose social-object/relator versus detected configuration before
+// promoting an institutional head. The narrow object proposal remains abstract.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0192",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/sociology.json"
+)
+abstract thing InstitutionalArrangement
+    "An identifiable socially recognized arrangement of rules governing specified interactions."
+    ;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0193",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/sociology.json"
+)
+event RuleAdoption
+    "A bounded occurrence in which authorized participants adopt a specified institutional rule."
+    ;
+
+// L4 useful; OSTROM; no universal intentionality or benefit axiom.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0194",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/societal/sociology.json"
+)
+process Cooperation
+    "Activity in which participants contribute actions to a specified shared undertaking."
+    is physical:Activity of imod:Agent;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0195",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/societal/sociology.json"
+)
+functional directed relationship ProvidesSupportTo
+    "An agent's delivery of specified practical assistance to another agent."
+    is sociology:SocialRelation
+    links imod:Agent to imod:Agent;
+
+// L5 useful. Rank concerns a particular judgment, never a universal trust essence.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0196",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/societal/sociology.json"
+)
+priority ReportedTrust
+    "The degree of trust expressed by a person toward an identified target under a stated elicitation convention."
+    is imod:Priority of society:HumanIndividual;
+
+// L6 useful. Mandate, extent and institutional setting belong in the observation.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0197",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/societal/sociology.json"
+)
+structural directed relationship AuthorizedRepresentativeOf
+    "An agent's recognized mandate to represent another agent within a specified institutional setting."
+    is sociology:SocialRelation
+    links imod:Agent to imod:Agent;
+
+// L7 useful; inequality is a distribution property, not an intrinsic group defect.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0198",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/societal/sociology.json"
+)
+abstract quantity DistributionInequality
+    "A numerical summary of inequality in a specified distribution among identified social participants."
+    ;
+
+// L8 useful; culture/learning gateway, not a cultural-group essentialism taxonomy.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0199",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/societal/sociology.json"
+)
+process SocialLearning
+    "Activity through which a person acquires socially transmitted practices or understandings through interaction with others."
+    is physical:Activity of society:HumanIndividual;
+
+// ReportedTrust is not simultaneously a duplicate trust relationship.
+// Its target is necessary observation support; a bare number without target fails.
+// DistributionInequality needs a named distribution bearer and dimension before
+// concrete use. No HighTrust, Disadvantaged, Powerful or Sustainable predicates.
+// SocialLearning requires stronger direct learning sources before promotion.

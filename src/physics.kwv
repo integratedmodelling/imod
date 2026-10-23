@@ -58,3 +58,97 @@ process ConvectiveHeatTransport
 
 process RadiativeEnergyTransfer
     "Transfer of energy by electromagnetic radiation.";
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0034",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.physics.json"
+)
+functional directed relationship ExertsForceOn
+    "A directed mechanical interaction from an identified exerting body to a receiving body."
+    links physical:MaterialBody to physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0035",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.physics.json"
+)
+quantity MassDensity
+    "Mass per volume of the same identified material support under a stated bulk convention."
+    is (ratio of imod:Mass to imod:Volume) of physical:MaterialBody
+    describes (ratio of imod:Mass to imod:Volume) of physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0036",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.physics.json"
+)
+abstract pressure Pressure
+    "Pressure considered as a physical quantity, pending concrete support and regime specialization.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0037",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.physics.json"
+)
+pressure MaterialPressure
+    "Pressure of an identified material support under a stated scalar pressure convention."
+    is physics:Pressure of physical:MaterialBody
+    describes physics:Pressure of physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0038",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.physics.json"
+)
+process PhaseChange
+    "Change of material phase within an identified material body."
+    is imod:Process of physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0039",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.physics.json"
+)
+process MolecularDiffusion
+    "Material redistribution attributable to molecular motion within a stated material support."
+    is imod:Process of physical:MaterialBody;

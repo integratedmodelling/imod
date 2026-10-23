@@ -1,0 +1,30 @@
+/**
+ * SUGGESTED, NOT COMMUNITY-ACCEPTED. Xtext syntax pass; semantics NOT RUN.
+ * CA1-CA3, PROPOSALS.md; W3C/OGC OWL-Time reference-system distinctions.
+ * No timer service, calendar authority or fixed elapsed-duration axiom.
+ * Existing expiration-event versus interval ambiguity remains explicit.
+ */
+ontology review.calendar
+    "Calendar-relative recurrence extension for review."
+    version 1.0
+    using imod, calendar
+    in domain imod:Physical;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0001",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.calendar.json"
+)
+identity Quarterly
+    "Recurrence at quarter boundaries under a specified calendar and anchor convention."
+    is calendar:Recurrence
+    applies to imod:Event;
+
+// CA1: no redeclaration of Day/Month/Year as temporal intervals.
+// CA2: calendar/clock/zone/anchor/boundary metadata remains evidence;
+// Quarterly neither means a fixed 90 days nor instantiates an observed event.

@@ -1,6 +1,6 @@
 ontology economics
    version 1.0
-   using imod, data, valuation
+   using imod, data, valuation, physical, society, sociology
    in domain imod:Economics;
 
 
@@ -18,3 +18,174 @@ role EconomicAsset
 abstract money MarketValue
     "Market value attributed to an economic asset."
     applies to economics:EconomicAsset imod:Subject or economics:EconomicAsset imod:Agent;
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0159",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+)
+role EconomicReportingUnit
+    "The role of an identified substantial supplying the unit boundary for economic accounts."
+    applies to (imod:Subject or imod:Agent);
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0161",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+)
+abstract process Production
+    "Activity through which an economic unit produces goods or provides services within a specified production boundary."
+    is physical:Activity of imod:Agent;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0164",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+)
+process EmploymentWork
+    "Work performed for others in exchange for pay or profit within a specified reference convention."
+    is sociology:Work;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0165",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+)
+role EmployedPerson
+    "The role of a person classified as in employment under an explicit labour-statistical convention and reference period."
+    applies to society:HumanIndividual;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0166",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+)
+structural directed relationship EmployeeOf
+    "A person's employee relationship with an identified employing agent within a stated work arrangement."
+    is sociology:WorkRelation
+    links society:HumanIndividual to imod:Agent;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0167",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+)
+duration WorkTime
+    "The duration of work performed by a person for specified work activities and observation interval."
+    is imod:Duration of society:HumanIndividual
+    describes society:HumanIndividual;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0175",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+)
+event ExchangeTransaction
+    "A bounded reciprocal exchange occurrence between identified economic parties under specified terms."
+    ;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0176",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+)
+functional directed relationship SuppliesTo
+    "An economic party's provision of specified goods or services to another party."
+    links imod:Agent to imod:Agent;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0177",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+)
+process EconomicChoice
+    "Activity through which an agent selects among identified economic alternatives within stated constraints."
+    is physical:Activity of imod:Agent;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0178",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+)
+structural directed relationship OwesTo
+    "An agent's outstanding payment obligation toward another agent under explicit terms."
+    links imod:Agent to imod:Agent;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0179",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+)
+event PaymentSettlement
+    "A bounded occurrence discharging all or a specified part of an identified payment obligation."
+    ;

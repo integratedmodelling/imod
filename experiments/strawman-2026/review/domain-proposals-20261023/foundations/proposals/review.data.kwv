@@ -1,0 +1,46 @@
+/**
+ * SUGGESTED, NOT COMMUNITY-ACCEPTED. Xtext syntax pass; semantics NOT RUN.
+ * DA1-DA4, PROPOSALS.md. NIST transformation/uncertainty sources.
+ * No new dataset, software or observation-record ontology.
+ * Reference support, ties and degenerate cases are Description/evidence duties.
+ */
+ontology review.data
+    "Small observation transformation proposals."
+    version 1.0
+    using imod, data
+    in domain imod:Knowledge;
+
+// DA2: deliberately not equals data:Ranked, whose current wording differs.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0012",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.data.json"
+)
+rescaling attribute OrdinalRanked
+    "An order-based transformation retaining ordinal position within a specified reference set and tie convention."
+    is data:Transformed
+    applies to imod:Quantity;
+
+// DA3: narrower reduction, using the established predicate pattern.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0013",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.data.json"
+)
+attribute Median
+    "Reduction to a median under an explicitly specified support and ordering convention."
+    is data:DataReduction;
+
+// DA1/DA4 are correction/evidence proposals, not executable declarations:
+// do not change Normalized, Standardized or Ranked silently;
+// do not identify statistical dispersion, uncertainty and missingness.

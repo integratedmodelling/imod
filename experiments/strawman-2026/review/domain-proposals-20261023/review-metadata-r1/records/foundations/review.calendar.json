@@ -1,0 +1,38 @@
+{
+  "record_kind": "local declaration review evidence, not a production proposal API or lifecycle policy",
+  "revision": "review-metadata-r1",
+  "source_file": "../../../foundations/proposals/review.calendar.kwv",
+  "before_sha256": "8df74b48473c5d8471b3c50ef32dde87b32b048a192f17d0afaba7b60c47c57e",
+  "current_sha256": "b55aec76113f0d9438fccd3353fca5578aecaa92e7e3d4cff6c2f3e33146c5e0",
+  "base_import_context": "../../CONTEXT.json",
+  "semantic_preservation": "Removing only the exact generated @review blocks reproduces the pre-metadata file byte-for-byte, including retained baseline declarations/comments.",
+  "technical_evidence": "../../VALIDATION.json",
+  "community_acceptance": "not_recorded",
+  "declarations": [
+    {
+      "proposal": "wv-review-20261023-0001",
+      "revision": "review-metadata-r1",
+      "qualified_name": "review.calendar:Quarterly",
+      "declaration_kind": "identity",
+      "original_source_line": 13,
+      "original_declaration": "identity Quarterly\n    \"Recurrence at quarter boundaries under a specified calendar and anchor convention.\"\n    is calendar:Recurrence\n    applies to imod:Event;",
+      "original_declaration_sha256": "483267fd200cf24c4636c9b35c933a676224b707839683e0215097dd87b1603f",
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-review-20261023-0001",
+        "revision": "review-metadata-r1",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../../review-metadata-r1/records/foundations/review.calendar.json"
+      },
+      "prior_family_context": null,
+      "prior_family_row": null,
+      "rationale_and_sources": "../../../foundations/PROPOSALS.md",
+      "status_rationale": "Experimental research with recorded open issues; no new semantic/expert review or formal controversy assessment. Exact syntax evidence is separate from conservative annotation technical_validation.",
+      "current_declaration_line": 23
+    }
+  ],
+  "technical_evidence_scope": "Exact current source hashes pass Xtext IParser syntax only; no linking, adapter, reasoner or live acceptance claimed."
+}

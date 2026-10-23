@@ -147,3 +147,65 @@ structural directed relationship SocialConnection;
 
 abstract agent SocialGroup 
 	emerges from life:SocialConnection;
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0155",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/life.json"
+)
+process Reproduction
+    "Biological activity through which living individuals produce new living individuals.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0156",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/life.json"
+)
+event OrganismDeath
+    "The bounded cessation of life of an identified living individual under stated biological criteria.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0157",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/life.json"
+)
+event Germination
+    "A bounded initiation of seed germination recognized under stated biological criteria.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0158",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/life.json"
+)
+structural directed relationship BiologicalParentOf
+    "An identified organism is a biological progenitor of another identified organism."
+    links life:Individual to life:Individual;

@@ -7,7 +7,7 @@
  */
 ontology society
 	version 1.0
-	using imod, life, agency
+	using imod, life, agency, earth, physical
 	in domain imod:Society;
 
 identity Human
@@ -50,3 +50,83 @@ abstract agent Organization
 attribute FormallyConstituted
     "Having governance and continuity established by an explicit constituting arrangement."
     applies to society:Organization;
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0183",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/society.json"
+)
+structural directed relationship OrganizationMembership
+    "An agent's recognized membership in an organization under that organization's membership criteria."
+    links imod:Agent to society:Organization;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0184",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/society.json"
+)
+structural directed relationship UsualResidenceIn
+    "A person's usual-residence connection to an identified location under a stated residence convention."
+    links society:HumanIndividual to earth:Location;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0185",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/society.json"
+)
+process ResidentialMigration
+    "A person's movement that changes usual residence under the stated residence convention."
+    is imod:Process of society:HumanIndividual;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0186",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/society.json"
+)
+structural directed relationship RecognizedParentOf
+    "A person's socially or legally recognized parental relationship to another person under an explicit recognition regime."
+    links society:HumanIndividual to society:HumanIndividual;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0187",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/society.json"
+)
+duration PersonAge
+    "Elapsed time since the birth of a human individual under the stated age convention."
+    is physical:Age of society:HumanIndividual;

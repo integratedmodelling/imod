@@ -1,0 +1,154 @@
+/**
+ * SUGGESTED, NOT COMMUNITY-ACCEPTED. Xtext syntax pass; semantics NOT RUN.
+ * CH1-CH5, PROPOSALS.md; IUPAC entity/phase/composition/adsorption/precipitation.
+ * CHEM remains the active classifier. No authority calls or equivalences added.
+ * MaterialBody parentage of a molecular individual is a review hypothesis;
+ * no mixture parthood, constituent closure or identity-loss rule is asserted.
+ */
+ontology review.chemistry
+    "Chemical material, composition and occurrence proposals."
+    version 1.0
+    using imod, physical, chemistry
+    in domain imod:Chemistry;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0002",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.chemistry.json"
+)
+thing MolecularEntity
+    "An individually distinguishable molecular entity at a stated constitutional, isotopic and observational precision."
+    is physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0003",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.chemistry.json"
+)
+thing PhasePortion
+    "An individuated material portion uniform in composition and physical state at the stated observational scale."
+    is physical:MaterialBody;
+
+// CH1: composition reuses the existing mixture identity; no second classifier.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0004",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.chemistry.json"
+)
+thing SolutionPortion
+    "An individuated material phase portion bearing the existing solution identity."
+    is chemistry:Solution review.chemistry:PhasePortion;
+
+// CH2: abstract pending constituent, denominator and solution-scale bindings.
+// Intended unit evidence: mol/m3, explicit unit one, and logarithmic pH convention.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0005",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.chemistry.json"
+)
+abstract quantity AmountConcentration
+    "Amount of a specified constituent per volume of its identified mixture support.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0006",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.chemistry.json"
+)
+abstract quantity MassFraction
+    "Mass of a specified constituent divided by total mass of the same mixture support."
+    is imod:Proportion;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0007",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.chemistry.json"
+)
+abstract quantity PHValue
+    "A solution's hydrogen-ion activity expressed through a stated pH scale and measurement convention.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0008",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.chemistry.json"
+)
+process ChemicalPrecipitation
+    "Chemical separation of solid material from an identified solution."
+    is imod:Process of review.chemistry:SolutionPortion;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0009",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.chemistry.json"
+)
+process Adsorption
+    "Enrichment of material at an identified interface through surface interactions."
+    is imod:Process of physical:MaterialBody;
+
+// Optional narrower bound-state relation, not a universal synonym of adsorption.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0010",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.chemistry.json"
+)
+structural directed relationship SurfaceBoundTo
+    "An observed bound-state connection from a molecular entity to a surface-bearing material body."
+    links review.chemistry:MolecularEntity to physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0011",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.chemistry.json"
+)
+event ReactionEpisode
+    "A bounded occurrence of chemical-species conversion with identified participants and segmentation criteria.";
+

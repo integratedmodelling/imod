@@ -20,5 +20,118 @@
  */
 ontology sociology
 	version 1.0
-	using imod, society
+	using imod, society, physical
 	in domain imod:Sociology;
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0188",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/sociology.json"
+)
+abstract relationship SocialRelation
+    "An observable social connection between identified participants."
+    links imod:Agent to imod:Agent;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0189",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/sociology.json"
+)
+abstract structural relationship WorkRelation
+    "An enduring social arrangement connecting agents in the organization of work."
+    is sociology:SocialRelation;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0190",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/sociology.json"
+)
+process Work
+    "Activity performed by a person to produce goods or provide services for others or for own use."
+    is physical:Activity of society:HumanIndividual;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0191",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/sociology.json"
+)
+role Worker
+    "The contextual role of a person performing work."
+    applies to society:HumanIndividual;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0193",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/sociology.json"
+)
+event RuleAdoption
+    "A bounded occurrence in which authorized participants adopt a specified institutional rule."
+    ;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0194",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/sociology.json"
+)
+process Cooperation
+    "Activity in which participants contribute actions to a specified shared undertaking."
+    is physical:Activity of imod:Agent;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0195",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/sociology.json"
+)
+functional directed relationship ProvidesSupportTo
+    "An agent's delivery of specified practical assistance to another agent."
+    is sociology:SocialRelation
+    links imod:Agent to imod:Agent;

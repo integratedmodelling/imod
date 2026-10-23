@@ -1,0 +1,350 @@
+ontology economics
+   version 1.0
+   using imod, data, valuation, society, sociology, physical
+   in domain imod:Economics;
+
+
+
+role EconomicAsset 
+	is valuation:Asset;
+
+/**
+ * ## Market value
+ *
+ * MarketValue names the abstract monetary valuation of an economic asset.
+ * Its applicability includes assets borne by subjects and agents, connecting
+ * this economic perspective to the broader asset vocabulary of valuation.
+ */
+abstract money MarketValue
+    "Market value attributed to an economic asset."
+    applies to economics:EconomicAsset imod:Subject or economics:EconomicAsset imod:Agent;
+
+/**
+ * REVIEW DRAFT 2026-10-23. Proposed; no recorded community acceptance. Not parser/semantic tested.
+ * Existing EconomicAsset and abstract MarketValue above are retained unchanged.
+ * E1-E8 articulate first-level meanings; SNA2025 is a measurement standard,
+ * not an authority that decides all observable categories or current legal status.
+ */
+
+// E1 foundational. Reporting role does not imply an Agent or legal entity.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0159",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+role EconomicReportingUnit
+    "The role of an identified substantial supplying the unit boundary for economic accounts."
+    applies to (imod:Subject or imod:Agent);
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0160",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+abstract thing EconomicAccountingAggregate
+    "An identifiable aggregation of economic units delimited by an explicit accounting boundary and continuity convention."
+    ;
+
+// E2 foundational; production/consumption are occurrences, amounts are qualities.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0161",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+abstract process Production
+    "Activity through which an economic unit produces goods or provides services within a specified production boundary."
+    is physical:Activity of imod:Agent;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0162",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+abstract process Consumption
+    "Use of goods or services by an economic unit under an explicit final or intermediate consumption reading."
+    is imod:Process of (imod:Subject or imod:Agent);
+
+// E3 foundational; workers may hold multiple jobs, jobs are not persons.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0163",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+thing Job
+    "An identifiable set of tasks and duties performed or intended for one person for a single economic unit in employment."
+    ;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0164",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+process EmploymentWork
+    "Work performed for others in exchange for pay or profit within a specified reference convention."
+    is sociology:Work;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0165",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+role EmployedPerson
+    "The role of a person classified as in employment under an explicit labour-statistical convention and reference period."
+    applies to society:HumanIndividual;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0166",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+structural directed relationship EmployeeOf
+    "A person's employee relationship with an identified employing agent within a stated work arrangement."
+    is sociology:WorkRelation
+    links society:HumanIndividual to imod:Agent;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0167",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+duration WorkTime
+    "The duration of work performed by a person for specified work activities and observation interval."
+    is imod:Duration of society:HumanIndividual;
+
+// E4 foundational; do not infer welfare or wealth from GDP.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0168",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+abstract money GrossDomesticProduct
+    "The monetary measure of production within a domestic accounting boundary over a reference interval under a specified national-accounting convention."
+    is imod:MonetaryValue of economics:EconomicAccountingAggregate;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0169",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+abstract money NetWorth
+    "The monetary balance of an identified unit's assets and liabilities at a reference instant under a stated accounting convention."
+    is imod:MonetaryValue of (imod:Subject or imod:Agent);
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0170",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+abstract money DisposableIncome
+    "The monetary amount available to a unit for consumption and saving over an interval under a specified income-accounting convention."
+    is imod:MonetaryValue of (imod:Subject or imod:Agent);
+
+// E5 foundational. Inflation, an index and an interval rate remain distinct.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0171",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+abstract process Inflation
+    "A sustained rise in the general price level within an explicitly delimited economic scope."
+    is imod:Process of economics:EconomicAccountingAggregate;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0172",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+abstract quantity ConsumerPriceIndex
+    "An index of consumer price change for a specified household consumption scope under explicit basket, weight and reference conventions."
+    is imod:Quantity of economics:EconomicAccountingAggregate;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0173",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+abstract quantity ConsumerPriceChangeRate
+    "The relative change in a specified consumer price index between explicit reference times."
+    is imod:Quantity of economics:EconomicAccountingAggregate;
+
+// E6 useful. Market is an institutional interaction setting; category still open.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0174",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+abstract thing MarketArrangement
+    "An identifiable institutional arrangement enabling offers and exchanges of specified goods or services among participants."
+    ;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0175",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+event ExchangeTransaction
+    "A bounded reciprocal exchange occurrence between identified economic parties under specified terms."
+    ;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0176",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+functional directed relationship SuppliesTo
+    "An economic party's provision of specified goods or services to another party."
+    links imod:Agent to imod:Agent;
+
+// E7 useful. Choice need not optimize; purchase alone does not prove preference.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0177",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+process EconomicChoice
+    "Activity through which an agent selects among identified economic alternatives within stated constraints."
+    is physical:Activity of imod:Agent;
+
+// E8 useful. Financial obligation is distinct from payment and asset title.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0178",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+structural directed relationship OwesTo
+    "An agent's outstanding payment obligation toward another agent under explicit terms."
+    links imod:Agent to imod:Agent;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0179",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/societal/economics.json"
+)
+event PaymentSettlement
+    "A bounded occurrence discharging all or a specified part of an identified payment obligation."
+    ;
+
+// Self-employment uses EmploymentWork plus worker/economic-unit context, never
+// EmployeeOf linking a person to themself. Job does not imply an employing Agent.
+// No automatic persons/jobs/hours aggregation, legal status, optimum, causality,
+// configuration creation, confers clause, accounting formula or resolution strategy.

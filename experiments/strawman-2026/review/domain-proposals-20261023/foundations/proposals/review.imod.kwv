@@ -1,0 +1,68 @@
+/**
+ * SUGGESTED, NOT COMMUNITY-ACCEPTED. Xtext syntax pass; semantics NOT RUN.
+ * Packet IM1 in ../PROPOSALS.md; provenance: current context-pack relationship
+ * contract and active imod 556f3562. Optional authoring conveniences only.
+ * No new upper ontology or direct core imports. Concrete descendants must settle
+ * both independent axes. No endpoint or runtime defaults are implied.
+ */
+ontology review.imod
+    "Optional shared relationship-axis heads for review."
+    version 1.0
+    using imod
+    in domain imod:Knowledge;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0023",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.imod.json"
+)
+abstract structural relationship StructuralConnection
+    "A relationship observed through its structural nature, with orientation left to specializations."
+    is imod:Relationship;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0024",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.imod.json"
+)
+abstract functional relationship FunctionalConnection
+    "A relationship observed through interaction, with orientation left to specializations."
+    is imod:Relationship;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0025",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.imod.json"
+)
+abstract directed relationship DirectedConnection
+    "A relationship whose source and target are ordered, with nature left to specializations."
+    is imod:Relationship;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0026",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.imod.json"
+)
+abstract bond BondConnection
+    "A relationship with unordered participants, with nature left to specializations."
+    is imod:Relationship;

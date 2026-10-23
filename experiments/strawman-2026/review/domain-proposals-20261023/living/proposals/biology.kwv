@@ -1,0 +1,191 @@
+/* REVIEW DRAFT, 2026-10-23. NO RECORDED COMMUNITY ACCEPTANCE.
+ * Full replacement overlay for the same-named baseline namespace, not an additional
+ * namespace to load alongside it. Existing declarations above the review divider
+ * are baseline context, not newly proposed approvals. See PROPOSALS.md for evidence,
+ * priorities, alternatives, bearer/endpoint contracts and discriminating tests.
+ * Owner discussion/incorporation is distinct from community acceptance.
+ * Status uses ordinary comments pending the common cross-domain annotation convention.
+ * Parser results are in VALIDATION.md; no linking/reasoner/runtime acceptance claimed.
+ */
+ontology biology
+	version 1.0
+	using imod, life, physical
+	in domain imod:Biology;
+
+/**
+ * ## Biological synthesis and membrane transfer
+ *
+ * Photosynthesis uses light in biological synthesis of energy-rich compounds.
+ * Its meaning is not restricted to plants, oxygen production or one biochemical
+ * pathway. MembraneTransport moves material across a biological membrane; the
+ * transported substance, direction and mode of transfer distinguish particular
+ * observations.
+ *
+ * A living individual and a portion of biological material have distinct
+ * identities. Describing either process does not determine whether a cell or
+ * organ is observed as an individual, a material structure or another kind of
+ * entity. Models describe the participants, rates and conditions. Process names
+ * alone do not establish a growth outcome or a newly instantiated organism.
+ */
+process Photosynthesis
+    "Biological synthesis of energy-rich compounds using light energy.";
+
+process MembraneTransport
+    "Transfer of material across a biological membrane.";
+
+// ===== NEW REVIEW PROPOSALS BELOW; BASELINE CONTEXT ABOVE =====
+
+// PROPOSED B1: structural focus, not a claim that the membrane is an organism.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0113",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/biology.json"
+)
+abstract thing BiologicalMembrane
+    "An identified biological membrane separating specified material compartments."
+    is physical:MaterialBody;
+
+// PROPOSED B2: physiological families; no guaranteed growth or product creation.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0114",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/biology.json"
+)
+abstract process Metabolism
+    "Biological transformation of chemical substances through organized biochemical reactions.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0115",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/biology.json"
+)
+process CellularRespiration
+    "Cellular release of usable energy through respiratory biochemical reactions."
+    is biology:Metabolism;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0116",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/biology.json"
+)
+process BiologicalGrowth
+    "Biological increase in the size of an identified living entity under a stated size criterion.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0117",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/biology.json"
+)
+process Development
+    "Biological change through an organized developmental course.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0118",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/biology.json"
+)
+process CellDifferentiation
+    "Development in which a cell acquires specialized structural or functional features."
+    is biology:Development;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0119",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/biology.json"
+)
+process TissueRepair
+    "Biological restoration of damaged tissue organization or function.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0120",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/biology.json"
+)
+process BiologicalRegulation
+    "Biological modulation of an identified biological process or condition.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0121",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/biology.json"
+)
+process BiologicalMovement
+    "Movement generated through the activity of a living individual.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0122",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/biology.json"
+)
+event CellDivision
+    "A bounded division of an identified cell into daughter cells.";
+
+// PROPOSED B3: observable signal transmission, not inferred intention.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0123",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/biology.json"
+)
+functional directed relationship SignalsTo
+    "A biological individual transmits a signal to another biological individual."
+    links life:Individual to life:Individual;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0124",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/biology.json"
+)
+structural bond CellAdhesion
+    "Two structurally observed cellular bodies are physically adherent."
+    links life:CellularBody to life:CellularBody;

@@ -1,0 +1,54 @@
+{
+  "revision": "strawman-integration-r1",
+  "base_commit": "556f3562aad44ead96d2b1e646a67664901e1fc5",
+  "source_file": "../../../../../src/calendar.kwv",
+  "candidate_source_sha256": "4d8d939c6f68bd19cf441fd3e77b1bd9e9fe384446e3f230d0c58b39f4dd535e",
+  "community_acceptance": "not_recorded",
+  "all_original_proposals": [
+    {
+      "proposal": "wv-review-20261023-0001",
+      "revision": "review-metadata-r1",
+      "qualified_name": "review.calendar:Quarterly",
+      "declaration_kind": "identity",
+      "original_source_line": 13,
+      "original_declaration": "identity Quarterly\n    \"Recurrence at quarter boundaries under a specified calendar and anchor convention.\"\n    is calendar:Recurrence\n    applies to imod:Event;",
+      "original_declaration_sha256": "483267fd200cf24c4636c9b35c933a676224b707839683e0215097dd87b1603f",
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-review-20261023-0001",
+        "revision": "review-metadata-r1",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../../review-metadata-r1/records/foundations/review.calendar.json"
+      },
+      "prior_family_context": null,
+      "prior_family_row": null,
+      "rationale_and_sources": "../../../foundations/PROPOSALS.md",
+      "status_rationale": "Experimental research with recorded open issues; no new semantic/expert review or formal controversy assessment. Exact syntax evidence is separate from conservative annotation technical_validation.",
+      "current_declaration_line": 23,
+      "packet_key": "foundations/review.calendar",
+      "original_record": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-23\\domain-reviews\\review-metadata-r1\\records\\foundations\\review.calendar.json",
+      "canonical_namespace": "calendar",
+      "canonical_name": "calendar:Quarterly",
+      "disposition": "include",
+      "reason": "Narrow explicitly defined proposal; no unresolved upstream choice selected. Experimental and subject to validation.",
+      "integrated_declaration": "identity Quarterly\n    \"Recurrence at quarter boundaries under a specified calendar and anchor convention.\"\n    is calendar:Recurrence\n    applies to imod:Event;",
+      "integration_changes": [],
+      "integrated_annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-review-20261023-0001",
+        "revision": "strawman-integration-r1",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../docs/reviews/domain-integration-20261023/records/foundations/review.calendar.json"
+      }
+    }
+  ],
+  "review_status": "Inclusion is experimental conditional local integration, not community acceptance; hold is not rejection.",
+  "rationale_snapshot": "../../rationale/foundations-PROPOSALS.md",
+  "prior_record_fields": "Fields copied inside all_original_proposals retain their original pre-integration packet context; current evidence is source_file and rationale_snapshot here."
+}

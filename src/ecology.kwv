@@ -24,3 +24,133 @@ abstract agent Community
  */
 process Herbivory
     "Consumption of plant material by an organism.";
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0129",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/ecology.json"
+)
+process Predation
+    "Consumption of prey organisms by predator organisms.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0130",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/ecology.json"
+)
+process EcologicalDispersal
+    "Movement of biological individuals or propagules between ecological locations.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0131",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/ecology.json"
+)
+process Colonization
+    "Establishment of biological individuals in a newly occupied ecological location.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0132",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/ecology.json"
+)
+process Succession
+    "Directional change in ecological community composition through time.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0133",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/ecology.json"
+)
+event LocalExtirpation
+    "A bounded disappearance of an identified population from a specified locality.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0134",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/ecology.json"
+)
+event Recruitment
+    "A bounded addition of individuals to a population under stated entry criteria.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0137",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/ecology.json"
+)
+abstract identity EcosystemType
+    "A classification of ecosystems in a named versioned ecosystem typology.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0138",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/ecology.json"
+)
+quantity PopulationAbundance
+    "Number of individuals belonging to an identified population at the stated observation support."
+    is imod:Numerosity of ecology:Population
+    describes ecology:Population;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0139",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/ecology.json"
+)
+quantity SpeciesRichness
+    "Number of distinct species identities represented in a community under stated inclusion criteria."
+    is imod:Numerosity of ecology:Community
+    describes ecology:Community;

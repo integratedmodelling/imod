@@ -8,7 +8,7 @@
  */
 ontology agency
 	version 1.0
-    using imod
+    using imod, physical
     in domain imod:Agency;
      
 attribute Intentional
@@ -98,3 +98,93 @@ abstract attribute Appropriateness
      has children 
      Appropriate, 
      Inappropriate;
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0090",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/agency.json"
+)
+process ChoiceMaking
+    "Intentional activity of considering alternatives in forming a choice."
+    is agency:Intentional physical:Activity;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0091",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/agency.json"
+)
+event ChoiceCommitment
+    "A bounded commitment by an agent to an identified choice.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0092",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/agency.json"
+)
+process Negotiation
+    "Activity in which agents seek an agreement through interaction."
+    is physical:Activity;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0093",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/agency.json"
+)
+process CollectiveCoordination
+    "Activity through which agents coordinate their actions."
+    is physical:Activity;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0098",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/agency.json"
+)
+event ConsentGrant
+    "A bounded granting of consent by an agent for an identified action.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0099",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/agency.json"
+)
+event ConsentWithdrawal
+    "A bounded withdrawal by an agent of consent for an identified action.";

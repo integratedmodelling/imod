@@ -1,0 +1,31 @@
+{
+  "base_commit": "556f3562aad44ead96d2b1e646a67664901e1fc5",
+  "active_additions": 125,
+  "review_only_held": 82,
+  "total_proposals": 207,
+  "active_ontologies": 26,
+  "grammar": "26 pass",
+  "document_notifications": 0,
+  "actual_project_storage_excludes_review_area": true,
+  "logical_status": "VALID",
+  "owl_consistent": true,
+  "unsatisfiable": [],
+  "regression_checks": 25,
+  "baseline_diagnostics_unchanged": [
+    "Inconsistent worldview: can't establish the fundamental type for core concept imod:Quality (odo:Quality)",
+    "Inconsistent worldview: can't establish the fundamental type for core concept imod:Time (odo:Time)",
+    "Inconsistent worldview: can't establish the fundamental type for core concept imod:Space (odo:Space)",
+    "DESCRIPTION_BEARER_UNRESOLVED: imod:PhysicalPhenomena describes imod:PhysicalSystem [CONFIGURATION] : INDEPENDENT_TARGET_UNRESOLVED",
+    "DESCRIPTION_BEARER_UNRESOLVED: imod:Earth describes imod:EarthSystem [CONFIGURATION] : INDEPENDENT_TARGET_UNRESOLVED",
+    "DESCRIPTION_BEARER_UNRESOLVED: physical:Period describes physical:Frequency [OBSERVABLE, QUALITY, ABSTRACT, NUMEROSITY, QUANTIFIABLE] : UNRESOLVED: no established universal bearer contribution"
+  ],
+  "network": "denied by existing harness; zero attempts verified",
+  "community_acceptance": "not_recorded",
+  "limitations": [
+    "Frozen compiled harness, not live service validation",
+    "Captured LAND authority component; WRB not installed or tested",
+    "No new observable data/model validation for every proposed concept",
+    "Historical RESULTS baseline label is overridden by REASONER_RECEIPT actual baseline",
+    "No governance policy enforcement or arbitrary review-metadata OWL reload claim"
+  ]
+}
