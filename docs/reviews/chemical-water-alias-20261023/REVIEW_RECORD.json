@@ -62,5 +62,19 @@
   "independent_review": "Independent r4 approval: no blocking findings.62 baseline/81 combined checks, all26 source hashes, unchanged6diagnostics,zero unsatisfiable,cellular preservation,document/grammar/storage exclusion and alias/interface/freshOWL roundtrips verified. No environmental equivalence/main-constituent inference; community acceptance not_recorded.",
   "this_increment_additions": 1,
   "base_active_on_a3c73da": 134,
-  "publication_total": "One chemical alias addition; no claim of community acceptance"
+  "publication_total": "One chemical alias addition; no claim of community acceptance",
+  "namespace_policy": {
+    "status": "Steering clarification; future migration, not community acceptance or implemented storage",
+    "current_alias": "chemistry:Water",
+    "current_placement": "Temporary Tier-1 placement",
+    "target_example": "chemistry.compounds:Water",
+    "target_tier": 2,
+    "condition": "Persistent curated codelist storage and validated semantic publication are available",
+    "canonical_identity": "CHEM:CID_962; canonical provider ID CID:962",
+    "invariant": "Preserve the existing PubChem identity; namespace relocation is not creation of a second independent identity",
+    "core_policy": "Tier-1 core namespaces should not accumulate chemical compound aliases",
+    "migration_not_performed": true,
+    "remaining_design": "Concrete codelist binding, source-reference compatibility/deprecation and snapshot migration must be designed and tested separately",
+    "evidence": "User steering, October23: When we can have persistent codelist storage we will move chemistry:Water to a Tier-2 codelist, e.g. chemistry.compounds:Water; aliases in core Tier-1 namespaces are bad practice."
+  }
 }
