@@ -28,12 +28,23 @@ thing Planet;
 identity Earth
 	applies to earth:Planet;
 
-thing Region 
-	"An Earth Region is a section of the Earth realm delimited in volumetric space, 
-	 including the surface, the soil and the atmospheric bottom layer. It applies to both
-	 land and sea - anywhere on Earth - and should be qualified as necessary when
-	 used."
-	 is imod:Areal earth:Location;
+/**
+ * ## Areal geographic support
+ *
+ * Region is a geographic convention for delimiting an area for two-dimensional
+ * analysis, as in GIS. Its Areal identity is retained. Land and sea regions may
+ * both be represented; the region is distinct from the material occupying it.
+ * A surface restriction, when required, is a realm choice with its own within-realm
+ * requirement. No generic Surface realm or new surface subject is introduced here.
+ *
+ * Elevation over a two-dimensional support can inform computations with
+ * three-dimensional scope. The term 2.5D describes a geometry/model representation
+ * artifice, not a worldview identity, realm or subject. Observational containment
+ * does not by itself establish spatial enclosure, coverage or mereology.
+ */
+thing Region
+    "A geographically delimited area used as a conventional support for two-dimensional analysis on Earth, on land or at sea."
+    is imod:Areal earth:Location;
 
 thing Site
 	"An Earth location represented as a point."

@@ -24,3 +24,50 @@ process OverlandFlow
 
 process Infiltration
     "Entry of liquid water from the ground surface into the underlying ground.";
+
+
+/**
+ * ## Areal analysis extension
+ *
+ * These experimental observations use the existing Areal Region convention.
+ * Delineation, ground support and reference conventions remain observational
+ * requirements; no new surface realm or automatic containment is inferred.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0062",
+    revision="region-areal-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/region-areal-20261023/REVIEW_RECORD.json"
+)
+thing SurfaceCatchment
+    "A surface region delineated by drainage toward one specified outlet under a stated convention."
+    is earth:Region;
+
+
+/**
+ * ## Areal analysis extension
+ *
+ * These experimental observations use the existing Areal Region convention.
+ * Delineation, ground support and reference conventions remain observational
+ * requirements; no new surface realm or automatic containment is inferred.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0063",
+    revision="region-areal-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/region-areal-20261023/REVIEW_RECORD.json"
+)
+area CatchmentArea
+    "Horizontal area of the delineated surface catchment."
+    is imod:Area of hydrology:SurfaceCatchment
+    describes hydrology:SurfaceCatchment;

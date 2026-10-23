@@ -45,3 +45,8 @@ boundary now integrated on `worldview/strawman-2026`. It supersedes earlier prov
 root/domain proposals only where explicitly stated; other open questions and prior
 review history remain preserved. This local source integration is not a master merge
 or remote publication.
+
+
+## 2026-10-23 Region Areal clarification
+
+The [steering clarification](docs/decisions/2026-10-23-region-areal.md) corrects volumetric prose while retaining Areal semantics; surface is a realm choice and 2.5D belongs to representation documentation. It does not assert community-wide acceptance.
