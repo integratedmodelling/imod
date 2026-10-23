@@ -1,0 +1,39 @@
+WARNING: A terminally deprecated method in java.lang.System has been called
+WARNING: System::setSecurityManager has been called by org.integratedmodelling.klab.services.reasoner.internal.M49FixtureAudit (file:/C:/Users/Ferd/Documents/Codex/2026-10-20/task-2/land-entry-example/integrated-source-classes/)
+WARNING: Please consider reporting this to the maintainers of org.integratedmodelling.klab.services.reasoner.internal.M49FixtureAudit
+WARNING: System::setSecurityManager will be removed in a future release
+WARNING: A Java agent has been loaded dynamically (C:\Users\Ferd\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.5\byte-buddy-agent-1.17.5.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+Oct 23, 2026 11:17:47 AM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+Exception in thread "main" java.lang.UnsupportedOperationException: CANDIDATE_ISOLATION_UNSUPPORTED: uncaptured provider response for CHEM: [identity, , CID_962]
+	at org.integratedmodelling.klab.services.reasoner.internal.CapturedAuthorityCatalog.unresolved(CapturedAuthorityCatalog.java:527)
+	at org.integratedmodelling.klab.services.reasoner.internal.CapturedAuthorityCatalog$Snapshot.response(CapturedAuthorityCatalog.java:445)
+	at org.integratedmodelling.klab.services.reasoner.internal.CapturedAuthorityCatalog$Snapshot.resolveIdentity(CapturedAuthorityCatalog.java:486)
+	at org.integratedmodelling.klab.services.reasoner.internal.CapturedAuthorityCatalog$Snapshot.resolveIdentity(CapturedAuthorityCatalog.java:482)
+	at org.integratedmodelling.klab.services.reasoner.internal.CachedAuthority.resolve(CachedAuthority.java:128)
+	at org.integratedmodelling.klab.services.reasoner.internal.CachedAuthority.resolveIdentity(CachedAuthority.java:100)
+	at org.integratedmodelling.klab.services.reasoner.internal.AuthorityIdentityResolver.collect(AuthorityIdentityResolver.java:197)
+	at org.integratedmodelling.klab.services.reasoner.internal.AuthorityIdentityResolver.resolve(AuthorityIdentityResolver.java:50)
+	at org.integratedmodelling.klab.services.reasoner.internal.AuthorityIdentityResolver.resolve(AuthorityIdentityResolver.java:33)
+	at org.integratedmodelling.klab.services.reasoner.ReasonerService.lambda$new$8(ReasonerService.java:889)
+	at org.integratedmodelling.klab.services.reasoner.owl.OWL.getConcept(OWL.java:482)
+	at org.integratedmodelling.klab.services.reasoner.ReasonerService.compileInternal(ReasonerService.java:3959)
+	at org.integratedmodelling.klab.services.reasoner.ReasonerService.declareInternal(ReasonerService.java:3949)
+	at org.integratedmodelling.klab.services.reasoner.ReasonerService.declare(ReasonerService.java:3941)
+	at org.integratedmodelling.klab.services.reasoner.ReasonerService.declareConcept(ReasonerService.java:2880)
+	at org.integratedmodelling.klab.services.reasoner.ReasonerService.installAlias(ReasonerService.java:3425)
+	at org.integratedmodelling.klab.services.reasoner.ReasonerService.compileStagedOntologies(ReasonerService.java:3509)
+	at org.integratedmodelling.klab.services.reasoner.ReasonerService.compileStagedOntologies(ReasonerService.java:3459)
+	at org.integratedmodelling.klab.services.reasoner.ReasonerService.loadKnowledge(ReasonerService.java:2430)
+	at org.integratedmodelling.klab.services.reasoner.ReasonerService.loadKnowledgeEntry(ReasonerService.java:2341)
+	at org.integratedmodelling.klab.services.reasoner.ReasonerService.compilePrivateKnowledge(ReasonerService.java:2292)
+	at org.integratedmodelling.klab.services.reasoner.internal.SemanticEnvironmentFactory.buildCaptured(SemanticEnvironmentFactory.java:406)
+	at org.integratedmodelling.klab.services.reasoner.internal.SemanticEnvironmentFactory.build(SemanticEnvironmentFactory.java:267)
+	at org.integratedmodelling.klab.services.reasoner.internal.WaterWorldCheck.main(WaterWorldCheck.java:18)

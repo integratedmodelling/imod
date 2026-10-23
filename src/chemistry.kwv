@@ -208,3 +208,18 @@ process Adsorption
 )
 event ReactionEpisode
     "A bounded occurrence of chemical-species conversion with identified participants and segmentation criteria.";
+
+
+/**
+ * ## Chemical water identity alias validation candidate
+ *
+ * This alias is the chemical H2O identity, not environmental earth:Water.
+ * No main-constituent, mixture or material classification rule follows.
+ */
+@review(schema="klab.review/1", proposal="wv-water-20261023-0003",
+    revision="chemical-alias-validation-r3", maturity="experimental",
+    controversy="unassessed", technical_validation="not_recorded",
+    community_acceptance="not_recorded", review_record="../docs/reviews/chemical-water-alias-20261023/REVIEW_RECORD.json")
+identity Water
+    "The chemical H2O identity, distinct from environmental water material."
+    equals CHEM:CID_962;
