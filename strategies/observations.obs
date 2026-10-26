@@ -119,6 +119,8 @@ strategy 1 named quality.split.predicate
 // The transformer graph declares an open base-input port, bound by transform.
 // Missing/ambiguous ports reject the candidate; recursive resolution must make progress.
 // Semantic-update strategies: enabled for execution after the operation-target runtime milestone.
+// Qualified collective inputs use this same member producer after Services normalization.
+// See docs/decisions/2026-10-26-classification-resolution.md for the paired runtime contract.
 strategy 0 named classification.members
   for pattern {
     node {
@@ -126,7 +128,6 @@ strategy 0 named classification.members
       inherent = capture members as node { collective = true; };
     }
   }
-  ensure context.exists()
   resolve $members to cohort
   observe $this with inputs(members = cohort);
 
