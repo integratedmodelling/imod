@@ -1,0 +1,62 @@
+{
+  "record_kind": "local declaration review evidence, not a production proposal API or lifecycle policy",
+  "revision": "review-metadata-r1",
+  "source_file": "../../../foundations/proposals/review.data.kwv",
+  "before_sha256": "2bdc85df0e5b563f0f85f74a910d341f716b035f0dc729bf3c3960e04b8e664f",
+  "current_sha256": "5d893256e6ddeeb79d001419367b7b23ce2550d77153491f451a1789eb37a4de",
+  "base_import_context": "../../CONTEXT.json",
+  "semantic_preservation": "Removing only the exact generated @review blocks reproduces the pre-metadata file byte-for-byte, including retained baseline declarations/comments.",
+  "technical_evidence": "../../VALIDATION.json",
+  "community_acceptance": "not_recorded",
+  "declarations": [
+    {
+      "proposal": "wv-review-20261023-0012",
+      "revision": "review-metadata-r1",
+      "qualified_name": "review.data:OrdinalRanked",
+      "declaration_kind": "rescaling attribute",
+      "original_source_line": 14,
+      "original_declaration": "rescaling attribute OrdinalRanked\n    \"An order-based transformation retaining ordinal position within a specified reference set and tie convention.\"\n    is data:Transformed\n    applies to imod:Quantity;",
+      "original_declaration_sha256": "15c33f57c217470783eb6911719989ad03b39e69245ea6a7e6479e00c1ad1d88",
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-review-20261023-0012",
+        "revision": "review-metadata-r1",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../../review-metadata-r1/records/foundations/review.data.json"
+      },
+      "prior_family_context": "DA2",
+      "prior_family_row": "| DA2 F Q | Separate ordinal rank from existing Ranked prose, which promises proportionality. Candidate OrdinalRanked attribute on Quantity; ties/reference set/order direction must be stated. | Positive: ranks preserve order under monotonic changes. Negative: rank differences are not magnitude differences or proportional ratios; equal rank under ties does not prove equal native value. | Current Ranked and root Priority/Level; S17 only supports transformation background, ordinal distinction is this packet's explicit design test. Do not silently change Ranked semantics or declare alias equality. |",
+      "rationale_and_sources": "../../../foundations/PROPOSALS.md",
+      "status_rationale": "Experimental research with recorded open issues; no new semantic/expert review or formal controversy assessment. Exact syntax evidence is separate from conservative annotation technical_validation.",
+      "current_declaration_line": 24
+    },
+    {
+      "proposal": "wv-review-20261023-0013",
+      "revision": "review-metadata-r1",
+      "qualified_name": "review.data:Median",
+      "declaration_kind": "attribute",
+      "original_source_line": 20,
+      "original_declaration": "attribute Median\n    \"Reduction to a median under an explicitly specified support and ordering convention.\"\n    is data:DataReduction;",
+      "original_declaration_sha256": "d97339fa52a9b482f62c874cb3825e3c79c53f71c3ade57ee6a5b8c16eccfda1",
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-review-20261023-0013",
+        "revision": "review-metadata-r1",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../../review-metadata-r1/records/foundations/review.data.json"
+      },
+      "prior_family_context": "DA3",
+      "prior_family_row": "| DA3 U P | Median as data-reduction attribute alongside Mean/Minimum/Maximum. Weighted mean remains a Description convention until weights/support and eligibility are specified. | Positive: median of 1,2,100 is 2, distinct from mean. Negative: summing temperatures is not an admissible mean; an unweighted median cannot stand in for a weighted estimator. | Current DataReduction pattern; statistical definition supplied directly by discriminating example, not a new domain theory. Additive result support and intensive/extensive handling need validation. New head, no matching bootstrap data dossier found. |",
+      "rationale_and_sources": "../../../foundations/PROPOSALS.md",
+      "status_rationale": "Experimental research with recorded open issues; no new semantic/expert review or formal controversy assessment. Exact syntax evidence is separate from conservative annotation technical_validation.",
+      "current_declaration_line": 40
+    }
+  ],
+  "technical_evidence_scope": "Exact current source hashes pass Xtext IParser syntax only; no linking, adapter, reasoner or live acceptance claimed."
+}

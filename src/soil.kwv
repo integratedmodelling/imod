@@ -96,3 +96,42 @@ process SoilCompaction
 
 process SoilLeaching
     "Transport of dissolved constituents out of an identified soil volume by water moving through it.";
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0087",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/earth/soil.json"
+)
+quantity ClayFraction
+    "Dry-mass fraction of a specified soil particle population assigned to clay under a stated size convention."
+    is imod:Proportion of soil:SoilBody
+    describes soil:SoilBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0088",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/earth/soil.json"
+)
+quantity OrganicMatterFraction
+    "Organic-matter fraction of the identified soil body under a stated material and mass basis."
+    is imod:Proportion of soil:SoilBody
+    describes soil:SoilBody;

@@ -23,3 +23,145 @@ process Photosynthesis
 
 process MembraneTransport
     "Transfer of material across a biological membrane.";
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0114",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/biology.json"
+)
+abstract process Metabolism
+    "Biological transformation of chemical substances through organized biochemical reactions.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0115",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/biology.json"
+)
+process CellularRespiration
+    "Cellular release of usable energy through respiratory biochemical reactions."
+    is biology:Metabolism;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0116",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/biology.json"
+)
+process BiologicalGrowth
+    "Biological increase in the size of an identified living entity under a stated size criterion.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0117",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/biology.json"
+)
+process Development
+    "Biological change through an organized developmental course.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0118",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/biology.json"
+)
+process CellDifferentiation
+    "Development in which a cell acquires specialized structural or functional features."
+    is biology:Development;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0119",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/biology.json"
+)
+process TissueRepair
+    "Biological restoration of damaged tissue organization or function.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0120",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/biology.json"
+)
+process BiologicalRegulation
+    "Biological modulation of an identified biological process or condition.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0121",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/biology.json"
+)
+process BiologicalMovement
+    "Movement generated through the activity of a living individual.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0122",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/biology.json"
+)
+event CellDivision
+    "A bounded division of an identified cell into daughter cells.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0123",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/biology.json"
+)
+functional directed relationship SignalsTo
+    "A biological individual transmits a signal to another biological individual."
+    links life:Individual to life:Individual;

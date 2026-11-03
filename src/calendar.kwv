@@ -1,7 +1,7 @@
 ontology calendar
    version 1.0
    in domain imod:Physical
-   using imod,physical;
+   using imod, physical;
 
 // Identities capturing discrete time recurrence
 abstract identity Recurrence
@@ -81,3 +81,27 @@ abstract identity MonthOfYear
          October,
          November,
          December;
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0001",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.calendar.json"
+)
+identity Quarterly
+    "Recurrence at quarter boundaries under a specified calendar and anchor convention."
+    is calendar:Recurrence
+    applies to imod:Event;

@@ -21,3 +21,117 @@ process DNAReplication
 
 process Transcription
     "Production of RNA from a DNA template in a cellular setting.";
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0143",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/genetics.json"
+)
+abstract identity AllelicIdentity
+    "A classification of a sequence variant at an identified genomic locus.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0144",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/genetics.json"
+)
+process Translation
+    "Synthesis of a polypeptide using the information in an RNA template.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0145",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/genetics.json"
+)
+process GeneExpression
+    "Production of functional RNA or protein products from genetic information.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0146",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/genetics.json"
+)
+process DNARepair
+    "Biological repair of molecular damage in DNA.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0147",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/genetics.json"
+)
+process MeioticSegregation
+    "Separation of homologous chromosomes through meiosis.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0148",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/genetics.json"
+)
+event SequenceMutation
+    "A bounded change to the sequence of identified genetic material.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0149",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/genetics.json"
+)
+event Fertilization
+    "A bounded fusion of gametes establishing a zygotic entity.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0150",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/living/genetics.json"
+)
+structural directed relationship GeneticMaterialInheritedFrom
+    "An offspring individual inherits identified genetic material from a progenitor individual."
+    links life:Individual to life:Individual;

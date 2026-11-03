@@ -1,0 +1,185 @@
+/**
+ * # Social participants
+ *
+ * Human individuals and organizations provide participants for descriptions of
+ * social organization. HumanIndividual connects the Human taxonomic identity
+ * with the individual vocabulary of Life; Organization groups organized units with agency.
+ */
+ontology society
+	version 1.0
+	using imod, life, agency, physical, earth
+	in domain imod:Society;
+
+identity Human
+	equals TAXA:[6MB3T]
+;
+
+agent HumanIndividual
+	is society:Human life:Individual;
+
+/**
+ * ## Organizations as agents
+ *
+ * An organization is recognizable as a unit capable of acting on itself or
+ * others. Depending on its specialization, this may include determining its
+ * own continuity or collapse, or aspects of its spatial and temporal reach.
+ * These are examples of agency, not requirements that every organization
+ * exhibit every such action.
+ *
+ * Merely undergoing change or sharing an opinion does not alone establish
+ * agency. Deliberation, intentionality, human likeness, legal status
+ * and formal constitution are not required by this general category.
+ *
+ * Organization is abstract and organizes suitable concrete agent
+ * specializations. Formal constitution is a separate distinction rather than
+ * the criterion for agency.
+ */
+abstract agent Organization
+    "An organized unit capable of acting as an agent, including determining aspects of its own observable evolution."
+    ;
+
+/**
+ * ## Formal constitution
+ *
+ * `FormallyConstituted` composes with `society:Organization` when an explicit
+ * constituting arrangement establishes its governance and continuity. This
+ * distinction concerns how an organization is constituted; it does not establish
+ * legal recognition or supply the capacity for action that identifies an agent.
+ * Absence of evidence for formal constitution does not establish informality.
+ */
+attribute FormallyConstituted
+    "Having governance and continuity established by an explicit constituting arrangement."
+    applies to society:Organization;
+
+/**
+ * REVIEW DRAFT 2026-10-23. Proposed; no recorded community acceptance. Not parser/semantic tested.
+ * Existing declarations above are copied unchanged from baseline 556f3562.
+ * Review families S1-S5 in PROPOSALS.md; citations in SOURCES.md.
+ * All implicit upper ancestry comes from declaration keywords. No ODO import.
+ */
+
+// S1 foundational; CENSUS3. Subject reading is an owner choice, not settled.
+// One-person households are allowed. No collective agency, dwelling or family equality.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0180",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/society.json"
+)
+thing HousekeepingHousehold
+    "An identifiable living arrangement of one person or people living together who make common provision for food and other essentials."
+    ;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0181",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/society.json"
+)
+structural directed relationship HouseholdMembership
+    "A person's membership in an identified household under an explicit membership convention."
+    links society:HumanIndividual to society:HousekeepingHousehold;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0182",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/society.json"
+)
+quantity HouseholdSize
+    "The number of persons belonging to an identified housekeeping household at the observation reference."
+    is imod:Numerosity of society:HousekeepingHousehold;
+
+// S2 foundational. Domain membership is not an identity or within-realm claim.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0183",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/societal/society.json"
+)
+structural directed relationship OrganizationMembership
+    "An agent's recognized membership in an organization under that organization's membership criteria."
+    links imod:Agent to society:Organization;
+
+// S3 useful; census usual residence is distinct from presence and legal residence.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0184",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/societal/society.json"
+)
+structural directed relationship UsualResidenceIn
+    "A person's usual-residence connection to an identified location under a stated residence convention."
+    links society:HumanIndividual to earth:Location;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0185",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/societal/society.json"
+)
+process ResidentialMigration
+    "A person's movement that changes usual residence under the stated residence convention."
+    is imod:Process of society:HumanIndividual;
+
+// S4 useful. Legal parenthood and biological descent remain distinct future meanings.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0186",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/societal/society.json"
+)
+structural directed relationship RecognizedParentOf
+    "A person's socially or legally recognized parental relationship to another person under an explicit recognition regime."
+    links society:HumanIndividual to society:HumanIndividual;
+
+// S5 useful. Import existing biological Age meaning rather than re-create age.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0187",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/societal/society.json"
+)
+duration PersonAge
+    "Elapsed time since the birth of a human individual under the stated age convention."
+    is physical:Age of society:HumanIndividual;
+
+// Deliberately no generic ResidentPopulation entity or automatic membership rule.
+// Counts over a successful residence-selected collective are preferable until unity
+// is agreed. Birth/death stay Life/Biology interfaces, not duplicate Society events.

@@ -1,0 +1,245 @@
+/* REVIEW DRAFT, 2026-10-23. NO RECORDED COMMUNITY ACCEPTANCE.
+ * Full replacement overlay for the same-named baseline namespace, not an additional
+ * namespace to load alongside it. Existing declarations above the review divider
+ * are baseline context, not newly proposed approvals. See PROPOSALS.md for evidence,
+ * priorities, alternatives, bearer/endpoint contracts and discriminating tests.
+ * Owner discussion/incorporation is distinct from community acceptance.
+ * Status uses ordinary comments pending the common cross-domain annotation convention.
+ * Parser results are in VALIDATION.md; no linking/reasoner/runtime acceptance claimed.
+ */
+/**
+ * # Agency and action
+ *
+ * Agency articulates agent activity, interaction, decisions and the social
+ * recognition of agents and objects. Its descriptive perspective concerns Society.
+ * Intentions remain distinct from activities and from the
+ * identities or contextual roles attributed to participants.
+ */
+ontology agency
+	version 1.0
+    using imod, physical
+    in domain imod:Agency;
+     
+attribute Intentional
+	"Intention is a mental state (e.g. goal, belief, desire)"
+	deniable as Unintentional
+    ;
+	
+
+abstract role Participant
+	has disjoint children
+		Volitional
+			"An agent is the participant who consciously initiates or controls an action, 
+			 distinguished from entities moved by external forces or natural laws",
+		Patient
+			"A patient is an entity that is acted upon, has no participation in the acting context, and
+			 does not perceive it",
+		Experiencer
+			"A participant that feels or perceives without volitional control, such as in 
+			'I understand'";
+
+/** 
+ * Decisions are events that induce (cause) intentional transformation processes. There's no decision w/o intention, and no 
+ * intentional transformation w/o decision. Deeply intertwined.
+ * 
+ * Transformation moves from configuration A to configuration B. When decisions are involved, they may be classified according to
+ * the type of transformation they induce and the context of their existence. Specifically the type of agency needed by their
+ * context.
+ * 
+ */
+abstract process Decision
+     "Decision is a goal-oriented intentional (mental) activity"
+     is agency:Intentional physical:Activity /* within imod:Agent*/
+     ;
+
+process Assessment
+    "The activity representing observations attributed to the observer of a root context."
+    is agency:Decision 
+    ;
+
+deniable attribute Compliant 
+    "Compliance is forced adherence to a law, regulation, rule, process or practice"
+    applies to agency:Decision;
+
+deniable attribute Conformant 
+    "Conformance is voluntary adherence to a standard, rule, specification, requirement, design, process or practice."
+     applies to agency:Decision;
+   
+attribute Feasible
+     "Describes the level of feasibility of an activity"
+     applies to physical:Activity
+     deniable as Unfeasible;
+
+ 
+ //DOLCE and UFO    
+@fixme("see above")
+abstract thing SocialObject
+     "Social agent is an Subject and recognized by other agents, such as law and money.";
+   
+deniable attribute Predicted
+;
+
+deniable attribute Severity;
+
+deniable attribute Relevance 
+     "Describes the relevance of observables";
+     
+deniable attribute Planned
+    "Describes planned or unplanned events"
+    applies to agency:Intentional imod:Event;
+    
+//From DOLCE ontology
+abstract event Achievement
+      "Atomic culminating event"
+      is agency:Intentional imod:Event
+      ;
+
+//Comment: agreement on the superclass convention
+abstract attribute AchievementType 
+        "The type of achievement or non-achievement related to an outcome."
+            applies to agency:Achievement
+            has children 
+            Realized, 
+            Potential,
+            Theoretical;
+            
+abstract attribute Appropriateness  
+     has children 
+     Appropriate, 
+     Inappropriate;
+// ===== NEW REVIEW PROPOSALS BELOW; BASELINE CONTEXT ABOVE =====
+
+// PROPOSED A1: intentional processes specialize Activity, never all Agent behavior.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0090",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agency.json"
+)
+process ChoiceMaking
+    "Intentional activity of considering alternatives in forming a choice."
+    is agency:Intentional physical:Activity;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0091",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agency.json"
+)
+event ChoiceCommitment
+    "A bounded commitment by an agent to an identified choice.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0092",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agency.json"
+)
+process Negotiation
+    "Activity in which agents seek an agreement through interaction."
+    is physical:Activity;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0093",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agency.json"
+)
+process CollectiveCoordination
+    "Activity through which agents coordinate their actions."
+    is physical:Activity;
+
+// PROPOSED A2: neutral agent-source interaction intermediate; target may be nonliving.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0094",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agency.json"
+)
+abstract functional relationship AgentInteraction
+    "Dynamic interaction involving an agent as source and a substantial as target."
+    links imod:Agent to (imod:Agent or imod:Subject);
+
+// PROPOSED A3: actual interactions; obligations/authority still require institutional context.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0095",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agency.json"
+)
+functional directed relationship SupportsChoice
+    "An agent provides support to another agent in forming or communicating a choice."
+    is agency:AgentInteraction
+    links imod:Agent to imod:Agent;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0096",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agency.json"
+)
+structural directed relationship Represents
+    "An agent has a recognized mandate to act for another agent in a stated scope."
+    links imod:Agent to imod:Agent;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0097",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agency.json"
+)
+functional bond CooperatesWith
+    "Two agents coordinate contributions to a shared activity."
+    is agency:AgentInteraction
+    links imod:Agent to imod:Agent;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0098",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agency.json"
+)
+event ConsentGrant
+    "A bounded granting of consent by an agent for an identified action.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0099",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agency.json"
+)
+event ConsentWithdrawal
+    "A bounded withdrawal by an agent of consent for an identified action.";

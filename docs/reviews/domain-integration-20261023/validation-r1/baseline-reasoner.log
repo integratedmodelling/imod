@@ -1,0 +1,15 @@
+WARNING: A terminally deprecated method in java.lang.System has been called
+WARNING: System::setSecurityManager has been called by org.integratedmodelling.klab.services.reasoner.internal.M49FixtureAudit (file:/C:/Users/Ferd/Documents/Codex/2026-10-20/task-2/land-entry-example/integrated-source-classes/)
+WARNING: Please consider reporting this to the maintainers of org.integratedmodelling.klab.services.reasoner.internal.M49FixtureAudit
+WARNING: System::setSecurityManager will be removed in a future release
+WARNING: A Java agent has been loaded dynamically (C:\Users\Ferd\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.5\byte-buddy-agent-1.17.5.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+Oct 23, 2026 10:09:22 AM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+PASS 25 checks; 26 ontologies; offline

@@ -21,3 +21,25 @@ identity LandCover
         catalogs: ("corine_entry_hierarchy_example"),
         codelists: { corine_entry_hierarchy_example: "land.corine" }
     };
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0079",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/earth/land.json"
+)
+event CoverChangeEpisode
+    "A bounded occurrence in which physical cover changes on an identified land surface unit.";

@@ -267,3 +267,27 @@ quality TopographicHeterogeneity
    "Heterogeneity of a recognized terrain configuration."
    describes imod:Heterogeneity of geography:Terrain
    ;
+
+
+/**
+ * ## Areal analysis extension
+ *
+ * These experimental observations use the existing Areal Region convention.
+ * Delineation, ground support and reference conventions remain observational
+ * requirements; no new surface realm or automatic containment is inferred.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0054",
+    revision="region-areal-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/region-areal-20261023/REVIEW_RECORD.json"
+)
+length LocalRelief
+    "Difference between maximum and minimum ground elevations over a stated terrestrial region."
+    is imod:Length of earth:Region
+    describes geography:TerrestrialSurfaceArrangement;

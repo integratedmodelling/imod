@@ -1,0 +1,20 @@
+# Generic foundations and chemical alias audit
+
+The owner confirms environmental material water in earth while preserving generic physical/chemical foundations. Actual src/physics.kwv:36 declares `thing FluidParcel is physical:MaterialBody` and defines a material-following boundary. It is in physics, not physical/chemistry. src/physical.kwv:26 retains abstract MaterialBody; src/chemistry.kwv retains PhasePortion and SolutionPortion. None is relocated, renamed or duplicated. Environmental Water does not inherit FluidParcel.
+
+## Current authority and alias idioms
+
+Active chemistry:ChemicalIdentity is an abstract identity with `requires authority CHEM { urn: "klab.authority.pubchem", searchLimit:10, gifDepictions:true }`. There is no current active chemistry:Water alias and no active CHEM:CID_962 use. The source tree's commented IUPAC:Water references are historical comments, not implemented aliases. The authority code is a compound identity; Water is not an elemental identity in the chemical-element sense.
+
+The exact worldview alias operator is `equals`, not `is`: Worldview.xtext IsClause accepts `equality?='equals'`. Existing excluded hydrology.terms Watershed equals hydrology:SurfaceCatchment demonstrates the idiom. Proposed narrow declaration: `identity Water equals CHEM:CID_962;` in namespace chemistry. This is an equality alias to the chemical identity, never equality to earth:Water. Full-context draft is experiments/strawman-2026/review/water-chemical-alias-20261023/chemistry.kwv, explicitly outside ingestion.
+
+Local authority source read-only: C:/Users/Ferd/git/klab.authority.pubchem/README.md documents inputs962, CID:962 and CID_962, canonical identity CID:962, conceptName CID_962 and grammar-safe locator CHEM:CID_962. PubChemAuthority.resolve accepts these code forms; compound constructs CID:<number>; identity converts the colon to underscore for conceptName/locator. Its existing fixture tests assert CID:962 and verify water InChI mappings. Those test sources were inspected, not rerun or rebuilt here. Provider resolution of human name Water is not the same operation as direct code resolution; formulas are not accepted as unique chemical identifiers.
+
+Primary [PubChem CID962](https://pubchem.ncbi.nlm.nih.gov/compound/962) identifies Water/H2O in indexed PubChem results retrieved2026-10-23. Direct HTML returned a browser challenge and direct PUG REST property retrieval was inaccessible to the browsing tool; do not claim fresh end-to-end API resolution. [PubChem indexed Water record](https://pubchem.ncbi.nlm.nih.gov/compound/Purified%20Water) supplies CID962, formulaH2O and chemical-compound context. CID962 is not a natural seawater/groundwater mixture identity.
+
+## Integration boundary and remaining checks
+
+The environmental-water increment introduces no CHEM reference and leaves chemistry/physics/physical source bytes unchanged. The narrow alias remains a separate follow-on because the validated offline capture/toolchain has not demonstrated its end-to-end CHEM resolution plus equivalent-class construction. Syntax-only parser evidence will be saved for the draft; that cannot establish resolution, deployment, identity equivalence or reasoner correctness. A future isolated check needs a verified configured CHEM provider/captured CID962 response and applicable ChEBI/identity dependency capture, real adapter/linking, equivalence assertions and negative material-vs-identity tests. Do not install/redeploy or force this external dependency into the current increment. Mixture partitive inherency and constituent rules remain unresolved.
+
+
+Audit result: the full-context review-only alias draft parsed with0 errors (syntax evidence in validation-alias/). The captured-authority proof lists a PubChem provider implementation, but the authority-cache inspection found0 configured CHEM identity records, so CID962 end-to-end replay has not been verified. Local provider source revision inspected:459c1d2267dc2b540ee6f40382c372e69219cda4. This is not a provider install/deployment assertion.

@@ -7,7 +7,7 @@
  */
 ontology atmosphere
 	version 1.0
-	using imod, earth, chemistry
+	using imod, earth, chemistry, physical, physics
 	in domain imod:AtmosphereKnowledge;
 
 identity Air is chemistry:Mixture;
@@ -39,3 +39,133 @@ realm Atmosphere
 //	contains only
 //		AtmosphericBottomLayer, Troposphere, Mesosphere
 ;
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0045",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/earth/atmosphere.json"
+)
+thing AirBody
+    "An individuated body of atmospheric air under a stated material-boundary convention."
+    is physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0046",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/earth/atmosphere.json"
+)
+thing AirParcel
+    "An atmospheric air portion whose boundary follows its material motion."
+    is (physics:FluidParcel and atmosphere:AirBody)
+    inherits atmosphere:Air;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0047",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/earth/atmosphere.json"
+)
+temperature AirTemperature
+    "Temperature of an identified air body at the support and time observed."
+    is imod:Temperature of atmosphere:AirBody
+    describes atmosphere:AirBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0048",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/earth/atmosphere.json"
+)
+quantity SpecificHumidity
+    "Water-vapor mass divided by total moist-air mass for the same air body."
+    is imod:Proportion of atmosphere:AirBody
+    describes atmosphere:AirBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0049",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/earth/atmosphere.json"
+)
+velocity WindSpeed
+    "Speed of the air motion under a stated spatial support and reference frame."
+    is imod:Velocity of atmosphere:AirBody
+    describes atmosphere:AirBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0050",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/earth/atmosphere.json"
+)
+angle WindDirection
+    "The direction from which air moves under a stated directional reference convention."
+    is imod:Angle of atmosphere:AirBody
+    describes atmosphere:AirBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0051",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/earth/atmosphere.json"
+)
+process AirAdvection
+    "Transport of atmospheric air relative to a stated spatial reference frame.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0052",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/earth/atmosphere.json"
+)
+process CloudCondensation
+    "Conversion of atmospheric water vapor to liquid cloud water.";

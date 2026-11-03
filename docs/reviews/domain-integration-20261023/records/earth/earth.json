@@ -1,0 +1,42 @@
+{
+  "revision": "strawman-integration-r1",
+  "base_commit": "556f3562aad44ead96d2b1e646a67664901e1fc5",
+  "source_file": "../../../../../src/earth.kwv",
+  "candidate_source_sha256": "e6bdb233d880264e9a56907d5e0d2d38173d78b359bdf60eb937ff68390fc8fc",
+  "community_acceptance": "not_recorded",
+  "all_original_proposals": [
+    {
+      "proposal": "wv-review-20261023-0053",
+      "revision": "review-metadata-r1",
+      "qualified_name": "reviewearth:DepositDerivedFrom",
+      "declaration_kind": "structural directed relationship",
+      "original_source_line": 16,
+      "original_declaration": "structural directed relationship DepositDerivedFrom\n    \"An observed sediment body's material provenance in a specified source rock body.\"\n    links geology:SedimentBody to geology:RockBody;",
+      "original_declaration_sha256": "c27cbe68343d11731a711ff868af322fdd92cac24e7309ef206403b56cc221e8",
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-review-20261023-0053",
+        "revision": "review-metadata-r1",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../../review-metadata-r1/records/earth/earth.json"
+      },
+      "prior_family_context": "E5",
+      "prior_family_row": "| E5 U | For traced material provenance consider **DepositDerivedFrom** only after the source body, receiving deposit and relevant transfer history are observed. Structural directed Rel: deposit S \u2192 source rock/material S, pairwise evidence; no nearest-source inference. | Existing Earth dossier proposal; RockBody now geology-owned, SedimentBody may supply receiving body. Review whether occurrence provenance belongs in an observational history rather than first-level Rel. Avoid Earth importing geology to close this loop; bridge module or broader endpoints need arbitration. | G1 supports materials, not this semantic signature. + traced source contribution to deposit; \u2212 nearest hill alone proves provenance. D: full tectonic/contact and debris-event catalogues. |",
+      "rationale_and_sources": "../../../earth/PROPOSALS.md",
+      "status_rationale": "Experimental research with recorded open issues; no new semantic/expert review or formal controversy assessment. Exact syntax evidence is separate from conservative annotation technical_validation.",
+      "current_declaration_line": 26,
+      "packet_key": "earth/earth",
+      "original_record": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-23\\domain-reviews\\review-metadata-r1\\records\\earth\\earth.json",
+      "canonical_namespace": "earth",
+      "canonical_name": "earth:DepositDerivedFrom",
+      "disposition": "hold",
+      "reason": "DepositDerivedFrom as an observable provenance relationship versus historical evidence/bridge ownership is explicitly unresolved."
+    }
+  ],
+  "review_status": "Inclusion is experimental conditional local integration, not community acceptance; hold is not rejection.",
+  "rationale_snapshot": "../../rationale/earth-PROPOSALS.md",
+  "prior_record_fields": "Fields copied inside all_original_proposals retain their original pre-integration packet context; current evidence is source_file and rationale_snapshot here."
+}

@@ -1,0 +1,189 @@
+/* REVIEW DRAFT, 2026-10-23. NO RECORDED COMMUNITY ACCEPTANCE.
+ * Full replacement overlay for the same-named baseline namespace, not an additional
+ * namespace to load alongside it. Existing declarations above the review divider
+ * are baseline context, not newly proposed approvals. See PROPOSALS.md for evidence,
+ * priorities, alternatives, bearer/endpoint contracts and discriminating tests.
+ * Owner discussion/incorporation is distinct from community acceptance.
+ * Status uses ordinary comments pending the common cross-domain annotation convention.
+ * Parser results are in VALIDATION.md; no linking/reasoner/runtime acceptance claimed.
+ */
+ontology genetics
+	version 1.0
+	using imod, life, biology, physical
+	in domain imod:Genetics;
+
+/**
+ * ## Template-directed synthesis
+ *
+ * DNAReplication produces DNA using DNA templates. Transcription produces RNA
+ * from a DNA template in the cellular setting considered here. The processes,
+ * their physical molecular participants and the information used to describe
+ * sequences are distinct observational targets.
+ *
+ * Transcription does not by itself establish translation into protein, and not
+ * every functional gene product is a protein. Replication does not alone prove
+ * cell division or faithful copying at every position. Observations establish
+ * the molecular context and interval; models describe synthesis and its outcomes.
+ */
+process DNAReplication
+    "Production of DNA molecules using DNA templates.";
+
+process Transcription
+    "Production of RNA from a DNA template in a cellular setting.";
+
+// ===== NEW REVIEW PROPOSALS BELOW; BASELINE CONTEXT ABOVE =====
+
+// PROPOSED G1: molecular material reading; coordinate Chemistry before acceptance.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0140",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/genetics.json"
+)
+abstract thing DNAMolecule
+    "An individual physical molecule of deoxyribonucleic acid."
+    is physical:MaterialBody;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0141",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/genetics.json"
+)
+abstract thing RNAMolecule
+    "An individual physical molecule of ribonucleic acid."
+    is physical:MaterialBody;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0142",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/genetics.json"
+)
+abstract thing ChromosomeBody
+    "An identified physical chromosome carrying genomic material."
+    is physical:MaterialBody;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0143",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/genetics.json"
+)
+abstract identity AllelicIdentity
+    "A classification of a sequence variant at an identified genomic locus.";
+
+// PROPOSED G2: sequence-bearing molecule and informational record stay separate.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0144",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/genetics.json"
+)
+process Translation
+    "Synthesis of a polypeptide using the information in an RNA template.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0145",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/genetics.json"
+)
+process GeneExpression
+    "Production of functional RNA or protein products from genetic information.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0146",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/genetics.json"
+)
+process DNARepair
+    "Biological repair of molecular damage in DNA.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0147",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/genetics.json"
+)
+process MeioticSegregation
+    "Separation of homologous chromosomes through meiosis.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0148",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/genetics.json"
+)
+event SequenceMutation
+    "A bounded change to the sequence of identified genetic material.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0149",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/genetics.json"
+)
+event Fertilization
+    "A bounded fusion of gametes establishing a zygotic entity.";
+
+// PROPOSED G3: descent evidence, not resemblance or statistical correlation alone.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0150",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/genetics.json"
+)
+structural directed relationship GeneticMaterialInheritedFrom
+    "An offspring individual inherits identified genetic material from a progenitor individual."
+    links life:Individual to life:Individual;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0151",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/genetics.json"
+)
+quantity TranscriptCount
+    "The number of identified RNA transcripts in a specified cellular material body."
+    is imod:Numerosity of life:CellularBody;

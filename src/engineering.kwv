@@ -1,7 +1,7 @@
 ontology engineering
 	"Physical production and modification of engineered artifacts."
 	version 1.0
-	using imod, infrastructure
+	using imod, infrastructure, physical
 	in domain imod:Engineering;
 
 /**
@@ -19,3 +19,137 @@ ontology engineering
 process ProductAssembly
     "Intentional joining of components to produce a new artifact entity."
     is infrastructure:ArtifactProduction;
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0014",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.engineering.json"
+)
+thing Pump
+    "An individuated engineered device intended to impart energy to move fluid."
+    is infrastructure:Artifact;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0015",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.engineering.json"
+)
+thing Valve
+    "An individuated engineered device intended to regulate fluid passage through an opening."
+    is infrastructure:Artifact;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0016",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.engineering.json"
+)
+process ValveActuation
+    "Intentional physical movement of an identified valve's closure element."
+    is physical:Activity of engineering:Valve;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0017",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.engineering.json"
+)
+process ComponentRepair
+    "Intentional physical modification of a continuing artifact intended to restore a specified service."
+    is infrastructure:ArtifactModification of infrastructure:Artifact;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0018",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.engineering.json"
+)
+event ComponentReplacement
+    "A bounded substitution of a separately identified new component for an existing component.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0019",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.engineering.json"
+)
+event AcceptanceTestEpisode
+    "A bounded physical test of an identified artifact against stated acceptance criteria.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0020",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.engineering.json"
+)
+structural bond ComponentAttachment
+    "An observed physical attachment between two identified material artifacts."
+    links infrastructure:Artifact to infrastructure:Artifact;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0021",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.engineering.json"
+)
+functional directed relationship TransfersLoad
+    "An observed mechanical load-transmission interaction from a source body to a receiving body."
+    links physical:MaterialBody to physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0022",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/foundations/review.engineering.json"
+)
+quantity OpeningFraction
+    "Geometric opening fraction of an identified valve under a stated design convention."
+    is imod:Proportion of engineering:Valve
+    describes imod:Proportion of engineering:Valve;

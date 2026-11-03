@@ -1,0 +1,840 @@
+[ {
+  "requested" : "CID_962",
+  "identity" : {
+    "semanticBoundaries" : [ "COMPOUND" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "image/gif" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/fccb8763604bdf0f0c2d14f14332f44db90dac37b3b96b3a7579cfc08f7c4dd0.gif",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/87252796e34c94337762b753cbb3063c563833f7e7602e3b5130dc87136df18c.md",
+      "text/html" : "https://pubchem.ncbi.nlm.nih.gov/compound/962",
+      "image/png" : "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/962/PNG?image_size=large",
+      "application/json" : "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/962/property/Title,IUPACName,MolecularFormula,MolecularWeight,InChI,InChIKey/JSON"
+    },
+    "parentIds" : [ "CHEBI:33693", "CHEBI:37176", "CHEBI:52625" ],
+    "id" : "CID:962",
+    "label" : "Water",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CID_962",
+    "description" : "# Water\n\n- **Identifier**: CID:962\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:33693, CHEBI:37176, CHEBI:52625\n\n[Source record](<https://pubchem.ncbi.nlm.nih.gov/compound/962>)\n\n## Source metadata\n\n- **CID**: 962\n- **MolecularFormula**: H2O\n- **MolecularWeight**: 18.015\n- **InChI**: InChI=1S/H2O/h1H2\n- **InChIKey**: XLYOFNOQVPJJNP-UHFFFAOYSA-N\n- **IUPACName**: oxidane\n- **Title**: Water\n- **ChEBI**: {\"CHEBI:15377\":{\"iri\":\"http://purl.obolibrary.org/obo/CHEBI\\_15377\",\"lang\":\"en\",\"description\":\\[\"An oxygen hydride consisting of an oxygen atom that is covalently bonded to two hydrogen atoms\"\\],\"synonyms\":\\[\"BOUND WATER\",\"H(2)O\",\"H2O\",\"HOH\",\"WATER\",\"WATER\",\"Wasser\",\"Water\",\"Water\",\"\\[OH2\\]\",\"acqua\",\"agua\",\"aqua\",\"dihydridooxygen\",\"dihydrogen oxide\",\"eau\",\"hydrogen hydroxide\",\"oxidane\",\"oxidane\",\"water\",\"water\"\\],\"annotation\":{\"charge\":\\[0.0\\],\"database\\_cross\\_reference\":\\[\"cas:7732-18-5\",\"gmelin:117\",\"hmdb:HMDB0002111\",\"kegg.compound:C00001\",\"kegg.drug:D00001\",\"metacyc.compound:WATER\",\"molbase:1\",\"pdb-ccd:HOH\",\"reaxys:3587155\",\"wikipedia.en:Water\"\\],\"generalized\\_empirical\\_formula\":\\[\"H2O\"\\],\"has\\_alternative\\_id\":\\[\"CHEBI:10743\",\"CHEBI:13352\",\"CHEBI:27313\",\"CHEBI:42043\",\"CHEBI:42857\",\"CHEBI:43228\",\"CHEBI:44292\",\"CHEBI:44701\",\"CHEBI:44819\",\"CHEBI:5585\"\\],\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:15377\"\\],\"inchi\\_key\\_string\":\\[\"XLYOFNOQVPJJNP-UHFFFAOYSA-N\"\\],\"inchi\\_string\":\\[\"InChI=1S/H2O/h1H2\"\\],\"mass\":\\[\"18.015\"\\],\"monoisotopic\\_mass\":\\[\"18.01056\"\\],\"smiles\\_string\":\\[\"\\[H\\]O\\[H\\]\"\\]},\"label\":\"water\",\"ontology\\_name\":\"chebi\",\"ontology\\_prefix\":\"CHEBI\",\"ontology\\_iri\":\"http://purl.obolibrary.org/obo/chebi.owl\",\"is\\_obsolete\":false,\"term\\_replaced\\_by\":null,\"is\\_defining\\_ontology\":true,\"has\\_children\":true,\"is\\_root\":false,\"short\\_form\":\"CHEBI\\_15377\",\"obo\\_id\":\"CHEBI:15377\",\"in\\_subset\":\\[\"3\\_STAR\"\\],\"obo\\_definition\\_citation\":null,\"obo\\_xref\":\\[{\"database\":\"cas\",\"id\":\"7732-18-5\",\"description\":\"cas\",\"url\":\"https://commonchemistry.cas.org/detail?cas\\_rn=7732-18-5\"},{\"database\":\"gmelin\",\"id\":\"117\",\"description\":\"gmelin\",\"url\":null},{\"database\":\"hmdb\",\"id\":\"HMDB0002111\",\"description\":\"hmdb\",\"url\":\"http://www.hmdb.ca/metabolites/HMDB0002111\"},{\"database\":\"kegg.compound\",\"id\":\"C00001\",\"description\":\"kegg.compound\",\"url\":null},{\"database\":\"kegg.drug\",\"id\":\"D00001\",\"description\":\"kegg.drug\",\"url\":null},{\"database\":\"metacyc.compound\",\"id\":\"WATER\",\"description\":\"metacyc.compound\",\"url\":null},{\"database\":\"molbase\",\"id\":\"1\",\"description\":\"molbase\",\"url\":\"http://www.molbase.com/en/index.php?app=search&amp;search\\_keyword=1\"},{\"database\":\"pdb-ccd\",\"id\":\"HOH\",\"description\":\"pdb-ccd\",\"url\":null},{\"database\":\"reaxys\",\"id\":\"3587155\",\"description\":\"reaxys\",\"url\":null},{\"database\":\"wikipedia.en\",\"id\":\"Water\",\"description\":\"wikipedia.en\",\"url\":null}\\],\"obo\\_synonym\":\\[{\"name\":\"WATER\",\"scope\":\"hasExactSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"PDBeChem\",\"description\":null,\"url\":null}\\]},{\"name\":\"Water\",\"scope\":\"hasExactSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"KEGG\\_COMPOUND\",\"description\":null,\"url\":null}\\]},{\"name\":\"oxidane\",\"scope\":\"hasExactSynonym\",\"type\":\"IUPAC NAME\",\"xrefs\":\\[{\"database\":null,\"id\":\"IUPAC\",\"description\":null,\"url\":null}\\]},{\"name\":\"water\",\"scope\":\"hasExactSynonym\",\"type\":\"IUPAC NAME\",\"xrefs\":\\[{\"database\":null,\"id\":\"IUPAC\",\"description\":null,\"url\":null}\\]},{\"name\":\"BOUND WATER\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"pdb-ccd\",\"description\":null,\"url\":null}\\]},{\"name\":\"H(2)O\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"uniprot\\_ft\",\"description\":null,\"url\":null}\\]},{\"name\":\"H2O\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"kegg.compound\",\"description\":null,\"url\":null}\\]},{\"name\":\"HOH\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"WATER\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"pdb-ccd\",\"description\":null,\"url\":null}\\]},{\"name\":\"Wasser\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"Water\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"kegg.compound\",\"description\":null,\"url\":null}\\]},{\"name\":\"\\[OH2\\]\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"acqua\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"agua\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"aqua\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"dihydridooxygen\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"dihydrogen oxide\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"eau\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"hydrogen hydroxide\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"oxidane\",\"scope\":\"hasRelatedSynonym\",\"type\":\"IUPAC NAME\",\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"water\",\"scope\":\"hasRelatedSynonym\",\"type\":\"IUPAC NAME\",\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]}\\],\"is\\_preferred\\_root\":false,\"\\_links\":{\"self\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377?lang=en\"},\"parents\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/parents\"},\"ancestors\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/ancestors\"},\"hierarchicalParents\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/hierarchicalParents\"},\"hierarchicalAncestors\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/hierarchicalAncestors\"},\"jstree\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/jstree\"},\"children\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/children\"},\"descendants\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/descendants\"},\"hierarchicalChildren\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/hierarchicalChildren\"},\"hierarchicalDescendants\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/hierarchicalDescendants\"},\"graph\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/graph\"},\"has\\_role\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO\\_0000087\"},\"is\\_deprotonated\\_form\\_of\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO\\_0018033\"},\"is\\_protonated\\_form\\_of\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO\\_0018034\"}}}}\n\n![Molecular structure](<https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/962/PNG?image_size=large>)\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CID_962"
+  }
+}, {
+  "requested" : "CHEBI:33693",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33693",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/131d53b1fafcd034d0a97371fee67e25098e43832a7c33f73add070a686b9a53.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_33693"
+    },
+    "parentIds" : [ "CHEBI:36902" ],
+    "id" : "CHEBI:33693",
+    "label" : "oxygen hydride",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_33693",
+    "description" : "# oxygen hydride\n\n- **Identifier**: CHEBI:33693\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:36902\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33693>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_33693\n- **lang**: en\n- **description**: \\[\\]\n- **synonyms**: \\[\"hydrides of oxygen\",\"oxygen hydride\",\"oxygen hydrides\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:33693\"\\]}\n- **label**: oxygen hydride\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_33693\n- **obo\\_id**: CHEBI:33693\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"hydrides of oxygen\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"oxygen hydride\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"oxygen hydrides\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_33693"
+  }
+}, {
+  "requested" : "CHEBI_33693",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33693",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/131d53b1fafcd034d0a97371fee67e25098e43832a7c33f73add070a686b9a53.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_33693"
+    },
+    "parentIds" : [ "CHEBI:36902" ],
+    "id" : "CHEBI:33693",
+    "label" : "oxygen hydride",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_33693",
+    "description" : "# oxygen hydride\n\n- **Identifier**: CHEBI:33693\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:36902\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33693>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_33693\n- **lang**: en\n- **description**: \\[\\]\n- **synonyms**: \\[\"hydrides of oxygen\",\"oxygen hydride\",\"oxygen hydrides\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:33693\"\\]}\n- **label**: oxygen hydride\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_33693\n- **obo\\_id**: CHEBI:33693\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"hydrides of oxygen\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"oxygen hydride\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"oxygen hydrides\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_33693"
+  }
+}, {
+  "requested" : "CHEBI:37176",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A37176",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/85306bf57dae08e959d31219fb0d580e1f26c7313807e5846b6556961d47718f.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_37176"
+    },
+    "parentIds" : [ "CHEBI:33692" ],
+    "id" : "CHEBI:37176",
+    "label" : "mononuclear parent hydride",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_37176",
+    "description" : "# mononuclear parent hydride\n\n- **Identifier**: CHEBI:37176\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:33692\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A37176>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_37176\n- **lang**: en\n- **description**: \\[\\]\n- **synonyms**: \\[\"mononuclear hydride\",\"mononuclear hydrides\",\"mononuclear parent hydrides\",\"mononuclear parent hydrides\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:37176\"\\]}\n- **label**: mononuclear parent hydride\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_37176\n- **obo\\_id**: CHEBI:37176\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"mononuclear parent hydrides\",\"scope\":\"hasExactSynonym\",\"type\":\"IUPAC NAME\",\"xrefs\":\\[{\"database\":null,\"id\":\"IUPAC\",\"description\":null,\"url\":null}\\]},{\"name\":\"mononuclear hydride\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"mononuclear hydrides\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"mononuclear parent hydrides\",\"scope\":\"hasRelatedSynonym\",\"type\":\"IUPAC NAME\",\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_37176"
+  }
+}, {
+  "requested" : "CHEBI_37176",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A37176",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/85306bf57dae08e959d31219fb0d580e1f26c7313807e5846b6556961d47718f.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_37176"
+    },
+    "parentIds" : [ "CHEBI:33692" ],
+    "id" : "CHEBI:37176",
+    "label" : "mononuclear parent hydride",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_37176",
+    "description" : "# mononuclear parent hydride\n\n- **Identifier**: CHEBI:37176\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:33692\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A37176>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_37176\n- **lang**: en\n- **description**: \\[\\]\n- **synonyms**: \\[\"mononuclear hydride\",\"mononuclear hydrides\",\"mononuclear parent hydrides\",\"mononuclear parent hydrides\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:37176\"\\]}\n- **label**: mononuclear parent hydride\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_37176\n- **obo\\_id**: CHEBI:37176\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"mononuclear parent hydrides\",\"scope\":\"hasExactSynonym\",\"type\":\"IUPAC NAME\",\"xrefs\":\\[{\"database\":null,\"id\":\"IUPAC\",\"description\":null,\"url\":null}\\]},{\"name\":\"mononuclear hydride\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"mononuclear hydrides\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"mononuclear parent hydrides\",\"scope\":\"hasRelatedSynonym\",\"type\":\"IUPAC NAME\",\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_37176"
+  }
+}, {
+  "requested" : "CHEBI:52625",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A52625",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/6e4917a65119a0040924d550e6900ec056e328d06171a80a3637fdc933d4f07f.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_52625"
+    },
+    "parentIds" : [ "CHEBI:24651", "CHEBI:24835" ],
+    "id" : "CHEBI:52625",
+    "label" : "inorganic hydroxy compound",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_52625",
+    "description" : "# inorganic hydroxy compound\n\n- **Identifier**: CHEBI:52625\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:24651, CHEBI:24835\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A52625>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_52625\n- **lang**: en\n- **description**: \\[\\]\n- **synonyms**: \\[\"inorganic hydroxides\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:52625\"\\]}\n- **label**: inorganic hydroxy compound\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_52625\n- **obo\\_id**: CHEBI:52625\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"inorganic hydroxides\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_52625"
+  }
+}, {
+  "requested" : "CHEBI_52625",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A52625",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/6e4917a65119a0040924d550e6900ec056e328d06171a80a3637fdc933d4f07f.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_52625"
+    },
+    "parentIds" : [ "CHEBI:24651", "CHEBI:24835" ],
+    "id" : "CHEBI:52625",
+    "label" : "inorganic hydroxy compound",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_52625",
+    "description" : "# inorganic hydroxy compound\n\n- **Identifier**: CHEBI:52625\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:24651, CHEBI:24835\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A52625>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_52625\n- **lang**: en\n- **description**: \\[\\]\n- **synonyms**: \\[\"inorganic hydroxides\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:52625\"\\]}\n- **label**: inorganic hydroxy compound\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_52625\n- **obo\\_id**: CHEBI:52625\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"inorganic hydroxides\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_52625"
+  }
+}, {
+  "requested" : "CID:962",
+  "identity" : {
+    "id" : "CID:962",
+    "conceptName" : "CID_962",
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "parentIds" : [ "CHEBI:33693", "CHEBI:37176", "CHEBI:52625" ],
+    "parentRelationship" : [ ],
+    "description" : "# Water\n\n- **Identifier**: CID:962\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:33693, CHEBI:37176, CHEBI:52625\n\n[Source record](<https://pubchem.ncbi.nlm.nih.gov/compound/962>)\n\n## Source metadata\n\n- **CID**: 962\n- **MolecularFormula**: H2O\n- **MolecularWeight**: 18.015\n- **InChI**: InChI=1S/H2O/h1H2\n- **InChIKey**: XLYOFNOQVPJJNP-UHFFFAOYSA-N\n- **IUPACName**: oxidane\n- **Title**: Water\n- **ChEBI**: {\"CHEBI:15377\":{\"iri\":\"http://purl.obolibrary.org/obo/CHEBI\\_15377\",\"lang\":\"en\",\"description\":\\[\"An oxygen hydride consisting of an oxygen atom that is covalently bonded to two hydrogen atoms\"\\],\"synonyms\":\\[\"BOUND WATER\",\"H(2)O\",\"H2O\",\"HOH\",\"WATER\",\"WATER\",\"Wasser\",\"Water\",\"Water\",\"\\[OH2\\]\",\"acqua\",\"agua\",\"aqua\",\"dihydridooxygen\",\"dihydrogen oxide\",\"eau\",\"hydrogen hydroxide\",\"oxidane\",\"oxidane\",\"water\",\"water\"\\],\"annotation\":{\"charge\":\\[0.0\\],\"database\\_cross\\_reference\":\\[\"cas:7732-18-5\",\"gmelin:117\",\"hmdb:HMDB0002111\",\"kegg.compound:C00001\",\"kegg.drug:D00001\",\"metacyc.compound:WATER\",\"molbase:1\",\"pdb-ccd:HOH\",\"reaxys:3587155\",\"wikipedia.en:Water\"\\],\"generalized\\_empirical\\_formula\":\\[\"H2O\"\\],\"has\\_alternative\\_id\":\\[\"CHEBI:10743\",\"CHEBI:13352\",\"CHEBI:27313\",\"CHEBI:42043\",\"CHEBI:42857\",\"CHEBI:43228\",\"CHEBI:44292\",\"CHEBI:44701\",\"CHEBI:44819\",\"CHEBI:5585\"\\],\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:15377\"\\],\"inchi\\_key\\_string\":\\[\"XLYOFNOQVPJJNP-UHFFFAOYSA-N\"\\],\"inchi\\_string\":\\[\"InChI=1S/H2O/h1H2\"\\],\"mass\":\\[\"18.015\"\\],\"monoisotopic\\_mass\":\\[\"18.01056\"\\],\"smiles\\_string\":\\[\"\\[H\\]O\\[H\\]\"\\]},\"label\":\"water\",\"ontology\\_name\":\"chebi\",\"ontology\\_prefix\":\"CHEBI\",\"ontology\\_iri\":\"http://purl.obolibrary.org/obo/chebi.owl\",\"is\\_obsolete\":false,\"term\\_replaced\\_by\":null,\"is\\_defining\\_ontology\":true,\"has\\_children\":true,\"is\\_root\":false,\"short\\_form\":\"CHEBI\\_15377\",\"obo\\_id\":\"CHEBI:15377\",\"in\\_subset\":\\[\"3\\_STAR\"\\],\"obo\\_definition\\_citation\":null,\"obo\\_xref\":\\[{\"database\":\"cas\",\"id\":\"7732-18-5\",\"description\":\"cas\",\"url\":\"https://commonchemistry.cas.org/detail?cas\\_rn=7732-18-5\"},{\"database\":\"gmelin\",\"id\":\"117\",\"description\":\"gmelin\",\"url\":null},{\"database\":\"hmdb\",\"id\":\"HMDB0002111\",\"description\":\"hmdb\",\"url\":\"http://www.hmdb.ca/metabolites/HMDB0002111\"},{\"database\":\"kegg.compound\",\"id\":\"C00001\",\"description\":\"kegg.compound\",\"url\":null},{\"database\":\"kegg.drug\",\"id\":\"D00001\",\"description\":\"kegg.drug\",\"url\":null},{\"database\":\"metacyc.compound\",\"id\":\"WATER\",\"description\":\"metacyc.compound\",\"url\":null},{\"database\":\"molbase\",\"id\":\"1\",\"description\":\"molbase\",\"url\":\"http://www.molbase.com/en/index.php?app=search&amp;search\\_keyword=1\"},{\"database\":\"pdb-ccd\",\"id\":\"HOH\",\"description\":\"pdb-ccd\",\"url\":null},{\"database\":\"reaxys\",\"id\":\"3587155\",\"description\":\"reaxys\",\"url\":null},{\"database\":\"wikipedia.en\",\"id\":\"Water\",\"description\":\"wikipedia.en\",\"url\":null}\\],\"obo\\_synonym\":\\[{\"name\":\"WATER\",\"scope\":\"hasExactSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"PDBeChem\",\"description\":null,\"url\":null}\\]},{\"name\":\"Water\",\"scope\":\"hasExactSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"KEGG\\_COMPOUND\",\"description\":null,\"url\":null}\\]},{\"name\":\"oxidane\",\"scope\":\"hasExactSynonym\",\"type\":\"IUPAC NAME\",\"xrefs\":\\[{\"database\":null,\"id\":\"IUPAC\",\"description\":null,\"url\":null}\\]},{\"name\":\"water\",\"scope\":\"hasExactSynonym\",\"type\":\"IUPAC NAME\",\"xrefs\":\\[{\"database\":null,\"id\":\"IUPAC\",\"description\":null,\"url\":null}\\]},{\"name\":\"BOUND WATER\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"pdb-ccd\",\"description\":null,\"url\":null}\\]},{\"name\":\"H(2)O\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"uniprot\\_ft\",\"description\":null,\"url\":null}\\]},{\"name\":\"H2O\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"kegg.compound\",\"description\":null,\"url\":null}\\]},{\"name\":\"HOH\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"WATER\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"pdb-ccd\",\"description\":null,\"url\":null}\\]},{\"name\":\"Wasser\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"Water\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"kegg.compound\",\"description\":null,\"url\":null}\\]},{\"name\":\"\\[OH2\\]\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"acqua\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"agua\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"aqua\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"dihydridooxygen\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"dihydrogen oxide\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"eau\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"hydrogen hydroxide\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"oxidane\",\"scope\":\"hasRelatedSynonym\",\"type\":\"IUPAC NAME\",\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"water\",\"scope\":\"hasRelatedSynonym\",\"type\":\"IUPAC NAME\",\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]}\\],\"is\\_preferred\\_root\":false,\"\\_links\":{\"self\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377?lang=en\"},\"parents\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/parents\"},\"ancestors\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/ancestors\"},\"hierarchicalParents\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/hierarchicalParents\"},\"hierarchicalAncestors\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/hierarchicalAncestors\"},\"jstree\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/jstree\"},\"children\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/children\"},\"descendants\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/descendants\"},\"hierarchicalChildren\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/hierarchicalChildren\"},\"hierarchicalDescendants\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/hierarchicalDescendants\"},\"graph\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/graph\"},\"has\\_role\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO\\_0000087\"},\"is\\_deprotonated\\_form\\_of\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO\\_0018033\"},\"is\\_protonated\\_form\\_of\":{\"href\":\"http://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI\\_15377/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FRO\\_0018034\"}}}}\n\n![Molecular structure](<https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/962/PNG?image_size=large>)\n",
+    "label" : "Water",
+    "score" : 1.0,
+    "locator" : "CHEM:CID_962",
+    "documentation" : {
+      "image/gif" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/fccb8763604bdf0f0c2d14f14332f44db90dac37b3b96b3a7579cfc08f7c4dd0.gif",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/87252796e34c94337762b753cbb3063c563833f7e7602e3b5130dc87136df18c.md",
+      "text/html" : "https://pubchem.ncbi.nlm.nih.gov/compound/962",
+      "image/png" : "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/962/PNG?image_size=large",
+      "application/json" : "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/962/property/Title,IUPACName,MolecularFormula,MolecularWeight,InChI,InChIKey/JSON"
+    },
+    "semanticBoundaries" : [ "COMPOUND" ],
+    "hierarchyStatus" : "COMPLETE"
+  }
+}, {
+  "requested" : "CHEBI:36902",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A36902",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/844f9cb6b3b13a07cb73d624cbfcfcdd8fd550363d7b48ac7bd03f1e6557b7e6.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_36902"
+    },
+    "parentIds" : [ "CHEBI:33242", "CHEBI:33304" ],
+    "id" : "CHEBI:36902",
+    "label" : "chalcogen hydride",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_36902",
+    "description" : "# chalcogen hydride\n\n- **Identifier**: CHEBI:36902\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:33242, CHEBI:33304\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A36902>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_36902\n- **lang**: en\n- **description**: \\[\\]\n- **synonyms**: \\[\"chalcogen hydride\",\"chalcogen hydrides\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:36902\"\\]}\n- **label**: chalcogen hydride\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_36902\n- **obo\\_id**: CHEBI:36902\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"chalcogen hydride\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"chalcogen hydrides\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_36902"
+  }
+}, {
+  "requested" : "CHEBI_36902",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A36902",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/844f9cb6b3b13a07cb73d624cbfcfcdd8fd550363d7b48ac7bd03f1e6557b7e6.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_36902"
+    },
+    "parentIds" : [ "CHEBI:33242", "CHEBI:33304" ],
+    "id" : "CHEBI:36902",
+    "label" : "chalcogen hydride",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_36902",
+    "description" : "# chalcogen hydride\n\n- **Identifier**: CHEBI:36902\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:33242, CHEBI:33304\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A36902>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_36902\n- **lang**: en\n- **description**: \\[\\]\n- **synonyms**: \\[\"chalcogen hydride\",\"chalcogen hydrides\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:36902\"\\]}\n- **label**: chalcogen hydride\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_36902\n- **obo\\_id**: CHEBI:36902\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"chalcogen hydride\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"chalcogen hydrides\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_36902"
+  }
+}, {
+  "requested" : "CHEBI:33692",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33692",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/9e43ea28ba1797a651c870bc8c198e1893c752e4bb288a7ce80716841696c850.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_33692"
+    },
+    "parentIds" : [ "CHEBI:33608", "CHEBI:37577" ],
+    "id" : "CHEBI:33692",
+    "label" : "hydrides",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_33692",
+    "description" : "# hydrides\n\n- **Identifier**: CHEBI:33692\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:33608, CHEBI:37577\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33692>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_33692\n- **lang**: en\n- **description**: \\[\"Hydrides are chemical compounds of hydrogen with other chemical elements.\"\\]\n- **synonyms**: \\[\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:33692\"\\]}\n- **label**: hydrides\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_33692\n- **obo\\_id**: CHEBI:33692\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_33692"
+  }
+}, {
+  "requested" : "CHEBI_33692",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33692",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/9e43ea28ba1797a651c870bc8c198e1893c752e4bb288a7ce80716841696c850.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_33692"
+    },
+    "parentIds" : [ "CHEBI:33608", "CHEBI:37577" ],
+    "id" : "CHEBI:33692",
+    "label" : "hydrides",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_33692",
+    "description" : "# hydrides\n\n- **Identifier**: CHEBI:33692\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:33608, CHEBI:37577\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33692>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_33692\n- **lang**: en\n- **description**: \\[\"Hydrides are chemical compounds of hydrogen with other chemical elements.\"\\]\n- **synonyms**: \\[\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:33692\"\\]}\n- **label**: hydrides\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_33692\n- **obo\\_id**: CHEBI:33692\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_33692"
+  }
+}, {
+  "requested" : "CHEBI:24651",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A24651",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/eea2fa2c078a5ab5905fffc2b7cd90d61ab1b35b9f8ba4714e5083a78834748d.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_24651"
+    },
+    "parentIds" : [ "CHEBI:25806", "CHEBI:33608", "CHEBI:37577" ],
+    "id" : "CHEBI:24651",
+    "label" : "hydroxides",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_24651",
+    "description" : "# hydroxides\n\n- **Identifier**: CHEBI:24651\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:25806, CHEBI:33608, CHEBI:37577\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A24651>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_24651\n- **lang**: en\n- **description**: \\[\"Hydroxides are chemical compounds containing a hydroxy group or salts containing hydroxide (OH&lt;small&gt;&lt;sup&gt;−&lt;/small&gt;&lt;/sup&gt;).\"\\]\n- **synonyms**: \\[\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:24651\"\\]}\n- **label**: hydroxides\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_24651\n- **obo\\_id**: CHEBI:24651\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_24651"
+  }
+}, {
+  "requested" : "CHEBI_24651",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A24651",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/eea2fa2c078a5ab5905fffc2b7cd90d61ab1b35b9f8ba4714e5083a78834748d.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_24651"
+    },
+    "parentIds" : [ "CHEBI:25806", "CHEBI:33608", "CHEBI:37577" ],
+    "id" : "CHEBI:24651",
+    "label" : "hydroxides",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_24651",
+    "description" : "# hydroxides\n\n- **Identifier**: CHEBI:24651\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:25806, CHEBI:33608, CHEBI:37577\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A24651>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_24651\n- **lang**: en\n- **description**: \\[\"Hydroxides are chemical compounds containing a hydroxy group or salts containing hydroxide (OH&lt;small&gt;&lt;sup&gt;−&lt;/small&gt;&lt;/sup&gt;).\"\\]\n- **synonyms**: \\[\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:24651\"\\]}\n- **label**: hydroxides\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_24651\n- **obo\\_id**: CHEBI:24651\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_24651"
+  }
+}, {
+  "requested" : "CHEBI:24835",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A24835",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/999ac8213e9d623974de0882e435bc3337d855544456771fb92f1ae4a0288116.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_24835"
+    },
+    "parentIds" : [ "CHEBI:23367" ],
+    "id" : "CHEBI:24835",
+    "label" : "inorganic molecular entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_24835",
+    "description" : "# inorganic molecular entity\n\n- **Identifier**: CHEBI:24835\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:23367\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A24835>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_24835\n- **lang**: en\n- **description**: \\[\"A molecular entity that contains no carbon.\"\\]\n- **synonyms**: \\[\"anorganische Verbindungen\",\"inorganic compounds\",\"inorganic entity\",\"inorganic molecular entities\",\"inorganics\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:24835\"\\]}\n- **label**: inorganic molecular entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_24835\n- **obo\\_id**: CHEBI:24835\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"anorganische Verbindungen\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"inorganic compounds\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"inorganic entity\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"inorganic molecular entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"inorganics\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_24835"
+  }
+}, {
+  "requested" : "CHEBI_24835",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A24835",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/999ac8213e9d623974de0882e435bc3337d855544456771fb92f1ae4a0288116.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_24835"
+    },
+    "parentIds" : [ "CHEBI:23367" ],
+    "id" : "CHEBI:24835",
+    "label" : "inorganic molecular entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_24835",
+    "description" : "# inorganic molecular entity\n\n- **Identifier**: CHEBI:24835\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:23367\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A24835>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_24835\n- **lang**: en\n- **description**: \\[\"A molecular entity that contains no carbon.\"\\]\n- **synonyms**: \\[\"anorganische Verbindungen\",\"inorganic compounds\",\"inorganic entity\",\"inorganic molecular entities\",\"inorganics\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:24835\"\\]}\n- **label**: inorganic molecular entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_24835\n- **obo\\_id**: CHEBI:24835\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"anorganische Verbindungen\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"inorganic compounds\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"inorganic entity\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"inorganic molecular entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"inorganics\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_24835"
+  }
+}, {
+  "requested" : "CHEBI:33242",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33242",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/1d6a8daac916186eea84f6df7fe777261e076774175d2e85c1f1f064956e31bf.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_33242"
+    },
+    "parentIds" : [ "CHEBI:24835", "CHEBI:33692" ],
+    "id" : "CHEBI:33242",
+    "label" : "inorganic hydride",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_33242",
+    "description" : "# inorganic hydride\n\n- **Identifier**: CHEBI:33242\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:24835, CHEBI:33692\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33242>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_33242\n- **lang**: en\n- **description**: \\[\\]\n- **synonyms**: \\[\"inorganic hydrides\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:33242\"\\]}\n- **label**: inorganic hydride\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_33242\n- **obo\\_id**: CHEBI:33242\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"inorganic hydrides\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_33242"
+  }
+}, {
+  "requested" : "CHEBI_33242",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33242",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/1d6a8daac916186eea84f6df7fe777261e076774175d2e85c1f1f064956e31bf.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_33242"
+    },
+    "parentIds" : [ "CHEBI:24835", "CHEBI:33692" ],
+    "id" : "CHEBI:33242",
+    "label" : "inorganic hydride",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_33242",
+    "description" : "# inorganic hydride\n\n- **Identifier**: CHEBI:33242\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:24835, CHEBI:33692\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33242>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_33242\n- **lang**: en\n- **description**: \\[\\]\n- **synonyms**: \\[\"inorganic hydrides\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:33242\"\\]}\n- **label**: inorganic hydride\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_33242\n- **obo\\_id**: CHEBI:33242\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"inorganic hydrides\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_33242"
+  }
+}, {
+  "requested" : "CHEBI:33304",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33304",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/451f9d64b4d471acad6cb49af493fcd605e06f2c73bf0db757fe5af0ea6f9a97.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_33304"
+    },
+    "parentIds" : [ "CHEBI:33675" ],
+    "id" : "CHEBI:33304",
+    "label" : "chalcogen molecular entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_33304",
+    "description" : "# chalcogen molecular entity\n\n- **Identifier**: CHEBI:33304\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:33675\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33304>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_33304\n- **lang**: en\n- **description**: \\[\"Any p-block molecular entity containing a chalcogen.\"\\]\n- **synonyms**: \\[\"chalcogen compounds\",\"chalcogen molecular entities\",\"chalcogen molecular entity\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:33304\"\\]}\n- **label**: chalcogen molecular entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_33304\n- **obo\\_id**: CHEBI:33304\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"chalcogen compounds\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"chalcogen molecular entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"chalcogen molecular entity\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_33304"
+  }
+}, {
+  "requested" : "CHEBI_33304",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33304",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/451f9d64b4d471acad6cb49af493fcd605e06f2c73bf0db757fe5af0ea6f9a97.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_33304"
+    },
+    "parentIds" : [ "CHEBI:33675" ],
+    "id" : "CHEBI:33304",
+    "label" : "chalcogen molecular entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_33304",
+    "description" : "# chalcogen molecular entity\n\n- **Identifier**: CHEBI:33304\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:33675\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33304>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_33304\n- **lang**: en\n- **description**: \\[\"Any p-block molecular entity containing a chalcogen.\"\\]\n- **synonyms**: \\[\"chalcogen compounds\",\"chalcogen molecular entities\",\"chalcogen molecular entity\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:33304\"\\]}\n- **label**: chalcogen molecular entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_33304\n- **obo\\_id**: CHEBI:33304\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"chalcogen compounds\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"chalcogen molecular entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"chalcogen molecular entity\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_33304"
+  }
+}, {
+  "requested" : "CHEBI:33608",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33608",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/1bfbda83bf7dcf118b379aa098887275a5c3a19633a1cd5d3449a5d0a338a27a.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_33608"
+    },
+    "parentIds" : [ "CHEBI:33674" ],
+    "id" : "CHEBI:33608",
+    "label" : "hydrogen molecular entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_33608",
+    "description" : "# hydrogen molecular entity\n\n- **Identifier**: CHEBI:33608\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:33674\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33608>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_33608\n- **lang**: en\n- **description**: \\[\\]\n- **synonyms**: \\[\"hydrogen compounds\",\"hydrogen molecular entities\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:33608\"\\]}\n- **label**: hydrogen molecular entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_33608\n- **obo\\_id**: CHEBI:33608\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"hydrogen compounds\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"hydrogen molecular entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_33608"
+  }
+}, {
+  "requested" : "CHEBI_33608",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33608",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/1bfbda83bf7dcf118b379aa098887275a5c3a19633a1cd5d3449a5d0a338a27a.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_33608"
+    },
+    "parentIds" : [ "CHEBI:33674" ],
+    "id" : "CHEBI:33608",
+    "label" : "hydrogen molecular entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_33608",
+    "description" : "# hydrogen molecular entity\n\n- **Identifier**: CHEBI:33608\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:33674\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33608>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_33608\n- **lang**: en\n- **description**: \\[\\]\n- **synonyms**: \\[\"hydrogen compounds\",\"hydrogen molecular entities\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:33608\"\\]}\n- **label**: hydrogen molecular entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_33608\n- **obo\\_id**: CHEBI:33608\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"hydrogen compounds\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"hydrogen molecular entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_33608"
+  }
+}, {
+  "requested" : "CHEBI:37577",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A37577",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/7a3d73fb6f0c9d4c4ca0e94fb642b6c27d24d3a803ce8079c78147d487983d97.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_37577"
+    },
+    "parentIds" : [ "CHEBI:36357" ],
+    "id" : "CHEBI:37577",
+    "label" : "heteroatomic molecular entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_37577",
+    "description" : "# heteroatomic molecular entity\n\n- **Identifier**: CHEBI:37577\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:36357\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A37577>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_37577\n- **lang**: en\n- **description**: \\[\"A molecular entity consisting of two or more chemical elements.\"\\]\n- **synonyms**: \\[\"chemical compound\",\"heteroatomic molecular entities\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:37577\"\\]}\n- **label**: heteroatomic molecular entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_37577\n- **obo\\_id**: CHEBI:37577\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"chemical compound\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"heteroatomic molecular entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_37577"
+  }
+}, {
+  "requested" : "CHEBI_37577",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A37577",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/7a3d73fb6f0c9d4c4ca0e94fb642b6c27d24d3a803ce8079c78147d487983d97.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_37577"
+    },
+    "parentIds" : [ "CHEBI:36357" ],
+    "id" : "CHEBI:37577",
+    "label" : "heteroatomic molecular entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_37577",
+    "description" : "# heteroatomic molecular entity\n\n- **Identifier**: CHEBI:37577\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:36357\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A37577>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_37577\n- **lang**: en\n- **description**: \\[\"A molecular entity consisting of two or more chemical elements.\"\\]\n- **synonyms**: \\[\"chemical compound\",\"heteroatomic molecular entities\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:37577\"\\]}\n- **label**: heteroatomic molecular entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_37577\n- **obo\\_id**: CHEBI:37577\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"chemical compound\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"heteroatomic molecular entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_37577"
+  }
+}, {
+  "requested" : "CHEBI:25806",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A25806",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/8bb4bc313dc790c8b192d1bc750190550b5140b1eea3084015ce19e5f3742df8.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_25806"
+    },
+    "parentIds" : [ "CHEBI:33304" ],
+    "id" : "CHEBI:25806",
+    "label" : "oxygen molecular entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_25806",
+    "description" : "# oxygen molecular entity\n\n- **Identifier**: CHEBI:25806\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:33304\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A25806>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_25806\n- **lang**: en\n- **description**: \\[\\]\n- **synonyms**: \\[\"oxygen molecular entities\",\"oxygen molecular entity\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:25806\"\\]}\n- **label**: oxygen molecular entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_25806\n- **obo\\_id**: CHEBI:25806\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"oxygen molecular entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"oxygen molecular entity\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_25806"
+  }
+}, {
+  "requested" : "CHEBI_25806",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A25806",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/8bb4bc313dc790c8b192d1bc750190550b5140b1eea3084015ce19e5f3742df8.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_25806"
+    },
+    "parentIds" : [ "CHEBI:33304" ],
+    "id" : "CHEBI:25806",
+    "label" : "oxygen molecular entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_25806",
+    "description" : "# oxygen molecular entity\n\n- **Identifier**: CHEBI:25806\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:33304\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A25806>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_25806\n- **lang**: en\n- **description**: \\[\\]\n- **synonyms**: \\[\"oxygen molecular entities\",\"oxygen molecular entity\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:25806\"\\]}\n- **label**: oxygen molecular entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_25806\n- **obo\\_id**: CHEBI:25806\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"oxygen molecular entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"oxygen molecular entity\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_25806"
+  }
+}, {
+  "requested" : "CHEBI:23367",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A23367",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/9489bf5133fa33a8b4d3a6d4b82a0667e1b2b26fb9517b956b1ea5e6b796bc4c.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_23367"
+    },
+    "parentIds" : [ "CHEBI:24431" ],
+    "id" : "CHEBI:23367",
+    "label" : "molecular entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_23367",
+    "description" : "# molecular entity\n\n- **Identifier**: CHEBI:23367\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:24431\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A23367>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_23367\n- **lang**: en\n- **description**: \\[\"Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.\"\\]\n- **synonyms**: \\[\"entidad molecular\",\"entidades moleculares\",\"entite moleculaire\",\"molecular entities\",\"molecular entity\",\"molecular entity\",\"molekulare Entitaet\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:23367\"\\]}\n- **label**: molecular entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_23367\n- **obo\\_id**: CHEBI:23367\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"molecular entity\",\"scope\":\"hasExactSynonym\",\"type\":\"IUPAC NAME\",\"xrefs\":\\[{\"database\":null,\"id\":\"IUPAC\",\"description\":null,\"url\":null}\\]},{\"name\":\"entidad molecular\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"entidades moleculares\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"entite moleculaire\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"molecular entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"molecular entity\",\"scope\":\"hasRelatedSynonym\",\"type\":\"IUPAC NAME\",\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"molekulare Entitaet\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_23367"
+  }
+}, {
+  "requested" : "CHEBI_23367",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A23367",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/9489bf5133fa33a8b4d3a6d4b82a0667e1b2b26fb9517b956b1ea5e6b796bc4c.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_23367"
+    },
+    "parentIds" : [ "CHEBI:24431" ],
+    "id" : "CHEBI:23367",
+    "label" : "molecular entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_23367",
+    "description" : "# molecular entity\n\n- **Identifier**: CHEBI:23367\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:24431\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A23367>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_23367\n- **lang**: en\n- **description**: \\[\"Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.\"\\]\n- **synonyms**: \\[\"entidad molecular\",\"entidades moleculares\",\"entite moleculaire\",\"molecular entities\",\"molecular entity\",\"molecular entity\",\"molekulare Entitaet\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:23367\"\\]}\n- **label**: molecular entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_23367\n- **obo\\_id**: CHEBI:23367\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"molecular entity\",\"scope\":\"hasExactSynonym\",\"type\":\"IUPAC NAME\",\"xrefs\":\\[{\"database\":null,\"id\":\"IUPAC\",\"description\":null,\"url\":null}\\]},{\"name\":\"entidad molecular\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"entidades moleculares\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"entite moleculaire\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"molecular entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"molecular entity\",\"scope\":\"hasRelatedSynonym\",\"type\":\"IUPAC NAME\",\"xrefs\":\\[{\"database\":null,\"id\":\"iupac\",\"description\":null,\"url\":null}\\]},{\"name\":\"molekulare Entitaet\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_23367"
+  }
+}, {
+  "requested" : "CHEBI:33675",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33675",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/2604007cb3484c7870db70c932d7a3e8b7e74bfe304dbf32bf314385e91592b6.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_33675"
+    },
+    "parentIds" : [ "CHEBI:33579" ],
+    "id" : "CHEBI:33675",
+    "label" : "p-block molecular entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_33675",
+    "description" : "# p-block molecular entity\n\n- **Identifier**: CHEBI:33675\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:33579\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33675>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_33675\n- **lang**: en\n- **description**: \\[\"A main group molecular entity that contains one or more atoms of a p-block element.\"\\]\n- **synonyms**: \\[\"p-block compounds\",\"p-block molecular entities\",\"p-block molecular entitiy\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:33675\"\\]}\n- **label**: p-block molecular entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_33675\n- **obo\\_id**: CHEBI:33675\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"p-block compounds\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"p-block molecular entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"p-block molecular entitiy\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_33675"
+  }
+}, {
+  "requested" : "CHEBI_33675",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33675",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/2604007cb3484c7870db70c932d7a3e8b7e74bfe304dbf32bf314385e91592b6.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_33675"
+    },
+    "parentIds" : [ "CHEBI:33579" ],
+    "id" : "CHEBI:33675",
+    "label" : "p-block molecular entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_33675",
+    "description" : "# p-block molecular entity\n\n- **Identifier**: CHEBI:33675\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:33579\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33675>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_33675\n- **lang**: en\n- **description**: \\[\"A main group molecular entity that contains one or more atoms of a p-block element.\"\\]\n- **synonyms**: \\[\"p-block compounds\",\"p-block molecular entities\",\"p-block molecular entitiy\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:33675\"\\]}\n- **label**: p-block molecular entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_33675\n- **obo\\_id**: CHEBI:33675\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"p-block compounds\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"p-block molecular entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"p-block molecular entitiy\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_33675"
+  }
+}, {
+  "requested" : "CHEBI:33674",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33674",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/20cb723910ca195f61c73f6a36af18a27cf3165d5d743112c32e8f68f45ea7f5.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_33674"
+    },
+    "parentIds" : [ "CHEBI:33579" ],
+    "id" : "CHEBI:33674",
+    "label" : "s-block molecular entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_33674",
+    "description" : "# s-block molecular entity\n\n- **Identifier**: CHEBI:33674\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:33579\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33674>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_33674\n- **lang**: en\n- **description**: \\[\"An s-block molecular entity is a molecular entity containing one or more atoms of an s-block element.\"\\]\n- **synonyms**: \\[\"s-block compounds\",\"s-block molecular entities\",\"s-block molecular entity\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:33674\"\\]}\n- **label**: s-block molecular entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_33674\n- **obo\\_id**: CHEBI:33674\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"s-block compounds\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"s-block molecular entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"s-block molecular entity\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_33674"
+  }
+}, {
+  "requested" : "CHEBI_33674",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33674",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/20cb723910ca195f61c73f6a36af18a27cf3165d5d743112c32e8f68f45ea7f5.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_33674"
+    },
+    "parentIds" : [ "CHEBI:33579" ],
+    "id" : "CHEBI:33674",
+    "label" : "s-block molecular entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_33674",
+    "description" : "# s-block molecular entity\n\n- **Identifier**: CHEBI:33674\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:33579\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33674>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_33674\n- **lang**: en\n- **description**: \\[\"An s-block molecular entity is a molecular entity containing one or more atoms of an s-block element.\"\\]\n- **synonyms**: \\[\"s-block compounds\",\"s-block molecular entities\",\"s-block molecular entity\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:33674\"\\]}\n- **label**: s-block molecular entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_33674\n- **obo\\_id**: CHEBI:33674\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"s-block compounds\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"s-block molecular entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"s-block molecular entity\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_33674"
+  }
+}, {
+  "requested" : "CHEBI:36357",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A36357",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/8b7cf4491ef2b75a5c4656f1002862e70fd13a68e6e4fa16884f0c1e3b9cb548.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_36357"
+    },
+    "parentIds" : [ "CHEBI:23367" ],
+    "id" : "CHEBI:36357",
+    "label" : "polyatomic entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_36357",
+    "description" : "# polyatomic entity\n\n- **Identifier**: CHEBI:36357\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:23367\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A36357>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_36357\n- **lang**: en\n- **description**: \\[\"Any molecular entity consisting of more than one atom.\"\\]\n- **synonyms**: \\[\"polyatomic entities\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:36357\"\\]}\n- **label**: polyatomic entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_36357\n- **obo\\_id**: CHEBI:36357\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"polyatomic entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_36357"
+  }
+}, {
+  "requested" : "CHEBI_36357",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A36357",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/8b7cf4491ef2b75a5c4656f1002862e70fd13a68e6e4fa16884f0c1e3b9cb548.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_36357"
+    },
+    "parentIds" : [ "CHEBI:23367" ],
+    "id" : "CHEBI:36357",
+    "label" : "polyatomic entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_36357",
+    "description" : "# polyatomic entity\n\n- **Identifier**: CHEBI:36357\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:23367\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A36357>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_36357\n- **lang**: en\n- **description**: \\[\"Any molecular entity consisting of more than one atom.\"\\]\n- **synonyms**: \\[\"polyatomic entities\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:36357\"\\]}\n- **label**: polyatomic entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_36357\n- **obo\\_id**: CHEBI:36357\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"polyatomic entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_36357"
+  }
+}, {
+  "requested" : "CHEBI:24431",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A24431",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/798a9da1a1ffc1409580b5222d59934ace3befff36781530066baf4eb29a3958.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_24431"
+    },
+    "parentIds" : [ ],
+    "id" : "CHEBI:24431",
+    "label" : "chemical entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : "chemistry:ChemicalIdentity",
+    "conceptName" : "CHEBI_24431",
+    "description" : "# chemical entity\n\n- **Identifier**: CHEBI:24431\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A24431>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_24431\n- **lang**: en\n- **description**: \\[\"A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances.\"\\]\n- **synonyms**: \\[\"chemical entity\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:24431\"\\]}\n- **label**: chemical entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: true\n- **short\\_form**: CHEBI\\_24431\n- **obo\\_id**: CHEBI:24431\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"chemical entity\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"uniprot\\_ft\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_24431"
+  }
+}, {
+  "requested" : "CHEBI_24431",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A24431",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/798a9da1a1ffc1409580b5222d59934ace3befff36781530066baf4eb29a3958.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_24431"
+    },
+    "parentIds" : [ ],
+    "id" : "CHEBI:24431",
+    "label" : "chemical entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : "chemistry:ChemicalIdentity",
+    "conceptName" : "CHEBI_24431",
+    "description" : "# chemical entity\n\n- **Identifier**: CHEBI:24431\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A24431>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_24431\n- **lang**: en\n- **description**: \\[\"A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances.\"\\]\n- **synonyms**: \\[\"chemical entity\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:24431\"\\]}\n- **label**: chemical entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: true\n- **short\\_form**: CHEBI\\_24431\n- **obo\\_id**: CHEBI:24431\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"chemical entity\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"uniprot\\_ft\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_24431"
+  }
+}, {
+  "requested" : "CHEBI:33579",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33579",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/b1cbcbc246720831e77946af3c773daf52d8dcdc6b354d0e4982be4444468ef0.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_33579"
+    },
+    "parentIds" : [ "CHEBI:23367" ],
+    "id" : "CHEBI:33579",
+    "label" : "main group molecular entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_33579",
+    "description" : "# main group molecular entity\n\n- **Identifier**: CHEBI:33579\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:23367\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33579>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_33579\n- **lang**: en\n- **description**: \\[\"A molecular entity containing one or more atoms from any of groups 1, 2, 13, 14, 15, 16, 17, and 18 of the periodic table.\"\\]\n- **synonyms**: \\[\"main group compounds\",\"main group molecular entities\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:33579\"\\]}\n- **label**: main group molecular entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_33579\n- **obo\\_id**: CHEBI:33579\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"main group compounds\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"main group molecular entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_33579"
+  }
+}, {
+  "requested" : "CHEBI_33579",
+  "identity" : {
+    "semanticBoundaries" : [ "CHEBI" ],
+    "hierarchyStatus" : "COMPLETE",
+    "notifications" : [ ],
+    "documentation" : {
+      "text/html" : "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33579",
+      "text/markdown" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/chemical-capture-r2/tmp/klab.authority.pubchem/documentation/b1cbcbc246720831e77946af3c773daf52d8dcdc6b354d0e4982be4444468ef0.md",
+      "application/json" : "https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_33579"
+    },
+    "parentIds" : [ "CHEBI:23367" ],
+    "id" : "CHEBI:33579",
+    "label" : "main group molecular entity",
+    "parentRelationship" : [ ],
+    "authorityName" : "CHEM",
+    "baseIdentity" : null,
+    "conceptName" : "CHEBI_33579",
+    "description" : "# main group molecular entity\n\n- **Identifier**: CHEBI:33579\n- **Provider**: PubChem with ChEBI through EMBL-EBI OLS4\n- **Direct structural parents**: CHEBI:23367\n\n[Source record](<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI%3A33579>)\n\n## Source metadata\n\n- **iri**: http://purl.obolibrary.org/obo/CHEBI\\_33579\n- **lang**: en\n- **description**: \\[\"A molecular entity containing one or more atoms from any of groups 1, 2, 13, 14, 15, 16, 17, and 18 of the periodic table.\"\\]\n- **synonyms**: \\[\"main group compounds\",\"main group molecular entities\"\\]\n- **annotation**: {\"has\\_obo\\_namespace\":\\[\"chebi\\_ontology\"\\],\"id\":\\[\"CHEBI:33579\"\\]}\n- **label**: main group molecular entity\n- **ontology\\_name**: chebi\n- **ontology\\_prefix**: CHEBI\n- **ontology\\_iri**: http://purl.obolibrary.org/obo/chebi.owl\n- **is\\_obsolete**: false\n- **is\\_defining\\_ontology**: true\n- **has\\_children**: true\n- **is\\_root**: false\n- **short\\_form**: CHEBI\\_33579\n- **obo\\_id**: CHEBI:33579\n- **in\\_subset**: \\[\"3\\_STAR\"\\]\n- **obo\\_synonym**: \\[{\"name\":\"main group compounds\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]},{\"name\":\"main group molecular entities\",\"scope\":\"hasRelatedSynonym\",\"type\":null,\"xrefs\":\\[{\"database\":null,\"id\":\"chebi\",\"description\":null,\"url\":null}\\]}\\]\n- **is\\_preferred\\_root**: false\n",
+    "score" : 1.0,
+    "locator" : "CHEM:CHEBI_33579"
+  }
+} ]

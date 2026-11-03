@@ -90,3 +90,27 @@ process SedimentTransport
 
 process Lithification
     "Consolidation of sediment into coherent rock.";
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0061",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/earth/geology.json"
+)
+structural bond MaterialContact
+    "Observed physical contact between two geological material bodies under a stated boundary convention."
+    is physical:PhysicalContact
+    links (geology:RockBody or geology:SedimentBody) to (geology:RockBody or geology:SedimentBody);

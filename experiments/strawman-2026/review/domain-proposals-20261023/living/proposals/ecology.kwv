@@ -1,0 +1,241 @@
+/* REVIEW DRAFT, 2026-10-23. NO RECORDED COMMUNITY ACCEPTANCE.
+ * Full replacement overlay for the same-named baseline namespace, not an additional
+ * namespace to load alongside it. Existing declarations above the review divider
+ * are baseline context, not newly proposed approvals. See PROPOSALS.md for evidence,
+ * priorities, alternatives, bearer/endpoint contracts and discriminating tests.
+ * Owner discussion/incorporation is distinct from community acceptance.
+ * Status uses ordinary comments pending the common cross-domain annotation convention.
+ * Parser results are in VALIDATION.md; no linking/reasoner/runtime acceptance claimed.
+ */
+ontology ecology
+	version 1.0
+	using imod, life, biology, physical, agency
+	in domain imod:Ecology;
+
+abstract agent Population;
+
+abstract agent Community
+	emerges from ecology:Population;
+
+/**
+ * ## Consumption of plant material
+ *
+ * Herbivory describes an organism consuming plant material. The consumer, the
+ * source organism and an ingested material portion are distinct participants;
+ * observing consumption does not make them a single entity or assign agency to
+ * a grouping. Herbivory includes feeding on portions of a living plant without
+ * requiring the death of that plant.
+ *
+ * The process is distinct from a persistent feeding relationship, a bounded
+ * feeding episode and a measured consumption rate. Observations establish what
+ * was consumed and by whom; models describe effects on growth, survival and
+ * ecological dynamics under the particular conditions.
+ */
+process Herbivory
+    "Consumption of plant material by an organism.";
+
+// ===== NEW REVIEW PROPOSALS BELOW; BASELINE CONTEXT ABOVE =====
+
+// PROPOSED E1: separate endpoint scales. Species is never an interacting Agent.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0125",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/ecology.json"
+)
+functional directed relationship IndividualFeedingConnection
+    "A consumer individual has a feeding disposition toward an identified food resource."
+    is agency:AgentInteraction
+    links life:Individual to (imod:Agent or imod:Subject);
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0126",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/ecology.json"
+)
+functional directed relationship PopulationFeedingConnection
+    "An observed consumer population has a feeding disposition toward an identified resource population or material pool."
+    is agency:AgentInteraction
+    links ecology:Population to (ecology:Population or physical:MaterialBody);
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0127",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/ecology.json"
+)
+abstract configuration IndividualInteractionNetwork
+    "A network recognized from observed feeding connections between individual consumers and food resources."
+    is imod:Network
+    emerges from ecology:IndividualFeedingConnection;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0128",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/ecology.json"
+)
+abstract configuration PopulationFoodNetwork
+    "A network recognized from observation-grounded population feeding connections."
+    is imod:Network
+    emerges from ecology:PopulationFeedingConnection;
+
+// PROPOSED E2: feeding process, biomass transfer and disposition are distinct targets.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0129",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/ecology.json"
+)
+process Predation
+    "Consumption of prey organisms by predator organisms.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0130",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/ecology.json"
+)
+process EcologicalDispersal
+    "Movement of biological individuals or propagules between ecological locations.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0131",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/ecology.json"
+)
+process Colonization
+    "Establishment of biological individuals in a newly occupied ecological location.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0132",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/ecology.json"
+)
+process Succession
+    "Directional change in ecological community composition through time.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0133",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/ecology.json"
+)
+event LocalExtirpation
+    "A bounded disappearance of an identified population from a specified locality.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0134",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/ecology.json"
+)
+event Recruitment
+    "A bounded addition of individuals to a population under stated entry criteria.";
+
+// PROPOSED E3: endpoints are observed entities, not bookkeeping membership.
+// CROSS-REVIEW LF8: acceptance blocked. Agent/MaterialBody bounds alone do not
+// establish biological-source/abiotic-target eligibility. Network ancestry of
+// the recognizing arrangement also needs alignment; no Ecosystem category chosen.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0135",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/ecology.json"
+)
+functional directed relationship BioticAbioticCoupling
+    "An identified biological agent interacts with an identified abiotic material body."
+    links imod:Agent to physical:MaterialBody;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0136",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/ecology.json"
+)
+abstract configuration BioticAbioticArrangement
+    "A configuration recognized from biotic-abiotic coupling at an explicit ecological scope."
+    emerges from ecology:BioticAbioticCoupling;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0137",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/ecology.json"
+)
+abstract identity EcosystemType
+    "A classification of ecosystems in a named versioned ecosystem typology.";
+// Ecosystem head deliberately NOT declared: Subject/Agent/Configuration arbitration open.
+// No authority binding is guessed; reuse LAND mechanism after bearer/scheme review.
+// HabitatPatch and Corridor remain prose alternatives until Geography/Earth bearers settle.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0138",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/ecology.json"
+)
+quantity PopulationAbundance
+    "Number of individuals belonging to an identified population at the stated observation support."
+    is imod:Numerosity of ecology:Population;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0139",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/ecology.json"
+)
+quantity SpeciesRichness
+    "Number of distinct species identities represented in a community under stated inclusion criteria."
+    is imod:Numerosity of ecology:Community;

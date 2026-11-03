@@ -1,0 +1,16 @@
+{
+  "success" : true,
+  "request" : {
+    "worldview" : "imod",
+    "name" : "CHEM",
+    "rootIdentity" : "chemistry:ChemicalIdentity",
+    "parameters" : {
+      "urn" : "klab.authority.pubchem",
+      "gifDepictions" : true,
+      "searchLimit" : 10
+    }
+  },
+  "resolvedCodes" : 38,
+  "providerClassLocation" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-15/task-2/m49-actual-capture-20261018/m49-candidate-official-url-guard/run/producer-state/components/plugins/klab.authority.pubchem@1.0.0-SNAPSHOT.jar",
+  "scope" : "Fresh live responses via real CachedAuthority into private capture copy. Existing matching artifact/binding proof unchanged; no manual identity/cache records or expiration changes. No installation or production configuration change."
+}

@@ -85,3 +85,99 @@ abstract configuration Exposure
 abstract configuration Risk
 	"The compresence of exposure, implying assets threatened by hazards, with the vulnerability of the same assets."
 	;
+
+/**
+ * ## Experimental first-level articulation
+ *
+ * These observations extend the shared vocabulary for multidisciplinary review.
+ * Their declaration-local review records preserve rationale, alternatives and
+ * exact validation evidence. Experimental inclusion is distinct from recorded
+ * community acceptance; models still establish occurrence, support and outcomes.
+ */
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0200",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/valuation.json"
+)
+functional directed relationship ValuesSubject
+    "An agent's positive value attribution to an identified non-agentive substantial in a stated context."
+    links imod:Agent to imod:Subject;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0201",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/valuation.json"
+)
+functional directed relationship ValuesAgent
+    "An agent's positive value attribution to an identified agent in a stated context."
+    links imod:Agent to imod:Agent;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0202",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/valuation.json"
+)
+process ValueAttribution
+    "Activity through which an agent attributes value to an identified entity or alternative."
+    is physical:Activity of imod:Agent;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0204",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/valuation.json"
+)
+process ValueDeliberation
+    "Activity in which participants examine and discuss value judgments about identified alternatives."
+    is physical:Activity of imod:Agent;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0205",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/valuation.json"
+)
+process MonetaryAppraisal
+    "Activity through which an agent estimates a monetary amount for a specified valuation concept and target."
+    is physical:Activity of imod:Agent;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0207",
+    revision="strawman-integration-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../docs/reviews/domain-integration-20261023/records/societal/valuation.json"
+)
+event ValuationStatement
+    "A bounded occurrence in which an agent expresses an identified value judgment."
+    ;

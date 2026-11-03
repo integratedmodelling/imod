@@ -1,0 +1,114 @@
+{
+  "base_commit": "268664fa55efc8ffd2651572a34f59f7dccddc28",
+  "revision": "region-areal-r1",
+  "governance": "Steering clarification of intended Region semantics; not community-wide acceptance. All proposal community_acceptance not_recorded.",
+  "region_axiom_unchanged": "thing Region is imod:Areal earth:Location;",
+  "new_declarations": [
+    {
+      "proposal": "wv-review-20261023-0054",
+      "canonical_name": "geography:LocalRelief",
+      "original_declaration": "length LocalRelief\n    \"Difference between maximum and minimum ground elevations over a stated terrestrial region.\"\n    is imod:Length of earth:Region\n    describes geography:TerrestrialSurfaceArrangement;",
+      "current_declaration": "length LocalRelief\n    \"Difference between maximum and minimum ground elevations over a stated terrestrial region.\"\n    is imod:Length of earth:Region\n    describes geography:TerrestrialSurfaceArrangement;",
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-review-20261023-0054",
+        "revision": "region-areal-r1",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../docs/reviews/region-areal-20261023/REVIEW_RECORD.json"
+      },
+      "disposition_delta": "held -> active experimental; intended Region dimensionality clarified, other scientific meaning unchanged"
+    },
+    {
+      "proposal": "wv-review-20261023-0062",
+      "canonical_name": "hydrology:SurfaceCatchment",
+      "original_declaration": "thing SurfaceCatchment\n    \"A surface region delineated by drainage toward one specified outlet under a stated convention.\"\n    is earth:Region;",
+      "current_declaration": "thing SurfaceCatchment\n    \"A surface region delineated by drainage toward one specified outlet under a stated convention.\"\n    is earth:Region;",
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-review-20261023-0062",
+        "revision": "region-areal-r1",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../docs/reviews/region-areal-20261023/REVIEW_RECORD.json"
+      },
+      "disposition_delta": "held -> active experimental; intended Region dimensionality clarified, other scientific meaning unchanged"
+    },
+    {
+      "proposal": "wv-review-20261023-0063",
+      "canonical_name": "hydrology:CatchmentArea",
+      "original_declaration": "area CatchmentArea\n    \"Horizontal area of the delineated surface catchment.\"\n    is imod:Area of reviewhydrology:SurfaceCatchment\n    describes reviewhydrology:SurfaceCatchment;",
+      "current_declaration": "area CatchmentArea\n    \"Horizontal area of the delineated surface catchment.\"\n    is imod:Area of hydrology:SurfaceCatchment\n    describes hydrology:SurfaceCatchment;",
+      "annotation": {
+        "schema": "klab.review/1",
+        "proposal": "wv-review-20261023-0063",
+        "revision": "region-areal-r1",
+        "maturity": "experimental",
+        "controversy": "unassessed",
+        "technical_validation": "not_recorded",
+        "community_acceptance": "not_recorded",
+        "review_record": "../docs/reviews/region-areal-20261023/REVIEW_RECORD.json"
+      },
+      "disposition_delta": "held -> active experimental; intended Region dimensionality clarified, other scientific meaning unchanged"
+    }
+  ],
+  "counts": {
+    "previous_active": 125,
+    "newly_active": 3,
+    "current_active": 128,
+    "previous_held": 82,
+    "current_held": 79
+  },
+  "realm_audit": {
+    "existing": [
+      "earth:PhysicalEnvironment with Terrestrial/Aquatic",
+      "earth:MarineStratum with SeaSurface/DeepSea",
+      "earth:GeosphereStratum with Bedrock/Crust/Lithosphere/Pedosphere"
+    ],
+    "not_added": [
+      "Surface",
+      "SurfaceRegion",
+      "2.5D"
+    ],
+    "contract": "Realm qualification is within-realm requirement; surface is not a new subject choice."
+  },
+  "continuing_holds": {
+    "land:LandSurfaceUnit": "Generic unit individuation/redundancy vs existing terrestrial Region composition; surface specificity alone is not a new subject kind.",
+    "land:SurfaceCoverFraction": "Draft depends on held LandSurfaceUnit; replacing native support with a composition requires separate review.",
+    "land:SealedSurfaceFraction": "Same held native support; no silent rewrite.",
+    "land:ManagesLand": "Held endpoint and actual-management relation commitments remain.",
+    "geography:CoverMosaic": "Configuration recognition ingredients/overlap remain unresolved.",
+    "material water": "Geographic water-region vs material-water identity remains unresolved.",
+    "mixture partitive inherency": "Not addressed by Region clarification."
+  },
+  "source_hashes": {
+    "earth.kwv": "afb0dda44acd97830ae7ec89839cc843ce092179cfee0f693583fb956ccb36d8",
+    "hydrology.kwv": "c138b7ef2f345b16a362963f5b2c168a805841004603e1ac07fd96572d56b9cf",
+    "geography.kwv": "2a7b425c2368f8717c956f336fa38a76ad445d2e434163a4aef2d39213de59bf"
+  },
+  "validation": {
+    "grammar": "26 passed",
+    "production_documents": "baseline/candidate26 loaded, zero notifications",
+    "actual_storage_excludes_review_area": true,
+    "offline_reasoner": {
+      "logical": "VALID",
+      "consistent": true,
+      "unsatisfiable": [],
+      "regression_checks": 25,
+      "unchanged_baseline_diagnostics": [
+        "Inconsistent worldview: can't establish the fundamental type for core concept imod:Quality (odo:Quality)",
+        "Inconsistent worldview: can't establish the fundamental type for core concept imod:Time (odo:Time)",
+        "Inconsistent worldview: can't establish the fundamental type for core concept imod:Space (odo:Space)",
+        "DESCRIPTION_BEARER_UNRESOLVED: imod:PhysicalPhenomena describes imod:PhysicalSystem [CONFIGURATION] : INDEPENDENT_TARGET_UNRESOLVED",
+        "DESCRIPTION_BEARER_UNRESOLVED: imod:Earth describes imod:EarthSystem [CONFIGURATION] : INDEPENDENT_TARGET_UNRESOLVED",
+        "DESCRIPTION_BEARER_UNRESOLVED: physical:Period describes physical:Frequency [OBSERVABLE, QUALITY, ABSTRACT, NUMEROSITY, QUANTIFIABLE] : UNRESOLVED: no established universal bearer contribution"
+      ]
+    },
+    "independent_review": "No conceptual or mechanical blocker; conditional approval received before merge",
+    "limits": "Frozen compiled harness and captured authority data; not live services, runtime execution, all observational scenarios or community acceptance."
+  }
+}

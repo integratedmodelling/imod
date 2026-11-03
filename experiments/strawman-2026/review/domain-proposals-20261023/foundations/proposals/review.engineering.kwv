@@ -1,0 +1,142 @@
+/**
+ * SUGGESTED, NOT COMMUNITY-ACCEPTED. Xtext syntax pass; semantics NOT RUN.
+ * EN1-EN5, PROPOSALS.md; DOE pumping and NASA product realization/test sources.
+ * Existing ProductAssembly/ArtifactProduction/ArtifactModification remain intact.
+ * Intended kind/function is distinct from actual successful delivery or safety.
+ */
+ontology review.engineering
+    "Device operation, intervention and connection proposals."
+    version 1.0
+    using imod, physical, infrastructure, engineering
+    in domain imod:Engineering;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0014",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.engineering.json"
+)
+thing Pump
+    "An individuated engineered device intended to impart energy to move fluid."
+    is infrastructure:Artifact;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0015",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.engineering.json"
+)
+thing Valve
+    "An individuated engineered device intended to regulate fluid passage through an opening."
+    is infrastructure:Artifact;
+
+// Intentional operation is the selected Activity reading; autonomous behavior
+// without applicable agency remains a separate interpretation for review.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0016",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.engineering.json"
+)
+process ValveActuation
+    "Intentional physical movement of an identified valve's closure element."
+    is physical:Activity of review.engineering:Valve;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0017",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.engineering.json"
+)
+process ComponentRepair
+    "Intentional physical modification of a continuing artifact intended to restore a specified service."
+    is infrastructure:ArtifactModification of infrastructure:Artifact;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0018",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.engineering.json"
+)
+event ComponentReplacement
+    "A bounded substitution of a separately identified new component for an existing component.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0019",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.engineering.json"
+)
+event AcceptanceTestEpisode
+    "A bounded physical test of an identified artifact against stated acceptance criteria.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0020",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.engineering.json"
+)
+structural bond ComponentAttachment
+    "An observed physical attachment between two identified material artifacts."
+    links infrastructure:Artifact to infrastructure:Artifact;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0021",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.engineering.json"
+)
+functional directed relationship TransfersLoad
+    "An observed mechanical load-transmission interaction from a source body to a receiving body."
+    links physical:MaterialBody to physical:MaterialBody;
+
+// Unit one is intended; geometry/travel/area conventions are not interchangeable.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0022",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.engineering.json"
+)
+quantity OpeningFraction
+    "Geometric opening fraction of an identified valve under a stated design convention."
+    is imod:Proportion of review.engineering:Valve
+    describes imod:Proportion of review.engineering:Valve;
+
+// Ratings, actual delivery, functional failure and operating temperatures use
+// the separate shared contracts in EN5; no generic volume Capacity inheritance.

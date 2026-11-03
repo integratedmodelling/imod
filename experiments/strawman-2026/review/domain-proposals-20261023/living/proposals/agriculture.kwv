@@ -1,0 +1,232 @@
+/* REVIEW DRAFT, 2026-10-23. NO RECORDED COMMUNITY ACCEPTANCE.
+ * Full replacement overlay for the same-named baseline namespace, not an additional
+ * namespace to load alongside it. Existing declarations above the review divider
+ * are baseline context, not newly proposed approvals. See PROPOSALS.md for evidence,
+ * priorities, alternatives, bearer/endpoint contracts and discriminating tests.
+ * Owner discussion/incorporation is distinct from community acceptance.
+ * Status uses ordinary comments pending the common cross-domain annotation convention.
+ * Parser results are in VALIDATION.md; no linking/reasoner/runtime acceptance claimed.
+ */
+/**
+ * # Agricultural operations
+ *
+ * Sowing deliberately places seed into or onto a growing substrate. Germination
+ * may follow, but seed placement does not guarantee it. Where germination is
+ * observed as an event engendered by sowing, its instantiator model determines
+ * whether it occurs in the particular conditions. Sowing can take place wherever
+ * agricultural production is undertaken, with different means of placement and
+ * at different scales.
+ *
+ * Spontaneous seed dispersal and seed storage are distinct from sowing, as is
+ * transplanting an already growing plant. The crop being sown and any material
+ * later harvested have their own identities. The act of sowing alone establishes
+ * neither a cultivated individual nor a successful crop or harvest.
+ */
+ontology agriculture
+    version 1.0
+    using imod, physical, life, ecology
+    in domain imod:Physical;
+
+process Sowing
+    "An agricultural activity deliberately placing seed into or onto a growing substrate."
+    is physical:Activity;
+
+/**
+ * ## Water application and soil management
+ *
+ * Irrigation applies water for crop cultivation. Tillage mechanically disturbs
+ * soil as an agricultural management activity. They describe deliberate
+ * operations without selecting equipment, a spatial scale or a successful crop
+ * outcome. Tillage involves soil; irrigation need not use soil as its substrate.
+ *
+ * Applying water is distinct from infiltration, uptake by an organism and
+ * consumptive use. Tillage does not alone establish improved condition, a
+ * particular disturbed-area fraction or a later yield. Observations identify
+ * the operation and its participants; models describe the resulting water,
+ * soil and biological changes.
+ */
+process Irrigation
+    "Deliberate application of water for crop cultivation."
+    is physical:Activity;
+
+process Tillage
+    "Mechanical disturbance of soil as an agricultural management activity."
+    is physical:Activity;
+
+// ===== NEW REVIEW PROPOSALS BELOW; BASELINE CONTEXT ABOVE =====
+
+// PROPOSED R1: organism/group/product/field/operational unit remain distinct.
+// Group heads intentionally left abstract pending unit-level agency decisions.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0100",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agriculture.json"
+)
+abstract thing CropStand
+    "An identified grouping of cultivated individuals with specified management unity."
+    is life:Assemblage;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0101",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agriculture.json"
+)
+abstract thing ManagedHerd
+    "An identified livestock grouping with specified management unity and continuity."
+    is life:Assemblage;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0102",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agriculture.json"
+)
+role RaisedLivestock
+    "An animal individual raised in an identified husbandry context."
+    applies to life:Individual;
+
+// PROPOSED R2: direct operations, not operation identity classifiers or outcome claims.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0103",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agriculture.json"
+)
+process Cultivation
+    "Deliberate establishment or management of living individuals for a production purpose."
+    is physical:Activity;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0104",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agriculture.json"
+)
+process Harvesting
+    "Deliberate removal of biological material as an intended product."
+    is physical:Activity;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0105",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agriculture.json"
+)
+process Transplanting
+    "Deliberate placement of an already growing plant at a growing site."
+    is physical:Activity;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0106",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agriculture.json"
+)
+process NutrientApplication
+    "Deliberate application of material to supply nutrients for cultivated production."
+    is physical:Activity;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0107",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agriculture.json"
+)
+process CropProtection
+    "Deliberate management activity intended to protect cultivated production from damaging organisms."
+    is physical:Activity;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0108",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agriculture.json"
+)
+process AnimalHusbandry
+    "Deliberate care and management of raised animals."
+    is physical:Activity;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0109",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agriculture.json"
+)
+process LivestockGrazing
+    "Consumption of vegetation in place by raised livestock."
+    is ecology:Herbivory;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0110",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agriculture.json"
+)
+process ResidueRetention
+    "Deliberate management maintaining biological residues at a production site."
+    is physical:Activity;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0111",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agriculture.json"
+)
+event HarvestEpisode
+    "A bounded occurrence of harvesting with identified participants and product removal.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0112",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/agriculture.json"
+)
+structural directed relationship RaisesLivestock
+    "An actor has actual husbandry responsibility for an identified livestock individual."
+    links imod:Agent to life:Individual;
+// ManagedField awaits the shared surface bearer; AgriculturalHolding awaits an
+// operational-unit head. Do not substitute Region or responsible Agent by default.
+// CropStand/ManagedHerd as CollectiveAgent are alternatives, not dual typing.

@@ -1,0 +1,87 @@
+/**
+ * Suggested research: O1-O5. Sources O1/O2/C1. No community acceptance recorded.
+ * Proposed bodies are material, unlike the existing earth:Ocean/Sea regions.
+ */
+ontology reviewoceanography
+    "Candidate marine material states; salinity conventions remain explicit."
+    version 1.0
+    using imod, physical, physics, earth, oceanography
+    in domain imod:Oceanography;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0080",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/oceanography.json"
+)
+thing MarineWaterBody
+    "An individuated body of marine water under a stated material-boundary convention."
+    is physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0081",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/oceanography.json"
+)
+thing MarineWaterParcel
+    "A portion of marine water delimited by a material-following boundary."
+    is (physics:FluidParcel and reviewoceanography:MarineWaterBody);
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0082",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/oceanography.json"
+)
+temperature WaterTemperature
+    "Temperature of the identified marine water body at the support observed."
+    is imod:Temperature of reviewoceanography:MarineWaterBody
+    describes reviewoceanography:MarineWaterBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0083",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/oceanography.json"
+)
+quantity AbsoluteSalinity
+    "Salt mass fraction in the identified seawater under the TEOS-10 convention."
+    is imod:Proportion of reviewoceanography:MarineWaterBody
+    describes reviewoceanography:MarineWaterBody;
+
+// Practical Salinity is not an alias of AbsoluteSalinity. No conversion asserted.
+// Existing Upwelling/Downwelling/Advection are reused, not redeclared.
+// O5 functional directed pair: actual donor and recipient material water bodies.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0084",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/oceanography.json"
+)
+functional directed relationship ExchangesWaterTo
+    "Observed transfer of marine water from a donor body to a recipient body."
+    links reviewoceanography:MarineWaterBody to reviewoceanography:MarineWaterBody;
+
+// O3/O4: sea-surface height, sea state, ice and carbonate/oxygen meanings need
+// different native supports and conventions; the packet does not hide this gap.

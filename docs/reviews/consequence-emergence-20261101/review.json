@@ -1,0 +1,83 @@
+{
+  "schema": "klab.review/1",
+  "revision": "configuration-first-alignment-r1",
+  "base_commit": "4b98ab5a149d6083c145a483afd8a7c0edb77295",
+  "source_branch": "worldview/strawman-2026",
+  "user_decision": "Remove illegal direct emerges-from clauses from the two agents and record remaining modeling work.",
+  "community_acceptance": "not_recorded",
+  "technical_validation": "partial; source checks passed, complete authority-backed semantic acceptance not established",
+  "changes": [
+    {
+      "concept": "life:SocialGroup",
+      "source_file": "src/life.kwv",
+      "old_declaration": "abstract agent SocialGroup \r\n\temerges from life:SocialConnection;",
+      "new_declaration": "abstract agent SocialGroup;",
+      "remaining_work": "Identify and author the applicable configuration of social connections and its bearer/cohort criteria. Resolve that configuration through a structuring model, then use an ordinary model to instantiate the SocialGroup agent. No direct agent emergence or replacement configuration/model is asserted here.",
+      "identity_and_nature": "Unchanged qualified name, abstractness and agent nature.",
+      "source_before_sha256": "d11bf24e4a429233e93fb2395566bd5ba881ef3acd88e20f11d18089349d1835",
+      "source_after_sha256": "2184728ce23be51997792f33c364e4150c811a74173509a456c0d18f38ebda84"
+    },
+    {
+      "concept": "ecology:Community",
+      "source_file": "src/ecology.kwv",
+      "old_declaration": "abstract agent Community\r\n\temerges from ecology:Population;",
+      "new_declaration": "abstract agent Community;",
+      "remaining_work": "Identify and author the applicable configuration of populations and its defining participants, links and support. Resolve that configuration through a structuring model, then use an ordinary model to instantiate the Community agent. No direct agent emergence or replacement configuration/model is asserted here.",
+      "identity_and_nature": "Unchanged qualified name, abstractness and agent nature.",
+      "source_before_sha256": "aedeab2c6b5768d9cb3a17dc81bca3156044d2a64c4df4133146eae8b25647e1",
+      "source_after_sha256": "20d39627eb301d9c9e55cf95d2b3f8c86dc9a5316661a31a6dd0076ec4817fd3"
+    }
+  ],
+  "non_changes": [
+    "No replacement configuration or model is authored.",
+    "Original managed sources and user chemistry/CandidateTrace edits are untouched."
+  ],
+  "checks": {
+    "full_worldview_parser_adapter_declaration_registry": {
+      "status": "passed",
+      "ontology_count": 26,
+      "source_errors": 0,
+      "concepts_preserved": [
+        "life:SocialGroup remains abstract Agent",
+        "ecology:Community remains abstract Agent"
+      ]
+    },
+    "strict_offline_authority_capture": {
+      "status": "blocked",
+      "reason": "Oct18 proof source cannot deserialize retired requiredExtents field under the updated KimConceptStatement API; no proof rewritten or bypassed."
+    },
+    "full_worldview_semantic_preflight": {
+      "status": "incomplete",
+      "accepted_generation": 0,
+      "logical_compilation": "not_run",
+      "diagnostics": [
+        "Authoritative authority validation unavailable for TAXA at life:TaxonomicIdentity",
+        "Undefined concept CHEM:CID_962",
+        "Authoritative authority validation unavailable for CHEM at chemistry:ChemicalIdentity",
+        "Undefined concept TAXA:[6MB3T]",
+        "Authoritative authority validation unavailable for UN.M49 at geography:M49GeographicalIdentity",
+        "Authoritative authority validation unavailable for LAND at land:LandCover"
+      ]
+    },
+    "current_packaged_source_preflight": {
+      "status": "passed",
+      "ontology_count": 26,
+      "source_errors": 0,
+      "authority_binding_count": 4,
+      "logicalCompilerInvoked": false,
+      "providerRequests": false,
+      "serviceRequests": false,
+      "receipt": "source-preflight.json"
+    }
+  },
+  "publication_preparation": {
+    "user_selected_order": [
+      "worldview/strawman-2026",
+      "master"
+    ],
+    "master_before": "1328000fff63a1951465b1f7b130c0af15264c95",
+    "strawman_before": "4b98ab5a149d6083c145a483afd8a7c0edb77295",
+    "published": false,
+    "logical_validation_gate": "blocked; no authority acceptance invented"
+  }
+}

@@ -1,0 +1,254 @@
+/* REVIEW DRAFT, 2026-10-23. NO RECORDED COMMUNITY ACCEPTANCE.
+ * Full replacement overlay for the same-named baseline namespace, not an additional
+ * namespace to load alongside it. Existing declarations above the review divider
+ * are baseline context, not newly proposed approvals. See PROPOSALS.md for evidence,
+ * priorities, alternatives, bearer/endpoint contracts and discriminating tests.
+ * Owner discussion/incorporation is distinct from community acceptance.
+ * Status uses ordinary comments pending the common cross-domain annotation convention.
+ * Parser results are in VALIDATION.md; no linking/reasoner/runtime acceptance claimed.
+ */
+/**
+ * # Living phenomena
+ *
+ * Living individuals and biological material provide distinct descriptions of
+ * living phenomena, without an intrinsic Earth restriction. Biology, ecology and
+ * genetics identify Life as physical subject matter through about. An individual,
+ * a material portion and a taxonomic classification retain their own meanings.
+ */
+ontology life
+	version 1.0
+	using imod, physical
+	in domain imod:Life;
+
+abstract identity TaxonomicIdentity
+	requires authority TAXA {
+        urn: "klab.authority.taxa",
+        datasetKey: 312578
+		codelists: {
+        	species: "taxonomy.species",
+        	genera:  "taxonomy.genera"
+    	}
+	};
+    
+
+/**
+ * ## Living individuals
+ *
+ * A living individual is an Agent, recognizable as a unit capable of action on
+ * itself or others. Agency here does not require deliberation, human likeness
+ * or conscious intention. Its biological kind supplies criteria for unity and
+ * continuity; observations and models establish particular individuals under
+ * those criteria. A population or a shared classification does not by itself
+ * establish one living individual.
+ *
+ * Individual remains an abstract organizing concept. Taxonomic identities
+ * classify individuals without supplying their particular boundaries, proving
+ * living presence or defining an exhaustive test for life.
+ */
+abstract agent Individual
+    "An individual living organism, whose unity and continuity are established by the biological criteria applicable to its kind."
+    ;
+
+/**
+ * ## Material of biological origin
+ *
+ * OfBiologicalOrigin characterizes the origin of an identified material body.
+ * The material portion is a Subject; it is not thereby the same observational
+ * entity as a living individual. Describing biological material does not assign
+ * Agent nature, and describing a living individual does not retype it as a
+ * material Subject. These descriptions establish no formal bodily relationship
+ * between their referents.
+ *
+ * Biological origin does not establish current viability, death, cultivation,
+ * harvest or intended use. Mixtures and transformed materials require their own
+ * scope and provenance; a later product does not inherit every characterization
+ * of its inputs automatically.
+ *
+ * A material portion is distinct from its measured mass. Biomass measurements
+ * identify the biological material pool, its boundary and inclusion criteria,
+ * together with units and a wet, dry or other stated measurement basis. Origin
+ * alone does not define that pool or supply a mass value.
+ */
+attribute OfBiologicalOrigin
+    "Having material origin in living organisms."
+    applies to physical:MaterialBody;
+
+/**
+ * ## Cultivation and harvest
+ *
+ * Cultivated records deliberate establishment or management of a living
+ * individual through cultivation. It characterizes the individual beyond its
+ * momentary participation in an activity. A cultivated plant remains distinct
+ * from a field, an assemblage and any material later obtained from it.
+ *
+ * Harvested refines biological origin for an identified material portion
+ * obtained through harvesting. Harvested grain, fruit and timber share this
+ * provenance without requiring their source organisms to have been cultivated.
+ * Wild-picked fruit can be harvested; naturally fallen litter has biological
+ * origin without thereby being harvested. Viable material is not excluded, and
+ * harvesting alone does not establish biological death or retype an individual
+ * Agent as a material Subject.
+ *
+ * Origin and intended destination can characterize why an entity is established
+ * or maintained, beyond its current participation in a process. An intended
+ * destination is distinct from actual use and a successful outcome: timber
+ * intended for construction may later be used as fuel. Neither attribute alone
+ * assigns a food, feed, fuel or economic role.
+ *
+ * Harvest history belongs to the identified portion. Changes in ownership or use
+ * do not erase that history, and later products do not acquire it automatically.
+ * The material is distinct from its measured mass; units and a wet, dry or other
+ * stated basis belong to that measurement. Biological origin, crop identity,
+ * product classification and taxonomic identity retain their separate meanings.
+ */
+attribute Cultivated
+    "Having been deliberately established or managed through cultivation."
+    applies to life:Individual;
+
+attribute Harvested
+    "Having been obtained as a portion of biological material through harvesting."
+    is life:OfBiologicalOrigin
+    applies to physical:MaterialBody;
+
+/**
+ * ## Grouped living entities
+ *
+ * A grouping can be articulated as an observable entity with its own qualities,
+ * relationships and evolution. Its kind supplies the criteria by which it is
+ * recognized as one group and continues through changes. A list selected by a
+ * query does not alone establish that unity. Group descriptions and their
+ * qualities remain distinct from descriptions of the individual members.
+ *
+ * Assemblage names the Subject reading: an identifiable grouped entity without
+ * an attribution of agency to the group. CollectiveAgent names the Agent reading:
+ * the worldview articulates the group as a unit capable of action on itself or
+ * others. Neither kind specializes the other. Membership of individual Agents
+ * does not by itself confer agency on their grouping, and a collective Agent
+ * does not thereby become one organism.
+ *
+ * For example, a grouping of plants delimited for composition monitoring can
+ * be articulated as an Assemblage. A vegetation association can be articulated
+ * as a CollectiveAgent whose dynamics are described at group level. These are
+ * explicit choices about the entity being described, rather than an automatic
+ * inference from co-location or an absence of detailed observations. The same
+ * grouped entity is not assigned both Agent and Subject nature.
+ *
+ * Collective agency does not require human-like intentions, planning or a model
+ * of the internal interactions before the entity can be annotated. The worldview
+ * states the unit-level meaning and scope; models describe its dynamics. Patterns
+ * of qualities and relationships may help recognize or describe either grouped
+ * entity without replacing it with a Configuration.
+ *
+ * Group quantities need not be simple aggregates of member quantities. Changes
+ * in composition, relationships or extent are interpreted under the group's
+ * criteria for unity and continuity. Membership change alone does not determine
+ * whether the group persists or a different group has been established.
+ */
+abstract thing Assemblage
+    "An identifiable grouping of living individuals, with stated criteria for its unity and continuity."
+    ;
+
+abstract agent CollectiveAgent
+    "An identifiable grouping of living individuals capable of acting as a unit."
+    ;
+
+structural directed relationship SocialConnection;
+
+abstract agent SocialGroup 
+	emerges from life:SocialConnection;
+// ===== NEW REVIEW PROPOSALS BELOW; BASELINE CONTEXT ABOVE =====
+
+// PROPOSED L1: structural biological bodies; distinct observations from Individual.
+// Foundational, owner category/individuation question. Prior life-c02/c03/c04.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0152",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/life.json"
+)
+abstract thing CellularBody
+    "An identified material body described at the structural scale of a biological cell."
+    is physical:MaterialBody;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0153",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/life.json"
+)
+abstract thing TissueBody
+    "An identified biological material body organized as a tissue."
+    is physical:MaterialBody;
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0154",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/life.json"
+)
+abstract thing OrganBody
+    "An identified biological material body organized as an organ."
+    is physical:MaterialBody;
+
+// PROPOSED L2: no automatic creates, death/harvest implication or persistence rule.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0155",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/life.json"
+)
+process Reproduction
+    "Biological activity through which living individuals produce new living individuals.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0156",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/life.json"
+)
+event OrganismDeath
+    "The bounded cessation of life of an identified living individual under stated biological criteria.";
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0157",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/life.json"
+)
+event Germination
+    "A bounded initiation of seed germination recognized under stated biological criteria.";
+
+// PROPOSED L3: genealogical connection, not generic membership or generic part-of.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0158",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/living/life.json"
+)
+structural directed relationship BiologicalParentOf
+    "An identified organism is a biological progenitor of another identified organism."
+    links life:Individual to life:Individual;

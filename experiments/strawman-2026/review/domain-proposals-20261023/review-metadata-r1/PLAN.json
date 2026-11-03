@@ -1,0 +1,246 @@
+{
+  "revision": "review-metadata-r1",
+  "count": 207,
+  "packet_counts": {
+    "foundations": 44,
+    "earth": 45,
+    "living": 69,
+    "societal": 49
+  },
+  "files": [
+    {
+      "packet": "foundations",
+      "source_file": "foundations/proposals/review.calendar.kwv",
+      "before_sha256": "8df74b48473c5d8471b3c50ef32dde87b32b048a192f17d0afaba7b60c47c57e",
+      "current_sha256": "b55aec76113f0d9438fccd3353fca5578aecaa92e7e3d4cff6c2f3e33146c5e0",
+      "record": "review-metadata-r1/records/foundations/review.calendar.json",
+      "annotated_declarations": 1,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "foundations",
+      "source_file": "foundations/proposals/review.chemistry.kwv",
+      "before_sha256": "bec2ca43d90941413202d5dffa8cbf1109cfcab42877a923b095d47398a42a85",
+      "current_sha256": "8000413727ee149ded30c270fba1ed2ebda2b2479d69611195777a5ba8092ccf",
+      "record": "review-metadata-r1/records/foundations/review.chemistry.json",
+      "annotated_declarations": 10,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "foundations",
+      "source_file": "foundations/proposals/review.data.kwv",
+      "before_sha256": "2bdc85df0e5b563f0f85f74a910d341f716b035f0dc729bf3c3960e04b8e664f",
+      "current_sha256": "5d893256e6ddeeb79d001419367b7b23ce2550d77153491f451a1789eb37a4de",
+      "record": "review-metadata-r1/records/foundations/review.data.json",
+      "annotated_declarations": 2,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "foundations",
+      "source_file": "foundations/proposals/review.engineering.kwv",
+      "before_sha256": "0db8116557fb15897bdc5c3156eef6bd67f8908b7697fc5f3eec6d49c3cf1a12",
+      "current_sha256": "f2b472f839c0529e2b872b8740eee07c89899ba52cb66baaeee7b2a463a01cff",
+      "record": "review-metadata-r1/records/foundations/review.engineering.json",
+      "annotated_declarations": 9,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "foundations",
+      "source_file": "foundations/proposals/review.imod.kwv",
+      "before_sha256": "a94d023519f7c4669309c9bb101e64e516ed3e49dfe2d6d35ccfedc31694f1d2",
+      "current_sha256": "b7ab9b83aff0fc87481b265ed064a9d67ac6ca673f4b6d6220ee8c2588389e63",
+      "record": "review-metadata-r1/records/foundations/review.imod.json",
+      "annotated_declarations": 4,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "foundations",
+      "source_file": "foundations/proposals/review.physical.kwv",
+      "before_sha256": "bc106c6b0d8a63b925f5fdc086c26328bf834764a8c0f8aedbc7f7e4f0c21d53",
+      "current_sha256": "7d881a0c0b4d7bba1d93d0e5a8b071b9a51ec1c3e477d593c8ae74123434b3f6",
+      "record": "review-metadata-r1/records/foundations/review.physical.json",
+      "annotated_declarations": 7,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "foundations",
+      "source_file": "foundations/proposals/review.physics.kwv",
+      "before_sha256": "183fd8e54a8f8849d0e3481e412887a247dc134983600c0bd43a71830bb6c977",
+      "current_sha256": "63bde77bbdbd76ec93cfa5d83baec117cc2f45b3dd0370adbfc3e697022a0a8a",
+      "record": "review-metadata-r1/records/foundations/review.physics.json",
+      "annotated_declarations": 11,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "earth",
+      "source_file": "earth/kwv/atmosphere.kwv",
+      "before_sha256": "d7dc9f1d0d94f11c769142d2e32e3d3773e3542b82e8c21bf19aabc7552ba3a1",
+      "current_sha256": "ef49c9babadd52079c6182b4295b00245bdb941c1cd9a0a1032c86615cdff7d4",
+      "record": "review-metadata-r1/records/earth/atmosphere.json",
+      "annotated_declarations": 8,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "earth",
+      "source_file": "earth/kwv/earth.kwv",
+      "before_sha256": "24d5e76590db09d79e144a7ef77e323eb27991810e8894f898fc904d8c573a87",
+      "current_sha256": "307ef5c9c3d1ff0b578b0dba2d7f3ca60ced30689908549d7de4fcce01d0070d",
+      "record": "review-metadata-r1/records/earth/earth.json",
+      "annotated_declarations": 1,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "earth",
+      "source_file": "earth/kwv/geography.kwv",
+      "before_sha256": "9a855cccfa0d17c8517a5ae8e2f907f11c025a7aa2ea4c4a6940f03037290512",
+      "current_sha256": "478ef16aa2a02bc03c81aa5f01712152141fe58153395f5d91b954689039daa2",
+      "record": "review-metadata-r1/records/earth/geography.json",
+      "annotated_declarations": 2,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "earth",
+      "source_file": "earth/kwv/geology.kwv",
+      "before_sha256": "98e929b9e62decc14d516a395e45dfd63040202cce14205c163da452479725ea",
+      "current_sha256": "45106d15da455577d4018b348a6f2394873bad717ffedff96459e7c33b177123",
+      "record": "review-metadata-r1/records/earth/geology.json",
+      "annotated_declarations": 6,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "earth",
+      "source_file": "earth/kwv/hydrology.kwv",
+      "before_sha256": "bc345208e791cf73e4ef02c794b1c10cd5a8e6d983a0011769dded65b37cafc0",
+      "current_sha256": "f2ccd23973526f4befcecbdecfd33edaf4d7d023b1922cce77768a02621af07f",
+      "record": "review-metadata-r1/records/earth/hydrology.json",
+      "annotated_declarations": 6,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "earth",
+      "source_file": "earth/kwv/infrastructure.kwv",
+      "before_sha256": "4bb830a4e0722337ffb2ea6c4e22ca564bd3456f5162df2da38f23c362c6910b",
+      "current_sha256": "badc97a6b89475ebba1903f131b5cece7680ee03e7ecdd12aba260cd27ea2878",
+      "record": "review-metadata-r1/records/earth/infrastructure.json",
+      "annotated_declarations": 7,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "earth",
+      "source_file": "earth/kwv/land.kwv",
+      "before_sha256": "89469ef013675297b9555be743dbb670831f304d99361e1cfb06ea13c00e43ba",
+      "current_sha256": "8c802cad191c23d274b40d15a1a8829064eb7928e365b3f0ce6aa5cd0fb2de9a",
+      "record": "review-metadata-r1/records/earth/land.json",
+      "annotated_declarations": 5,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "earth",
+      "source_file": "earth/kwv/oceanography.kwv",
+      "before_sha256": "0062209b006b83b08cfad0607c024087c68f4709ed1690a6b13bfd4d7fb9b040",
+      "current_sha256": "dbc5e6f19526ab1a6a4ef106b51f107c5fe9efeec7183ab406731a6bb94bd59e",
+      "record": "review-metadata-r1/records/earth/oceanography.json",
+      "annotated_declarations": 5,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "earth",
+      "source_file": "earth/kwv/soil.kwv",
+      "before_sha256": "12afb35c3b448bbaffe1e81af9e34e4e72f9d428697b7ff1506605e124566864",
+      "current_sha256": "bfa9623ced94614ddedd124ff6e56bb7d7d66b283d24159065d7369847ee7e36",
+      "record": "review-metadata-r1/records/earth/soil.json",
+      "annotated_declarations": 5,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "living",
+      "source_file": "living/proposals/agency.kwv",
+      "before_sha256": "b23f15653f978264201141a0e562fe45194ffb79e332be7804dea030d9714c2c",
+      "current_sha256": "3eac60015713212c557d5400b904713db3fa8bea530aa79268b3beb61bb7f964",
+      "record": "review-metadata-r1/records/living/agency.json",
+      "annotated_declarations": 10,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "living",
+      "source_file": "living/proposals/agriculture.kwv",
+      "before_sha256": "d812fdf65418243aa43caa74373c598d392fbf7c0c65d559231d3d57730a56b3",
+      "current_sha256": "f5b2e48c0803237b93ca4e90cf737457f704c8e97d2b7ee6838f4ec5b5349918",
+      "record": "review-metadata-r1/records/living/agriculture.json",
+      "annotated_declarations": 13,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "living",
+      "source_file": "living/proposals/biology.kwv",
+      "before_sha256": "3c248db11fcedf78e7c2f71649d04571f51a841c186a0d5ee4738487faad1e3b",
+      "current_sha256": "b73bdf86c8fce009ecdf3332d4f02305a0f26a6567fa0bec171aa81714cf0185",
+      "record": "review-metadata-r1/records/living/biology.json",
+      "annotated_declarations": 12,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "living",
+      "source_file": "living/proposals/ecology.kwv",
+      "before_sha256": "25615c73fb53f647c4232d8b58199fb2ad0634c0d59baf61053e61876a49b6de",
+      "current_sha256": "00f734e2f353ad5df56629ff39bca91d9c308e7af52351aa5a837f0b52c9f622",
+      "record": "review-metadata-r1/records/living/ecology.json",
+      "annotated_declarations": 15,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "living",
+      "source_file": "living/proposals/genetics.kwv",
+      "before_sha256": "de31de0e86352958d4ff953551afbebbb48c933176372c18f4edf6034c363bf5",
+      "current_sha256": "2fc8f38573a8c203720f3ecc10c0022fa87524f7928209585cabda555dece16a",
+      "record": "review-metadata-r1/records/living/genetics.json",
+      "annotated_declarations": 12,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "living",
+      "source_file": "living/proposals/life.kwv",
+      "before_sha256": "9ee3005118788e77e26494abb505d832a8aaf237ee2c623f770eff18c6e75d77",
+      "current_sha256": "dc6a359dda0f5aeab66b50041a9bceebe8802ea80394d6584ac4c171d27194a1",
+      "record": "review-metadata-r1/records/living/life.json",
+      "annotated_declarations": 7,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "societal",
+      "source_file": "societal/proposal-src/economics.kwv",
+      "before_sha256": "d535ef0f486cd005df4de6666c1ab8438c21cd83e2205e95bff94b0454a8015d",
+      "current_sha256": "149ef905bc4978d37689dc72a0422fae78e831dc335ab3df4c0fb948d67c40b1",
+      "record": "review-metadata-r1/records/societal/economics.json",
+      "annotated_declarations": 21,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "societal",
+      "source_file": "societal/proposal-src/society.kwv",
+      "before_sha256": "54d851a6d9925011732a7f2d5bda95bf87340d9ed1e19fc23de005bd15574e1c",
+      "current_sha256": "8e1816d370a963ccb66b0ac8ecd01dad3328b1f7af9274c0fdaf0038f3e400a2",
+      "record": "review-metadata-r1/records/societal/society.json",
+      "annotated_declarations": 8,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "societal",
+      "source_file": "societal/proposal-src/sociology.kwv",
+      "before_sha256": "1e737e907bb688069cca93d5836f43916e5108de65cfec6157e9a05add2f1523",
+      "current_sha256": "b8ce8928367dec779a619e6f2e86f9feb30e5b10cb3a00d5bfd97cc33cec77f5",
+      "record": "review-metadata-r1/records/societal/sociology.json",
+      "annotated_declarations": 12,
+      "semantic_bytes_preserved": true
+    },
+    {
+      "packet": "societal",
+      "source_file": "societal/proposal-src/valuation.kwv",
+      "before_sha256": "6d95b797582fcba81dd88c9699cad608cbe855bb90aa01c78adb6239d5f67a14",
+      "current_sha256": "59dadc921845e13af44a62132f05d5965f058e0cd6c259fd295fc8d770fe5d06",
+      "record": "review-metadata-r1/records/societal/valuation.json",
+      "annotated_declarations": 8,
+      "semantic_bytes_preserved": true
+    }
+  ]
+}

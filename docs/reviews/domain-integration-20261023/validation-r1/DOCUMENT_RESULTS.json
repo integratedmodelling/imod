@@ -1,0 +1,2427 @@
+{
+  "baseline" : {
+    "inputDocuments" : 26,
+    "loadedDocuments" : 26,
+    "dependencyOrder" : [ "imod", "data", "physical", "agency", "life", "agriculture", "physics", "calendar", "chemistry", "valuation", "society", "biology", "earth", "economics", "sociology", "ecology", "genetics", "atmosphere", "soil", "geology", "geography", "land", "hydrology", "infrastructure", "oceanography", "engineering" ],
+    "documents" : [ {
+      "namespace" : "imod",
+      "imports" : [ ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "data",
+      "imports" : [ "imod" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "physical",
+      "imports" : [ "imod" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "agency",
+      "imports" : [ "imod" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "life",
+      "imports" : [ "imod", "physical" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "agriculture",
+      "imports" : [ "imod", "physical" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "physics",
+      "imports" : [ "imod", "physical" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "calendar",
+      "imports" : [ "imod", "physical" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "chemistry",
+      "imports" : [ "imod", "physical" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "valuation",
+      "imports" : [ "imod", "physical" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "society",
+      "imports" : [ "imod", "life", "agency" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "biology",
+      "imports" : [ "imod", "life" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "earth",
+      "imports" : [ "imod", "physical", "chemistry" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "economics",
+      "imports" : [ "imod", "data", "valuation" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "sociology",
+      "imports" : [ "imod", "society" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "ecology",
+      "imports" : [ "imod", "life", "biology" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "genetics",
+      "imports" : [ "imod", "life", "biology" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "atmosphere",
+      "imports" : [ "imod", "earth", "chemistry" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "soil",
+      "imports" : [ "imod", "physical", "earth" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "geology",
+      "imports" : [ "imod", "physical", "earth" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "geography",
+      "imports" : [ "imod", "physical", "earth" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "land",
+      "imports" : [ "imod", "society", "earth", "life" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "hydrology",
+      "imports" : [ "imod", "earth" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "infrastructure",
+      "imports" : [ "imod", "physical", "earth" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "oceanography",
+      "imports" : [ "imod", "earth" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "engineering",
+      "imports" : [ "imod", "infrastructure" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    } ],
+    "scope" : "Production WorkspaceManager parser/adapter and shared source validation scope; no OWL/reasoner/authority-provider/runtime result"
+  },
+  "candidate" : {
+    "inputDocuments" : 26,
+    "loadedDocuments" : 26,
+    "dependencyOrder" : [ "imod", "data", "physical", "life", "physics", "calendar", "chemistry", "agency", "valuation", "biology", "earth", "ecology", "genetics", "atmosphere", "soil", "geology", "society", "geography", "hydrology", "infrastructure", "oceanography", "agriculture", "sociology", "land", "engineering", "economics" ],
+    "documents" : [ {
+      "namespace" : "imod",
+      "imports" : [ ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "StructuralConnection",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0023",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.imod.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "FunctionalConnection",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0024",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.imod.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "DirectedConnection",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0025",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.imod.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "BondConnection",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0026",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.imod.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "data",
+      "imports" : [ "imod" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "OrdinalRanked",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0012",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.data.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "Median",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0013",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.data.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "physical",
+      "imports" : [ "imod" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "PhysicalContact",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0027",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.physical.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "MaterialSeparation",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0030",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.physical.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "FragmentationEpisode",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0031",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.physical.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "BodyMass",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0032",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.physical.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "BodyTemperature",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0033",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.physical.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "life",
+      "imports" : [ "imod", "physical" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "Reproduction",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0155",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/life.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "OrganismDeath",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0156",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/life.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "Germination",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0157",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/life.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "BiologicalParentOf",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0158",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/life.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "physics",
+      "imports" : [ "imod", "physical" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "ExertsForceOn",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0034",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.physics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "MassDensity",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0035",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.physics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "Pressure",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0036",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.physics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "MaterialPressure",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0037",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.physics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "PhaseChange",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0038",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.physics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "MolecularDiffusion",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0039",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.physics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "calendar",
+      "imports" : [ "imod", "physical" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "Quarterly",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0001",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.calendar.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "chemistry",
+      "imports" : [ "imod", "physical" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "PhasePortion",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0003",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "SolutionPortion",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0004",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "AmountConcentration",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0005",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "MassFraction",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0006",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "PHValue",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0007",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "ChemicalPrecipitation",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0008",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "Adsorption",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0009",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "ReactionEpisode",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0011",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.chemistry.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "agency",
+      "imports" : [ "imod", "physical" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "ChoiceMaking",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0090",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/agency.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "ChoiceCommitment",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0091",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/agency.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "Negotiation",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0092",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/agency.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "CollectiveCoordination",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0093",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/agency.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "ConsentGrant",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0098",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/agency.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "ConsentWithdrawal",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0099",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/agency.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "valuation",
+      "imports" : [ "imod", "physical" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "ValuesSubject",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0200",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/valuation.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "ValuesAgent",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0201",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/valuation.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "ValueAttribution",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0202",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/valuation.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "ValueDeliberation",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0204",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/valuation.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "MonetaryAppraisal",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0205",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/valuation.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "ValuationStatement",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0207",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/valuation.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "biology",
+      "imports" : [ "imod", "life" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "Metabolism",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0114",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/biology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "CellularRespiration",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0115",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/biology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "BiologicalGrowth",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0116",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/biology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "Development",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0117",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/biology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "CellDifferentiation",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0118",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/biology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "TissueRepair",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0119",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/biology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "BiologicalRegulation",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0120",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/biology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "BiologicalMovement",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0121",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/biology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "CellDivision",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0122",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/biology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "SignalsTo",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0123",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/biology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "earth",
+      "imports" : [ "imod", "physical", "chemistry" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "ecology",
+      "imports" : [ "imod", "life", "biology" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "Predation",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0129",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/ecology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "EcologicalDispersal",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0130",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/ecology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "Colonization",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0131",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/ecology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "Succession",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0132",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/ecology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "LocalExtirpation",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0133",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/ecology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "Recruitment",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0134",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/ecology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "EcosystemType",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0137",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/ecology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "PopulationAbundance",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0138",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/ecology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "SpeciesRichness",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0139",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/ecology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "genetics",
+      "imports" : [ "imod", "life", "biology" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "AllelicIdentity",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0143",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/genetics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "Translation",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0144",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/genetics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "GeneExpression",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0145",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/genetics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "DNARepair",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0146",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/genetics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "MeioticSegregation",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0147",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/genetics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "SequenceMutation",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0148",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/genetics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "Fertilization",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0149",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/genetics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "GeneticMaterialInheritedFrom",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0150",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/genetics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "atmosphere",
+      "imports" : [ "imod", "earth", "chemistry", "physical", "physics" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "AirBody",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0045",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/earth/atmosphere.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "AirParcel",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0046",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/earth/atmosphere.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "AirTemperature",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0047",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/earth/atmosphere.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "SpecificHumidity",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0048",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/earth/atmosphere.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "WindSpeed",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0049",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/earth/atmosphere.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "WindDirection",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0050",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/earth/atmosphere.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "AirAdvection",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0051",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/earth/atmosphere.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "CloudCondensation",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0052",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/earth/atmosphere.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "soil",
+      "imports" : [ "imod", "physical", "earth" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "ClayFraction",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0087",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/earth/soil.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "OrganicMatterFraction",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0088",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/earth/soil.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "geology",
+      "imports" : [ "imod", "physical", "earth" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "MaterialContact",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0061",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/earth/geology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "society",
+      "imports" : [ "imod", "life", "agency", "earth", "physical" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "OrganizationMembership",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0183",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/society.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "UsualResidenceIn",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0184",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/society.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "ResidentialMigration",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0185",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/society.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "RecognizedParentOf",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0186",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/society.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "PersonAge",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0187",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/society.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "geography",
+      "imports" : [ "imod", "physical", "earth" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "hydrology",
+      "imports" : [ "imod", "earth" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "infrastructure",
+      "imports" : [ "imod", "physical", "earth" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "Building",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0068",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/earth/infrastructure.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "WaterStorageTank",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0069",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/earth/infrastructure.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "WaterPipe",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0070",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/earth/infrastructure.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "FloorArea",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0071",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/earth/infrastructure.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "SuppliesWaterTo",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0073",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/earth/infrastructure.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "WaterDeliveryNetwork",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0074",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/earth/infrastructure.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "oceanography",
+      "imports" : [ "imod", "earth" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ ]
+    }, {
+      "namespace" : "agriculture",
+      "imports" : [ "imod", "physical", "ecology" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "Transplanting",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0105",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/agriculture.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "NutrientApplication",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0106",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/agriculture.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "CropProtection",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0107",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/agriculture.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "AnimalHusbandry",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0108",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/agriculture.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "LivestockGrazing",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0109",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/agriculture.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "ResidueRetention",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0110",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/living/agriculture.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "sociology",
+      "imports" : [ "imod", "society", "physical" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "SocialRelation",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0188",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/sociology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "WorkRelation",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0189",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/sociology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "Work",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0190",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/sociology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "Worker",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0191",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/sociology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "RuleAdoption",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0193",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/sociology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "Cooperation",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0194",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/sociology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "ProvidesSupportTo",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0195",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/sociology.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "land",
+      "imports" : [ "imod", "society", "earth", "life" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "CoverChangeEpisode",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0079",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/earth/land.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "engineering",
+      "imports" : [ "imod", "infrastructure", "physical" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "Pump",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0014",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.engineering.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "Valve",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0015",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.engineering.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "ValveActuation",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0016",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.engineering.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "ComponentRepair",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0017",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.engineering.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "ComponentReplacement",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0018",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.engineering.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "AcceptanceTestEpisode",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0019",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.engineering.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "ComponentAttachment",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0020",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.engineering.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "TransfersLoad",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0021",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.engineering.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "OpeningFraction",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0022",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/foundations/review.engineering.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    }, {
+      "namespace" : "economics",
+      "imports" : [ "imod", "data", "valuation", "physical", "society", "sociology" ],
+      "notifications" : [ ],
+      "authoredReviewMetadata" : [ {
+        "declaration" : "EconomicReportingUnit",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0159",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "Production",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0161",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "EmploymentWork",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0164",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "EmployedPerson",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0165",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "EmployeeOf",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0166",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "WorkTime",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0167",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_priority" : "foundational",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "ExchangeTransaction",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0175",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "SuppliesTo",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0176",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "EconomicChoice",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0177",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "OwesTo",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0178",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      }, {
+        "declaration" : "PaymentSettlement",
+        "annotation" : {
+          "@CLASS" : "org.integratedmodelling.klab.api.lang.AnnotationImpl",
+          "delegate" : {
+            "#name" : "review",
+            "schema" : "klab.review/1",
+            "proposal" : "wv-review-20261023-0179",
+            "revision" : "strawman-integration-r1",
+            "maturity" : "experimental",
+            "controversy" : "unassessed",
+            "technical_validation" : "not_recorded",
+            "community_acceptance" : "not_recorded",
+            "review_record" : "../docs/reviews/domain-integration-20261023/records/societal/economics.json"
+          },
+          "unnamedKeys" : [ ]
+        }
+      } ]
+    } ],
+    "scope" : "Production WorkspaceManager parser/adapter and shared source validation scope; no OWL/reasoner/authority-provider/runtime result"
+  },
+  "actualStorageOntologyURLs" : [ "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/agency.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/agriculture.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/atmosphere.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/biology.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/calendar.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/chemistry.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/data.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/earth.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/ecology.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/economics.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/engineering.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/genetics.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/geography.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/geology.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/hydrology.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/imod.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/infrastructure.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/land.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/life.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/oceanography.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/physical.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/physics.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/society.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/sociology.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/soil.kwv", "file:/C:/Users/Ferd/Documents/Codex/2026-10-23/task-2/integration-candidate/src/valuation.kwv" ],
+  "actualStorageReviewAreaExcluded" : true,
+  "deniedNetworkAttempts" : [ ],
+  "compiledWorkspaceManager" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-20/task-2/observer-ui-publication/services/klab.services.resources/target/classes/",
+  "compiledLanguageScope" : "file:/C:/Users/Ferd/Documents/Codex/2026-10-20/task-2/observer-ui-publication/services/klab.core.services/target/classes/"
+}

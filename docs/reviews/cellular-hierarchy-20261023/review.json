@@ -1,0 +1,47 @@
+{
+  "revision": "cellular-hierarchy-integration-r3",
+  "base_commit": "a3c73da88737d60331ace462e7bfbeb4df079ac2",
+  "source_file": "../../../src/life.kwv",
+  "source_sha256": "d11bf24e4a429233e93fb2395566bd5ba881ef3acd88e20f11d18089349d1835",
+  "community_acceptance": "not_recorded",
+  "provenance": "Recorded 2026-10-23 owner discussion permits cell groupings under existing Assemblage with meaningful anatomical intermediate; tested experimental strawman addition authorization is separate from community acceptance.",
+  "proposals": [
+    {
+      "id": "wv-cellorganization-20261023-assemblage-scope",
+      "change": "Clarify biological units under living/structural readings and explicitly separate present viability; preserve Subject group contract."
+    },
+    {
+      "id": "wv-review-20261023-0152",
+      "change": "Concrete CellularBody under MaterialBody; structural specimen reading does not assert current viability."
+    },
+    {
+      "id": "wv-cellorganization-20261023-06",
+      "change": "Abstract AnatomicalAssemblage under Assemblage, adding anatomical grouping criterion."
+    },
+    {
+      "id": "wv-cellorganization-20261023-01",
+      "change": "Concrete CellAssemblage under AnatomicalAssemblage; no arbitrary minimum count."
+    }
+  ],
+  "excluded": [
+    "organism/body identity bridge",
+    "configuration recognition and detection criteria/runtime",
+    "cellular membership/adhesion relationships",
+    "process convenience specializations",
+    "molecular individuation",
+    "TissueBody and OrganBody pending separate articulation"
+  ],
+  "preserved": [
+    "life:Individual Agent",
+    "life:CollectiveAgent Agent",
+    "ecology:Population Agent",
+    "ecology:Community Agent",
+    "existing generic Growth/Development meanings"
+  ],
+  "prior_revision": "life-cell-hierarchy-r2; unparented r1 alternatives retained as research history",
+  "validation": {
+    "status": "bounded_offline_pass",
+    "receipt": "VALIDATION.json",
+    "source_sha256": "d11bf24e4a429233e93fb2395566bd5ba881ef3acd88e20f11d18089349d1835"
+  }
+}

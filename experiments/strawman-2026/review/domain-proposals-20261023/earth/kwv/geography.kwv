@@ -1,0 +1,49 @@
+/**
+ * Suggested research: Q1-Q5. No community acceptance recorded.
+ * Existing Elevation/Terrain and their distinct application restrictions retained.
+ */
+ontology reviewgeography
+    "Candidate geographical relief and terrain-pattern observations."
+    version 1.0
+    using imod, physical, earth, geography
+    in domain imod:Geography;
+
+// Q2 useful; existing dossier LocalRelief. Positive matched neighborhood/support;
+// negative any universal neighborhood threshold defining all landform identities.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0054",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/geography.json"
+)
+length LocalRelief
+    "Difference between maximum and minimum ground elevations over a stated terrestrial region."
+    is imod:Length of earth:Region
+    describes geography:TerrestrialSurfaceArrangement;
+
+// Q5 only a pattern alternative, not an Ecosystem or material landscape individual.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0055",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/geography.json"
+)
+configuration CoverMosaic
+    "A recognized spatial mosaic of physical cover over a terrestrial region."
+    is physical:SpatialArrangement
+    applies to (earth:Terrestrial earth:Region);
+
+// Detection/placement is not implemented by these declarations. No model each.
+// Recognition ingredients remain unresolved: earth:LandCover is itself a
+// Configuration and is not silently used as a permitted emergence ingredient.
+// Q1 existing slope/bathymetry wording changes and Q3 hemisphere inheritance
+// repairs are withheld as exact-source alternatives needing shared arbitration.
+// Settlement/jurisdiction and ecological landscape head remain unresolved.

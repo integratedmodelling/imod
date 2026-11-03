@@ -1,0 +1,3 @@
+# Later instrumentation, no implementation in this increment
+
+Preserve literate ontology/k.IM sources. Owner preference: dedicated Resources `/docs/<urn>` endpoint, with content negotiation initially for HTML/PDF. Public assets in public projects/resources permit anonymous reading; authenticated requests use permissions of the requested URN. Linked/embedded assets retain authorization checks. Safe HTML/PDF rendering, private-cache isolation and source-revision/review provenance are requirements. This supersedes the earlier info-extension suggestion. Review syntax acceptance is distinct from community acceptance of concepts.
