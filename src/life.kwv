@@ -169,8 +169,18 @@ abstract agent CollectiveAgent
 
 structural directed relationship SocialConnection;
 
-abstract agent SocialGroup 
-	emerges from life:SocialConnection;
+@review(
+    schema="klab.review/1",
+    proposal="wv-consequence-emergence-20261101-life-socialgroup",
+    revision="configuration-first-alignment-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    remaining_work="Identify and author the applicable configuration of social connections and its bearer/cohort criteria. Resolve that configuration through a structuring model, then use an ordinary model to instantiate the SocialGroup agent. No direct agent emergence or replacement configuration/model is asserted here.",
+    review_record="../docs/reviews/consequence-emergence-20261101/review.json"
+)
+abstract agent SocialGroup;
 
 /**
  * ## Experimental first-level articulation

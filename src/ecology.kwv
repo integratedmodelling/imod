@@ -5,8 +5,18 @@ ontology ecology
 
 abstract agent Population;
 
-abstract agent Community
-	emerges from ecology:Population;
+@review(
+    schema="klab.review/1",
+    proposal="wv-consequence-emergence-20261101-ecology-community",
+    revision="configuration-first-alignment-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    remaining_work="Identify and author the applicable configuration of populations and its defining participants, links and support. Resolve that configuration through a structuring model, then use an ordinary model to instantiate the Community agent. No direct agent emergence or replacement configuration/model is asserted here.",
+    review_record="../docs/reviews/consequence-emergence-20261101/review.json"
+)
+abstract agent Community;
 
 /**
  * ## Consumption of plant material
