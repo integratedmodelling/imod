@@ -3,7 +3,16 @@ ontology ecology
 	using imod, life, biology
 	in domain imod:Ecology;
 
-abstract agent Population;
+/**
+ * Populations and communities retain their collective Agent reading. Population
+ * identifies a biological grouping under ecological unity and continuity criteria;
+ * Community is articulated through populations. This lineage does not assert
+ * that a community directly has individual organisms as members, or establish
+ * membership, observational containment or a configuration for either kind.
+ */
+abstract agent Population
+    "An identifiable biological population articulated as a collective Agent under stated ecological criteria."
+    is life:CollectiveAgent;
 
 @review(
     schema="klab.review/1",
@@ -16,7 +25,9 @@ abstract agent Population;
     remaining_work="Identify and author the applicable configuration of populations and its defining participants, links and support. Resolve that configuration through a structuring model, then use an ordinary model to instantiate the Community agent. No direct agent emergence or replacement configuration/model is asserted here.",
     review_record="../docs/reviews/consequence-emergence-20261101/review.json"
 )
-abstract agent Community;
+abstract agent Community
+    "An identifiable ecological grouping articulated through populations and capable of acting as a unit."
+    is life:CollectiveAgent;
 
 /**
  * ## Consumption of plant material

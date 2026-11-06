@@ -161,11 +161,11 @@ attribute Harvested
 
 abstract thing Assemblage
     "An identifiable grouping of biological units, observed as living individuals or anatomical structures, with stated criteria for its unity and continuity."
-    ;
+    is imod:CollectiveSubject;
 
 abstract agent CollectiveAgent
-    "An identifiable grouping of living individuals capable of acting as a unit."
-    ;
+    "An identifiable biological grouping capable of acting as a unit under stated unity and continuity criteria."
+    is imod:CollectiveAgent;
 
 structural directed relationship SocialConnection;
 
@@ -180,7 +180,9 @@ structural directed relationship SocialConnection;
     remaining_work="Identify and author the applicable configuration of social connections and its bearer/cohort criteria. Resolve that configuration through a structuring model, then use an ordinary model to instantiate the SocialGroup agent. No direct agent emergence or replacement configuration/model is asserted here.",
     review_record="../docs/reviews/consequence-emergence-20261101/review.json"
 )
-abstract agent SocialGroup;
+abstract agent SocialGroup
+    "An identifiable biological social grouping capable of acting as a unit."
+    is life:CollectiveAgent;
 
 /**
  * ## Experimental first-level articulation

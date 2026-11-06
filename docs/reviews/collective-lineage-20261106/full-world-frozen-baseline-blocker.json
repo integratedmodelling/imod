@@ -1,0 +1,11 @@
+{
+  "sourceNotifications" : [ ],
+  "odoLocator" : "https://raw.githubusercontent.com/integratedmodelling/odo-im/df5980e36d921233cc66b0bb270a2a36f86ccfce/releases/0.2.0/odo.owl",
+  "odoSha256" : "5c020dac9bd9d1cd4f9673b8075cf08f75ecc7194c74378bdb8f0498110ddba3",
+  "failure" : "java.lang.UnsupportedOperationException: CANDIDATE_ISOLATION_UNSUPPORTED: uncaptured provider response for CHEM: [identity, , CID_962]",
+  "networkAttempts" : [ ],
+  "checks" : {
+    "26 ontologies and two strategies adapted" : true,
+    "zero network attempts" : true
+  }
+}

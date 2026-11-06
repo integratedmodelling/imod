@@ -32,11 +32,12 @@ agent HumanIndividual
  *
  * Organization is abstract and organizes suitable concrete agent
  * specializations. Formal constitution is a separate distinction rather than
- * the criterion for agency.
+ * the criterion for agency. Its collective ancestry is domain-neutral; it does
+ * not make an organization a biological grouping or assign agency to each member.
  */
 abstract agent Organization
     "An organized unit capable of acting as an agent, including determining aspects of its own observable evolution."
-    ;
+    is imod:CollectiveAgent;
 
 /**
  * ## Formal constitution

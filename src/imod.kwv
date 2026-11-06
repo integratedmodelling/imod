@@ -61,7 +61,7 @@
  * Explain conceptual distinctions where they help the reader interpret a
  * declaration, and keep each namespace's account within its stated scope.
  *
- * The numbered ODO 0.2.0 foundation supplies the imported kinds. The root's
+ * The numbered ODO 0.2.1 foundation supplies the imported kinds. The root's
  * aliases expose those kinds in the worldview vocabulary; the named domains and
  * system configurations organize their use in the namespaces that follow.
  */
@@ -70,7 +70,7 @@ ontology imod
    version 1.0
    in domain root 
       with core 
-         "https://raw.githubusercontent.com/integratedmodelling/odo-im/df5980e36d921233cc66b0bb270a2a36f86ccfce/releases/0.2.0/odo.owl" as odo
+         "https://raw.githubusercontent.com/integratedmodelling/odo-im/ede866637f505dfb882b7b9427a8f21f27922093/releases/0.2.1/odo.owl" as odo
    metadata {
       dc.creator: (
          "Ferdinando Villa (ferdinando.villa@bc3research.org)"
@@ -405,6 +405,20 @@ abstract agent Agent
       	"A substantial capable of acting on other entities or itself, including determining aspects of its own observable evolution."
       	is core odo:Agent;
      
+/**
+ * Collective entities have criteria for unity and continuity and may have their
+ * own identity and cohort. The Subject and Agent readings retain their distinct
+ * natures. A query result alone does not establish a collective entity; neither
+ * root supplies member types, membership relations or observational containment.
+ */
+abstract thing CollectiveSubject
+    "An identifiable collective entity observed as a Subject under stated unity and continuity criteria."
+    is core odo:CollectiveSubject;
+
+abstract agent CollectiveAgent
+    "An identifiable collective entity capable of acting as a unit under stated unity and continuity criteria."
+    is core odo:CollectiveAgent;
+
 /**
  * Qualities
  */
