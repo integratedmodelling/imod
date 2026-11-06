@@ -61,7 +61,7 @@
  * Explain conceptual distinctions where they help the reader interpret a
  * declaration, and keep each namespace's account within its stated scope.
  *
- * The numbered ODO 0.2.1 foundation supplies the imported kinds. The root's
+ * The numbered ODO 0.2.2 foundation supplies the imported kinds. The root's
  * aliases expose those kinds in the worldview vocabulary; the named domains and
  * system configurations organize their use in the namespaces that follow.
  */
@@ -70,7 +70,7 @@ ontology imod
    version 1.0
    in domain root 
       with core 
-         "https://raw.githubusercontent.com/integratedmodelling/odo-im/86e25036b7e7a7d75971ab9f303c8f5f1785e30c/releases/0.2.1/odo.owl" as odo
+         "https://raw.githubusercontent.com/integratedmodelling/odo-im/f5e996b42a2d91994d06c11581ce80616d8351d4/releases/0.2.2/odo.owl" as odo
    metadata {
       dc.creator: (
          "Ferdinando Villa (ferdinando.villa@bc3research.org)"
@@ -431,6 +431,10 @@ abstract quantity Quantity
     "Quantity are qualities whose values are quantified numerically."     
    is core odo:QuantifiableQuality;
    
+abstract quantity Frequency
+    "Completed cycles per unit time; physical specializations establish the cyclic-process bearer."
+    is core odo:Frequency;
+
 abstract duration Duration 
    is core odo:Duration;
    

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "org.integratedmodelling.klab.api.lang.kim.KimConceptInherentGroupingTest",
+    "tests": "3",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  {
+    "name": "org.integratedmodelling.klab.api.lang.kim.KimConceptRemovalTest",
+    "tests": "5",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  {
+    "name": "org.integratedmodelling.klab.services.reasoner.internal.OdoImportCaptureTest",
+    "tests": "6",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "1"
+  },
+  {
+    "name": "org.integratedmodelling.klab.services.reasoner.internal.SemanticEnvironmentFactoryTest",
+    "tests": "43",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  {
+    "name": "org.integratedmodelling.klab.services.reasoner.owl.BroadDescriptionContractTest",
+    "tests": "25",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  {
+    "name": "org.integratedmodelling.klab.services.reasoner.owl.EnergyReleaseMeasurementTest",
+    "tests": "2",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  {
+    "name": "org.integratedmodelling.klab.services.reasoner.owl.QualifiedCollectiveCountSemanticTest",
+    "tests": "3",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  {
+    "name": "org.integratedmodelling.klab.services.reasoner.owl.WorldviewDeclarationSupportTest",
+    "tests": "10",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  {
+    "name": "org.integratedmodelling.klab.services.reasoner.SemanticMatcherTest",
+    "tests": "33",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  {
+    "name": "org.integratedmodelling.klab.services.resources.lang.WorldviewValidationTest",
+    "tests": "12",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  {
+    "name": "org.integratedmodelling.klab.services.resources.storage.CycleQuantityIntegrationTest",
+    "tests": "1",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  {
+    "name": "org.integratedmodelling.klab.services.resources.storage.EnergyQuantitativeContainmentIntegrationTest",
+    "tests": "1",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  }
+]

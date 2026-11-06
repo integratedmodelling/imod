@@ -105,15 +105,30 @@ quantity Conductance
 abstract duration Age
       is imod:Duration;
       
-abstract quality Frequency
-	"Frequency is the numerosity of events in a time period. Used in continuous time representations to 
-    describe a wave."
-	is count of imod:Event;
+/**
+ * ## Cyclic processes
+ *
+ * A cyclic process has identifiable completed cycles. Frequency measures completed
+ * cycles per unit time; Period measures the duration of one cycle of that same
+ * process. Models establish the cycle and observation interval and perform any
+ * reciprocal calculation. These declarations do not compute numerical values.
+ *
+ * Irregular event sequences do not acquire a period from an average occurrence
+ * rate. Such rates can be expressed separately as potential counts of Event per
+ * unit time. They are outside this cyclic-process contract.
+ */
+abstract process CyclicProcess
+    "A process with identifiable recurring cycles, each returning to an equivalent phase."
+    is imod:Process;
+
+abstract quantity Frequency
+    "The number of completed cycles of a cyclic process per unit time."
+    is imod:Frequency of physical:CyclicProcess;
 
 abstract duration Period
-	"The time between two repetitions of an event. If the events are described by a quality in continuous time, it 
-     describes the distance between high points on a wave function. Inversely proportional to frequency."
-	decreases with physical:Frequency;
+    "The duration of one complete cycle of a cyclic process."
+    is imod:Duration of physical:CyclicProcess
+    decreases with physical:Frequency;
 
 abstract volume Capacity;
 
@@ -215,7 +230,7 @@ abstract relationship Dependence
  *
  * Sporadic and Intermittent can both characterize a phenomenon. These modes
  * express temporal behavior rather than ranks on one scale. Period remains a
- * separate quantitative description of the time between repetitions.
+ * separate quantitative description of one complete cycle of a cyclic process.
  */
 abstract attribute TemporalOccurrencePattern
     "A temporal attribute describing how a phenomenon occurs over an observation interval."
