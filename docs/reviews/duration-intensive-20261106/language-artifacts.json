@@ -1,0 +1,33 @@
+{
+  "sourceCommit": "582d4b57120640f58d3b675b8b86aa58ca9df8a2",
+  "build": "language-duration-build-final.log",
+  "parserTests": "duration-artifact-tests.log",
+  "artifacts": [
+    {
+      "artifact": "org.integratedmodelling.languages.observable",
+      "file": "C:\\Users\\Ferd\\Documents\\Codex\\2026-11-06\\task-6\\m2\\org\\integratedmodelling\\org.integratedmodelling.languages.observable\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.observable-1.0.0-SNAPSHOT.jar",
+      "sha256": "b5b386b5fe5f4c5e178a563a8010cf87ed9f524ff82d6f4d1de575fb02ec08d7"
+    },
+    {
+      "artifact": "org.integratedmodelling.languages.worldview",
+      "file": "C:\\Users\\Ferd\\Documents\\Codex\\2026-11-06\\task-6\\m2\\org\\integratedmodelling\\org.integratedmodelling.languages.worldview\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.worldview-1.0.0-SNAPSHOT.jar",
+      "sha256": "455537d19633552d10e1c8ee55f1a997ba0e869faa183c47b59475d23b8d049c"
+    },
+    {
+      "artifact": "org.integratedmodelling.languages.observation",
+      "file": "C:\\Users\\Ferd\\Documents\\Codex\\2026-11-06\\task-6\\m2\\org\\integratedmodelling\\org.integratedmodelling.languages.observation\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.observation-1.0.0-SNAPSHOT.jar",
+      "sha256": "9a1f595b41843a4101b072aabecea128442afcb56a0596c628c6050670f05598"
+    },
+    {
+      "artifact": "org.integratedmodelling.languages.kim",
+      "file": "C:\\Users\\Ferd\\Documents\\Codex\\2026-11-06\\task-6\\m2\\org\\integratedmodelling\\org.integratedmodelling.languages.kim\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.kim-1.0.0-SNAPSHOT.jar",
+      "sha256": "027a574629bb30306479aa4561d4d8204597fc519d9fcf6db4ef220b689610a8"
+    },
+    {
+      "artifact": "org.integratedmodelling.languages.kactors",
+      "file": "C:\\Users\\Ferd\\Documents\\Codex\\2026-11-06\\task-6\\m2\\org\\integratedmodelling\\org.integratedmodelling.languages.kactors\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.kactors-1.0.0-SNAPSHOT.jar",
+      "sha256": "f682f1c468eb62957e8a70550d65568f3b9063b57529c4ca359e6f57fcf42921"
+    }
+  ],
+  "generatedNoise": "Two generated genmodel header changes restored; transient consumer POMs removed. No API overlays."
+}

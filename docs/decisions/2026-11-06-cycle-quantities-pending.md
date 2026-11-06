@@ -15,24 +15,17 @@ It must be published and verified before activating the authored IMOD URL.
 Services includes the same exact bytes and the frozen-catalog identity.
 No push, merge, deployment or restart is included in this work.
 
-## Existing measurement-category mismatch
+## Settled Duration classification and extent cleanup
 
-The current language/adapter marks Duration (and therefore Period) EXTENSIVE,
-while the unchanged ODO Duration class inherits IntensivePhysicalProperty.
-The new Frequency is a generic numeric quantity in the consumer flags, with
-intensive ancestry in ODO and Hz units. It is not Numerosity or EXTENSIVE.
-This work verifies Period's Duration ancestry, seconds, cyclic bearer and OWL
-consistency; it does not resolve Duration aggregation semantics or introduce a
-new Frequency keyword/type. A separate paired Languages/Services decision is
-needed before relying on Period's aggregation flags. Historical ODO bytes must
-remain unchanged in any such correction.
+The user approved retaining ODO Duration's intensive ancestry and aligning the
+language category with it. Duration and Period therefore carry INTENSIVE rather
+than EXTENSIVE in the paired consumer. Ordinary event duration remains valid;
+quantitative within expressions on Duration, Period and their descendants are
+rejected through ODO ancestry. This adds no automatic aggregation rule.
 
-## Independent Time/Space cleanup
-
-The authored candidate preserves the two root aliases to avoid combining this
-change with the user's active removal work. The replay harness can comment
-those aliases only in private inputs with --without-extents. No additional
-extent taxonomy or contextualization commitments are introduced.
+The approved Time/Space cleanup 95bad3f is integrated as cd0f3bf. Only the two
+unused IMOD aliases are commented out. ODO Time and Space and contextualizer scale
+handling remain intact. The candidate introduces no new extent taxonomy.
 
 ## Authority capture
 

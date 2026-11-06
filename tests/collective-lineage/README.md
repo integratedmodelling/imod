@@ -2,7 +2,7 @@
 
 `run.py` extracts the exact Subject/Agent collective declarations from `src`,
 parses and adapts four isolated ontology documents with the real Services loader,
-and builds a private semantic environment with exact ODO 0.2.1 bytes. It verifies
+and builds a private semantic environment with exact ODO 0.2.2 bytes. It verifies
 lineage, Subject/Agent separation, Organization's domain-neutral ancestry,
 unchanged Individual nature, and absence of collection, containment, bearer and
 created-observable implications. Java blocks external networking. It starts no service.
@@ -23,7 +23,7 @@ lineage. It does not certify full-world domain, authority or strategy acceptance
 ```powershell
 python tests/collective-lineage/run.py --surefire-xml <reasoner-test.xml> `
   --resources-classes <resources-target-classes> --mockito-agent <mockito-core.jar> `
-  --odo <odo-im/releases/0.2.1/odo.owl> --output <new-private-output-directory>
+  --odo <odo-im/releases/0.2.2/odo.owl> --output <new-private-output-directory>
 ```
 
 The XML's compiled classes must match the Services source being reviewed.

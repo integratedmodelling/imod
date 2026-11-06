@@ -1,5 +1,9 @@
 # Cycle quantity review
 
+This records the initial candidate before the subsequently approved Duration
+alignment and integrated Time/Space cleanup. The current coordinated result is
+[the intensive Duration review](../duration-intensive-20261106/REVIEW.md).
+
 The source defines physical:CyclicProcess and makes physical:Frequency and
 physical:Period native qualities of that bearer. Frequency inherits the new
 ODO 0.2.2 Frequency root in Hz; Period inherits Duration in seconds. Frequency

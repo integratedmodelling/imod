@@ -32,10 +32,16 @@ if a.without_extents:
     source=flat/'imod.kwv'
     text=source.read_text(encoding='utf8')
     text,count=re.subn(r'(?m)^\s*abstract extent (?:Time|Space)\b[^;]*;',lambda m:'\n/* Disabled root extent alias for isolated compatibility replay.\n'+m.group(0)+'\n*/',text)
-    assert count==2,count
+    assert count in (0,2),count
+    if count==0:
+        assert all(re.search(r'(?m)^//\s+abstract extent '+name+r'\b',text) for name in ['Time','Space'])
     source.write_bytes(text.encode('utf8'))
 for name in ['home','tmp']:(out/name).mkdir()
 provenance={'classpathXml':str(a.surefire_xml.resolve()),'sourceHashes':{f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in flat.iterdir()},'driverSha256':hashlib.sha256(driver.read_bytes()).hexdigest(),'odoSha256':hashlib.sha256(a.odo.read_bytes()).hexdigest(),'limitation':'Audited legacy authority capture reader; native persistent catalogue roundtrip remains unverified.'}
+provenance['loaderSha256']=hashlib.sha256(loader.read_bytes()).hexdigest()
+provenance['captureReaderSha256']=hashlib.sha256(adapter.read_bytes()).hexdigest()
+provenance['languageJars']=[{'path':v,'sha256':hashlib.sha256(Path(v).read_bytes()).hexdigest()}
+    for v in cp.split(';') if 'org.integratedmodelling.languages.' in v and v.endswith('.jar')]
 (out/'PROVENANCE.json').write_bytes(json.dumps(provenance,indent=2).encode())
 with (out/'run.log').open('w') as log:
     result=subprocess.run(['java',argfile('run.args',['-javaagent:'+str(a.mockito_agent.resolve()),'-Djava.security.manager=allow','-Duser.home='+str(out/'home'),'-Djava.io.tmpdir='+str(out/'tmp'),'-cp',str(classes)+';'+cp,'org.integratedmodelling.klab.services.reasoner.internal.CycleWorldCheck',out,a.owned_capture.resolve(),a.odo.resolve(),'candidate'])],stdout=log,stderr=subprocess.STDOUT,timeout=300)

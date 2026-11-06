@@ -25,7 +25,7 @@ properties=ET.parse(a.surefire_xml).getroot().find('properties')
 cp=next(x.attrib['value'] for x in properties if x.attrib['name']=='java.class.path')+';'+str(a.resources_classes.resolve())
 if a.language_api_classes:cp=str(a.language_api_classes.resolve())+';'+cp
 source=(repo/'src/imod.kwv').read_text(encoding='utf8')
-locator=re.search(r'"(https://[^" ]+/releases/0\.2\.1/odo\.owl)" as odo',source).group(1)
+locator=re.search(r'"(https://[^" ]+/releases/0\.2\.2/odo\.owl)" as odo',source).group(1)
 names={'imod':['Subject','Agent','CollectiveSubject','CollectiveAgent','Energy'],
        'life':['Individual','Assemblage','CollectiveAgent','SocialGroup','AnatomicalAssemblage','CellAssemblage'],
        'ecology':['Population','Community'],'society':['Organization']}

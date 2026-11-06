@@ -7,9 +7,10 @@ The committed driver checks 26 ontology documents, two strategies, classificatio
 shared CyclicProcess inherency, unit dimensions, invalid bearers and OWL consistency.
 The existing collective and Energy regressions remain included.
 
-`--without-extents` comments Time and Space only in the private replay source.
-It does not change the checkout, and tests compatibility with the user's separate
-extent-alias removal. Source hashes record the exact replayed variant.
+The approved Time/Space alias cleanup is integrated in the authored source.
+The historical `--without-extents` option remains compatible: it comments only
+active root aliases in private inputs, or verifies that both are already
+commented. Source hashes record the exact replayed variant.
 
 The legacy authority reader verifies captured proof/source bytes and removes only
 obsolete empty fields in memory. This is not a native persistent-catalogue roundtrip.
@@ -19,3 +20,7 @@ Services' CycleQuantityIntegrationTest separately parses a small fixture, verifi
 inherited units and bearers, allows a cyclic subtype, and rejects Event, Subject
 and the unspecialized Process as replacement bearers. No numerical reciprocal is
 computed or inferred by the ontology.
+
+Duration and Period must now carry INTENSIVE and exclude EXTENSIVE in the full
+consumer replay. The Services fixture additionally rejects their quantitative
+within forms through ODO ancestry while allowing ordinary event duration.

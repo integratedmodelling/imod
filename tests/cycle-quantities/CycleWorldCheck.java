@@ -62,6 +62,9 @@ public class CycleWorldCheck {
         results.put("frequencyType", frequency.getType());
         results.put("periodType", period.getType());
         check("Period duration", period.is(SemanticType.DURATION));
+        check("Period intensive, not extensive", period.is(SemanticType.INTENSIVE) && !period.is(SemanticType.EXTENSIVE));
+        var duration = actor.resolveConcept("imod:Duration");
+        check("Duration intensive, not extensive", duration.is(SemanticType.INTENSIVE) && !duration.is(SemanticType.EXTENSIVE));
         for (var quality : List.of("Frequency", "Period")) {
           var valid = actor.resolveConcept("physical:" + quality + " of physical:CyclicProcess");
           check(quality + " valid cyclic bearer", valid != null && !valid.is(SemanticType.NOTHING));
