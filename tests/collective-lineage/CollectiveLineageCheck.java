@@ -55,6 +55,25 @@ public class CollectiveLineageCheck {
         var unsat = owl.getUnsatisfiableClasses().entities().filter(c -> !c.isOWLNothing()).map(Object::toString).toList();
         results.put("unsatisfiable", unsat); check("zero unsatisfiable named classes", unsat.isEmpty());
         var subject = actor.resolveConcept("imod:Subject"); var agent = actor.resolveConcept("imod:Agent");
+        if (candidate) {
+          var energy = actor.resolveConcept("imod:Energy");
+          results.put("energyConsumerType",energy.getType());
+          results.put("energyConsumerUrn",energy.getUrn());
+          results.put("energyOwlType",owl.getConcept("odo:Energy").getType());
+          check("Energy extensive in current consumer", energy.is(SemanticType.ENERGY) && energy.is(SemanticType.EXTENSIVE) && !energy.is(SemanticType.INTENSIVE));
+          var units = new org.integratedmodelling.klab.data.mediation.UnitServiceImpl();
+          var energyMetadata = new org.integratedmodelling.klab.services.reasoner.owl.OWLMetadata(cls(owl,energy),owl.getOntology("odo").getOWLOntology());
+          var unitDefinition = energyMetadata.get("odo:unit");
+          results.put("energyCoreUnit",unitDefinition);
+          var joule = unitDefinition == null ? null : units.getUnit(unitDefinition.toString());
+          check("Energy core joule unit retained", "J".equals(unitDefinition) && units.isCompatible(joule, units.getUnit("J")));
+          check("kilojoule to joule conversion", joule != null && Math.abs(joule.convert(1, units.getUnit("kJ")).doubleValue() - 1000) < 1e-9);
+          check("Energy dimension distinct from power", joule != null && !units.isCompatible(joule, units.getUnit("W")));
+          var energyRate = owl.makeRate(energy); owl.flushReasoner();
+          check("Energy rate preserves extensive nature", energyRate.is(SemanticType.EXTENSIVE) && !energyRate.is(SemanticType.INTENSIVE));
+          check("Energy rate has power dimensions", units.isCompatible(units.getUnit(energyRate.getMetadata().get("odo:unit").toString()), units.getUnit("J/s")));
+          check("Energy and rate satisfiable", actor.satisfiable(energy) && actor.satisfiable(energyRate));
+        }
         for (var name : List.of("life:Assemblage", "life:AnatomicalAssemblage", "life:CellAssemblage")) {
           var c = actor.resolveConcept(name);
           check(name + " remains Subject", c.is(SemanticType.SUBJECT) && !c.is(SemanticType.AGENT) && actor.is(c, subject));

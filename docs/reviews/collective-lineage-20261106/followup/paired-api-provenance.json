@@ -1,0 +1,6 @@
+{
+  "source": "C:\\Users\\Ferd\\Documents\\Codex\\2026-11-06\\task-2\\languages\\org.integratedmodelling.languages.observable\\src\\org\\integratedmodelling\\languages\\api\\SemanticSyntax.java",
+  "sha256": "6a0027dd3e2da269178a20bd786c76eccf9fa4d29a836b8446b17ccffc685535",
+  "git_diff": "Read-only paired source from quantitative-within task; no file modified there.",
+  "scope": "Only the corrected SemanticSyntax interface and its enum classes are compiled as a private classpath overlay."
+}

@@ -1,0 +1,16 @@
+{
+  "success" : true,
+  "request" : {
+    "worldview" : "imod",
+    "name" : "CHEM",
+    "rootIdentity" : "chemistry:ChemicalIdentity",
+    "parameters" : {
+      "searchLimit" : 10,
+      "gifDepictions" : true,
+      "urn" : "klab.authority.pubchem"
+    }
+  },
+  "resolvedCodes" : 38,
+  "providerClassLocation" : "file:/C:/Users/Ferd/Documents/Codex/2026-11-06/task-3/validation/authority-investigation/fresh-capture-r2/capture/components/plugins/klab.authority.pubchem@1.0.0-SNAPSHOT.jar",
+  "scope" : "Fresh live responses via real CachedAuthority into private capture copy. Existing matching artifact/binding proof unchanged; no manual identity/cache records or expiration changes. No installation or production configuration change."
+}

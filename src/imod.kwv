@@ -70,7 +70,7 @@ ontology imod
    version 1.0
    in domain root 
       with core 
-         "https://raw.githubusercontent.com/integratedmodelling/odo-im/ede866637f505dfb882b7b9427a8f21f27922093/releases/0.2.1/odo.owl" as odo
+         "https://raw.githubusercontent.com/integratedmodelling/odo-im/86e25036b7e7a7d75971ab9f303c8f5f1785e30c/releases/0.2.1/odo.owl" as odo
    metadata {
       dc.creator: (
          "Ferdinando Villa (ferdinando.villa@bc3research.org)"

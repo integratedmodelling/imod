@@ -7,6 +7,12 @@ lineage, Subject/Agent separation, Organization's domain-neutral ancestry,
 unchanged Individual nature, and absence of collection, containment, bearer and
 created-observable implications. Java blocks external networking. It starts no service.
 
+The fixture also verifies extensive Energy, its core joule annotation, kJ/J
+conversion, distinction from power and the extensive J/s temporal derivative.
+It requires the paired language API where Energy is in the EXTENSIVE category.
+Use --language-api-classes to prepend a privately compiled paired API when the
+supplied Surefire classpath still contains the historical intensive classification.
+
 Requires Java 21, an existing Services reasoner Surefire XML providing its compiled
 classpath, compatible compiled Resources classes, and the Mockito startup agent.
 The loader comes from the adjacent `elevation-bearer` harness. The fixture has no
