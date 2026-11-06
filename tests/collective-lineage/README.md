@@ -10,8 +10,9 @@ created-observable implications. Java blocks external networking. It starts no s
 The fixture also verifies extensive Energy, its core joule annotation, kJ/J
 conversion, distinction from power and the extensive J/s temporal derivative.
 It requires the paired language API where Energy is in the EXTENSIVE category.
-Use --language-api-classes to prepend a privately compiled paired API when the
-supplied Surefire classpath still contains the historical intensive classification.
+Use the normal paired Languages artifacts in the supplied Surefire classpath.
+The optional API overlay flag exists for historical comparisons and is not the
+coordinated integration path.
 
 Requires Java 21, an existing Services reasoner Surefire XML providing its compiled
 classpath, compatible compiled Resources classes, and the Mockito startup agent.

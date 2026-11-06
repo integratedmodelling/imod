@@ -75,6 +75,7 @@ checksum check. That generated file is not a reusable accepted catalogue. This
 separate persistence issue does not invalidate the passing isolated full-world
 replay; use its verified capture/read-adapter path for reproduction.
 
+The initial evidence below describes the pre-integration build and remains historical.
 Current reasoner/API/common/services compiled dependencies correspond to Services
 `197a60a37ba3483b7d3f62fa93a510241a22e652`. The fixture uses previously compiled
 Resources loader classes from the frozen relationship-axis integration; it is
@@ -97,4 +98,4 @@ regression fails on historical 0.2.0 as expected.
 Remaining scientific work: specify the applicable social-connection and
 population configurations, cohort/support criteria and models. No further
 ontological choice blocks this lineage candidate. Publication/activation and a
-normal rebuild of the paired language artifacts remain separate work.
+normal distribution/activation remain separate work. The coordinated normal build supersedes the private API-overlay requirement; see [current integration record](../reviews/collective-lineage-20261106/INTEGRATION.md).
