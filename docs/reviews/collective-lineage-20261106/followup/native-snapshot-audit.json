@@ -1,0 +1,15 @@
+[ {
+  "checksumMatches" : false,
+  "currentTypedCanonicalHash" : "19d4b528c2ac15dfb02704451483fac5d3a09e2a084f21b4c4c8d57fd8a38bfd",
+  "jsonValueUnchanged" : true,
+  "name" : "UN.M49",
+  "storedRawContentHash" : "7778d227afbfc27d4d5726d68d4184ed129d2e2f22b2f60450ce507537473c07",
+  "typedCanonicalPrefix" : "{\"format\":\"un-caliper-skos-v1\",\"providerUrn\":\"klab.authority.un\",\"request\":{\"worldview\":\"imod\",\"name\":\"UN.M49\",\"rootIdentity\":\"geography:M49GeographicalIdentity\",\"parameters\":{\"catalog\":\"M49\",\"language\":\"en\",\"semanticBoundaries\":{\"M49_COUNTRY\":\"geography:M49SelfGoverningIdentity\""
+}, {
+  "checksumMatches" : false,
+  "currentTypedCanonicalHash" : "3a057583f5976ecb25657dc3ed597e04ac2d2639e304b1d0039c27f166f12522",
+  "jsonValueUnchanged" : true,
+  "name" : "LAND",
+  "storedRawContentHash" : "e7f61e7434d3ab96ff28e2477ce4162a3e7c234dc7c73bb8b7d0f7c39a916073",
+  "typedCanonicalPrefix" : "{\"format\":\"land.catalog-entries.v2\",\"providerUrn\":\"klab.authority.land\",\"request\":{\"worldview\":\"imod\",\"name\":\"LAND\",\"rootIdentity\":\"land:LandCover\",\"parameters\":{\"catalogs\":[\"corine_entry_hierarchy_example\"],\"domain\":\"LULC\",\"mode\":\"ENTRY_ONLY\",\"urn\":\"klab.authority.land\"}},\"state"
+} ]
