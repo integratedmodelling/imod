@@ -138,7 +138,8 @@ functional directed relationship ValuesAgent
 )
 process ValueAttribution
     "Activity through which an agent attributes value to an identified entity or alternative."
-    is physical:Activity of imod:Agent;
+    is physical:Activity of imod:Agent
+    confers valuation:Asset;
 
 @review(
     schema="klab.review/1",
