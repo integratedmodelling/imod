@@ -336,13 +336,15 @@ thing Sea
 	"A named marine-water region, commonly a marginal or partly enclosed part of an ocean."
 	is earth:Marine earth:Region;
 	
+@todo("Provide upper articulation for planet-bound channel")
 thing Waterway
-	"A riverine region defining a channel or course for flowing water."
-	is earth:Riverine earth:Region
+	"A riverine channel providing a course for flowing water."
+	is earth:Riverine earth:Geolocated earth:Location within earth:Region
 	has children
 		Reach,
 		Stream,
 		River;
+	
 	
 /**
  * ## Longitudinal stream profiles
