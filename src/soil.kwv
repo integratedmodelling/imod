@@ -135,3 +135,14 @@ quantity OrganicMatterFraction
     "Organic-matter fraction of the identified soil body under a stated material and mass basis."
     is imod:Proportion of soil:SoilBody
     describes soil:SoilBody;
+
+identity SoilType 
+    "Bridge to the World Reference Base authority. Use expressions such as WRB:[Eutric Arenosol (Bathylixic)]
+     or use the shortened forms (WRB:LV;  WRB:[LV-st.ab--ct])."
+    requires authority WRB {
+    urn: "klab.authority.wrb.authority",
+    edition: "2022-2024",
+    codelists: {
+        groups: "soil.groups"
+    }
+};
