@@ -138,7 +138,9 @@ quantity OrganicMatterFraction
 
 identity SoilType 
     "Bridge to the World Reference Base authority. Use expressions such as WRB:[Eutric Arenosol (Bathylixic)]
-     or use the shortened forms (WRB:LV;  WRB:[LV-st.ab--ct])."
+     or use the shortened forms (WRB:LV;  WRB:[LV-st.ab--ct]). 
+     See the [WRB Authority documentation](https://github.com/integratedmodelling/klab.authority.wrb) for 
+     details."
     requires authority WRB {
     urn: "klab.authority.wrb.authority",
     edition: "2022-2024",
