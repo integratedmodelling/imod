@@ -76,6 +76,15 @@ structural directed relationship OrganizationMembership
     "An agent's recognized membership in an organization under that organization's membership criteria."
     links imod:Agent to society:Organization;
 
+/**
+ * Admission is dated by the organization's effective membership criteria. A
+ * federation may vote in June to admit a clinic effective July 1. The vote
+ * records the decision, July 1 marks admission, and later membership is
+ * observed between the clinic and federation over the relevant interval.
+ */
+event OrganizationMembershipAdmission
+    "A bounded occurrence at which an identified agent becomes a recognized member of an identified organization through admission under that organization's applicable criteria.";
+
 @review(
     schema="klab.review/1",
     proposal="wv-review-20261023-0184",

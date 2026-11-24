@@ -1,0 +1,815 @@
+proposal_schema: classpath:/schemas/llm/domain-context-proposal.schema.json
+context_pack_version: '1.3'
+proposal:
+  id: society-omrse
+  revision_id: society-omrse-r1
+  title: Which social unit persists, who belongs, and when does recognition take effect?
+  iteration: 1
+  supersedes_revision: null
+  status: community_review
+  generated_at: '2026-11-22'
+  scope:
+    domain: imod:Society
+    purpose: Review existing Tier 1 social participants and the effective onset of recognized organizational
+      membership.
+    requested_tier: 1
+    target_community: IMOD Society maintainers, organization researchers, census methodologists and OMRSE reviewers
+    tier_1_context_required: false
+    tier_1_context_status: not_required
+    included:
+    - Participants, collectives, roles, ties and institutional occurrences
+    excluded:
+    - Jurisdiction-specific legal classifications and survey code lists
+    spatial_context: Residence geography and organizational jurisdiction may differ.
+    temporal_context: Compare effective time, observation interval and record time.
+    intended_scales:
+    - individual
+    - living arrangement
+    - organization
+    - federation
+    - statistical area
+  source_policy:
+    authority_criteria:
+    - Use matched Resources source and Reasoner projection for existing declarations.
+    - Use released OWL for assertions and linked design notes for motivations and alternatives.
+    inference_policy: Directional analogies require matching bearer, endpoints, recognition and time. No crosswalk
+      asserts OWL equivalence.
+  sources:
+  - source_id: IM
+    citation: IMOD source and accepted worldview
+    version: f0402f1fcb73b4afde5fe5f1ddf47cb10d08b233
+    locator: src/; strategies/; im.reasoner-main WORLDVIEW/current
+    authority_note: Hashes and service identity in proposal_data.snapshot.
+  - source_id: HIST
+    citation: Society bootstrap and subsequent governance decisions
+    version: 2026-10 to 2026-11
+    locator: experiments/strawman-2026/bootstrap/society/; docs/decisions/2026-10-16-organization.md; docs/decisions/2026-11-06-collective-lineage.md
+    authority_note: Historical questions and decisions. Accepted source determines current declarations.
+  - source_id: OWL
+    citation: OMRSE release including imported OBI and IAO terms
+    version: '2026-09-03'
+    locator: http://purl.obolibrary.org/obo/omrse/releases/2026-09-03/omrse.owl
+    authority_note: Parsed released RDF/XML from the supplied PURL. Term IDs refer to this edition.
+  - source_id: HOME
+    citation: OMRSE modeling guide, Home
+    version: retrieved 2026-11-22
+    locator: https://mcwdsi.github.io/OMRSE/modeling/Home/
+    authority_note: Maintainers’ modeling discussion. Release assertions take precedence.
+  - source_id: OV
+    citation: OMRSE modeling guide, OMRSE-Overview
+    version: retrieved 2026-11-22
+    locator: https://mcwdsi.github.io/OMRSE/modeling/OMRSE-Overview/
+    authority_note: Maintainers’ modeling discussion. Release assertions take precedence.
+  - source_id: HOUS
+    citation: OMRSE modeling guide, Housing-unit-and-Household
+    version: retrieved 2026-11-22
+    locator: https://mcwdsi.github.io/OMRSE/modeling/Housing-unit-and-Household/
+    authority_note: Maintainers’ modeling discussion. Release assertions take precedence.
+  - source_id: HOLDER
+    citation: OMRSE modeling guide, Householder
+    version: retrieved 2026-11-22
+    locator: https://mcwdsi.github.io/OMRSE/modeling/Householder/
+    authority_note: Maintainers’ modeling discussion. Release assertions take precedence.
+  - source_id: CONFER
+    citation: OMRSE modeling guide, What-is-the-relation-between-a-role-and-the-organization-that-creates-sanctions-confers-it
+    version: retrieved 2026-11-22
+    locator: https://mcwdsi.github.io/OMRSE/modeling/What-is-the-relation-between-a-role-and-the-organization-that-creates-sanctions-confers-it/
+    authority_note: Maintainers’ modeling discussion. Release assertions take precedence.
+  evidence:
+  - evidence_id: E-org
+    source_id: OWL
+    locator: OBI:0000245, asserted parent BFO:0000040 and editor note
+    source_term: organization
+    paraphrase: Membership and decision rules help identify the organization. Material-entity placement carries
+      an explicit editorial reservation.
+    evidence_kind: distinction
+    interpretation: Test rule-based continuity locally. Importing the material parent would reopen an approved
+      agency decision.
+  - evidence_id: E-member
+    source_id: OWL
+    locator: OBI:0000846 and inverse OBI:0001688
+    source_term: is member of organization
+    paraphrase: The object property has organization range. The definition invokes a member role and discusses
+      persons and organizations.
+    evidence_kind: distinction
+    interpretation: IMOD observes a directed structural relationship. Preserve the broader Agent source and
+      test local recognition criteria.
+  - evidence_id: E-aggregate
+    source_id: OWL
+    locator: OMRSE:00000023, 00000267, 00000033
+    source_term: collection of humans; social category; aggregate of organizations
+    paraphrase: The human collection restricts components to humans. A scheme demarcates a social category.
+      The organization aggregate definition explicitly excludes an organization acting in its own right.
+    evidence_kind: distinction
+    interpretation: Ask separately whether the analyst selected records, a collective persists, or a federation
+      can act.
+  - evidence_id: E-house
+    source_id: HOUS
+    locator: Use Cases; Background Information; Definitions; OWL OMRSE:00000076
+    source_term: household
+    paraphrase: ACS and synthetic population applications motivate an occupancy-based household, allowing a
+      single human.
+    evidence_kind: distinction
+    interpretation: The housekeeping convention in society-q02 and q15 uses shared provision and can cross
+      housing-unit boundaries. Keep convention explicit.
+  - evidence_id: E-holder
+    source_id: HOLDER
+    locator: US Census Householder; US Census Reference Person; OWL OMRSE:00000081
+    source_term: householder
+    paraphrase: The reference person anchors reporting relationships. The page discusses tenure and designation,
+      including a fallback in its quoted source.
+    evidence_kind: distinction
+    interpretation: Designated reporter does not establish authority over other members. Verify survey edition
+      before mapping fallback cases.
+  - evidence_id: E-role
+    source_id: CONFER
+    locator: 'Option #1; Option #2; compare OMRSE:00000086, 00000001, 00000025'
+    source_term: role bearer, conferrer and realization
+    paraphrase: A hiring process can link bestower and bearer. The page also considers a declaration with a
+      dependent output and acknowledges roles without explicit bestowal.
+    evidence_kind: distinction
+    interpretation: Keep the role bearer, counterparty, recognizing authority and occasion independently identifiable.
+      An acting organization may itself bear a role.
+  - evidence_id: E-act
+    source_id: OWL
+    locator: IAO:0021003, IAO:0021009, IAO:0021001
+    source_term: social act and deontic declaration
+    paraphrase: A directed, perception-dependent planned act is broader than a declaration that changes a deontic
+      role. A document act is a further specialization.
+    evidence_kind: distinction
+    interpretation: Membership can accrue automatically. Restrict the candidate below to rule-effective admissions
+      and leave physical paperwork optional.
+  - evidence_id: E-local
+    source_id: IM
+    locator: src/society.kwv:13-133; src/imod.kwv:405-420; src/life.kwv:162-185
+    source_term: person, collective, organization and recognition
+    paraphrase: The root supplies two collective readings. Society declares OrganizationMembership from Agent
+      to Organization and keeps constitution as an applicable attribute.
+    evidence_kind: distinction
+    interpretation: Recognition can survive a role change or turnover. Nothing in the edge supplies an admission
+      date.
+  - evidence_id: E-neighbor
+    source_id: IM
+    locator: src/sociology.kwv; src/economics.kwv; src/agency.kwv; strategies/observations.obs
+    source_term: work, employment, coordination, adoption and consent
+    paraphrase: Worker and EmployedPerson classify people in context. EmployeeOf identifies a counterparty.
+      RuleAdoption, ConsentGrant and ChoiceCommitment identify bounded occurrences.
+    evidence_kind: distinction
+    interpretation: Hire, joining, appointment and rule adoption may occur on different dates. Reuse the existing
+      names for their own questions.
+  - evidence_id: E-ledger
+    source_id: HIST
+    locator: QUESTION_ORIGIN.json q01-q15; organization and collective-lineage decisions
+    source_term: historical probes
+    paraphrase: The former dossier tested living arrangements, usual residence, organizational persistence
+      and demographic events. Later decisions retired Institution and SocialAgent.
+    evidence_kind: distinction
+    interpretation: Retain historical prompts with an updated answerability assessment. Do not revive retired
+      identifiers.
+  existing_ontologies:
+  - ontology_id: agency
+    version: 1.0.0
+    role: prior_domain
+    tier: 1
+    domain_scope: Activity, decisions and contextual participation
+    mandatory_context: true
+  - ontology_id: chemistry
+    version: 1.0.0
+    role: prior_domain
+    tier: 1
+    domain_scope: chemistry
+    mandatory_context: true
+  - ontology_id: earth
+    version: 1.0.0
+    role: prior_domain
+    tier: 1
+    domain_scope: Location
+    mandatory_context: true
+  - ontology_id: ecology
+    version: 1.0.0
+    role: neighboring
+    tier: 1
+    domain_scope: Populations and communities
+    mandatory_context: false
+  - ontology_id: economics
+    version: 1.0.0
+    role: neighboring
+    tier: 1
+    domain_scope: Work, accounts and exchange
+    mandatory_context: false
+  - ontology_id: imod
+    version: 1.0.0
+    role: upper
+    tier: 1
+    domain_scope: Generic observation and collective roots
+    mandatory_context: true
+  - ontology_id: infrastructure
+    version: 1.0.0
+    role: neighboring
+    tier: 1
+    domain_scope: Built entities
+    mandatory_context: false
+  - ontology_id: land
+    version: 1.0.0
+    role: neighboring
+    tier: 1
+    domain_scope: Land classification
+    mandatory_context: false
+  - ontology_id: life
+    version: 1.0.0
+    role: prior_domain
+    tier: 1
+    domain_scope: Biological individuals and groupings
+    mandatory_context: true
+  - ontology_id: physical
+    version: 1.0.0
+    role: prior_domain
+    tier: 1
+    domain_scope: Activities and age
+    mandatory_context: true
+  - ontology_id: society
+    version: 1.0.0
+    role: root_domain
+    tier: 1
+    domain_scope: Social participants and constitutive relationships
+    mandatory_context: false
+  - ontology_id: sociology
+    version: 1.0.0
+    role: neighboring
+    tier: 1
+    domain_scope: Social relations and action
+    mandatory_context: false
+  root_scope_aliases:
+  - alias: imod:Event
+    foundational_concept: odo:Event
+    source_ontology_id: imod
+    available_for:
+    - bounded membership admission
+  assets:
+  - asset_id: soc-domain
+    asset_type: ontology
+    qualified_name: society
+    record_version: 1
+    name_history:
+    - qualified_name: society
+      from_iteration: 1
+      to_iteration: 1
+    label: Society
+    disposition: needs_review
+    definition: Social participants, recognized ties and changes to them.
+    evidence_refs:
+    - E-org
+    - E-member
+    - E-aggregate
+    - E-house
+    - E-holder
+    - E-role
+    - E-act
+    - E-local
+    - E-neighbor
+    - E-ledger
+    feedback:
+      state: open
+      comments: []
+      decisions: []
+      proposed_action_ids: []
+      applied_action_ids: []
+      last_reviewed_iteration: null
+    lifecycle:
+      state: proposed
+      introduced_in_iteration: 1
+      last_modified_in_iteration: 1
+      deleted_in_iteration: null
+      replacement_asset_ids: []
+    tier: 1
+    domain_expression: imod:Society
+    imports:
+    - imod
+    - life
+    - agency
+    - earth
+    - physical
+    member_asset_ids:
+    - soc-admission
+    proposal_data:
+      snapshot:
+        worldview_id: _uu_wv:7098827169982474
+        knowledge_revision: 1
+        retrieved: '2026-11-22'
+        resources: im.resources-main
+        reasoner: im.reasoner-main
+        provider:
+          serviceId: 6c5c7ca9-1270-48a5-9ef7-c28959158c6c
+          shadowed: []
+        provider_precedence: Remote selected, no local provider selected or shadowed.
+        report_sha256: 96aaeae3ffc35fcb5c9e9ac80276b1ac3b76db901577f5a6cf9f9e4f6dfad361
+        report_before_after_identical: true
+        baseline_consistent: true
+        baseline_diagnostics: None reported
+        imod_commit: f0402f1fcb73b4afde5fe5f1ddf47cb10d08b233
+        services_docs_develop: 2e1333cea412881fad7d380d689c34dd450ff86d
+        running_services_build: not advertised in report
+        omrse_sha256: 610ea82420deccf08247aaff1922f853e06a1eb8715860cc648dbbd30b33b094
+        ontology_hashes:
+          imod:
+            resources_reasoner_sha256: 782a27bf9a2ba292c2996046afd095eebb4a059f72a145ce1466f804091b927c
+            checkout_sha256: 0dc7e472e523d6438d344cc88c6dd7641311f59a24da54dd468d6096186bd33e
+          data:
+            resources_reasoner_sha256: 7a3ee50e25ea5dcc9b20c22d18006f87b692dcd0530fc4df416c2f3a83237a2f
+            checkout_sha256: 7a3ee50e25ea5dcc9b20c22d18006f87b692dcd0530fc4df416c2f3a83237a2f
+          physical:
+            resources_reasoner_sha256: dbd4a1b54391cd19d2c76dc2b7c289d1da79da6dc7f8ba0a02904a5f68358e16
+            checkout_sha256: dbd4a1b54391cd19d2c76dc2b7c289d1da79da6dc7f8ba0a02904a5f68358e16
+          life:
+            resources_reasoner_sha256: b2147fa2a27f142d9bb341eb3834b1eb2f48ed493d2fbab5f2a4dd4de6a49e5b
+            checkout_sha256: b2147fa2a27f142d9bb341eb3834b1eb2f48ed493d2fbab5f2a4dd4de6a49e5b
+          physics:
+            resources_reasoner_sha256: 1dd14901243b6907c4ab658d9a2516f8b9b6f6fa22dd7b398ecf431168415aa8
+            checkout_sha256: 1dd14901243b6907c4ab658d9a2516f8b9b6f6fa22dd7b398ecf431168415aa8
+          calendar:
+            resources_reasoner_sha256: 4d8d939c6f68bd19cf441fd3e77b1bd9e9fe384446e3f230d0c58b39f4dd535e
+            checkout_sha256: a05a56ef06913b673a3daa47c7852ac5e37873789fb7af393dca96e6f2457a27
+          chemistry:
+            resources_reasoner_sha256: 4df6c4faaf5b33e80a7d5d6e3547b1157e0701e9de28a6b3fb18957dcdeafc65
+            checkout_sha256: 4df6c4faaf5b33e80a7d5d6e3547b1157e0701e9de28a6b3fb18957dcdeafc65
+          agency:
+            resources_reasoner_sha256: fdd30024858d2284e307c3d293077d187a39b39bb30d187aa3ac442de7c0f6cd
+            checkout_sha256: fdd30024858d2284e307c3d293077d187a39b39bb30d187aa3ac442de7c0f6cd
+          valuation:
+            resources_reasoner_sha256: 9f4b1c8b1d92f1915998f0c5825fc5af8dab8b20d18478adfda1be6f266b0221
+            checkout_sha256: 3cdaf13b9ac865f3e5e823adf928ba1803ae9c8ea36b75d95167b460eaeb66a0
+          biology:
+            resources_reasoner_sha256: 43ace34830c7692877a6a9884647d4b16fc690f4aa960262d6acb871752bcf1e
+            checkout_sha256: 43ace34830c7692877a6a9884647d4b16fc690f4aa960262d6acb871752bcf1e
+          earth:
+            resources_reasoner_sha256: faff6dfe5ac9b3eb95783c925bd196db3a18af7f85c41185fc0c977c7b7d10f8
+            checkout_sha256: faff6dfe5ac9b3eb95783c925bd196db3a18af7f85c41185fc0c977c7b7d10f8
+          ecology:
+            resources_reasoner_sha256: 22d01c976b1592c58d70e32bec2f84f44db69f960ca27cb067e6622e46ae5f31
+            checkout_sha256: 22d01c976b1592c58d70e32bec2f84f44db69f960ca27cb067e6622e46ae5f31
+          genetics:
+            resources_reasoner_sha256: 693a17dce026f44744759e961ee8a0daeef36d72740a984db0de97a582137922
+            checkout_sha256: 693a17dce026f44744759e961ee8a0daeef36d72740a984db0de97a582137922
+          atmosphere:
+            resources_reasoner_sha256: b41dcd8ec3009713ca51e5b68084d159d44b49f5f6ceb78dcc9c21eeb692d992
+            checkout_sha256: b41dcd8ec3009713ca51e5b68084d159d44b49f5f6ceb78dcc9c21eeb692d992
+          soil:
+            resources_reasoner_sha256: 5582326108cb9c78953286d670c9ef704efcab8d6b5cf9cbffa48dcdfc8389a5
+            checkout_sha256: 5582326108cb9c78953286d670c9ef704efcab8d6b5cf9cbffa48dcdfc8389a5
+          geology:
+            resources_reasoner_sha256: 3dfd0c45a640edbe9b715753647d525d95f556089baee1c5b1ed4c9de95e6d7a
+            checkout_sha256: 3dfd0c45a640edbe9b715753647d525d95f556089baee1c5b1ed4c9de95e6d7a
+          society:
+            resources_reasoner_sha256: 8bc69466e42812e44350c1a4cadbf46385b153792d513e0c8e22a88d0a1e8ec7
+            checkout_sha256: 8bc69466e42812e44350c1a4cadbf46385b153792d513e0c8e22a88d0a1e8ec7
+          geography:
+            resources_reasoner_sha256: 2a7b425c2368f8717c956f336fa38a76ad445d2e434163a4aef2d39213de59bf
+            checkout_sha256: 2a7b425c2368f8717c956f336fa38a76ad445d2e434163a4aef2d39213de59bf
+          hydrology:
+            resources_reasoner_sha256: b87edcde76b573825e9f9cbfb83dbbee016e204ec75d2b1a794caebd98f574cb
+            checkout_sha256: b87edcde76b573825e9f9cbfb83dbbee016e204ec75d2b1a794caebd98f574cb
+          infrastructure:
+            resources_reasoner_sha256: 8f9662d09de7329864800b4de017468b0f474f9f1bd7f78b5d1f168786ed5e0f
+            checkout_sha256: 8f9662d09de7329864800b4de017468b0f474f9f1bd7f78b5d1f168786ed5e0f
+          oceanography:
+            resources_reasoner_sha256: 88791fb1f1ecd1da2fd73d4959ab9770b38249ddcc305430b1c643f007a51111
+            checkout_sha256: 88791fb1f1ecd1da2fd73d4959ab9770b38249ddcc305430b1c643f007a51111
+          agriculture:
+            resources_reasoner_sha256: 60df01b9f082383508f18c378b68db75f0e7381c08eddc1b5ec9605bc8484528
+            checkout_sha256: 60df01b9f082383508f18c378b68db75f0e7381c08eddc1b5ec9605bc8484528
+          sociology:
+            resources_reasoner_sha256: b0365910ad12dd1664cf953c13f4b4e686c1cd07b4f449a6573bb04574bb67ea
+            checkout_sha256: b0365910ad12dd1664cf953c13f4b4e686c1cd07b4f449a6573bb04574bb67ea
+          land:
+            resources_reasoner_sha256: 437c6b95938a21ade06aa5d08d5ac4147b0c68e88e5dca2d9ef87fc339f25010
+            checkout_sha256: 437c6b95938a21ade06aa5d08d5ac4147b0c68e88e5dca2d9ef87fc339f25010
+          engineering:
+            resources_reasoner_sha256: 0e34975466dc91d0c04ba5a9e481ae7477819a88f30a44aea89d7e66fc254ba5
+            checkout_sha256: 0e34975466dc91d0c04ba5a9e481ae7477819a88f30a44aea89d7e66fc254ba5
+          economics:
+            resources_reasoner_sha256: 5744da386895e9f8ed9a51f1f137ec89f40c51c49f495b89b6727ac53a9083a7
+            checkout_sha256: 5744da386895e9f8ed9a51f1f137ec89f40c51c49f495b89b6727ac53a9083a7
+        strategy_resources_sha256:
+          observations: 4474e86974399fea4a023b41e6944de60fe20756c695b95edcd8daf7892a4aad
+          identities: 15c05aab0d3ab66e037a514a5b288efd223e2fddd61139606c346662aeea5afd
+        society_transitive_imports:
+        - agency
+        - chemistry
+        - earth
+        - imod
+        - life
+        - physical
+        downstream_importers:
+        - economics
+        - land
+        - sociology
+      question_register:
+      - id: society-q01
+        question: How many people normally live here, including those temporarily away during the fire?
+        source_ids:
+        - CENSUS3
+        prior_semantic_status: blocked
+        current_coverage: Composable
+        assessment: Count distinct society:HumanIndividual sources of society:UsualResidenceIn to the area
+          at the reference date, including qualifying absentees. Geographical inclusion, deduplication and
+          coverage require a model.
+      - id: society-q02
+        question: Do two families sharing one building form one household?
+        source_ids:
+        - CENSUS3
+        prior_semantic_status: blocked
+        current_coverage: Convention gap
+        assessment: Shared occupancy and shared provisioning can partition the same building differently. Ask
+          which convention this survey uses and identify the housing units or provisioning arrangements.
+      - id: society-q03
+        question: Who lives alone and might need help leaving a threatened area?
+        source_ids:
+        - CENSUS3
+        prior_semantic_status: blocked
+        current_coverage: Partial
+        assessment: A one-person arrangement requires a household boundary. Identify assistance need separately.
+          A resident with mobility assistance can live alone; living alone cannot establish need.
+      - id: society-q04
+        question: Which children and adults are members of the same household?
+        source_ids:
+        - CENSUS3
+        prior_semantic_status: blocked
+        current_coverage: Gap
+        assessment: Age is available through society:PersonAge. Membership in a household needs a convention,
+          an identified arrangement and a reference time. OrganizationMembership has the wrong target.
+      - id: society-q05
+        question: How many residents moved away rather than merely evacuated overnight?
+        source_ids:
+        - EVAC
+        prior_semantic_status: blocked
+        current_coverage: Composable
+        assessment: society:ResidentialMigration and UsualResidenceIn distinguish a changed usual home. Count
+          distinct movers over an interval, comparing origin and destination. Overnight evacuation alone fails
+          the change criterion.
+      - id: society-q06
+        question: Which households changed membership after a birth?
+        source_ids:
+        - VITAL
+        prior_semantic_status: blocked
+        current_coverage: Gap
+        assessment: Compare household membership before and after a dated live birth. life:Reproduction is
+          a process. Registration time can differ from occurrence; household identity and the bounded live-birth
+          reading need review.
+      - id: society-q07
+        question: How many people died during the disaster, without assuming that every death was caused by
+          it?
+        source_ids:
+        - VITAL
+        prior_semantic_status: blocked
+        current_coverage: Composable
+        assessment: life:OrganismDeath supplies a bounded occurrence. Select identified human decedents and
+          the disaster interval, then deduplicate. Temporal overlap supplies no causal attribution.
+      - id: society-q08
+        question: Who is related by parenthood even though they live apart?
+        source_ids:
+        - CENSUS3
+        prior_semantic_status: blocked
+        current_coverage: Represented for recognized parenthood
+        assessment: society:RecognizedParentOf records identified endpoints under a regime independently of
+          UsualResidenceIn. Biological descent needs its own evidence.
+      - id: society-q09
+        question: Which organizations remain identifiable when their staff change?
+        source_ids:
+        - OSTROM
+        prior_semantic_status: blocked
+        current_coverage: Partial
+        assessment: society:Organization and OrganizationMembership allow roster turnover; FormallyConstituted
+          qualifies the organization where evidenced. A continuity or succession rule decides the difficult
+          merger case.
+      - id: society-q10
+        question: Did marriage or divorce change a legally recognized partnership?
+        source_ids:
+        - VITAL
+        prior_semantic_status: blocked
+        current_coverage: Gap
+        assessment: RecognizedParentOf has different endpoints in practice and a different meaning. A recognition
+          regime, partnership tie, effective formation or termination, and registration evidence are needed.
+      - id: society-q11
+        question: Which people share essential living arrangements without being relatives?
+        source_ids:
+        - CENSUS3
+        prior_semantic_status: blocked
+        current_coverage: Gap
+        assessment: Shared essentials require a housekeeping criterion. Parenthood covers only one kin tie.
+          Lack of a recorded parent relationship cannot establish unrelatedness.
+      - id: society-q12
+        question: How many evacuees are still away from their usual homes?
+        source_ids:
+        - DISPLACE
+        prior_semantic_status: blocked
+        current_coverage: Partial
+        assessment: Join UsualResidenceIn with actual location and a dated evacuation cohort. Resolve current
+          absence with follow-up observations. An unobserved return leaves status unknown.
+      - id: society-q13
+        question: When did an organization begin or cease to exist?
+        source_ids:
+        - OSTROM
+        prior_semantic_status: blocked
+        current_coverage: Partial
+        assessment: Organization and FormallyConstituted identify the subject and a governance distinction.
+          Ask which formation or dissolution criterion fixes its boundary. An admission changes a roster and
+          need not create an organization.
+      - id: society-q14
+        question: Are visitors counted as residents in this estimate?
+        source_ids:
+        - CENSUS3
+        prior_semantic_status: blocked
+        current_coverage: Composable
+        assessment: Use the estimate’s UsualResidenceIn convention, reference date and population filter. A
+          temporary visitor may independently qualify as a usual resident elsewhere. The dataset must disclose
+          its inclusion rule.
+      - id: society-q15
+        question: Which households lack a conventional dwelling but still share provision for essentials?
+        source_ids:
+        - CENSUS3
+        prior_semantic_status: blocked
+        current_coverage: Gap
+        assessment: A dwelling-based interpretation of OMRSE:00000076 cannot define all housekeeping units.
+          Record shared provision and continuity for people without a conventional dwelling, alongside their
+          shelter situation.
+      review_decision: Accept, narrow or defer the admission event. Decide separately whether living arrangements
+        and organizational offices justify Tier 1 meanings.
+      impact: Additive Society proposal. No new import. Moving SocialRelation from Sociology or making Society
+        import Sociology would affect its consumers or introduce a cycle.
+      question_origin: Historical source-motivated prompts from the 2026-10-03 ledger. Their author had seen
+        the current vocabulary of that round. No independent expert answers.
+      deferred_domain_distinctions:
+      - gap_id: household-unit
+        gap_type: domain articulation for review
+        required_tier: 1
+        required_concept: Convention-qualified household identity
+        reason: Choose arrangement identity through a singleton transition and a move across dwellings. Compare
+          occupancy and shared provision.
+        evidence_refs:
+        - E-house
+        - E-holder
+        - E-ledger
+        status: open
+      - gap_id: office-mandate
+        gap_type: domain articulation for review
+        required_tier: 1
+        required_concept: Organizational office and scope of representation
+        reason: Decide whether an office persists while vacant and identify the authority and period of any
+          mandate.
+        evidence_refs:
+        - E-role
+        - E-neighbor
+        status: open
+      - gap_id: org-continuity
+        gap_type: domain articulation for review
+        required_tier: 1
+        required_concept: Constitution and cessation of an acting unit
+        reason: Establish which event marks continuity or replacement when a unit is reorganized.
+        evidence_refs:
+        - E-org
+        - E-ledger
+        - E-local
+        status: open
+    open_questions:
+    - Which convention governs single-person households?
+    - Can an office persist without an incumbent?
+    - Does a merger create a new agent under the proposed identity rule?
+  - asset_id: soc-admission
+    asset_type: concept
+    qualified_name: society:OrganizationMembershipAdmission
+    record_version: 1
+    name_history:
+    - qualified_name: society:OrganizationMembershipAdmission
+      from_iteration: 1
+      to_iteration: 1
+    label: Admission to organizational membership
+    disposition: propose
+    definition: A bounded occurrence at which a particular agent becomes a recognized member of an identified
+      organization through admission under its applicable criteria.
+    evidence_refs:
+    - E-local
+    - E-member
+    - E-act
+    - E-role
+    - E-neighbor
+    feedback:
+      state: open
+      comments: []
+      decisions: []
+      proposed_action_ids: []
+      applied_action_ids: []
+      last_reviewed_iteration: null
+    lifecycle:
+      state: proposed
+      introduced_in_iteration: 1
+      last_modified_in_iteration: 1
+      deleted_in_iteration: null
+      replacement_asset_ids: []
+    abstract: false
+    section: Changes in social relationships
+    tier: 1
+    tier_rationale: Recognition of admission recurs across organizational forms. Eligibility and evidence remain
+      local.
+    conceptual_dimension: Effective onset of membership through admission
+    boundaries:
+      includes:
+      - Admission of a person or member organization when the admitting rule takes effect
+      excludes:
+      - Founding membership acquired without an admission
+      - Application, appointment to office, and later registration alone
+      examples:
+      - An association admits a clinic effective July 1 after a June vote.
+      counterexamples:
+      - Unsuccessful application
+      - An existing member is elected chair.
+    semantic_coordinates:
+      kind: event
+      flags: []
+      perspective: functional
+      dependence: independent
+      arity: 0
+      countable: true
+      bearer_types: []
+      participant_types:
+      - imod:Agent
+      - society:Organization
+      relationship_source: null
+      relationship_target: null
+      value_kind: null
+      aggregation_behavior: not_applicable
+    category_rationale: The effective transition can be dated and counted. Deliberation has duration and may
+      fail. The resulting recognized tie can outlast the occasion.
+    type_inheritance:
+      declaration_keyword: event
+      odo_im_chain: implicit
+      explicit_odo_derivation_required: false
+      rationale: The keyword supplies event nature. The local Event alias gives generalized scope.
+    generalized_scope_aliases_used:
+    - imod:Event
+    ambiguity:
+      status: qualified
+      source_senses:
+      - application
+      - effective admission
+      - entry into a register
+      selected_sense: effective admission
+      excluded_senses:
+      - request
+      - retrospective record
+      resolution_rationale: Use the applicable recognition convention and effective date.
+    orthogonality:
+      atomic_dimension: true
+      composite_of: []
+      independently_variable_from: []
+      relations: []
+      assessment: One transition can occur without an office appointment. An appointment can occur while membership
+        persists.
+    named_composition:
+      applicable: false
+      domain_term: null
+      articulated_expression: null
+      naming_rationale: A relationship observation supplies no initiation mechanism.
+      salience:
+        level: peripheral
+        citation_evidence_refs: []
+        occurrence_count: null
+        independent_source_count: null
+        canonical_definition_refs: []
+        discourse_uses:
+        - query
+      equals_vs_is_review_required: false
+      proposed_outcome: specialize_with_is
+      equivalence_assessment:
+        same_intension: null
+        same_extension: null
+        same_perspective_and_category: null
+        same_context_and_dependence: null
+        same_value_space_and_predicates: null
+        rationale: No equivalent existing composition identified.
+      reviewer_decision: null
+    alignment:
+      action: specialize
+      selected_parent: imod:Event
+      direct_parent_tier: 1
+      tier_1_ancestor: imod:Event
+      ancestry_to_tier_1:
+      - ref_kind: external
+        asset_id: null
+        qualified_name: imod:Event
+      ancestry_status: verified
+      contextualized_within: society
+      candidates:
+      - concept: imod:Event
+        relation: is
+        score: 1
+        rationale: Bounded occurrence
+      rejected_candidates:
+      - sociology:RuleAdoption changes a rule; admission applies one.
+      - agency:ConsentGrant can precede effective admission.
+    predicates:
+      identities: []
+      realms: []
+      attributes: []
+      roles: []
+    derivation:
+      operator: null
+      operand: null
+      secondary_operand: null
+      rationale: null
+    clauses:
+      inherits:
+      - imod:Event
+      applies_to: []
+      links: null
+      creates: []
+      affects: []
+      emerges_from: []
+      implies: []
+      describes: null
+      requires: []
+      children: []
+    dependencies:
+    - imod:Event
+    - imod:Agent
+    - society:Organization
+    - society:OrganizationMembership
+    candidate_expression: society:OrganizationMembershipAdmission
+    candidate_kwv: "event OrganizationMembershipAdmission\n    \"An effective admission of an identified agent\
+      \ to membership in an organization under its applicable criteria.\"\n    is imod:Event;"
+    syntax_status: illustrative
+    confidence:
+      extraction: 0.65
+      category: 0.9
+      alignment: 0.85
+      unambiguity: 0.75
+      orthogonality: 0.8
+    open_questions:
+    - Which evidence fixes the date when a vote, notification and entry into the register disagree?
+    alternatives:
+    - Use a time-stamped membership interval alone where the mechanism is unknown.
+    - Keep admissions in a specialist governance ontology if institutions cannot agree on the boundary.
+    metadata:
+      required_model_inputs:
+      - member identity
+      - organization identity
+      - applicable rule
+      - effective time
+      - evidence of admission
+      consequences: No unconditional creates or confers. Participant bindings and occurrence evidence need
+        a model.
+  dependency_order:
+  - soc-admission
+  - soc-domain
+  upstream_gaps: []
+  root_domain_gaps: []
+  iteration_control:
+    current_iteration: 1
+    previous_revision_id: null
+    next_iteration: 2
+    state: open_for_feedback
+    unresolved_feedback_ids: []
+    proposed_action_ids: []
+    applied_action_ids: []
+  actions: []
+  orthogonality_review:
+    hard_unambiguity_gate_passed: true
+    pairwise_review_complete: true
+    matrix:
+    - candidate: soc-admission
+      comparison: society:OrganizationMembership
+      relation: transition and enduring tie
+      test: Two current members can differ in how they joined. The same admission can precede later lapse.
+    unresolved_ambiguities: []
+    unresolved_overlaps: []
+  validation:
+    schema_valid: true
+    references_resolve: true
+    acyclic: true
+    requested_tier_valid: true
+    mandatory_tier_1_context_present: true
+    tier_ancestry_valid: true
+    orthogonality_reviewed: true
+    internally_unambiguous: true
+    named_composition_reviews_complete: true
+    semantic_review: Desk review of candidate boundary. Expert review pending. No assertion of OMRSE equivalence.
+    syntax_validation: Existing source matched to integrated report. Candidate fragment illustrative, unparsed
+      and unintegrated.
+    warnings:
+    - No model, time-series query or post-commit consequence was executed.
+    - Hard gate applies only to the scoped admission sense. Deferred household and office readings are outside
+      the candidate corpus.
+  corpus_feedback:
+    state: open
+    coverage_comments: []
+    structural_comments: []
+    cross_cutting_issues: []
+    decisions: []
+    requested_changes: []
+  change_log:
+  - iteration: 1
+    revision_id: society-omrse-r1
+    previous_revision_id: null
+    changes:
+    - First OMRSE comparison of accepted Society declarations. One event offered for expert review.
+    feedback_resolved: []
+    actions_applied: []
