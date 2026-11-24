@@ -319,3 +319,7 @@ abstract thing AnatomicalAssemblage
 thing CellAssemblage
     "An anatomical assemblage articulated at the level of structural cell-body readings under stated biological unity, membership and continuity criteria."
     is life:AnatomicalAssemblage;
+
+mass Biomass
+    "Organic material from plants and animals convertible into energy"
+    inherits life:OfBiologicalOrigin;

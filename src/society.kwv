@@ -140,3 +140,10 @@ structural directed relationship RecognizedParentOf
 duration PersonAge
     "Elapsed time since the birth of a human individual under the stated age convention."
     is physical:Age of society:HumanIndividual;
+
+process Livelihood
+    ""
+    is physical:Activity
+    has children
+        Sustenance,
+        EconomicActivity;

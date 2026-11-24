@@ -15,18 +15,23 @@
  */
 ontology agriculture
     version 1.0
-    using imod, physical, ecology
+    using imod, physical, ecology, society
     in domain imod:Physical;
 
 abstract identity CropType
+    "Crop types are articulated according to the Indicative Crop Classification from FAO"
     requires authority UN.ICC {
         urn: "klab.authority.un",
         catalog: "ICC"
     }
 ;
 
+mass HarvestedBiomass
+    is life:Biomass;
+
 abstract process AgriculturalActivity 
-    is physical:Activity // TODO articulate 'for' agricultural production
+    is physical:Activity for society:Livelihood
+    confers valuation:Asset to agriculture:AgriculturalAssetRegion
     has children
         Sowing
             "An agricultural activity deliberately placing seed into or onto a growing substrate.",
@@ -127,5 +132,16 @@ abstract process AgriculturalActivity
         review_record="../docs/reviews/domain-integration-20261023/records/living/agriculture.json"
     )
     ResidueRetention
-        "Deliberate management maintaining biological residues at a production site."
+        "Deliberate management maintaining biological residues at a production site.",
+    (Harvesting
+        ""
+        implies agriculture:HarvestedBiomass)
 ;
+
+abstract thing AgriculturalAssetRegion
+    has children
+        (abstract Crop
+            ""
+            requires identity agriculture:CropType),
+        Pasture;
+
