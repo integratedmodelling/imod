@@ -11,9 +11,9 @@ ontology land
 	using imod, society, earth, life
 	in domain imod:Land;
 
-	
 identity LandCover 
 	"An identity used to classify the physical cover of a land surface."
+    applies to earth:Location
 	requires authority LAND {
         urn: "klab.authority.land",
         mode: "ENTRY_ONLY",
@@ -42,4 +42,5 @@ identity LandCover
     review_record="../docs/reviews/domain-integration-20261023/records/earth/land.json"
 )
 event CoverChangeEpisode
-    "A bounded occurrence in which physical cover changes on an identified land surface unit.";
+    "A bounded occurrence in which physical cover changes on an identified land surface unit."
+    is changed land:LandCover;
