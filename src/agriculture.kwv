@@ -147,5 +147,7 @@ abstract thing AgriculturalAssetRegion
              vegetation, or natural features, that is plowed, prepared, and actively used for 
              cultivating plants for harvest."
             requires identity agriculture:CropType),
-        Pasture;
+        Pasture
+           "Pasture is an area of land maintained as standing forage that is harvested by grazing 
+            animals in real time.";
 
