@@ -139,9 +139,13 @@ abstract process AgriculturalActivity
 ;
 
 abstract thing AgriculturalAssetRegion
+    "Any region of Earth used for agricultural activities."
+    is earth:Region
     has children
-        (abstract Crop
-            ""
+        (abstract Cropfield
+            "A field where crops are grown. A distinct area of land, often bounded by property lines, 
+             vegetation, or natural features, that is plowed, prepared, and actively used for 
+             cultivating plants for harvest."
             requires identity agriculture:CropType),
         Pasture;
 
