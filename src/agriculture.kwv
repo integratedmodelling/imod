@@ -18,121 +18,114 @@ ontology agriculture
     using imod, physical, ecology
     in domain imod:Physical;
 
-process Sowing
-    "An agricultural activity deliberately placing seed into or onto a growing substrate."
-    is physical:Activity;
+abstract identity CropType
+    requires authority UN.ICC {
+        urn: "klab.authority.un",
+        catalog: "ICC"
+    }
+;
 
-/**
- * ## Water application and soil management
- *
- * Irrigation applies water for crop cultivation. Tillage mechanically disturbs
- * soil as an agricultural management activity. They describe deliberate
- * operations without selecting equipment, a spatial scale or a successful crop
- * outcome. Tillage involves soil; irrigation need not use soil as its substrate.
- *
- * Applying water is distinct from infiltration, uptake by an organism and
- * consumptive use. Tillage does not alone establish improved condition, a
- * particular disturbed-area fraction or a later yield. Observations identify
- * the operation and its participants; models describe the resulting water,
- * soil and biological changes.
- */
-process Irrigation
-    "Deliberate application of water for crop cultivation."
-    is physical:Activity;
-
-process Tillage
-    "Mechanical disturbance of soil as an agricultural management activity."
-    is physical:Activity;
-
-/**
- * ## Experimental first-level articulation
- *
- * These observations extend the shared vocabulary for multidisciplinary review.
- * Their declaration-local review records preserve rationale, alternatives and
- * exact validation evidence. Experimental inclusion is distinct from recorded
- * community acceptance; models still establish occurrence, support and outcomes.
- */
-
-@review(
-    schema="klab.review/1",
-    proposal="wv-review-20261023-0105",
-    revision="strawman-integration-r1",
-    maturity="experimental",
-    controversy="unassessed",
-    technical_validation="not_recorded",
-    community_acceptance="not_recorded",
-    review_record="../docs/reviews/domain-integration-20261023/records/living/agriculture.json"
-)
-process Transplanting
-    "Deliberate placement of an already growing plant at a growing site."
-    is physical:Activity;
-
-@review(
-    schema="klab.review/1",
-    proposal="wv-review-20261023-0106",
-    revision="strawman-integration-r1",
-    maturity="experimental",
-    controversy="unassessed",
-    technical_validation="not_recorded",
-    community_acceptance="not_recorded",
-    review_record="../docs/reviews/domain-integration-20261023/records/living/agriculture.json"
-)
-process NutrientApplication
-    "Deliberate application of material to supply nutrients for cultivated production."
-    is physical:Activity;
-
-@review(
-    schema="klab.review/1",
-    proposal="wv-review-20261023-0107",
-    revision="strawman-integration-r1",
-    maturity="experimental",
-    controversy="unassessed",
-    technical_validation="not_recorded",
-    community_acceptance="not_recorded",
-    review_record="../docs/reviews/domain-integration-20261023/records/living/agriculture.json"
-)
-process CropProtection
-    "Deliberate management activity intended to protect cultivated production from damaging organisms."
-    is physical:Activity;
-
-@review(
-    schema="klab.review/1",
-    proposal="wv-review-20261023-0108",
-    revision="strawman-integration-r1",
-    maturity="experimental",
-    controversy="unassessed",
-    technical_validation="not_recorded",
-    community_acceptance="not_recorded",
-    review_record="../docs/reviews/domain-integration-20261023/records/living/agriculture.json"
-)
-process AnimalHusbandry
-    "Deliberate care and management of raised animals."
-    is physical:Activity;
-
-@review(
-    schema="klab.review/1",
-    proposal="wv-review-20261023-0109",
-    revision="strawman-integration-r1",
-    maturity="experimental",
-    controversy="unassessed",
-    technical_validation="not_recorded",
-    community_acceptance="not_recorded",
-    review_record="../docs/reviews/domain-integration-20261023/records/living/agriculture.json"
-)
-process LivestockGrazing
-    "Consumption of vegetation in place by raised livestock."
-    is ecology:Herbivory;
-
-@review(
-    schema="klab.review/1",
-    proposal="wv-review-20261023-0110",
-    revision="strawman-integration-r1",
-    maturity="experimental",
-    controversy="unassessed",
-    technical_validation="not_recorded",
-    community_acceptance="not_recorded",
-    review_record="../docs/reviews/domain-integration-20261023/records/living/agriculture.json"
-)
-process ResidueRetention
-    "Deliberate management maintaining biological residues at a production site."
-    is physical:Activity;
+abstract process AgriculturalActivity 
+    is physical:Activity // TODO articulate 'for' agricultural production
+    has children
+        Sowing
+            "An agricultural activity deliberately placing seed into or onto a growing substrate.",
+        /**
+         * ## Water application and soil management
+         *
+         * Irrigation applies water for crop cultivation. Tillage mechanically disturbs
+         * soil as an agricultural management activity. They describe deliberate
+         * operations without selecting equipment, a spatial scale or a successful crop
+         * outcome. Tillage involves soil; irrigation need not use soil as its substrate.
+         *
+         * Applying water is distinct from infiltration, uptake by an organism and
+         * consumptive use. Tillage does not alone establish improved condition, a
+         * particular disturbed-area fraction or a later yield. Observations identify
+         * the operation and its participants; models describe the resulting water,
+         * soil and biological changes.
+         */
+    Irrigation
+        "Deliberate application of water for crop cultivation.",
+    Tillage
+        "Mechanical disturbance of soil as an agricultural management activity.",
+    /**
+     * ## Experimental first-level articulation
+     *
+     * These observations extend the shared vocabulary for multidisciplinary review.
+     * Their declaration-local review records preserve rationale, alternatives and
+     * exact validation evidence. Experimental inclusion is distinct from recorded
+     * community acceptance; models still establish occurrence, support and outcomes.
+     */
+    @review(
+        schema="klab.review/1",
+        proposal="wv-review-20261023-0105",
+        revision="strawman-integration-r1",
+        maturity="experimental",
+        controversy="unassessed",
+        technical_validation="not_recorded",
+        community_acceptance="not_recorded",
+        review_record="../docs/reviews/domain-integration-20261023/records/living/agriculture.json"
+    )
+    Transplanting
+        "Deliberate placement of an already growing plant at a growing site.",
+    @review(
+        schema="klab.review/1",
+        proposal="wv-review-20261023-0106",
+        revision="strawman-integration-r1",
+        maturity="experimental",
+        controversy="unassessed",
+        technical_validation="not_recorded",
+        community_acceptance="not_recorded",
+        review_record="../docs/reviews/domain-integration-20261023/records/living/agriculture.json"
+    )
+    NutrientApplication
+        "Deliberate application of material to supply nutrients for cultivated production.", 
+    @review(
+        schema="klab.review/1",
+        proposal="wv-review-20261023-0107",
+        revision="strawman-integration-r1",
+        maturity="experimental",
+        controversy="unassessed",
+        technical_validation="not_recorded",
+        community_acceptance="not_recorded",
+        review_record="../docs/reviews/domain-integration-20261023/records/living/agriculture.json"
+    )
+    CropProtection
+        "Deliberate management activity intended to protect cultivated production from damaging organisms.",
+    @review(
+        schema="klab.review/1",
+        proposal="wv-review-20261023-0108",
+        revision="strawman-integration-r1",
+        maturity="experimental",
+        controversy="unassessed",
+        technical_validation="not_recorded",
+        community_acceptance="not_recorded",
+        review_record="../docs/reviews/domain-integration-20261023/records/living/agriculture.json"
+    )
+    AnimalHusbandry
+        "Deliberate care and management of raised animals.",
+    @review(
+        schema="klab.review/1",
+        proposal="wv-review-20261023-0109",
+        revision="strawman-integration-r1",
+        maturity="experimental",
+        controversy="unassessed",
+        technical_validation="not_recorded",
+        community_acceptance="not_recorded",
+        review_record="../docs/reviews/domain-integration-20261023/records/living/agriculture.json"
+    )
+    LivestockGrazing
+        "Consumption of vegetation in place by raised livestock.",
+    @review(
+        schema="klab.review/1",
+        proposal="wv-review-20261023-0110",
+        revision="strawman-integration-r1",
+        maturity="experimental",
+        controversy="unassessed",
+        technical_validation="not_recorded",
+        community_acceptance="not_recorded",
+        review_record="../docs/reviews/domain-integration-20261023/records/living/agriculture.json"
+    )
+    ResidueRetention
+        "Deliberate management maintaining biological residues at a production site."
+;

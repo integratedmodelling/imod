@@ -258,10 +258,12 @@ abstract thing SpatialBoundary
     "A spatial boundary is the spatial delimitation between entities"
     inherits imod:Areal;
              
-configuration SpatialArrangement
+abstract configuration SpatialArrangement
 	has children
-		VerticalArrangement,
-		HorizontalArrangement;
+		(abstract VerticalArrangement
+        ),
+		(abstract HorizontalArrangement
+        );
 
 /**
  * ## Experimental first-level articulation
