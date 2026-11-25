@@ -1,0 +1,86 @@
+/**
+ * Suggested research L1-L5; sources L1/L2/L3. No community acceptance recorded.
+ * Existing land:LandCover identity and earth:LandCover configuration are distinct.
+ * Exact production surface head and normative-right signatures remain open.
+ */
+ontology reviewland
+    "Candidate land-surface fractions, management and change."
+    version 1.0
+    using imod, physical, earth, land, society
+    in domain imod:Land;
+
+// L1 compositional alternative to a new LandSurfaceUnit root, blocked by E1 review.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0075",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/land.json"
+)
+thing LandSurfaceUnit
+    "An identified terrestrial surface unit under a stated delineation convention."
+    is earth:Terrestrial earth:Region;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0076",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/land.json"
+)
+quantity SurfaceCoverFraction
+    "Fraction of the identified surface unit occupied by a specified physical cover under a stated support convention."
+    is imod:Proportion of reviewland:LandSurfaceUnit
+    describes reviewland:LandSurfaceUnit;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0077",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/land.json"
+)
+quantity SealedSurfaceFraction
+    "Fraction of the identified surface unit covered by a specified sealing material or structure."
+    is imod:Proportion of reviewland:LandSurfaceUnit
+    describes reviewland:LandSurfaceUnit;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0078",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/land.json"
+)
+functional directed relationship ManagesLand
+    "Observed ongoing management by an agent of an identified land surface unit."
+    links imod:Agent to reviewland:LandSurfaceUnit;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0079",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/land.json"
+)
+event CoverChangeEpisode
+    "A bounded occurrence in which physical cover changes on an identified land surface unit.";
+
+// L2: reuse LAND, not an invented cross-scheme equivalence or ecosystem binding.
+// L3 rights/disputes are not adequately binary; no declaration supplied.
+// Event participants and process native dependence require subsequent review.

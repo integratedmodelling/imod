@@ -1,0 +1,11 @@
+ontology hydrology.terms
+    "Scoped hydrological jargon aliases; no additional domain distinctions."
+    using imod, hydrology
+    in domain imod:Knowledge of imod:Hydrosphere
+    version 1.0
+;
+
+thing Watershed
+    "Watershed in the surface-drainage-to-one-outlet sense only."
+    equals hydrology:SurfaceCatchment
+;

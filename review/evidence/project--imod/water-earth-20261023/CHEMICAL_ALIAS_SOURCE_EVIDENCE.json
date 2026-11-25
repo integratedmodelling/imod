@@ -1,0 +1,16 @@
+{
+  "provider_head": "459c1d2267dc2b540ee6f40382c372e69219cda4",
+  "provider_worktree_status": "?? .idea/codeStyles/",
+  "read_only_audit": true,
+  "files": {
+    "README.md": "17c26828385c8bb19f8c851611e02dab75e4b08ba80159bec557be4b46d41d72",
+    "src/main/java/org/integratedmodelling/klab/authority/pubchem/PubChemAuthority.java": "5281fad6f43b2f5aa9a927a9a67fb38a7557e979d8439e10a222db6fe9468f88",
+    "src/test/java/org/integratedmodelling/klab/authority/pubchem/PubChemAuthorityTest.java": "e32bfd1195cd43bb4c487bf34f7d84074ca75e71f15399394c95e4603f83b44a"
+  },
+  "active_CHEM_binding": "chemistry:ChemicalIdentity requires authority CHEM urn klab.authority.pubchem",
+  "canonical_identity": "CID:962",
+  "grammar_safe_reference": "CHEM:CID_962",
+  "existing_active_Water_alias": false,
+  "alias_draft_syntax": "pass,1 full-context namespace; no authority resolution or OWL equality result",
+  "authority_cache_CHEM_records_examined": 0
+}

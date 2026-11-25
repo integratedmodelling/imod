@@ -1,0 +1,62 @@
+{
+  "status": "Retained conceptual questions, not automatic blockers for this approved minimal strawman",
+  "settled_in_this_record": [
+    "General ecological Wetland separate from lake-shore Littoral",
+    "Liquid-water-equivalent precipitation-volume family",
+    "Unordered TemporalOccurrencePattern family",
+    "All31 docstring drafts reviewed, including final3 corrections"
+  ],
+  "remaining_issue_context": [
+    {
+      "namespace": "agency",
+      "historical_question": "Identity/role distinctions and whether social predicates belong to relationship-conferral contexts are legitimate unresolved ontology design issues. They should be preserved as design evidence, not rewritten as settled scientific facts.",
+      "handling": "Preserve source annotations and review separately; some subquestions were resolved by the explicit decisions above. Do not treat this historical issue text as a new source contract."
+    },
+    {
+      "namespace": "chemistry",
+      "historical_question": "Missing definitions are content gaps, not an implementation claim. Establish the three actual meanings from authoritative terminology before filling them.",
+      "handling": "Preserve source annotations and review separately; some subquestions were resolved by the explicit decisions above. Do not treat this historical issue text as a new source contract."
+    },
+    {
+      "namespace": "earth",
+      "historical_question": "Wetland classification and FWS reference (181-182); SWEET alignment (214); mereology (230); stream connections as relationships (384); energy source articulation (484-489). These need scientific/conceptual review rather than being automatically removed or declared resolved.",
+      "handling": "Preserve source annotations and review separately; some subquestions were resolved by the explicit decisions above. Do not treat this historical issue text as a new source contract."
+    },
+    {
+      "namespace": "imod",
+      "historical_question": "Outcome/Goal as identities versus configurations; requires-identity meaning; relationship/bond categories; spatial geometry identities. Preserve these unresolved design records separately, without changing declaration semantics or presenting future behavior as implemented.",
+      "handling": "Preserve source annotations and review separately; some subquestions were resolved by the explicit decisions above. Do not treat this historical issue text as a new source contract."
+    },
+    {
+      "namespace": "infrastructure",
+      "historical_question": "Artifact provenance/nature attributes versus subjects (28) and equivalence versus applicability (31) are substantive modeling choices, not proof of missing runtime functionality.",
+      "handling": "Preserve source annotations and review separately; some subquestions were resolved by the explicit decisions above. Do not treat this historical issue text as a new source contract."
+    },
+    {
+      "namespace": "land",
+      "historical_question": "Which parameters characterize each observation level is a future articulation question.",
+      "handling": "Preserve source annotations and review separately; some subquestions were resolved by the explicit decisions above. Do not treat this historical issue text as a new source contract."
+    },
+    {
+      "namespace": "oceanography",
+      "historical_question": "Potential vocabulary alignment with the cited Zenodo record is legitimate literature work, not an implementation defect.",
+      "handling": "Preserve source annotations and review separately; some subquestions were resolved by the explicit decisions above. Do not treat this historical issue text as a new source contract."
+    },
+    {
+      "namespace": "physical",
+      "historical_question": "Feature's dependent-subject meaning (19); Deleted as event versus role (179); participation/event inherency (270/275); utility of role groupings (281/287); impedance/conductance specialization (71/76). Keep these as conceptual issues for review, not automatic removals.",
+      "handling": "Preserve source annotations and review separately; some subquestions were resolved by the explicit decisions above. Do not treat this historical issue text as a new source contract."
+    },
+    {
+      "namespace": "society",
+      "historical_question": "FAIR demography vocabulary alignment at line 16 is a research lead; selection of volitional individual/institution observers is a design choice needing separate adoption.",
+      "handling": "Preserve source annotations and review separately; some subquestions were resolved by the explicit decisions above. Do not treat this historical issue text as a new source contract."
+    },
+    {
+      "namespace": "sociology",
+      "historical_question": "Boundary between merged topics is domain organization, not a missing computational feature.",
+      "handling": "Preserve source annotations and review separately; some subquestions were resolved by the explicit decisions above. Do not treat this historical issue text as a new source contract."
+    }
+  ],
+  "partitive_design": "Open, including mixtures whose children may be fully specified; no solution or partition machinery adopted."
+}

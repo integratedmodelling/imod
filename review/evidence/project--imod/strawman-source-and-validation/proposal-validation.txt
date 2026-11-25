@@ -1,0 +1,4 @@
+PASS schema, lineage, action/feedback links and saved-byte hashes: surface-catchment-r1.yaml
+PASS schema, lineage, action/feedback links and saved-byte hashes: surface-catchment-r2-review-example.yaml
+PASS schema, lineage, action/feedback links and saved-byte hashes: surface-catchment-r3-validation.yaml
+Bounded sample validation only; no ontology reasoning, approval authorization, application or workflow execution.

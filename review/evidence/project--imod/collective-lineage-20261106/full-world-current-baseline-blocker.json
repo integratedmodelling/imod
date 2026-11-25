@@ -1,0 +1,7 @@
+{
+  "failure" : "org.integratedmodelling.klab.api.exceptions.KlabIOException: Input/output error: Unexpected field name requiredExtents in deserialization of class org.integratedmodelling.klab.api.lang.kim.impl.KimConceptStatementImpl",
+  "networkAttempts" : [ ],
+  "checks" : {
+    "zero network attempts" : true
+  }
+}

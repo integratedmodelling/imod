@@ -1,0 +1,174 @@
+/**
+ * SUGGESTED, NOT COMMUNITY-ACCEPTED. Xtext syntax pass; semantics NOT RUN.
+ * PY1-PY6, PROPOSALS.md. Reuses active FluidParcel and energy-transfer processes.
+ * Scientific trail: BIPM, NASA mechanics/EM/sound, IUPAC phase/diffusion.
+ * No vector, tensor or complex-value runtime is supplied by these declarations.
+ * Units below are review comments, not recognized annotation/mediator syntax.
+ */
+ontology review.physics
+    "First-level physical quantity and mechanism gateways for review."
+    version 1.0
+    using imod, physical, physics
+    in domain imod:Physics;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0034",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.physics.json"
+)
+functional directed relationship ExertsForceOn
+    "A directed mechanical interaction from an identified exerting body to a receiving body."
+    links physical:MaterialBody to physical:MaterialBody;
+
+// PY2: kg/m3; ratio operands and resulting type require actual semantic checking.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0035",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.physics.json"
+)
+quantity MassDensity
+    "Mass per volume of the same identified material support under a stated bulk convention."
+    is (ratio of imod:Mass to imod:Volume) of physical:MaterialBody
+    describes (ratio of imod:Mass to imod:Volume) of physical:MaterialBody;
+
+// Provisional abstract carrier allows a native bearer composition without
+// inventing an unavailable root Pressure alias. Ownership is an open question.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0036",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.physics.json"
+)
+abstract pressure Pressure
+    "Pressure considered as a physical quantity, pending concrete support and regime specialization.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0037",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.physics.json"
+)
+pressure MaterialPressure
+    "Pressure of an identified material support under a stated scalar pressure convention."
+    is review.physics:Pressure of physical:MaterialBody
+    describes review.physics:Pressure of physical:MaterialBody;
+
+// PY4-PY5: process dependencies are native, not observational containers.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0038",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.physics.json"
+)
+process PhaseChange
+    "Change of material phase within an identified material body."
+    is imod:Process of physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0039",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.physics.json"
+)
+process MolecularDiffusion
+    "Material redistribution attributable to molecular motion within a stated material support."
+    is imod:Process of physical:MaterialBody;
+
+// PY6: these heads deliberately remain abstract until support/reference
+// obligations are settled. A concrete child still needs its own valid bearer.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0040",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.physics.json"
+)
+abstract quantity ElectricCurrent
+    "Rate of electric charge transport through a specified section of conducting support.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0041",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.physics.json"
+)
+abstract electric-potential PotentialDifference
+    "Electric potential difference between specified terminals or reference locations.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0042",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.physics.json"
+)
+abstract process WavePropagation
+    "Propagation of an observed disturbance through an explicitly identified physical setting.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0043",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.physics.json"
+)
+process ElectromagneticPropagation
+    "Propagation of electromagnetic radiation through its observed setting."
+    is review.physics:WavePropagation;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0044",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/foundations/review.physics.json"
+)
+process AcousticPropagation
+    "Propagation of an acoustic disturbance through an identified material medium."
+    is review.physics:WavePropagation;
+
+// PY1: no scalar Velocity/Acceleration alias repair is attempted.
+// PY3: transferred energy/power are withheld until occurrence-native bearer
+// alternatives are arbitrated; they must not silently become body states.

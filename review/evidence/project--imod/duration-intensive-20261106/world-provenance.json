@@ -1,0 +1,60 @@
+{
+  "classpathXml": "C:\\Users\\Ferd\\Documents\\Codex\\2026-11-06\\task-6\\klab-services\\klab.services.resources\\target\\surefire-reports\\TEST-org.integratedmodelling.klab.services.resources.storage.CycleQuantityIntegrationTest.xml",
+  "sourceHashes": {
+    "agency.kwv": "fdd30024858d2284e307c3d293077d187a39b39bb30d187aa3ac442de7c0f6cd",
+    "agriculture.kwv": "60df01b9f082383508f18c378b68db75f0e7381c08eddc1b5ec9605bc8484528",
+    "atmosphere.kwv": "b41dcd8ec3009713ca51e5b68084d159d44b49f5f6ceb78dcc9c21eeb692d992",
+    "biology.kwv": "43ace34830c7692877a6a9884647d4b16fc690f4aa960262d6acb871752bcf1e",
+    "calendar.kwv": "a05a56ef06913b673a3daa47c7852ac5e37873789fb7af393dca96e6f2457a27",
+    "chemistry.kwv": "4df6c4faaf5b33e80a7d5d6e3547b1157e0701e9de28a6b3fb18957dcdeafc65",
+    "data.kwv": "7a3ee50e25ea5dcc9b20c22d18006f87b692dcd0530fc4df416c2f3a83237a2f",
+    "earth.kwv": "c963432e07794cc952e57884286d3aa233dc45c6afd64c2e0b9745a34cd5e75d",
+    "ecology.kwv": "22d01c976b1592c58d70e32bec2f84f44db69f960ca27cb067e6622e46ae5f31",
+    "economics.kwv": "5744da386895e9f8ed9a51f1f137ec89f40c51c49f495b89b6727ac53a9083a7",
+    "engineering.kwv": "0e34975466dc91d0c04ba5a9e481ae7477819a88f30a44aea89d7e66fc254ba5",
+    "genetics.kwv": "693a17dce026f44744759e961ee8a0daeef36d72740a984db0de97a582137922",
+    "geography.kwv": "2a7b425c2368f8717c956f336fa38a76ad445d2e434163a4aef2d39213de59bf",
+    "geology.kwv": "3dfd0c45a640edbe9b715753647d525d95f556089baee1c5b1ed4c9de95e6d7a",
+    "hydrology.kwv": "b87edcde76b573825e9f9cbfb83dbbee016e204ec75d2b1a794caebd98f574cb",
+    "identities.obs": "ad81030281db5a21add34f9f307d80b51b46cb5d823926a3b4d886bd0e31ac4d",
+    "imod.kwv": "0dc7e472e523d6438d344cc88c6dd7641311f59a24da54dd468d6096186bd33e",
+    "infrastructure.kwv": "8f9662d09de7329864800b4de017468b0f474f9f1bd7f78b5d1f168786ed5e0f",
+    "land.kwv": "437c6b95938a21ade06aa5d08d5ac4147b0c68e88e5dca2d9ef87fc339f25010",
+    "life.kwv": "b2147fa2a27f142d9bb341eb3834b1eb2f48ed493d2fbab5f2a4dd4de6a49e5b",
+    "observations.obs": "a0527f99af775d329721892f786607acf728c6df48807fe1fe5938252a9f85a8",
+    "oceanography.kwv": "88791fb1f1ecd1da2fd73d4959ab9770b38249ddcc305430b1c643f007a51111",
+    "physical.kwv": "dbd4a1b54391cd19d2c76dc2b7c289d1da79da6dc7f8ba0a02904a5f68358e16",
+    "physics.kwv": "1dd14901243b6907c4ab658d9a2516f8b9b6f6fa22dd7b398ecf431168415aa8",
+    "society.kwv": "8bc69466e42812e44350c1a4cadbf46385b153792d513e0c8e22a88d0a1e8ec7",
+    "sociology.kwv": "b0365910ad12dd1664cf953c13f4b4e686c1cd07b4f449a6573bb04574bb67ea",
+    "soil.kwv": "b7ae99f22ec2a96da7e8a6e103d81797b91d0e77d26a6e7b421ba3e5f26ffc8d",
+    "valuation.kwv": "6230aa39e763b5c859622a6c6b340bfb05f1b0da80941bfc23bd88a37f99d1af"
+  },
+  "driverSha256": "cc4a4718b347b1d3f5f791e164f2093279e2ba81944ba462e76d0ae7e7417697",
+  "odoSha256": "008d603a91eb345c4c4e69e8a90267c0f74d39f56a24373e5e9cc5ba251ea549",
+  "limitation": "Audited legacy authority capture reader; native persistent catalogue roundtrip remains unverified.",
+  "loaderSha256": "a0d9a3482637cb95c072b2240f32469a904b2c3f408a12c209107f1e2f7ace7f",
+  "captureReaderSha256": "a66dcb6591336fd9c38a748f181a7bea71d542048c3e761c8007dbbf48b294ba",
+  "languageJars": [
+    {
+      "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-11-06\\task-6\\m2\\org\\integratedmodelling\\org.integratedmodelling.languages.observable\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.observable-1.0.0-SNAPSHOT.jar",
+      "sha256": "b5b386b5fe5f4c5e178a563a8010cf87ed9f524ff82d6f4d1de575fb02ec08d7"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-11-06\\task-6\\m2\\org\\integratedmodelling\\org.integratedmodelling.languages.worldview\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.worldview-1.0.0-SNAPSHOT.jar",
+      "sha256": "455537d19633552d10e1c8ee55f1a997ba0e869faa183c47b59475d23b8d049c"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-11-06\\task-6\\m2\\org\\integratedmodelling\\org.integratedmodelling.languages.kim\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.kim-1.0.0-SNAPSHOT.jar",
+      "sha256": "027a574629bb30306479aa4561d4d8204597fc519d9fcf6db4ef220b689610a8"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-11-06\\task-6\\m2\\org\\integratedmodelling\\org.integratedmodelling.languages.observation\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.observation-1.0.0-SNAPSHOT.jar",
+      "sha256": "9a1f595b41843a4101b072aabecea128442afcb56a0596c628c6050670f05598"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-11-06\\task-6\\m2\\org\\integratedmodelling\\org.integratedmodelling.languages.kactors\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.kactors-1.0.0-SNAPSHOT.jar",
+      "sha256": "f682f1c468eb62957e8a70550d65568f3b9063b57529c4ca359e6f57fcf42921"
+    }
+  ]
+}

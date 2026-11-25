@@ -1,0 +1,34 @@
+/**
+ * Suggested research: E1-E5 in ../PROPOSALS.md. Community acceptance: none recorded.
+ * Controversy: Region is Areal in ancestry but volumetric in prose.
+ * This bridge does not repair Region, move geological ownership, or bind realms.
+ * Sources G1/G2 support material provenance distinctions, not this Rel signature.
+ * Native source/body and transfer-history evidence must be reviewed.
+ */
+ontology reviewearth
+    "Review bridge for Earth material provenance; no production ownership decision."
+    version 1.0
+    using imod, physical, earth, geology
+    in domain imod:Earth;
+
+// E5 useful; prior bootstrap earth DepositDerivedFrom, with current body names.
+// Positive: traced contribution. Negative: nearest hill without transfer evidence.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0053",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/earth.json"
+)
+structural directed relationship DepositDerivedFrom
+    "An observed sediment body's material provenance in a specified source rock body."
+    links geology:SedimentBody to geology:RockBody;
+
+// E1 foundational alternatives remain open:
+// retain Areal Region and repair its volumetric prose, or introduce a distinct
+// volumetric location. Neither a realm nor a material body supplies this choice.
+// E3 frozen-water and material-water gateway needs shared identity decisions;
+// physics:FluidParcel covers material-following fluid only, not all stores/ice.

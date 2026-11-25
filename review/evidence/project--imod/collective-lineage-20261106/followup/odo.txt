@@ -1,0 +1,26 @@
+tests\DomainReleaseCheck.java:27: warning: [deprecation] ReasonerFactory in Reasoner has been deprecated
+    var oldReasoner = new Reasoner.ReasonerFactory().createReasoner(baseline);
+                                  ^
+tests\DomainReleaseCheck.java:28: warning: [deprecation] ReasonerFactory in Reasoner has been deprecated
+    var reasoner = new Reasoner.ReasonerFactory().createReasoner(ontology);
+                               ^
+tests\DomainReleaseCheck.java:81: warning: [deprecation] ReasonerFactory in Reasoner has been deprecated
+      var collectiveReasoner = new Reasoner.ReasonerFactory().createReasoner(collectiveFixture);
+                                           ^
+tests\DomainReleaseCheck.java:157: warning: [deprecation] ReasonerFactory in Reasoner has been deprecated
+      var descriptionReasoner = new Reasoner.ReasonerFactory().createReasoner(descriptionFixture);
+                                            ^
+tests\DomainReleaseCheck.java:174: warning: [deprecation] ReasonerFactory in Reasoner has been deprecated
+      var witnessReasoner = new Reasoner.ReasonerFactory().createReasoner(witnessOntology);
+                                        ^
+5 warnings
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+PASS: Energy extensive, satisfiable, not intensive, joule unit retained.
+PASS: abstract distinct collective roots, nonexhaustiveness, no collection annotation or containment, independent member/group agency.
+PASS: abstract numeric ChangeRate, operand link, satisfiability and dimension-neutral foundation.
+PASS: observational containment vocabulary, no inverse/transitivity/ancestry, independent Configuration and process emergence.
+PASS: versions, byte parity, consistency, disjointness, nonexhaustiveness, Epistemic distinction, interpretation typing/existential/many-to-many, open-world validation boundary.
+Baseline unsatisfiable named classes (unchanged): []
+PASS: describesConfiguration typing, quality-range isolation, independent inherited witnesses, universal/cardinality conflicts, class-level translation.

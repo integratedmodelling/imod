@@ -1,0 +1,181 @@
+{
+  "base_commit": "0117e41db1c38642357984a720fc05757cd6d0e1",
+  "branch": "worldview/strawman-2026",
+  "candidate": "v21 final source-reviewed proposal",
+  "coordinated_patch_sha256": "d7dbc582220c4554fcc15ee8c0e21cb61bfc1a21449518ff8679b49db3c4fc7e",
+  "candidate_zip_sha256": "33165d3d91343d7034cad54486834fedf563eb7c0d70b704df6aba51585d5d59",
+  "all26_source_sha256": {
+    "agency.kwv": "e23a4398849b10464b3c4c8bf24c5319dbe9ca460bb71bf93a7d5cedbe70ff6e",
+    "agriculture.kwv": "27005dac241874e1086f0e6cf3a09f6d28137c63621234081ec66b48d2904e01",
+    "atmosphere.kwv": "300eb30cd7f91ca19ca9ca41d774061079d4db21ef2e6ef7fe35cb06f82bee9d",
+    "biology.kwv": "ffeb10d77ad7099a5268939768af4089687a6ed72efa418fcda8572f97e1fe78",
+    "calendar.kwv": "d7d32b3928da249ad2aa15abdab83e981669b23b8e6470dc218e08d044f15dc1",
+    "chemistry.kwv": "8c7cb338282790fea19e7fda63378134bfcc4d6a48553adb0b8c0a89a4adf60d",
+    "data.kwv": "5538da85e1e172e91dbc35499bc5d350e2292eb1607f00cae6941a5bb041f872",
+    "earth.kwv": "9ed1e7133c52fabdb008071a211167dea78ad850c6f27072c756e14ebdbd3887",
+    "ecology.kwv": "2f50621dfc20bc011ecf1f203b4996480030050f03178bb7b1e56aaed8d64b3a",
+    "economics.kwv": "a0e5f69a219f0a452b23ad9a62c99b8e7a6c7c10d210c995b84d22672f6e183c",
+    "engineering.kwv": "e8af73f42e4e2c91d6213ecd86ebf2ba6ae3b314884d0e9d5ea3b6578f1fecd7",
+    "genetics.kwv": "d0330d96e98556ef1e8eef2537aa74189a8d3e41cf6bb653fba6d3b092069cc7",
+    "geography.kwv": "4c457b7e26150b9dd3abea3cf4180b4e72d7629620f362369c9e0201192c06e3",
+    "geology.kwv": "c8541a0dc27cb1071202a865f26e47e1cf38e6d9be691730779c2cf885e3c416",
+    "hydrology.kwv": "dfa223e0362305538a43506cae701c489bee37cf65f8422285edc48c869902e7",
+    "imod.kwv": "02bf4bd888d233a98b1276c8dd1bdc37e6c9fd988c6a828d6f8b36244355e243",
+    "infrastructure.kwv": "99561d6b60762dc08ef7e17386ea021dcdd8c740e8d96741c06761ee5758dcb4",
+    "land.kwv": "7aa5c246bba8bea92c017eea618e56031647a24ec18e76e0e010a25bf16d78ff",
+    "life.kwv": "069876aa1b201ac72470d5dba002fcf946cfdab2787b7c29f6f0cd067a1625c6",
+    "oceanography.kwv": "14d28e58ffc2f7a77d3e65ad05033cf1aae9aa0e8840c93617a458059a67b050",
+    "physical.kwv": "b10e57ac48b09b8c729a600fd7968b2a0fc5c0002496ada0672845620e861fd5",
+    "physics.kwv": "979c0c2861c435cfe796e0ea5c437a020e0113571d89fed374f5d8d24a4471b8",
+    "society.kwv": "f928121e26778ec9211dac61099c28e602074b99ea612886b552cac66370badc",
+    "sociology.kwv": "3c0f086d3c80a0e3867675adf668ff2e42c9320db2c7397454e35c20611fd539",
+    "soil.kwv": "f51540aecc8bc1c6ee44ee126a5881f9f8834e48c49fd19551543c9e077d1971",
+    "valuation.kwv": "8ccf45850903e4ec62d311f392626b4faf99b62478772b51a815248b23fc925e"
+  },
+  "active_before_sha256": {
+    "agency.kwv": "d78b3a5e23d4dd89332caefdd2ece331ef08c2040297e4e5d267d958fe713866",
+    "agriculture.kwv": "27005dac241874e1086f0e6cf3a09f6d28137c63621234081ec66b48d2904e01",
+    "atmosphere.kwv": "56e099b9c86d75fb43af15e3494aac476b3d95f24ed4d977045cde0117052c59",
+    "biology.kwv": "98d53fabac7d88c5391f354397a4598f274d34e74d5c1b80fa2b915e4424ded8",
+    "calendar.kwv": "df38fbb69f8149f5cc140aece8c63619b044d88c73614543e0b1170cf490b774",
+    "chemistry.kwv": "0ed9d1f8c854c9a19681a32cf6101e8898b359422e32bec86096157f03cedf69",
+    "data.kwv": "1bd17bed769e5305cff4df7cd49c8950141cdb2f9d1866e21dc8f0c12498e651",
+    "earth.kwv": "f11d7c19969c38d61c007d90f211f41693e4d790f1c54177f22f2fcd6fb5d032",
+    "ecology.kwv": "a593560f4beeec306f893ede8869b1e01492dc43d26adf0fdb01d6efeb2c62d9",
+    "economics.kwv": "bebf02c909571993955b1e06d85c27cefdd01be75162107da133c8322dc7195b",
+    "engineering.kwv": "7c7f3ce24ee9104eb56df64942f0583298b8a7bc63b06d05112a16ce78f30fba",
+    "genetics.kwv": "18cc2ec3d75212e88477e63e8b2cb47d689d4f0e008a97332b4ab3fd69b46fb1",
+    "geography.kwv": "e71834374b69043723a6f92af39622a859ece4379e51a72a54e68dc431b9e2dc",
+    "geology.kwv": "45eec1bccbc501aacfe7cc2261a45c31101e51704f197cef66926a8156915312",
+    "hydrology.kwv": "1f96cc9f79d91835a31ee81eb8005148a3d1372fa444d8aa73f0d469cd25d1c2",
+    "imod.kwv": "916f048307dcbc07b924205a3fa38828b2ff42e37b4fdb8bba2e85d5cebdbc20",
+    "infrastructure.kwv": "732b14d51ab313a4bb3e48a0a699d3258e9311158ef61d64c4612b0ce64c30a8",
+    "land.kwv": "6023188f8e37850af6bc5ac3780f6c0993c15f0d8c9a021d3049ffa7fa05fc8d",
+    "life.kwv": "c300ba98a7f39363abb209c1d41c466b5c9170a1664fd30cc79e335fa354274e",
+    "oceanography.kwv": "1b96a82c2b316d16e82d25f5387365d1bca94990ebae32033035b47aea89109d",
+    "physical.kwv": "e7a8bab62c645420bc51c155c35cb645e71d590d63b8476de130e704a7fc113e",
+    "physics.kwv": "580b0c50ead6b651eaf90dbc4660e93e803b41ddd6c05abf6bd3d31e1ab888c0",
+    "society.kwv": "015b60a5d60fc8c217aba9e664600983970ae191fe0c322c9d29e783ab101007",
+    "sociology.kwv": "998271ceafcdecaa50e82b1729e20a94660e24cc3d967916ec4448f27133e77a",
+    "soil.kwv": "c72b14c706e4b9ae5adb8e65520d284e975e65004860a970eb23f032e3342459",
+    "valuation.kwv": "c7771a1dbc60d17314da4e5e91e9f80f8d5fec522e6d778cfd4af1fed38f2715"
+  },
+  "changed_source_paths": [
+    "src/agency.kwv",
+    "src/atmosphere.kwv",
+    "src/biology.kwv",
+    "src/calendar.kwv",
+    "src/chemistry.kwv",
+    "src/data.kwv",
+    "src/earth.kwv",
+    "src/ecology.kwv",
+    "src/economics.kwv",
+    "src/engineering.kwv",
+    "src/genetics.kwv",
+    "src/geography.kwv",
+    "src/geology.kwv",
+    "src/hydrology.kwv",
+    "src/imod.kwv",
+    "src/infrastructure.kwv",
+    "src/land.kwv",
+    "src/life.kwv",
+    "src/oceanography.kwv",
+    "src/physical.kwv",
+    "src/physics.kwv",
+    "src/society.kwv",
+    "src/sociology.kwv",
+    "src/soil.kwv",
+    "src/valuation.kwv"
+  ],
+  "validated_services_head": "579b955d0abc8d67f78e6f543c9923ed6e93bddb",
+  "validated_languages_head": "2f11e0f22dc7fc990af9e18a95c53dd7bca4ea34",
+  "captured_core": [
+    {
+      "name": "dc.owl",
+      "sha256": "940b3992b2255d901e20839e930351b71bb10eef2f1d6550d54cefca28a67194"
+    },
+    {
+      "name": "klab.owl",
+      "sha256": "a9d49e37e90f67efb612c1f949c045ad090c09588cc6e760d2156bf657d404bd"
+    },
+    {
+      "name": "odo.owl",
+      "sha256": "2e840f49147a07b971146c24111c56f6831ea87347ff86e45588c1233a58c9bc"
+    }
+  ],
+  "validation_summary_sha256": "5330a4d8aab1d661da796c8494c8e7266c62f7506e44e71f9ca4bb10b5bc4a72",
+  "semantic_evidence_sha256": "6fc14d33e5fb26f9548cd3eddb762d75e4002de7e95b5ab24573aa770726a974",
+  "original_source_archive": {
+    "agency.kwv": {
+      "archive": "docs/decisions/2026-10-15-community-strawman/original-v15/agency.kwv.txt",
+      "sha256": "144affb037d0ea2b63571b0887eb252d2adb7a8b2cc7aba8c706447d9f6c6a30",
+      "meaning": "Historical source-review snapshot; not active worldview source."
+    },
+    "chemistry.kwv": {
+      "archive": "docs/decisions/2026-10-15-community-strawman/original-v15/chemistry.kwv.txt",
+      "sha256": "266e1a0f0fc2dd584f31f4ce607f34724cabb40e49bd26fe87c83f9fe7defa7a",
+      "meaning": "Historical source-review snapshot; not active worldview source."
+    },
+    "data.kwv": {
+      "archive": "docs/decisions/2026-10-15-community-strawman/original-v15/data.kwv.txt",
+      "sha256": "1bd17bed769e5305cff4df7cd49c8950141cdb2f9d1866e21dc8f0c12498e651",
+      "meaning": "Historical source-review snapshot; not active worldview source."
+    },
+    "earth.kwv": {
+      "archive": "docs/decisions/2026-10-15-community-strawman/original-v15/earth.kwv.txt",
+      "sha256": "9be22b1628f8125a84049ed04a1a3531a51a9f9a28c415e0d85077d5c16b8884",
+      "meaning": "Historical source-review snapshot; not active worldview source."
+    },
+    "imod.kwv": {
+      "archive": "docs/decisions/2026-10-15-community-strawman/original-v15/imod.kwv.txt",
+      "sha256": "89636d2a9fdbb5d098c8255ac577cda8dc1d94d41baa750b17a9595040790f65",
+      "meaning": "Historical source-review snapshot; not active worldview source."
+    },
+    "infrastructure.kwv": {
+      "archive": "docs/decisions/2026-10-15-community-strawman/original-v15/infrastructure.kwv.txt",
+      "sha256": "995a51c0ab447938be96a179e916b7c67d31615cac0a81782e05fb461fda60be",
+      "meaning": "Historical source-review snapshot; not active worldview source."
+    },
+    "land.kwv": {
+      "archive": "docs/decisions/2026-10-15-community-strawman/original-v15/land.kwv.txt",
+      "sha256": "e4a8755a4ae5abeaebad850e0d305c441d1ecedd8f7ffb9f61f506bf5e45a910",
+      "meaning": "Historical source-review snapshot; not active worldview source."
+    },
+    "oceanography.kwv": {
+      "archive": "docs/decisions/2026-10-15-community-strawman/original-v15/oceanography.kwv.txt",
+      "sha256": "0d95231cdd770de3e9c92a155589cfa44665bdbd87664bc1353bf95b62f4d9f4",
+      "meaning": "Historical source-review snapshot; not active worldview source."
+    },
+    "physical.kwv": {
+      "archive": "docs/decisions/2026-10-15-community-strawman/original-v15/physical.kwv.txt",
+      "sha256": "7147f2cfa322f95a23fa6bbc1ad04c70291a47b182902da2bb4c12a4ec60357f",
+      "meaning": "Historical source-review snapshot; not active worldview source."
+    },
+    "society.kwv": {
+      "archive": "docs/decisions/2026-10-15-community-strawman/original-v15/society.kwv.txt",
+      "sha256": "1ffc4843b44996126caa1b24e828572d916c90f4352b985e044c269e2b790151",
+      "meaning": "Historical source-review snapshot; not active worldview source."
+    },
+    "sociology.kwv": {
+      "archive": "docs/decisions/2026-10-15-community-strawman/original-v15/sociology.kwv.txt",
+      "sha256": "a1d1411714a83046268bb669a3a96883ce964c3628b41a9dc67464621604520e",
+      "meaning": "Historical source-review snapshot; not active worldview source."
+    }
+  },
+  "owner_classification": {
+    "evidence": "Parent relay authorizing integration after services owner confirmation",
+    "targeted_checks": 11,
+    "canonical_domain_alias_lookup_dispatch": "Correct",
+    "three_domain_alias_notices": "Checker false positives, distinct canonical IRIs share coarse DOMAIN bit",
+    "two_independent_configuration_notices": "Conservative unknown evidence from ODO's unmarked Countable existential; no bearer transfer or contradiction",
+    "checker_only_fix": "Services owner prepares independently; no ontology source workaround."
+  },
+  "validation_scope": "Captured ontology documents, no claim of live service or observation-strategy acceptance.",
+  "canonical_application_patch": {
+    "review_patch_sha256": "d7dbc582220c4554fcc15ee8c0e21cb61bfc1a21449518ff8679b49db3c4fc7e",
+    "canonical_application_patch": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-15\\task\\v21-local-integration\\canonical-v21-source.diff",
+    "canonical_application_patch_sha256": "4b3901aa7bbac0cfafbc0571f2fcc19ac1997227b5dce9a4e73b48187b71a9cb",
+    "reason": "Canonical Git diff regenerated from the same frozen26source files; original concatenated unified diff rejected before any source edits. Candidate source hashes unchanged.",
+    "apply_check": "passed"
+  }
+}

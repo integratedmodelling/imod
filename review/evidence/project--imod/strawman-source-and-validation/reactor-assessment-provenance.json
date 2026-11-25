@@ -1,0 +1,47 @@
+{
+  "services_commit": "721f3736596acff39d92a84566dfd364070be662",
+  "snapshot_method": "git archive; no original source mutation",
+  "source_commit_for_candidate": "1bc08a21cbeb858b8c105924faacee8c8ccb4e6b",
+  "tests": [
+    {
+      "name": "org.integratedmodelling.klab.services.resources.lang.WorldviewValidationTest",
+      "tests": "12",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "org.integratedmodelling.klab.services.resources.lang.WorldviewStrawmanAssessmentTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "files": [
+    {
+      "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-03\\task-4\\imod-strawman\\experiments\\strawman-2026\\tools\\WorldviewStrawmanAssessmentTest.java",
+      "sha256": "afeff98d3f803f6c0398ea8230d0b112f950c035196484674472390d94c5ab3d"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-03\\task-4\\reactor-adaptation.log",
+      "sha256": "bf82d1e328c551d00df1694160dad9c24dcccdedb117c314d17275f87d406968"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-03\\task-4\\reactor\\klab.services.resources\\target\\surefire-reports\\TEST-org.integratedmodelling.klab.services.resources.lang.WorldviewValidationTest.xml",
+      "sha256": "00a7403b530f6fb1ac8eeee0a77fc459b558439d295962030f4b1d532d74067e"
+    },
+    {
+      "path": "C:\\Users\\Ferd\\Documents\\Codex\\2026-10-03\\task-4\\reactor\\klab.services.resources\\target\\surefire-reports\\TEST-org.integratedmodelling.klab.services.resources.lang.WorldviewStrawmanAssessmentTest.xml",
+      "sha256": "ffebd40255b466eb3c66416a4bf1046d75b7906bbe487c04894a4c3dca39f1bb"
+    }
+  ],
+  "language_jars": {
+    "C:\\Users\\Ferd\\.m2\\repository\\org\\integratedmodelling\\org.integratedmodelling.languages.observable\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.observable-1.0.0-SNAPSHOT.jar": "3d2c991aebe6152e3f3dbadc1d5d4969f8839cbbccde230c2693640006db30c7",
+    "C:\\Users\\Ferd\\.m2\\repository\\org\\integratedmodelling\\org.integratedmodelling.languages.worldview\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.worldview-1.0.0-SNAPSHOT.jar": "a83f83d14971666874cf19110b7662162aeee8214151b0f659075290d370423d",
+    "C:\\Users\\Ferd\\.m2\\repository\\org\\integratedmodelling\\org.integratedmodelling.languages.kim\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.kim-1.0.0-SNAPSHOT.jar": "b4cceb576d2cd2d7de1aebe069f951d03e52b8c4cf00eb00a673ac69c1c3e462",
+    "C:\\Users\\Ferd\\.m2\\repository\\org\\integratedmodelling\\org.integratedmodelling.languages.observation\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.observation-1.0.0-SNAPSHOT.jar": "7e0a070a6260293c5ae707bd99f5c55800bbd092ce7d2e1d7ee57087d6c8d21a",
+    "C:\\Users\\Ferd\\.m2\\repository\\org\\integratedmodelling\\org.integratedmodelling.languages.kactors\\1.0.0-SNAPSHOT\\org.integratedmodelling.languages.kactors-1.0.0-SNAPSHOT.jar": "484616d05d416d6a5f35af29ea58c446945e5bdae191326f1c27f7ccf60015ea"
+  },
+  "scope": "Xtext + actual LanguageAdapter + WorldviewValidationScope; not service loading, full visitor or Reasoner"
+}

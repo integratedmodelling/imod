@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-22",
+  "project": "imod",
+  "baselineCommit": "f0402f1fcb73b4afde5fe5f1ddf47cb10d08b233",
+  "resourcesService": "im.resources-main",
+  "harvestedProjectProvider": "6c5c7ca9-1270-48a5-9ef7-c28959158c6c",
+  "liveBaselineReasoner": "im.reasoner-main",
+  "liveWorldviewId": "_uu_wv:7098827169982474",
+  "liveKnowledgeRevision": 1,
+  "baselineReportSha256": "96aaeae3ffc35fcb5c9e9ac80276b1ac3b76db901577f5a6cf9f9e4f6dfad361",
+  "servicesCheckout": "2e1333cea412881fad7d380d689c34dd450ff86d",
+  "runtime": "Java 21.0.1, isolated in-process Resources and Reasoner components",
+  "authorityCatalogSha256": "dd87264cbd1911bcb3e5c6f5586a2a699f8beaf6748cd58266ba192a5a1a30d8",
+  "schemaSha256": "58bfb773d600411bb83084e9ed4e7cdfe2901189fc5e585ba1e40fe9fb8cacf5",
+  "probeSha256": "013416545f43d1a93493537b84871cc3d0815881fab157adad7e53140377f5ba",
+  "resourcesLoaderSha256": "a0d9a3482637cb95c072b2240f32469a904b2c3f408a12c209107f1e2f7ace7f",
+  "baselineInputSha256": {
+    "agency.kwv": "fdd30024858d2284e307c3d293077d187a39b39bb30d187aa3ac442de7c0f6cd",
+    "agriculture.kwv": "60df01b9f082383508f18c378b68db75f0e7381c08eddc1b5ec9605bc8484528",
+    "atmosphere.kwv": "b41dcd8ec3009713ca51e5b68084d159d44b49f5f6ceb78dcc9c21eeb692d992",
+    "biology.kwv": "43ace34830c7692877a6a9884647d4b16fc690f4aa960262d6acb871752bcf1e",
+    "calendar.kwv": "4d8d939c6f68bd19cf441fd3e77b1bd9e9fe384446e3f230d0c58b39f4dd535e",
+    "chemistry.kwv": "4df6c4faaf5b33e80a7d5d6e3547b1157e0701e9de28a6b3fb18957dcdeafc65",
+    "data.kwv": "7a3ee50e25ea5dcc9b20c22d18006f87b692dcd0530fc4df416c2f3a83237a2f",
+    "earth.kwv": "faff6dfe5ac9b3eb95783c925bd196db3a18af7f85c41185fc0c977c7b7d10f8",
+    "ecology.kwv": "22d01c976b1592c58d70e32bec2f84f44db69f960ca27cb067e6622e46ae5f31",
+    "economics.kwv": "5744da386895e9f8ed9a51f1f137ec89f40c51c49f495b89b6727ac53a9083a7",
+    "engineering.kwv": "0e34975466dc91d0c04ba5a9e481ae7477819a88f30a44aea89d7e66fc254ba5",
+    "genetics.kwv": "693a17dce026f44744759e961ee8a0daeef36d72740a984db0de97a582137922",
+    "geography.kwv": "2a7b425c2368f8717c956f336fa38a76ad445d2e434163a4aef2d39213de59bf",
+    "geology.kwv": "3dfd0c45a640edbe9b715753647d525d95f556089baee1c5b1ed4c9de95e6d7a",
+    "hydrology.kwv": "b87edcde76b573825e9f9cbfb83dbbee016e204ec75d2b1a794caebd98f574cb",
+    "identities.obs": "15c05aab0d3ab66e037a514a5b288efd223e2fddd61139606c346662aeea5afd",
+    "imod.kwv": "782a27bf9a2ba292c2996046afd095eebb4a059f72a145ce1466f804091b927c",
+    "infrastructure.kwv": "8f9662d09de7329864800b4de017468b0f474f9f1bd7f78b5d1f168786ed5e0f",
+    "land.kwv": "437c6b95938a21ade06aa5d08d5ac4147b0c68e88e5dca2d9ef87fc339f25010",
+    "life.kwv": "b2147fa2a27f142d9bb341eb3834b1eb2f48ed493d2fbab5f2a4dd4de6a49e5b",
+    "observations.obs": "4474e86974399fea4a023b41e6944de60fe20756c695b95edcd8daf7892a4aad",
+    "oceanography.kwv": "88791fb1f1ecd1da2fd73d4959ab9770b38249ddcc305430b1c643f007a51111",
+    "physical.kwv": "dbd4a1b54391cd19d2c76dc2b7c289d1da79da6dc7f8ba0a02904a5f68358e16",
+    "physics.kwv": "1dd14901243b6907c4ab658d9a2516f8b9b6f6fa22dd7b398ecf431168415aa8",
+    "society.kwv": "8bc69466e42812e44350c1a4cadbf46385b153792d513e0c8e22a88d0a1e8ec7",
+    "sociology.kwv": "b0365910ad12dd1664cf953c13f4b4e686c1cd07b4f449a6573bb04574bb67ea",
+    "soil.kwv": "5582326108cb9c78953286d670c9ef704efcab8d6b5cf9cbffa48dcdfc8389a5",
+    "valuation.kwv": "9f4b1c8b1d92f1915998f0c5825fc5af8dab8b20d18478adfda1be6f266b0221"
+  },
+  "candidateOverrides": {
+    "society.kwv": "432f98abba2002a37223061e15cbe2f7409b9d73daeb59576f89bda11f1b512c"
+  },
+  "results": {
+    "baseline": {
+      "checks": {
+        "Resources adapted 26 ontologies and two strategies": true,
+        "bean and logical validation": true,
+        "consistent": true,
+        "all named concepts satisfiable": true,
+        "a decisive vote can be observed as a commitment event": true,
+        "membership is a directed structural relationship": true,
+        "membership endpoints are Agent to Organization": true
+      },
+      "resourcesNotifications": [],
+      "odoSha256": "008d603a91eb345c4c4e69e8a90267c0f74d39f56a24373e5e9cc5ba251ea549",
+      "beanStatus": "VALID",
+      "logicalStatus": "VALID",
+      "diagnostics": []
+    },
+    "candidate": {
+      "checks": {
+        "Resources adapted 26 ontologies and two strategies": true,
+        "bean and logical validation": true,
+        "consistent": true,
+        "all named concepts satisfiable": true,
+        "a decisive vote can be observed as a commitment event": true,
+        "membership is a directed structural relationship": true,
+        "membership endpoints are Agent to Organization": true,
+        "effective admission is a satisfiable countable event": true,
+        "agency:ChoiceCommitment does not entail society:OrganizationMembershipAdmission": true,
+        "agency:ChoiceCommitment does not entail society:OrganizationMembership": true,
+        "society:OrganizationMembershipAdmission does not entail agency:ChoiceCommitment": true,
+        "society:OrganizationMembershipAdmission does not entail society:OrganizationMembership": true,
+        "society:OrganizationMembership does not entail agency:ChoiceCommitment": true,
+        "society:OrganizationMembership does not entail society:OrganizationMembershipAdmission": true,
+        "a vote has no declared admission or membership creation": true,
+        "membership observation supplies no admission event": true
+      },
+      "resourcesNotifications": [],
+      "odoSha256": "008d603a91eb345c4c4e69e8a90267c0f74d39f56a24373e5e9cc5ba251ea549",
+      "beanStatus": "VALID",
+      "logicalStatus": "VALID",
+      "diagnostics": []
+    }
+  }
+}

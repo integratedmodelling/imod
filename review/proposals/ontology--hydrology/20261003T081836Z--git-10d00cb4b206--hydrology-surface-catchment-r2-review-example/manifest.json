@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "kind": "proposal",
+  "target": {
+    "project": "imod",
+    "kind": "ontology",
+    "urn": "hydrology"
+  },
+  "id": "hydrology-surface-catchment-r2-review-example",
+  "contributor": "Ferdinando Villa",
+  "created_at": "2026-10-03T08:18:36Z",
+  "origin": {
+    "commit": "bf038e125b893581fecbfcf6be513a59b5544108",
+    "path": "experiments/strawman-2026/review/surface-catchment-r2-review-example.yaml",
+    "attribution": "git-author"
+  },
+  "status": "illustrative",
+  "payload_schema": "domain-context-proposal/1.3",
+  "base": {
+    "state": "snapshot",
+    "path": "src/hydrology.kwv",
+    "revision": "608bef150ced0a109db98a5aad64ba4461beaa54",
+    "file": "base.kwv"
+  },
+  "inputs": [
+    {
+      "manifest": "review/proposals/ontology--hydrology/20261003T081836Z--git-10d00cb4b206--hydrology-surface-catchment-r1/manifest.json",
+      "sha256": "01dc5b4daf2bd707f2a30e2c6b1ca5057f910ffa611b2a5505374f62127edb10"
+    }
+  ],
+  "files": {
+    "proposal.yaml": {
+      "sha256": "dde00f7c20adb03ef9d40fe4d310ceaa761b65e8cb856e7c5615d7d5564664ef",
+      "size": 12456
+    },
+    "base.kwv": {
+      "sha256": "1f96cc9f79d91835a31ee81eb8005148a3d1372fa444d8aa73f0d469cd25d1c2",
+      "size": 80
+    },
+    "candidate.kwv": {
+      "sha256": "f7435d74550593daba1ea89b31b8c657c46c1c4b3b3936dd11a30946614182fd",
+      "size": 500
+    }
+  }
+}

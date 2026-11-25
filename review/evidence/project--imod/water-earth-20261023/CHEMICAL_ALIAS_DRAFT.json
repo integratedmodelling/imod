@@ -1,0 +1,8 @@
+{
+  "status": "review only; annotated full-context file syntax passed; not document/reasoner/provider validated",
+  "proposal": "wv-water-20261023-0003",
+  "community_acceptance": "not_recorded",
+  "file": "../../../experiments/strawman-2026/review/water-chemical-alias-20261023/chemistry.kwv",
+  "sha256": "b8e159582b49296c25d2870ad3e7eb3b3c0df4f7e17f4f88b12dc6355386a9ce",
+  "note": "Additional follow-on ID excluded from active/domain-integration counts"
+}

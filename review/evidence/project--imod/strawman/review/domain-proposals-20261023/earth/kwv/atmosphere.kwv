@@ -1,0 +1,141 @@
+/**
+ * Suggested research: A1-A5. Sources A1/A2/C1 in ../SOURCES.md.
+ * Community acceptance: none recorded; semantic validation: untested.
+ * Body unity and process native dependence are review questions, not silent defaults.
+ */
+ontology reviewatmosphere
+    "Candidate atmospheric material supports and dependent state meanings."
+    version 1.0
+    using imod, physical, physics, chemistry, earth, atmosphere
+    in domain imod:AtmosphereKnowledge;
+
+// A1 foundational; earlier AirBody candidate, not the chemical identity Air.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0045",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/earth/atmosphere.json"
+)
+thing AirBody
+    "An individuated body of atmospheric air under a stated material-boundary convention."
+    is physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0046",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/earth/atmosphere.json"
+)
+thing AirParcel
+    "An atmospheric air portion whose boundary follows its material motion."
+    is (physics:FluidParcel and reviewatmosphere:AirBody)
+    inherits atmosphere:Air;
+
+// A2 foundational; measured material support differs from station coordinates.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0047",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/earth/atmosphere.json"
+)
+temperature AirTemperature
+    "Temperature of an identified air body at the support and time observed."
+    is imod:Temperature of reviewatmosphere:AirBody
+    describes reviewatmosphere:AirBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0048",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/earth/atmosphere.json"
+)
+quantity SpecificHumidity
+    "Water-vapor mass divided by total moist-air mass for the same air body."
+    is imod:Proportion of reviewatmosphere:AirBody
+    describes reviewatmosphere:AirBody;
+
+// Wind direction is a separate angular meaning; current Velocity maps scalar Speed.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0049",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/earth/atmosphere.json"
+)
+velocity WindSpeed
+    "Speed of the air motion under a stated spatial support and reference frame."
+    is imod:Velocity of reviewatmosphere:AirBody
+    describes reviewatmosphere:AirBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0050",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_priority="foundational",
+    review_record="../../review-metadata-r1/records/earth/atmosphere.json"
+)
+angle WindDirection
+    "The direction from which air moves under a stated directional reference convention."
+    is imod:Angle of reviewatmosphere:AirBody
+    describes reviewatmosphere:AirBody;
+
+// A4 useful; positive movement, negative automatic condensation/rain creation.
+// Native process support/participants remain open; no effects are asserted.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0051",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/atmosphere.json"
+)
+process AirAdvection
+    "Transport of atmospheric air relative to a stated spatial reference frame.";
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0052",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/atmosphere.json"
+)
+process CloudCondensation
+    "Conversion of atmospheric water vapor to liquid cloud water.";
+
+// A3 repair is withheld pending shared realm decision: BottomLayer may overlap
+// Troposphere, and observational containment must not mean spatial enclosure.
+// Pressure, humidity conventions and radiation/climate/composition gateway A5
+// require additional upstream dimensional/context definitions before encoding.

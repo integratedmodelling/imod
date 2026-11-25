@@ -1,0 +1,100 @@
+/**
+ * Suggested research: G1-G5. Sources G1/G2; no community acceptance recorded.
+ * Material units, their formal classifications and map representations differ.
+ */
+ontology reviewgeology
+    "Candidate material structures and observable geological connections."
+    version 1.0
+    using imod, physical, earth, geology
+    in domain imod:Geology;
+
+// Existing dossier candidates; individuation/boundary criteria remain controversial.
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0056",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/geology.json"
+)
+thing RockStratum
+    "An individuated layer of rock distinguished by stated observable material boundaries."
+    is geology:RockBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0057",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/geology.json"
+)
+thing FaultZone
+    "An individuated finite body of geological material affected by fault deformation."
+    is physical:MaterialBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0058",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/geology.json"
+)
+length LayerThickness
+    "Thickness of an identified rock stratum under a stated direction and boundary convention."
+    is imod:Length of reviewgeology:RockStratum
+    describes reviewgeology:RockStratum;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0059",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/geology.json"
+)
+quantity MineralFraction
+    "Fraction of an identified rock body assigned to a specified mineral on a stated basis."
+    is imod:Proportion of geology:RockBody
+    describes geology:RockBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0060",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/geology.json"
+)
+structural directed relationship FaultCutsBody
+    "An observed cross-cutting connection from a fault zone to an affected rock body."
+    links reviewgeology:FaultZone to geology:RockBody;
+
+@review(
+    schema="klab.review/1",
+    proposal="wv-review-20261023-0061",
+    revision="review-metadata-r1",
+    maturity="experimental",
+    controversy="unassessed",
+    technical_validation="not_recorded",
+    community_acceptance="not_recorded",
+    review_record="../../review-metadata-r1/records/earth/geology.json"
+)
+structural bond MaterialContact
+    "Observed physical contact between two geological material bodies under a stated boundary convention."
+    links (geology:RockBody or geology:SedimentBody) to (geology:RockBody or geology:SedimentBody);
+
+// Positive contact/cross-cutting evidence; negative cartographic intersection alone.
+// No GrainConstituentOf/mereology, temporal precedence or fault-slip inference.
+// G4 deformation/magmatic transformation native supports remain for expert review.
