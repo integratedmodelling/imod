@@ -1,7 +1,26 @@
 ontology ecology
-	version 1.0
-	using imod, life, biology
-	in domain imod:Ecology;
+    version 1.0
+    using imod, life, biology
+    in domain imod:Ecology;
+
+identity Ecosystem 
+    "Ecosystem types, exposing mediatable common classifications bridging to the k.LAB [land pattern 
+    authority](https://github.com/integratedmodelling/klab.authority.land/tree/main)." 
+    requires authority ECOSYSTEM {
+    urn: "klab.authority.land",
+    mode: "ENTRY_ONLY",
+    domain: "ECOSYSTEM",
+    catalogs: ("get21_ecosystem_pilot", "eunis2021_terrestrial_pilot",
+        "eunis2022_marine_pilot", "eunis2012_inland_pilot"),
+    codelists: {
+        get21_ecosystem_pilot: "ecosystems.get",
+        eunis2021_terrestrial_pilot: "ecosystems.eunis_terrestrial",
+        eunis2022_marine_pilot: "ecosystems.eunis_marine",
+        eunis2012_inland_pilot: "ecosystems.eunis_inland",
+        // empty list for community contributions
+        ecosystem_working: "ecosystems.working"
+    }
+};
 
 /**
  * Populations and communities retain their collective Agent reading. Population
@@ -132,19 +151,6 @@ event LocalExtirpation
 )
 event Recruitment
     "A bounded addition of individuals to a population under stated entry criteria.";
-
-@review(
-    schema="klab.review/1",
-    proposal="wv-review-20261023-0137",
-    revision="strawman-integration-r1",
-    maturity="experimental",
-    controversy="unassessed",
-    technical_validation="not_recorded",
-    community_acceptance="not_recorded",
-    review_record="../docs/reviews/domain-integration-20261023/records/living/ecology.json"
-)
-abstract identity EcosystemType
-    "A classification of ecosystems in a named versioned ecosystem typology.";
 
 @review(
     schema="klab.review/1",
